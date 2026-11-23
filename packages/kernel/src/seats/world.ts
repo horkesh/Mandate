@@ -40,17 +40,26 @@ import { politicsRulesProblems } from '../politics/rules.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole, World } from '../world/world.ts';
+import { detentionProblems, validDemonstrationPolicy } from '../plans/detention.ts';
 import { conditionalDoctrineProblems } from '../world/doctrine.ts';
 import { letterKey, type LetterIdentity } from '../world/letters.ts';
 import { seatIdFor } from './seats.ts';
 
-/** Only principals with explicit paper prerequisites retain report witnesses in this build. */
+/** Keep report witnesses only for each issuing seat's own explicit prerequisites. */
 export function paperDoctrines(world: SeatsWorld): ReadonlyMap<SeatId, PrincipalDoctrine> | undefined {
   const rows = world.map.world.rules.ruleSeats.principals.filter(r =>
     r.offensives.some(o => o.requiresPapers !== undefined) || r.calls.some(c => c.requiresPapers !== undefined) ||
     r.concentrations?.some(c => c.requiresPapers !== undefined) === true || r.proposalAnswers?.some(a => a.requiresPapers !== undefined) === true);
   if (rows.length === 0) return undefined;
-  return new Map(rows.map(r => [seatIdFor(world.faction(r.faction).principal), r]));
+  const byIssuer = new Map<SeatId, PrincipalDoctrine>();
+  for (const row of rows) {
+    const principal = world.faction(row.faction).principal;
+    byIssuer.set(seatIdFor(principal), { ...row, offensives: row.offensives.filter(o => o.issuer === undefined) });
+    const authors = new Set(row.offensives.flatMap(o => o.issuer === undefined || o.requiresPapers === undefined ? [] : [o.issuer]));
+    for (const author of authors) byIssuer.set(seatIdFor(author), { ...row, offensives: row.offensives.filter(o => o.issuer === author),
+      calls: [], concentrations: [], proposalAnswers: [] });
+  }
+  return byIssuer;
 }
 
 /**
@@ -382,6 +391,8 @@ export function menAndRegionsReferenceProblems(world: World): string[] {
 export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions: ReadonlyMap<FactionId, SeatFaction>, postSides: ReadonlyMap<string, { readonly faction: FactionId | null }>): string[] {
   const problems: string[] = [];
   const rows = map.world.rules.ruleSeats.principals;
+  const policy = map.world.rules.plans.demonstration;
+  if (policy !== undefined && !validDemonstrationPolicy(policy)) problems.push('rules.plans.demonstration: invalid policy');
   const recruitment = map.world.rules.recruitment;
   const selfGoverning = new Set(map.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id));
   const posts = new Map(start.posts.map((p) => [p.id as string, p]));
@@ -400,7 +411,8 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     const hasPerson = (id: PersonId) => map.world.people.some(p => p.id === id);
     const hasPost = (id: PostId) => posts.has(id) || declared.has(id);
     const hasLetter = (issuer: PersonId, letter: LetterIdentity) => rows.some(q =>
-      factions.get(q.faction)?.principal === issuer && q.offensives.some(o => o.letter !== undefined && letterKey(o.letter) === letterKey(letter)));
+      q.offensives.some(o => (o.issuer ?? factions.get(q.faction)?.principal) === issuer &&
+        o.letter !== undefined && letterKey(o.letter) === letterKey(letter)));
     for (const p of conditionalDoctrineProblems(r, id => map.regions.has(id), { hasPerson, hasPost, hasLetter })) problems.push(`${at}.${p.field}: ${p.message}`);
     const onSide = (post: string, what: string) => {
       if (!posts.has(post)) problems.push(`${at}.${what}: ${post} is not a start post`);
@@ -474,7 +486,14 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     });
     r.offensives.forEach((o, j) => {
       onDeclaredSide(o.post, `offensives[${j}].post`);
-      if (!map.regions.has(o.objective)) problems.push(`${at}.offensives[${j}]: ${o.objective} is not a region`);
+      if (o.purpose !== undefined) {
+        const goalAt = `${at}.offensives[${j}]`;
+        const opposing = postSides.get(o.purpose.target.post)?.faction;
+        if (opposing == null || opposing === r.faction) problems.push(`${goalAt}: target must be a declared opposing command`);
+        if (o.letter === undefined) problems.push(`${goalAt}: detention directive requires its authored identity`);
+        if (o.issuer !== undefined && !hasPerson(o.issuer)) problems.push(`${goalAt}: unknown issuer`);
+        for (const problem of detentionProblems(map, o.purpose)) problems.push(`${goalAt}: ${problem}`);
+      } else if (!map.regions.has(o.objective)) problems.push(`${at}.offensives[${j}]: ${o.objective} is not a region`);
     });
     const appointed = new Set<string>();
     for (const [j, a] of (r.appointments ?? []).entries()) {

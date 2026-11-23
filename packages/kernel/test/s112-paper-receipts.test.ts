@@ -36,7 +36,7 @@ const condition = { ...reportSelector, claims: [alarm] } satisfies PaperSelector
 const message = (id: string) => toId('message', id);
 const district = toId('department', 'a_war');
 
-const offensive = (letter = next, more: Partial<DoctrineOffensive> = {}): DoctrineOffensive => ({
+const offensive = (letter = next, more: Partial<Extract<DoctrineOffensive, { objective: unknown }>> = {}): Extract<DoctrineOffensive, { objective: unknown }> => ({
   letter, post: reserve, objective: R('a_mid'), posture: 'hold', fromDate: '1900-06-02', source: 'Fictional correspondence', ...more,
 });
 

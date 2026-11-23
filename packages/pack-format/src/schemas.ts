@@ -63,6 +63,13 @@ const citation = z.strictObject({
 });
 const provenance = z.array(citation).min(1, 'at least one citation of a source in PROVENANCE.json (decisions 0031, 0033)');
 
+const detentionPurpose = z.strictObject({
+  kind: z.literal('attack_or_demonstrate'), duty: z.literal('detain'),
+  target: z.strictObject({ kind: z.literal('opposing_command'), post: idOf('post') }),
+  detentionArea: z.array(idOf('region')).min(1).max(2),
+  actionArea: z.array(idOf('region')).min(1).max(4),
+  means: z.tuple([z.literal('attack'), z.literal('demonstrate')]),
+});
 const doctrineGoal = z.strictObject({ objective: idOf('region').nullable(), posture: z.enum(['hold', 'relieve', 'take']) });
 const letterToken = z.string().max(ids.ID_MAX_LENGTH).regex(/^[a-z][a-z0-9_]*$/);
 const letterIdentity = z.strictObject({ namespace: letterToken, key: letterToken, revision: positive });
@@ -198,7 +205,7 @@ export const RulesSchema = z.strictObject({
       mandateKey: termId, mandateRevision: positive, mandateIssuer: idOf('person'), mandateIssuerPost: idOf('post').nullable(),
       mandateHolder: idOf('person'), mandatePost: idOf('post'),
       mandateParent: z.strictObject({ parentPost: idOf('post'), parentKey: termId }).nullable(),
-      mandateActions: z.array(z.enum(['hold', 'relieve', 'take', 'approve', 'assign'])), mandateRecipients: z.array(idOf('post')),
+      mandateActions: z.array(z.enum(['hold', 'relieve', 'take', 'approve', 'assign', 'attack_or_demonstrate'])), mandateRecipients: z.array(idOf('post')),
       mandateRegions: z.array(idOf('region')), mandateModes: z.array(z.enum(['land','rail','river','sea'])),
       mandateCeiling: z.strictObject({ ceilingPost: idOf('post'), ceilingMen: nonNegative.nullable() }).nullable(),
       mandateGuard: nonNegative.nullable(), mandateExpires: nonNegative.nullable(),
@@ -339,7 +346,10 @@ export const RulesSchema = z.strictObject({
               .array(z.strictObject({ address: z.literal('office').optional(), offer: z.strictObject({ region: idOf('region'), receiver: idOf('post') }).optional(), termsId: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1), requiresPapers }))
               .describe('Each identified dated requisition goes once; distinct IDs allow repeats to a governor. atPeace permits a cited pre-war call. readiness records an answer without muster. Remove a row when a situation owns the same requisition.'),
             offensives: z
-              .array(z.strictObject({ id: termId.optional(), letter: letterIdentity.optional(), supersedes: letterIdentity.optional(), dependsOn: z.array(letterIdentity).optional(), repeats: letterIdentity.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), requiresPapers, source: z.string().min(1) }))
+              .array(z.union([
+                z.strictObject({ id: termId.optional(), letter: letterIdentity.optional(), supersedes: letterIdentity.optional(), dependsOn: z.array(letterIdentity).optional(), repeats: letterIdentity.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), requiresPapers, source: z.string().min(1) }),
+                z.strictObject({ letter: letterIdentity, supersedes: letterIdentity.optional(), dependsOn: z.array(letterIdentity).optional(), repeats: letterIdentity.optional(), post: idOf('post'), purpose: detentionPurpose, issuer: idOf('person').optional(), fromDate: historicalDate, requiresNotice: idOf('situation').optional(), requiresPapers, source: z.string().min(1) }),
+              ]))
               .describe('The dated goals he gives (take unless a posture is specified), each from its date (or the day after war, if later); each cites its source.'),
             proposalAnswers: z.array(doctrineProposalAnswer).optional()
               .describe('Sourced replies from their written date, once the commander’s proposal answering the named goal has reached this principal.'),
@@ -451,6 +461,11 @@ export const RulesSchema = z.strictObject({
       goalDefaults: z
         .strictObject({ risk: permille, deadlineDays: positive, rail: z.boolean(), river: z.boolean(), sea: z.boolean(), neutral: z.boolean(), awaitWord: z.boolean(), approveAsDrafted: z.boolean() })
         .describe('The goal terms an order carries when it names only a posture and an objective (a situation’s option).'),
+      demonstration: z.strictObject({
+        detentionRegions: z.literal(2), actionRegions: z.literal(4),
+        deploymentDays: z.tuple([z.literal(1), z.literal(2)]), reconnaissanceDays: z.literal(1),
+        demonstrationCandidates: z.literal(12), totalCandidates: z.literal(16), reserveDays: z.literal(1),
+      }).optional().describe('Accepted limits for attack or demonstrate (0128 D1–D6). Required for the purpose.'),
       holdingRisk: int.describe('A holding action’s riskiness, for reading an edit’s boldness against his own best plan (0062).'),
     })
     .describe('Goals and plans (0040, 0062): design parameters the pack states.'),
@@ -912,9 +927,10 @@ type DeepReadonly<T> = T extends string | number | boolean | null | undefined
   : T extends readonly (infer U)[]
     ? readonly DeepReadonly<U>[]
     : { readonly [K in keyof T]: DeepReadonly<T[K]> };
+type Equivalent<A, B> = [A] extends [B] ? [B] extends [A] ? true : false : false;
 type Same<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? true : false;
 
 export const SCHEMAS_MATCH_KERNEL: {
-  world: Same<DeepReadonly<z.output<typeof WorldSchema>>, DeepReadonly<w.World>>;
+  world: Equivalent<DeepReadonly<z.output<typeof WorldSchema>>, DeepReadonly<w.World>>;
   scenario: Same<DeepReadonly<z.output<typeof ScenarioSchema>>, DeepReadonly<w.ScenarioStart>>;
 } = { world: true, scenario: true };

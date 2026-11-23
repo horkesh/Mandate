@@ -111,7 +111,7 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
       return t('console.command.mandate',{paper:c.paper,route:c.route});
     case 'order':
       return t('console.command.order', {
-        post: c.to, posture: c.goal.posture, objective: c.goal.objective === null ? '' : ' ' + c.goal.objective,
+        post: c.to, posture: c.goal.purpose?.kind ?? c.goal.posture ?? '', objective: c.goal.objective == null ? '' : ' ' + c.goal.objective,
         risk: String(c.goal.risk), days: String(c.goal.deadlineDays), route: c.route,
         bypass: c.bypass ? t('console.command.bypass') : '',
       }) + fallbackText(c.goal, t);
@@ -191,6 +191,6 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
 function fallbackText(goal: import('@mandate/kernel/seat-api').GoalTerms, t: DeskStrings): string {
   const grant = goal.discretion;
   return grant === undefined ? '' : t('console.command.fallback', {
-    condition: grant.condition, posture: grant.fallback.posture, objective: grant.fallback.objective ?? t('console.goal.here'),
+    condition: grant.condition, posture: grant.fallback.purpose?.kind ?? grant.fallback.posture ?? '', objective: grant.fallback.objective ?? t('console.goal.here'),
   }) + fallbackText(grant.fallback, t);
 }

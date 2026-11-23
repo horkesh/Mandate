@@ -16,6 +16,11 @@ export interface RequestExposure {
   readonly termDays?: number | null;
   readonly objective?: string;
   readonly posture?: string;
+  readonly purpose?: string;
+  readonly target?: string;
+  readonly letterKey?: string;
+  readonly letterNamespace?: string;
+  readonly letterRevision?: number;
   readonly issuedDay: number;
   readonly receivedDays: readonly number[];
 }
@@ -30,12 +35,15 @@ export function observeExposure() {
       const last = msg.msgPending.at(-1);
       const call = o?.orderCall;
       const request: RequestExposure = {
-        order: msg.msgOrigin, side: world.factionIds.find(f => world.faction(f).principal === issuer) ?? null,
+        order: msg.msgOrigin, side: phase0.sideOfPerson(world.map, result.state, issuer),
         kind: o?.orderKind ?? `verb:${v!.verbKind}`, actor: last?.hopPerson ?? msg.msgTo,
         issuedDay: o?.orderIssuedDay ?? v!.verbIssuedDay, receivedDays: [],
         ...(o === null ? {} : { post: o.orderTarget }),
         ...(call == null ? {} : { callId: call.callId ?? null, regiments: call.callRegiments, termDays: call.callTermDays }),
-        ...(o?.orderGoal == null ? {} : { objective: o.orderGoal.goalObjective ?? undefined, posture: o.orderGoal.goalPosture }),
+        ...(o?.orderGoal == null ? {} : o.orderGoal.goalPurpose === undefined
+          ? { objective: o.orderGoal.goalObjective ?? undefined, posture: o.orderGoal.goalPosture }
+          : { purpose: o.orderGoal.goalPurpose.detKind, target: o.orderGoal.goalPurpose.detTargetPost }),
+        ...(o?.orderLetter === undefined ? {} : { letterKey: o.orderLetter.key, letterNamespace: o.orderLetter.namespace, letterRevision: o.orderLetter.revision }),
         ...(v === null ? {} : { subject: v.verbSubject ?? undefined, post: v.verbPost ?? undefined, to: v.verbTo ?? undefined }),
       };
       requests.set(request.order, request);
@@ -59,7 +67,8 @@ export function exposureRows(registers: readonly PushbackRegister[], requests: r
     const match = row.match;
     const demand = match === undefined ? undefined : { ...match, kind: match.kind === 'goal-proposal' ? 'goal' : match.kind };
     const exact = demand === undefined ? [] : requests.filter(r => r.issuedDay <= horizon && r.side === row.side && r.actor === row.actor &&
-      (['kind','callId','regiments','termDays','subject','objective','posture','post','to'] as const).every(k => demand[k] === undefined || demand[k] === r[k]));
+      (['kind','callId','regiments','termDays','subject','objective','posture','post','to','purpose','target'] as const).every(k => demand[k] === undefined || demand[k] === r[k]) &&
+      (demand.letters === undefined || demand.letters.some(l => l.key === r.letterKey && l.namespace === r.letterNamespace && l.revision === r.letterRevision)));
     const received = exact.filter(r => r.receivedDays.some(day => day <= horizon));
     const replied = received.flatMap(r => answers.filter(a => a.order === r.order && a.actor === row.actor && a.role === row.role && a.day <= horizon));
     const gap = row.gap !== undefined;

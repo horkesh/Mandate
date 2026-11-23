@@ -112,6 +112,11 @@ export const GATE_KINDS = [
   'no_partner',
   'no_route',
   'no_target',
+  'detention_policy',
+  'unknown_recovery',
+  'insufficient_stores',
+  'insufficient_force',
+  'no_deployment_march',
   'staging_not_adjacent',
   'vacant_post',
 ] as const;
@@ -137,7 +142,19 @@ export interface PlanTerm {
 export const METHODS = ['bombard', 'by_water', 'direct', 'flank', 'holding', 'pincer', 'supply_line'] as const;
 export type Method = (typeof METHODS)[number];
 
+interface DetentionCourseTerms {
+  readonly means: 'attack' | 'demonstrate';
+  readonly task?: 'deployment' | 'reconnaissance_in_force';
+  readonly intervals?: number;
+  readonly recovery?: PlanRoute;
+  readonly reserveDays?: number;
+}
+
+export type DetentionCourse = DetentionCourseTerms & ({ readonly means: 'attack' } | DemonstrationCourse);
+export type DemonstrationCourse = Required<DetentionCourseTerms> & { readonly means: 'demonstrate' };
+
 export interface PlanCandidate {
+  readonly candDetention?: DetentionCourse;
   readonly candNotes?: readonly NoteDisposition[];
   /** Content-derived: method, variant, then each axis's regions (FOUNDATION M10). Computed once, never reassigned. */
   readonly id: string;
@@ -184,6 +201,8 @@ export interface DraftSet {
   readonly draftSearches: number;
   readonly draftGenerated: number;
   readonly draftDeduplicated: number;
+  readonly draftFeasible?: number;
+  readonly draftTruncated?: number;
 }
 
 /** A block of his side as the planner reads it (`forces`, `movement`, `command`). */

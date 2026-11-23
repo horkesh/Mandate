@@ -11,7 +11,7 @@
  */
 import type { SeatId } from '../ids.ts';
 import { copyNote } from '../plans/notes.ts';
-import { MAX_FALLBACKS } from '../plans/goal.ts';
+import { copyPurpose, MAX_FALLBACKS } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import type { Seat, SeatRequest } from '../seats/api.ts';
 import { pendingRequests } from '../seats/requests.ts';
@@ -60,7 +60,10 @@ export type SeatTable = (seat: SeatId) => Seat;
 
 function copyGoal(g: GoalTerms, depth = 0): GoalTerms {
   return {
-    objective: g.objective, posture: g.posture, risk: g.risk, deadlineDays: g.deadlineDays, rail: g.rail,
+    ...(g.purpose === undefined ? { objective: g.objective, posture: g.posture } :
+      { purpose: copyPurpose(g.purpose), ...('objective' in g ? { objective: g.objective } : {}),
+        ...('posture' in g ? { posture: g.posture } : {}) } as GoalTerms),
+    risk: g.risk, deadlineDays: g.deadlineDays, rail: g.rail,
     river: g.river, sea: g.sea, neutral: g.neutral, committed: [...g.committed], awaitWord: g.awaitWord,
     approveAsDrafted: g.approveAsDrafted,
     // Preserve the presence of an overflowing fallback so log validation rejects it.

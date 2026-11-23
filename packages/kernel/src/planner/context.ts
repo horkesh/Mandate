@@ -19,6 +19,12 @@ import type { PlannerForce, PlannerPost, Profile } from './types.ts';
 import type { PlanNote } from '../plans/notes.ts';
 
 export interface PlannerInput {
+  /** Detention reads corroboration and recovery estimates only from the acting seat's received picture. */
+  readonly detentionPicture?: {
+    readonly targetRegions: ReadonlySet<RegionId>;
+    readonly freshEstimates: ReadonlySet<RegionId>;
+    readonly unavailable: ReadonlySet<ForceBlockId>;
+  };
   /** Compliance-weighted preferences, from the delivered send-back. Never constraints. */
   readonly notes?: readonly { readonly mark: PlanNote; readonly weight: number }[];
   readonly noteScoreWeight?: number;
@@ -63,6 +69,7 @@ export interface Ctx {
   /** Threat per region, men: his belief there plus a share of his beliefs one hop away. */
   readonly threat: ReadonlyMap<RegionId, number>;
   readonly inSupply: ReadonlySet<RegionId>;
+  readonly regions?: ReadonlySet<RegionId>;
   searches: number;
 }
 

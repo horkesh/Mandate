@@ -49,7 +49,7 @@ import { createHeldPostCache, heldPost, sideOfPerson } from '../command/command.
 import { paperDoctrines, type SeatsWorld } from '../seats/world.ts';
 import type { Telemetry } from '../telemetry.ts';
 import { createViewCache, type ViewCache } from '../view/view.ts';
-import { applyPlanChoices, choosingPosts, planKey, planOptions, plansPhase, PLANS_MECHANICS } from './plans.ts';
+import { applyPlanChoices, choosingPosts, planKey, planOptions, plansPhase, PLANS_MECHANICS, requiresEpisodeChoice } from './plans.ts';
 import { fire, type DecisionPoint, type MapEvent, type Price, type Proposal, type Rejection, type TickContext, type TickEvent } from './context.ts';
 import { deliverBattleDispatches, deliverDue, deliverSituationOrders } from './deliver.ts';
 import { createFreezeLedger, deepFreeze, type FreezeLedger } from './freeze.ts';
@@ -61,7 +61,7 @@ import { stateForcesPhase, renewalPhase } from './recruitment.ts';
 import { mapBarrier, mapPhase } from './map.ts';
 import { issueOrder } from './orders.ts';
 import { decideCommand, delegateCommand, runSituations, SITUATION_MECHANICS } from './situations.ts';
-import { operationsPhase, OPERATIONS_MECHANICS } from './operations.ts';
+import { finishDemonstrations, operationsPhase, OPERATIONS_MECHANICS } from './operations.ts';
 import { pruneOperations } from '../operations/operations.ts';
 import { pruneBattles } from '../combat/records.ts';
 import { pruneResponses } from '../proxy/responses.ts';
@@ -190,7 +190,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   const menus = new Map<PostId, readonly OptionView[]>();
   for (const post of choosingPosts(state, day)) {
     const options = planOptions(state, post, day);
-    if (options !== null && options.length > 1) menus.set(post, options);
+    if (options !== null && (options.length > 1 || requiresEpisodeChoice(state, post))) menus.set(post, options);
   }
 
   const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day)]));
@@ -332,6 +332,10 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
 
   // 4a. Stragglers rejoin, then stores on hand fall or refill, from today's supply trace (lanes 0.5, 1.3; only with a map).
   state = applyPhase(storesPhase(ctx, state, mapped.derived, new Set(fought.result?.inBattle ?? [])));
+
+  if (world.map.world.rules.plans.demonstration !== undefined) {
+    state = applyPhase(finishDemonstrations(ctx, state, new Set(fought.result?.inBattle ?? [])));
+  }
 
   // 4a'. Regions (lane 1.7): the derived self-emancipation term, on its cadence, proposes who reached the lines.
   state = applyPhase(regionsPhase(ctx, state));

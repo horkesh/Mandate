@@ -38,7 +38,9 @@ export function scriptedSeats(script: Readonly<Record<string, Readonly<Record<nu
 }
 
 /** The goal terms kernel tests give an order: the testbed's goal defaults, every block committed, approved as drafted. */
-export function goalTerms(posture: GoalTerms['posture'], objective: string | null, over: Partial<GoalTerms> = {}): GoalTerms {
+type RegionalGoal = Extract<GoalTerms, { posture: string }>;
+
+export function goalTerms(posture: RegionalGoal['posture'], objective: string | null, over: Partial<RegionalGoal> = {}): RegionalGoal {
   return {
     objective: objective === null ? null : (toId('region', objective) as RegionId),
     posture,
@@ -56,6 +58,6 @@ export function goalTerms(posture: GoalTerms['posture'], objective: string | nul
 }
 
 /** An order as Phase 0's tests wrote it: `advance` is a goal to take the region, `hold` a goal to hold it (or where he stands). */
-export function order(to: string, goal: 'advance' | 'hold', region: string | null, route: OrderCommand['route'] = 'wire', bypass = false, over: Partial<GoalTerms> = {}): OrderCommand {
+export function order(to: string, goal: 'advance' | 'hold', region: string | null, route: OrderCommand['route'] = 'wire', bypass = false, over: Partial<Extract<GoalTerms, { posture: string }>> = {}): OrderCommand {
   return { cmd: 'order', to: toId('post', to) as PostId, goal: goalTerms(goal === 'advance' ? 'take' : 'hold', region, over), route, bypass };
 }

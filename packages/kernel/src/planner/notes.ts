@@ -27,7 +27,7 @@ export function followsNote(c: PlanCandidate, n: PlanNote): boolean {
 function alternative(start: Ctx, c: PlanCandidate, n: PlanNote, index: number): PlanCandidate | null {
   // A suggested objective is judged at that objective, with the same beliefs and permissions.
   const objective = n.markKind === 'focus' ? n.markRegion : (c.candAxes.find(a=>a.axisName==='main') ?? c.candAxes[0])?.axisRoute.routeTo ?? start.input.goal.goalObjective;
-  const ctx: Ctx = { ...start, input: { ...start.input, goal: { ...start.input.goal, goalObjective: objective } } };
+  const ctx: Ctx = { ...start, input: { ...start.input, goal: start.input.goal.goalPurpose === undefined ? { ...start.input.goal, goalObjective: objective ?? null } : start.input.goal } };
   const result = alternativeOn(ctx,c,n,index);
   start.searches = ctx.searches;
   return result;

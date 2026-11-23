@@ -10,6 +10,7 @@
  */
 import type { ForceBlockId, PostId, RegionId } from '../ids.ts';
 import type { GoalTerms } from '../log/commands.ts';
+import { canonicalHash } from '../serialize/hash.ts';
 import type { PaperSelector } from '../world/paper-selectors.ts';
 
 /** What the goal asks of him: take the objective, relieve it (reach it and hold it for a garrison there), or hold it. */
@@ -54,10 +55,51 @@ export type DoctrineProposalAnswer = {
  * A goal as `plans` holds it and an order carries it. Immutable: replaced whole.
  * `goalObjective` is null only for "hold where he stands".
  */
-export interface PlanGoal {
+export interface DetentionPurpose {
+  readonly kind: 'attack_or_demonstrate';
+  readonly duty: 'detain';
+  readonly target: { readonly kind: 'opposing_command'; readonly post: PostId };
+  readonly detentionArea: readonly RegionId[];
+  readonly actionArea: readonly RegionId[];
+  readonly means: readonly ['attack', 'demonstrate'];
+}
+
+export function copyPurpose(purpose: DetentionPurpose): DetentionPurpose {
+  return { ...purpose, target: { ...purpose.target }, detentionArea: [...purpose.detentionArea],
+    actionArea: [...purpose.actionArea], means: [...purpose.means] };
+}
+
+export type PlanGoal = PlanGoalTerms & (
+  | { readonly goalPurpose?: never; readonly goalObjective: RegionId | null; readonly goalPosture: Posture }
+  | { readonly goalPurpose: PlanDetentionPurpose; readonly goalObjective?: never; readonly goalPosture?: never }
+);
+
+export interface PlanDetentionPurpose {
+  readonly detKind: 'attack_or_demonstrate';
+  readonly detDuty: 'detain';
+  readonly detTargetPost: PostId;
+  readonly detTargetKind: 'opposing_command';
+  readonly detDetentionArea: readonly RegionId[];
+  readonly detActionArea: readonly RegionId[];
+  readonly detMeans: readonly ['attack', 'demonstrate'];
+}
+
+export function purposeOf(terms: DetentionPurpose): PlanDetentionPurpose {
+  return { detKind: terms.kind, detDuty: terms.duty, detTargetPost: terms.target.post,
+    detTargetKind: terms.target.kind, detDetentionArea: [...terms.detentionArea], detActionArea: [...terms.actionArea],
+    detMeans: [...terms.means] };
+}
+
+export function purposeTerms(purpose: PlanDetentionPurpose): DetentionPurpose {
+  return { kind: purpose.detKind, duty: purpose.detDuty, target: { kind: purpose.detTargetKind, post: purpose.detTargetPost },
+    detentionArea: [...purpose.detDetentionArea], actionArea: [...purpose.detActionArea], means: [...purpose.detMeans] };
+}
+
+interface PlanGoalTerms {
+  readonly goalPurpose?: PlanDetentionPurpose;
+  readonly goalPosture?: Posture;
+  readonly goalObjective?: RegionId | null;
   readonly goalDiscretion?: Discretion<PlanGoal>;
-  readonly goalObjective: RegionId | null;
-  readonly goalPosture: Posture;
   /** 0..1000: the risk the principal accepts; it scales the exposure the commander will tolerate. */
   readonly goalRisk: number;
   /** Days from the day he receives it by which the objective should be reached. */
@@ -90,6 +132,8 @@ export function goalKindOf(goal: PlanGoal): GoalKind {
 /** Two goals ask the same thing. */
 export function sameGoal(a: PlanGoal, b: PlanGoal): boolean {
   return (
+    (a.goalPurpose === undefined ? b.goalPurpose === undefined :
+      b.goalPurpose !== undefined && canonicalHash(a.goalPurpose) === canonicalHash(b.goalPurpose)) &&
     a.goalObjective === b.goalObjective &&
     a.goalPosture === b.goalPosture &&
     a.goalRisk === b.goalRisk &&
@@ -110,8 +154,19 @@ export function sameGoal(a: PlanGoal, b: PlanGoal): boolean {
 /** Problems with a goal's values (the tick refuses an order whose goal has any). */
 export function goalProblems(goal: PlanGoal, depth = 0): string[] {
   const problems: string[] = [];
+  if (goal.goalPurpose !== undefined) {
+    if ('goalPosture' in goal || 'goalObjective' in goal) problems.push('a detention purpose replaces posture and objective');
+    if (goal.goalDiscretion !== undefined) problems.push('detention has no regional discretion');
+    const p = purposeTerms(goal.goalPurpose);
+    if (p.kind !== 'attack_or_demonstrate' || p.duty !== 'detain' || p.target?.kind !== 'opposing_command' ||
+      p.means?.length !== 2 || p.means[0] !== 'attack' || p.means[1] !== 'demonstrate') problems.push('invalid detention purpose');
+    for (const area of [p.detentionArea, p.actionArea]) {
+      if (!Array.isArray(area) || area.length === 0 || new Set(area).size !== area.length) problems.push('areas must be nonempty and duplicate-free');
+    }
+  } else {
   if (!(POSTURES as readonly string[]).includes(goal.goalPosture)) problems.push(`posture must be one of ${POSTURES.join(', ')}`);
   if (goal.goalObjective === null && goal.goalPosture !== 'hold') problems.push('only a hold may name no objective');
+  }
   if (!Number.isSafeInteger(goal.goalRisk) || goal.goalRisk < 0 || goal.goalRisk > 1000) problems.push('risk must be a permille');
   if (!Number.isSafeInteger(goal.goalDeadlineDays) || goal.goalDeadlineDays < 1) problems.push('deadline must be a whole number of days, at least 1');
   if (new Set(goal.goalCommitted).size !== goal.goalCommitted.length) problems.push('a block is committed twice');
@@ -129,7 +184,8 @@ export function goalProblems(goal: PlanGoal, depth = 0): string[] {
 /** A goal as an issuer may copy it into a letter. */
 export function termsOfGoal(goal: PlanGoal): GoalTerms {
   return {
-    objective: goal.goalObjective, posture: goal.goalPosture, risk: goal.goalRisk, deadlineDays: goal.goalDeadlineDays,
+    ...(goal.goalPurpose === undefined ? { objective: goal.goalObjective, posture: goal.goalPosture } : { purpose: purposeTerms(goal.goalPurpose) }),
+    risk: goal.goalRisk, deadlineDays: goal.goalDeadlineDays,
     rail: goal.goalRail, river: goal.goalRiver, sea: goal.goalSea, neutral: goal.goalNeutral, committed: [...goal.goalCommitted],
     awaitWord: goal.goalAwaitWord, approveAsDrafted: goal.goalApproveAsDrafted,
     ...(goal.goalDiscretion === undefined ? {} : { discretion: {

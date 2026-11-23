@@ -200,10 +200,11 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId, recei
       ...(c.requiresPapers === undefined ? {} : { ready: requires(c.requiresPapers, c.id!) }),
       ...(c.id === undefined ? {} : { id: c.id, issued: state.messagesInTransit.some(m => m.msgOrder !== null && m.msgOrder.orderCall?.callId === c.id && m.msgOrder.orderIssuer === world.faction(faction).principal) || Object.values(state.orderResponses).some(r => r.respCallId === c.id && r.respPost === c.post) }),
     })),
-    offensives: [...row.offensives.filter(o => o.letter === undefined), ...orderedLetters(row.offensives)].map((o) => {
+    offensives: [...row.offensives.filter(o => o.letter === undefined), ...orderedLetters(row.offensives).filter(o => o.issuer === undefined)].map((o) => {
       const day = daysFromCivil(parseIsoDate(o.fromDate)) - start;
-      const entry = { post: o.post, objective: o.objective, day, ...(o.id === undefined ? {} : { id: o.id }),
-        ...(o.posture === undefined ? {} : { posture: o.posture }), ...(o.discretion === undefined ? {} : { discretion: o.discretion }) };
+      const entry = { post: o.post, day, ...(o.id === undefined ? {} : { id: o.id }),
+        ...(o.purpose === undefined ? { objective: o.objective, ...(o.posture === undefined ? {} : { posture: o.posture }),
+          ...(o.discretion === undefined ? {} : { discretion: o.discretion }) } : { purpose: o.purpose }) };
       const heard = o.requiresNotice === undefined || receivedView.reports.some(r => r.subjectKind === 'situation' && r.subjectId === o.requiresNotice && r.day <= state.stateDay && r.receivedDay <= state.stateDay);
       if (o.letter !== undefined) {
         const key = letterKey(o.letter);

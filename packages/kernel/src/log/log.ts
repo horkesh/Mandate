@@ -238,12 +238,30 @@ function counterShaped(raw: unknown): boolean {
 export function goalTermsProblems(raw: unknown, depth = 0): string[] {
   const g = raw as Partial<Record<string, unknown>> | null;
   if (typeof g !== 'object' || g === null || Array.isArray(g)) return ['must be an object'];
-  const fields = ['approveAsDrafted', 'awaitWord', 'committed', 'deadlineDays', ...(Object.hasOwn(g, 'discretion') ? ['discretion'] : []), 'neutral', 'objective', 'posture', 'rail', 'risk', 'river', 'sea'];
+  const detention = Object.hasOwn(g, 'purpose');
+  const fields = ['approveAsDrafted', 'awaitWord', 'committed', 'deadlineDays',
+    ...(!detention && Object.hasOwn(g, 'discretion') ? ['discretion'] : []), 'neutral',
+    ...(detention ? ['purpose'] : ['objective', 'posture']), 'rail', 'risk', 'river', 'sea'];
   const keys = Object.keys(g).sort(strictCompare);
   if (keys.join() !== fields.join()) return [`has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
   const problems: string[] = [];
-  if (g.objective !== null && !ID(g.objective)) problems.push('objective must be a region id or null');
-  if (!(POSTURES as readonly unknown[]).includes(g.posture)) problems.push(`posture must be one of ${POSTURES.join(', ')}`);
+  if (detention) {
+    const p = g.purpose as Record<string, unknown> | null;
+    const target = p?.target as Record<string, unknown> | null;
+    if (depth > 0 || p === null || p === undefined || Object.keys(p).sort(strictCompare).join() !== 'actionArea,detentionArea,duty,kind,means,target' ||
+      p.kind !== 'attack_or_demonstrate' || p.duty !== 'detain' || target === null || target === undefined ||
+      Object.keys(target).sort(strictCompare).join() !== 'kind,post' || target.kind !== 'opposing_command' || !ID(target.post) ||
+      !Array.isArray(p.means) || p.means.length !== 2 || p.means[0] !== 'attack' || p.means[1] !== 'demonstrate') {
+      problems.push('invalid detention purpose');
+    } else for (const area of [p.detentionArea, p.actionArea]) {
+      if (!Array.isArray(area) || area.length === 0 || !area.every(ID) || new Set(area).size !== area.length) {
+        problems.push('detention and action areas need distinct region ids');
+      }
+    }
+  } else {
+    if (g.objective !== null && !ID(g.objective)) problems.push('objective must be a region id or null');
+    if (!(POSTURES as readonly unknown[]).includes(g.posture)) problems.push(`posture must be one of ${POSTURES.join(', ')}`);
+  }
   for (const k of ['risk', 'deadlineDays'] as const) if (typeof g[k] !== 'number' || !Number.isSafeInteger(g[k])) problems.push(`${k} must be an integer`);
   for (const k of ['rail', 'river', 'sea', 'neutral', 'awaitWord', 'approveAsDrafted'] as const) if (typeof g[k] !== 'boolean') problems.push(`${k} must be true or false`);
   if (!Array.isArray(g.committed) || !g.committed.every(ID)) problems.push('committed must be force block ids');

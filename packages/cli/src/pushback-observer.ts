@@ -2,15 +2,28 @@
 import { phase0 } from '@mandate/kernel';
 import type { CoverageAct } from './pushback-coverage.ts';
 
-type Matter = Partial<Pick<CoverageAct, 'side' | 'callId' | 'regiments' | 'termDays' | 'subject' | 'objective' | 'posture' | 'post' | 'to'>>;
+type Matter = Partial<Pick<CoverageAct, 'side' | 'callId' | 'regiments' | 'termDays' | 'subject' | 'objective' | 'posture' | 'post' | 'to' | 'purpose' | 'target' | 'letterKey' | 'letterNamespace' | 'letterRevision'>>;
+const goalMatter = (goal: phase0.PlanGoal): Matter => goal.goalPurpose === undefined
+  ? { objective: goal.goalObjective ?? undefined, posture: goal.goalPosture }
+  : { purpose: goal.goalPurpose.detKind, target: goal.goalPurpose.detTargetPost };
 export function observePushback() {
   const matters = new Map<string, Matter>();
   const acts = new Map<string, CoverageAct>();
   const advice = new Map<string, string>();
+  const courseGrounds = new Map<string, Set<string>>();
+  const deferred = new Map<string, Set<number>>();
   const onTick = (world: phase0.SeatsWorld, r: phase0.TickResult) => {
-    const sideOfIssuer = (person: string | undefined): string | null => world.factionIds.find(f => world.faction(f).principal === person) ?? null;
+    const sideOfIssuer = (person: string | undefined): string | null => person === undefined ? null :
+      phase0.sideOfPerson(world.map, r.state, person as Parameters<typeof phase0.sideOfPerson>[2]);
     const merge = (id: string, data: Matter) => matters.set(id, { ...matters.get(id), ...data });
     const proposal = (body: phase0.ReportBody) => {
+      if (body.reportAnswers !== null && body.reportDay <= r.day) {
+        const key = `${body.reportAnswers}|${body.reportAuthor}`;
+        for (const claim of body.reportClaims) if (claim.claimKind === 'detention-course' && claim.claimToken !== null) {
+          const grounds = courseGrounds.get(key) ?? new Set<string>();
+          grounds.add(claim.claimToken); courseGrounds.set(key, grounds);
+        }
+      }
       if (body.reportProposal === undefined || body.reportAnswers === null || body.reportDay > r.day) return;
       const order = body.reportAnswers;
       const id = `${order}|${body.reportAuthor}|goal-proposal|${body.reportDay}`;
@@ -19,16 +32,20 @@ export function observePushback() {
       // replace the matter being challenged, and the answer cannot buy a second credit.
       acts.set(id, { id, creditKey: `${order}|${body.reportAuthor}|addressee|`, order, side: null,
         actor: body.reportAuthor, role: 'addressee', kind: 'goal-proposal', actual: 'propose', declared: 'propose', day: body.reportDay,
-        ...(body.reportAuthorPost === null ? {} : { post: body.reportAuthorPost }) });
+        ...(body.reportAuthorPost === null ? {} : { post: body.reportAuthorPost }),
+        courseGrounds: body.reportProposal.reasons.map(reason => reason.kind),
+        ...(body.reportLetter === undefined ? {} : { letterKey: body.reportLetter.key, letterNamespace: body.reportLetter.namespace, letterRevision: body.reportLetter.revision }),
+      });
     };
-    for (const m of r.state.messagesInTransit) {
+    for (const m of [...r.state.messagesInTransit, ...(r.requestDispatches ?? []), ...(r.requestReceipts ?? [])]) {
       const order = m.msgOrder;
       const verb = m.msgVerb;
       if (order !== null) merge(m.msgOrigin, {
         side: sideOfIssuer(order.orderIssuer),
         ...(order.orderCall?.callId === undefined ? {} : { callId: order.orderCall.callId }),
         ...(order.orderCall == null ? {} : { regiments: order.orderCall.callRegiments, termDays: order.orderCall.callTermDays }),
-        ...(order.orderGoal === null ? {} : { objective: order.orderGoal.goalObjective ?? undefined, posture: order.orderGoal.goalPosture }),
+        ...(order.orderGoal === null ? {} : goalMatter(order.orderGoal)),
+        ...(order.orderLetter === undefined ? {} : { letterKey: order.orderLetter.key, letterNamespace: order.orderLetter.namespace, letterRevision: order.orderLetter.revision }),
       });
       if (verb !== null) merge(m.msgOrigin, { side: sideOfIssuer(verb.verbIssuer), subject: verb.verbSubject ?? undefined, post: verb.verbPost ?? undefined, to: verb.verbTo ?? undefined });
       if (m.msgReport !== null && m.msgReport !== undefined) {
@@ -39,14 +56,22 @@ export function observePushback() {
         if (m.msgReport.reportAnswers !== null && m.msgReport.reportAdvice !== null) advice.set(`${m.msgReport.reportAnswers}|${m.msgReport.reportAuthor}`, m.msgReport.reportAdvice.adviceRecommends);
       }
     }
-    for (const plan of Object.values(r.state.planRecords)) merge(plan.planOrder, { side: sideOfIssuer(plan.planIssuer), objective: plan.planGoal.goalObjective ?? undefined, posture: plan.planGoal.goalPosture });
+    for (const plan of Object.values(r.state.planRecords)) merge(plan.planOrder, { side: sideOfIssuer(plan.planIssuer), ...goalMatter(plan.planGoal),
+      ...(plan.planLetter === undefined ? {} : { letterKey: plan.planLetter.key, letterNamespace: plan.planLetter.namespace, letterRevision: plan.planLetter.revision }) });
+    for (const op of Object.values(r.state.operationRecords)) {
+      if (op.opPurpose === undefined || op.opCommander === null) continue;
+      const key = `${op.opOrder}|${op.opCommander}`;
+      const days = deferred.get(key) ?? new Set<number>();
+      for (const day of op.opDeferredDays ?? []) if (day <= r.day) days.add(day);
+      deferred.set(key, days);
+    }
     // Same-day calls can leave transit before onTick. A levy retains the original
     // service term and issuer, but its number raised must never stand for the number asked.
     for (const levy of Object.values(r.state.postLevies)) merge(levy.levyCall, { side: sideOfIssuer(levy.levyIssuer), termDays: levy.levyTermDays });
     for (const e of r.events) if (e.event === 'policy' && e.message !== null) merge(e.message, { side: sideOfIssuer(e.person) });
     for (const f of world.factionIds) {
       const held = r.state.knowledgeBySeat[phase0.seatIdFor(world.faction(f).principal)];
-      for (const sent of held?.knownSentOrders ?? []) merge(sent.sentMessage, { side: f, ...(sent.sentGoal === undefined ? {} : { objective: sent.sentGoal.goalObjective ?? undefined, posture: sent.sentGoal.goalPosture }) });
+      for (const sent of held?.knownSentOrders ?? []) merge(sent.sentMessage, { side: f, ...(sent.sentGoal === undefined ? {} : goalMatter(sent.sentGoal)) });
       for (const report of held?.knownReports ?? []) {
         if (report.knownReceivedDay <= r.day) proposal(report.knownBody);
         const b = report.knownBody;
@@ -78,5 +103,11 @@ export function observePushback() {
       }
     }
   };
-  return { onTick, observations: (): CoverageAct[] => [...acts.values()].map(a => ({ ...a, ...matters.get(a.order), ...(advice.has(`${a.order}|${a.actor}`) ? { advice: advice.get(`${a.order}|${a.actor}`)! } : {}) })) };
+  return { onTick, observations: (): CoverageAct[] => [...acts.values()].map(a => {
+    const key = `${a.order}|${a.actor}`;
+    return { ...a, ...matters.get(a.order), ...(advice.has(key) ? { advice: advice.get(key)! } : {}),
+      ...(courseGrounds.has(key) ? { courseGrounds: [...courseGrounds.get(key)!].sort() } : {}),
+      ...(a.role === 'addressee' && a.kind === 'goal' && deferred.has(key) ? { deferredIntervals: deferred.get(key)!.size } : {}),
+    };
+  }) };
 }

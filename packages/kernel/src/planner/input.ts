@@ -27,6 +27,7 @@ import type { SeatsWorld } from '../seats/world.ts';
 import type { NetworkConditions } from '../supply/supply.ts';
 import { regardOf, trueOf } from '../people/people.ts';
 import { traitsOf } from '../people/traits.ts';
+import { templateFor } from '../knowledge/templates.ts';
 import type { SeatView } from '../view/types.ts';
 import type { PlannerInput } from './context.ts';
 import { profileOf } from './profile.ts';
@@ -137,6 +138,35 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
     post,
     profile: profileOf({ ...person, competence: trueOf(state, holder).trueCompetence }, people.traits, world.map.world.rules.planner.weights),
     goal,
+    ...(goal.goalPurpose === undefined ? {} : {
+      detentionPicture: (() => {
+        const target = goal.goalPurpose.detTargetPost;
+        const fresh = view.reports.filter(r => r.type === 'enemy-estimate' && r.receivedDay < day &&
+          day - r.day <= templateFor(world.rules.templates, r.type, r.subtype).maxAgeDays);
+        const targetRegions = new Set<RegionId>();
+        const freshEstimates = new Set<RegionId>();
+        const latest = new Map<RegionId, number>();
+        for (const report of fresh) for (const c of report.claims) {
+          if (c.region === null || c.confidence <= 0 || (c.kind !== 'enemy-strength' && c.kind !== 'enemy-estimate-unknown')) continue;
+          if (report.day < (latest.get(c.region) ?? -1)) continue;
+          latest.set(c.region, report.day);
+          if (c.kind === 'enemy-strength') freshEstimates.add(c.region);
+          else freshEstimates.delete(c.region);
+        }
+        for (const report of fresh) for (const c of report.claims) {
+          if (c.region !== null && c.confidence > 0 && c.kind === 'enemy-command' && c.token === target &&
+            report.day >= (latest.get(c.region) ?? -1)) targetRegions.add(c.region);
+        }
+        const unavailable = new Set<ForceBlockId>();
+        for (const op of Object.values(state.operationRecords)) if (op.opEndDay === null && op.opPost !== post) {
+          for (const axis of op.opAxes) for (const b of axis.oaxBlocks) unavailable.add(b);
+        }
+        for (const [id, loc] of Object.entries(state.forceLocations)) {
+          if (loc?.locMarch || state.forceJoins[id as ForceBlockId] !== undefined || (state.forceBlockStates[id as ForceBlockId]?.fbSurrenderedDay ?? null) !== null) unavailable.add(id as ForceBlockId);
+        }
+        return { targetRegions, freshEstimates, unavailable };
+      })(),
+    }),
     rules: world.map.world.rules.planner,
     assaultMargin: people.traits.assaultMargin,
     reinforceShare: { timid: people.compliance.reinforceShareTimid, bold: people.compliance.reinforceShareBold },

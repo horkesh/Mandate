@@ -31,12 +31,13 @@ export function orderedLetters(rows: readonly DoctrineOffensive[]): DoctrineOffe
 }
 
 /** The enclosure the declaration authorizes, including all pack defaults and recursive fallback terms. */
-export function authoredGoal(row: DoctrineOffensive, defaults: Omit<GoalTerms, 'objective' | 'posture' | 'committed' | 'discretion'>, crossNeutral: boolean): GoalTerms {
+export function authoredGoal(row: DoctrineOffensive, defaults: Omit<GoalTerms, 'objective' | 'posture' | 'purpose' | 'committed' | 'discretion'>, crossNeutral: boolean): GoalTerms {
   const goal = (term: Fallback): GoalTerms => ({ ...defaults, neutral: defaults.neutral || crossNeutral,
     objective: term.objective, posture: term.posture, committed: [],
     ...(term.discretion === undefined ? {} : { discretion: { condition: term.discretion.condition, fallback: goal(term.discretion.fallback) } }),
   });
-  return goal({ ...row, posture: row.posture ?? 'take' });
+  return row.purpose === undefined ? goal({ ...row, posture: row.posture ?? 'take' }) :
+    { ...defaults, purpose: row.purpose, committed: [], neutral: false };
 }
 
 interface Fallback {

@@ -29,7 +29,7 @@ import { goalTerms, scriptedSeats } from './support/test-seats.ts';
 const lead = seatIdFor(P('a_lead'));
 const RESERVE: PostId = POST('a_reserve');
 const strong = () => indexedFixture({ posts: { a_reserve: { strength: 2000 } } });
-const take = (over: Partial<GoalTerms> = {}): OrderCommand => ({ cmd: 'order', to: RESERVE, goal: goalTerms('take', 'b_mid', over), route: 'special-messenger', bypass: true });
+const take = (over: Partial<Extract<GoalTerms, { posture: string }>> = {}): OrderCommand => ({ cmd: 'order', to: RESERVE, goal: goalTerms('take', 'b_mid', over), route: 'special-messenger', bypass: true });
 const review = (action: 'approve' | 'send_back' | 'edit', edit: EditTerms | null = null): ReviewCommand => ({ cmd: 'review', to: RESERVE, action, edit, route: 'special-messenger', bypass: true });
 
 /** Play day by day; `script(day, state)` gives the principal's commands for each morning. */

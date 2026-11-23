@@ -66,6 +66,13 @@ export interface PlanChallenge {
   readonly challengePending?: true;
 }
 
+/** Reassessed from the commander's received picture, independently of enemy truth. */
+export interface DetentionEnd {
+  readonly dendReason: 'reported_departure';
+  readonly dendDay: number;
+  readonly dendReport: MessageId;
+}
+
 /** A post's goal and its plan. Immutable: `plans` replaces it whole. */
 export interface PlanRecord {
   readonly planAuthority?: AuthorityBasis;
@@ -74,6 +81,7 @@ export interface PlanRecord {
   readonly planDiscretionOrder?: MessageId;
   readonly planProposalPending?: true;
   readonly planChallenge?: PlanChallenge;
+  readonly planDetentionEnd?: DetentionEnd;
   readonly planNotes?: readonly NoteReading[];
   readonly planGoal: PlanGoal;
   readonly planIssuer: PersonId;
@@ -134,7 +142,7 @@ export function setGoal(
   order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string; readonly propose?: boolean; readonly letter?: PlanRecord['planLetter']; readonly authority?: AuthorityBasis },
   day: number,
 ): State {
-  const holdHere = order.goal.goalObjective === null;
+  const holdHere = order.goal.goalPurpose === undefined && order.goal.goalObjective === null;
   return put(state, post, {
     ...(order.authority === undefined ? {} : { planAuthority: order.authority }),
     planGoal: order.goal,
@@ -186,6 +194,11 @@ export function saveDraft(state: State, post: PostId, draft: DraftSet): State {
   const record = state.planRecords[post]!;
   if (draft.draftCandidates.length === 0) return put(state, post, { ...record, planDraft: draft, planStatus: 'approved', planApproved: null });
   return put(state, post, { ...record, planDraft: draft, planStatus: 'choosing', planChosen: null, planApproved: null, planSubmitted: null });
+}
+
+export function endDetention(state: State, post: PostId, end: DetentionEnd): State {
+  const record = state.planRecords[post]!;
+  return put(state, post, { ...record, planDetentionEnd: end });
 }
 
 /**

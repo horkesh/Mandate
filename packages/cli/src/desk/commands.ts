@@ -104,6 +104,7 @@ function withFallback(goal: GoalTerms, raw: string, t: DeskStrings): (GoalTerms 
   const entries = raw.split('/');
   const error = t('console.error.fallback', { max: String(MAX_FALLBACKS) });
   if (entries.length > MAX_FALLBACKS) return error;
+  if (goal.purpose !== undefined) return error;
   const { discretion: _old, ...terms } = goal;
   const goals: { condition: Discretion<GoalTerms>['condition']; goal: GoalTerms }[] = [];
   for (const entry of entries) {

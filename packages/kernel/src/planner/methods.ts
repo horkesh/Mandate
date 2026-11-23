@@ -57,7 +57,7 @@ function alternativeGates(ctx: Ctx, route: PlanRoute, alt: PlanRoute): PlanGate[
 export function directRoute(ctx: Ctx): PlanRoute | null {
   const from = staging(own(ctx));
   const objective = ctx.input.goal.goalObjective;
-  return from === null || objective === null ? null : search(ctx, from, objective, 'land', weights(ctx));
+  return from === null || objective == null ? null : search(ctx, from, objective, 'land', weights(ctx));
 }
 
 export function direct(ctx: Ctx, route: PlanRoute | null): Outcome {
@@ -156,7 +156,7 @@ export function supplyLine(ctx: Ctx): Outcome {
   const objective = ctx.input.goal.goalObjective;
   const gates: PlanGate[] = objectiveGate(ctx);
   if (from === null) gates.push(gate('no_forces', 'no land blocks under his post'));
-  const route = from === null || objective === null ? null : search(ctx, from, objective, 'land', weights(ctx, { supplyCare: 1000 }));
+  const route = from === null || objective == null ? null : search(ctx, from, objective, 'land', weights(ctx, { supplyCare: 1000 }));
   if (route === null && gates.length === 0) gates.push(gate('no_route', 'no land route'));
   if (gates.length > 0) return reject('supply_line', 'depot_steps', gates);
   const axis = buildAxis(ctx, { name: 'main', post: ctx.input.post, mode: 'land', route: route!, blocks, depotSteps: true });
@@ -221,7 +221,7 @@ export function pincer(ctx: Ctx, route: PlanRoute | null): Outcome[] {
         reqHolder: answer.post.holder,
         reqMen: 0,
         reqFrom: partner.region,
-        reqObjective: objective,
+        reqObjective: objective ?? null,
         reqArriveFrom: mine.axisArrival - input.rules.pincerWindow,
         reqArriveTo: mine.axisArrival,
         reqCarrier: null,
@@ -287,7 +287,7 @@ export function byWater(ctx: Ctx): Outcome[] {
         reqHolder: answer?.post.holder ?? null,
         reqMen: 0,
         reqFrom: carrier!.region,
-        reqObjective: input.goal.goalObjective,
+        reqObjective: input.goal.goalObjective ?? null,
         reqArriveFrom: 0,
         reqArriveTo: 0,
         reqCarrier: carrier!.id,

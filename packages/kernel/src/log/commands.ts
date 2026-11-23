@@ -14,16 +14,18 @@ import type { ForceBlockId, MessageId, PersonId, PostId, RegionId, SituationId }
 import type { CounterTerms } from '../audience/counters.ts';
 import type { BattleOrders } from '../combat/order-kinds.ts';
 import type { RouteKind } from '../messages/latency.ts';
-import type { Discretion, EditKind, Posture } from '../plans/goal.ts';
+import type { DetentionPurpose, Discretion, EditKind, Posture } from '../plans/goal.ts';
 import type { PlanNote } from '../plans/notes.ts';
 import type { LetterIdentity } from '../world/letters.ts';
 
 /** A goal as a command carries it (the plans record's `PlanGoal`, unprefixed). */
-export interface GoalTerms {
+export type GoalTerms = GoalCommonTerms & (
+  | { readonly purpose?: never; readonly objective: RegionId | null; readonly posture: Posture }
+  | { readonly purpose: DetentionPurpose; readonly objective?: never; readonly posture?: never }
+);
+
+interface GoalCommonTerms {
   readonly discretion?: Discretion<GoalTerms>;
-  /** Null only for "hold where he stands". */
-  readonly objective: RegionId | null;
-  readonly posture: Posture;
   /** 0..1000. */
   readonly risk: number;
   readonly deadlineDays: number;

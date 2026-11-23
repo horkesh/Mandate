@@ -27,7 +27,7 @@ const plans = (options: OptionView[]): PlanMenu => ({
   options,
 });
 const DEFAULTS = { risk: 500, deadlineDays: 20, rail: true, river: false, sea: false, neutral: false, awaitWord: false, approveAsDrafted: true };
-const take = (objective: string, neutral = false): GoalTerms => ({ ...DEFAULTS, objective: region(objective), posture: 'take', committed: [], neutral });
+const take = (objective: string, neutral = false): Extract<GoalTerms, { posture: string }> => ({ ...DEFAULTS, objective: region(objective), posture: 'take', committed: [], neutral });
 const person = (s: string) => ids.toId('person', s);
 const COSTS = { order: 1, review_edit: 1, review_approve: 0, review_send_back: 0, go: 0, decide_staff: 0, decide_overrule: 1, delegate: 0, appoint: 1, relieve: 1, transfer: 1, inquire: 0, consult: 1, audience: 1, observer: 1, promise: 1, pressure: 1, address: 1 };
 const army = (id: string, days: number, over: Partial<PrincipalMenu['commandable'][number]> = {}): PrincipalMenu['commandable'][number] => ({

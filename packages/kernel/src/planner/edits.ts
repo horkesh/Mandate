@@ -77,7 +77,7 @@ function rebuild(ctx: Ctx, axis: PlanAxis, over: { readonly route?: PlanAxis['ax
 /** Apply one edit to the chosen plan, on the ground and beliefs of `input`, scored against his draft set's best. */
 export function applyEdit(input: PlannerInput, set: DraftSet, chosen: PlanCandidate, edit: EditSpec): EditResult {
   // An edit to a different objective is scored against that objective (his scorer, the edited goal).
-  const goal = edit.editKind === 'objective' && edit.editRegion !== null ? { ...input.goal, goalObjective: edit.editRegion } : input.goal;
+  const goal = input.goal.goalPurpose === undefined && edit.editKind === 'objective' && edit.editRegion !== null ? { ...input.goal, goalObjective: edit.editRegion } : input.goal;
   const ctx = makeCtx({ ...input, goal });
   const find = (name: string | null) => chosen.candAxes.find((a) => a.axisName === name);
   const w = weights(ctx);

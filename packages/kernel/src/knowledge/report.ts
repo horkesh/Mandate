@@ -112,6 +112,12 @@ export const CLAIM_KINDS = [
   'control-government',
   'effective-strength',
   'enemy-strength',
+  'enemy-estimate-unknown',
+  'enemy-command',
+  'enemy-activity',
+  'detention-activity',
+  'detention-effect',
+  'detention-course',
   // Lane 1.12: a fort surrendered under bombardment (token: the record's terms, evacuated_under_terms, or captured).
   'fort-surrendered',
   'framing',
@@ -156,6 +162,7 @@ export interface ReportClaim {
   readonly claimBattleDays?: readonly number[];
   /** The commander the source names, not a lookup of today's holder. */
   readonly claimCommander?: PersonId | null;
+  readonly claimActivity?: 'deployment' | 'reconnaissance_in_force';
 }
 
 /** A reason as the author states it: visible, typed, weighted. His true reasons are terms in `truth.ts`. */

@@ -15,8 +15,9 @@
 import { strictCompare } from '../compare.ts';
 import type { ComplianceRung } from '../directive.ts';
 import type { ForceBlockId, MessageId, PersonId, PostId, RegionId } from '../ids.ts';
-import type { Method, PlanPhase, PlanRoute, RequestKind } from '../planner/types.ts';
-import type { Posture } from '../plans/goal.ts';
+import type { DemonstrationCourse, Method, PlanPhase, PlanRoute, RequestKind } from '../planner/types.ts';
+import type { PlanDetentionPurpose, Posture } from '../plans/goal.ts';
+import type { LetterIdentity } from '../world/letters.ts';
 import type { State } from '../root-state.ts';
 
 /** An axis's stages (0073's lifecycle): `works` is digging in at the objective it holds. */
@@ -24,7 +25,7 @@ export const AXIS_STAGES = ['assemble', 'march', 'works', 'assault', 'bombard', 
 export type AxisStage = (typeof AXIS_STAGES)[number];
 
 /** How an operation ended. */
-export const OPERATION_OUTCOMES = ['objective_reached', 'failed', 'superseded'] as const;
+export const OPERATION_OUTCOMES = ['objective_reached', 'failed', 'superseded', 'episode_closed'] as const;
 export type OperationOutcome = (typeof OPERATION_OUTCOMES)[number];
 
 /** Why an axis entered a stage: a typed reason (hard rule 6). */
@@ -55,6 +56,7 @@ export const STAGE_REASONS = [
   'no_route',
   'superseded',
   'force_taken',
+  'episode_closed',
   // Lane 1.12: the bombardment stage.
   'bombarding',
   'garrison_surrendered',
@@ -121,6 +123,31 @@ export interface OpRequest {
 export const ENCIRCLEMENTS = ['pending', 'met', 'failed_human', 'failed_ground'] as const;
 export type Encirclement = (typeof ENCIRCLEMENTS)[number];
 
+export type DemonstrationStage = 'preparing' | 'approaching' | 'demonstrating' | 'recovering' | 'closed';
+export type DemonstrationReason = 'approved' | 'ready' | 'arrived' | 'qualified_delay' | 'task_complete' |
+  'contact' | 'allocation_lost' | 'return_blocked' | 'approach_blocked' | 'authority_ended' |
+  'superseded' | 'reported_departure' | 'insufficient_stores' | 'recovered' | 'terminal_loss';
+
+export interface DemonstrationEvent {
+  readonly devDay: number;
+  readonly devStage: DemonstrationStage;
+  readonly devReason: DemonstrationReason;
+  readonly devRegion: RegionId | null;
+}
+
+export interface DemonstrationAction {
+  readonly dactDay: number;
+  readonly dactRegion: RegionId;
+  readonly dactBlocks: readonly ForceBlockId[];
+  readonly dactTask: 'deployment' | 'reconnaissance_in_force';
+}
+
+export interface DemonstrationEpisode {
+  readonly demCourse: DemonstrationCourse;
+  readonly demEvents: readonly DemonstrationEvent[];
+  readonly demActions: readonly DemonstrationAction[];
+}
+
 export interface OperationRecord {
   readonly opPost: PostId;
   readonly opCommander: PersonId | null;
@@ -128,8 +155,15 @@ export interface OperationRecord {
   readonly opOrder: MessageId;
   readonly opPlan: string;
   readonly opMethod: Method;
-  readonly opPosture: Posture;
-  readonly opObjective: RegionId | null;
+  readonly opPosture?: Posture;
+  readonly opObjective?: RegionId | null;
+  readonly opPurpose?: PlanDetentionPurpose;
+  readonly opLetter?: LetterIdentity;
+  /** Identity of the bounded planning opportunity that supplied this chosen course. */
+  readonly opDraftDay?: number;
+  /** Actual days when a ready operation was deferred under the addressee's slow walk. */
+  readonly opDeferredDays?: readonly number[];
+  readonly opDemonstration?: DemonstrationEpisode;
   readonly opStartDay: number;
   readonly opEndDay: number | null;
   readonly opOutcome: OperationOutcome | null;
