@@ -10070,3 +10070,22 @@ Read decision 0118 and S104's proposal (`C:\Pyrrhic\sprint-pushback\docs\researc
 Headless only: never use Computer Use, desktop control or a real browser. Never push. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S106)
+
+
+#### S107: should a call for troops be read for boldness? (worktree `C:\Pyrrhic\sprint-pushback`, branch `sprint/pushback`; read `C:\Pyrrhic\sprint-july` only)
+
+The negative governor answers left after S102 (C02, C03, C10, C11) are driven by the temperament term: minus four tenths of the gap between the order's boldness and the replier's. Brown's C02, for instance, gets −118 from temperament and +45 from deterrence, and nothing else. Every call has boldness 500, a pack-wide constant that no call's text sets.
+1. **Trace the term.** Where does the order's boldness come from, for calls, goals, transfers and appointments? And what is the temperament term meant to measure, under the decisions and FOUNDATION section 6 (read and cite them)?
+2. **Ask whether it fits a call.** A call asks a governor to raise or send men. Does an order's boldness mean anything for that kind of request? Compare how the term reads for a field goal, where an attack or a hold has a real boldness.
+3. **Look at the record.** From the pages S101 and S104 read, does any governor's reply turn on how bold the call was, as opposed to its terms, its means or its authority? Cite by page.
+4. **Propose one ruling,** naming the alternatives you reject. The options include:
+   - calls carry no temperament term;
+   - calls take a boldness from their own text;
+   - the term stays.
+
+   Show its effect on the four rows and on two governors outside the registers, as arithmetic from the recorded terms only, never as a fitted weight.
+5. **Commit** the proposal and a note through the hook. Make no code or pack change.
+
+Facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S106 is running in `sprint-july`: read it only. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S106, S107)
