@@ -15,6 +15,11 @@ export const PushbackMatchSchema = z.strictObject({
   to: text.optional(),
   actual: text.optional(),
   advice: text.optional(),
+  /** 0118: subject and compatible effect of the qualification, apart from the rung. */
+  qualification: z.array(z.strictObject({
+    subject: z.enum(['purpose', 'service_term', 'appointments', 'organisation', 'authority', 'muster', 'destination', 'arms_equipment', 'transport', 'support', 'timing', 'course']),
+    effects: z.array(z.enum(['statement', 'request', 'gate', 'offer'])).min(1),
+  })).min(1).optional(),
 }).refine(m => (m.callId !== undefined && m.callId !== null) || (m.termDays !== undefined && (m.regiments !== undefined || m.post !== undefined)) || m.subject !== undefined || (m.objective !== undefined && m.posture !== undefined) || (m.post !== undefined && m.to !== undefined), 'a bounded matter needs a call, subject, goal or transfer pair')
   .refine(m => m.actual !== undefined || m.advice !== undefined, 'a matcher must name the actual act or advice required');
 export const PushbackGapSchema = z.strictObject({ mechanism: text, location: text, reason: text });

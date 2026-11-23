@@ -531,7 +531,7 @@ describe('M2’s audience cases on the new State (P3)', () => {
 });
 
 describe('the ladder, rivals and seat initiatives (P5, P6; 0040)', () => {
-  it('admits initiatives by their own threshold while ordinary orders still use complyAt', () => {
+  it('admits initiatives by their own threshold while ordinary orders use the undertaking boundary', () => {
     const base = indexedFixture();
     const world = withPeople(base, { initiativeAt: 150, initiatives: [{ id: 'write_to_the_press', kinds: ['officer'], boldness: 800, honours: ['glory'], offends: [], fromRung: 'loyal', cooldownDays: 28, recommends: 'publish' }] });
     const people = world.map.world.rules.people;
@@ -543,8 +543,9 @@ describe('the ladder, rivals and seat initiatives (P5, P6; 0040)', () => {
     expect(after.state.seatInitiatives).toEqual(before.state.seatInitiatives);
     expect(after.results.flatMap(r => r.events.filter(e => e.event === 'initiative'))).toEqual(before.results.flatMap(r => r.events.filter(e => e.event === 'initiative')));
     const terms = { boldness: 800, honours: ['glory'], offends: [], required: 0 };
-    expect(answerOrder(world, createState(world, { seed: 1 }), P('a_gen'), P('a_lead'), terms).actual).not.toBe('comply');
-    expect(answerOrder(lowCompliance, createState(lowCompliance, { seed: 1 }), P('a_gen'), P('a_lead'), terms).actual).toBe('comply');
+    const answer = (w: SeatsWorld) => answerOrder(w, createState(w, { seed: 1 }), P('a_gen'), P('a_lead'), terms);
+    expect(answer(world)).toMatchObject({ actual: 'object', undertaking: null });
+    expect(answer(lowCompliance)).toEqual(answer(world));
     // The new rule can independently stop even an initiative that would exceed an order.
     const highInitiative = withPeople(world, { initiativeAt: 10000 });
     expect(run(highInitiative).fires('seats.initiative')).toBe(0);

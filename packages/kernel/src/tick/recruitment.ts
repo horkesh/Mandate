@@ -27,9 +27,10 @@ import { ORDER_ROUTES } from '../messages/latency.ts';
 import type { TransitMessage } from '../messages/transit.ts';
 import { placeAndRemove, type MusterPlacement } from '../movement/movement.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
+import { reportQualificationOf } from '../knowledge/report.ts';
 import { term } from '../knowledge/truth.ts';
 import { answerOrder } from '../reading/orders.ts';
-import { callTerms, type RecruitmentRules } from '../recruitment/rules.ts';
+import { callDirective, type RecruitmentRules } from '../recruitment/rules.ts';
 import { renewableBlock } from '../recruitment/renewal.ts';
 import { loyaltyOf } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
@@ -85,7 +86,8 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
 
 /** The share of a call a rung raises, scaled by his region's loyalty to his side (pack rules), in whole regiments. */
 export function regimentsRaised(rules: RecruitmentRules, asked: number | null, rung: string, loyalty: number | null, askedMen?: number | null): { readonly regiments: number | null; readonly men: number | null; readonly delayDays: number; readonly loyaltyPermille: number } | null {
-  const row = rules.rungs.find((r) => r.rung === rung);
+  const executionRung = rung === 'comply_with_reservations' ? 'comply' : rung;
+  const row = rules.rungs.find((r) => r.rung === executionRung);
   if (row === undefined) return null;
   const factor = rules.loyaltyWeight === 0 || loyalty === null ? 1000 : 1000 - rules.loyaltyWeight + Math.trunc((rules.loyaltyWeight * Math.min(loyalty, rules.loyaltyFull)) / rules.loyaltyFull);
   const regiments = asked === null ? null : Math.trunc((Math.trunc((asked * row.sharePermille) / 1000) * factor) / 1000);
@@ -114,7 +116,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   if (!raisingPost(ctx,start,post)) return returnDispatch(ctx,start,msg,'not_raising_post');
   const rules = world.map.world.rules.recruitment;
   // He answers watched from where he stands (lane 1.4's oversight: his courier days from the caller, and the wire).
-  const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules, call.callProfile), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
+  const answer = answerOrder(world, start, governor, order.orderIssuer, callDirective(rules, call), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call', ...(call.callId === undefined ? {} : { callId: call.callId }) }));
   const side = postFaction(world, state, post);
   const region = state.postStates[post]!.postSeat;
@@ -143,6 +145,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   sendReport(ctx, state, {
     body: answerBody(governor, post, day, {
       reportType: objects ? 'advice' : 'wire-dispatch',
+      ...reportQualificationOf(answer),
       reportSubtype: objects ? 'memorandum' : null,
       reportClaims: [{ claimKind: 'call-answer', claimRegion: region, claimValue: declared?.regiments ?? 0, claimToken: declared?.men === null ? `${answer.declared}:unknown_strength` : answer.declared, claimConfidence: declared?.men === null ? 0 : 1000 }],
       reportAdvice: objects ? { adviceRecommends: 'withdraw-order', adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: ctx.world.map.world.rules.reportConfidence.recruitmentObjection } : null,

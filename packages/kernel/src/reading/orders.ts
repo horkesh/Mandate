@@ -15,7 +15,7 @@
  */
 import { strictCompare } from '../compare.ts';
 import { resolveConflict, resolveDirective, type ConflictResolution, type OrderInHand } from '../compliance.ts';
-import type { CommandContext, DirectiveResponse, DirectiveTerms } from '../directive.ts';
+import type { CommandContext, DirectiveAlternative, DirectiveClause, DirectiveResponse, DirectiveTerms } from '../directive.ts';
 import type { PersonId, PostId } from '../ids.ts';
 import { term, type BiasTerm } from '../knowledge/truth.ts';
 import type { StatedReason } from '../knowledge/report.ts';
@@ -28,6 +28,7 @@ import { heldPost, sideOfPerson } from '../command/command.ts';
 import { observersAt } from '../command/observers.ts';
 import { dispositionOf } from '../ladder/ladder.ts';
 import { credibilityOf } from '../politics/politics.ts';
+import { goalKindOf, type PlanGoal } from '../plans/goal.ts';
 
 /** The seats layer's World as reading needs it: the map, its rules, and each faction's principal. */
 export type ReadingWorld = PrincipalLookup;
@@ -41,6 +42,20 @@ export function goalTerms(rules: PeopleRules, kind: string): DirectiveTerms {
   const row = rules.goalTerms.find((g) => g.goal === kind);
   if (row === undefined) throw new RangeError(`the pack states no terms for goal kind "${kind}" (rules.people.goalTerms)`);
   return { boldness: row.boldness, honours: row.honours, offends: row.offends, required: 0 };
+}
+
+/** These IDs come from the existing goal grammar, whatever the recipient makes of it. */
+export function goalDirective(rules: PeopleRules, goal: PlanGoal): DirectiveTerms {
+  const clauses: DirectiveClause[] = [
+    { clauseId: 'course', clauseSubject: 'course' },
+    { clauseId: 'objective', clauseSubject: 'destination' },
+    { clauseId: 'deadline', clauseSubject: 'timing' },
+    { clauseId: 'routes', clauseSubject: 'transport' },
+    { clauseId: 'commitment', clauseSubject: 'organisation' },
+    { clauseId: 'approval', clauseSubject: 'authority' },
+  ];
+  if (goal.goalDiscretion !== undefined) clauses.push({ clauseId: 'discretion', clauseSubject: 'authority' });
+  return { ...goalTerms(rules, goalKindOf(goal)), clauses };
 }
 
 /** A man as compliance reads him, with his regard for `toward` (the issuer of the order he reads). */
@@ -59,6 +74,7 @@ export interface OrderMeans {
   readonly supportPromised?: readonly string[];
   /** Oversight from where he stands (`tick/context.ts`'s `oversightOf`, lane 1.4); the pack's base where the caller cannot place him. */
   readonly oversight?: number;
+  readonly qualifications?: CommandContext['qualifications'];
 }
 
 /**
@@ -79,6 +95,7 @@ export function contextFor(world: ReadingWorld, state: State, person: PersonId, 
     leaderCredibility: principalCredibility(world, state, person),
     grievances: (state.personGrievances[person] ?? []).map((g) => ({ kind: g.grievanceKind, weight: g.grievanceWeight })),
     ...(means.supportPromised === undefined ? {} : { supportPromised: means.supportPromised }),
+    ...(means.qualifications === undefined ? {} : { qualifications: means.qualifications, receivedDay: state.stateDay }),
     ...extraContext(world, state, person),
   };
 }
@@ -112,6 +129,15 @@ export function orderTerms(rules: PeopleRules, order: string): DirectiveTerms {
   // A row with no boldness asks nothing of his temperament: the order is read against itself, so the gap is none.
   if (row.boldness === null) return { boldness: 500, ownBest: 500, honours: row.honours, offends: row.offends, required: 0, ...clashes };
   return { boldness: row.boldness, honours: row.honours, offends: row.offends, required: 0, ...clashes };
+}
+
+export function verbDirective(rules: PeopleRules, verb: string): DirectiveTerms {
+  const clauses: DirectiveClause[] = verb === 'transfer'
+    ? [{ clauseId: 'destination', clauseSubject: 'destination' }, { clauseId: 'detail', clauseSubject: 'organisation' }]
+    : verb === 'appoint' || verb === 'relieve' || verb === 'observer'
+      ? [{ clauseId: 'appointment', clauseSubject: 'appointments' }]
+      : [];
+  return { ...orderTerms(rules, `verb:${verb}`), clauses };
 }
 
 /**
@@ -176,13 +202,13 @@ export function pushbackOf(world: ReadingWorld, state: State, order: string, rec
  * How `person` answers an order from `issuer` with these terms: compliance on the new State, with the pack's weights.
  * Pure. Lane 1.2 calls it at an order's arrival with a goal's, a plan's or an edit's terms.
  */
-export function answerOrder(world: ReadingWorld, state: State, person: PersonId, issuer: PersonId, terms: DirectiveTerms, means: OrderMeans = {}): DirectiveResponse {
+export function answerOrder(world: ReadingWorld, state: State, person: PersonId, issuer: PersonId, terms: DirectiveTerms, means: OrderMeans = {}, alternatives: readonly DirectiveAlternative[] = []): DirectiveResponse {
   const rules = peopleRules(world);
   // Lane 1.5b: an order that runs against a practice of his own (the map's `clashes` against his cited practices).
   const own = world.map.world.people.find((p) => p.id === person)?.practices.map((p) => p.practice) ?? [];
   const practiceClashes = [...new Set(terms.clashes ?? [])].filter((c) => own.includes(c)).sort(strictCompare).map((practice) => ({ practice, weight: rules.verbs.practiceWeight }));
   const context = contextFor(world, state, person, means);
-  return resolveDirective(profileOf(world, state, person, issuer), terms, practiceClashes.length === 0 ? context : { ...context, practiceClashes }, rules.compliance);
+  return resolveDirective(profileOf(world, state, person, issuer), terms, practiceClashes.length === 0 ? context : { ...context, practiceClashes }, rules.compliance, alternatives);
 }
 
 /**
@@ -217,16 +243,14 @@ export interface RelayAction {
 }
 
 /**
- * A relaying link's rung becomes his relay: exceed or comply forwards at once; reservations, a slow walk or a
- * reinterpretation (a relay cannot rewrite the order) forward after the pack's hold; an objection or a refusal sends it
+ * Willing relayers forward at once, including those with a statement or request. A slow walk or reinterpretation
+ * forwards after the pack's hold; an objection or a refusal sends it
  * back with his stated reasons. The terms carry the rung and each contribution (hard rule 6).
  */
 export function relayAction(rules: PeopleRules, response: DirectiveResponse, person: PersonId, post: PostId): RelayAction {
   const contributions = response.contributions.map((c) => term('relay_term', c.amount, { person, post, rule: c.term }));
   const holdDays =
-    response.actual === 'comply_with_reservations'
-      ? rules.relay.reservationsHoldDays
-      : response.actual === 'slow_walk'
+    response.actual === 'slow_walk'
         ? rules.relay.slowWalkHoldDays
         : response.actual === 'reinterpret'
           ? rules.relay.reinterpretHoldDays

@@ -1,0 +1,15 @@
+{
+  "key": "union-1861, war by decision, 148 days/recruitment.slow_walked",
+  "before": {
+    "minFires": 1,
+    "maxFires": 4
+  },
+  "after": {
+    "minFires": 0,
+    "maxFires": 0,
+    "why": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once."
+  },
+  "observed": 0,
+  "cause": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once.",
+  "evidence": "docs/audit/s106-evidence/band-review.json#recruitment.slow_walked"
+}

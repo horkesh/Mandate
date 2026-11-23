@@ -271,7 +271,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   "reports.casualty_return": around(20),
   "reports.governor_wire": around(6),
   'reports.pocket': { ...around(3), why: "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports." },
-  'map.pocket_closed': { ...around(8), why: "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_closed 8 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_closed." },
+  "map.pocket_closed": {"minFires": 1, "maxFires": 6, "why": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes."},
   'knowledge.pruned_age': around(107), // S1 national [I]: additional command letters and changed field reports alter ordinary received traffic and age pruning.
   'knowledge.pruned_superseded': around(146),
   'map.pocket_relieved': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved." },
@@ -330,7 +330,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   "situations.surfaced": around(87),
   'recruitment.called': around(97), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
   'recruitment.answered': around(61), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
-  "recruitment.slow_walked": {"minFires": 1, "maxFires": 4},
+  "recruitment.slow_walked": {"minFires": 0, "maxFires": 0, "why": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once."},
   "recruitment.refused": around(12),
   'recruitment.mustered': around(50), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
   'recruitment.men': around(46), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.

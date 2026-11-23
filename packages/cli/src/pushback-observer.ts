@@ -60,7 +60,14 @@ export function observePushback() {
       if (a.respDay !== r.day) continue;
       const id = `${key}|${a.respRole}|${a.respActual}|${a.respDay}`;
       if (acts.has(id)) continue;
-      acts.set(id, { id, creditKey: `${a.respOrder}|${a.respPerson}|${a.respRole}|${a.respNote ?? ''}`, order: a.respOrder, side: null, actor: a.respPerson, role: a.respRole, kind: a.respKind, actual: a.respActual, declared: a.respDeclared, day: a.respDay, ...(a.respPost === null || a.respPost === undefined ? {} : { post: a.respPost }), ...(a.respKind === 'call' ? { callId: a.respCallId ?? null } : {}) });
+      acts.set(id, { id, creditKey: `${a.respOrder}|${a.respPerson}|${a.respRole}|${a.respNote ?? ''}`, order: a.respOrder, side: null, actor: a.respPerson, role: a.respRole, kind: a.respKind, actual: a.respActual, declared: a.respDeclared, day: a.respDay, ...(a.respPost === null || a.respPost === undefined ? {} : { post: a.respPost }), ...(a.respKind === 'call' ? { callId: a.respCallId ?? null } : {}),
+        ...(a.respUndertaking === undefined ? {} : { undertaking: a.respUndertaking }),
+        ...(a.respDeclaredUndertaking === undefined ? {} : { declaredUndertaking: a.respDeclaredUndertaking }),
+        ...(a.respReservations === undefined ? {} : { reservations: a.respReservations }),
+        ...(a.respDeclaredReservations === undefined ? {} : { declaredReservations: a.respDeclaredReservations }),
+        ...(a.respReservationGaps === undefined ? {} : { reservationGaps: a.respReservationGaps }),
+        ...(a.respDeclaredReservationGaps === undefined ? {} : { declaredReservationGaps: a.respDeclaredReservationGaps }),
+      });
     }
     for (const e of r.events) {
       if (e.event !== 'filtered' || e.message === null) continue;

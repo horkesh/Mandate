@@ -13,7 +13,7 @@
  */
 import type { EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { ControlShares, FrontSegment } from '../control/vocabulary.ts';
-import type { ClaimKind, ReportType, SubjectKind, NoteAccount, GoalProposal, DiscretionReport } from '../knowledge/report.ts';
+import type { ClaimKind, ReportType, SubjectKind, NoteAccount, GoalProposal, DiscretionReport, ReportQualification } from '../knowledge/report.ts';
 import type { GoalTerms } from '../log/commands.ts';
 import type { Discretion } from '../plans/goal.ts';
 import type { RouteKind } from '../messages/latency.ts';
@@ -71,6 +71,7 @@ export interface AdviceView {
 }
 
 export interface ReportView {
+  readonly qualification?: ReportQualification;
   readonly proposal?: GoalProposal;
   readonly discretion?: DiscretionReport;
   /** Authored body key of this received notice, matched by subject, type and subtype. */

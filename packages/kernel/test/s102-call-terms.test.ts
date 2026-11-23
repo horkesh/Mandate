@@ -24,7 +24,7 @@ function fixture() {
   const base = indexedFixture();
   const rules = { ...base.map.world.rules.recruitment,
     raisingPostKinds: [base.start.posts.find(p => p.id === POST('a_army'))!.kind],
-    callProfiles: [profile('retained', ['caution'], []), profile('displaced', [], ['caution']), profile('empty', [], [])],
+    callProfiles: [profile('retained', ['caution'], []), profile('displaced', [], ['caution']), profile('empty', [], []), profile('qualified', ['caution'], ['caution'])],
   };
   const world = indexSeatsWorld(indexWorld({ ...base.map.world, rules: { ...base.map.world.rules, recruitment: rules,
     ruleSeats: { ...base.map.world.rules.ruleSeats, principals: base.map.world.rules.ruleSeats.principals.map(p => ({ ...p, calls: p.faction === 'a' ? [{ id: 'retained_call', termsId: 'retained', post: POST('a_army'), regiments: 1, termDays: 30, fromDate: '1900-06-02', source: 'fixture page 12' }] : [] })) },
@@ -53,6 +53,30 @@ describe('per-call terms travel with the paper', () => {
     const { rules } = fixture();
     expect(callTerms(rules, profile('empty', [], []))).toMatchObject({ honours: [], offends: [], required: 0 });
     expect(callTerms(rules)).toMatchObject({ ...rules.callTerms, required: 0 });
+  });
+
+  it('publishes a grounded protest without delaying muster', () => {
+    const { world, state, rules } = fixture();
+    const run = (termsId: string, day: number) => {
+      const ctx = ctxFor(world, state, day);
+      expect(issueCall(ctx, state, seatIdFor(P('a_lead')), { cmd: 'call', to: POST('a_army'), regiments: 1, termDays: 30, route: 'courier', bypass: true, termsId })).toBeNull();
+      const msg = ctx.outbox[0]!;
+      const next = arriveCall(ctx, state, msg);
+      return { msg, levy: Object.values(next.postLevies)[0], response: Object.values(next.orderResponses)[0]!, report: ctx.outbox.find(m => m.msgReport !== null)?.msgReport };
+    };
+    const qualified = run('qualified', 1), repeat = run('qualified', 2);
+    expect(qualified.response).toMatchObject({
+      respActual: 'comply_with_reservations', respDeclared: 'comply_with_reservations',
+      respUndertaking: { undertakingKind: 'original', undertakingRequest: qualified.msg.msgOrigin, undertakingRevision: qualified.msg.msgOrigin },
+      respReservations: [expect.objectContaining({ clause: 'course', effect: 'statement' })],
+    });
+    expect(qualified.report).toMatchObject({
+      reportAnswers: qualified.msg.msgOrigin,
+      reportQualification: { statedUndertaking: 'original', statedReservations: qualified.response.respDeclaredReservations },
+    });
+    expect(qualified.levy).toMatchObject({ levyMusterDay: 1 + rules.musterDays, levyRegiments: 1 });
+    expect(qualified.response.respUndertaking!.clauses).toEqual(repeat.response.respUndertaking!.clauses);
+    expect(qualified.response.respUndertaking!.undertakingRevision).not.toEqual(repeat.response.respUndertaking!.undertakingRevision);
   });
 
   it('records structural conditions and material demand without scoring either', () => {

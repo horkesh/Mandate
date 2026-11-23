@@ -12,11 +12,12 @@
  */
 import { strictCompare } from '../compare.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
-import type { ComplianceRung, Reason } from '../directive.ts';
+import type { ComplianceRung, DirectiveAlternative, DirectiveTerms, QualificationInput, Reason } from '../directive.ts';
 import type { MessageId, PersonId, PostId } from '../ids.ts';
-import type { DiscretionReport, ReportClaim, StatedReason, NoteAccount, GoalProposal, GoalProposalReason } from '../knowledge/report.ts';
+import { reportQualificationOf, type DiscretionReport, type ReportBody, type ReportClaim, type StatedReason, type NoteAccount, type GoalProposal, type GoalProposalReason } from '../knowledge/report.ts';
 import { followsNote } from '../planner/notes.ts';
 import { term } from '../knowledge/truth.ts';
+import { clampPermille } from '../permille.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
 import { discretionThreat, preferableGoal } from '../planner/discretion.ts';
 import { applyEdit, concretePlan, editDirective, editFailureDiagnostic, PLAN_HOLDS } from '../planner/edits.ts';
@@ -114,7 +115,7 @@ export function choosingMenus(state: State, day: number) {
 }
 
 /** A report from a commander to the goal's issuer, answering the goal's order. */
-function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly plan?: PlanPaper; readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly proposal?: GoalProposal; readonly discretion?: DiscretionReport; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly issuer?: PersonId; readonly tag: string }): MessageId {
+function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: Pick<ReportBody, 'reportQualification'> & { readonly plan?: PlanPaper; readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly proposal?: GoalProposal; readonly discretion?: DiscretionReport; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly issuer?: PersonId; readonly tag: string }): MessageId {
   const holder = state.postStates[post]!.postHolder!;
   return sendReport(ctx, state, {
     body: answerBody(holder, post, ctx.day, {
@@ -126,6 +127,7 @@ function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanReco
       ...(options.plan === undefined ? {} : { reportPlan: options.plan }),
       ...(options.proposal === undefined ? {} : { reportProposal: options.proposal }),
       ...(options.discretion === undefined ? {} : { reportDiscretion: options.discretion }),
+      ...(options.reportQualification === undefined ? {} : { reportQualification: options.reportQualification }),
       answers: options.answers,
       about: post,
     }),
@@ -163,7 +165,8 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
         const possible = record.planDraft!.draftCandidates.some(other => followsNote(other, n.readingMark));
         return { accountMark: n.readingMark,
           accountOutcome: followed ? 'followed' : OBJECTS.includes(response.respDeclared) ? 'declined' : possible ? 'own_judgement' : 'unavailable',
-          accountReasons: response.respStated.map(r => ({ reasonKind: r.kind, reasonWeight: statedWeight(r) })) };
+          accountReasons: response.respStated.map(r => ({ reasonKind: r.kind, reasonWeight: statedWeight(r) })),
+          ...(response.respDeclaredReservations?.length ? { accountReservations: response.respDeclaredReservations } : {}) };
       });
       const network = passageOf(ctx.world.map, state);
       const month = monthOf(state, ctx.day);
@@ -189,7 +192,8 @@ function withNotePreferences(input: PlannerInput, world: SeatsWorld, state: Stat
   const rules = world.map.world.rules.plans.notes;
   const notes = (record.planNotes ?? []).map(n => {
     const response = state.orderResponses[n.readingResponse]!;
-    const rung = rules.rungs.find(r => r.rung === response.respActual);
+    const executionRung = response.respReservations?.length && response.respActual === 'comply_with_reservations' ? 'comply' : response.respActual;
+    const rung = rules.rungs.find(r => r.rung === executionRung);
     if (rung === undefined) throw new RangeError(`pack has no note weight for ${response.respActual}`);
     return { mark: n.readingMark, weight: rung.weight };
   });
@@ -222,9 +226,11 @@ function draftProposal(ctx: TickContext, state: State, post: PostId, record: Pla
   if (searches > 0) fire(ctx, 'planner.searches', searches);
   if (choice === null) return false;
   const reading: GoalProposalReason[] = [];
-  const challenged = response.respDeclared === 'comply_with_reservations' || OBJECTS.includes(response.respDeclared);
+  const challenged = (response.respDeclaredReservations === undefined
+    ? response.respDeclared === 'comply_with_reservations'
+    : response.respDeclaredReservations.some(r => r.effect === 'statement' && r.subject === 'course')) || OBJECTS.includes(response.respDeclared);
   if (!challenged) {
-    if (response.respActual !== 'comply' && response.respActual !== 'exceed') return false;
+    if (response.respUndertaking === null || (response.respUndertaking === undefined && response.respActual !== 'comply' && response.respActual !== 'exceed')) return false;
     const joined = { ...input, forces: input.forces.filter(b => state.forceJoins[b.id] === undefined) };
     const position = headquartersOf(ctx.world, state, post);
     for (const condition of ['turned', 'outmatched'] as const) {
@@ -358,12 +364,35 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
     toIssuer(ctx, start, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 0, claimToken: 'invalid', claimConfidence: 1000 }], { answers: pending.pendingOrder, tag: `answer.${post}` });
     return invalid(editFailureDiagnostic(result.reason), start);
   }
-  const terms = editDirective(input, record.planDraft, result.edited, result.distance, world.map.world.rules.plans.holdingRisk, goalTerms(world.rules.people, goalKindOf(record.planGoal)));
+  const base = goalTerms(world.rules.people, goalKindOf(record.planGoal));
+  const holdingRisk = world.map.world.rules.plans.holdingRisk;
+  const terms = editDirective(input, record.planDraft, result.edited, result.distance, holdingRisk, base);
+  const edit = pending.pendingSpec.editKind;
+  const subject = edit === 'timing' ? 'timing' : edit === 'objective' || edit === 'waypoints' ? 'destination' : 'organisation';
+  const clause = `edit:${edit}`;
+  const clauses = [{ clauseId: clause, clauseSubject: subject } as const, { clauseId: 'support', clauseSubject: 'support' as const }];
+  const original: DirectiveTerms = { ...terms, clauses };
+  const retained = editDirective(input, record.planDraft, chosen,
+    clampPermille((record.planDraft.draftCandidates[0]?.candScore ?? chosen.candScore) - chosen.candScore),
+    holdingRisk, base);
+  const authorized = record.planApproved?.id === chosen.id;
+  const supportRequests = (directive: DirectiveTerms): QualificationInput[] => (directive.support ?? []).map(need => ({
+    clause: 'support', evidence: 'structural_condition', treatment: 'request_support', stateOfKnowledge: 'inferred',
+    reference: `${need.supportKind}:${need.supportFrom ?? 'unassigned'}`,
+  }));
+  const alternative: DirectiveAlternative = {
+    id: chosen.id, terms: { ...retained, clauses }, changedClauses: [clause], qualifications: supportRequests(retained),
+    ...(authorized ? { authority: 'authorized' as const } : {
+      authority: 'consent_required' as const, mechanism: 'plan approval by the issuing principal', acceptanceBy: record.planIssuer,
+    }),
+  };
   // Lane 1.5b: what he holds for the plan, on editDirective's scale, so an edit asking more men than it commits states the
   // shortfall; lane 1.4: read at the oversight where he stands.
-  const response = answerOrder(world, start, holder, record.planIssuer, terms, { available: PLAN_HOLDS, oversight: oversightOf(ctx, start, holder, record.planIssuer).value });
+  const response = answerOrder(world, start, holder, record.planIssuer, original, {
+    available: PLAN_HOLDS, oversight: oversightOf(ctx, start, holder, record.planIssuer).value, qualifications: supportRequests(terms),
+  }, [alternative]);
   const state = recordResponse(start, responseOf(response, { order: pending.pendingOrder, person: holder, post, role: 'addressee', day, kind: 'edit' }));
-  const executes = concretePlan(input, record.planDraft, chosen, result.edited, response.actual);
+  const executes = response.undertaking?.undertakingKind === 'alternative' ? chosen : concretePlan(input, record.planDraft, chosen, result.edited, response.actual);
   for (const f of result.fell) fire(ctx, `planner.term.${f.term}`);
   fire(ctx, 'plans.edit_answered');
   if (SHIRKS.includes(response.actual)) fire(ctx, 'plans.edit_shirked');
@@ -372,6 +401,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
   // What he says is his declared rung and his stated reasons; why he does it is his response (`proxy`) and the edit's distance (truth).
   const stated: StatedReason[] = response.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: statedWeight(r) }));
   toIssuer(ctx, state, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 1, claimToken: response.declared, claimConfidence: 1000 }], {
+    ...reportQualificationOf(response),
     ...(OBJECTS.includes(response.declared) ? { objection: stated } : {}),
     truth: [term('edit_distance', result.distance + 0, { person: holder, post })],
     answers: pending.pendingOrder,

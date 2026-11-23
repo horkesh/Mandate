@@ -148,7 +148,7 @@ it('a reaffirmed goal preserves its still-actionable proposal', () => {
   expect(principalMenu(after).proposals?.[0]?.paper).toBe(proposal!.paper);
 });
 
-it('a reservation on a reaffirmed goal can send a proposal without resetting the held plan', () => {
+it('received enemy evidence can prompt a proposal on a reaffirmed goal without resetting the held plan', () => {
   const fixture = indexedFixture({ persons: { a_bold: { boldness: 'above', candour: 'average', regard: 'above', values: ['glory'] } } });
   const days = (state: State, n: number, letter?: ReturnType<typeof order>) =>
     playDays(fixture, state, scriptedSeats(letter ? { a: { 1: [letter] } } : {}), n).state;
@@ -167,7 +167,9 @@ it('a reservation on a reaffirmed goal can send a proposal without resetting the
   const proposal = principalMenu(heard, fixture).proposals?.[0];
   expect(proposal?.goal.objective).toBe(R('a_cap'));
   expect(proposal?.order).not.toBe(plan.planOrder);
-  expect(Object.values(heard.orderResponses).find(r => r.respOrder === proposal?.order && r.respRole === 'addressee')?.respDeclared).toBe('comply_with_reservations');
+  expect(Object.values(heard.orderResponses).find(r => r.respOrder === proposal?.order && r.respRole === 'addressee')).toMatchObject({
+    respDeclared: 'comply', respDeclaredReservations: [],
+  });
 });
 
 it('a conflict-kept goal may still be proposed against, and only its current reply can replace the held plan', () => {

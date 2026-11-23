@@ -3,8 +3,9 @@
  * The kernel names no side and no value: which values a call honours or offends (0074's `state_autonomy`, say), and
  * whose lines people reach, are pack data.
  */
-import { COMPLIANCE_RUNGS, type ComplianceRung, type DirectiveTerms } from '../directive.ts';
+import { COMPLIANCE_RUNGS, type ComplianceRung, type DirectiveClause, type DirectiveTerms, type ReservationSubject } from '../directive.ts';
 import type { FactionId, RegionId } from '../ids.ts';
+import type { CallSpec } from '../messages/transit.ts';
 
 /** A rung that raises men, and how: permille of the quota, and days added to the muster. */
 export interface RaisingRung {
@@ -158,4 +159,34 @@ export function callTerms(rules: RecruitmentRules, profile?: CallProfile): Direc
   const values = profile ?? rules.callTerms;
   // No complete, dated means balance: material clauses must not invent a capacity term.
   return { boldness: rules.callTerms.boldness, honours: values.honours as DirectiveTerms['honours'], offends: values.offends as DirectiveTerms['offends'], required: 0 };
+}
+
+const MATERIAL_SUBJECTS: Readonly<Record<CallProfile['materialDemand'][number]['resource'], ReservationSubject>> = {
+  arms: 'arms_equipment', equipment: 'arms_equipment', horses: 'arms_equipment', clothing: 'arms_equipment',
+  transport: 'transport', subsistence: 'support',
+};
+
+/** Clause IDs belong to the received call, including when other calls share its source profile. */
+export function callDirective(rules: RecruitmentRules, call: CallSpec): DirectiveTerms {
+  const profile = call.callProfile;
+  const clauseProvenance = profile?.callProvenance.map(({ source, page }) => [source, page] as const);
+  const provenance = clauseProvenance === undefined ? {} : { clauseProvenance };
+  const clauses: DirectiveClause[] = [
+    { clauseId: 'course', clauseSubject: 'course', ...provenance },
+    { clauseId: 'purpose', clauseSubject: 'purpose', ...provenance },
+    { clauseId: 'service_term', clauseSubject: 'service_term' },
+    { clauseId: 'organisation', clauseSubject: 'organisation' },
+    { clauseId: 'muster', clauseSubject: 'muster' },
+  ];
+  for (const [index, condition] of (profile?.conditions ?? []).entries()) clauses.push({
+    clauseId: `condition:${condition.kind}:${index}`,
+    clauseSubject: condition.kind === 'other_conditions' ? 'course' : condition.kind,
+    clauseWording: condition.clauseText,
+    ...provenance,
+  });
+  for (const [index, demand] of (profile?.materialDemand ?? []).entries()) clauses.push({
+    clauseId: `demand:${demand.resource}:${index}`, clauseSubject: MATERIAL_SUBJECTS[demand.resource],
+    clauseWording: demand.demandText, clauseObligation: demand.obligation, ...provenance,
+  });
+  return { ...callTerms(rules, profile), clauses };
 }

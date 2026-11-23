@@ -10,6 +10,10 @@ import type { Permille } from './permille.ts';
  * or offends. M1 adds intent kinds, constraints, priority and deadline.
  */
 export interface DirectiveTerms {
+  /** Stable local clause IDs for the received revision. Plain terms have an implicit course clause. */
+  readonly clauses?: readonly DirectiveClause[];
+  /** A specific clause bears a value cost. Without a link the cost applies only to the whole course. */
+  readonly valueClauseLinks?: readonly (readonly [value: ValueId, clause: string])[];
   /** 0..1000: how bold the directive is (0 = hold at all costs, 1000 = all-out offensive). */
   readonly boldness: Permille;
   /** Values this directive serves. A pack derives these from the directive's intent. */
@@ -36,6 +40,74 @@ export interface DirectiveTerms {
   readonly clashes?: readonly string[];
 }
 
+export type ReservationSubject = 'purpose' | 'service_term' | 'appointments' | 'organisation' | 'authority' | 'muster' | 'destination' | 'arms_equipment' | 'transport' | 'support' | 'timing' | 'course';
+export type ReservationKnowledge = 'observed' | 'reported' | 'inferred' | 'unknown';
+export type ReservationTreatment = 'protest' | 'clarify' | 'request_support' | 'propose_amendment';
+
+/** A clause refers to a paper, not a balance of materiel or a piece of execution state. */
+export interface DirectiveClause {
+  readonly clauseId: string;
+  readonly clauseSubject: ReservationSubject;
+  readonly clauseWording?: string;
+  readonly clauseObligation?: 'required' | 'as_practicable' | 'not_required' | 'unspecified';
+  readonly clauseProvenance?: readonly (readonly [source: string, page: number])[];
+}
+
+export interface ReservationGround {
+  readonly groundKind: 'offended_value' | 'course_judgment' | 'structural_condition' | 'resource_report' | 'information_request';
+  /** Held value, reason, event, report or information sought, according to groundKind. */
+  readonly groundReference: string;
+  readonly groundReportedDay?: number;
+  readonly groundReceivedDay?: number;
+}
+
+/** Actor-side evidence explicitly tied to the request; adapters supply information the actor actually received. */
+export type QualificationInput =
+  | { readonly clause: string; readonly evidence: 'information_request'; readonly reference: string; readonly treatment: 'clarify' }
+  | { readonly clause: string; readonly evidence: 'structural_condition'; readonly reference: string; readonly treatment: 'protest' | 'request_support'; readonly stateOfKnowledge?: 'observed' | 'reported' | 'inferred'; readonly prerequisite?: string; readonly stage?: string; readonly mechanism?: string }
+  | { readonly clause: string; readonly evidence: 'resource_report'; readonly reference: string; readonly reportedDay: number; readonly receivedDay: number; readonly treatment: 'request_support' };
+
+export interface Reservation<ReservationEffect> {
+  readonly clause: string;
+  readonly subject: ReservationSubject;
+  readonly grounds: ReservationGround;
+  readonly treatment: ReservationTreatment;
+  readonly effect: ReservationEffect;
+  readonly reservationProvenance: string;
+  readonly knowledge: ReservationKnowledge;
+}
+
+export type DirectiveReservation = Reservation<'statement' | 'request'>;
+
+export interface ReservationGapDetails {
+  readonly mechanism: string;
+  readonly gapStage?: string;
+  readonly gapPrerequisite?: string;
+  readonly gapAcceptanceBy?: string;
+}
+
+export type ReservationGap = Reservation<'gate' | 'offer'> & ReservationGapDetails;
+
+export interface Undertaking {
+  readonly undertakingKind: 'original' | 'alternative';
+  /** Null only for pure readings not tied to a received dispatch. */
+  readonly undertakingRequest: string | null;
+  readonly undertakingRevision?: string;
+  readonly clauses: readonly string[];
+  readonly candidate?: string;
+  readonly candidateWillingness?: number;
+  readonly candidateContributions?: readonly (readonly [ContributionTerm, number])[];
+  readonly candidateChanges?: readonly string[];
+}
+
+/** A concrete candidate already admitted by the execution owner's existing grammar. */
+export type DirectiveAlternative = {
+  readonly id: string;
+  readonly terms: DirectiveTerms;
+  readonly changedClauses: readonly string[];
+  readonly qualifications?: readonly QualificationInput[];
+} & ({ readonly authority: 'authorized' } | { readonly authority: 'consent_required'; readonly mechanism: string; readonly acceptanceBy: string });
+
 /** Support a plan needs from another post (lane 0.9's `naval_support` and `cooperating_axis` requests). */
 export interface SupportNeed {
   /** What kind of support (`naval`, `cooperating`): planner vocabulary, never a setting name. */
@@ -56,6 +128,8 @@ export type ResponseCondition =
 
 /** The circumstances the proxy is in when the directive arrives. */
 export interface CommandContext {
+  readonly receivedDay?: number;
+  readonly qualifications?: readonly QualificationInput[];
   /** 0..1000: resources the proxy's post actually holds for this task (P1). */
   readonly available: Permille;
   /** 0..1000: how closely the leader is watching (inspectors, commissars, journalists, wires). */
@@ -140,6 +214,13 @@ export interface CounterProposal {
 }
 
 export interface DirectiveResponse {
+  readonly clauses: readonly DirectiveClause[];
+  readonly undertaking: Undertaking | null;
+  readonly declaredUndertaking: Undertaking | null;
+  readonly reservations: readonly DirectiveReservation[];
+  readonly declaredReservations: readonly DirectiveReservation[];
+  readonly reservationGaps: readonly ReservationGap[];
+  readonly declaredReservationGaps: readonly ReservationGap[];
   /** What the proxy will actually do. */
   readonly actual: ComplianceRung;
   /** What the proxy tells the leader it will do (P4: every fact has an author). */

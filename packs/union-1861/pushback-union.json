@@ -1358,7 +1358,15 @@
         "callId": null,
         "termDays": 90,
         "post": "st_gov_new_york",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "purpose",
+            "effects": [
+              "request"
+            ]
+          }
+        ]
       }
     },
     {

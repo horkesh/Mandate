@@ -1,0 +1,3110 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.bombardment",
+    "before": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.breakout",
+    "before": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2352
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2352
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.cut_off",
+    "before": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.destroyed",
+    "before": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.evacuated",
+    "before": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 21784
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 21784
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6655
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6655
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 286,
+      "magnitude": 14700
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 290,
+      "magnitude": 14760
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 129,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 130,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 131,
+        "before": 6,
+        "after": 5
+      },
+      {
+        "day": 133,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 135,
+        "before": 8,
+        "after": 9
+      },
+      {
+        "day": 136,
+        "before": 8,
+        "after": 9
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "before": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.records_pruned",
+    "before": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.routed",
+    "before": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.surrendered",
+    "before": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "before": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.works_stormed",
+    "before": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_closed",
+    "before": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_established",
+    "before": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_reopened",
+    "before": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.post_succeeded",
+    "before": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.proposal_refused",
+    "before": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.side_changed",
+    "before": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.temporary_post_opened",
+    "before": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "commands.rejected",
+    "before": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 292,
+      "magnitude": 17500
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 296,
+      "magnitude": 17560
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 129,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 130,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 131,
+        "before": 6,
+        "after": 5
+      },
+      {
+        "day": 133,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 135,
+        "before": 8,
+        "after": 9
+      },
+      {
+        "day": 136,
+        "before": 8,
+        "after": 9
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 129,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 130,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 131,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 132,
+        "before": 3,
+        "after": 2
+      },
+      {
+        "day": 136,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 137,
+        "before": 3,
+        "after": 2
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "forces.landed_by_situation",
+    "before": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.landing_refused",
+    "before": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2404,
+      "magnitude": 2388062
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2409,
+      "magnitude": 2392255
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 129,
+        "before": 45,
+        "after": 46
+      },
+      {
+        "day": 130,
+        "before": 46,
+        "after": 47
+      },
+      {
+        "day": 136,
+        "before": 24,
+        "after": 28
+      },
+      {
+        "day": 137,
+        "before": 22,
+        "after": 21
+      },
+      {
+        "day": 142,
+        "before": 30,
+        "after": 31
+      },
+      {
+        "day": 144,
+        "before": 25,
+        "after": 28
+      },
+      {
+        "day": 145,
+        "before": 30,
+        "after": 25
+      },
+      {
+        "day": 147,
+        "before": 27,
+        "after": 32
+      },
+      {
+        "day": 148,
+        "before": 22,
+        "after": 18
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 131,
+      "magnitude": 131
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 131,
+      "magnitude": 131
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 136,
+        "before": 18,
+        "after": 19
+      },
+      {
+        "day": 138,
+        "before": 13,
+        "after": 14
+      },
+      {
+        "day": 139,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 141,
+        "before": 3,
+        "after": 1
+      },
+      {
+        "day": 143,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 144,
+        "before": 1,
+        "after": 3
+      },
+      {
+        "day": 146,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 148,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2228,
+      "magnitude": 2207500
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2235,
+      "magnitude": 2214467
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 125,
+        "before": 22,
+        "after": 23
+      },
+      {
+        "day": 126,
+        "before": 16,
+        "after": 17
+      },
+      {
+        "day": 127,
+        "before": 22,
+        "after": 23
+      },
+      {
+        "day": 129,
+        "before": 19,
+        "after": 18
+      },
+      {
+        "day": 130,
+        "before": 16,
+        "after": 15
+      },
+      {
+        "day": 136,
+        "before": 20,
+        "after": 23
+      },
+      {
+        "day": 137,
+        "before": 26,
+        "after": 29
+      },
+      {
+        "day": 142,
+        "before": 21,
+        "after": 20
+      },
+      {
+        "day": 144,
+        "before": 24,
+        "after": 21
+      },
+      {
+        "day": 145,
+        "before": 18,
+        "after": 23
+      },
+      {
+        "day": 147,
+        "before": 28,
+        "after": 23
+      },
+      {
+        "day": 148,
+        "before": 33,
+        "after": 37
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 176,
+      "magnitude": 2287
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 176,
+      "magnitude": 2287
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "infrastructure.changed",
+    "before": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1444
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1444
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11710
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11712
+    },
+    "changed": true,
+    "changedDays": [],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "ladder.moved",
+    "before": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "ladder.rival",
+    "before": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 136,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "map.pocket_lost",
+    "before": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "before": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 136,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 137,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 53,
+      "magnitude": 59
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 58
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 131,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 109,
+      "magnitude": 109
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 109,
+      "magnitude": 109
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14065,
+      "magnitude": 14065
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14067,
+      "magnitude": 14067
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 126,
+        "before": 120,
+        "after": 122
+      },
+      {
+        "day": 127,
+        "before": 118,
+        "after": 121
+      },
+      {
+        "day": 129,
+        "before": 165,
+        "after": 162
+      },
+      {
+        "day": 130,
+        "before": 172,
+        "after": 173
+      },
+      {
+        "day": 131,
+        "before": 78,
+        "after": 79
+      },
+      {
+        "day": 132,
+        "before": 120,
+        "after": 119
+      },
+      {
+        "day": 133,
+        "before": 99,
+        "after": 98
+      },
+      {
+        "day": 138,
+        "before": 114,
+        "after": 113
+      },
+      {
+        "day": 139,
+        "before": 72,
+        "after": 73
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2847,
+      "magnitude": 2847
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2847,
+      "magnitude": 2847
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 14827,
+      "magnitude": 14827
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 14829,
+      "magnitude": 14829
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 125,
+        "before": 99,
+        "after": 101
+      },
+      {
+        "day": 126,
+        "before": 353,
+        "after": 354
+      },
+      {
+        "day": 127,
+        "before": 125,
+        "after": 127
+      },
+      {
+        "day": 128,
+        "before": 60,
+        "after": 59
+      },
+      {
+        "day": 129,
+        "before": 105,
+        "after": 104
+      },
+      {
+        "day": 130,
+        "before": 53,
+        "after": 54
+      },
+      {
+        "day": 131,
+        "before": 143,
+        "after": 142
+      },
+      {
+        "day": 132,
+        "before": 51,
+        "after": 50
+      },
+      {
+        "day": 136,
+        "before": 58,
+        "after": 59
+      },
+      {
+        "day": 137,
+        "before": 97,
+        "after": 96
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "before": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 598,
+      "magnitude": 598
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 598,
+      "magnitude": 598
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 127,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 128,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 131,
+        "before": 7,
+        "after": 6
+      },
+      {
+        "day": 133,
+        "before": 8,
+        "after": 9
+      },
+      {
+        "day": 138,
+        "before": 11,
+        "after": 10
+      },
+      {
+        "day": 139,
+        "before": 15,
+        "after": 14
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "before": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.joined",
+    "before": {
+      "mechanic": "movement.joined",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "after": {
+      "mechanic": "movement.joined",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 138,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 140,
+        "before": 4,
+        "after": 3
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 310,
+      "magnitude": 310
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 314,
+      "magnitude": 314
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 127,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 128,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 132,
+        "before": 6,
+        "after": 5
+      },
+      {
+        "day": 134,
+        "before": 8,
+        "after": 9
+      },
+      {
+        "day": 136,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 137,
+        "before": 7,
+        "after": 8
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "operations.ended",
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.landed",
+    "before": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.opened",
+    "before": {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_answered",
+    "before": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_refused",
+    "before": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_sent",
+    "before": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.works",
+    "before": {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    "after": {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.bypassed",
+    "before": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.conflict",
+    "before": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "before": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relay_held",
+    "before": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relay_objected",
+    "before": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relayed",
+    "before": {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 22,
+      "magnitude": 54
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 22,
+      "magnitude": 54
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.returned",
+    "before": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.grievances_faded",
+    "before": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "after": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_broken",
+    "before": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_kept",
+    "before": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.resigned",
+    "before": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "after": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.stayed",
+    "before": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 36
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 36
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.caution",
+    "before": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.coordination",
+    "before": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.dependence",
+    "before": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.exposure",
+    "before": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.force_ratio",
+    "before": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.glory",
+    "before": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.goal_fit",
+    "before": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.haste",
+    "before": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.notes",
+    "before": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.supply",
+    "before": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.approved",
+    "before": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.chosen",
+    "before": {
+      "mechanic": "plans.chosen",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.chosen",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.discretion_exercised",
+    "before": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.draft_deferred",
+    "before": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.drafted",
+    "before": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_answered",
+    "before": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_invalid",
+    "before": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_objected",
+    "before": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_received",
+    "before": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_shirked",
+    "before": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_proposed",
+    "before": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "before": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "before": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.released",
+    "before": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.sent_back",
+    "before": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.submitted",
+    "before": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "before": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.act",
+    "before": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.adjourned",
+    "before": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.answered",
+    "before": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.called",
+    "before": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.framing",
+    "before": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.front_page",
+    "before": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "after": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.met",
+    "before": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.opened",
+    "before": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.press_silent",
+    "before": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.refused",
+    "before": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.support",
+    "before": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "after": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.answered",
+    "before": {
+      "mechanic": "recruitment.answered",
+      "fires": 74,
+      "magnitude": 74
+    },
+    "after": {
+      "mechanic": "recruitment.answered",
+      "fires": 74,
+      "magnitude": 74
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.called",
+    "before": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "after": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.disbanded",
+    "before": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.lapsed",
+    "before": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.men",
+    "before": {
+      "mechanic": "recruitment.men",
+      "fires": 51,
+      "magnitude": 193700
+    },
+    "after": {
+      "mechanic": "recruitment.men",
+      "fires": 51,
+      "magnitude": 193700
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 125,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 128,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "recruitment.muster_blocked",
+    "before": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.mustered",
+    "before": {
+      "mechanic": "recruitment.mustered",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "after": {
+      "mechanic": "recruitment.mustered",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 125,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 128,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "recruitment.refused",
+    "before": {
+      "mechanic": "recruitment.refused",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "recruitment.refused",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.renewed",
+    "before": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.slow_walked",
+    "before": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 120,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "before": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "after": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "before": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "after": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.filtered",
+    "before": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.observer_letter",
+    "before": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.pocket",
+    "before": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.trimmed",
+    "before": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refilled",
+    "before": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refused",
+    "before": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 164,
+      "magnitude": 164
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 164,
+      "magnitude": 164
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 127,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 129,
+        "before": 3,
+        "after": 2
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.defaulted",
+    "before": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.initiative",
+    "before": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.decided",
+    "before": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "after": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.delegated",
+    "before": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.lapsed",
+    "before": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.options_changed",
+    "before": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.orders",
+    "before": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "after": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy",
+    "before": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "after": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy_unpaid",
+    "before": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.proposals",
+    "before": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "after": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.resurfaced",
+    "before": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.staff_lines",
+    "before": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "after": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.waiting",
+    "before": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 136,
+      "magnitude": 136
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 136,
+      "magnitude": 136
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 127,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 129,
+        "before": 4,
+        "after": 3
+      }
+    ],
+    "cause": "0118 projects nonnegative willingness from an undertaking and grounded typed reservations, rather than the numeric compliance window. Received papers and responses now carry stable clause/undertaking/reservation records, changing canonical State hashes even when action is unchanged. Statement/request effects continue work without new delays or quota reductions. Changed rungs affect ordinary relay, plan and recruitment consumers and their downstream consequences. Weights, cast, quotas and original strength are unchanged; nonblocking statement/request execution deliberately uses the existing ordinary compliance schedule, retiring the old reservation delay. [I] Mechanism-level causal path, not isolated additive attribution; full responses, events and changed fields retained."
+  },
+  {
+    "mechanic": "verbs.audience",
+    "before": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.consulted",
+    "before": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.declined",
+    "before": {
+      "mechanic": "verbs.declined",
+      "fires": 31,
+      "magnitude": 31
+    },
+    "after": {
+      "mechanic": "verbs.declined",
+      "fires": 31,
+      "magnitude": 31
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.in_washington",
+    "before": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  }
+]

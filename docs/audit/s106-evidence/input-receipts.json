@@ -1,0 +1,38 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\CODEX.md",
+    "sha256": "b4775228921eac577f6dd87f2073ce917de49d34d7e9707380b256250df9d415"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0111-pushback-is-measured-by-named-acts.md",
+    "sha256": "f8050c00a7e52cd44179b5fa208d3915704cf6ddd9489618f10cc4291989f049"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0112-the-pushback-registers-and-what-1a-requires.md",
+    "sha256": "36364435f3694386354b80a225341ad182ca16765a72c7848a0a86bca02f69c7"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0113-a-judgment-without-evidence-adds-no-term.md",
+    "sha256": "4369ee50dc3a3bc34c42a29fabb0b92044d3084d5573bb1d60dc5c8373cbdad3"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0118-an-undertaking-carries-typed-reservations.md",
+    "sha256": "46d8f5215d23f5d5e5e0c54fe7faca9560b41a3160531c0d66ba8fde5dabcee5"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\2026-11-23-S104-conditional-compliance.md",
+    "sha256": "0b69f3a5abc60e0af1ffc5f5e51f600f35024211c0166f11887b9577d94432dc"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S104\\inputs.json",
+    "sha256": "d196bd513fd839c16bd62326fad613dc4c71cdf36be08a39206171dc5bf53d1c"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S104\\replies.md",
+    "sha256": "671fec158e96ae37320766c990d4d89a63687b1bce711c4add94546c85c54770"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S104\\source-pages.csv",
+    "sha256": "3806bfe895b4e4da36978a0718477513df12dc251a845a164660ed2079aaaddd"
+  }
+]

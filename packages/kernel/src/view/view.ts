@@ -89,17 +89,27 @@ function claimView(c: ReportClaim): ClaimView {
 
 function reportView(r: KnownReport, world: SeatsWorld): ReportView {
   const b = r.knownBody;
+  const freezeReservation = <T extends { readonly grounds: object }>(entry: T): T => freeze({ ...entry, grounds: freeze({ ...entry.grounds }) });
   const notice = b.reportSubjectKind === 'situation'
     ? world.situations.find(s => s.id === b.reportSubjectId && s.kind === 'notice'
       && s.report?.reportType === b.reportType && s.report.subtype === b.reportSubtype)
     : undefined;
   return freeze({
     id: r.id,
+    ...(b.reportQualification === undefined ? {} : { qualification: freeze({
+      ...b.reportQualification,
+      statedReservations: freeze(b.reportQualification.statedReservations.map(freezeReservation)),
+      statedGaps: freeze(b.reportQualification.statedGaps.map(freezeReservation)),
+    }) }),
     ...(b.reportProposal === undefined ? {} : { proposal: freeze({ ...b.reportProposal, goal: paperGoal(b.reportProposal.goal),
       reasons: freeze(b.reportProposal.reasons.map(r => freeze({ ...r }))), }) }),
     ...(b.reportDiscretion === undefined ? {} : { discretion: freeze({ ...b.reportDiscretion, switchGoal: paperGoal(b.reportDiscretion.switchGoal) }) }),
     ...(notice === undefined ? {} : { text: notice.text }),
-    ...(b.reportNotes === undefined ? {} : { notes: freeze(b.reportNotes.map(n => freeze({ ...n, accountMark: freeze({ ...n.accountMark, markVia: freeze([...n.accountMark.markVia]) }), accountReasons: freeze(n.accountReasons.map(s => freeze({ ...s }))) }))) }),
+    ...(b.reportNotes === undefined ? {} : { notes: freeze(b.reportNotes.map(n => freeze({
+      ...n, accountMark: freeze({ ...n.accountMark, markVia: freeze([...n.accountMark.markVia]) }),
+      accountReasons: freeze(n.accountReasons.map(s => freeze({ ...s }))),
+      ...(n.accountReservations === undefined ? {} : { accountReservations: freeze(n.accountReservations.map(freezeReservation)) }),
+    }))) }),
     type: b.reportType,
     subtype: b.reportSubtype,
     author: b.reportAuthor,

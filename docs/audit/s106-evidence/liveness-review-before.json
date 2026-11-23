@@ -1,0 +1,5055 @@
+{
+  "bandProblems": [],
+  "rows": [
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.caution",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed draft pick depends on caution alone; the Union reference now fires it once."
+      },
+      "observed": {
+        "mechanic": "planner.term.caution",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.force_ratio",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed draft pick depends on force ratio alone; the Union reference now fires it once."
+      },
+      "observed": {
+        "mechanic": "planner.term.force_ratio",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.returned",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return"
+      },
+      "observed": {
+        "mechanic": "orders.returned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.time",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."
+      },
+      "observed": {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "people.resigned",
+      "band": {
+        "minFires": 0,
+        "why": "the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path"
+      },
+      "observed": {
+        "mechanic": "people.resigned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "people.stayed",
+      "band": {
+        "minFires": 0,
+        "why": "the testbed reference pack has no service-choice records; union-1861 fires it when an officer stays after his government joins"
+      },
+      "observed": {
+        "mechanic": "people.stayed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "verbs.consulted",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)"
+      },
+      "observed": {
+        "mechanic": "verbs.consulted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.battle_closed",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "combat.battle_closed",
+        "fires": 4,
+        "magnitude": 4
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.battle_day",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "combat.battle_day",
+        "fires": 4,
+        "magnitude": 4
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.battle_opened",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "combat.battle_opened",
+        "fires": 4,
+        "magnitude": 4
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.captured",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "combat.captured",
+        "fires": 4,
+        "magnitude": 86
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.killed_wounded",
+      "band": {
+        "minFires": 4,
+        "maxFires": 16
+      },
+      "observed": {
+        "mechanic": "combat.killed_wounded",
+        "fires": 8,
+        "magnitude": 1614
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.missing",
+      "band": {
+        "minFires": 4,
+        "maxFires": 16
+      },
+      "observed": {
+        "mechanic": "combat.missing",
+        "fires": 8,
+        "magnitude": 358
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.occupation",
+      "band": {
+        "minFires": 15,
+        "maxFires": 62
+      },
+      "observed": {
+        "mechanic": "combat.occupation",
+        "fires": 31,
+        "magnitude": 2548
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.pursuit_chosen",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "combat.pursuit_chosen",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.withdrew",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "combat.withdrew",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "control.changed",
+      "band": {
+        "minFires": 17,
+        "maxFires": 70
+      },
+      "observed": {
+        "mechanic": "control.changed",
+        "fires": 35,
+        "magnitude": 3348
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "control.threshold_crossed",
+      "band": {
+        "minFires": 6,
+        "maxFires": 26
+      },
+      "observed": {
+        "mechanic": "control.threshold_crossed",
+        "fires": 13,
+        "magnitude": 13
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "forces.stores_fell",
+      "band": {
+        "minFires": 93,
+        "maxFires": 374
+      },
+      "observed": {
+        "mechanic": "forces.stores_fell",
+        "fires": 187,
+        "magnitude": 187000
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "forces.stores_low",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "forces.stores_low",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "forces.stores_refilled",
+      "band": {
+        "minFires": 119,
+        "maxFires": 476
+      },
+      "observed": {
+        "mechanic": "forces.stores_refilled",
+        "fires": 238,
+        "magnitude": 236000
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "forces.stragglers_returned",
+      "band": {
+        "minFires": 54,
+        "maxFires": 216
+      },
+      "observed": {
+        "mechanic": "forces.stragglers_returned",
+        "fires": 108,
+        "magnitude": 230
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.flank_broken",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "combat.flank_broken",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "movement.joined",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "movement.joined",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.bombardment",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed objective lies across water from a shore with guns; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "combat.bombardment",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.evacuated",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed fort is bombarded; the Union reference evacuates Anderson within the recorded terms"
+      },
+      "observed": {
+        "mechanic": "combat.evacuated",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.commander_lost",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no commander is lost in this testbed run; the kernel test in QUIET drives the loss report"
+      },
+      "observed": {
+        "mechanic": "reports.commander_lost",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.surrendered",
+      "band": {
+        "minFires": 0,
+        "why": "only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "combat.surrendered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "map.pocket_lost",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed pocket is overrun; the Union run fires it (Sumter’s, when the fort falls)"
+      },
+      "observed": {
+        "mechanic": "map.pocket_lost",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.routed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "combat.routed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.works_stormed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "combat.works_stormed",
+        "fires": 1,
+        "magnitude": 150
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.ended",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "operations.ended",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.opened",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "operations.opened",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.stage",
+      "band": {
+        "minFires": 6,
+        "maxFires": 26
+      },
+      "observed": {
+        "mechanic": "operations.stage",
+        "fires": 13,
+        "magnitude": 13
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.works",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "operations.works",
+        "fires": 4,
+        "magnitude": 200
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.responses_pruned",
+      "band": {
+        "minFires": 8,
+        "maxFires": 32
+      },
+      "observed": {
+        "mechanic": "orders.responses_pruned",
+        "fires": 16,
+        "magnitude": 24
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.battle_dispatch",
+      "band": {
+        "minFires": 16,
+        "maxFires": 64
+      },
+      "observed": {
+        "mechanic": "reports.battle_dispatch",
+        "fires": 32,
+        "magnitude": 32
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.casualty_return",
+      "band": {
+        "minFires": 8,
+        "maxFires": 32
+      },
+      "observed": {
+        "mechanic": "reports.casualty_return",
+        "fires": 16,
+        "magnitude": 16
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.governor_wire",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "reports.governor_wire",
+        "fires": 4,
+        "magnitude": 4
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.pocket",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "reports.pocket",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "map.pocket_closed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "map.pocket_closed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "knowledge.pruned_age",
+      "band": {
+        "minFires": 20,
+        "maxFires": 82
+      },
+      "observed": {
+        "mechanic": "knowledge.pruned_age",
+        "fires": 43,
+        "magnitude": 83
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "knowledge.pruned_superseded",
+      "band": {
+        "minFires": 59,
+        "maxFires": 236
+      },
+      "observed": {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 118,
+        "magnitude": 1963
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "map.pocket_relieved",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+      },
+      "observed": {
+        "mechanic": "map.pocket_relieved",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "map.recomputed",
+      "band": {
+        "minFires": 10,
+        "maxFires": 40
+      },
+      "observed": {
+        "mechanic": "map.recomputed",
+        "fires": 20,
+        "magnitude": 20
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "messages.courier_delay",
+      "band": {
+        "minFires": 24,
+        "maxFires": 98
+      },
+      "observed": {
+        "mechanic": "messages.courier_delay",
+        "fires": 50,
+        "magnitude": 50
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "messages.mail_delay",
+      "band": {
+        "minFires": 53,
+        "maxFires": 214
+      },
+      "observed": {
+        "mechanic": "messages.mail_delay",
+        "fires": 107,
+        "magnitude": 107
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "messages.delivered",
+      "band": {
+        "minFires": 1060,
+        "maxFires": 4240
+      },
+      "observed": {
+        "mechanic": "messages.delivered",
+        "fires": 2158,
+        "magnitude": 2158
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "messages.sent",
+      "band": {
+        "minFires": 1075,
+        "maxFires": 4302
+      },
+      "observed": {
+        "mechanic": "messages.sent",
+        "fires": 2189,
+        "magnitude": 2189
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "messages.special_messenger",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "messages.special_messenger",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "movement.arrived",
+      "band": {
+        "minFires": 13,
+        "maxFires": 54
+      },
+      "observed": {
+        "mechanic": "movement.arrived",
+        "fires": 27,
+        "magnitude": 27
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "movement.leg_started",
+      "band": {
+        "minFires": 8,
+        "maxFires": 32
+      },
+      "observed": {
+        "mechanic": "movement.leg_started",
+        "fires": 16,
+        "magnitude": 16
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.bypassed",
+      "band": {
+        "minFires": 0,
+        "why": "the principal goes around an office only when it objects, which the testbed’s does not (it holds instead); union-1861 fires it"
+      },
+      "observed": {
+        "mechanic": "orders.bypassed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.obeyed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "orders.obeyed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.relay_held",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "orders.relay_held",
+        "fires": 3,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.relay_objected",
+      "band": {
+        "minFires": 0,
+        "why": "the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "orders.relay_objected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.relayed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "orders.relayed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.goal_reached",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "plans.goal_reached",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.adjourned",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "politics.adjourned",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.front_page",
+      "band": {
+        "minFires": 8,
+        "maxFires": 34
+      },
+      "observed": {
+        "mechanic": "politics.front_page",
+        "fires": 17,
+        "magnitude": 17
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.opened",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "politics.opened",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.support",
+      "band": {
+        "minFires": 36,
+        "maxFires": 144
+      },
+      "observed": {
+        "mechanic": "politics.support",
+        "fires": 74,
+        "magnitude": 74
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "regions.self_emancipation",
+      "band": {
+        "minFires": 45,
+        "maxFires": 180
+      },
+      "observed": {
+        "mechanic": "regions.self_emancipation",
+        "fires": 90,
+        "magnitude": 90
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "regions.reached_lines",
+      "band": {
+        "minFires": 18,
+        "maxFires": 72
+      },
+      "observed": {
+        "mechanic": "regions.reached_lines",
+        "fires": 36,
+        "magnitude": 36
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "seats.choices",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "seats.choices",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "seats.battle_orders",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "seats.battle_orders",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.called",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "recruitment.called",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.answered",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "recruitment.answered",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.slow_walked",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "recruitment.slow_walked",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.mustered",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "recruitment.mustered",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.men",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "recruitment.men",
+        "fires": 2,
+        "magnitude": 3000
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.disbanded",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "recruitment.disbanded",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.refused",
+      "band": {
+        "minFires": 0,
+        "why": "both testbed governors answer their calls; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "recruitment.refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "verbs.answered",
+      "band": {
+        "minFires": 18,
+        "maxFires": 72
+      },
+      "observed": {
+        "mechanic": "verbs.answered",
+        "fires": 36,
+        "magnitude": 36
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "verbs.declined",
+      "band": {
+        "minFires": 8,
+        "maxFires": 34
+      },
+      "observed": {
+        "mechanic": "verbs.declined",
+        "fires": 17,
+        "magnitude": 17
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "seats.defaulted",
+      "band": {
+        "minFires": 0,
+        "why": "every request is answered in this run; the silent-seats exercise run fires it"
+      },
+      "observed": {
+        "mechanic": "seats.defaulted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.candidates",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "planner.candidates",
+        "fires": 3,
+        "magnitude": 12
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.searches",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "planner.searches",
+        "fires": 3,
+        "magnitude": 26
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.drafted",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "plans.drafted",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.chosen",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "plans.chosen",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.goal_set",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "plans.goal_set",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.went_ahead",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "plans.went_ahead",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.approved",
+      "band": {
+        "minFires": 0,
+        "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+      },
+      "observed": {
+        "mechanic": "plans.approved",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.submitted",
+      "band": {
+        "minFires": 0,
+        "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+      },
+      "observed": {
+        "mechanic": "plans.submitted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.goal_fit",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.supply",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "planner.term.supply",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.haste",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "planner.term.haste",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.edit_received",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "plans.edit_received",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.edit_answered",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "plans.edit_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.edit_objected",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "plans.edit_objected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.released",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+      },
+      "observed": {
+        "mechanic": "plans.released",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.decided",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "situations.decided",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.delegated",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "situations.delegated",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.fired",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "situations.fired",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.notice_reports",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "situations.notice_reports",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.noticed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "situations.noticed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.orders",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "situations.orders",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.proposals",
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "observed": {
+        "mechanic": "situations.proposals",
+        "fires": 5,
+        "magnitude": 220
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.staff_lines",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "situations.staff_lines",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.surfaced",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "situations.surfaced",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "ladder.moved",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "ladder.moved",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "ladder.rival",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "ladder.rival",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "people.grievances_faded",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed man holds a grievance at any week’s end in this run (nobody is overruled, and its office holds rather than objects, so it is never bypassed); its ladder moves come from cool regard alone; union-1861 fires it"
+      },
+      "observed": {
+        "mechanic": "people.grievances_faded",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "seats.attention_refilled",
+      "band": {
+        "minFires": 8,
+        "maxFires": 34
+      },
+      "observed": {
+        "mechanic": "seats.attention_refilled",
+        "fires": 17,
+        "magnitude": 34
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "seats.attention_spent",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "seats.attention_spent",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "seats.initiative",
+      "band": {
+        "minFires": 7,
+        "maxFires": 30
+      },
+      "observed": {
+        "mechanic": "seats.initiative",
+        "fires": 15,
+        "magnitude": 15
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "command.temporary_post_opened",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation declares or opens a temporary post; union-1861 fires it (the relief expedition)"
+      },
+      "observed": {
+        "mechanic": "command.temporary_post_opened",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "command.government_closed",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation closes a neutral government in this run; union-1861 fires it (a border state’s neutrality)"
+      },
+      "observed": {
+        "mechanic": "command.government_closed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "command.side_changed",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation changes a government’s side in this run; union-1861 fires it"
+      },
+      "observed": {
+        "mechanic": "command.side_changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "command.government_established",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed notice establishes a declared government; the Union reference does"
+      },
+      "observed": {
+        "mechanic": "command.government_established",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "command.post_succeeded",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed notice replaces an occupied post’s holder; the Union reference does"
+      },
+      "observed": {
+        "mechanic": "command.post_succeeded",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.options_changed",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation in this run has an option that appears or expires while it is open; union-1861 fires it"
+      },
+      "observed": {
+        "mechanic": "situations.options_changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.resurfaced",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation in this run stays open to a resurface day; union-1861 fires it"
+      },
+      "observed": {
+        "mechanic": "situations.resurfaced",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.cut_off",
+      "band": {
+        "minFires": 0,
+        "why": "a side is cut off only with no legal retreat (0019); every testbed loser has a way back; QUIET"
+      },
+      "observed": {
+        "mechanic": "combat.cut_off",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.general_hit",
+      "band": {
+        "minFires": 0,
+        "why": "a commander is hit on a low draw on his own stream; none of the testbed run's three battle-days draws one; QUIET"
+      },
+      "observed": {
+        "mechanic": "combat.general_hit",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.repulsed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed operation axis is repulsed; neither full reference now fires it, while the fortified-defender control remains live."
+      },
+      "observed": {
+        "mechanic": "operations.repulsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "forces.landed_by_situation",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation lands troops; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "forces.landed_by_situation",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "forces.landing_refused",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation lands troops; QUIET"
+      },
+      "observed": {
+        "mechanic": "forces.landing_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.act",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "politics.act",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.answered",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "politics.answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.called",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "politics.called",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.framing",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "politics.framing",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.met",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "politics.met",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.policy",
+      "band": {
+        "minFires": 0,
+        "why": "no testbed decision names a policy row in this run; the Union run fires it"
+      },
+      "observed": {
+        "mechanic": "situations.policy",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.renewed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+      },
+      "observed": {
+        "mechanic": "recruitment.renewed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.goal_proposed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+      },
+      "observed": {
+        "mechanic": "plans.goal_proposed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.discretion_exercised",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+      },
+      "observed": {
+        "mechanic": "plans.discretion_exercised",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "command.government_reopened",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no pack situation reopens one yet"
+      },
+      "observed": {
+        "mechanic": "command.government_reopened",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "command.proposal_refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+      },
+      "observed": {
+        "mechanic": "command.proposal_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "commands.rejected",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+      },
+      "observed": {
+        "mechanic": "commands.rejected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "infrastructure.changed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "infrastructure.changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.records_pruned",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+      },
+      "observed": {
+        "mechanic": "combat.records_pruned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.landed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+      },
+      "observed": {
+        "mechanic": "operations.landed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.support_answered",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+      },
+      "observed": {
+        "mechanic": "operations.support_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.support_refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+      },
+      "observed": {
+        "mechanic": "operations.support_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "operations.support_sent",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+      },
+      "observed": {
+        "mechanic": "operations.support_sent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.breakout",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+      },
+      "observed": {
+        "mechanic": "combat.breakout",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "combat.destroyed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+      },
+      "observed": {
+        "mechanic": "combat.destroyed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "movement.join_blocked",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+      },
+      "observed": {
+        "mechanic": "movement.join_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "orders.conflict",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+      },
+      "observed": {
+        "mechanic": "orders.conflict",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.filtered",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+      },
+      "observed": {
+        "mechanic": "reports.filtered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.trimmed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+      },
+      "observed": {
+        "mechanic": "reports.trimmed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.lapsed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+      },
+      "observed": {
+        "mechanic": "situations.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.muster_blocked",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+      },
+      "observed": {
+        "mechanic": "recruitment.muster_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "recruitment.lapsed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+      },
+      "observed": {
+        "mechanic": "recruitment.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.sent_back",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+      },
+      "observed": {
+        "mechanic": "plans.sent_back",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.notes",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+      },
+      "observed": {
+        "mechanic": "planner.term.notes",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.draft_deferred",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+      },
+      "observed": {
+        "mechanic": "plans.draft_deferred",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.edit_invalid",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+      },
+      "observed": {
+        "mechanic": "plans.edit_invalid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "plans.edit_shirked",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+      },
+      "observed": {
+        "mechanic": "plans.edit_shirked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.coordination",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+      },
+      "observed": {
+        "mechanic": "planner.term.coordination",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.exposure",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+      },
+      "observed": {
+        "mechanic": "planner.term.exposure",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.dependence",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+      },
+      "observed": {
+        "mechanic": "planner.term.dependence",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "planner.term.glory",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+      },
+      "observed": {
+        "mechanic": "planner.term.glory",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.waiting",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+      },
+      "observed": {
+        "mechanic": "situations.waiting",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "verbs.audience",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "verbs.audience",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "verbs.in_washington",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "verbs.in_washington",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "people.promise_kept",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "people.promise_kept",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "people.promise_broken",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "people.promise_broken",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "reports.observer_letter",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "reports.observer_letter",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "situations.policy_unpaid",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+      },
+      "observed": {
+        "mechanic": "situations.policy_unpaid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "seats.attention_refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "seats.attention_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+      },
+      "observed": {
+        "mechanic": "politics.refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "testbed",
+      "run": "testbed, 120 days",
+      "mechanic": "politics.press_silent",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "every paper’s editor serves on his paper’s side throughout both runs"
+      },
+      "observed": {
+        "mechanic": "politics.press_silent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.returned",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+      },
+      "observed": {
+        "mechanic": "orders.returned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.time",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the northern field commander chooses direct instead of supply_line, and the later assault on the valley command is absent. No full-reference draft pick depends on time alone. The separate S41 control changes the pick when time is removed."
+      },
+      "observed": {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "people.resigned",
+      "band": {
+        "minFires": 7,
+        "maxFires": 30,
+        "why": "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed."
+      },
+      "observed": {
+        "mechanic": "people.resigned",
+        "fires": 15,
+        "magnitude": 15
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "people.stayed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "people.stayed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.battle_closed",
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "observed": {
+        "mechanic": "combat.battle_closed",
+        "fires": 5,
+        "magnitude": 5
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "verbs.consulted",
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "observed": {
+        "mechanic": "verbs.consulted",
+        "fires": 5,
+        "magnitude": 5
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.battle_day",
+      "band": {
+        "minFires": 3,
+        "maxFires": 14
+      },
+      "observed": {
+        "mechanic": "combat.battle_day",
+        "fires": 7,
+        "magnitude": 7
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.battle_opened",
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "observed": {
+        "mechanic": "combat.battle_opened",
+        "fires": 5,
+        "magnitude": 5
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.captured",
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "observed": {
+        "mechanic": "combat.captured",
+        "fires": 5,
+        "magnitude": 2352
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.killed_wounded",
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      },
+      "observed": {
+        "mechanic": "combat.killed_wounded",
+        "fires": 10,
+        "magnitude": 21784
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.missing",
+      "band": {
+        "minFires": 4,
+        "maxFires": 18
+      },
+      "observed": {
+        "mechanic": "combat.missing",
+        "fires": 10,
+        "magnitude": 6655
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.occupation",
+      "band": {
+        "minFires": 157,
+        "maxFires": 628
+      },
+      "observed": {
+        "mechanic": "combat.occupation",
+        "fires": 290,
+        "magnitude": 14760
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.pursuit_chosen",
+      "band": {
+        "minFires": 0,
+        "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+      },
+      "observed": {
+        "mechanic": "combat.pursuit_chosen",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.surrendered",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "combat.surrendered",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.withdrew",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the field commander does not launch the later valley assault; no field side records a withdrawal. Five sides rout at the northern objective instead. The testbed still records three withdrawals and the breakout control remains live."
+      },
+      "observed": {
+        "mechanic": "combat.withdrew",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "control.changed",
+      "band": {
+        "minFires": 160,
+        "maxFires": 640
+      },
+      "observed": {
+        "mechanic": "control.changed",
+        "fires": 296,
+        "magnitude": 17560
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "control.threshold_crossed",
+      "band": {
+        "minFires": 19,
+        "maxFires": 78
+      },
+      "observed": {
+        "mechanic": "control.threshold_crossed",
+        "fires": 59,
+        "magnitude": 59
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "forces.stores_fell",
+      "band": {
+        "minFires": 721,
+        "maxFires": 2886
+      },
+      "observed": {
+        "mechanic": "forces.stores_fell",
+        "fires": 2409,
+        "magnitude": 2392255
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "forces.stores_low",
+      "band": {
+        "minFires": 51,
+        "maxFires": 206
+      },
+      "observed": {
+        "mechanic": "forces.stores_low",
+        "fires": 131,
+        "magnitude": 131
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "forces.stores_refilled",
+      "band": {
+        "minFires": 1200,
+        "maxFires": 4800
+      },
+      "observed": {
+        "mechanic": "forces.stores_refilled",
+        "fires": 2235,
+        "magnitude": 2214467
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "forces.stragglers_returned",
+      "band": {
+        "minFires": 92,
+        "maxFires": 368
+      },
+      "observed": {
+        "mechanic": "forces.stragglers_returned",
+        "fires": 176,
+        "magnitude": 2287
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.flank_broken",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "combat.flank_broken",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.routed",
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "observed": {
+        "mechanic": "combat.routed",
+        "fires": 5,
+        "magnitude": 5
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.works_stormed",
+      "band": {
+        "minFires": 0,
+        "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+      },
+      "observed": {
+        "mechanic": "combat.works_stormed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.ended",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "operations.ended",
+        "fires": 4,
+        "magnitude": 4
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.opened",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "operations.opened",
+        "fires": 5,
+        "magnitude": 5
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.stage",
+      "band": {
+        "minFires": 9,
+        "maxFires": 38
+      },
+      "observed": {
+        "mechanic": "operations.stage",
+        "fires": 19,
+        "magnitude": 19
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.works",
+      "band": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works."
+      },
+      "observed": {
+        "mechanic": "operations.works",
+        "fires": 13,
+        "magnitude": 650
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.responses_pruned",
+      "band": {
+        "minFires": 13,
+        "maxFires": 54
+      },
+      "observed": {
+        "mechanic": "orders.responses_pruned",
+        "fires": 22,
+        "magnitude": 54
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.battle_dispatch",
+      "band": {
+        "minFires": 21,
+        "maxFires": 84
+      },
+      "observed": {
+        "mechanic": "reports.battle_dispatch",
+        "fires": 42,
+        "magnitude": 42
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.casualty_return",
+      "band": {
+        "minFires": 10,
+        "maxFires": 40
+      },
+      "observed": {
+        "mechanic": "reports.casualty_return",
+        "fires": 22,
+        "magnitude": 22
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.governor_wire",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "reports.governor_wire",
+        "fires": 7,
+        "magnitude": 7
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.pocket",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6,
+        "why": "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports."
+      },
+      "observed": {
+        "mechanic": "reports.pocket",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "map.pocket_closed",
+      "band": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_closed 8 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_closed."
+      },
+      "observed": {
+        "mechanic": "map.pocket_closed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": {
+        "mechanic": "map.pocket_closed",
+        "problem": "too_rare",
+        "fires": 3,
+        "band": {
+          "minFires": 4,
+          "maxFires": 16,
+          "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_closed 8 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_closed."
+        }
+      }
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "knowledge.pruned_age",
+      "band": {
+        "minFires": 53,
+        "maxFires": 214
+      },
+      "observed": {
+        "mechanic": "knowledge.pruned_age",
+        "fires": 105,
+        "magnitude": 1444
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "knowledge.pruned_superseded",
+      "band": {
+        "minFires": 73,
+        "maxFires": 292
+      },
+      "observed": {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 146,
+        "magnitude": 11712
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "map.pocket_relieved",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+      },
+      "observed": {
+        "mechanic": "map.pocket_relieved",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "map.recomputed",
+      "band": {
+        "minFires": 26,
+        "maxFires": 104
+      },
+      "observed": {
+        "mechanic": "map.recomputed",
+        "fires": 52,
+        "magnitude": 58
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "messages.courier_delay",
+      "band": {
+        "minFires": 77,
+        "maxFires": 308
+      },
+      "observed": {
+        "mechanic": "messages.courier_delay",
+        "fires": 109,
+        "magnitude": 109
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "messages.mail_delay",
+      "band": {
+        "minFires": 1428,
+        "maxFires": 5712
+      },
+      "observed": {
+        "mechanic": "messages.mail_delay",
+        "fires": 2847,
+        "magnitude": 2847
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "messages.delivered",
+      "band": {
+        "minFires": 7120,
+        "maxFires": 28480
+      },
+      "observed": {
+        "mechanic": "messages.delivered",
+        "fires": 14067,
+        "magnitude": 14067
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "messages.sent",
+      "band": {
+        "minFires": 7523,
+        "maxFires": 30094
+      },
+      "observed": {
+        "mechanic": "messages.sent",
+        "fires": 14829,
+        "magnitude": 14829
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "messages.special_messenger",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+      },
+      "observed": {
+        "mechanic": "messages.special_messenger",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.bypassed",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "orders.bypassed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "movement.arrived",
+      "band": {
+        "minFires": 319,
+        "maxFires": 1276
+      },
+      "observed": {
+        "mechanic": "movement.arrived",
+        "fires": 598,
+        "magnitude": 598
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "movement.leg_started",
+      "band": {
+        "minFires": 155,
+        "maxFires": 620
+      },
+      "observed": {
+        "mechanic": "movement.leg_started",
+        "fires": 314,
+        "magnitude": 314
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.obeyed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "orders.obeyed",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.relay_held",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."
+      },
+      "observed": {
+        "mechanic": "orders.relay_held",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.relay_objected",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "orders.relay_objected",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.relayed",
+      "band": {
+        "minFires": 4,
+        "maxFires": 18
+      },
+      "observed": {
+        "mechanic": "orders.relayed",
+        "fires": 10,
+        "magnitude": 10
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.goal_reached",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "plans.goal_reached",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.adjourned",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "politics.adjourned",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.front_page",
+      "band": {
+        "minFires": 31,
+        "maxFires": 126
+      },
+      "observed": {
+        "mechanic": "politics.front_page",
+        "fires": 63,
+        "magnitude": 63
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.support",
+      "band": {
+        "minFires": 42,
+        "maxFires": 170
+      },
+      "observed": {
+        "mechanic": "politics.support",
+        "fires": 85,
+        "magnitude": 85
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.opened",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "politics.opened",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "regions.self_emancipation",
+      "band": {
+        "minFires": 1548,
+        "maxFires": 6194
+      },
+      "observed": {
+        "mechanic": "regions.self_emancipation",
+        "fires": 3104,
+        "magnitude": 3104
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "regions.reached_lines",
+      "band": {
+        "minFires": 137,
+        "maxFires": 548
+      },
+      "observed": {
+        "mechanic": "regions.reached_lines",
+        "fires": 261,
+        "magnitude": 261
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "seats.choices",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "seats.choices",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.candidates",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "planner.candidates",
+        "fires": 6,
+        "magnitude": 12
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.searches",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "planner.searches",
+        "fires": 6,
+        "magnitude": 36
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.drafted",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "plans.drafted",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.chosen",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "plans.chosen",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.goal_set",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "observed": {
+        "mechanic": "plans.goal_set",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.went_ahead",
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": {
+        "mechanic": "plans.went_ahead",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.approved",
+      "band": {
+        "minFires": 0,
+        "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+      },
+      "observed": {
+        "mechanic": "plans.approved",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.submitted",
+      "band": {
+        "minFires": 0,
+        "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+      },
+      "observed": {
+        "mechanic": "plans.submitted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.goal_fit",
+      "band": {
+        "minFires": 0,
+        "why": "dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"
+      },
+      "observed": {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.supply",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.supply 2 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.supply."
+      },
+      "observed": {
+        "mechanic": "planner.term.supply",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.haste",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "planner.term.haste",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.edit_received",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "plans.edit_received",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.edit_answered",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "plans.edit_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.edit_objected",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+      },
+      "observed": {
+        "mechanic": "plans.edit_objected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.released",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+      },
+      "observed": {
+        "mechanic": "plans.released",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "seats.defaulted",
+      "band": {
+        "minFires": 0,
+        "why": "every request is answered in this run; the silent-seats exercise run fires it"
+      },
+      "observed": {
+        "mechanic": "seats.defaulted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.decided",
+      "band": {
+        "minFires": 9,
+        "maxFires": 38
+      },
+      "observed": {
+        "mechanic": "situations.decided",
+        "fires": 19,
+        "magnitude": 19
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.delegated",
+      "band": {
+        "minFires": 0,
+        "why": "no authored Union situation in this window names a delegate as its historical default; the testbed run fires it"
+      },
+      "observed": {
+        "mechanic": "situations.delegated",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.fired",
+      "band": {
+        "minFires": 44,
+        "maxFires": 176
+      },
+      "observed": {
+        "mechanic": "situations.fired",
+        "fires": 88,
+        "magnitude": 88
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.notice_reports",
+      "band": {
+        "minFires": 35,
+        "maxFires": 140
+      },
+      "observed": {
+        "mechanic": "situations.notice_reports",
+        "fires": 70,
+        "magnitude": 70
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.noticed",
+      "band": {
+        "minFires": 34,
+        "maxFires": 138
+      },
+      "observed": {
+        "mechanic": "situations.noticed",
+        "fires": 69,
+        "magnitude": 69
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.options_changed",
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "observed": {
+        "mechanic": "situations.options_changed",
+        "fires": 5,
+        "magnitude": 5
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.orders",
+      "band": {
+        "minFires": 12,
+        "maxFires": 50
+      },
+      "observed": {
+        "mechanic": "situations.orders",
+        "fires": 25,
+        "magnitude": 25
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.proposals",
+      "band": {
+        "minFires": 36,
+        "maxFires": 146
+      },
+      "observed": {
+        "mechanic": "situations.proposals",
+        "fires": 73,
+        "magnitude": 637
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "command.side_changed",
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      },
+      "observed": {
+        "mechanic": "command.side_changed",
+        "fires": 10,
+        "magnitude": 10
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "command.government_established",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "command.government_established",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "command.post_succeeded",
+      "band": {
+        "minFires": 2,
+        "maxFires": 10,
+        "why": "S68 lead ruling 4 (CODEX.md, 2026-11-22): S46 adds four sourced institutional successions to the existing one. S67 observes five on days 11, 52, 54, 64 and 79; around(5). Each source and page is checked in notes/lane-s68-residuals.md#sourced-successions and the append-only liveness cause record."
+      },
+      "observed": {
+        "mechanic": "command.post_succeeded",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "command.government_closed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "command.government_closed",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "command.temporary_post_opened",
+      "band": {
+        "minFires": 3,
+        "maxFires": 14
+      },
+      "observed": {
+        "mechanic": "command.temporary_post_opened",
+        "fires": 13,
+        "magnitude": 13
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.resurfaced",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "situations.resurfaced",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.staff_lines",
+      "band": {
+        "minFires": 9,
+        "maxFires": 36
+      },
+      "observed": {
+        "mechanic": "situations.staff_lines",
+        "fires": 18,
+        "magnitude": 18
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.surfaced",
+      "band": {
+        "minFires": 43,
+        "maxFires": 174
+      },
+      "observed": {
+        "mechanic": "situations.surfaced",
+        "fires": 87,
+        "magnitude": 87
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.called",
+      "band": {
+        "minFires": 48,
+        "maxFires": 194
+      },
+      "observed": {
+        "mechanic": "recruitment.called",
+        "fires": 96,
+        "magnitude": 96
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.answered",
+      "band": {
+        "minFires": 30,
+        "maxFires": 122
+      },
+      "observed": {
+        "mechanic": "recruitment.answered",
+        "fires": 74,
+        "magnitude": 74
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.slow_walked",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "recruitment.slow_walked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": {
+        "mechanic": "recruitment.slow_walked",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4
+        }
+      }
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.refused",
+      "band": {
+        "minFires": 6,
+        "maxFires": 24
+      },
+      "observed": {
+        "mechanic": "recruitment.refused",
+        "fires": 22,
+        "magnitude": 22
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.mustered",
+      "band": {
+        "minFires": 25,
+        "maxFires": 100
+      },
+      "observed": {
+        "mechanic": "recruitment.mustered",
+        "fires": 58,
+        "magnitude": 58
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.men",
+      "band": {
+        "minFires": 23,
+        "maxFires": 92
+      },
+      "observed": {
+        "mechanic": "recruitment.men",
+        "fires": 51,
+        "magnitude": 193700
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.disbanded",
+      "band": {
+        "minFires": 7,
+        "maxFires": 30
+      },
+      "observed": {
+        "mechanic": "recruitment.disbanded",
+        "fires": 22,
+        "magnitude": 22
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "ladder.moved",
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      },
+      "observed": {
+        "mechanic": "ladder.moved",
+        "fires": 9,
+        "magnitude": 9
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "ladder.rival",
+      "band": {
+        "minFires": 0,
+        "why": "no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"
+      },
+      "observed": {
+        "mechanic": "ladder.rival",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "people.grievances_faded",
+      "band": {
+        "minFires": 15,
+        "maxFires": 60
+      },
+      "observed": {
+        "mechanic": "people.grievances_faded",
+        "fires": 30,
+        "magnitude": 30
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "seats.attention_refilled",
+      "band": {
+        "minFires": 10,
+        "maxFires": 42
+      },
+      "observed": {
+        "mechanic": "seats.attention_refilled",
+        "fires": 21,
+        "magnitude": 42
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "seats.attention_spent",
+      "band": {
+        "minFires": 76,
+        "maxFires": 306
+      },
+      "observed": {
+        "mechanic": "seats.attention_spent",
+        "fires": 164,
+        "magnitude": 164
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "seats.initiative",
+      "band": {
+        "minFires": 1,
+        "maxFires": 6,
+        "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+      },
+      "observed": {
+        "mechanic": "seats.initiative",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.repulsed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the field commander chooses a direct plan to his base and completes it without the later assault on the valley command. No operation axis is repulsed in either full reference; the fortified-defender control still repulses an axis."
+      },
+      "observed": {
+        "mechanic": "operations.repulsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "forces.landed_by_situation",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "forces.landed_by_situation",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.act",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "politics.act",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.answered",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "politics.answered",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.called",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "politics.called",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.framing",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "politics.framing",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.met",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "politics.met",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.policy",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "situations.policy",
+        "fires": 1,
+        "magnitude": 200
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.bombardment",
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "observed": {
+        "mechanic": "combat.bombardment",
+        "fires": 2,
+        "magnitude": 2
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.commander_lost",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "reports.commander_lost",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.evacuated",
+      "band": {
+        "minFires": 1,
+        "maxFires": 1
+      },
+      "observed": {
+        "mechanic": "combat.evacuated",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "map.pocket_lost",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "map.pocket_lost",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "seats.battle_orders",
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      },
+      "observed": {
+        "mechanic": "seats.battle_orders",
+        "fires": 7,
+        "magnitude": 7
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "movement.joined",
+      "band": {
+        "minFires": 32,
+        "maxFires": 128
+      },
+      "observed": {
+        "mechanic": "movement.joined",
+        "fires": 58,
+        "magnitude": 58
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "verbs.answered",
+      "band": {
+        "minFires": 61,
+        "maxFires": 246
+      },
+      "observed": {
+        "mechanic": "verbs.answered",
+        "fires": 136,
+        "magnitude": 136
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "verbs.declined",
+      "band": {
+        "minFires": 0,
+        "why": "every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"
+      },
+      "observed": {
+        "mechanic": "verbs.declined",
+        "fires": 31,
+        "magnitude": 31
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.general_hit",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "combat.general_hit",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.caution",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "planner.term.caution",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.force_ratio",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "planner.term.force_ratio",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.cut_off",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: none of the five field routs at the objective is cut off; each has a legal retreat. The island fort remains a bombardment surrender, outside this field counter. The trapped-garrison control remains live."
+      },
+      "observed": {
+        "mechanic": "combat.cut_off",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.renewed",
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "observed": {
+        "mechanic": "recruitment.renewed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.goal_proposed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+      },
+      "observed": {
+        "mechanic": "plans.goal_proposed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.discretion_exercised",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+      },
+      "observed": {
+        "mechanic": "plans.discretion_exercised",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "command.government_reopened",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no pack situation reopens one yet"
+      },
+      "observed": {
+        "mechanic": "command.government_reopened",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "command.proposal_refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+      },
+      "observed": {
+        "mechanic": "command.proposal_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "commands.rejected",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+      },
+      "observed": {
+        "mechanic": "commands.rejected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "infrastructure.changed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "infrastructure.changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.records_pruned",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+      },
+      "observed": {
+        "mechanic": "combat.records_pruned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.landed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+      },
+      "observed": {
+        "mechanic": "operations.landed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.support_answered",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+      },
+      "observed": {
+        "mechanic": "operations.support_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.support_refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+      },
+      "observed": {
+        "mechanic": "operations.support_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "operations.support_sent",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+      },
+      "observed": {
+        "mechanic": "operations.support_sent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.breakout",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+      },
+      "observed": {
+        "mechanic": "combat.breakout",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "combat.destroyed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+      },
+      "observed": {
+        "mechanic": "combat.destroyed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "movement.join_blocked",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+      },
+      "observed": {
+        "mechanic": "movement.join_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.conflict",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+      },
+      "observed": {
+        "mechanic": "orders.conflict",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.filtered",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+      },
+      "observed": {
+        "mechanic": "reports.filtered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.trimmed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+      },
+      "observed": {
+        "mechanic": "reports.trimmed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.lapsed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+      },
+      "observed": {
+        "mechanic": "situations.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.muster_blocked",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+      },
+      "observed": {
+        "mechanic": "recruitment.muster_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "recruitment.lapsed",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+      },
+      "observed": {
+        "mechanic": "recruitment.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.sent_back",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+      },
+      "observed": {
+        "mechanic": "plans.sent_back",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.notes",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+      },
+      "observed": {
+        "mechanic": "planner.term.notes",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.draft_deferred",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+      },
+      "observed": {
+        "mechanic": "plans.draft_deferred",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.edit_invalid",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+      },
+      "observed": {
+        "mechanic": "plans.edit_invalid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "plans.edit_shirked",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+      },
+      "observed": {
+        "mechanic": "plans.edit_shirked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.coordination",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+      },
+      "observed": {
+        "mechanic": "planner.term.coordination",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.exposure",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+      },
+      "observed": {
+        "mechanic": "planner.term.exposure",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.dependence",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+      },
+      "observed": {
+        "mechanic": "planner.term.dependence",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "planner.term.glory",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+      },
+      "observed": {
+        "mechanic": "planner.term.glory",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.waiting",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+      },
+      "observed": {
+        "mechanic": "situations.waiting",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "verbs.audience",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "verbs.audience",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "verbs.in_washington",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "verbs.in_washington",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "people.promise_kept",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "people.promise_kept",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "people.promise_broken",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "people.promise_broken",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "reports.observer_letter",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "reports.observer_letter",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "situations.policy_unpaid",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+      },
+      "observed": {
+        "mechanic": "situations.policy_unpaid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "seats.attention_refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+      },
+      "observed": {
+        "mechanic": "seats.attention_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+      },
+      "observed": {
+        "mechanic": "politics.refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "politics.press_silent",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "every paper’s editor serves on his paper’s side throughout both runs"
+      },
+      "observed": {
+        "mechanic": "politics.press_silent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    },
+    {
+      "pack": "union-1861",
+      "run": "union-1861, war by decision, 148 days",
+      "mechanic": "forces.landing_refused",
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the one situation landing in the reference runs is made"
+      },
+      "observed": {
+        "mechanic": "forces.landing_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": null
+    }
+  ]
+}

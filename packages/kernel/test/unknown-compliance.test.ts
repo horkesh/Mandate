@@ -51,9 +51,11 @@ describe('0113: evidence follows the World through the profile, without changing
   it('unknown candour also declares reservations openly', () => {
     const world = fixture(false);
     const state = createState(world, { seed: 1 });
-    const response = resolveDirective({ ...profileOf(world, state, id, issuer), candour: 0 }, { ...terms, required: 0 }, { ...context, oversight: 0 });
+    const response = resolveDirective({ ...profileOf(world, state, id, issuer), candour: 0, values: ['duty'] },
+      { ...terms, offends: ['duty'], required: 0 }, { ...context, disposition: 207, oversight: 0 });
     expect(response.actual).toBe('comply_with_reservations');
     expect(response.declared).toBe(response.actual);
+    expect(response.declaredReservations).toEqual(response.reservations);
   });
 
   it('does not turn unknown standing alone into protection, and unknown candour objects openly', () => {
@@ -85,7 +87,7 @@ describe('0113: evidence follows the World through the profile, without changing
     const numeric = { id: profile.id, values: profile.values, boldness: profile.boldness, candour: profile.candour, standing: profile.standing, regard: profile.regard };
     const response = resolveDirective(profile, terms, context);
     // Frozen numeric result from the pre-0113 resolver: this control is independent of the optional mask path.
-    expect(response).toEqual({
+    expect(response).toMatchObject({
       actual: 'reinterpret', declared: 'comply', willingness: -200,
       contributions: [
         { term: 'values', amount: 0 }, { term: 'temperament', amount: -320 }, { term: 'regard', amount: 0 },
@@ -95,6 +97,7 @@ describe('0113: evidence follows the World through the profile, without changing
       reasons: [{ kind: 'too_rash', gap: 800 }, { kind: 'fears_sanction' }, { kind: 'shielded_by_standing' }, { kind: 'lacks_resources', shortfall: 20 }],
       statedReasons: [], counterProposal: null, conditions: [{ kind: 'when_reinforced', shortfall: 20 }],
     });
+    expect(response).toMatchObject({ undertaking: null, declaredUndertaking: { undertakingKind: 'original' }, reservations: [], declaredReservations: [] });
     expect(response).toEqual(resolveDirective(numeric, terms, context));
     expect(resolveDirective({ ...profile, boldness: 1000 }, terms, context)).not.toEqual(response);
   });

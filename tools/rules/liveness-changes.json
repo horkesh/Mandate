@@ -2416,5 +2416,36 @@
     "observed": 6,
     "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
     "evidence": "docs/audit/s100-evidence/merge-band-review.json#seats.choices"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/map.pocket_closed",
+    "before": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_closed 8 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_closed."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes."
+    },
+    "observed": 3,
+    "cause": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes.",
+    "evidence": "docs/audit/s106-evidence/band-review.json#map.pocket_closed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.slow_walked",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once."
+    },
+    "observed": 0,
+    "cause": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once.",
+    "evidence": "docs/audit/s106-evidence/band-review.json#recruitment.slow_walked"
   }
 ]

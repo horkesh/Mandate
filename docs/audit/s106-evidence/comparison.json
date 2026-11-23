@@ -1,0 +1,71 @@
+{
+  "testbed": {
+    "hashes": 120,
+    "changedHashes": 120,
+    "firstChangedDay": 1,
+    "changedCounters": 0,
+    "rowsWithDailyChanges": 0,
+    "changedCheckpointScores": 0,
+    "initialHashBefore": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "initialHashAfter": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "finalHashBefore": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+    "finalHashAfter": "749121d774144072f835b6c6d5ff18d8d1c919deb9f7d8591a58fe18164c6acf",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "749121d774144072f835b6c6d5ff18d8d1c919deb9f7d8591a58fe18164c6acf",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0
+  },
+  "union-1861": {
+    "hashes": 148,
+    "changedHashes": 147,
+    "firstChangedDay": 2,
+    "changedCounters": 11,
+    "rowsWithDailyChanges": 19,
+    "changedCheckpointScores": 2,
+    "initialHashBefore": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "initialHashAfter": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "finalHashBefore": "d4953af2cde17441b1d50c3b13fd33dd989c1d0553ef2c8e3edc9bb27be6085c",
+    "finalHashAfter": "e3c72bbb39e41cae123157c70f64926f84097f2056c997cc192e822e7b3d266d",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "e3c72bbb39e41cae123157c70f64926f84097f2056c997cc192e822e7b3d266d",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0
+  },
+  "coverageBefore": {
+    "representation_gap": 20,
+    "mismatch": 9,
+    "exposure_mismatch": 1,
+    "not_observed": 3
+  },
+  "coverageAfter": {
+    "representation_gap": 22,
+    "mismatch": 8,
+    "not_observed": 3
+  },
+  "rawActsBefore": 251,
+  "rawActsAfter": 251,
+  "changedResponses": 252,
+  "strengthBefore": {
+    "known": 82329,
+    "unknownBlocks": 22
+  },
+  "strengthAfter": {
+    "known": 82329,
+    "unknownBlocks": 22
+  },
+  "failedBands": 2
+}

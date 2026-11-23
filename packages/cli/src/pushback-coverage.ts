@@ -23,6 +23,12 @@ export interface CoverageAct {
   readonly post?: string;
   readonly to?: string;
   readonly advice?: string;
+  readonly undertaking?: { readonly undertakingKind: string; readonly undertakingRequest: string | null; readonly clauses: readonly string[] } | null;
+  readonly declaredUndertaking?: CoverageAct['undertaking'];
+  readonly reservations?: readonly { readonly clause: string; readonly subject: string; readonly effect: string }[];
+  readonly declaredReservations?: CoverageAct['reservations'];
+  readonly reservationGaps?: readonly { readonly clause: string; readonly subject: string; readonly effect: string; readonly mechanism: string }[];
+  readonly declaredReservationGaps?: CoverageAct['reservationGaps'];
 }
 export type CoverageVerdict = 'matched' | 'mismatch' | 'exposure_mismatch' | 'not_observed' | 'unresolved' | 'representation_gap';
 export interface CoverageResult {
@@ -57,6 +63,10 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
       if (row.gap !== undefined) { add('representation_gap', `${row.gap.reason}; needed: ${row.gap.mechanism} in ${row.gap.location}`); continue; }
       const m = row.match;
       if (m === undefined) { add('unresolved', 'No matcher or representation mechanism was supplied.'); continue; }
+      if (m.qualification !== undefined && m.qualification.every(q => q.effects.every(e => e === 'gate' || e === 'offer'))) {
+        add('representation_gap', `Qualification requires ${m.qualification.flatMap(q => q.effects.map(e => `${q.subject}/${e}`)).join(', ')}; needed: acceptance, consent or prerequisite execution in the recruitment, transfer, enlistment or operation owner. Recording a reservation does not execute it.`);
+        continue;
+      }
       const nearby = diagnostics.filter(a => a.day <= through && a.actor === row.actor && a.role === row.role && a.kind === m.kind && (a.side === row.side || a.side === null));
       const candidates = nearby.filter(a => a.side === row.side && MATTER_KEYS.every(k => m[k] === undefined || a[k] === m[k]));
       const incomplete = nearby.some(a => a.side === null || MATTER_KEYS.some(k => m[k] !== undefined && a[k] === undefined));
@@ -66,12 +76,17 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
         else add('not_observed', 'No act observed for this actor, role and represented matter.');
         continue;
       }
-      const eligible = candidates.filter(a => (m.actual === undefined || a.actual === m.actual) && (m.advice === undefined || a.advice === m.advice));
+      const qualificationMatches = (a: CoverageAct) => m.qualification === undefined || (
+        a.undertaking != null && a.undertaking.undertakingRequest === a.order &&
+        (a.reservations ?? []).some(r => a.undertaking!.clauses.includes(r.clause) && m.qualification!.some(q => q.subject === r.subject && q.effects.includes(r.effect as 'statement' | 'request' | 'gate' | 'offer')))
+      );
+      const eligible = candidates.filter(a => (m.actual === undefined || a.actual === m.actual) && (m.advice === undefined || a.advice === m.advice) && qualificationMatches(a));
       const identity = (a: CoverageAct) => a.creditKey ?? `${a.order}|${a.actor}|${a.role}`;
       const available = eligible.find(a => !used.has(identity(a)));
       if (available !== undefined) { used.add(identity(available)); add('matched', 'One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.', candidates, available.id); }
       else if (eligible.length > 0) add('unresolved', 'Every qualifying act has already covered another row; credit cannot be reused.', candidates);
       else if (m.advice !== undefined && candidates.some(a => a.advice === undefined)) add('unresolved', 'Consultation participation is recorded, but matching advice content is missing.', candidates);
+      else if (m.qualification !== undefined && candidates.some(a => a.undertaking === undefined || a.reservations === undefined)) add('unresolved', 'The response lacks typed undertaking or actual reservation evidence; the rung alone supplies no qualification credit.', candidates);
       else add('mismatch', 'The same request received a contrary actual response or advice; declared compliance cannot hide it.', candidates);
     }
   }
@@ -85,6 +100,7 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
   const problems = rows.filter(r => r.verdict !== 'matched' && r.verdict !== 'representation_gap').map(r => `${r.side}/${r.id} ${r.actor} ${r.role} ${r.matter}: ${r.verdict}: ${r.reason}`);
   const evidence = rows.map(r => `${r.side}/${r.id}: ${r.verdict}: ${r.reason}${r.matched === null ? '' : ` [${r.matched}]`}`);
   evidence.push(...[...counts.values()].map(c => `raw diagnostic ${c.side ?? 'unresolved side'}/${c.actor}/${c.role}/${c.kind}/${c.actual} (declared ${c.declared}): ${c.count}; no historical ceiling`));
+  evidence.push(...diagnostics.filter(a => a.reservations !== undefined || a.reservationGaps !== undefined).map(a => `raw qualifications ${a.id}: undertaking ${JSON.stringify(a.undertaking ?? null)}; actual ${JSON.stringify(a.reservations ?? [])}; declared ${JSON.stringify(a.declaredReservations ?? [])}; representation gaps actual ${JSON.stringify(a.reservationGaps ?? [])}; declared ${JSON.stringify(a.declaredReservationGaps ?? [])}`));
   const mechanics = Object.fromEntries(['orders.relay_objected', 'orders.relay_held', 'reports.filtered', 'reports.trimmed'].map(key => [key, daily.reduce((n, d) => n + (d.fires[key] ?? 0), 0)]));
   evidence.push(...Object.entries(mechanics).map(([key, n]) => `raw telemetry diagnostic ${key}: ${n}; no historical ceiling`));
   return { rows, problems, evidence, matched: rows.filter(r => r.verdict === 'matched').length, diagnostics, counts: [...counts.values()], mechanics };

@@ -34,7 +34,16 @@
       "match": {
         "kind": "call",
         "callId": "cs_mar09_georgia",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "muster",
+            "effects": [
+              "request",
+              "statement"
+            ]
+          }
+        ]
       }
     },
     {
@@ -68,7 +77,23 @@
       "match": {
         "kind": "call",
         "callId": "cs_apr22_absolute_georgia",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "organisation",
+            "effects": [
+              "statement",
+              "request"
+            ]
+          },
+          {
+            "subject": "muster",
+            "effects": [
+              "statement",
+              "request"
+            ]
+          }
+        ]
       }
     },
     {
@@ -102,7 +127,21 @@
       "match": {
         "kind": "call",
         "callId": "cs_apr22_absolute_louisiana",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "muster",
+            "effects": [
+              "request"
+            ]
+          },
+          {
+            "subject": "support",
+            "effects": [
+              "request"
+            ]
+          }
+        ]
       }
     },
     {
@@ -170,7 +209,15 @@
       "match": {
         "kind": "call",
         "callId": "cs_apr22_absolute_tennessee",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "authority",
+            "effects": [
+              "statement"
+            ]
+          }
+        ]
       }
     },
     {
@@ -238,7 +285,15 @@
       "match": {
         "kind": "call",
         "callId": "cs_jun30_reserve_virginia",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "appointments",
+            "effects": [
+              "statement"
+            ]
+          }
+        ]
       }
     },
     {
@@ -301,7 +356,15 @@
       "match": {
         "kind": "call",
         "callId": "cs_jul01_extra_south_carolina",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "service_term",
+            "effects": [
+              "offer"
+            ]
+          }
+        ]
       }
     },
     {
@@ -335,7 +398,22 @@
       "match": {
         "kind": "call",
         "callId": "cs_jun30_reserve_georgia",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "appointments",
+            "effects": [
+              "statement"
+            ]
+          },
+          {
+            "subject": "support",
+            "effects": [
+              "request",
+              "gate"
+            ]
+          }
+        ]
       }
     },
     {
@@ -369,7 +447,22 @@
       "match": {
         "kind": "call",
         "callId": "cs_jun30_reserve_louisiana",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "support",
+            "effects": [
+              "request",
+              "gate"
+            ]
+          },
+          {
+            "subject": "organisation",
+            "effects": [
+              "offer"
+            ]
+          }
+        ]
       }
     },
     {
@@ -403,7 +496,15 @@
       "match": {
         "kind": "call",
         "callId": "cs_jul01_extra_georgia",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "organisation",
+            "effects": [
+              "offer"
+            ]
+          }
+        ]
       }
     },
     {
@@ -467,7 +568,15 @@
         "kind": "verb:transfer",
         "post": "cs_cmd_fredericksburg",
         "to": "cs_lewis_river_expedition",
-        "actual": "comply_with_reservations"
+        "actual": "comply_with_reservations",
+        "qualification": [
+          {
+            "subject": "course",
+            "effects": [
+              "statement"
+            ]
+          }
+        ]
       }
     },
     {

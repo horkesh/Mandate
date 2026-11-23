@@ -238,6 +238,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'OpRequest',
   // Reports and knowledge
   'ReportBody',
+  'ReportQualification',
   'GoalProposal',
   'DiscretionReport',
   'PlanPaper',
@@ -280,6 +281,11 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'ObserverPosting',
   'OrderResponse',
   'ResponseTerm',
+  'DirectiveClause',
+  'Undertaking',
+  'Reservation',
+  'ReservationGround',
+  'ReservationGapDetails',
   // Lane 1.3: battle records (each replaced whole by `combat`)
   'BattleRecord',
   'BattleDay',

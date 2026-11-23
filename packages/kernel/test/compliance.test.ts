@@ -189,9 +189,9 @@ describe('plans and edits (lane 1.1; lane 0.9 findings 1, 2 and 8)', () => {
   it('an edit far from his judgement draws an objection from a candid man, for a typed reason', () => {
     // A plan that serves his career, which he would carry out though he distrusts the leader.
     const plan: DirectiveTerms = { boldness: 650, ownBest: 600, honours: ['career'], offends: [], required: 0 };
-    // His own plan, unedited: he carries it out, with reservations.
+    // His own plan, unedited: he carries it out without a reservation.
     const own = answerOrder(WORLD, STATE, PR('candid'), LEADER, { ...plan, departure: 0 });
-    expect(own.actual).toBe('comply_with_reservations');
+    expect(own).toMatchObject({ actual: 'comply', reservations: [] });
     // The same plan with the player's arrows moved far from what he would choose.
     const edited = answerOrder(WORLD, STATE, PR('candid'), LEADER, { ...plan, departure: 700 });
     expect(edited.actual).toBe('object');

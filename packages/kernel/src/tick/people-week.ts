@@ -123,7 +123,7 @@ export function peopleWeek(ctx: TickContext, start: State): State {
       const last = state.seatInitiatives[seat]?.[initiative.id];
       if (last !== undefined && ctx.day - last < initiative.cooldownDays) continue;
       // Share the willingness terms and candour, but let this pack rule govern admission and the stated answer.
-      const answer = resolveDirective(profileOf(world, state, p, principal), { boldness: initiative.boldness, honours: initiative.honours, offends: initiative.offends, required: 0 }, contextFor(world, state, p), { ...rules.compliance, complyAt: rules.verbs.initiativeAt });
+      const answer = resolveDirective(profileOf(world, state, p, principal), { boldness: initiative.boldness, honours: initiative.honours, offends: initiative.offends, required: 0 }, contextFor(world, state, p), rules.compliance);
       if (answer.willingness < rules.verbs.initiativeAt) continue;
       state = markInitiative(state, seat, initiative.id, ctx.day);
       fire(ctx, 'seats.initiative');

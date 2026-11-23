@@ -9,7 +9,7 @@
  * The truth here (actual rung, true reasons) is never shown to a principal: the view layer reads only what the man's
  * report said (`knowledge`), as with the truth behind reports (0052).
  */
-import type { ComplianceRung, ContributionTerm, DirectiveResponse, Reason, ResponseCondition } from '../directive.ts';
+import type { ComplianceRung, ContributionTerm, DirectiveClause, DirectiveReservation, DirectiveResponse, Reason, ReservationGap, ResponseCondition, Undertaking } from '../directive.ts';
 import type { MessageId, PersonId, PostId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 
@@ -40,6 +40,14 @@ export interface OrderResponse {
   readonly respReasons: readonly Reason[];
   readonly respStated: readonly Reason[];
   readonly respConditions: readonly ResponseCondition[];
+  /** Optional for saves that predate 0118. New responses always record the received clauses. */
+  readonly respClauses?: readonly DirectiveClause[];
+  readonly respUndertaking?: Undertaking | null;
+  readonly respDeclaredUndertaking?: Undertaking | null;
+  readonly respReservations?: readonly DirectiveReservation[];
+  readonly respDeclaredReservations?: readonly DirectiveReservation[];
+  readonly respReservationGaps?: readonly ReservationGap[];
+  readonly respDeclaredReservationGaps?: readonly ReservationGap[];
 }
 
 /**
@@ -75,6 +83,20 @@ export function responseOf(
     respReasons: answer.reasons,
     respStated: answer.statedReasons,
     respConditions: answer.conditions,
+    respClauses: answer.clauses,
+    respUndertaking: scopeUndertaking(answer.undertaking, at.order, at.note),
+    respDeclaredUndertaking: scopeUndertaking(answer.declaredUndertaking, at.order, at.note),
+    respReservations: answer.reservations,
+    respDeclaredReservations: answer.declaredReservations,
+    respReservationGaps: answer.reservationGaps,
+    respDeclaredReservationGaps: answer.declaredReservationGaps,
+  };
+}
+
+function scopeUndertaking(undertaking: Undertaking | null, order: MessageId, note?: number): Undertaking | null {
+  return undertaking === null ? null : {
+    ...undertaking, undertakingRequest: order,
+    undertakingRevision: note === undefined ? order : `${order}|note:${note}`,
   };
 }
 

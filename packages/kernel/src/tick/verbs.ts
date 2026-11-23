@@ -20,7 +20,7 @@ import type { ComplianceRung, DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { enemyBeliefs } from '../knowledge/beliefs.ts';
 import { knowledgeOf, unansweredAppointments } from '../knowledge/knowledge.ts';
-import type { ReportBody, ReportClaim, StatedReason } from '../knowledge/report.ts';
+import { reportQualificationOf, type ReportBody, type ReportClaim, type StatedReason } from '../knowledge/report.ts';
 import { term } from '../knowledge/truth.ts';
 import type { VerbCommand } from '../log/commands.ts';
 import { mintMessageId, type TransitMessage, type VerbBody, type VerbKind } from '../messages/transit.ts';
@@ -28,7 +28,7 @@ import { orderJoins } from '../movement/join.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
 import { traitsOf } from '../people/traits.ts';
 import { recordResponse, responseOf } from '../proxy/responses.ts';
-import { answerOrder, orderTerms } from '../reading/orders.ts';
+import { answerOrder, verbDirective } from '../reading/orders.ts';
 import { previewAudience, recordAudience } from '../audience/audience.ts';
 import { planReading } from './audience-plan.ts';
 import type { State } from '../root-state.ts';
@@ -247,7 +247,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   if (v.verbKind === 'audience') return holdAudience(ctx, start, msg);
 
   // Lane 1.4's oversight: a verb is an order to a person, read where he stands; an observer's or pressure's `watched` terms stack on top.
-  const answer = answerOrder(world, start, me, v.verbIssuer, orderTerms(rules, `verb:${v.verbKind}`), { oversight: oversightOf(ctx, start, me, v.verbIssuer).value });
+  const answer = answerOrder(world, start, me, v.verbIssuer, verbDirective(rules, v.verbKind), { oversight: oversightOf(ctx, start, me, v.verbIssuer).value });
   const establishment = v.verbKind === 'appoint' && world.start.temporaryPosts.some(p => p.id === v.verbPost);
   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: establishment ? v.verbPost : msg.msgToPost, role: 'addressee', day: ctx.day, kind: `verb:${v.verbKind}` }));
   fire(ctx, 'verbs.answered');
@@ -258,7 +258,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   const myPost = heldPost(state, me);
   const reportTo = (claims: readonly ReportClaim[], advice: Advice = null, type: Kind = 'wire-dispatch', subtype: string | null = null) =>
     sendReport(ctx, state, {
-      body: answerBody(me, myPost, ctx.day, msg.msgOrigin, { kind: v.verbPost === null ? 'person' : 'post', id: v.verbPost ?? me }, claims, advice, type, subtype),
+      body: { ...answerBody(me, myPost, ctx.day, msg.msgOrigin, { kind: v.verbPost === null ? 'person' : 'post', id: v.verbPost ?? me }, claims, advice, type, subtype), ...reportQualificationOf(answer) },
       truth: { truthTerms: answer.contributions.map((k) => term('relay_term', k.amount, { person: me, rule: k.term })), truthTrimmed: [] },
       to: v.verbIssuer,
       tag: `answer.${v.verbKind}.${v.verbPost ?? me}`,
@@ -479,12 +479,14 @@ function holdAudience(ctx: TickContext, start: State, msg: TransitMessage): Stat
   // File what the visitor said through received knowledge, never his private
   // response. The existing seat view and both desks can read this answer.
   sendReport(ctx, state, {
-    body: answerBody(holder, post, ctx.day, key, { kind: 'post', id: post }, [
+    body: { ...answerBody(holder, post, ctx.day, key, { kind: 'post', id: post }, [
       { claimKind: 'verb-answered', claimRegion: null, claimValue: 1, claimToken: `audience:${outcome.declared}`, claimConfidence: 1000 },
       ...outcome.changes.filter((c): c is Extract<PeopleChange, { change: 'promise' }> => c.change === 'promise').map(c => ({
         claimKind: 'promise-made' as const, claimRegion: null, claimToken: c.kind, claimValue: c.due, claimConfidence: 1000,
       })),
     ], { adviceRecommends: outcome.declared, adviceReasons: stated(outcome.response), adviceConfidence: 1000 }),
+      ...reportQualificationOf(outcome.response),
+    },
     truth: { truthTerms: outcome.response.contributions.map(k => term('relay_term', k.amount, { person: holder, post, rule: k.term })), truthTrimmed: [] },
     to: principal, tag: `answer.audience.${post}`, route: 'in-person',
   });

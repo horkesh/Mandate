@@ -15,7 +15,7 @@
 import { isWellFormedId, type MessageId, type PersonId, type PostId, type RegionId } from '../ids.ts';
 import type { PlanNote } from '../plans/notes.ts';
 import type { PlanPaper } from './plan-paper.ts';
-import type { Reason } from '../directive.ts';
+import type { DirectiveReservation, DirectiveResponse, Reason, ReservationGap } from '../directive.ts';
 import type { DiscretionCondition, PlanGoal } from '../plans/goal.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
@@ -167,6 +167,7 @@ export interface NoteAccount {
   readonly accountMark: PlanNote;
   readonly accountOutcome: 'followed' | 'declined' | 'own_judgement' | 'unavailable';
   readonly accountReasons: readonly StatedReason[];
+  readonly accountReservations?: readonly DirectiveReservation[];
 }
 
 /** The advice payload (0040): a recommended option, stated reasons, and a confidence. */
@@ -201,6 +202,8 @@ export interface DiscretionReport {
 
 /** What a report says. Shared by a message in transit and the report as a seat holds it. */
 export interface ReportBody {
+  /** What the author actually stated about the terms of this answer. */
+  readonly reportQualification?: ReportQualification;
   readonly reportProposal?: GoalProposal;
   readonly reportDiscretion?: DiscretionReport;
   /** Sealed plan enclosure; public projections expose only its OptionView, never the planner's private inputs. */
@@ -220,6 +223,23 @@ export interface ReportBody {
   readonly reportAdvice: AdviceBody | null;
   /** The order this report answers (an acknowledgement or an objection), if any. */
   readonly reportAnswers: MessageId | null;
+}
+
+export interface ReportQualification {
+  readonly statedUndertaking: 'original' | 'alternative' | null;
+  readonly statedCandidate?: string;
+  readonly statedReservations: readonly DirectiveReservation[];
+  readonly statedGaps: readonly ReservationGap[];
+}
+
+export function reportQualificationOf(response: DirectiveResponse): Pick<ReportBody, 'reportQualification'> {
+  if (response.declaredReservations.length === 0 && response.declaredReservationGaps.length === 0) return {};
+  return { reportQualification: {
+    statedUndertaking: response.declaredUndertaking?.undertakingKind ?? null,
+    ...(response.declaredUndertaking?.candidate === undefined ? {} : { statedCandidate: response.declaredUndertaking.candidate }),
+    statedReservations: response.declaredReservations,
+    statedGaps: response.declaredReservationGaps,
+  } };
 }
 
 /** The template key of a report: `type`, or `type/subtype`. */

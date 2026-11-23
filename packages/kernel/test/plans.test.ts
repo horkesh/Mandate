@@ -237,6 +237,24 @@ describe('arrow edits as counter-orders (0026), answered through compliance', ()
     expect(state.planRecords[RESERVE]!.planApproved!.id).toBe(start.planRecords[RESERVE]!.planApproved!.id);
   });
 
+  it.each([true, false])('only continues the concrete prior plan when it already has approval (%s)', (approveAsDrafted) => {
+    const world = strong();
+    const start = play(world, 4, d => d === 1 ? [take({ approveAsDrafted })] : []).state;
+    const plan = start.planRecords[RESERVE]!;
+    const timing: EditTerms = { kind: 'timing', axis: 'main', region: null, via: [], concentration: 100 };
+    const { state } = play(world, 4, d => d === start.stateDay + 1 ? [review('edit', timing)] : [], start);
+    const after = state.planRecords[RESERVE]!;
+    const answer = state.orderResponses[after.planCounters[0]!.counterResponse!]!;
+    expect(answer.respWillingness).toBeLessThan(0);
+    if (approveAsDrafted) {
+      expect(answer.respUndertaking).toMatchObject({ undertakingKind: 'alternative', candidate: plan.planChosen, candidateChanges: ['edit:timing'] });
+      expect(after.planApproved?.id).toBe(plan.planApproved?.id);
+    } else {
+      expect(answer).toMatchObject({ respUndertaking: null, respReservationGaps: [expect.objectContaining({ effect: 'offer', clause: 'edit:timing', gapAcceptanceBy: P('a_lead') })] });
+      expect(after.planApproved).toBeNull();
+    }
+  });
+
   it('refuses a review or a "go" for a plan not waiting for one, an edit outside the grammar, and a goal committing another post’s block', () => {
     const world = strong();
     const start = approved(world).state;

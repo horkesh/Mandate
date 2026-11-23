@@ -18,13 +18,15 @@ describe('named pushback coverage (observations, never counts)', () => {
     const msg = { id: 'opaque', msgOrigin: 'opaque', msgOrder: { orderIssuer: 'b_lead', orderCall: { callId: 'first_call' }, orderGoal: null }, msgVerb: null };
     const tick = (state: unknown, day: number) => ({ state, day, events: [], map: null }) as unknown as phase0.TickResult;
     observer.onTick(world, tick({ ...initial, messagesInTransit: [msg] }, 1));
-    const response = { respOrder: 'opaque', respPerson: 'a_sec', respRole: 'relay', respKind: 'call', respActual: 'slow_walk', respDeclared: 'comply', respCallId: 'first_call', respDay: 2 };
+    const qualifications = { respUndertaking: null, respDeclaredUndertaking: { undertakingKind: 'original', undertakingRequest: 'opaque', clauses: ['course'] }, respReservations: [], respDeclaredReservations: [], respReservationGaps: [], respDeclaredReservationGaps: [] };
+    const response = { respOrder: 'opaque', respPerson: 'a_sec', respRole: 'relay', respKind: 'call', respActual: 'slow_walk', respDeclared: 'comply', respCallId: 'first_call', respDay: 2, ...qualifications };
     const state = { ...initial, orderResponses: { one: response }, stateDay: 2 };
     const hash = canonicalHash(state);
     observer.onTick(world, tick(state, 2));
     observer.onTick(world, tick(state, 2));
     expect(observer.observations().pushbackActs).toHaveLength(1);
     expect(observer.observations().pushbackActs![0]).toMatchObject({ side: 'b', actor: 'a_sec', role: 'relay', actual: 'slow_walk', declared: 'comply', callId: 'first_call' });
+    expect(observer.observations().pushbackActs![0]).toMatchObject({ undertaking: null, declaredUndertaking: qualifications.respDeclaredUndertaking, reservations: [], declaredReservations: [], reservationGaps: [], declaredReservationGaps: [] });
     expect(observer.observations().responses).toEqual([]);
     expect(canonicalHash(state)).toBe(hash);
   });

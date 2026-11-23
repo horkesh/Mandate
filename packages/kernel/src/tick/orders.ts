@@ -17,7 +17,8 @@ import { senderFor } from '../seats/sender.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import { latestSentGoal, receivedConditionalGoal, receivedPlanPapers, receivedProposalPapers } from '../seats/received.ts';
-import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
+import { reportQualificationOf, type ReportBody, type ReportClaim } from '../knowledge/report.ts';
+import type { DirectiveResponse } from '../directive.ts';
 import type { AnswerProposalCommand, EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } from '../log/commands.ts';
 import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
@@ -26,8 +27,8 @@ import { editIssues, goalKindOf, goalProblems, sameGoal, type EditSpec, type Goa
 import { approve, challengeGoal, finishChallenge, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord, type NoteReading } from '../plans/plans.ts';
 import { copyNote, noteProblems } from '../plans/notes.ts';
 import type { State } from '../root-state.ts';
-import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
-import { callTerms } from '../recruitment/rules.ts';
+import { answerOrder, goalDirective, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
+import { callDirective } from '../recruitment/rules.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { headquartersOf, postFaction } from '../seats/posts.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
@@ -286,13 +287,14 @@ export function answerBody(
   author: PersonId,
   authorPost: PostId | null,
   day: number,
-  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice' | 'reportNotes' | 'reportPlan' | 'reportProposal' | 'reportDiscretion'> & { readonly answers: MessageId; readonly about: PostId },
+  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice' | 'reportNotes' | 'reportPlan' | 'reportProposal' | 'reportDiscretion' | 'reportQualification'> & { readonly answers: MessageId; readonly about: PostId },
 ): ReportBody {
   return {
     ...(partial.reportPlan === undefined ? {} : { reportPlan: partial.reportPlan }),
     ...(partial.reportNotes === undefined ? {} : { reportNotes: partial.reportNotes }),
     ...(partial.reportProposal === undefined ? {} : { reportProposal: partial.reportProposal }),
     ...(partial.reportDiscretion === undefined ? {} : { reportDiscretion: partial.reportDiscretion }),
+    ...(partial.reportQualification === undefined ? {} : { reportQualification: partial.reportQualification }),
     reportType: partial.reportType,
     reportSubtype: partial.reportSubtype,
     reportAuthor: author,
@@ -320,7 +322,8 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   const rules = world.rules.people;
   // A call is read on the pack's call terms (lane 1.7); a goal, an answer to a plan and the word to go on its goal's. He reads it
   // watched from where he stands (lane 1.4's oversight).
-  const terms = order.orderKind === 'call' ? callTerms(world.map.world.rules.recruitment, order.orderCall?.callProfile) : goalTerms(rules, relayKindOf(start, order));
+  const terms = order.orderKind === 'call' ? callDirective(world.map.world.rules.recruitment, order.orderCall!)
+    : order.orderGoal !== null ? goalDirective(rules, order.orderGoal) : goalTerms(rules, relayKindOf(start, order));
   const answer = answerOrder(world, start, relayer.id, order.orderIssuer, terms, { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer).value });
   const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day, kind: order.orderKind, ...(order.orderCall?.callId === undefined ? {} : { callId: order.orderCall.callId }) }));
   const decision = relayAction(rules, answer, relayer.id, post);
@@ -343,6 +346,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
     });
     return state;
   }
+  if (answer.declaredReservations.length > 0 || answer.declaredReservationGaps.length > 0) acknowledge(ctx, state, msg, 'relayed', true, answer);
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, relayer.id, next.hopPerson, `order.${order.orderTarget}`);
   const leg = hop(ctx, state, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), hopRegion(ctx, state, next), id, decision.holdDays);
@@ -367,7 +371,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
 }
 
 /** The acknowledgement he wires back: which order he obeyed, or that an answer to his plan found it already changed. */
-function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token: string, obeyed: boolean): void {
+function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token: string, obeyed: boolean, response?: DirectiveResponse): void {
   const order = msg.msgOrder!;
   const post = msg.msgToPost!;
   sendReport(ctx, state, {
@@ -376,6 +380,7 @@ function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token:
       reportSubtype: null,
       reportClaims: [{ claimKind: 'order-obeyed', claimRegion: objectiveOf(state, order), claimValue: obeyed ? 1 : 0, claimToken: token, claimConfidence: 1000 }],
       reportAdvice: null,
+      ...(response === undefined ? {} : reportQualificationOf(response)),
       answers: msg.msgOrigin,
       about: post,
     }),
@@ -461,16 +466,16 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
     const goal = order.orderGoal!;
     const reaffirmed = plan !== undefined && plan.planIssuer === order.orderIssuer && sameGoal(plan.planGoal, goal);
     const outcome = conflictOf(ctx, state, msg, plan);
-    const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer).value });
+    const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalDirective(ctx.world.rules.people, goal), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer).value });
     let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind }));
     const response = responseKey(msg.msgOrigin, msg.msgTo);
     // 0116: without any positive received enemy claim, compliance cannot
     // qualify. Do not disturb an unchanged plan with a needless request.
     // The planner still judges the condition and the alternative in full.
-    const receivedThreat = (answer.actual === 'comply' || answer.actual === 'exceed') &&
+    const receivedThreat = answer.undertaking !== null &&
       knowledgeOf(state, seatIdFor(msg.msgTo)).knownReports.some(r => r.knownReceivedDay <= ctx.day &&
         r.knownBody.reportDay <= ctx.day && r.knownBody.reportClaims.some(c => c.claimKind === 'enemy-strength' && (c.claimValue ?? 0) > 0));
-    const propose = answer.declared === 'comply_with_reservations' || answer.declared === 'object' || answer.declared === 'refuse'
+    const propose = answer.declaredReservations.some(r => r.effect === 'statement' && r.subject === 'course') || answer.declared === 'object' || answer.declared === 'refuse'
       || receivedThreat;
     if (outcome.obeyed === 'new' && !reaffirmed) {
       const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass,
@@ -486,7 +491,7 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
       fire(ctx, 'orders.conflict');
       ctx.events.push({ event: 'conflict', person: msg.msgTo, post, message: msg.msgOrigin, terms: [] });
     }
-    acknowledge(ctx, next, msg, outcome.conflict ? `conflict-${outcome.obeyed}` : outcome.obeyed, outcome.obeyed === 'new');
+    acknowledge(ctx, next, msg, outcome.conflict ? `conflict-${outcome.obeyed}` : outcome.obeyed, outcome.obeyed === 'new', answer);
     return next;
   }
   if (order.orderKind === 'edit') {
@@ -507,7 +512,11 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   if (order.orderKind === 'send_back') for (const [index, n] of (order.orderNotes ?? []).entries()) {
     const terms = ctx.world.map.world.rules.plans.notes.terms.find(t => t.kind === n.markKind);
     if (terms === undefined) throw new RangeError(`pack has no terms for note ${n.markKind}`);
-    const answer = answerOrder(ctx.world, answered, msg.msgTo, order.orderIssuer, { boldness: terms.boldness, honours: terms.honours, offends: terms.offends, required: 0 }, { oversight: oversightOf(ctx, answered, msg.msgTo, order.orderIssuer).value });
+    const answer = answerOrder(ctx.world, answered, msg.msgTo, order.orderIssuer, {
+      boldness: terms.boldness, honours: terms.honours, offends: terms.offends, required: 0,
+      clauses: [{ clauseId: `mark:${index}`, clauseSubject: n.markKind === 'wait' ? 'timing' : 'course' }],
+      valueClauseLinks: terms.offends.map(value => [value, `mark:${index}`]),
+    }, { oversight: oversightOf(ctx, answered, msg.msgTo, order.orderIssuer).value });
     answered = recordResponse(answered, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind, note: index }));
     readings.push({ readingMark: n, readingResponse: responseKey(msg.msgOrigin, msg.msgTo, index) });
   }

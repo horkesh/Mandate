@@ -4,11 +4,14 @@ import type {
   ComplianceRung,
   Contribution,
   CounterProposal,
+  DirectiveAlternative,
   DirectiveResponse,
   DirectiveTerms,
   Reason,
   ResponseCondition,
+  Undertaking,
 } from './directive.ts';
+import { amendmentOf, clausesOf, readQualifications } from './reservations.ts';
 import type { ProxyProfile } from './people.ts';
 import {
   assertPermille,
@@ -39,6 +42,7 @@ export interface ComplianceRules {
   readonly shortfallWeight: Permille;
 
   readonly exceedAt: number;
+  /** Legacy pack fields, retained for reading existing packs. 0118 fixes the undertaking boundary at zero. */
   readonly complyAt: number;
   readonly reservationsAt: number;
   /** Below this, unwillingness is severe enough to refuse outright, if the proxy is protected. */
@@ -137,6 +141,7 @@ export function resolveDirective(
   terms: DirectiveTerms,
   context: CommandContext,
   rules: ComplianceRules = DEFAULT_COMPLIANCE_RULES,
+  alternatives: readonly DirectiveAlternative[] = [],
 ): DirectiveResponse {
   validate(proxy, terms, context);
 
@@ -248,25 +253,56 @@ export function resolveDirective(
     (proxy.evidence?.standing !== false && standing >= rules.protectedStandingAt) || deterrenceLevel <= rules.protectedDeterrenceAt;
   const isCandid = proxy.evidence?.candour === false || proxy.candour >= rules.candidAt;
 
+  const clauses = clausesOf(terms);
+  const clauseIds = clauses.map(c => c.clauseId);
+  const original = { undertakingKind: 'original' as const, undertakingRequest: null, clauses: clauseIds };
+  const qualifications = readQualifications(terms, context, reasons, clauses);
+  const reservationGaps = [...qualifications.gaps];
+  const candidates = willingness >= 0 ? [] : alternatives.flatMap(candidate => {
+    const changes = [...new Set(candidate.changedClauses)].sort(strictCompare);
+    if (changes.length === 0 || changes.some(c => !clauseIds.includes(c))) return [];
+    const candidateContext = candidate.qualifications === undefined ? context : { ...context, qualifications: candidate.qualifications };
+    const reply = resolveDirective(proxy, candidate.terms, candidateContext, rules);
+    if (reply.willingness < 0) return [];
+    const amendments = clauses.filter(c => changes.includes(c.clauseId)).map(c => amendmentOf(c, candidate));
+    for (const a of amendments) if (a.effect === 'offer') reservationGaps.push(a);
+    return candidate.authority === 'authorized' ? [{ candidate, changes, reply, amendments }] : [];
+  }).sort((a, b) => b.reply.willingness - a.reply.willingness || a.changes.length - b.changes.length || strictCompare(a.candidate.id, b.candidate.id));
+  const best = candidates[0];
+  const undertaking: Undertaking | null = willingness >= 0 ? original : best === undefined ? null : {
+    undertakingKind: 'alternative', undertakingRequest: null, clauses: clauseIds, candidate: best.candidate.id,
+    candidateWillingness: best.reply.willingness, candidateContributions: best.reply.contributions.map(c => [c.term, c.amount]),
+    candidateChanges: best.changes,
+  };
+  const reservations = willingness >= 0 ? qualifications.reservations : best === undefined ? [] : [
+    ...best.reply.reservations.filter(r => clauseIds.includes(r.clause)),
+    ...best.amendments.filter(a => a.effect === 'statement'),
+  ];
+  const declaredReservations = isCandid ? reservations : reservations.filter(r => r.treatment !== 'protest');
+
   let actual: ComplianceRung;
-  if (willingness >= rules.exceedAt && shortfall === 0 && honoursAHeldValue) actual = 'exceed';
-  else if (willingness >= rules.complyAt) actual = 'comply';
-  else if (willingness >= rules.reservationsAt) actual = 'comply_with_reservations';
+  if (undertaking !== null) {
+    if (reservations.length > 0) actual = 'comply_with_reservations';
+    else if (willingness >= rules.exceedAt && shortfall === 0 && honoursAHeldValue) actual = 'exceed';
+    else actual = 'comply';
+  }
   else if (willingness < rules.severeBelow && isProtected) actual = 'refuse';
   else if (isCandid) actual = 'object';
   else if (willingness > rules.slowWalkAbove) actual = 'slow_walk';
   else actual = 'reinterpret';
 
-  // An uncandid proxy covers covert shirking, and his own doubts, with a plain "yes".
+  // An uncandid proxy can conceal a protest or covert shirking. He still states a request or amendment.
   let declared: ComplianceRung = actual;
-  if (!isCandid && (COVERT.has(actual) || actual === 'comply_with_reservations')) declared = 'comply';
+  if (!isCandid && (COVERT.has(actual) || (actual === 'comply_with_reservations' && declaredReservations.length === 0))) declared = 'comply';
+  const declaredUndertaking = undertaking ?? (declared === 'comply' ? original : null);
 
   const counterProposal: CounterProposal | null =
     actual === 'object'
       ? { boldness, required: Math.min(terms.required, context.available) }
       : null;
 
-  const statedReasons = isCandid ? reasons : statedByUncandid(reasons, declared);
+  const statedReasons = isCandid ? reasons : statedByUncandid(reasons, declared).filter(r =>
+    undertaking === null || (r.kind !== 'values_offended' && r.kind !== 'departs_from_judgement'));
 
   // Conditions on acting at all: none for a man who will not act, or who acts on his own terms.
   const conditions: ResponseCondition[] = [];
@@ -279,7 +315,12 @@ export function resolveDirective(
     for (const need of needs) if (!promised.has(need.supportKind)) conditions.push({ kind: 'if_supported', supportKind: need.supportKind, from: need.supportFrom });
   }
 
-  return { actual, declared, willingness, contributions, reasons, statedReasons, counterProposal, conditions };
+  return {
+    actual, declared, willingness, contributions, reasons, statedReasons, counterProposal,
+    conditions: best?.reply.conditions ?? conditions,
+    clauses, undertaking, declaredUndertaking, reservations, declaredReservations, reservationGaps,
+    declaredReservationGaps: reservationGaps,
+  };
 }
 
 /** One of two orders a holder has in hand, as he reads it (0040: conflicting orders). */

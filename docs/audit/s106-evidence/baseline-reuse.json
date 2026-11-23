@@ -1,0 +1,5 @@
+{
+  "runs\\s105\\references\\testbed-summary.json": "9e2fa20ca7b2c1b45f9c421002ca790e8a6e502e0b6b6de17b091176a6c98877",
+  "runs\\s105\\references\\union-1861-summary.json": "e85d5b448db1faf29aa363e5b7fbe612313b1f6046cdb2c318a56d81a4cee83c",
+  "basis": "S105 final capture repeats all 268 hashes/non-clock summary fields in its single final done check. Base 8672b4fc retained reference and binding done-check agreement; no baseline rerun. Baseline is reused, never rerun."
+}

@@ -12,11 +12,12 @@
 import type { DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId } from '../ids.ts';
 import { term } from '../knowledge/truth.ts';
+import { reportQualificationOf } from '../knowledge/report.ts';
 import { mintMessageId, type TransitMessage } from '../messages/transit.ts';
 import { openOperations, putOperations, type OpRequest, type RequestAnswer } from '../operations/operations.ts';
 import type { PlanGoal } from '../plans/goal.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
-import { answerOrder, goalTerms } from '../reading/orders.ts';
+import { answerOrder, goalDirective, goalTerms } from '../reading/orders.ts';
 import type { State } from '../root-state.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type TickContext } from './context.ts';
 
@@ -69,7 +70,12 @@ export function answerOf(ctx: TickContext, response: DirectiveResponse): { reado
 export function arriveSupport(ctx: TickContext, start: State, msg: TransitMessage): State {
   const order = msg.msgOrder!;
   const post = msg.msgToPost!;
-  const response = answerOrder(ctx.world, start, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, 'advance'), { oversight: oversightOf(ctx, start, msg.msgTo, order.orderIssuer).value });
+  const rules = ctx.world.rules.people;
+  const terms = { ...goalTerms(rules, 'advance'), clauses: [
+    ...(order.orderGoal === null ? [] : goalDirective(rules, order.orderGoal).clauses ?? []),
+    { clauseId: 'support', clauseSubject: 'support' as const },
+  ] };
+  const response = answerOrder(ctx.world, start, msg.msgTo, order.orderIssuer, terms, { oversight: oversightOf(ctx, start, msg.msgTo, order.orderIssuer).value });
   let state = recordResponse(start, responseOf(response, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind }));
   const { answer, from } = answerOf(ctx, response);
   fire(ctx, 'operations.support_answered');
@@ -93,6 +99,7 @@ export function arriveSupport(ctx: TickContext, start: State, msg: TransitMessag
       reportDay: ctx.day,
       reportHour: null,
       reportAdvice: null,
+      ...reportQualificationOf(response),
       reportAnswers: msg.msgOrigin,
     },
     truth: { truthTerms: response.contributions.map((c) => term('support_term', c.amount, { person: msg.msgTo, post, rule: c.term })), truthTrimmed: [] },
