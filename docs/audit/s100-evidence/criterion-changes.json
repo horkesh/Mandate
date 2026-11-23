@@ -1,0 +1,118 @@
+[
+  {
+    "id": "behaviour",
+    "milestone": "phase0",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "hash",
+    "milestone": "phase0",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "resume",
+    "milestone": "phase0",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "liveness",
+    "milestone": "phase0",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "section-ten",
+    "milestone": "phase0",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "budget",
+    "milestone": "phase0",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "checkpoints",
+    "milestone": "1A",
+    "beforeProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 88452 men, below 100000"
+    ],
+    "afterProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 88452 men, below 100000"
+    ]
+  },
+  {
+    "id": "operation",
+    "milestone": "1A",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "pushback",
+    "milestone": "1A",
+    "beforeProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: union/U39 morgan_edwin_d addressee April Union militia requisition: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C01 brown_joseph_e addressee First Pensacola contingent mustering: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C02 brown_joseph_e addressee April additional regiments for Virginia: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C03 moore_thomas_o addressee April active Virginia regiments and earlier readiness call: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C05 harris_isham_g addressee Initial three Virginia regiments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C07 letcher_john addressee Reserve corps organization and appointments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C09 pickens_francis_w addressee Later two armed regiments: exposure_mismatch: Same actor and role, but the observed requests address different matters. The represented historical request was not issued.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C10 brown_joseph_e addressee Reserve corps and appointment authority: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C11 moore_thomas_o addressee Reserve corps raising and support: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C12 brown_joseph_e addressee Later two armed regiments versus State brigade: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C14 holmes_theophilus_h addressee Supporting Commander Lewis river expedition: not_observed: No act observed for this actor, role and represented matter.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C15 johnston_joseph_e addressee Keeping force at Harpers Ferry: exposure_mismatch: Same actor and role, but the observed requests address different matters. The represented historical request was not issued.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C25 holmes_theophilus_h addressee Retaining the main force at Fredericksburg: not_observed: No act observed for this actor, role and represented matter."
+    ],
+    "afterProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: union/U39 morgan_edwin_d addressee April Union militia requisition: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C01 brown_joseph_e addressee First Pensacola contingent mustering: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C02 brown_joseph_e addressee April additional regiments for Virginia: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C03 moore_thomas_o addressee April active Virginia regiments and earlier readiness call: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C05 harris_isham_g addressee Initial three Virginia regiments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C07 letcher_john addressee Reserve corps organization and appointments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C09 pickens_francis_w addressee Later two armed regiments: exposure_mismatch: Same actor and role, but the observed requests address different matters. The represented historical request was not issued.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C10 brown_joseph_e addressee Reserve corps and appointment authority: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C11 moore_thomas_o addressee Reserve corps raising and support: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C12 brown_joseph_e addressee Later two armed regiments versus State brigade: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C14 holmes_theophilus_h addressee Supporting Commander Lewis river expedition: not_observed: No act observed for this actor, role and represented matter.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C15 johnston_joseph_e addressee Keeping force at Harpers Ferry: not_observed: No act observed for this actor, role and represented matter.",
+      "union-1861 history run, 148 days to 1861-07-31: confederate/C25 holmes_theophilus_h addressee Retaining the main force at Fredericksburg: not_observed: No act observed for this actor, role and represented matter."
+    ]
+  },
+  {
+    "id": "unknown-strength",
+    "milestone": "1A",
+    "beforeProblems": [
+      "union-1861, war by decision, 148 days: battle battle:manassas:140 at manassas, day 140: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)",
+      "union-1861 history run, 148 days to 1861-07-31: battle battle:manassas:140 at manassas, day 140: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+    ],
+    "afterProblems": [
+      "union-1861, war by decision, 148 days: battle battle:manassas:140 at manassas, day 140: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)",
+      "union-1861 history run, 148 days to 1861-07-31: battle battle:manassas:140 at manassas, day 140: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+    ]
+  },
+  {
+    "id": "stand-ins",
+    "milestone": "1A",
+    "beforeProblems": [],
+    "afterProblems": []
+  },
+  {
+    "id": "lever-sweep",
+    "milestone": "1A",
+    "beforeProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ],
+    "afterProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ]
+  }
+]
