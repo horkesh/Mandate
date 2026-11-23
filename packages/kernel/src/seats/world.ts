@@ -1,3 +1,4 @@
+import { mandateProblems } from '../world/mandates.ts';
 /**
  * The seats layer's World (lane 0.5 replaces lane 0.6's stand-in comms World):
  * lane 0.2's v2 World and a scenario start, indexed once, with the lookups the
@@ -123,6 +124,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   const rules: SeatsRules = Object.freeze({ latency: pack.latency, templates: pack.reportTemplates, traits: pack.people?.traits, people: pack.people });
   // The kernel takes any World it is handed (a fixture, an adapter), so it checks the pack's rules as the validator does.
   const problems: string[] = [
+    ...mandateProblems(map.world,start),
     ...templateProblems(rules.templates),
     ...reportConfidenceProblems(pack.reportConfidence),
     ...latencyProblems(rules.latency),

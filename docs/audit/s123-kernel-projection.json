@@ -1,0 +1,130 @@
+{
+  "base": "5625454f",
+  "before": [
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/believed.ts",
+      "hash": "62a91f78d57487a77c9b6cfb9c1c65a1d4750c4dead877731933e609b9111b10",
+      "detail": "believedHolder reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/believed.ts",
+      "hash": "52e9eaffd1071230f95d126469e1a015384dc6f76503f0dd0d401d16b85cb244",
+      "detail": "vacancyUnreported reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "e3b09bfd2f9d8641415dbd4c88f95812637f7450f8ae6e8e92249d3669b9dedf",
+      "detail": "morningGround reaches packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "1b66f4b89fd3e17d592d3ba1ebbbf99f33d5a407574f2f56e88df62804246d35",
+      "detail": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "edbb82280f0318194b43973a708806a1219760d9972658d16410f2fad398d944",
+      "detail": "battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "354f511b7af1c1f72e065b27630ef1ffc1f2b0ebb627b338bee3687f8cf80606",
+      "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "cc2584195431f864892b0eac47f5c68eb15983ef14665be1a2e8bfa16d2bdb69",
+      "detail": "postOfSeatPerson reaches packages/kernel/src/command/command.ts:heldPost (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/view/view.ts",
+      "hash": "7fadfd1e837959c0eb33492fcdb4b70fb79b7c6332ca15c4b8e5e8c8601deefd",
+      "detail": "viewFor reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    }
+  ],
+  "after": [
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/believed.ts",
+      "hash": "62a91f78d57487a77c9b6cfb9c1c65a1d4750c4dead877731933e609b9111b10",
+      "detail": "believedHolder reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/believed.ts",
+      "hash": "52e9eaffd1071230f95d126469e1a015384dc6f76503f0dd0d401d16b85cb244",
+      "detail": "vacancyUnreported reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "e3b09bfd2f9d8641415dbd4c88f95812637f7450f8ae6e8e92249d3669b9dedf",
+      "detail": "morningGround reaches packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "51623e4c78f6cff73aca9c6893e5208620df737976ef1fb6e635fcb3c1e40c09",
+      "detail": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "edbb82280f0318194b43973a708806a1219760d9972658d16410f2fad398d944",
+      "detail": "battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "d45fe1d18d5d0153d9bc46d6bc18888af7cf7e792f96e1a2ea4749639485e012",
+      "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "cc2584195431f864892b0eac47f5c68eb15983ef14665be1a2e8bfa16d2bdb69",
+      "detail": "postOfSeatPerson reaches packages/kernel/src/command/command.ts:heldPost (postStates)"
+    },
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/view/view.ts",
+      "hash": "7fadfd1e837959c0eb33492fcdb4b70fb79b7c6332ca15c4b8e5e8c8601deefd",
+      "detail": "viewFor reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    }
+  ],
+  "rows": [
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "principalMenu",
+      "before": "c15685c0ad85e10cad8d6d0d504b41265509e94bc3a18bf9679ca858fa72d471",
+      "after": "51623e4c78f6cff73aca9c6893e5208620df737976ef1fb6e635fcb3c1e40c09",
+      "previousReaders": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)",
+      "readers": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "pendingRequests",
+      "before": "35bf6670972397fbbe486df89170312ecce63423e64c9f70f4d9569c3815f965",
+      "after": "d45fe1d18d5d0153d9bc46d6bc18888af7cf7e792f96e1a2ea4749639485e012",
+      "previousReaders": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)",
+      "readers": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+    }
+  ],
+  "checks": [
+    "C1 received authority only",
+    "C2 actual holder/chain/side and shared force checks",
+    "C3 actual issuer and relays",
+    "C7 revocation at the receiving post, not globally on dispatch",
+    "C8 unchanged menu under hidden enemy-strength change",
+    "Raw command rejection and save/replay equality"
+  ],
+  "distinction": "Only the commander receives local menus. Kernel validation reads own-side resources and the actual chain; targets and routes are planned from his reports. Execution repeats authority and resource checks. No new principal catalogue truth reader is authorized."
+}

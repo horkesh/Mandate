@@ -1,3 +1,4 @@
+import { planAuthorized } from '../seats/local-actions.ts';
 import { withinCommand } from '../command/command.ts';
 import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
@@ -185,7 +186,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   for (const post of planned.sort(strictCompare)) {
     const r = state.planRecords[post]!;
     const plan = r.planApproved;
-    const executing = (r.planStatus === 'approved' || r.planStatus === 'ready') && plan !== null && plan.candMethod !== 'holding';
+    const executing = planAuthorized(world,state,post,r,day,plan ?? undefined) && (r.planStatus === 'approved' || r.planStatus === 'ready') && plan !== null && plan.candMethod !== 'holding';
     const open = openOperationOf(state, post);
     const current = open === null ? null : state.operationRecords[open]!;
     const same = current !== null && executing && current.opOrder === r.planOrder && current.opPlan === plan!.id;

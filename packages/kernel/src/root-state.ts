@@ -1,3 +1,4 @@
+import type { AuthorityTable } from './command/authority.ts';
 /**
  * The Phase 0 State: mutable truth, saved and hashed (FOUNDATION section 10).
  *
@@ -48,6 +49,8 @@ import type { BattleTable } from './combat/records.ts';
 import type { JoinTable } from './movement/join.ts';
 
 export interface State {
+  /** Absent is canonical empty for older saves; writer: command. */
+  readonly authorityByPost?: AuthorityTable;
   /** Personal service choices, owned by people. Absent in older saves means nobody has chosen yet. */
   readonly personService?: Readonly<Record<PersonId, PersonService>>;
   /** The game's seed, set at setup; every named stream derives from it. Immutable. */

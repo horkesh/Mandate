@@ -100,6 +100,8 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     }
     // Lane 1.5: the people verbs, copied field by field like the rest.
     switch (c.cmd) {
+      case 'mandate':
+        return { day, seat, command: { cmd: 'mandate', paper: c.paper, route: c.route } };
       case 'appoint':
         return { day, seat, command: { cmd: 'appoint', post: c.post, person: c.person, rank: c.rank, route: c.route, ...(c.from === undefined ? {} : { from: c.from }) } };
       case 'relieve':

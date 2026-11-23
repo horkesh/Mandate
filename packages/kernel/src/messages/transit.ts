@@ -1,3 +1,5 @@
+import type { AuthorityBasis } from '../command/authority.ts';
+import type { MandateGrant } from '../world/mandates.ts';
 /**
  * Messages in transit (writer: `messages`; FOUNDATION section 10).
  *
@@ -42,7 +44,7 @@ export interface Hop {
  * section 5: a support request is a directive to that holder, who answers with his own compliance). It carries the goal
  * the axis serves.
  */
-export const ORDER_KINDS = ['approve', 'call', 'decline_proposal', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
+export const ORDER_KINDS = ['approve', 'mandate', 'call', 'decline_proposal', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
 export type OrderKind = (typeof ORDER_KINDS)[number];
 
 /** A call for regiments, as an order carries it (lane 1.7). */
@@ -58,6 +60,8 @@ export interface CallSpec {
 }
 
 export interface OrderBody {
+  readonly orderMandate?: MandateGrant;
+  readonly orderAuthority?: AuthorityBasis;
   readonly orderDoctrine?: string;
   readonly orderLetter?: LetterIdentity;
   readonly orderSupersedes?: LetterIdentity;

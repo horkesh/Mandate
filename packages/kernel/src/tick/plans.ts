@@ -1,3 +1,4 @@
+import { planAuthorized } from '../seats/local-actions.ts';
 /**
  * The plan cycle in the day tick (lane 1.2; FOUNDATION sections 5 and 9):
  *
@@ -148,7 +149,8 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
   let state = start;
   for (const post of choosingPosts(start, ctx.day)) {
     const record = state.planRecords[post]!;
-    const options = record.planDraft!.draftCandidates;
+    const options = record.planDraft!.draftCandidates.filter(c => planAuthorized(ctx.world,state,post,record,ctx.day,c));
+    if (options.length === 0) continue;
     let pick = choices.get(post);
     if (pick === undefined) {
       pick = options[0]!.id;
@@ -157,6 +159,7 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
         ctx.events.push({ event: 'seat_defaulted', person: state.postStates[post]!.postHolder!, post, message: null, terms: [] });
       }
     }
+    if (!options.some(c => c.id === pick)) continue;
     const chosen = choose(state, post, pick);
     state = chosen.state;
     fire(ctx, 'plans.chosen');
@@ -331,7 +334,10 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
       continue;
     }
     const input = withNotePreferences(ground, world, state, record);
-    const set = draftFor(ctx, input);
+    const drafted = draftFor(ctx, input);
+    const set = record.planAuthority === undefined ? drafted : { ...drafted,
+      draftCandidates: drafted.draftCandidates.filter(c => planAuthorized(world,state,post,record,day,c)) };
+    if (record.planAuthority !== undefined && set.draftCandidates.length === 0) continue;
     if (record.planProposalPending === true) {
       draftProposal(ctx, state, post, record, input, set, { answers: record.planOrder, response: record.planResponse, issuer: record.planIssuer });
       state = finishProposal(state, post);

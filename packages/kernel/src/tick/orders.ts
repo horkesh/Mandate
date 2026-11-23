@@ -1,3 +1,4 @@
+import { arriveMandate, validateLocalOrder } from './mandates.ts';
 /**
  * Orders through chains (decision 0040): issuing an order, relaying it link by link, and its arrival.
  *
@@ -10,7 +11,7 @@
  *   the two by his own compliance (lane 1.1's `resolveOrderConflict`, called at `arriveOrder`).
  * - A special messenger is a route with a price.
  */
-import { allCommandedBlocks, sideOfPerson } from '../command/command.ts';
+import { allCommandedBlocks, heldPost, sideOfPerson } from '../command/command.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { term } from '../knowledge/truth.ts';
 import { senderFor } from '../seats/sender.ts';
@@ -84,7 +85,7 @@ function objectiveOf(state: State, order: OrderBody): ReportClaim['claimRegion']
  * Only a principal sends orders (review F3): a seat may make a principal's choices or choose among options the kernel
  * judged consistent, never issue commands of its own (decision 0015, FOUNDATION section 8).
  */
-type OrderEnclosure = Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes' | 'orderProposal' | 'orderDoctrine' | 'orderPlan' | 'orderLetter' | 'orderSupersedes' | 'orderPriorDispatch'>;
+type OrderEnclosure = Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes' | 'orderProposal' | 'orderDoctrine' | 'orderPlan' | 'orderLetter' | 'orderSupersedes' | 'orderPriorDispatch' | 'orderMandate' | 'orderAuthority'>;
 
 export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand): RejectionReason | null {
   const { world } = ctx;
@@ -212,7 +213,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
   // The whole chain of posts between the principal's own post and the target relays his order.
-  const sender = senderFor(world, state, seat, requisition, ctx.senderViews)!;
+  const sender = senderFor(world, state, seat, requisition, ctx.senderViews, body.orderAuthority === undefined && body.orderMandate === undefined ? undefined : heldPost(state,issuerId) ?? undefined)!;
   const officeAddress = requisition !== undefined && sender.holder(cmd.to) === null;
   const chain = officeAddress ? [cmd.to] : sender.chain(cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
@@ -220,7 +221,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
   // whose loss has not been reported to him.
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
-    hopPerson: i === all.length - 1 ? (officeAddress ? issuer.id : sender.holder(p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : sender.holder(p)!,
+    hopPerson: i === all.length - 1 ? (officeAddress ? issuer.id : body.orderMandate?.mandateHolder ?? sender.holder(p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : sender.holder(p)!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
@@ -415,7 +416,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
 }
 
 /** The acknowledgement he wires back: which order he obeyed, or that an answer to his plan found it already changed. */
-function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token: string, obeyed: boolean, response?: DirectiveResponse): void {
+export function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token: string, obeyed: boolean, response?: DirectiveResponse): void {
   const order = msg.msgOrder!;
   const post = msg.msgToPost!;
   sendReport(ctx, state, {
@@ -489,6 +490,11 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   const order = msg.msgOrder!;
   // A support request between holders (lane 1.4): answered by the holder's own compliance, recorded by the operation.
   if (order.orderKind === 'support') return arriveSupport(ctx, state, msg);
+  if (order.orderKind === 'mandate') return arriveMandate(ctx, state, msg);
+  if (order.orderAuthority !== undefined && !validateLocalOrder(ctx, state, order)) {
+    acknowledge(ctx, state, msg, 'authority_unavailable', false);
+    return state;
+  }
   const post = msg.msgToPost!;
   const plan = planOf(state, post);
   if (order.orderPlan !== undefined && plan?.planOrder !== order.orderPlan) {
@@ -543,7 +549,7 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
       || receivedThreat;
     if (outcome.obeyed === 'new' && !reaffirmed) {
       const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass,
-        issuedDay: order.orderIssuedDay, response, propose, ...(letter === undefined ? {} : { letter }) };
+        issuedDay: order.orderIssuedDay, response, propose, ...(order.orderAuthority === undefined ? {} : { authority: order.orderAuthority }), ...(letter === undefined ? {} : { letter }) };
       next = setGoal(next, post, set, ctx.day);
     } else if (propose) {
       next = challengeGoal(next, post, { challengeOrder: msg.msgOrigin, challengeIssuer: order.orderIssuer,

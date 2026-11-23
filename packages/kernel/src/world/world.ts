@@ -1,3 +1,4 @@
+import type { MandatePaper } from './mandates.ts';
 import type { OrganisationTemplate } from './organisation.ts';
 /**
  * World format v2, the whole World: one pack's static data, self-contained so
@@ -321,6 +322,7 @@ export interface PlansRules {
 
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
 export interface WorldRules {
+  readonly mandates?: readonly MandatePaper[];
   /** The top of the pack's capacity scale for edges and depots. */
   readonly capacityMax: number;
   /** Control a faction needs in a region to trace supply or rail through it. */

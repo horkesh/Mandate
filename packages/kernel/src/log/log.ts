@@ -55,6 +55,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
   const c = e.command as Partial<Record<string, unknown>> | undefined;
   if (typeof c !== 'object' || c === null || !(COMMAND_KINDS as readonly unknown[]).includes(c.cmd)) return [...problems, `${at}: unknown command`];
   const FIELDS: Readonly<Record<string, readonly string[]>> = {
+    mandate: ['cmd', 'paper', 'route'],
     order: ['bypass', 'cmd', 'goal', 'route', 'to'],
     answer_proposal: ['action', 'bypass', 'cmd', 'proposal', 'route', 'to'],
     review: ['action', 'bypass', 'cmd', 'edit', 'route', 'to'],
@@ -95,7 +96,9 @@ export function entryProblems(raw: unknown, i: number): string[] {
     if (typeof c.bypass !== 'boolean') problems.push(`${at}: ${String(c.cmd)}.bypass must be true or false`);
   };
   if (Object.hasOwn(c, 'doctrine') && !id(c.doctrine)) problems.push(`${at}: doctrine must name a doctrine row`);
-  if (c.cmd === 'order') {
+  if (c.cmd === 'mandate') {
+    if (!ID(c.paper) || !(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`${at}: invalid mandate paper or route`);
+  } else if (c.cmd === 'order') {
     routed();
     if (Object.hasOwn(c, 'letter') && (!isLetterIdentity(c.letter) || c.doctrine !== undefined)) problems.push(`${at}: invalid authored letter identity`);
     if (Object.hasOwn(c, 'retryOf') && (!id(c.retryOf) || !isLetterIdentity(c.letter))) problems.push(`${at}: retryOf must identify a dispatch of the authored letter`);

@@ -83,6 +83,7 @@ const field = (f: string, writer: string, proposedBy: readonly string[], code: r
 const at = (record: string, key: string): FieldLocation => ({ record, key });
 
 export const OWNED_FIELDS: readonly OwnedField[] = [
+  field('received mandates and shared authority commitments', 'command', ['order receipt and compliance', 'logged local choices'], [at('State', 'authorityByPost')]),
   field('each faction\'s current capital', 'command', ['scenario start', 'situations'], [at('State', 'factionCapitals')]),
   // Lane 0.4: control, set from the scenario start (0050) and changed only through `applyControl`.
   field('region control', 'control', ['combat', 'occupation'], [at('State', 'regionControl')]),
@@ -196,6 +197,12 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'TransitMessage',
   'Hop',
   'OrderBody',
+  'AuthorityBasis',
+  'MandateGrant',
+  'MandateParent',
+  'MandateCeiling',
+  'EnactedMandate',
+  'AuthorityUse',
   'LetterIdentity',
   'ProposalReply',
   'VerbBody',

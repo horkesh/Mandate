@@ -231,6 +231,13 @@ The plan appears as arrows. The player can:
 
 ## 10. Kernel architecture
 
+Received mandates and shared authority commitments (`State.authorityByPost`) are
+State, written only by `command`, proposed by actual order receipt/compliance
+and logged local choices (0121/0124). Mandate menus are Derived from received
+authority and planner candidates. Older saves have canonical empty authority;
+no grant or receipt is invented.
+
+
 Three layers:
 - **World**: static pack data (region terrain and starting values, edges with lengths and capacities, people's historical records with citations, situations). Immutable, hashed, never saved; a save references it by hash.
 - **State**: mutable truth, including everything that changes during play (control, region population and loyalty, edge condition, divisions, people, plans, knowledge). Saved.
@@ -312,6 +319,7 @@ These three changes reconcile the prose with the implemented writers and `owners
 | a force block's post (`forceAssignments`) | `command` | transfers that name a force, the army commander's assignments, combat releasing a surrendered block, recruitment (a raised block assigned to its governor's post; a disbanded one removed), sourced theatre-exit notices, detachments (a new detachment assigned to its parent's post) (0033, 0064, 0073, 0076, 0081) |
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076); a notice's `post_succession` proposal replaces its named incumbent with a serving successor on the post's side, preserving both statuses and reporting the typed institutional-succession reason |
 | observers in post (`observerPostings`): the observer, the post he watches, who sent him and the day he arrived | `command` | the observer verb and his recall (0040, 0073) |
+| received mandates, holder-bound enactment history and shared force commitments (`authorityByPost`) | `command` | actual order receipt and compliance; logged local choices (0121/0124) |
 | standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`), its optional arm, unknown strength and war-service term | `command` | verbs, situations, orders from the holder's own department, an absolute call a governor answered (0073); readiness requests record responses without creating levies |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder, a chosen policy's pushback (typed grievances, and the floor's cost to the principal's standing) (0082) |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |

@@ -192,6 +192,7 @@ export interface SituationChoice {
 
 /** A principal deciding what to order today, and which open situations to decide or hand on. */
 export interface PrincipalMenu {
+  readonly mandates?: readonly { readonly paper: string; readonly route: RouteKind }[];
   readonly menuKind: 'principal';
   readonly faction: FactionId;
   /**
@@ -254,7 +255,13 @@ export interface BattleMenu {
   readonly options: typeof BATTLE_ORDER_OPTIONS;
 }
 
-export type Menu = PrincipalMenu | PlanMenu | DelegatedMenu | BattleMenu;
+export interface LocalActionMenu {
+  readonly menuKind: 'local-action';
+  readonly post: PostId;
+  readonly options: readonly { readonly optionId: string; readonly mandate: string; readonly paper?: string; readonly to?: PostId; readonly plan?: OptionView }[];
+}
+
+export type Menu = LocalActionMenu | PrincipalMenu | PlanMenu | DelegatedMenu | BattleMenu;
 
 export interface SeatRequest {
   /** The human driver's current turn settings, when supplied by that driver. Not simulation State. */

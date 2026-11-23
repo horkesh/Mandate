@@ -1,3 +1,4 @@
+import { availableMandatePapers, localMenu } from './local-actions.ts';
 import { forceTotals } from '../forces/lots.ts';
 /**
  * Which seats must answer, and the kernel's menu for each (Derived).
@@ -445,6 +446,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   }));
   return {
     menuKind: 'principal',
+    ...(world.map.world.rules.mandates === undefined ? {} : { mandates: availableMandatePapers(world,state,f.principal,state.stateDay+1).filter(p => p.grant.mandateParent === null).map(p => ({ paper: p.id, route: 'courier' as const })) }),
     faction,
     politicalBlocs: receivedView.politics?.blocs ?? [],
     atWarSince: warSince(world, state, faction),
@@ -579,6 +581,13 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
     const seat = seatIdFor(r.sitDelegate);
     const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], valuesOf(world.map, r.sitDelegate)) };
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }, cache));
+  }
+  for (const assignment of Object.values(state.seatAssignments)) {
+    const person = assignment.seatPerson;
+    const menu = localMenu(world,state,person,day);
+    if (menu === null) continue;
+    const seat = seatIdFor(person);
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `local:${menu.post}:${day}`, view: viewFor(world,state,seat,cache), menu },cache));
   }
   // 0052: the kernel supplies consistent choices to the commander himself, never to his principal.
   for (const { post, holder, options } of choosingMenus(state, day)) {

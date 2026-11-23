@@ -40,7 +40,7 @@ export function verbListMismatch(commands: Readonly<Record<string, string>>, ver
 
 describe('the console commands are the kernel verb list (lane 1.13: the new kernel)', () => {
   it('maps commands onto the kernel’s verbs exactly, one command per verb', () => {
-    expect(kernelVerbs()).toEqual(['address', 'answer_proposal', 'appoint', 'audience', 'call', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review:approve', 'review:edit', 'review:send_back', 'transfer']);
+    expect(kernelVerbs()).toEqual(['address', 'answer_proposal', 'appoint', 'audience', 'call', 'consult', 'decide', 'delegate', 'go', 'inquire', 'mandate', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review:approve', 'review:edit', 'review:send_back', 'transfer']);
     expect(verbListMismatch(VERB_COMMANDS, kernelVerbs())).toEqual([]);
   });
 
@@ -107,4 +107,16 @@ it('the console answers a received proposal and can write a nested conditional o
     if (parsed.kind === 'command') expect(commandText(parsed.command, t)).toContain(`if turned, hold ${region} | if outmatched, hold in place`);
   }
   expect(parseLine(`order ${post} hold fallback=unknown,hold,-`, heard, t)).toMatchObject({ kind: 'error' });
+});
+
+
+it('mandate dispatch accepts only a declared paper on the current principal menu', () => {
+  const game = new ConsoleGame({pack:'testbed'});
+  const request = game.morning();
+  const t = deskStrings(game.strings,game.locale);
+  if (request.menu.menuKind !== 'principal') throw Error('principal');
+  expect(parseLine('mandate forged',request,t).kind).toBe('error');
+  const ready = {...request,menu:{...request.menu,mandates:[{paper:'assignment',route:'courier' as const}]}};
+  expect(parseLine('mandate assignment',ready,t)).toMatchObject({kind:'command',command:{cmd:'mandate',paper:'assignment',route:'courier'}});
+  expect(parseLine('mandate assignment arbitrary=power',ready,t).kind).toBe('error');
 });

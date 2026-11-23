@@ -1,3 +1,4 @@
+import type { AuthorityBasis } from '../command/authority.ts';
 /**
  * `plans` (FOUNDATION section 10): the only writer of goals, draft sets, the seat's selection, approvals and arrow
  * edits as counter-orders (0026, 0062; lane 1.2).
@@ -67,6 +68,7 @@ export interface PlanChallenge {
 
 /** A post's goal and its plan. Immutable: `plans` replaces it whole. */
 export interface PlanRecord {
+  readonly planAuthority?: AuthorityBasis;
   readonly planLetter?: LetterIdentity;
   /** The delivered authority behind a fallback; its local switch report identifies the replacement plan. */
   readonly planDiscretionOrder?: MessageId;
@@ -129,11 +131,12 @@ export function candidateOf(record: PlanRecord, id: string): PlanCandidate | und
 export function setGoal(
   state: State,
   post: PostId,
-  order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string; readonly propose?: boolean; readonly letter?: PlanRecord['planLetter'] },
+  order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string; readonly propose?: boolean; readonly letter?: PlanRecord['planLetter']; readonly authority?: AuthorityBasis },
   day: number,
 ): State {
   const holdHere = order.goal.goalObjective === null;
   return put(state, post, {
+    ...(order.authority === undefined ? {} : { planAuthority: order.authority }),
     planGoal: order.goal,
     planIssuer: order.issuer,
     planViaChain: order.viaChain,
