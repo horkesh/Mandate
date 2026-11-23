@@ -675,6 +675,266 @@
               "source": "OR I-2 pp.303-309,314-315,751,754. [I] The dated McDowell department is not the whole Washington garrison or any whole statewide requisition. The model call batches have no named regiment membership, so their July command allocation remains unresolved. Keep them with their current posts; do not apply the 37,321 departmental duty total to these batches or distribute it over divisions. S74/0108: identified lots can now be requested; senders select regiments by compliance, and movement owns arrivals. [I] Shared-state requests prefer the Pennsylvania department for Pennsylvania/Wisconsin, the Washington-facing department for the other supplied states.",
               "receiveLevies": false
             }
+          ],
+          "letterNamespace": "us_consultations",
+          "consultations": [
+            {
+              "letter": {
+                "namespace": "us_consultations",
+                "key": "sumter_0305",
+                "revision": 1
+              },
+              "subject": "sumter_garrison",
+              "fromDate": "1861-03-05",
+              "question": "Consider whether the garrison can be relieved with the means available.",
+              "kind": "feasibility",
+              "courses": [
+                {
+                  "id": "relief",
+                  "honours": [
+                    "union",
+                    "duty"
+                  ],
+                  "opposes": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "resources": [
+                    "regulars",
+                    "volunteers",
+                    "vessels"
+                  ],
+                  "assumesPossible": false
+                }
+              ],
+              "advisers": [
+                {
+                  "person": "scott_winfield",
+                  "post": "us_general_in_chief"
+                }
+              ],
+              "source": "Lincoln, Complete Works II pp.9-10: March 9 recounts the March 5 transmission for consideration and same-day endorsed opinion; Holt/Scott to Lincoln, March 5, LoC mal0779200, document pp.1-6 (Knox transcript). [I] Paraphrased question, not a recovered March 5 original. The source quantities and conclusions are not seeded as received inputs.",
+              "alternatives": [
+                {
+                  "id": "abandonment",
+                  "honours": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "opposes": [
+                    "union",
+                    "duty"
+                  ],
+                  "resources": [],
+                  "assumesPossible": false
+                },
+                {
+                  "id": "evacuate_both",
+                  "honours": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "opposes": [
+                    "union",
+                    "duty"
+                  ],
+                  "resources": [],
+                  "assumesPossible": false
+                }
+              ]
+            },
+            {
+              "letter": {
+                "namespace": "us_consultations",
+                "key": "sumter_0312",
+                "revision": 1
+              },
+              "subject": "sumter_garrison",
+              "fromDate": "1861-03-12",
+              "question": "What additional means and preparation would supplying and reinforcing the fort require, and could they be ready in time?",
+              "kind": "feasibility",
+              "courses": [
+                {
+                  "id": "relief",
+                  "honours": [
+                    "union",
+                    "duty"
+                  ],
+                  "opposes": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "resources": [
+                    "regulars",
+                    "volunteers",
+                    "vessels"
+                  ],
+                  "assumesPossible": false
+                }
+              ],
+              "advisers": [
+                {
+                  "person": "scott_winfield",
+                  "post": "us_general_in_chief"
+                }
+              ],
+              "source": "OR I-I p.197 and Lincoln, Complete Works II p.16: Cameron quotes the President's question of March 12 and Scott's answer. No separately read Scott original or invented receipt date. [I] Paraphrase; alternatives describe possible advice, not additional principal questions.",
+              "alternatives": [
+                {
+                  "id": "abandonment",
+                  "honours": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "opposes": [
+                    "union",
+                    "duty"
+                  ],
+                  "resources": [],
+                  "assumesPossible": false
+                },
+                {
+                  "id": "evacuate_both",
+                  "honours": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "opposes": [
+                    "union",
+                    "duty"
+                  ],
+                  "resources": [],
+                  "assumesPossible": false
+                }
+              ]
+            },
+            {
+              "letter": {
+                "namespace": "us_consultations",
+                "key": "sumter_0315",
+                "revision": 1
+              },
+              "subject": "sumter_garrison",
+              "fromDate": "1861-03-15",
+              "question": "Assuming provisioning is possible, would attempting it now be wise?",
+              "kind": "policy",
+              "courses": [
+                {
+                  "id": "provisioning",
+                  "honours": [
+                    "union",
+                    "duty"
+                  ],
+                  "opposes": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "resources": [],
+                  "assumesPossible": true
+                }
+              ],
+              "advisers": [
+                {
+                  "person": "seward_william_h",
+                  "post": "us_secretary_state"
+                },
+                {
+                  "person": "cameron_simon",
+                  "post": "us_secretary_war"
+                },
+                {
+                  "person": "welles_gideon",
+                  "post": "us_secretary_navy"
+                },
+                {
+                  "person": "smith_caleb_b",
+                  "post": "us_secretary_interior"
+                },
+                {
+                  "person": "bates_edward",
+                  "post": "us_attorney_general"
+                },
+                {
+                  "person": "chase_salmon_p",
+                  "post": "us_secretary_treasury"
+                },
+                {
+                  "person": "blair_montgomery",
+                  "post": "us_postmaster_general"
+                }
+              ],
+              "source": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Course values retain the existing situation options' union/duty and conciliation/caution meanings; no person-specific answer data."
+            },
+            {
+              "letter": {
+                "namespace": "us_consultations",
+                "key": "sumter_0329",
+                "revision": 1
+              },
+              "subject": "sumter_garrison",
+              "fromDate": "1861-03-29",
+              "question": "Should an expedition relieve the fort, or should its garrison be withdrawn?",
+              "kind": "policy",
+              "courses": [
+                {
+                  "id": "relief",
+                  "honours": [
+                    "union",
+                    "duty"
+                  ],
+                  "opposes": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "resources": [],
+                  "assumesPossible": false
+                },
+                {
+                  "id": "abandonment",
+                  "honours": [
+                    "conciliation",
+                    "caution"
+                  ],
+                  "opposes": [
+                    "union",
+                    "duty"
+                  ],
+                  "resources": [],
+                  "assumesPossible": false
+                }
+              ],
+              "advisers": [
+                {
+                  "person": "seward_william_h",
+                  "post": "us_secretary_state"
+                },
+                {
+                  "person": "cameron_simon",
+                  "post": "us_secretary_war"
+                },
+                {
+                  "person": "welles_gideon",
+                  "post": "us_secretary_navy"
+                },
+                {
+                  "person": "smith_caleb_b",
+                  "post": "us_secretary_interior"
+                },
+                {
+                  "person": "bates_edward",
+                  "post": "us_attorney_general"
+                },
+                {
+                  "person": "chase_salmon_p",
+                  "post": "us_secretary_treasury"
+                },
+                {
+                  "person": "blair_montgomery",
+                  "post": "us_postmaster_general"
+                }
+              ],
+              "source": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter."
+            }
           ]
         },
         {

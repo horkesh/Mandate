@@ -97,6 +97,8 @@ export type VerbKind = (typeof VERB_KINDS)[number];
 export type AudienceCounterPacket = readonly [CounterKind, string | null, number | null, string | null, number | null];
 
 export interface VerbBody {
+  readonly verbConsultation?: readonly [questionLetter: LetterIdentity, questionText: string, questionSubject: string, questionCourses: readonly string[]];
+  readonly verbConsultationPrior?: MessageId;
   /** The expected host at an observer's destination (distinct from the observer receiving the commission). */
   readonly verbHost?: PersonId;
   /** Counters carried by an audience request; absent on other verbs. */

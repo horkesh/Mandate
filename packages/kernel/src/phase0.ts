@@ -8,6 +8,7 @@
  */
 export type { State } from './root-state.ts';
 export * from './knowledge/report.ts';
+export * from './world/consultations.ts';
 export * from './knowledge/confidence.ts';
 export * from './knowledge/templates.ts';
 export * from './knowledge/truth.ts';

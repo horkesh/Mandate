@@ -1,0 +1,23 @@
+{
+  "baseline": "d5fafb12",
+  "rule": "unchanged around(observed); only the breached nonzero band moves",
+  "changes": [
+    {
+      "key": "union-1861, war by decision, 148 days/verbs.consulted",
+      "before": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "after": {
+        "minFires": 8,
+        "maxFires": 32,
+        "why": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted."
+      },
+      "observed": 16,
+      "cause": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted.",
+      "evidence": "docs/audit/s128-evidence/band-review.json#verbs.consulted"
+    }
+  ],
+  "newZeros": [],
+  "historicalCheckpointsUnchanged": true
+}

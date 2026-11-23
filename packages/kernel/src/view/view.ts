@@ -111,6 +111,7 @@ function reportView(r: KnownReport, world: SeatsWorld): ReportView {
       ...(n.accountReservations === undefined ? {} : { accountReservations: freeze(n.accountReservations.map(freezeReservation)) }),
     }))) }),
     type: b.reportType,
+    ...(b.reportCourseEvidence === undefined ? {} : { courseEvidence: freeze(b.reportCourseEvidence.map(e => freeze({ ...e }))) }),
     subtype: b.reportSubtype,
     author: b.reportAuthor,
     authorPost: b.reportAuthorPost,
@@ -125,6 +126,9 @@ function reportView(r: KnownReport, world: SeatsWorld): ReportView {
       b.reportAdvice === null
         ? null
         : freeze({
+            ...(b.reportAdvice.adviceConsultation === undefined ? {} : { consultation: deepFreeze({ ...b.reportAdvice.adviceConsultation,
+              consultationRound: { ...b.reportAdvice.adviceConsultation.consultationRound }, consultationAnswers: b.reportAdvice.adviceConsultation.consultationAnswers.map(a => ({ ...a, answerTerms: a.answerTerms.map(t => [...t] as const),
+                ...(a.answerFeasibility === undefined ? {} : { answerFeasibility: { ...a.answerFeasibility, assessmentRequirements: a.answerFeasibility.assessmentRequirements.map(r => ({ ...r })) } }) })) }) }),
             recommends: b.reportAdvice.adviceRecommends,
             reasons: freeze(b.reportAdvice.adviceReasons.map((s) => freeze({ kind: s.reasonKind, weight: s.reasonWeight }))),
             confidence: b.reportAdvice.adviceConfidence,

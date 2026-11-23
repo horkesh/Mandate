@@ -84,6 +84,8 @@ export function morningLines(request: SeatRequest, sinceDay: number, t: DeskStri
   }
   if (menu.reviews.length > 0) out.push(t('console.morning.plans', { posts: menu.reviews.map(r => r.post).join(', ') }));
   if (menu.awaiting.length > 0) out.push(t('console.morning.awaiting', { posts: menu.awaiting.join(', ') }));
+  for (const q of menu.consultations ?? []) out.push(t('console.consultation', { question: q.question,
+    round: `${q.letter.namespace}.${q.letter.key}.${q.letter.revision}`, subject: q.subject, posts: q.posts.join(' '), courses: q.courses.join(', ') }));
   return out;
 }
 
@@ -169,7 +171,8 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
       return t('console.command.inquire', { post: c.to, subject });
     }
     case 'consult':
-      return t('console.command.consult', { posts: c.posts.join(', '), situation: c.situation });
+      return t(c.round === undefined ? 'console.command.consult' : 'console.command.consult-round', { posts: c.posts.join(', '), situation: c.situation,
+        round: c.round === undefined ? '' : `${c.round.namespace}.${c.round.key}.${c.round.revision}` });
     case 'observer':
       return t('console.command.observer', { person: c.person, post: c.to });
     case 'promise':

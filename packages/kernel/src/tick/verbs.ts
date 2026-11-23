@@ -1,4 +1,7 @@
 import { transferLots } from './lot-transfer.ts';
+import { generateCourseAdvice } from '../people/advice.ts';
+import { canonicalJson } from '../serialize/canonical.ts';
+import { letterKey } from '../world/letters.ts';
 import { formationPost } from '../command/organisation.ts';
 /**
  * The people verbs in the day tick (lane 1.5; FOUNDATION section 5; 0040). Each is an order to a person, answered through
@@ -20,7 +23,7 @@ import { noteLetter, postObserver, recallObserver } from '../command/observers.t
 import type { ComplianceRung, DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { enemyBeliefs } from '../knowledge/beliefs.ts';
-import { knowledgeOf, unansweredAppointments } from '../knowledge/knowledge.ts';
+import { knowledgeOf, rememberLetterReceipt, unansweredAppointments } from '../knowledge/knowledge.ts';
 import { reportQualificationOf, type ReportBody, type ReportClaim, type StatedReason } from '../knowledge/report.ts';
 import { term } from '../knowledge/truth.ts';
 import type { VerbCommand } from '../log/commands.ts';
@@ -57,7 +60,8 @@ const knownPerson = (ctx: TickContext, person: PersonId) => ctx.world.personIds.
 /** Send a verb's letter straight to `to` (no relays: it is a letter to one man). */
 function sendVerb(ctx: TickContext, state: State, issuer: PersonId, to: PersonId, toPost: PostId | null, route: TransitMessage['msgRoute'], body: Omit<VerbBody, 'verbIssuer' | 'verbIssuedDay'>): MessageId {
   const scoped = body.verbKind === 'consult' || (body.verbKind === 'transfer' && body.verbSubject !== null);
-  const subject = scoped ? `${body.verbSubject}.${body.verbPost}` : body.verbPost ?? body.verbSubject ?? to;
+  const subject = body.verbConsultation === undefined ? (scoped ? `${body.verbSubject}.${body.verbPost}` : body.verbPost ?? body.verbSubject ?? to) :
+    `${letterKey(body.verbConsultation[0])}.${body.verbPost}${body.verbConsultationPrior === undefined ? '' : `.retry.${body.verbConsultationPrior}`}`;
   const id = mintMessageId(ctx.mint, ctx.day, issuer, to, `verb.${body.verbKind}.${subject}`);
   const leg = hop(ctx, state, route, issuer, whereIs(ctx, state, issuer), (toPost !== null ? addressRegion(ctx, state, toPost, issuer) : body.verbKind === 'observer' ? addressRegion(ctx, state, body.verbPost!, issuer) : whereIs(ctx, state, to)), id);
   ctx.outbox.push({
@@ -95,6 +99,8 @@ const body = (kind: VerbKind, over: Partial<Omit<VerbBody, 'verbKind' | 'verbIss
   ...(over.verbRegiments === undefined ? {} : { verbRegiments: [...over.verbRegiments] }),
   verbRank: over.verbRank ?? null,
   verbSubject: over.verbSubject ?? null,
+  ...(over.verbConsultation === undefined ? {} : { verbConsultation: over.verbConsultation }),
+  ...(over.verbConsultationPrior === undefined ? {} : { verbConsultationPrior: over.verbConsultationPrior }),
 });
 
 /**
@@ -161,6 +167,21 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       return { state: start, reason: null };
     }
     case 'consult': {
+      if (c.round !== undefined) {
+        const round = world.map.world.rules.ruleSeats.principals.find(p => p.faction === sender.faction)?.consultations?.find(r => letterKey(r.letter) === letterKey(c.round!));
+        if (round === undefined || round.subject !== c.situation) return reject('malformed');
+        const sent = knowledgeOf(start, seat).knownConsultationDispatches ?? [];
+        for (const post of c.posts) {
+          const target = round.advisers.find(a => a.post === post);
+          if (target === undefined || !knownPostOnSide(post) || holderOf(post) !== target.person) return reject('vacant_post');
+          const previous = sent.find(d => d.questionPost === post && letterKey(d.questionLetter) === letterKey(c.round!));
+          if ((c.retryOf === undefined ? previous !== undefined : c.posts.length !== 1 || previous === undefined || c.retryOf !== (previous.questionLatest ?? previous.questionOrigin)) ||
+            ctx.outbox.some(m => m.msgVerb?.verbConsultation !== undefined && m.msgVerb.verbPost === post &&
+              m.msgVerb.verbIssuer === principal && letterKey(m.msgVerb.verbConsultation[0]) === letterKey(c.round!))) return reject('malformed');
+        }
+        for (const post of [...c.posts].sort(strictCompare)) sendVerb(ctx, start, principal, holderOf(post)!, post, 'courier', body('consult', { verbPost: post, verbSubject: c.situation, verbConsultation: [round.letter, round.question, round.subject, [...round.courses, ...(round.alternatives ?? [])].map(c => c.id)], ...(c.retryOf === undefined ? {} : { verbConsultationPrior: c.retryOf }) }));
+        return { state: start, reason: null };
+      }
       const record = start.situationStates[c.situation];
       if (record === undefined || record.sitStatus !== 'open') return reject('situation_not_open');
       for (const post of c.posts) if (!knownPostOnSide(post) || holderOf(post) === null) return reject('vacant_post');
@@ -248,12 +269,17 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   const v = msg.msgVerb!;
   const me = msg.msgTo;
   const target = v.verbPost;
+  const packet = v.verbConsultation;
+  const question = packet === undefined ? undefined : world.map.world.rules.ruleSeats.principals.find(p => world.faction(p.faction).principal === v.verbIssuer)?.consultations?.find(r => letterKey(r.letter) === letterKey(packet[0]));
+  if (packet !== undefined && (question === undefined || canonicalJson([question.letter, question.question, question.subject, [...question.courses, ...(question.alternatives ?? [])].map(c => c.id)]) !== canonicalJson(packet) ||
+    !question.advisers.some(a => a.person === me && a.post === target))) return returnDispatch(ctx, start, msg, 'malformed');
   const expected = v.verbKind === 'observer' ? v.verbHost : msg.msgTo;
   if (target !== null && v.verbKind !== 'appoint' && expected !== undefined) {
     const failure = destinationFailure(ctx,start,target,expected,v.verbIssuer);
     if (failure !== null) return returnDispatch(ctx,start,msg,failure);
   }
   if (v.verbKind === 'audience') return holdAudience(ctx, start, msg);
+  start = rememberLetterReceipt(start, msg, ctx.day);
 
   // Lane 1.4's oversight: a verb is an order to a person, read where he stands; an observer's or pressure's `watched` terms stack on top.
   const answer = answerOrder(world, start, me, v.verbIssuer, verbDirective(rules, v.verbKind), { oversight: oversightOf(ctx, start, me, v.verbIssuer).value });
@@ -267,10 +293,11 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   const myPost = heldPost(state, me);
   const reportTo = (claims: readonly ReportClaim[], advice: Advice = null, type: Kind = 'wire-dispatch', subtype: string | null = null) =>
     sendReport(ctx, state, {
-      body: { ...answerBody(me, myPost, ctx.day, msg.msgOrigin, { kind: v.verbPost === null ? 'person' : 'post', id: v.verbPost ?? me }, claims, advice, type, subtype), ...reportQualificationOf(answer) },
+      body: { ...answerBody(me, myPost, ctx.day, msg.msgOrigin, { kind: v.verbPost === null ? 'person' : 'post', id: v.verbPost ?? me }, claims, advice, type, subtype), ...reportQualificationOf(answer),
+        ...(v.verbConsultation === undefined ? {} : { reportLetter: v.verbConsultation[0] }) },
       truth: { truthTerms: answer.contributions.map((k) => term('relay_term', k.amount, { person: me, rule: k.term })), truthTrimmed: [] },
       to: v.verbIssuer,
-      tag: `answer.${v.verbKind}.${v.verbPost ?? me}`,
+      tag: `answer.${v.verbKind}.${v.verbConsultation === undefined ? '' : `${letterKey(v.verbConsultation[0])}.`}${v.verbPost ?? me}`,
     });
   const answered = (carried: boolean) => ({ claimKind: 'verb-answered' as const, claimRegion: null, claimValue: carried ? 1 : 0, claimToken: `${v.verbKind}:${answer.declared}`, claimConfidence: 1000 });
   const vocab = world.map.world.vocabularies.ranks;
@@ -394,6 +421,21 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
       break;
     }
     case 'consult': {
+      if (v.verbConsultation !== undefined) {
+        if (done) {
+          const scoped = generateCourseAdvice(world, state, me, question!, ctx.day);
+          for (const a of scoped.consultationAnswers) changes.push({ change: 'stance', person: me, subject: `${question!.subject}:${a.answerCourse}`, recommends: a.answerPosition,
+            confidence: Math.max(world.map.world.rules.reportConfidence.consultMinimum, ...a.answerTerms.map(t => Math.abs(t[1]))) });
+          state = applyPeopleChanges(state, changes, ctx.day, rules, vocab);
+          reportTo([answered(true)], { adviceRecommends: scoped.consultationAnswers.map(a => `${a.answerCourse}:${a.answerPosition}`).join('+'),
+            adviceReasons: stated(answer), adviceConfidence: world.map.world.rules.reportConfidence.consultMinimum, adviceConsultation: scoped }, 'advice', 'requested');
+          fire(ctx, 'verbs.consulted');
+          return state;
+        }
+        // Refusing to answer a question is distinct from advice against its proposed course.
+        reportTo([answered(false)]);
+        return state;
+      }
       const sit = v.verbSubject!;
       const record = state.situationStates[sit as never];
       if (done && record !== undefined && record.sitStatus === 'open') {

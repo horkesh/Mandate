@@ -1,0 +1,806 @@
+[
+  {
+    "row": {
+      "id": "U01",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Sumter relief feasibility, March 12 inquiry",
+      "cite": "OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "mismatch",
+      "reason": "The scoped assessment did not establish the required feasibility judgment from received needs, means and readiness; unknown evidence is not an adverse military finding.",
+      "candidates": [
+        "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|comply|7|relief"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|comply|7|relief",
+        "creditKey": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|",
+        "order": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+        "side": "union",
+        "actor": "scott_winfield",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 7,
+        "post": "us_general_in_chief",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0312.1",
+        "subject": "sumter_garrison",
+        "course": "relief",
+        "advice": "against",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            500
+          ],
+          [
+            "opposed_values",
+            -1000
+          ]
+        ],
+        "feasibility": "unknown",
+        "assessment": {
+          "assessmentStatus": "unknown",
+          "assessmentRequirements": [
+            {
+              "evidenceCourse": "relief",
+              "evidenceResource": "regulars",
+              "evidenceNeeded": null,
+              "evidenceAvailable": null,
+              "evidenceReadyBy": null,
+              "evidenceNeededBy": null,
+              "assessmentPaper": null
+            },
+            {
+              "evidenceCourse": "relief",
+              "evidenceResource": "vessels",
+              "evidenceNeeded": null,
+              "evidenceAvailable": null,
+              "evidenceReadyBy": null,
+              "evidenceNeededBy": null,
+              "assessmentPaper": null
+            },
+            {
+              "evidenceCourse": "relief",
+              "evidenceResource": "volunteers",
+              "evidenceNeeded": null,
+              "evidenceAvailable": null,
+              "evidenceReadyBy": null,
+              "evidenceNeededBy": null,
+              "assessmentPaper": null
+            }
+          ]
+        }
+      }
+    ],
+    "cause": "The March 12 relief statement is against (500 honoured, 1000 opposed), but every required resource account is unknown: no received needs/availability/readiness/deadline paper. A cautious policy judgment cannot certify the recorded adverse military feasibility assessment."
+  },
+  {
+    "row": {
+      "id": "U02",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Evacuating both Sumter and Pickens",
+      "cite": "OR-I-I:200 https://archive.org/details/cu31924077725913/page/n219/mode/1up; OR-I-I:201 https://archive.org/details/cu31924077725913/page/n220/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|evacuate_both",
+        "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|comply|7|evacuate_both"
+      ],
+      "matched": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|evacuate_both"
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|evacuate_both",
+        "creditKey": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|",
+        "order": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+        "side": "union",
+        "actor": "scott_winfield",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 1,
+        "post": "us_general_in_chief",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0305.1",
+        "subject": "sumter_garrison",
+        "course": "evacuate_both",
+        "advice": "favour",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            1000
+          ],
+          [
+            "opposed_values",
+            -500
+          ]
+        ],
+        "feasibility": "unknown",
+        "assessment": {
+          "assessmentStatus": "unknown",
+          "assessmentRequirements": []
+        }
+      },
+      {
+        "id": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|comply|7|evacuate_both",
+        "creditKey": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|",
+        "order": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+        "side": "union",
+        "actor": "scott_winfield",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 7,
+        "post": "us_general_in_chief",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0312.1",
+        "subject": "sumter_garrison",
+        "course": "evacuate_both",
+        "advice": "favour",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            1000
+          ],
+          [
+            "opposed_values",
+            -500
+          ]
+        ],
+        "feasibility": "unknown",
+        "assessment": {
+          "assessmentStatus": "unknown",
+          "assessmentRequirements": []
+        }
+      }
+    ],
+    "cause": "The generated two-fort alternative is favourable: 1000 honoured versus 500 opposed. It names both forts as its course and a real consulted round, without assigning an invented exact round/date to the historical memorandum. Only the credited answer is consumed."
+  },
+  {
+    "row": {
+      "id": "U03a",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:11 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:12 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:13 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:14 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state|seward_william_h|addressee|comply|10|provisioning"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state|seward_william_h|addressee|comply|10|provisioning",
+        "creditKey": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state|seward_william_h|addressee|",
+        "order": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state",
+        "side": "union",
+        "actor": "seward_william_h",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 10,
+        "post": "us_secretary_state",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0315.1",
+        "subject": "sumter_garrison",
+        "course": "provisioning",
+        "advice": "undetermined",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            500
+          ],
+          [
+            "opposed_values",
+            -500
+          ]
+        ]
+      }
+    ],
+    "cause": "The provisioning question yields 500 honoured and 500 opposed. There is no settled own provisioning stance to break the tie, so the answer is undetermined rather than against."
+  },
+  {
+    "row": {
+      "id": "U03b",
+      "side": "union",
+      "actor": "cameron_simon",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "OR-I-I:196 https://archive.org/details/cu31924077725913/page/n215/mode/1up; OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war|cameron_simon|addressee|comply|10|provisioning"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war|cameron_simon|addressee|comply|10|provisioning",
+        "creditKey": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war|cameron_simon|addressee|",
+        "order": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war",
+        "side": "union",
+        "actor": "cameron_simon",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 10,
+        "post": "us_secretary_war",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0315.1",
+        "subject": "sumter_garrison",
+        "course": "provisioning",
+        "advice": "undetermined",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            0
+          ],
+          [
+            "opposed_values",
+            0
+          ]
+        ]
+      }
+    ],
+    "cause": "The provisioning course has zero honoured and zero opposed contributions and no settled prior course stance. The generated answer is undetermined rather than against; no historical opinion is supplied as an opening cell."
+  },
+  {
+    "row": {
+      "id": "U03c",
+      "side": "union",
+      "actor": "welles_gideon",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy|welles_gideon|addressee|comply|10|provisioning"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy|welles_gideon|addressee|comply|10|provisioning",
+        "creditKey": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy|welles_gideon|addressee|",
+        "order": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy",
+        "side": "union",
+        "actor": "welles_gideon",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 10,
+        "post": "us_secretary_navy",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0315.1",
+        "subject": "sumter_garrison",
+        "course": "provisioning",
+        "advice": "undetermined",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            0
+          ],
+          [
+            "opposed_values",
+            0
+          ]
+        ]
+      }
+    ],
+    "cause": "The provisioning course has zero honoured and zero opposed contributions and no settled prior course stance. The generated answer is undetermined rather than against; no historical opinion is supplied as an opening cell."
+  },
+  {
+    "row": {
+      "id": "U03d",
+      "side": "union",
+      "actor": "smith_caleb_b",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:19 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:20 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior|smith_caleb_b|addressee|comply|10|provisioning"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior|smith_caleb_b|addressee|comply|10|provisioning",
+        "creditKey": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior|smith_caleb_b|addressee|",
+        "order": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior",
+        "side": "union",
+        "actor": "smith_caleb_b",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 10,
+        "post": "us_secretary_interior",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0315.1",
+        "subject": "sumter_garrison",
+        "course": "provisioning",
+        "advice": "undetermined",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            0
+          ],
+          [
+            "opposed_values",
+            0
+          ]
+        ]
+      }
+    ],
+    "cause": "The provisioning course has zero honoured and zero opposed contributions and no settled prior course stance. The generated answer is undetermined rather than against; no historical opinion is supplied as an opening cell."
+  },
+  {
+    "row": {
+      "id": "U03e",
+      "side": "union",
+      "actor": "bates_edward",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:21 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:22 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general|bates_edward|addressee|comply|10|provisioning"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general|bates_edward|addressee|comply|10|provisioning",
+        "creditKey": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general|bates_edward|addressee|",
+        "order": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general",
+        "side": "union",
+        "actor": "bates_edward",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 10,
+        "post": "us_attorney_general",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0315.1",
+        "subject": "sumter_garrison",
+        "course": "provisioning",
+        "advice": "undetermined",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            0
+          ],
+          [
+            "opposed_values",
+            0
+          ]
+        ]
+      }
+    ],
+    "cause": "The provisioning course has zero honoured and zero opposed contributions and no settled prior course stance. The generated answer is undetermined rather than against; no historical opinion is supplied as an opening cell."
+  },
+  {
+    "row": {
+      "id": "U04",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 29 renewed relief consultation",
+      "cite": "Lincoln-II:26 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state|seward_william_h|addressee|comply|24|relief"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state|seward_william_h|addressee|comply|24|relief",
+        "creditKey": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state|seward_william_h|addressee|",
+        "order": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+        "side": "union",
+        "actor": "seward_william_h",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 24,
+        "post": "us_secretary_state",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0329.1",
+        "subject": "sumter_garrison",
+        "course": "relief",
+        "advice": "undetermined",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            500
+          ],
+          [
+            "opposed_values",
+            -500
+          ]
+        ]
+      }
+    ],
+    "cause": "The renewed relief course yields 500 honoured and 500 opposed, with no settled own stance on that course. Its answer is undetermined; the separate March 15 provisioning answer cannot cover this round."
+  },
+  {
+    "row": {
+      "id": "U05",
+      "side": "union",
+      "actor": "blair_montgomery",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 29 proposed Sumter abandonment",
+      "cite": "Lincoln-II:27 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|comply|24|abandonment"
+      ],
+      "matched": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|comply|24|abandonment"
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|comply|24|abandonment",
+        "creditKey": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|",
+        "order": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+        "side": "union",
+        "actor": "blair_montgomery",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 24,
+        "post": "us_postmaster_general",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0329.1",
+        "subject": "sumter_garrison",
+        "course": "abandonment",
+        "advice": "against",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            0
+          ],
+          [
+            "opposed_values",
+            -500
+          ]
+        ]
+      }
+    ],
+    "cause": "The abandonment course yields zero honoured versus 500 opposed, so the generated answer is against abandonment in the March 29 round. It covers this row once."
+  },
+  {
+    "row": {
+      "id": "U42",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 5 first Sumter relief assessment",
+      "cite": "LOC-0779200:1-6 https://www.loc.gov/resource/mal.0779200/?st=text",
+      "verdict": "mismatch",
+      "reason": "The scoped assessment did not establish the required feasibility judgment from received needs, means and readiness; unknown evidence is not an adverse military finding.",
+      "candidates": [
+        "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|relief"
+      ],
+      "matched": null
+    },
+    "before": "representation_gap",
+    "actual": [
+      {
+        "id": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|relief",
+        "creditKey": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|",
+        "order": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+        "side": "union",
+        "actor": "scott_winfield",
+        "role": "addressee",
+        "kind": "verb:consult",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 1,
+        "post": "us_general_in_chief",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": [],
+        "round": "us_consultations.sumter_0305.1",
+        "subject": "sumter_garrison",
+        "course": "relief",
+        "advice": "against",
+        "adviceTerms": [
+          [
+            "honoured_values",
+            500
+          ],
+          [
+            "opposed_values",
+            -1000
+          ]
+        ],
+        "feasibility": "unknown",
+        "assessment": {
+          "assessmentStatus": "unknown",
+          "assessmentRequirements": [
+            {
+              "evidenceCourse": "relief",
+              "evidenceResource": "regulars",
+              "evidenceNeeded": null,
+              "evidenceAvailable": null,
+              "evidenceReadyBy": null,
+              "evidenceNeededBy": null,
+              "assessmentPaper": null
+            },
+            {
+              "evidenceCourse": "relief",
+              "evidenceResource": "vessels",
+              "evidenceNeeded": null,
+              "evidenceAvailable": null,
+              "evidenceReadyBy": null,
+              "evidenceNeededBy": null,
+              "assessmentPaper": null
+            },
+            {
+              "evidenceCourse": "relief",
+              "evidenceResource": "volunteers",
+              "evidenceNeeded": null,
+              "evidenceAvailable": null,
+              "evidenceReadyBy": null,
+              "evidenceNeededBy": null,
+              "assessmentPaper": null
+            }
+          ]
+        }
+      }
+    ],
+    "cause": "The first relief statement is against on the same 500 versus 1000 terms. Its received resource/preparation accounts are also unknown. The round date supplies no additional knowledge, so the required feasibility finding is not established."
+  }
+]

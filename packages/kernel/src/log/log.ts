@@ -80,6 +80,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
   const fields = [...FIELDS[c.cmd as string]!,
     ...((c.cmd === 'order' || c.cmd === 'answer_proposal') && Object.hasOwn(c, 'doctrine') ? ['doctrine'] : []),
     ...(c.cmd === 'order' ? ['letter', 'retryOf'].filter(k => Object.hasOwn(c, k)) : []),
+    ...(c.cmd === 'consult' ? ['round', 'retryOf'].filter(k => Object.hasOwn(c, k)) : []),
     ...(c.cmd === 'answer_proposal' && c.action === 'discretion' ? ['goal'] : []),
     ...(c.cmd === 'review' && Object.hasOwn(c, 'notes') ? ['notes'] : []),
     ...(c.cmd === 'review' && Object.hasOwn(c, 'paper') ? ['paper'] : []),
@@ -199,6 +200,8 @@ function verbProblems(c: Partial<Record<string, unknown>>): string[] {
       break;
     case 'consult':
       need('situation', 'a situation id');
+      if (c.round !== undefined && !isLetterIdentity(c.round)) problems.push('round must be an authored letter identity');
+      if (c.retryOf !== undefined && (c.round === undefined || !ID(c.retryOf) || !Array.isArray(c.posts) || c.posts.length !== 1)) problems.push('retryOf requires an authored round and one recipient');
       if (!Array.isArray(c.posts) || c.posts.length === 0 || !c.posts.every(ID) || new Set(c.posts).size !== c.posts.length) problems.push('posts must be distinct post ids, at least one');
       break;
     case 'audience':

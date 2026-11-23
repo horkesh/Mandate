@@ -37,6 +37,8 @@ import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
 import type { RegimentRecord } from './regiments.ts';
 import type { LetterIdentity } from './letters.ts';
+import type { ConsultationRound } from './consultations.ts';
+export type { ConsultationRound } from './consultations.ts';
 import type { PaperSelector } from './paper-selectors.ts';
 export type { PaperSelector, PaperClaimSelector, ReportPaperSelector } from './paper-selectors.ts';
 
@@ -148,6 +150,7 @@ export interface DoctrineConcentration {
 }
 
 export interface PrincipalDoctrine {
+  readonly consultations?: readonly ConsultationRound[];
   readonly faction: FactionId;
   readonly letterNamespace?: string;
   /** Pack bound on the number of selectors per action and claim tests per selector. */

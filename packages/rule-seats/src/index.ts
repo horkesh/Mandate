@@ -152,6 +152,9 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     const around = withheld.has(post);
     send({ cmd: 'go', to: post, route: routeTo(post, around), bypass: around });
   }
+  for (const question of menu.consultations ?? []) {
+    if (day >= question.day) send({ cmd: 'consult', situation: question.subject, posts: question.posts, round: question.letter });
+  }
   // A surfaced question may need advice at peace too. The menu offers only proposers' own-side held posts whose
   // consultation has not been sent; the existing verb carries each request and records whatever its holder answers.
   for (const situation of menu.situations) {

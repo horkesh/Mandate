@@ -34,6 +34,8 @@ export interface KnownSentAppointment {
 }
 
 export interface SeatKnowledge {
+  /** One sender copy per declared round and named recipient. Never inferred from private answers. */
+  readonly knownConsultationDispatches?: readonly KnownConsultationDispatch[];
   /** The sender's unanswered appointment copies; never reconstructed from a private response. */
   readonly knownSentAppointments?: readonly KnownSentAppointment[];
   /** At most the last independent goal, goal-proposal answer and plan-review reply per post, and one copy per named concentration. */
@@ -48,6 +50,14 @@ export interface SeatKnowledge {
   readonly knownControlReports?: readonly KnownReport[];
   /** A shared day-zero bulletin. Its body lives in the opening report table. */
   readonly knownOpeningControl?: MessageId;
+}
+
+export interface KnownConsultationDispatch {
+  readonly questionLetter: LetterIdentity;
+  readonly questionPost: PostId;
+  readonly questionOrigin: MessageId;
+  readonly questionDay: number;
+  readonly questionLatest?: MessageId;
 }
 
 export interface KnownDoctrineDispatch {
@@ -70,15 +80,16 @@ export interface KnownPaperReceipt {
 
 /** Record the first actual arrival for a named paper, person, post and role. */
 export function rememberLetterReceipt(state: State, message: TransitMessage, day: number): State {
-  const letter = message.msgOrder?.orderLetter;
+  const letter = message.msgOrder?.orderLetter ?? message.msgVerb?.verbConsultation?.[0];
+  const issuer = message.msgOrder?.orderIssuer ?? message.msgVerb?.verbIssuer;
   if (letter === undefined || message.msgRole === 'filter') return state;
   const seat = seatIdFor(message.msgTo);
   const held = storedKnowledgeOf(state, seat);
   const receipts = held.knownPaperReceipts ?? [];
   if (receipts.some(r => r.receiptLetter !== undefined && r.receiptRole === message.msgRole && r.receiptPost === message.msgToPost &&
-    r.receiptIssuer === message.msgOrder!.orderIssuer && letterKey(r.receiptLetter) === letterKey(letter))) return state;
+    r.receiptIssuer === issuer && letterKey(r.receiptLetter) === letterKey(letter))) return state;
   const receipt: KnownPaperReceipt = { receiptOrigin: message.msgOrigin, receiptPerson: message.msgTo, receiptPost: message.msgToPost,
-    receiptRole: message.msgRole, receiptDay: day, receiptLetter: letter, receiptIssuer: message.msgOrder!.orderIssuer };
+    receiptRole: message.msgRole, receiptDay: day, receiptLetter: letter, receiptIssuer: issuer! };
   return { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownPaperReceipts: [...receipts, receipt] } } };
 }
 
@@ -102,6 +113,18 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
   let state = start;
   for (const message of messages) {
     const verb = message.msgVerb;
+    if (verb?.verbConsultation !== undefined && verb.verbPost !== null && message.msgFrom === verb.verbIssuer && message.msgSentDay === verb.verbIssuedDay) {
+      const seat = seatIdFor(verb.verbIssuer);
+      const held = storedKnowledgeOf(state, seat);
+      const rows = held.knownConsultationDispatches ?? [];
+      const letter = verb.verbConsultation[0];
+      const previous = rows.find(r => letterKey(r.questionLetter) === letterKey(letter) && r.questionPost === verb.verbPost);
+      if (previous === undefined || (verb.verbConsultationPrior === (previous.questionLatest ?? previous.questionOrigin) && message.msgOrigin !== previous.questionOrigin)) {
+        const row: KnownConsultationDispatch = previous === undefined ? { questionLetter: letter, questionPost: verb.verbPost, questionOrigin: message.msgOrigin, questionDay: verb.verbIssuedDay } : { ...previous, questionLatest: message.msgOrigin };
+        state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownConsultationDispatches: [...rows.filter(r => r !== previous), row].sort((a, b) =>
+          strictCompare(letterKey(a.questionLetter), letterKey(b.questionLetter)) || strictCompare(a.questionPost, b.questionPost)) } } };
+      }
+    }
     if (verb?.verbKind === 'transfer' && verb.verbPost !== null && verb.verbRegiments !== undefined && verb.verbSubject !== null &&
       message.msgFrom === verb.verbIssuer && message.msgSentDay === verb.verbIssuedDay) {
       const seat = seatIdFor(verb.verbIssuer);
@@ -379,6 +402,10 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       const b = r.knownBody;
       if (b.reportDay > day || r.knownReceivedDay > day) continue;
       const keys: string[] = [];
+      const consultation = b.reportAdvice?.adviceConsultation;
+      if (consultation !== undefined && held.knownConsultationDispatches?.some(d => (d.questionOrigin === b.reportAnswers || d.questionLatest === b.reportAnswers) && letterKey(d.questionLetter) === letterKey(consultation.consultationRound))) {
+        keys.push(`consultation:${letterKey(consultation.consultationRound)}:${b.reportAuthor}`);
+      }
       if (b.reportSubjectKind === 'situation' && b.reportType === 'wire-dispatch' && b.reportSubtype === null) keys.push(`notice:${b.reportSubjectId}`);
       // Promise terms and settlement are received contract evidence, kept independently of routine dispatch aging.
       for (const c of b.reportClaims) if (c.claimKind === 'promise-made' || c.claimKind === 'promise-kept' || c.claimKind === 'promise-broken') {

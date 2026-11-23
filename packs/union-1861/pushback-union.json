@@ -31,10 +31,13 @@
         "reason": "Contemporary quotation of his response in Cameron answer; original separate letter not claimed read. Different inquiry from March 5.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "a scoped feasibility assessment answering a particular proposed course",
-        "location": "packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
-        "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0312.1",
+        "course": "relief",
+        "advice": "against",
+        "feasibility": "infeasible"
       }
     },
     {
@@ -65,10 +68,11 @@
         "reason": "Distinct expanded two-fort course; not another copy of U01. OR files it among March 15 cabinet attachments; exact composition/receipt day remains uncertain.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "course": "evacuate_both",
+        "advice": "favour"
       }
     },
     {
@@ -99,10 +103,12 @@
         "reason": "One individually signed answer per actor; five primary answers read, not five inferred from a group summary.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0315.1",
+        "course": "provisioning",
+        "advice": "against"
       }
     },
     {
@@ -133,10 +139,12 @@
         "reason": "One individually signed answer per actor; five primary answers read, not five inferred from a group summary.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0315.1",
+        "course": "provisioning",
+        "advice": "against"
       }
     },
     {
@@ -167,10 +175,12 @@
         "reason": "One individually signed answer per actor; five primary answers read, not five inferred from a group summary.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0315.1",
+        "course": "provisioning",
+        "advice": "against"
       }
     },
     {
@@ -201,10 +211,12 @@
         "reason": "One individually signed answer per actor; five primary answers read, not five inferred from a group summary.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0315.1",
+        "course": "provisioning",
+        "advice": "against"
       }
     },
     {
@@ -235,10 +247,12 @@
         "reason": "One individually signed answer per actor; five primary answers read, not five inferred from a group summary.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0315.1",
+        "course": "provisioning",
+        "advice": "against"
       }
     },
     {
@@ -269,10 +283,12 @@
         "reason": "Fresh presidential consultation with revised expedition under consideration; distinct from March 15, not an extra mention of the same letter.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0329.1",
+        "course": "relief",
+        "advice": "against"
       }
     },
     {
@@ -303,10 +319,12 @@
         "reason": "A challenge to evacuation, not opposition to relief. Matching must preserve the direction of the advice.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "consultation rounds and the proposed course each advice act addresses",
-        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
-        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0329.1",
+        "course": "abandonment",
+        "advice": "against"
       }
     },
     {
@@ -1462,10 +1480,13 @@
         "reason": "LoC/Knox full six-image document transcript read, Scott endorsement; no individual scan or printed pagination claimed. First assessment, distinct from March 12 inquiry and expanded two-fort course.",
         "model_matter": "sumter_consult"
       },
-      "gap": {
-        "mechanism": "a scoped feasibility assessment answering a particular proposed course",
-        "location": "packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
-        "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+      "match": {
+        "kind": "verb:consult",
+        "subject": "sumter_garrison",
+        "round": "us_consultations.sumter_0305.1",
+        "course": "relief",
+        "advice": "against",
+        "feasibility": "infeasible"
       }
     }
   ]

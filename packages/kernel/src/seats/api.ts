@@ -192,6 +192,16 @@ export interface SituationChoice {
 
 /** A principal deciding what to order today, and which open situations to decide or hand on. */
 export interface PrincipalMenu {
+  /** Authored questions the principal may ask; dates guide the history rule seat, never send events. */
+  readonly consultations?: readonly {
+    readonly letter: LetterIdentity;
+    readonly subject: SituationId;
+    readonly question: string;
+    readonly kind: 'policy' | 'feasibility';
+    readonly courses: readonly string[];
+    readonly posts: readonly PostId[];
+    readonly day: number;
+  }[];
   readonly menuKind: 'principal';
   readonly faction: FactionId;
   /**

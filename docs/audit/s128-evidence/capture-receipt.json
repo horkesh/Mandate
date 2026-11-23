@@ -1,0 +1,90 @@
+{
+  "files": [
+    {
+      "path": "runs\\s128\\capture\\coverage.json",
+      "bytes": 810637,
+      "sha256": "ac94f754933617c4e26870d719ac16874ce666f67b0a62885921dba154710c71"
+    },
+    {
+      "path": "runs\\s128\\capture\\exposure.json",
+      "bytes": 47514,
+      "sha256": "7d88db5f29a64a642920a78ed78a5ee234be8782d329af13f3a3627223b69425"
+    },
+    {
+      "path": "runs\\s128\\capture\\result.json",
+      "bytes": 726,
+      "sha256": "02f275db016ede31a90a10e0c91efae5f7a1cbddf1324b138ef001a8723fa37a"
+    },
+    {
+      "path": "runs\\s128\\capture\\scores.json",
+      "bytes": 240477,
+      "sha256": "158d7f0b32e2d3e0e2ac89edf4ce2be6ec24a9476851ba511eb89fd19708a6d6"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-calls.json",
+      "bytes": 64653,
+      "sha256": "42d6082e7895a85e1026e3d0e7eab1c5f04e11b946ea45ba85f7103831c1caf3"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-final-state.json",
+      "bytes": 5541675,
+      "sha256": "c7dec2731c5cca38461c981afbacfe46ad7ae3305c3efebda447ff7904a40b50"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-junction.json",
+      "bytes": 401317,
+      "sha256": "8e9dcda9ad9bb60c86581029053a2826383ad90e16ccbb511b6e53f0318cafff"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-lot-transitions.json",
+      "bytes": 1554603,
+      "sha256": "e7b54c36015447a01b089be987021fb3a6be21488933a56638de91809d7f576c"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-messages.json",
+      "bytes": 863655,
+      "sha256": "716b0520b9ca0da047398a5d36c52c4eada41addfb24e5b6915c25cc8f212865"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-observations.json",
+      "bytes": 843328,
+      "sha256": "016de839302b7231c17ef90abc5e77c2cd1caab13ac15cc1bbf5ef42c1a6dcf7"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-offers.json",
+      "bytes": 2496168,
+      "sha256": "154b5c9424f51342559eb2d04e0034dcd4cda037b4300fd580be2ddfccd25127"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-requests.json",
+      "bytes": 80052,
+      "sha256": "c4d7f02276cca6dba65b7c3ba73808735437adf50bff55e8826930020279b861"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-responses.json",
+      "bytes": 1303329,
+      "sha256": "68f53055eaeba50319e52ec0460191409d573bd49b689ab8658fb584b29fcd6b"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-save-60.json",
+      "bytes": 2109579,
+      "sha256": "e14a3f2b486c5d26ee0afa6abff0bca85ae55ff830e7637e7e84ff3d41e7a56b"
+    },
+    {
+      "path": "runs\\s128\\capture\\union-1861-summary.json",
+      "bytes": 162173,
+      "sha256": "fc785932b2c0426f1340d50a95080b3096d4912306c648f02adf388e1491ce78"
+    }
+  ],
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "406749f3a16ab26fe1ba817401d3c3320525be5616963fc015726e428d4b29e7",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "rejections": 0
+}

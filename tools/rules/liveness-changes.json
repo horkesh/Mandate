@@ -2696,5 +2696,20 @@
     "observed": 0,
     "cause": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes.",
     "evidence": "docs/audit/s124-evidence/band-review.json#planner.term.supply"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.consulted",
+    "before": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "after": {
+      "minFires": 8,
+      "maxFires": 32,
+      "why": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted."
+    },
+    "observed": 16,
+    "cause": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted.",
+    "evidence": "docs/audit/s128-evidence/band-review.json#verbs.consulted"
   }
 ]

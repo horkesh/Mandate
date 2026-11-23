@@ -310,6 +310,13 @@ export const RulesSchema = z.strictObject({
           z.strictObject({
             faction: idOf('faction'),
             letterNamespace: letterToken.optional(),
+            consultations: z.array(z.strictObject({
+              letter: letterIdentity, subject: idOf('situation'), fromDate: historicalDate, question: z.string().min(1),
+              kind: z.enum(['policy', 'feasibility']), source: z.string().min(1),
+              advisers: z.array(z.strictObject({ person: idOf('person'), post: idOf('post') })).min(1),
+              courses: z.array(z.strictObject({ id: termId, honours: z.array(termId), opposes: z.array(termId), resources: z.array(termId), assumesPossible: z.boolean() })).min(1),
+              alternatives: z.array(z.strictObject({ id: termId, honours: z.array(termId), opposes: z.array(termId), resources: z.array(termId), assumesPossible: z.boolean() })).optional(),
+            })).optional(),
             maxPaperSelectors: positive.optional().describe('Pack limit for each receipt conjunction and its per-paper claim tests.'),
             crossNeutral: z.boolean().describe('Whether his goals may cross a neutral government’s open ground: a political act (lane 1.12).'),
             concentrateAt: idOf('post').nullable().describe('The post his raised regiments are transferred to; null leaves them with the governors.'),

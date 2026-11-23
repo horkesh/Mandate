@@ -11,6 +11,23 @@ const act = (over: Partial<CoverageAct> = {}): CoverageAct => ({ id: 'answer_one
 const score = (r: PushbackRegister, acts: CoverageAct[], lastDay = 148) => coverageScore([r], acts, '1861-03-05', lastDay);
 
 describe('named pushback coverage (observations, never counts)', () => {
+  it('S128 addresses advice to a course and round and never credits the question or reuses one answer', () => {
+    const m = { kind: 'verb:consult', subject: 'harbour', course: 'provisioning', round: 'north_questions.first.1', advice: 'against' };
+    const adviceRow = row('first', { band: 'plan_objections', match: m });
+    const a = act({ kind: 'verb:consult', subject: 'harbour', round: m.round, course: 'provisioning', advice: 'against', actual: 'comply', declared: 'comply', creditKey: 'one_answer' });
+    expect(score(register(adviceRow), []).rows[0]!.verdict).toBe('not_observed');
+    expect(score(register(adviceRow), [a]).rows[0]!.verdict).toBe('matched');
+    for (const over of [{ round: 'north_questions.second.1' }, { course: 'relief' }, { advice: undefined }, { advice: 'favour' }]) {
+      expect(score(register(adviceRow), [{ ...a, ...over }]).matched).toBe(0);
+    }
+    const other = row('other', { band: 'plan_objections', match: { ...m, course: 'abandonment' } });
+    const projected = score(register(adviceRow, other), [a, { ...a, id: 'another_projection', course: 'abandonment' }]);
+    expect(projected.rows.map(r => r.verdict)).toEqual(['matched', 'unresolved']);
+    expect(projected.counts[0]!.count).toBe(1);
+    const needs = row('assessment', { band: 'plan_objections', match: { ...m, feasibility: 'infeasible' } });
+    expect(score(register(needs), [{ ...a, feasibility: 'unknown' }]).matched).toBe(0);
+    expect(score(register(needs), [{ ...a, feasibility: 'infeasible' }]).matched).toBe(1);
+  });
   it('observes relay and addressee truth without mutation, resolving opaque order IDs by the issuing principal', () => {
     const world = indexedFixture();
     const initial = phase0.createState(world, { seed: 1 });

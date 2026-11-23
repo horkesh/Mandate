@@ -19,6 +19,7 @@ import type { Discretion } from '../plans/goal.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { PlanStatus, Posture } from '../plans/goal.ts';
 import type { CounterTerms } from '../audience/counters.ts';
+import type { ConsultationAdvice, CourseEvidence } from '../world/consultations.ts';
 
 export interface AttentionBudgetView {
  readonly allowance: number; readonly spent: number; readonly left: number;
@@ -65,12 +66,14 @@ export interface ClaimView {
 }
 
 export interface AdviceView {
+  readonly consultation?: ConsultationAdvice;
   readonly recommends: string;
   readonly reasons: readonly { readonly kind: string; readonly weight: number }[];
   readonly confidence: number;
 }
 
 export interface ReportView {
+  readonly courseEvidence?: readonly CourseEvidence[];
   readonly qualification?: ReportQualification;
   readonly proposal?: GoalProposal;
   readonly discretion?: DiscretionReport;

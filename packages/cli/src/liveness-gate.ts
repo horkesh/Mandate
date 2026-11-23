@@ -245,7 +245,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'people.stayed': around(1),
   // The bombardment of Fort the island fort: two days of fire, then Anderson's surrender, evacuated under the record's terms.
   "combat.battle_closed": around(5),
-  'verbs.consulted': around(5),
+  'verbs.consulted': { ...around(16), why: "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted." },
   "combat.battle_day": around(7),
   "combat.battle_opened": around(5),
   "combat.captured": around(5),

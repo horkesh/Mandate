@@ -388,6 +388,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     if (def.faction !== faction || r === undefined || r.sitStatus !== 'open' || r.sitSurfacedDay === null || r.sitDelegate !== null) continue;
     const proposers = new Set(def.options.filter((o) => r.sitOpenOptions.includes(o.id)).flatMap((o) => Array.isArray(o.proposedBy) ? o.proposedBy : []));
     const consultPosts = ownPosts.filter((post) => {
+      if (world.map.world.rules.ruleSeats.principals.find(p => p.faction === faction)?.consultations?.some(q => q.subject === def.id)) return false;
       const holder = knownPosts.get(post)!.holder;
       if (holder === null || holder === f.principal || !proposers.has(holder)) return false;
       // Only the identity of his own sent letter is read, never its actual response or an adviser's private stance.
@@ -445,6 +446,15 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   }));
   return {
     menuKind: 'principal',
+    ...(world.map.world.rules.ruleSeats.principals.find(p => p.faction === faction)?.consultations === undefined ? {} : {
+      consultations: world.map.world.rules.ruleSeats.principals.find(p => p.faction === faction)!.consultations!
+        .map(q => ({ letter: q.letter, subject: q.subject, question: q.question, kind: q.kind, courses: q.courses.map(c => c.id),
+          day: daysFromCivil(parseIsoDate(q.fromDate)) - daysFromCivil(parseIsoDate(world.start.startDate)),
+          posts: q.advisers.filter(a => knownPosts.get(a.post)?.holder === a.person && side(a.post) === faction &&
+            !(knowledge.knownConsultationDispatches ?? []).some(d => d.questionPost === a.post && letterKey(d.questionLetter) === letterKey(q.letter)))
+            .map(a => a.post).sort(strictCompare) }))
+        .filter(q => q.posts.length > 0).sort((a, b) => a.day - b.day || strictCompare(letterKey(a.letter), letterKey(b.letter))),
+    }),
     faction,
     politicalBlocs: receivedView.politics?.blocs ?? [],
     atWarSince: warSince(world, state, faction),

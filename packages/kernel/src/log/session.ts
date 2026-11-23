@@ -112,7 +112,7 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
       case 'inquire':
         return { day, seat, command: { cmd: 'inquire', to: c.to, subject: c.subject, route: c.route } };
       case 'consult':
-        return { day, seat, command: { cmd: 'consult', situation: c.situation, posts: [...c.posts] } };
+        return { day, seat, command: { cmd: 'consult', situation: c.situation, posts: [...c.posts], ...(c.round === undefined ? {} : { round: { ...c.round } }), ...(c.retryOf === undefined ? {} : { retryOf: c.retryOf }) } };
       case 'audience':
         return { day, seat, command: { cmd: 'audience', to: c.to, counters: c.counters.map((k) => ({ kind: k.kind, value: k.value, boldness: k.boldness, from: k.from, men: k.men })) } };
       case 'observer':
