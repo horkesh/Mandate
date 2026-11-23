@@ -1,0 +1,180 @@
+{
+  "analysis_pin": "60323786c16184d638047acc81e4c582356eeccf",
+  "worktree_base": "dadcd5974f412b02762eb42a22e38f4f916e9a94",
+  "inputs": [
+    {
+      "path": "docs/audit/s108-evidence/coverage.json",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "69619ac74802907e4a5e22c9ebce0f4ddaadb8184e63fb10d8f3b43109d56945",
+      "snapshot": "runs\\s109\\inputs\\00-coverage.json"
+    },
+    {
+      "path": "docs/audit/s108-evidence/coverage-residuals.json",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "aedef6bcbf6c6a08b960f0746345ea33fdf1217077e3d40ed7a0f605dbbf99f5",
+      "snapshot": "runs\\s109\\inputs\\01-coverage-residuals.json"
+    },
+    {
+      "path": "docs/audit/s108-evidence/raw-qualifications.json",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "7a22c33a90c2743a9d55ea4f0d4427378d5ea94d2b098135fcad102b290378a4",
+      "snapshot": "runs\\s109\\inputs\\02-raw-qualifications.json"
+    },
+    {
+      "path": "packs/union-1861/pushback-union.json",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "3f5c3835421f76426871af694abe03df80580832f999f675d918724762a0a37c",
+      "snapshot": "runs\\s109\\inputs\\03-pushback-union.json"
+    },
+    {
+      "path": "packs/union-1861/pushback-confederate.json",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "468bfe659538e3def5f0e2588809c9288c8334a99795b55f13558347a939fb34",
+      "snapshot": "runs\\s109\\inputs\\04-pushback-confederate.json"
+    },
+    {
+      "path": "packages/cli/src/pushback-coverage.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "f03fdc02ac5a1bdd9aee2411f2776ef067185e759adfbf0c0a5fd262db85b356",
+      "snapshot": "runs\\s109\\inputs\\05-pushback-coverage.ts"
+    },
+    {
+      "path": "packages/kernel/src/reservations.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "72d05a8b4f066469bb80c171a4dee19ed0492af4f87906a238f16fa5faa9da87",
+      "snapshot": "runs\\s109\\inputs\\06-reservations.ts"
+    },
+    {
+      "path": "packages/kernel/src/directive.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "e6082a3b82e19ba9a2aa9dacfa4e12ac72735668b204d695a98f5f64a8a14e72",
+      "snapshot": "runs\\s109\\inputs\\07-directive.ts"
+    },
+    {
+      "path": "packages/kernel/src/compliance.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "90e091f07a07e481a41331c9e00b1fbfc5d63a89a9918a1f826935f386595123",
+      "snapshot": "runs\\s109\\inputs\\08-compliance.ts"
+    },
+    {
+      "path": "packages/kernel/src/messages/transit.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "f3caaf3280a7cad47b1d07c466b79da9cf09457e6fd61fd4a4944424e871b1b0",
+      "snapshot": "runs\\s109\\inputs\\09-transit.ts"
+    },
+    {
+      "path": "packages/kernel/src/tick/verbs.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "151bcc77f5e1b4c9c3705049e22c657bda575c78cd12e808efb4b816243a7e6d",
+      "snapshot": "runs\\s109\\inputs\\10-verbs.ts"
+    },
+    {
+      "path": "packages/kernel/src/people/people.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9",
+      "snapshot": "runs\\s109\\inputs\\11-people.ts"
+    },
+    {
+      "path": "packages/kernel/src/plans/goal.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "abde14155d440730b8bcd2a82473c3b483bd132d608db2a9b6733430b8b415ee",
+      "snapshot": "runs\\s109\\inputs\\12-goal.ts"
+    },
+    {
+      "path": "packages/kernel/src/tick/recruitment.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "a9974b78e8a8538ccac206fe7d65fc030a2c4798f2e5dc8d3ef3258fb2ad36e1",
+      "snapshot": "runs\\s109\\inputs\\14-recruitment.ts"
+    },
+    {
+      "path": "docs/design/FOUNDATION.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "f314fc40831885b7c95da5cc7a0fc2856057ed25bae3d2ff8be435c1ef01cc5d",
+      "snapshot": "runs\\s109\\inputs\\15-FOUNDATION.md"
+    },
+    {
+      "path": "docs/decisions/0116-a-commander-may-propose-while-he-complies.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "caac1912aaf4cb1939233c99887ac984c7deb3a184df914b3acad358c1c6f857",
+      "snapshot": "runs\\s109\\inputs\\20-0116-a-commander-may-propose-while-he-complies.md"
+    },
+    {
+      "path": "packages/kernel/src/tick/plans.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "4a03e63e52e3442d93882de36516bcc1fe64e4bdaffe9fdbd5348271f1b707e8",
+      "snapshot": "runs\\s109\\inputs\\21-plans.ts"
+    },
+    {
+      "path": "packages/kernel/src/reading/orders.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "05b5cbe9f9b68fe60f434fc396ecc46ad6c6a5a26832b5e4e9764242a3181231",
+      "snapshot": "runs\\s109\\inputs\\22-orders.ts"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/report.ts",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "e4deb657f34c6f2c9065b788847fa6471229ffde6a0a8a212eb5cfa87bd3bdcb",
+      "snapshot": "runs\\s109\\inputs\\23-report.ts"
+    },
+    {
+      "path": "packs/union-1861/source/world/people.csv",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "2061bbb6af53cdd34432b57b796be26c7ff8f7766d7d0167d1e534f9db01d42b",
+      "snapshot": "runs\\s109\\inputs\\24-people.csv"
+    },
+    {
+      "path": "docs/decisions/0085-evidence-rules-and-the-1860-census.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "5ec8ee054e1b9c0c16e29ad9c695fbf17b3718729d227ccb918fd64758d62ca7",
+      "snapshot": "runs\\s109\\inputs\\25-0085-evidence-rules-and-the-1860-census.md"
+    },
+    {
+      "path": "docs/decisions/0087-evidence-rules-as-checks.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "eec24909598aa40e3e17515e48dcb850c875307136dc5a9b075e52fab1cba316",
+      "snapshot": "runs\\s109\\inputs\\26-0087-evidence-rules-as-checks.md"
+    },
+    {
+      "path": "docs/decisions/0111-pushback-is-measured-by-named-acts.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "f8050c00a7e52cd44179b5fa208d3915704cf6ddd9489618f10cc4291989f049",
+      "snapshot": "runs\\s109\\inputs\\27-0111-pushback-is-measured-by-named-acts.md"
+    },
+    {
+      "path": "docs/decisions/0112-the-pushback-registers-and-what-1a-requires.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "36364435f3694386354b80a225341ad182ca16765a72c7848a0a86bca02f69c7",
+      "snapshot": "runs\\s109\\inputs\\28-0112-the-pushback-registers-and-what-1a-requires.md"
+    },
+    {
+      "path": "docs/decisions/0113-a-judgment-without-evidence-adds-no-term.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "4369ee50dc3a3bc34c42a29fabb0b92044d3084d5573bb1d60dc5c8373cbdad3",
+      "snapshot": "runs\\s109\\inputs\\29-0113-a-judgment-without-evidence-adds-no-term.md"
+    },
+    {
+      "path": "docs/decisions/0114-commanders-propose-and-orders-carry-discretion.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "0ff9ac4eb64eca6d945b703378117a5441d000c98cae0eb5062ed77f27dd31ca",
+      "snapshot": "runs\\s109\\inputs\\30-0114-commanders-propose-and-orders-carry-discretion.md"
+    },
+    {
+      "path": "docs/decisions/0118-an-undertaking-carries-typed-reservations.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "576885074209a9fcedb106bbd5547394a391c7424d73e8ccb9aab94b05419779",
+      "snapshot": "runs\\s109\\inputs\\31-0118-an-undertaking-carries-typed-reservations.md"
+    },
+    {
+      "path": "docs/decisions/0119-a-call-for-troops-asks-no-temperament.md",
+      "pin": "60323786c16184d638047acc81e4c582356eeccf",
+      "sha256": "f7f327dd442faf0a23120262d527b828b02ec2a5e14c23be2c180e1662607e26",
+      "snapshot": "runs\\s109\\inputs\\32-0119-a-call-for-troops-asks-no-temperament.md"
+    }
+  ],
+  "limits": [
+    "Read-only git-show snapshots from sprint-july; no merge or implementation in sprint-pushback.",
+    "Historical evidence is retained page text, not fresh page-image inspection, a live identity check or archival-original recovery.",
+    "Coverage and raw responses are reused S108 evidence, not a new run.",
+    "Page receipts retain their original extraction paths under this worktree; upstream source paths are read only."
+  ]
+}
