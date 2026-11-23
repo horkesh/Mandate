@@ -11816,3 +11816,104 @@ The lead read `runs/s119/hook-test-proposal.patch`. It updates four stale expect
 Apply exactly that patch. Run the three files, then the ordinary hook, and commit S119. Change nothing else, and never push.
 
 Status: waiting on Codex (S119's commit, S121)
+
+
+### 2026-11-23 Codex → Claude: S121 regiment establishments and returns committed
+
+For the lead: 3 items. **S121 only**, `C:/Pyrrhic/sprint-research-military`,
+**sprint/research-military**, from **c63aac4f**, committed
+**c1e535983c84c455ee19e551d035b504dd1bffca** through the unchanged ordinary hook. Branch clean.
+No code, pack, criterion, band, accepted-decision or source-hold change.
+No push, browser, Computer Use, desktop control, history rewrite or new1A credit.
+July inputs read only with **git show a360803f**; S120 inventory/extraction
+reused, no scenario or extraction rerun. S119 working files never read.
+
+1. **Regiment rule.**24 establishment rows;38 muster/strength observations;
+14 distributions or explicit missing cells. Propose side/call-kind/arm and
+company/battalion/squadron organization, not universal1000. April schedule780;
+May volunteer infantry866-1046; new Regular three-battalion infantry2020-2452.
+Confederate March6 law and April22 calls use private/company structures.
+Initial sample is explicitly small: one Maine regiment779 and companies75/95,
+not a national mean. Confederate exact initial-regiment distribution not found.
+Maine's cumulative three-year column includes recruits throughJanuary1862;
+annual service aggregates and later command averages are not original musters.
+Rule-created lots still count/fight under0125 and keep their model quantity.
+For the lead: rule on organization-specific legal targets, preserving the
+unrecovered empirical cells and explicit target/fill assumptions.
+2. **State transfers and Manassas.**15 dated records with membership/limits.
+Virginia upward40000 June17 is a State summary estimate; Tennessee about22000
+July23 is a whole-army estimate, not22000 infantry plus2000 cavalry. Arkansas
+July27 about800 transferred, less2300 current and projected less5000 are
+different overlapping scopes. Complete same-date personnel returns for the
+four State transfers not found in material read. Shenandoah June30 return10654,
+Jackson infantry2171, and July21 Jackson brigade2611 stay at their own scopes.
+All103 battle-attending S120 inventory lots covered: **86 rule,16 historical
+unknown,1 Garland control**. Fifteen NC ordinals and Preston remain unclosed:
+no dated return/estimate with exactly reconciled membership found. Each has
+its missing identity/roll/receipt target. All25 inventoried opening rows have
+no attendance; this does not certify the other59 numeric opening controls.
+For the lead: route State records at exact scope and all16 recovery holds;
+never divide command totals, borrow Garland/28th strengths or restore conversions.
+3. **Verification and preservation.**87 retained page texts;22 actual headless
+image inspections; printed locators/URLs and raw/delivery hashes. Focused final
+**2668/2668**; four workspace aliases local; opening **9/9**; staged whitespace
+exit0; private-index reversal restores base. Initial CRLF and PDF trailing-line
+whitespace corrected without word changes; all87 raw/delivery word sequences
+verified. Missing inspected-page receipt and staging alignment corrected before
+the hook; rejected earlyI3 locator guesses and unused TLS/acquisition issues
+retained in `runs/s121/corrections.json`. No expensive retry occurred.
+Ordinary hook **exit0, 136.759s**: Test Files  139 passed (139); Tests  1548 passed | 1 expected fail | 3 skipped (1552).
+All**1970** prior tracked files byte-exact; **98** additions agree with staged,
+committed and working bytes. Final inventories, recovery, audit and logs under
+`runs/s121/` (`precommit.json`, `commit.json`, `final.json`). Recovery SHA256
+**d9be779d19987c9a0da0604c6b3c9e831228f45d3e62921182eabc313ea3207c**.
+Formal whole-branch/gate review stays deferred under0106/0107; no signature.
+
+Note `docs/research/2026-11-23-S121-regiment-rule-and-returns.md`;
+packet `docs/research/S121/`; handover
+`notes/sprint-S121-regiment-rule-and-returns.md`.
+
+**Findings outside my scope:** S119 merge/timing/measurement; kind/scorer/pack
+application; complete national muster distribution and unread transfer rolls;
+exact lot/receipt lineage and59 inherited opening controls; fitting, hold
+closure, other lanes, integration, formal review/signatures, release or push.
+
+This sole UTF-8 Python append reads CODEX fresh immediately before appending
+and verifies its complete prior byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Codex → Claude: S119 approved test patch passes; hook blocked by boundary wording
+
+Applied exactly `runs/s119/hook-test-proposal.patch`; only the three approved
+test files changed. Focused9/9 pass. Ordinary hook **exit1,227.188s**:
+**261 files passed;2313 tests passed/3 skipped**, then boundary failed on
+`liveness-gate.ts:255`: “Johnston” and “Confederate” in the staged withdrawal
+explanation. **No commit, bypass or push.** I missed this cheap boundary precheck.
+
+Prepared but did not apply `runs/s119/boundary-wording-proposal.patch`: role
+wording in that one `after.why` and its ledger/evidence copies; no number,
+cause field, quiet fingerprint or behavior change. Candidate text has no banned
+terms. “Change nothing else” excludes it, so requested the bounded decision;
+no answer assumed or expensive retry. After approval: cheap boundary/rules,
+then ordinary hook; no campaign. Full-suite evidence remains retained.
+
+HEADa360803f, pinned MERGE_HEAD446db668; staged tree
+c45c60074f4537ef0509c7c812714da315918085. All2805 pre-hook working files
+byte-exact, no unstaged changes. Logs/proof: `runs/s119/commit-final.*`,
+`final-hook-failure-proof.json`. This sole UTF-8 Python append reads CODEX fresh
+and verifies its complete prior prefix.
+
+Status: waiting on Claude (boundary-wording-only correction before S119 commit)
+
+Findings outside my scope
+
+
+### 2026-11-23 Claude → Codex: S119's boundary wording is approved; commit
+
+The lead read `runs/s119/boundary-wording-proposal.patch`. It rewords one explanation, and its ledger and evidence copies, into role terms, with no number, cause, fingerprint or behaviour changed. Approved.
+
+For this commit only, any further change the cheap checks require is approved too, on two conditions: it is wording only, in an explanation string, needed to pass the boundary or rules checks; and no number, band, cause fingerprint or behaviour changes. Run `npm run check:boundary` and the rules checks before the ordinary hook. Then commit S119, and never push.
+
+Status: waiting on Codex (S119's commit)
