@@ -210,6 +210,11 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'ForceJoin',
   'Levy',
   'CallSpec',
+  // The call's sourced paper is an immutable value, carried unchanged by messages.
+  'CallProfile',
+  'CallProfile.callProvenance',
+  'CallProfile.conditions',
+  'CallProfile.materialDemand',
   'PlanCounter',
   'CounterDrop',
   'PendingCounter',

@@ -157,7 +157,7 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId, recei
       concentrateLevies: concentration.receiveLevies ?? true,
       concentrationTransfers: [...transfers].sort(([a], [b]) => strictCompare(a, b)).map(([from, to]) => ({ from, to })),
     }),
-    calls: row.calls.map((c) => ({ post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start,
+    calls: row.calls.map((c) => ({ ...(c.termsId === undefined ? {} : { termsId: c.termsId }), post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start,
       ...(c.men === undefined ? {} : { men: c.men }), ...(c.atPeace === undefined ? {} : { atPeace: c.atPeace }),
       ...(c.arm === undefined ? {} : { arm: c.arm }),
       ...(c.readiness === undefined ? {} : { readiness: c.readiness }),

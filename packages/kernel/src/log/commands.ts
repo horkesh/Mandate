@@ -81,6 +81,8 @@ export interface GoCommand {
  * the pack's call terms; his answer sets how many regiments he raises and when they muster (`tick/recruitment.ts`).
  */
 export interface CallCommand {
+  /** Select a sourced pack profile; a dated call retains its registered profile, otherwise omission uses the fallback. */
+  readonly termsId?: string;
   readonly cmd: 'call';
   /** The governor's post. */
   readonly to: PostId;

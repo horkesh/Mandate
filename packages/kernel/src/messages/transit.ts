@@ -22,6 +22,7 @@ import type { State } from '../root-state.ts';
 import { rememberSentOrders } from '../knowledge/knowledge.ts';
 import { sha256OfText } from '../serialize/sha256.ts';
 import type { RouteKind } from './latency.ts';
+import type { CallProfile } from '../recruitment/rules.ts';
 
 /** One more person a message must pass after its current recipient. */
 export interface Hop {
@@ -44,6 +45,8 @@ export type OrderKind = (typeof ORDER_KINDS)[number];
 
 /** A call for regiments, as an order carries it (lane 1.7). */
 export interface CallSpec {
+  /** Snapshot of the issuer's terms, preserved through every relay. Absent: explicit pack fallback. */
+  readonly callProfile?: CallProfile;
   readonly callRegiments: number | null;
   readonly callTermDays: number | null;
   readonly callMen?: number | null;

@@ -72,7 +72,13 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
   if (cmd.termDays !== null && cmd.termDays > world.map.world.rules.recruitment.maxTermDays) return 'bad_call';
   if (cmd.arm !== undefined && !world.map.world.vocabularies.arms.some(a => a.id === cmd.arm && !a.naval)) return 'bad_call';
-  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { callRegiments: cmd.regiments, callTermDays: cmd.termDays, ...(cmd.men === undefined ? {} : { callMen: cmd.men }), ...(cmd.callId === undefined ? {} : { callId: cmd.callId }), ...(cmd.arm === undefined ? {} : { callArm: cmd.arm }), ...(cmd.readiness === undefined ? {} : { callReadiness: cmd.readiness }) } }, requisition ? cmd.to : undefined);
+  const rules = world.map.world.rules.recruitment;
+  const registered = cmd.callId === undefined ? undefined : world.map.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === cmd.callId)?.termsId;
+  if (registered !== undefined && cmd.termsId !== undefined && registered !== cmd.termsId) return 'bad_call';
+  const termsId = cmd.termsId ?? registered;
+  const profile = termsId === undefined ? undefined : rules.callProfiles?.find(p => p.id === termsId);
+  if (termsId !== undefined && profile === undefined) return 'bad_call';
+  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { ...(profile === undefined ? {} : { callProfile: profile }), callRegiments: cmd.regiments, callTermDays: cmd.termDays, ...(cmd.men === undefined ? {} : { callMen: cmd.men }), ...(cmd.callId === undefined ? {} : { callId: cmd.callId }), ...(cmd.arm === undefined ? {} : { callArm: cmd.arm }), ...(cmd.readiness === undefined ? {} : { callReadiness: cmd.readiness }) } }, requisition ? cmd.to : undefined);
   fire(ctx, 'recruitment.called');
   return null;
 }
@@ -108,7 +114,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   if (!raisingPost(ctx,start,post)) return returnDispatch(ctx,start,msg,'not_raising_post');
   const rules = world.map.world.rules.recruitment;
   // He answers watched from where he stands (lane 1.4's oversight: his courier days from the caller, and the wire).
-  const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
+  const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules, call.callProfile), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call', ...(call.callId === undefined ? {} : { callId: call.callId }) }));
   const side = postFaction(world, state, post);
   const region = state.postStates[post]!.postSeat;

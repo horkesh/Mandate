@@ -130,7 +130,7 @@ export interface PrincipalDoctrine {
    * Exact men override conversion by regiment; null men/regiments preserve an unquantified unit. Readiness alone
    * records an answer without mustering. Null termDays means war service, with no invented fixed expiry.
    */
-  readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string }[];
+  readonly calls: readonly { readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
   readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly posture?: 'hold' | 'relieve' | 'take'; readonly requiresNotice?: SituationId; readonly source: string }[];
   /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */

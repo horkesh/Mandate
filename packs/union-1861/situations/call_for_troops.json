@@ -107,145 +107,169 @@
           "to": "st_gov_maine",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_maine"
         },
         {
           "to": "st_gov_new_hampshire",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_new_hampshire"
         },
         {
           "to": "st_gov_vermont",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_vermont"
         },
         {
           "to": "st_gov_massachusetts",
           "regiments": 2,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_massachusetts"
         },
         {
           "to": "st_gov_rhode_island",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_rhode_island"
         },
         {
           "to": "st_gov_connecticut",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_connecticut"
         },
         {
           "to": "st_gov_new_york",
           "regiments": 17,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_new_york"
         },
         {
           "to": "st_gov_pennsylvania",
           "regiments": 14,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_pennsylvania"
         },
         {
           "to": "st_gov_new_jersey",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_new_jersey"
         },
         {
           "to": "st_gov_delaware",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_delaware"
         },
         {
           "to": "st_gov_maryland",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_maryland"
         },
         {
           "to": "st_gov_virginia",
           "regiments": 3,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_virginia"
         },
         {
           "to": "st_gov_north_carolina",
           "regiments": 2,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_north_carolina"
         },
         {
           "to": "st_gov_tennessee",
           "regiments": 2,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_tennessee"
         },
         {
           "to": "st_gov_arkansas",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_arkansas"
         },
         {
           "to": "st_gov_kentucky",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_kentucky"
         },
         {
           "to": "st_gov_missouri",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_missouri"
         },
         {
           "to": "st_gov_illinois",
           "regiments": 6,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_illinois"
         },
         {
           "to": "st_gov_indiana",
           "regiments": 6,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_indiana"
         },
         {
           "to": "st_gov_ohio",
           "regiments": 13,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_ohio"
         },
         {
           "to": "st_gov_michigan",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_michigan"
         },
         {
           "to": "st_gov_wisconsin",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_wisconsin"
         },
         {
           "to": "st_gov_iowa",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_iowa"
         },
         {
           "to": "st_gov_minnesota",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_minnesota"
         }
       ],
       "appearsWhen": {
@@ -296,145 +320,169 @@
           "to": "st_gov_maine",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_maine"
         },
         {
           "to": "st_gov_new_hampshire",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_new_hampshire"
         },
         {
           "to": "st_gov_vermont",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_vermont"
         },
         {
           "to": "st_gov_massachusetts",
           "regiments": 2,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_massachusetts"
         },
         {
           "to": "st_gov_rhode_island",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_rhode_island"
         },
         {
           "to": "st_gov_connecticut",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_connecticut"
         },
         {
           "to": "st_gov_new_york",
           "regiments": 17,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_new_york"
         },
         {
           "to": "st_gov_pennsylvania",
           "regiments": 14,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_pennsylvania"
         },
         {
           "to": "st_gov_new_jersey",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_new_jersey"
         },
         {
           "to": "st_gov_delaware",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_delaware"
         },
         {
           "to": "st_gov_maryland",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_maryland"
         },
         {
           "to": "st_gov_virginia",
           "regiments": 3,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_virginia"
         },
         {
           "to": "st_gov_north_carolina",
           "regiments": 2,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_north_carolina"
         },
         {
           "to": "st_gov_tennessee",
           "regiments": 2,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_tennessee"
         },
         {
           "to": "st_gov_arkansas",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_arkansas"
         },
         {
           "to": "st_gov_kentucky",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_kentucky"
         },
         {
           "to": "st_gov_missouri",
           "regiments": 4,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_missouri"
         },
         {
           "to": "st_gov_illinois",
           "regiments": 6,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_illinois"
         },
         {
           "to": "st_gov_indiana",
           "regiments": 6,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_indiana"
         },
         {
           "to": "st_gov_ohio",
           "regiments": 13,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_ohio"
         },
         {
           "to": "st_gov_michigan",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_michigan"
         },
         {
           "to": "st_gov_wisconsin",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_wisconsin"
         },
         {
           "to": "st_gov_iowa",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_iowa"
         },
         {
           "to": "st_gov_minnesota",
           "regiments": 1,
           "termDays": 90,
-          "route": "wire"
+          "route": "wire",
+          "termsId": "us_apr15_minnesota"
         }
       ],
       "appearsWhen": {
