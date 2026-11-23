@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "tools/test/staged-check.test.ts",
+    "tools/test/lfs-git.test.ts"
+  ],
+  "exit": 0,
+  "seconds": 8.308,
+  "log": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\fixture-preflight.log"
+}

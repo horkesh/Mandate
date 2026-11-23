@@ -1,154 +1,169 @@
 # S96: proposals and received conditional discretion
 
-Scope: `sprint/discretion`, based on `0e7078cb4baf7cd8d47621f3908f07f64232108e`.
-Only S96 is authorized; S95 and its worktree are untouched. Root `npm ci` passed first.
-Headless only. No signatures, history rewriting, hook bypass or push.
+S96 only, `C:/Pyrrhic/sprint-discretion`, branch `sprint/discretion`, based on
+`0e7078cb4baf7cd8d47621f3908f07f64232108e`. Implementation committed through the
+ordinary hook as **d9e43b9e55a99f58f41147981a7225b1c23abd69**. Root `npm ci` ran
+first: 51 packages, no vulnerabilities. No push, history rewrite, signature,
+hook bypass, browser or desktop control. S94 was read only; S95 and its worktree
+were not accessed. Only the authorized final coordination append touches main.
 
-Accepted design: decision 0114, copied byte-for-byte from the lead's checkout.
-Historical inputs: S94's read-only register and locally read OR I-II page extracts;
-the read-page/hash receipts are in `docs/audit/s96-evidence/source-reading.json`.
+## Outcome and limit
 
-## Bounded implementation and evidence plan
+0114's grammar is built. A commander who objects or reserves can send a complete
+planner-drafted alternative, with typed reasons and its challenged order.
+Reaffirmations and conflict-kept incoming goals use a bounded separate challenge,
+preserving active plan identity and clocks. The principal can accept, decline or
+answer with discretion, as player verbs and sourced rule-seat rows. Answers are
+ordinary papers; authority changes only on receipt. `turned` and `outmatched`
+read the commander's own enemy beliefs, canonical joined headquarters and joined
+local force. Switching creates a fresh local plan under the received authority
+and a correlated report. The principal's fallback terms and readiness come from
+received papers. Every new State record is classified and documented in
+FOUNDATION; paired-State, unjoined-reinforcement, lifecycle, stale-reply,
+malformed-input, save and replay controls pass. Headless console syntax is
+`proposal <post> <paper> accept|decline|discretion`, with
+`fallback=<condition>,<posture>,<region-or->[/...]` for conditional goals.
 
-Build the generic proposal/answer/discretion grammar and knowledge-bound tests;
-then connect Johnston's hold, planner-generated proposal, Cooper's receipt-gated
-authority and his own withdrawal. Use no fitted dates, routes or traits.
+**Johnston's historical withdrawal remains unmet.** The sourced hold is sent
+3 June/day 90 and reaches him 9 June/day 96. He fully complies: willingness 187 from
+values +200, temperament -28 and deterrence +15. His only local block then has unknown
+strength. The received estimate at 112 (stamp 111) says zero enemy in all five
+watched regions. There is no qualifying proposal or supported safer alternative,
+so no proposal reaches government and no June grant is issued. Generic goal
+reading uses hold/advance terms, rather than the commander's military judgment.
+OR I-II pp. 895-896 contain historical intelligence and concern absent from this
+modeled June picture. No date, trait, route, strength or knowledge is fitted to
+force the scene. The government doctrine row is available under the required
+paper gate, not silently credited as exercised.
 
-Validation questions, commands and stopping rules:
+## Johnston's junction
 
-- Cheap prerequisites: local workspace import resolution, both packs load,
-  focused Vitest grammar/schema/receipt/paired-State tests, `npm run typecheck`,
-  rules, boundary, licences, decisions and staged whitespace. Pass means the
-  feature works, truth-only changes do not alter judgment, and the runtime opens.
-- Baseline: one isolated forward observation of testbed/120 and Union/148 at
-  `0e7078cb`, no replay or resume repeated. Both final hashes match S93's retained
-  receipts and all 268 daily hashes/counters are retained in `runs/s96/baseline/`.
-- References: once after focused checks; both full references, daily hashes,
-  replay, saved-log replay and resume. Expected minutes, not an added campaign.
-  Pass means deterministic replay/resume and no command rejections. Enumerate
-  every changed daily hash/counter against the baseline with its cause. Review
-  every liveness band before changing one; quiet requires a passing live driver.
-- Required full checks: `MANDATE_NO_GIT=1 npm run check` from the standing sprint
-  rules, then the actual commit's unchanged ordinary full-suite hook, which
-  retains Git-fixture coverage. No extra standalone full suite repeats the hook.
-  Expected minutes per check.
-  Stop on failure, inspect all categories, verify the correction cheaply before
-  repeating an affected expensive run; reuse unaffected evidence.
-- Post-commit: exactly one `npm run run:done-check -- --label s96-done --milestone
-  1a`, eight seeds and drafting retained. Expected roughly 25 minutes from S93.
-  Report all twelve criteria and unmet gates; passing another check waives none.
-- Requested delivery measurement: from the retained day148 State, continue only
-  three days to the pending junction order's scheduled day151 arrival. Expected
-  seconds; stop on that day. This observes receipt beyond the July scoring
-  horizon and supplies no additional historical/junction coverage credit.
+He remains at **Harpers Ferry throughout July**. Received advance news enables
+the July order only on **25 July/day 142** (its sourced earliest date remains
+17 July/day 134). Cooper forwards it from Richmond that day; the route is courier
+to Harpers Ferry, arriving **3 August/day 151**, observed in a three-day continuation
+of the retained day 148 State. He objects on receipt. This suffix supplies no July
+coverage credit. No July junction operation opens and he does not join Beauregard
+by 31 July. His new operation at 10 June/day 97 is the Harpers Ferry hold, which builds
+six nights of works; it is not the junction. [Junction evidence](../docs/audit/s96-evidence/junction.json)
+retains the exact messages, active plan, operations and suffix observations.
 
-The implementation commit runs through the ordinary hook, followed by the one
-binding done check. A final evidence/handover commit also runs through the hook;
-its required gate is not an extra standalone suite for reassurance.
+C15 is **not observed**. C16 remains a gap for responsibility to prevent an enemy
+landing (OR I-II pp. 959,975-976). U33 and U34 still need an executable demonstration
+to detain another army (pp. 166-169); replacing it with a hold would erase the duty.
+The register's74 original source rows, eligibility and acts are exact. Overall:
+1 match,8 mismatches,1 exposure mismatch,3 not observed,20 gaps. All 12 represented
+unmatched obligations remain unmet; no fraction or count ceiling replaces them.
 
-Before final-result documentation: settle runtime diagnostics, path inventories,
-protected/signed-file preservation and a reversible recovery patch. Batch the
-final handover and evidence after these checks. Append one status to the main
-`CODEX.md` through Python after reading it fresh and verifying its prior prefix.
+## Evidence and checks
 
-## Proposed rulings
+The dedicated references ran once, exit 0,60.548 s. Testbed retains all 120 hashes,
+counters and scores. Union changes 112/148 hashes and 29 daily counter entries;
+every checkpoint score is exact. The first hash change at 37 is a sender-owned
+reaffirmation alias for the existing Charleston letter; no counter changes until
+the new hold at 90. The comparison lists every hash and counter change with its
+cause. Replay, mid-run resume and saved-log replay are exact, zero rejections.
+All 324 existing reference bands stay in range. Four new exact quiet diagnostic
+rows retain independent passing live drivers and whole-record fingerprints.
+No existing threshold, liveness origin, historical band or obligation moves.
 
-[I] Represent Cooper's June13 permission as `turned` to the existing coarse
-Winchester region, with `outmatched` permission further towards the existing
-Strasburg/Front Royal rail approach. The map does not separately represent the
-Charlestown bivouac or Bunker Hill headquarters; no new route or map fit is made.
-Reject an unconditional Winchester order, an authored commander proposal,
-date-driven relocation, and reconciliation of the conflicting receipt clocks.
+One independent author-QA review found lifecycle, receipt, main-body and search
+accounting defects. Corrections include the final fresh reaffirmation/conflict
+trigger, verified with 47 targeted tests and then 107 focused checks. This is not
+the lead's deferred whole-branch or gate review. The binding check independently
+proves every one of 268 reference hashes, every daily/liveness counter and all
+comparable non-clock fields exact after that final correction. Shared checkpoint
+scores are exact; the harness's 15-day cadence versus the dedicated 30-day cadence
+is explicitly retained as metadata. No dedicated reference repeat occurred.
 
-[I] The July `relieve` goal carries `outmatched` discretion to remain, under 0114.
-Its actual issue, route and completion still depend on papers and judgment.
+The first standing check exited 1: 238 files passed, 2 failed; 2,151 tests passed,
+2 failed,3 existing timing skips. Its failures were two stale fixture assumptions
+about the first goal at a post and about every doctrine row being an offensive.
+Eight targeted fixture tests passed after correction. The cheap remaining gates
+also caught a setting name in the new band explanation; historical detail stays
+in the cause evidence and package text is generic. Nineteen guard tests and all
+remaining gates passed before the corrected standing check: **exit 0,240 files,
+2,153 passed/3 skipped,189.012 s**. The actual ordinary implementation hook includes
+Git fixtures: **exit 0,242 files,2,174 passed/3 skipped,225.086 s**. No exclusions or worker
+overrides were added. All three skips are existing wall-clock tests; the binding
+check measures the unchanged budget.
 
-[I] C15 now asks for the typed `goal-proposal` act answering the Harpers Ferry
-hold, rather than treating the earlier generic `object` rung as the proposal.
-Its original source columns, actor, role, matter and eligibility are unchanged.
-The observer correlates the paper to the original order, retains the original
-objective/posture as the challenged matter, and shares the response's credit
-identity, so it cannot pay for two obligations. This interpretation was fixed
-before measuring the new run. Reject inferring a proposal from destination,
-date, success, free text, or the principal's private plan.
+One binding `--milestone 1a` done check, normal eight seeds and drafting retained:
+**exit 1,1466.604 s; Phase 0 6/6;1A 2/6**.
 
-## Current evidence
+| Milestone | Criterion | Result |
+|---|---|---|
+| Phase 0 | behaviour | PASS |
+| Phase 0 | hash | PASS |
+| Phase 0 | resume | PASS |
+| Phase 0 | liveness | PASS |
+| Phase 0 | section-ten | PASS |
+| Phase 0 | budget | PASS |
+| 1A | checkpoints | FAIL |
+| 1A | operation | PASS |
+| 1A | pushback | FAIL |
+| 1A | unknown-strength | FAIL |
+| 1A | stand-ins | PASS |
+| 1A | lever-sweep | FAIL |
 
-Pack declarations: two tests failed for absent declarations, then passed after
-the authored order/authority rows were added (`runs/s96/pack-red.log`,
-`pack-green.log`). An initial test selector typo was corrected before that red.
-The junction fixture selects the July objective explicitly now that the same
-command has a separate earlier hold.
+Failures remain explicit: Confederate known strength 86,894 below 100,000;
+12 represented unmatched acts; Preston's unknown-strength Manassas contact in
+the reference and history observations; and the two D6 holds (incomplete grievance
+measurement and an unexercised border chain). Every problem string, coverage row,
+diagnostic and drafting result is retained. Local war median/p95 **26.81/50.10 ms**,
+history **27.16/58.71 ms**, within unchanged 40/160 ms. This is local Windows evidence,
+not hosted Linux certification.
 
-The decision-index gate requires contiguous records: accepted 0113 is copied
-byte-for-byte as documentary context alongside 0114, and status cross-references
-are synchronized. S96 implements no 0113 behavior and imports no S95 changes.
+## Proposed rulings and rejected alternatives
 
-Read OR I-II pp.166-169 and 959,975-976 for the requested gap reassessment.
-C16 still needs the enemy-landing responsibility condition; U33/U34 still need
-an executable demonstrate mission. Neither is replaced by a weaker hold goal.
-Their gap reasons now explain what 0114 does and what remains absent. Three
-focused pack assertions pass; source identities and all eligible obligations
-are retained.
+- [I] Cooper's June 13 terms use `turned` towards the existing coarse Winchester
+  region, then `outmatched` further towards the Strasburg/Front Royal rail
+  approach. The graph does not separately represent Charlestown or Bunker Hill.
+  No prescribed route, exact historical arrival, demolition or baggage action is
+  invented (OR I-II pp. 472,923-925). Preserve the receipt-clock dispute on 472 and
+  929-930. Reject an unconditional Winchester order and a scripted relocation.
+- [I] The July `relieve` goal carries `outmatched` permission to remain under 0114,
+  using the existing caution/shortfall tolerance. The typed grammar permits at
+  most three nested fallbacks as an input traversal bound, not a simulation knob.
+  Reject new conditions or thresholds fitted to this outcome.
+- [I] C15 requires an actual typed goal proposal answering the original hold,
+  rather than inferring a proposal from a generic objection. The observer shares
+  the original response's credit identity so one act cannot cover two rows. This
+  mapping was fixed before measurement; dates and outcomes buy no credit.
+- [I] Keep the historical chain unmet and route the missing June intelligence
+  and goal-judgment seam to the lead. Reject trait fitting, injected unsupported
+  knowledge, date-driven papers, invented exposure and a success claim based on
+  the unrelated hold operation. No acceptance criterion is retired.
 
-The cheap generated-pack probe through day112 exposes an unmet historical
-chain. Hold dispatch day90, Cooper forwards that day, Johnston receives day96.
-He complies: willingness187 (values+200, temperament-28, deterrence+15). His
-only block then has unknown strength; the received scout paper at112 (stamp111)
-reports zero enemy in all five watched regions. Neither a qualifying response
-nor a threat-backed planner alternative exists, so no proposal or grant is
-manufactured. Generic goal reading uses hold/advance terms, not the planner's
-judgment. OR I-II pp.895-896 supply historical intelligence and concern absent
-from this modeled June picture; no inferred numerical report is injected to
-force the scene. `runs/s96/chain-diagnosis.json` retains the response and papers.
-An initial probe used stale generated doctrine; `pack:generate` corrected that
-observable fixture prerequisite before this diagnosis. No expensive campaign
-was repeated.
+## Preservation and handover
 
-## Reference and review evidence before the binding check
+Before final-result documentation, all 2,325 original paths survive:2,268 byte-exact,
+57 reviewed existing changes; all 29 signed files and 19 explicitly protected
+inputs exact. The generated World differs only in `rules.ruleSeats`. All four
+workspace aliases resolve here. The entire 2,347-file implementation tree stays
+byte-for-byte exact through the binding check. A binary recovery patch reverses
+in a scratch index to the exact0e7078cb tree; the real index's hash is unchanged.
+The final documentation preflight caught a CRCRLF encoding issue in the local
+workspace receipt. My shell continued despite that whitespace failure; I stopped
+only the owned unfinished check at 47.108 s, preserved its receipt, normalized the
+text and verified whitespace before the required hook retry. HEAD was unchanged;
+no runtime or acceptance result was affected.
 
-The dedicated references ran once (`runs/s96/references.log`, exit0,60.548s):
-all120 testbed hashes exact;112/148 Union hashes changed, first at37 from the
-sender reaffirmation alias;29 daily counter entries and18 existing liveness
-rows changed, plus two new zero diagnostics. Every checkpoint score is exact.
-All replay/resume/saved-log checks pass, no rejection. The portable comparison
-lists every daily hash and counter with its cause. All324 inherited reference
-bands remain in range; four exact quiet additions have independently passing
-live controls and fully fingerprinted cause records. No old band moved.
+Final recovery digest and final documentation hook exit belong to the sole main
+CODEX status and `runs/s96/recovery.json` / `commit-closeout.*` after that commit.
 
-One independent author-QA review identified reply retention, fallback release,
-unjoined-body judgment and missing search telemetry. These were corrected and
-verified by focused tests. Its final remaining trigger finding was also fixed:
-a fresh objection/reservation to a reaffirmation or a conflict-kept letter
-receives a bounded separate challenge, preserving active plan identity and
-clocks. The subsequent107 focused tests and rule check pass. Dedicated reference
-evidence predates this last exceptional-path correction; reuse is conditional
-on the required done check proving all268 hashes and all counters exact to it.
-No repeated dedicated reference is planned.
-
-The requested three-day saved-State suffix observes actual junction receipt on
-151/August3, courier from Cooper at Richmond to Harpers Ferry, following dispatch
-142/July25 when the advance notice reached government. Johnston objects. The
-new operation at97/June10 is his Harpers Ferry hold; no July junction operation
-or joining Beauregard is claimed. C15 not observed; C16/U33/U34 remain gaps.
-
-The standing full check exposed two stale fixture assumptions: the S90 fixture
-selected the first goal at Johnston's post as July, and the bombardment fixture
-required advance news for every doctrine row. The new June hold is a sourced
-nonoffensive mission. Retain the full failure report, inspect all categories,
-then verify selectors and lower-bound assertions cheaply before a full retry.
-No runtime or historical acceptance limit is changed for these fixtures.
-First standing check exit1,163.870s:240 files,2151 passed,two failed,three
-existing timing skips. Both failure categories are retained. Eight targeted
-fixture tests pass after correction. The cheap not-yet-reached boundary gate
-also caught a setting name in the new quiet-band explanation; the historical
-name stays in the cause evidence and package text is generic. Nineteen guard
-tests, rules,boundary,licences and the114-decision index pass before the
-required corrected standing check.
+Portable evidence: `docs/audit/s96-evidence/` (source/page receipts, every hash and
+counter change,328 band rows, all 33 eligible coverage rows, junction, review,
+preservation and 12 criteria). Raw commands/logs/exits, baselines, States and
+recovery: `runs/s96/`. Normal checked saves, final criteria/coverage and drafting:
+`runs/s96-done/`, `runs/s96-done-criteria/`, `runs/s96-done-drafting/`.
 
 ## Findings outside my scope
 
-S95 integration, S92's Texas/evidence mask, unread S94 originals, exact historical
-receipt reconciliation and Winchester arrival, demolition/baggage implementation,
-whole-branch and gated review, hosted CI, main integration, release and pushing
-remain with their owners. No acceptance criterion is waived.
+The historical June withdrawal is not achieved. Missing sourced received
+intelligence and goal-judgment representation require the lead's next ruling;
+S94's unread originals, conflicting receipt clocks and exact Winchester arrival
+stay open. S95/S92 integration, strength and unknown-strength residuals, the other
+unmatched obligations and demonstration/landing gaps, D6's two holds, whole-branch
+and gate review, hosted CI, main integration, release and pushing remain with
+their owners. Nothing is signed or cleared for main.

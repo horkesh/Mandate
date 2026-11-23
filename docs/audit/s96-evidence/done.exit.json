@@ -1,0 +1,15 @@
+{
+  "command": [
+    "npm.cmd",
+    "run",
+    "run:done-check",
+    "--",
+    "--label",
+    "s96-done",
+    "--milestone",
+    "1a"
+  ],
+  "exit": 1,
+  "seconds": 1466.604,
+  "log": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\done.log"
+}

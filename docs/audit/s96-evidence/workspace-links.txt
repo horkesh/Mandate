@@ -1,0 +1,12 @@
+[
+  [ 'kernel', 'C:\\Pyrrhic\\sprint-discretion\\packages\\kernel' ],
+  [
+    'rule-seats',
+    'C:\\Pyrrhic\\sprint-discretion\\packages\\rule-seats'
+  ],
+  [
+    'pack-format',
+    'C:\\Pyrrhic\\sprint-discretion\\packages\\pack-format'
+  ],
+  [ 'cli', 'C:\\Pyrrhic\\sprint-discretion\\packages\\cli' ]
+]

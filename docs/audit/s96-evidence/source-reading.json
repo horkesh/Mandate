@@ -107,54 +107,70 @@
       "page": 166,
       "pdfIndex": 185,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p166.txt",
-      "sha256": "c0a07b19d321fd63fef921530cfa0c2b2f701dbbd4731f510f1f1aba2afd3637"
+      "sha256": "c0a07b19d321fd63fef921530cfa0c2b2f701dbbd4731f510f1f1aba2afd3637",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n185/mode/1up"
     },
     {
       "page": 167,
       "pdfIndex": 186,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p167.txt",
-      "sha256": "18ba5b1586139e54a3770a6b8086f1cd8a267bb5d9020f85936651a36259ccae"
+      "sha256": "18ba5b1586139e54a3770a6b8086f1cd8a267bb5d9020f85936651a36259ccae",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n186/mode/1up"
     },
     {
       "page": 168,
       "pdfIndex": 187,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p168.txt",
-      "sha256": "6e6fbebf3795e124e67f2d74f809359330bcfeb9841fdb842bc0fde61fbc5212"
+      "sha256": "6e6fbebf3795e124e67f2d74f809359330bcfeb9841fdb842bc0fde61fbc5212",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n187/mode/1up"
     },
     {
       "page": 169,
       "pdfIndex": 188,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p169.txt",
-      "sha256": "2ea1e035bb702661c2a8add55acd0e468b2a213d0070936222e4e075d1c899e9"
+      "sha256": "2ea1e035bb702661c2a8add55acd0e468b2a213d0070936222e4e075d1c899e9",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n188/mode/1up"
     },
     {
       "page": 975,
       "pdfIndex": 994,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p975.txt",
-      "sha256": "1dc9a538a20705809c68eb1f1f43a2f3c3bd0748693cfdf5b6cd3058f3a5ca34"
+      "sha256": "1dc9a538a20705809c68eb1f1f43a2f3c3bd0748693cfdf5b6cd3058f3a5ca34",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n994/mode/1up"
     },
     {
       "page": 976,
       "pdfIndex": 995,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p976.txt",
-      "sha256": "d658078e18020deb256812cddb56e1a7b5cc711909e3e5cc893c63e6ab449fe5"
+      "sha256": "d658078e18020deb256812cddb56e1a7b5cc711909e3e5cc893c63e6ab449fe5",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n995/mode/1up"
     },
     {
       "page": 929,
       "pdfIndex": 948,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p929.txt",
-      "sha256": "dfa609991117186edb05c200e5d553786e6bd509c168a04ee82c7874dfea0e37"
+      "sha256": "dfa609991117186edb05c200e5d553786e6bd509c168a04ee82c7874dfea0e37",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n948/mode/1up"
     },
     {
       "page": 930,
       "pdfIndex": 949,
       "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p930.txt",
-      "sha256": "f12c76285306da6b6eaac22e6714b9880b018fa2c2a3f83822b526d293b852bd"
+      "sha256": "f12c76285306da6b6eaac22e6714b9880b018fa2c2a3f83822b526d293b852bd",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n949/mode/1up"
+    },
+    {
+      "page": 959,
+      "pdfIndex": 978,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p959.txt",
+      "sha256": "25e49a40f69d63f3dbd0b4f3b66f364825fafac53f086908273997536d570604",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n978/mode/1up"
     }
   ],
   "upstreamPdf": {
     "path": "C:/Pyrrhic/mandate-research-sources/S4/warofrebellion02secrrich/warofrebellion02secrrich.pdf",
     "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
-    "pageIndexOffset": 19
+    "pageIndexOffset": 19,
+    "url": "https://archive.org/download/warofrebellion02secrrich/warofrebellion02secrrich.pdf"
   }
 }

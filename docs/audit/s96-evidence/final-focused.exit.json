@@ -1,0 +1,19 @@
+{
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "packages/kernel/test/s96-discretion.test.ts",
+    "packages/kernel/test/one-writer.test.ts",
+    "packages/kernel/test/boundary.test.ts",
+    "packages/cli/test/goal-proposal-observer.test.ts",
+    "packages/cli/test/pushback-coverage.test.ts",
+    "packs/union-1861/test/discretion-chain.test.ts",
+    "packs/union-1861/test/manassas-junction.test.ts",
+    "tools/test/s96-quiet-transitions.test.ts",
+    "tools/test/liveness-causes.test.ts"
+  ],
+  "exit": 0,
+  "seconds": 6.944,
+  "log": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\final-focused.log"
+}

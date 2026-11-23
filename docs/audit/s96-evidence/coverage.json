@@ -695,8 +695,8 @@
     "raw diagnostic union/mcdowell_irvin/addressee/goal/object (declared object): 1; no historical ceiling",
     "raw diagnostic confederate/ellis_john_w/addressee/verb:transfer/comply (declared comply): 1; no historical ceiling",
     "raw diagnostic confederate/cooper_samuel/relay/goal/slow_walk (declared comply): 1; no historical ceiling",
-    "raw telemetry diagnostic orders.relay_objected: 0; no historical ceiling",
-    "raw telemetry diagnostic orders.relay_held: 0; no historical ceiling",
+    "raw telemetry diagnostic orders.relay_objected: 2; no historical ceiling",
+    "raw telemetry diagnostic orders.relay_held: 3; no historical ceiling",
     "raw telemetry diagnostic reports.filtered: 0; no historical ceiling",
     "raw telemetry diagnostic reports.trimmed: 0; no historical ceiling"
   ],
@@ -4704,8 +4704,8 @@
     }
   ],
   "mechanics": {
-    "orders.relay_objected": 0,
-    "orders.relay_held": 0,
+    "orders.relay_objected": 2,
+    "orders.relay_held": 3,
     "reports.filtered": 0,
     "reports.trimmed": 0
   }

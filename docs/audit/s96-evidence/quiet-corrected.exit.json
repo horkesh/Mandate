@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "tools/test/s96-quiet-transitions.test.ts",
+    "tools/test/liveness-causes.test.ts"
+  ],
+  "exit": 0,
+  "seconds": 1.442,
+  "log": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\quiet-corrected.log"
+}

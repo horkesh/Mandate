@@ -1,0 +1,14 @@
+{
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "packages/cli/test/bombardment.test.ts",
+    "packs/union-1861/test/s90-junction-order.test.ts",
+    "packs/union-1861/test/manassas-junction.test.ts",
+    "packs/union-1861/test/discretion-chain.test.ts"
+  ],
+  "exit": 0,
+  "seconds": 8.397,
+  "log": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\fixture-corrections.log"
+}

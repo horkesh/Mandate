@@ -1,0 +1,11 @@
+{
+  "command": [
+    "git",
+    "commit",
+    "--file",
+    "runs/s96/commit-message.txt"
+  ],
+  "exit": 0,
+  "seconds": 225.086,
+  "log": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\commit.log"
+}

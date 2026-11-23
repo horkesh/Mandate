@@ -57,7 +57,7 @@
       "s94ReceiptExact": true
     }
   ],
-  "additionalPdfPages": 8,
+  "additionalPdfPages": 9,
   "upstreamPdfExact": true,
   "s94RegisterSha256": "d374c70cdc26db655745eeb9f47eabe68c26686b0f31f03eb2ffe22abbc6c03e",
   "headless": true
