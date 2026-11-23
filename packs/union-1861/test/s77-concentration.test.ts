@@ -49,11 +49,18 @@ it('S77: S75 applies only federal contracts, preserves muster conflicts, and doe
  }
 });
 
-it('S77: 0109 changes only the two authorised pushback bands',()=>{
+it('S91: 0112 retires pushback counts and retains every accepted obligation and exclusion',()=>{
  const checkpoints=JSON.parse(readFileSync('packs/union-1861/checkpoints.json','utf8'));
- expect(checkpoints.pushback.find((r:any)=>r.id==='relay_holds')).toMatchObject({min:1,max:4});
- expect(checkpoints.pushback.find((r:any)=>r.id==='filter_holds')).toMatchObject({min:0,max:6});
- expect(checkpoints.pushback.find((r:any)=>r.id==='trims')).toMatchObject({min:1,max:4});
+ expect(checkpoints.pushback).toEqual([]);
+ expect(checkpoints.pushbackRegisters).toEqual(['pushback-union.json','pushback-confederate.json']);
+ const rows=checkpoints.pushbackRegisters.flatMap((file:string)=>JSON.parse(readFileSync(`packs/union-1861/${file}`,'utf8')).rows);
+ expect(rows.filter((r:any)=>r.status==='eligible').map((r:any)=>r.id)).toEqual([
+  'U01','U02','U03a','U03b','U03c','U03d','U03e','U04','U05','U14','U25a','U25b','U32','U33','U34','U39','U40','U42',
+  'C01','C02','C03','C04','C05','C06','C07','C09','C10','C11','C12','C14','C15','C16','C25',
+ ]);
+ expect(rows.filter((r:any)=>r.status==='excluded')).toHaveLength(38);
+ expect(rows.filter((r:any)=>r.status==='qualified_source')).toHaveLength(3);
+ expect(checkpoints.checkpoints.find((r:any)=>r.id==='men_confederate')).toMatchObject({min:100000,max:200000,floorBinding:true});
 });
 
 it('S77: the documented Winchester wire does not invent wire access at Harpers Ferry or an earlier opening',()=>{

@@ -12,6 +12,7 @@
 import { phase0, world as w } from '@mandate/kernel';
 import { citationsIn, datedAfterBoundary, type EvidenceClass, type EvidencePolicy, hasWeakMarker } from './banned-sources.ts';
 import type { Checkpoints } from './checkpoints.ts';
+import type { PushbackRegister } from './pushback-register.ts';
 import type { GateData } from './gate.ts';
 import { IntlMessageFormat } from 'intl-messageformat';
 import { type Issue, IssueSink } from './issues.ts';
@@ -42,6 +43,7 @@ export interface PackData {
   readonly evidencePolicy?: EvidencePolicy | null;
   /** The done check's bands (`checkpoints.json`, lane 1.14), if the pack has them. Never read by the kernel. */
   readonly checkpoints?: Checkpoints | null;
+  readonly pushbackRegisters?: readonly PushbackRegister[];
 }
 
 /** A record's address: `world` or `scenario:<id>`, a table, an index, and optionally a field path inside the record. */

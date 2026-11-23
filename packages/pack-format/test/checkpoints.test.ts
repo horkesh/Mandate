@@ -24,6 +24,18 @@ const load = (value: unknown) => loadPack(testbedFiles({ [CHECKPOINTS_FILE]: JSO
 const messages = (value: unknown) => errorsOf(load(value).issues).map((i) => `${i.at}: ${i.message}`);
 
 describe('the done check’s bands (checkpoints.json)', () => {
+  it('loads cited named registers, retires count bands, and refuses missing or malformed obligations', () => {
+    const named = { ...good, pushback: [], pushbackRegisters: ['pushback-north.json'] };
+    const row = { id: 'case_one', side: 'north', actor: 'n_governor', role: 'addressee', band: 'reservations', matter: 'first call', act: 'undertakes conditionally', cite, status: 'eligible', match: { kind: 'call', callId: 'call_one', actual: 'comply_with_reservations' } };
+    const register = { side: 'north', through: '1861-05-01', cite, rows: [row] };
+    const files = (r: unknown, c: unknown = named) => testbedFiles({ [CHECKPOINTS_FILE]: JSON.stringify(c), 'pushback-north.json': JSON.stringify(r) });
+    expect(loadPack(files(register)).pack!.pushbackRegisters).toHaveLength(1);
+    expect(errorsOf(loadPack(testbedFiles({ [CHECKPOINTS_FILE]: JSON.stringify(named) })).issues).length).toBeGreaterThan(0);
+    expect(errorsOf(loadPack(files({ ...register, rows: [{ ...row, match: undefined }] })).issues).length).toBeGreaterThan(0);
+    expect(errorsOf(loadPack(files({ ...register, rows: [row, row] })).issues).length).toBeGreaterThan(0);
+    expect(errorsOf(loadPack(files(register, { ...named, pushback: good.pushback })).issues).length).toBeGreaterThan(0);
+    expect(messages({ ...named, pushbackRegisters: ['../escape.json'] }).length).toBeGreaterThan(0);
+  });
   it('is optional, and a sound file loads onto the pack', () => {
     expect(loadPack(testbedFiles()).pack!.checkpoints).toBeNull();
     const loaded = load(good);
