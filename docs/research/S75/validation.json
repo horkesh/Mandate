@@ -1,0 +1,185 @@
+{
+  "scope": "S75 research only; no pack/kernel/config/hook change",
+  "base_commit": "e48d7e2cb65f7904b2e5ecf54f73eaad04bbb5f2",
+  "baseline_preservation": {
+    "baseline_paths": 1783,
+    "changed_or_missing": []
+  },
+  "research_audit": {
+    "result": "PASS",
+    "checks": 2037,
+    "requested": 161,
+    "observations": 150,
+    "federal_terms": 43,
+    "State_only": 3,
+    "term_holds": 115,
+    "source_works": 14,
+    "page_passages": 101,
+    "external_hashes_verified": 136
+  },
+  "done_check": {
+    "exit": 0,
+    "phase0_pass": 6,
+    "phase0_total": 6,
+    "supplemental_1a_pass": 2,
+    "supplemental_1a_total": 6,
+    "criteria": [
+      [
+        "PASS",
+        "behaviour"
+      ],
+      [
+        "PASS",
+        "hash"
+      ],
+      [
+        "PASS",
+        "resume"
+      ],
+      [
+        "PASS",
+        "liveness"
+      ],
+      [
+        "PASS",
+        "section-ten"
+      ],
+      [
+        "PASS",
+        "budget"
+      ],
+      [
+        "FAIL",
+        "checkpoints"
+      ],
+      [
+        "FAIL",
+        "operation"
+      ],
+      [
+        "FAIL",
+        "pushback"
+      ],
+      [
+        "PASS",
+        "unknown-strength"
+      ],
+      [
+        "PASS",
+        "stand-ins"
+      ],
+      [
+        "FAIL",
+        "lever-sweep"
+      ]
+    ],
+    "problems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 20957 men, below 100000",
+      "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1",
+      "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1",
+      "union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)",
+      "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+      "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ],
+    "problems_match_S72": true,
+    "reference_comparisons": [
+      {
+        "pack": "union-1861",
+        "new": "C:\\Pyrrhic\\sprint-research-military\\runs\\s75-done\\20261122-234218-42384-6cacdf\\summary.json",
+        "prior": "C:\\Pyrrhic\\sprint-research-military\\runs\\s72-done\\20261122-225910-28900-d4861a\\summary.json",
+        "non_timing_changed_fields": [],
+        "daily_rows": 148,
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "final_hash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+        "world_hash": "64ac5215ce5ed3c0a43765cbe7c6fe882f1405b3367a81759c9fc590db37dc4f",
+        "timing": null,
+        "saves": [
+          {
+            "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s75-done\\20261122-234218-42384-6cacdf\\save-day-60.json",
+            "matches_S72": true,
+            "sha256": "4353dabed072d3cdf1b42528d4feec936350b700d459abc9e424132e81ecf0dd"
+          }
+        ]
+      },
+      {
+        "pack": "testbed",
+        "new": "C:\\Pyrrhic\\sprint-research-military\\runs\\s75-done\\20261122-234249-42384-6c333f\\summary.json",
+        "prior": "C:\\Pyrrhic\\sprint-research-military\\runs\\s72-done\\20261122-225935-28900-9150fb\\summary.json",
+        "non_timing_changed_fields": [],
+        "daily_rows": 120,
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 40,
+          "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "final_hash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+        "world_hash": "cf6f3b08b9ed40b5a54120e96a4ad8121a43f9a11857beb3e2558b621320d6e1",
+        "timing": null,
+        "saves": [
+          {
+            "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s75-done\\20261122-234249-42384-6c333f\\save-day-40.json",
+            "matches_S72": true,
+            "sha256": "a3e363b949df0e7a2284241453a16b175a434c7dc320bea913e1df5f9d417b1c"
+          }
+        ]
+      }
+    ],
+    "timing_lines": [
+      "union-1861, war by decision, 148 days: median 31.58 ms, p95 53.63 ms, max 63.46 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)",
+      "testbed, 120 days: median 3.52 ms, p95 4.84 ms, max 5.22 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+      "union-1861 history run, 148 days to 1861-07-31: median 31.03 ms, p95 51.69 ms, max 59.78 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)",
+      "union-1861, war by decision, 148 days: median 31.58 ms, p95 53.63 ms, max 63.46 ms over 148 days",
+      "testbed, 120 days: median 3.52 ms, p95 4.84 ms, max 5.22 ms over 120 days",
+      "union-1861 history run, 148 days to 1861-07-31: median 31.03 ms, p95 51.69 ms, max 59.78 ms over 148 days",
+      "one day of all 23 drafts back to back: median 28.5 ms, p95 34.5 ms, worst 34.6 ms over 20 days; slowest single draft 10.5 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 20.8 ms"
+    ],
+    "drafting_paths": [
+      "C:\\Pyrrhic\\sprint-research-military\\runs\\s75-done-drafting\\20261122-235906-42384-b6679a\\drafting.json"
+    ],
+    "host": "Windows shared host; user reports S74 running in sprint-july and S73 in sprint-pushback. Other Node processes observed by PID/CPU only; no other worktree accessed and no idle-host or Linux certification claimed."
+  },
+  "dependency_install": {
+    "exit": 0,
+    "log": "runs/s75/npm-ci.log"
+  },
+  "cheap_checks": {
+    "startup": {
+      "exit": 0,
+      "log": "runs/s75/startup.log"
+    },
+    "typecheck-preflight": {
+      "exit": 0,
+      "log": "runs/s75/typecheck-preflight.log"
+    },
+    "boundary-preflight": {
+      "exit": 0,
+      "log": "runs/s75/boundary-preflight.log"
+    }
+  },
+  "hook": {
+    "requirement": "Commit normally through the unchanged .githooks/pre-commit; never skip or bypass. Actual commit outcome and log are retained after invocation.",
+    "log": "runs/s75/commit-hook.log",
+    "receipt": "runs/s75/commit-receipt.json"
+  },
+  "limits": "Passing integrity and simulation checks do not settle historical holds, supplemental 1A failures, lead review, application or Linux timing certification."
+}

@@ -1,0 +1,940 @@
+{
+  "request": "S75 only",
+  "read_scope": "Selected original-unit openings, term/muster passages, headings and statute provisions, plus bounded whole-text searches; not whole-volume or every-word reading.",
+  "policy": "Dyer is the Union starting source. Official State publications supplement omissions and retain conflicts. Statutes and aggregate returns are context until a unit-specific link is established. A later explicit description of an original contract may be evidence; a later reorganization is never used to infer it.",
+  "sources": [
+    {
+      "key": "Dyer",
+      "title": "Frederick H. Dyer, A Compendium of the War of the Rebellion (1908)",
+      "url": "https://archive.org/details/08697590.3359.emory.edu",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\08697590.3359.emory.edu\\08697590_3359.pdf",
+      "bytes": 175232086,
+      "sha256": "9823db0a23ba90b5850c2457dae503864a10266dc4fa590a94fab16a5f0b3f88",
+      "artifact_kind": "scan PDF"
+    },
+    {
+      "key": "OR I-II",
+      "title": "Official Records, series I, volume II",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+      "bytes": 124529063,
+      "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+      "artifact_kind": "scan PDF"
+    },
+    {
+      "key": "OR IV-I",
+      "title": "Official Records, series IV, volume I, section 2 of scan (printed pp.615 onward)",
+      "url": "https://archive.org/details/cu31924079579532",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-1.pdf",
+      "bytes": 37578662,
+      "sha256": "19a330fa1af80199a7cd7e21753b01e67a0f7b7335a413a7ee37e7eb7fa68796",
+      "artifact_kind": "scan PDF"
+    },
+    {
+      "key": "OR I-LI.2",
+      "title": "Official Records, series I, volume LI, part II",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\warofrebellion512unit_djvu.txt",
+      "bytes": 3874655,
+      "sha256": "8c7e5c2419f4e64b0921dce50b4cad4520928641122e297899fbaa996f59b82d",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "NY register III",
+      "title": "Frederick Phisterer, New York in the War of the Rebellion, third edition (Albany: J. B. Lyon, State Printers, 1912), volume III",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\newyorkinwarofre03phisrich_djvu.txt",
+      "bytes": 3871346,
+      "sha256": "fd5fdd1e83f551eb1dc3afe2e7ccc6b47626d525a692b1ce1711da9be7cfba5d",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "NY register IV",
+      "title": "Frederick Phisterer, New York in the War of the Rebellion, third edition (Albany: J. B. Lyon, State Printers, 1912), volume IV",
+      "url": "https://archive.org/details/newyorkinwarofre04phisrich",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\newyorkinwarofre04phisrich_djvu.txt",
+      "bytes": 3946484,
+      "sha256": "5ee0f25aa466a9e0668e8a00d02fa8e8b30d03433a4f5a535bd7cdf4a741760b",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "MA AG 1861",
+      "title": "Massachusetts Adjutant-General, Annual Report, December 31, 1861 (Public Document 7, 1862)",
+      "url": "https://archive.org/details/annualreportofa1861mass",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\annualreportofa1861mass_djvu.txt",
+      "bytes": 214751,
+      "sha256": "6d60934e329184780f93d3df92f7b26fe59129f9984a002e8cce1b03c8ea8b87",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "WI AG 1864",
+      "title": "Wisconsin Adjutant General, Annual Report for year ending December 31, 1864 (1865); catalogue date 1861 is wrong",
+      "url": "https://archive.org/details/annualreportofad00wisc",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\annualreportofad00wisc_djvu.txt",
+      "bytes": 1119400,
+      "sha256": "9b26300f0d9d5a9be7fb29411f1cc6fe559ce9005c9cd1314f28b8a56b322540",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "SC muster II",
+      "title": "A. S. Salley Jr., South Carolina Troops in Confederate Service, volume II (Columbia: The State Co., 1913), Historical Commission muster compilation",
+      "url": "https://archive.org/details/southcarolinatr00sallgoog",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\southcarolinatr00sallgoog_djvu.txt",
+      "bytes": 2009503,
+      "sha256": "bdd2fb15bd256d6bdb96de0028b2ef017e41240e803e64280aae948fbabaf69f",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "NC laws 1861",
+      "title": "Public Laws of North Carolina, 1860-61, first extra session 1861; actual printed title/session, not archive year 1872",
+      "url": "https://archive.org/details/publiclawsofstat186061nor",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\publiclawsofstat186061nor_djvu.txt",
+      "bytes": 516903,
+      "sha256": "7c0459e8f045f1d424f1d7c2001764ff41c6c951612d537263207a834da0a02f",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "TN acts 1861",
+      "title": "Public Acts of Tennessee, extra session of Thirty-third General Assembly, April 1861 (Nashville, 1861)",
+      "url": "https://archive.org/details/publicactsofstat00tenn",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\publicactsofstat00tenn_djvu.txt",
+      "bytes": 232092,
+      "sha256": "fa54597dcb9e9ae5276d4833f5dc01256cba8ac63bedc9ab22be26a75b3b9bbc",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "Bates I",
+      "title": "Samuel P. Bates, History of Pennsylvania Volunteers, 1861-5, volume I (Harrisburg: B. Singerly, State Printer, 1869)",
+      "url": "https://archive.org/details/historyofpennsyl01bate",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\Bates1.pdf",
+      "bytes": 168557246,
+      "sha256": "96af430c5485689d1ec9332fc7996e6d15b725c8fa5cebd9f8dc2317de75244a",
+      "artifact_kind": "scan PDF; official State history"
+    },
+    {
+      "key": "VT roster",
+      "title": "Theodore S. Peck, Revised Roster of Vermont Volunteers (Montpelier: Watchman Publishing Co., 1892), compiled by authority of the General Assembly",
+      "url": "https://archive.org/details/cu31924080774148",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\cu31924080774148_djvu.txt",
+      "bytes": 5493895,
+      "sha256": "1bb1075ef3b4326eab53d1b8d30e71cb1f234ddcf722f64bcc4b59e7da12123e",
+      "artifact_kind": "retained source text"
+    },
+    {
+      "key": "NH register",
+      "title": "Augustus D. Ayling, Revised Register of the Soldiers and Sailors of New Hampshire (Concord: Ira C. Evans, Public Printer, 1895), published by legislative authority",
+      "url": "https://archive.org/details/cu31924096263128",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\cu31924096263128_djvu.txt",
+      "bytes": 5261560,
+      "sha256": "6aa635f7db758f698763a4170119927148d98005e10c0c144b252ca75d355068",
+      "artifact_kind": "retained source text"
+    }
+  ],
+  "readings": [
+    {
+      "source": "Dyer",
+      "printed_page": "1008",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1008-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "787d2dcecdf712c40195178180c2ffee96aefc86a14383339ad37244e8cacbaa"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1251",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1251-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "49dd73c430b45cc612ba68cc23e81e033d606c3158535284b128d5183366cfdd"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1248",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1248-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "ca783c408893dfce1afe2f4d0d2158a22c96274c091b7f15c974d1757f372d77"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1219",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1219-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "aeea9f4d1fae05c5890e84b42161a3fab0a661b37b651c469edaf6cad5a9d7ca"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1220",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1220-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "fe02feb1ade681a1f4e71f3a707579ba0e37616ca02462090fa9962a4bb57927"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1281",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1281-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "efd6ff807280162c6f0504e05816186b664489aed3e41d49debf459fff6bb9e9"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1282",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1282-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "9b72943bd0e281bcf39699c63b15aeef411eacd21e523a457ba2b2b83b35a67a"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1283",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1283-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "b4321527ed922f4da72e9f4ec4c13cad247e73df55030067dbb79e3300e6ceae"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1347",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1347-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "4de4ef2f916f96a56c3b7875ca3e6d0fde1edfdd36f47fb23a7d9fbfcc1a82ae"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1409",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1409-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "5bf4885740b8b6600b595cd3c42c2f3728f947ea3942974a8ca2113691433a17"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1412",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1412-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "9393eee4800c083b4a14d42a5668ef43a3745b6b134726a3bd593b4c62d9df5a"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1413",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1413-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "313b55f0756716505deca19753ded23e5dc791f7f7be25572a98fbae5f5fc2ab"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1414",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1414-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "cf870660d308d96bafa1c85856c922387c54f42015c9ac0f510dcff567b6a56d"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1415",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1415-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "35dbf3fc2590c767f5721bc652e00dcc4a88782aa0086de6ad563cf9be50e985"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1416",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1416-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "859fc61ce1839ec01b0b1c26fbeb0183d549f17090cb3886080ea33f2199df8f"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1417",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1417-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "d069a316faa1757fa7cc62395f0321f757470cd83bf9aa3a7ce4cf582d3fc612"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1418",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1418-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "2e21369acba1850d50d106b984a2f9eff60d67a371c956956ee1f6d48b5810ae"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1419",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1419-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "95ab63f8c8fe870e6b2e1f6c89b2c13a14d28bd0388af668078d99a0551e70a4"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1435",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1435-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "cbbd698b2b75106fd95cae57c78c708da282ab52c2f57fd95f4a34973b1659a1"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1585",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1585-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "84d272aaf78e4981a31b03b4befe6336e6e382efcd0128446d75388e72bcc739"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1634",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1634-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "e5f819408a2028b41e3f38c64568ad93f12dd1ae6328cdb4811a9f38a233a57f"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1649",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1649-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "1461f958135b9640025aa06b6d42d0d65efb5730453a33fa2c9029c515bd5ab9"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1674",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1674-read.txt",
+      "kind": "selected unit history, including its original opening and later term language",
+      "sha256": "9590efa73154ba2054b5b43f47100d61a50b9cb8d535401bdd15bf3ad4a1a2ed"
+    },
+    {
+      "source": "OR I-II",
+      "printed_page": "470",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-I-II-p470-read.txt",
+      "kind": "original roster/order read; organization alone does not establish a term or muster",
+      "sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c"
+    },
+    {
+      "source": "OR I-II",
+      "printed_page": "943",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-I-II-p943-read.txt",
+      "kind": "original roster/order read; organization alone does not establish a term or muster",
+      "sha256": "b9ec52a3f18199f67ca32e70f1ad889413841fc72231c1c09c5dc6887cfc6b71"
+    },
+    {
+      "source": "OR I-II",
+      "printed_page": "944",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-I-II-p944-read.txt",
+      "kind": "original roster/order read; organization alone does not establish a term or muster",
+      "sha256": "b13a4828b2fb15140a024769a903d4922ab7372f5ad28e9997e4cb5f5a53ba82"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "21",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p21-read.txt",
+      "kind": "state list; Connecticut rows read",
+      "sha256": "45e1a25b2a5d02835445d2fed64665d48dffbbfd79919b26f7c3c12202222097"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1395",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1395-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "02ec833fc414096a589a391c074c5eb221ef0e701e28054ba16447bd2d6e4df3"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1403",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1403-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "9555ef5a4bf4748c9e7aaaad4bba7d95046a2986c077ef63b524494843d22761"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1408",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1408-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "6062bbb4b691bde8e6a18d7e801eaf88851101c05e57d735698cbbe2e467ac4c"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1432",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1432-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "c040dd67e553410e03009d9d2049032232e38b7ef0d3c87d4e3c9d9bcc00ea31"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1437",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1437-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "a3297b4cdd302dfdb6077e4dea97ba9b55c8372f3c907ff3e4202fb86a97dac7"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1438",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1438-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "2ee59c1feaa70341d369b5ebf4d58a2ec2fab43fe45ba9e2728d367b17d24685"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1569",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1569-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "6c5a5d1a23596c42d0f46ee68d2d70f2d88cda2055308af9a42d0b4519613d95"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1570",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1570-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "56bc273678881c6fdbd1647102f10031d3233a3320c5491f915d06b8d0ab3497"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1627",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1627-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "28969d0ce10071d272e78263dfd791302cf5f004365368c09b3598287f6ea36f"
+    },
+    {
+      "source": "Dyer",
+      "printed_page": "1633",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1633-read.txt",
+      "kind": "selected battery/company history and original-service opening; surrounding entries retained for disambiguation",
+      "sha256": "1ccad4d72bda6c11bad4c8c042fb6db7c2467d6b2e25181c192b8743e645d1e7"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "1815",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1815-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "75f0aa6c30c234af1e49bc0e29ed3f4a4119ce16c76377fab6921b56c3ae271e"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "1861",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1861-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "9b443f56ade48dba18c608d58b47021a7c9f352db01af819bb8c237686a50d99"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "1946",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1946-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "69371c8f4e96bca1ea4ab77099a77c8fe2978c647ddf4a054ba19435be1bb410"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "1982",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1982-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "012c233bbd7d644b2bd7a7db47248adf9872fa77d1dba87fc8a02eb9dc0c7f3b"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "1994",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1994-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "5f230d9fd57b02f3454459cafd4cc5833ae61e21ec26379507ed1e3bed3b7e64"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2002",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2002-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "c4c6efaf15e3a17c1d35ea237039e8584cd4608f2cf1fbf8a0eb293225e55636"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2012",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2012-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "7beb5e94b504c35498dc963e7fb24c0a042d5b1ad9efddabe153b8ff4b3544c3"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2027",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2027-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "4fbd15654f9efdddb40930bc411ae49318659ff7f4bd47767d95eba19e1fb68e"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2039",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2039-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "b6a7316ca9b4fc3e0ea7f4a299f799f58dd2bd9443ed7ff9632a9d010e172fa1"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2052",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2052-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "e6766269e673ceaed96467c8d29bde9dda11d0dc208bb301cd72fb061518d9f7"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2062",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2062-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "91418ea18ff6610edd5140cf38c5d3d8e863c7f8d875a17db17079b0efbf53aa"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2078",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2078-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "1858b0424cf5c0d85e95d13718fdbc8eedd3d11b3da31a86cca4c466e40b1db4"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2089",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2089-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "f6bfef51e1d16a9884e493f5c16efc061258fee56bc761c532c8607318ab31c1"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2103",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2103-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "7aa6e43af7acd704bf0ff5bb83e91e437632ea1a05ff01cfd27168b8c2fcd7fa"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2115",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2115-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "ad7ffef05bdaae39817ed4a5be2ad1102b76ad2ec5333589f7a87e079f824f03"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2137",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2137-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "7e5476b4137e7c2ed6be66bca879d37780383475b08f154cad48b6e5e5b0cebe"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2159",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2159-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "3389135d9437622ccc741a04be6032042f94da79a5aef2492152460a335ba9c7"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2173",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2173-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "26b1a72e031bb01cdeb029f541f8a31167f787f876cefa2e5fbf15358fa353e5"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2188",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2188-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "089df144198e58c6af84225e37ddf26cb63be459f7fbd8ad86c99a24520d932d"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2213",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2213-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "07a92e13ed7f2afb212c43e93f064e0a926d9d8c6e72fc7ada736ca3442543b3"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2237",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2237-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "cb2e0548289f6982ae3c4a49c0fa1f47ab34cf2774fc26458ad70efc89412d1e"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "2253",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2253-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "971bd3db7e2614dacc94a57533f6ff0c80cc540b4d3675e1debe8654b010d0f5"
+    },
+    {
+      "source": "NY register IV",
+      "printed_page": "2841",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2841-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "df94c47dd5115ad5747ecd31953e0e1bb256f103f2a30b65133905eb754b7b50"
+    },
+    {
+      "source": "NY register IV",
+      "printed_page": "2897",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2897-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "d9408c1ed1cfe5323e0082c4b9c866d0daa62b442b8a4b73a26a78b83224a3e2"
+    },
+    {
+      "source": "NY register IV",
+      "printed_page": "2929",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2929-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "9ae751e03ff6cdca43327a807df194a89dcd55bbf7a06eaca1b05a4986542b1f"
+    },
+    {
+      "source": "NY register IV",
+      "printed_page": "2930",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2930-read.txt",
+      "kind": "continuation of original muster statement across printed pages 2929-2930",
+      "sha256": "9ae751e03ff6cdca43327a807df194a89dcd55bbf7a06eaca1b05a4986542b1f"
+    },
+    {
+      "source": "NY register III",
+      "printed_page": "1887",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1887-read.txt",
+      "kind": "original unit opening from retained OCR; printed locator checked against page headers and image samples",
+      "sha256": "18770f4f6db23edd94f5d5dfc7975077999f7f8bf5a5b9d6fdb80abc3c7a2238"
+    },
+    {
+      "source": "MA AG 1861",
+      "printed_page": "30",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p30-read.txt",
+      "kind": "section introduction explicitly defining the following original volunteer histories",
+      "sha256": "b9b63aef98e52f4d2dc407f69e7ed43da5a9bb26537f124a561d337b3e8241f1"
+    },
+    {
+      "source": "MA AG 1861",
+      "printed_page": "31",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p31-read.txt",
+      "kind": "named regimental heading under three-year volunteer section",
+      "sha256": "8f5bdcbf6139469f63e1bd699cccb203b4e9d8ae38dc99cc32f9e716c1bc32a6"
+    },
+    {
+      "source": "MA AG 1861",
+      "printed_page": "32",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p32-read.txt",
+      "kind": "named regimental heading under three-year volunteer section",
+      "sha256": "2b4c4827b1346ac246dad6319f57212b85f925c33407279b7586d45f47d0d736"
+    },
+    {
+      "source": "MA AG 1861",
+      "printed_page": "34",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p34-read.txt",
+      "kind": "named regimental heading under three-year volunteer section",
+      "sha256": "e963ef31e5dbe6832ec73642152ca6f4b0d3608c23724afd65298eb86dbba0a7"
+    },
+    {
+      "source": "MA AG 1861",
+      "printed_page": "36",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p36-read.txt",
+      "kind": "named regimental heading under three-year volunteer section",
+      "sha256": "03fcc66ea695a6fcff7dcaf596873e58ce86124ec1b33fc62425527873b4644d"
+    },
+    {
+      "source": "WI AG 1864",
+      "printed_page": "26",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\WI-AG-1864-p26-read.txt",
+      "kind": "June 10, 1864 order explicitly describing the original completed three-year term; not a reorganization inference",
+      "sha256": "13c65b589e25d13d621eb98f2e00348e4177d380c825fd38ddc983405d350efc"
+    },
+    {
+      "source": "Bates I",
+      "printed_page": "107",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p107-read.txt",
+      "kind": "selected original-service passage in official State history",
+      "sha256": "2e111fb4efb9b7bbd12e573b2b4d38b47d0a3daba90f56aea8a26c1c3e1d45f6"
+    },
+    {
+      "source": "Bates I",
+      "printed_page": "241",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p241-read.txt",
+      "kind": "selected original-service passage in official State history",
+      "sha256": "05700594c1152fc183fb93141f416fa7ca30786456fe7cb1405392a6ee22e18b"
+    },
+    {
+      "source": "Bates I",
+      "printed_page": "243",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p243-read.txt",
+      "kind": "selected original-service passage in official State history",
+      "sha256": "7ced7660682931fc7815ef51287f72f17d19f2a7111dd133200a41f8e283625a"
+    },
+    {
+      "source": "Bates I",
+      "printed_page": "344",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p344-read.txt",
+      "kind": "selected original-service passage in official State history",
+      "sha256": "c8c55ef9b85b86f0ed6806c3e8ad0dd0532ab4d522c464b9478ff89ef7a53ed2"
+    },
+    {
+      "source": "OR I-LI.2",
+      "printed_page": "138",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-I-LI.2-p138-read.txt",
+      "kind": "Cooper to Henry B. Kelly, June 12, 1861",
+      "sha256": "d6ce45cdb7cf28df20e6d69109966dcf966d63500b2912dff32b12e3581de54f"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "626",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p626-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "5bcfd8ff9dbd1e749da719bf430f168279ccf2f087e453e6bff0c1027fb21d68"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "627",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p627-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "5e44a810e008594eb43fff2902ff19e5d6c50ac4dc074bc1a88be0dfe12a4583"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "628",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p628-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "5b900d6d2b403b638aadae2764743d98534a13455b950959fc9e95fb85d94919"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "629",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p629-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "b46bab90cf4bb99bd4ec4ad7a48ccfccae8aa8b651cc6e194340700d63bbf47b"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "630",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p630-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "65f3fb85174a9ceb6879da5d8cf1fdd442cc3bff0d37b12595b63e3cdb7dfc2c"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "631",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p631-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "dcbf65b3dcea7f985a52ed74bd73c649bd34394c4cf26f62092fc6d585d524f7"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "632",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p632-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "1ad261363321d9a8dd0164fa912a9711dbfcffb63c7da5a670bb7f46e02ed561"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "633",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p633-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "4107674ce87117637b00db4602c980d0e5d3c2ab3d7c10955d616f1eca47479d"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "747",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p747-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "b7e4ebdcf1d48e69ac92f3c358fb32e3934b2a4378884e000098998e0a7cb91c"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "748",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p748-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "c7687ba9c0dd96e1c4751b41045ec2adfb2c4de5bd31713db18c75cac59be36e"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "749",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p749-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "4920dad266974f3a46ef49df2c8af8595fd1cccbd84d7df86b28db5780b23a64"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "750",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p750-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "7c50db86d80e8e71cdd4c14b32337d7051db3d0d9e784cdb2373f775fe23bc7a"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "837",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p837-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "356a888354bce877b6d64c99b50f7037c498bf514844bc28ce85ceb94703fb18"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "860",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p860-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "aa3056b042a5486fd350570d8c57d510e39bae09e7ca62c52bb735bb8b4f788b"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "861",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p861-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "bca149bfce1d92e208fad4489c91e67863640d99f041c59b9c073b54064a80de"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "862",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p862-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "01f60e94f83f853e5a01704194c5a5aad6b20a0f45ef5581868f48d944aefc59"
+    },
+    {
+      "source": "OR IV-I",
+      "printed_page": "863",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p863-read.txt",
+      "kind": "selected original correspondence/return; policy and aggregate tables not assigned to individual identities",
+      "sha256": "983bca202b458576065c34d5566036fc9c98d5e0d414c2e356f9109f08474682"
+    },
+    {
+      "source": "SC muster II",
+      "printed_page": "1",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p1-read.txt",
+      "kind": "Second (Palmetto) Regiment original-service introduction, including underlying December 17 act",
+      "sha256": "2f8a3877d469bb3d5c3519bfe8b5af13f27974d5d634bbc1d2cb79b847679830"
+    },
+    {
+      "source": "NC laws 1861",
+      "printed_page": "95",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NC-laws-1861-p95-read.txt",
+      "kind": "first extra session 1861, chapter 6 sections 1-2; State Troops definition and war term",
+      "sha256": "3300700f1f39dba2200f12a9826fc37221e32cb90d468005820ad8a8f12634b6"
+    },
+    {
+      "source": "NC laws 1861",
+      "printed_page": "87",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NC-laws-1861-p87-read.txt",
+      "kind": "first extra session 1861 chapter 3 section 1; volunteer force twelve-month provision",
+      "sha256": "17b22994b39d7a64bd90a7145319b196ace7ee28588638aa5b9500f14a75c8e6"
+    },
+    {
+      "source": "TN acts 1861",
+      "printed_page": "22",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\TN-acts-1861-p22-read.txt",
+      "kind": "chapter 3 section 3; provisional force twelve-month provision; unit muster link remains held",
+      "sha256": "8b00d8a0db9df27aa24b35ff1858b3e27ef38482da1cd23a012a6af994b8241a"
+    },
+    {
+      "source": "VT roster",
+      "printed_page": "27",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\VT-roster-p27-read.txt",
+      "kind": "Second Regiment heading and original muster opening; printed scan p27 checked",
+      "sha256": "ff5673ca399ac2971660c303e5993f75df6ebecb969db72286979758ad098bb5"
+    },
+    {
+      "source": "NH register",
+      "printed_page": "25",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NH-register-p25-read.txt",
+      "kind": "Second Regiment three-years heading and original recruitment/conversion/muster opening; printed scan p25 checked",
+      "sha256": "4710601ed426711ff0a27e6fd9d53fa81f0293b3f8c0cfdbd8d6c4e64c145ecc"
+    },
+    {
+      "source": "SC muster II",
+      "printed_page": "284",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p284-read.txt",
+      "kind": "numbered original-service introduction and field/staff rolls; scan checked",
+      "sha256": "1a3ec51f1bcd67ca9ed671bd9cbc07b34cc6e64bb2a2f30f3871b39cadef430d"
+    },
+    {
+      "source": "SC muster II",
+      "printed_page": "570",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p570-read.txt",
+      "kind": "numbered original-service introduction and field/staff rolls; scan checked",
+      "sha256": "e989cd07958eebee38ceb9d9345997f3a5f7d0772dd9bf1a4eacf59cfa89d32f"
+    },
+    {
+      "source": "SC muster II",
+      "printed_page": "318",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p318-read.txt",
+      "kind": "Third Regiment Company B original terms; printed p318 checked",
+      "sha256": "31e44b8112d762108a1c710b778809168b1500d74a2af5562272144b39ca7af7"
+    }
+  ],
+  "rejected_locators": [
+    {
+      "file": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-III-p2027.jpg",
+      "reason": "Archive generated page_numbers.json maps 2027 to leaf233, but requested n233.jpg visibly prints2030. Replaced by printed-page URI and confirmed n230 image. Do not cite the rejected image as p2027."
+    }
+  ],
+  "images_inspected": [
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-corrected-pages.jpg",
+      "sha256": "2a82f0b2bfa8536171ee52bec34e3f5b785a0f95f42ff4cf1e84575aebfa8f1f"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-III-n230.jpg",
+      "sha256": "0013981f495ac6658a2ad9fa4a8c58af068d666090d618f738d5b26bf057017f"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-1-p750.png",
+      "sha256": "c85088347aae47d43b6899885bc1d7424cc2906931dde73cc967d7e47178bbfa"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\warofrebellion512unit-printed-138.jpg",
+      "sha256": "0bf5e61dd5a71588e71a2ce6cc30625378bc39cc39f246b25d9209b28cf67e9f"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\annualreportofa1861mass-printed-30.jpg",
+      "sha256": "318991663809dd43bddb3345ec0b55a33f037736b8d7bfd55bde7f1b5951d034"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\cu31924080774148-page-27.jpg",
+      "sha256": "3aa122b57e946d9ecbd2333fde400a70c7a9774a90e82156bf4aedfca264e255"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\cu31924096263128-page-25.jpg",
+      "sha256": "f24e16455a2cd4276cbff8b2e866bbfa61fb42496e81c9226e2d7e7f9bf4fbb7"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-n13.jpg",
+      "sha256": "d97e45ca4f9c047b22bf3bb6e2fee213df7411e10f28d66ea4e3039e5de1be28"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-printed-284.jpg",
+      "sha256": "203846df1889fbe98f5ad907e93fe1f98b583ba0576a320b03147968a377d369"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-printed-318.jpg",
+      "sha256": "464e11e7a999027b98421edc198ad3f93833144696ffb973be565bac38fb31f5"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-printed-570.jpg",
+      "sha256": "d0e877dede276652271114276cd88f70359868d3ffc1c7f0d22a7ddab809414b"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\publiclawsofstat186061nor-printed-95.jpg",
+      "sha256": "cdd1a38acc40424e87161f756bf644f56a855806f5ccdf49efa6e359e1981dbc"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\TN-acts-p22.jpg",
+      "sha256": "6ab643d4d92f39e381aa225e38dcaa6eaa58261095879819220be883963ff212"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-reading-sheet-1.jpg",
+      "sha256": "5b3e30b1e4c65fcd6df4169474d8bfd02c60b79e0e2989890635106c390d9e4d"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-reading-sheet-2.jpg",
+      "sha256": "f0a231c6f80132e2697c842932416a7e85f1e3b614395e8914b36b70428355d7"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-reading-sheet-3.jpg",
+      "sha256": "994b4f42743044db550fb8da30c4ca4b47b3e7a84498d9c0480dff9c8a11bc15"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-reading-sheet-4.jpg",
+      "sha256": "443eda3016eea1ff52b40c25d9d3dd44525334dd82e77eab29dfd2b4136b9746"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-reading-sheet-5.jpg",
+      "sha256": "dad51dfb9250d05e452ca38fc9e40058fae8fba4999252a4201343caf0e665b6"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-bottom-sheet-1.jpg",
+      "sha256": "471c4d47a16cade384468e3e7d09df332cd637c01168aa1c3df6d542f1a9fcc4"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-bottom-sheet-2.jpg",
+      "sha256": "3d1bb1802e680c887bf9445bb1a151f4930e7ba7837da3ff867256a826f4a8e3"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Phisterer-bottom-sheet-3.jpg",
+      "sha256": "949926a443651a8a68ae179e1f0afa1362bf532813b42dd45cd6743a1ac1958f"
+    }
+  ],
+  "search_only_artifacts": "Additional downloaded texts, metadata and search logs outside this receipt were retrieval/search aids, not cited historical authorities.",
+  "locator_corrections": [
+    "Phisterer III: 24th p2002, 25th p2012, 37th p2159, 39th p2188; IV: 79th p2841. OCR/header guesses replaced after scan inspection.",
+    "Wisconsin original-term statement p26, not p12. Tennessee chapter 3 section 3 p22, not p23.",
+    "South Carolina II first body page is unnumbered [1], image n13. n11 is contents; n12 blank. Printed page URI failures and generated leaf maps are not historical locators."
+  ]
+}
