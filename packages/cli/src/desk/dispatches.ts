@@ -66,6 +66,12 @@ function claimText(c: ClaimView, t: DeskStrings): string {
 }
 
 function reportCopy(r: ReportView, t: DeskStrings): string {
+  if (r.advice?.consultation !== undefined) {
+    const a = r.advice.consultation;
+    return t('console.advice.round', { round: a.consultationRound.key, courses: a.consultationAnswers.map(c =>
+      t('console.advice.course', { course: c.answerCourse, position: t(`console.advice.${c.answerPosition}`),
+        feasibility: c.answerFeasibility === undefined ? '' : t('console.advice.feasibility', { status: t(`console.advice.${c.answerFeasibility.assessmentStatus}`) }) })).join('; ') });
+  }
   if (r.type === 'press') {
     const stories = pressStories(r, t);
     return stories.length === 0 ? t('press.empty') : stories.map(s => t('console.report.story', { headline: s.headline, body: s.body })).join('; ');
@@ -99,7 +105,7 @@ function reportCopy(r: ReportView, t: DeskStrings): string {
 export function reportBody(r: ReportView, t: DeskStrings): string {
   const base = reportCopy(r, t);
   const copy = r.text === undefined || r.type === 'press' ? base : t('console.report.text', { copy: base, text: t(r.text) });
-  return r.advice === null ? copy : t('console.report.advice', {
+  return r.advice === null || r.advice.consultation !== undefined ? copy : t('console.report.advice', {
     copy, option: r.advice.recommends, reasons: r.advice.reasons.map(x => x.kind).join(', '),
   });
 }

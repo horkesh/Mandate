@@ -1,0 +1,31 @@
+{
+  "task": "S132 only",
+  "branch": "sprint/july",
+  "parent": "7bc4afce4300214d900a0a1c7c1fa9bdc5ce13c0",
+  "merge": "910a0cb8bf61dd399fe99cad7158efde6659b650",
+  "baseline": "runs/s129/readiness-capture (third S129 capture)",
+  "preflight": [
+    "npm run typecheck",
+    "focused S128/S129/S132 tests",
+    "npm run check:boundary",
+    "npm run check:rules",
+    "node --import tsx runs/s132/capture.ts --smoke"
+  ],
+  "measurement": "node --import tsx runs/s132/capture.ts",
+  "budget": "Exactly one completed 148-day capture; estimated85–120s; replay and day60 resume built in. Ordinary hook about250s. No done-check campaign expansion.",
+  "pass": [
+    "zero rejections",
+    "exact daily replay",
+    "exact day60 resume and saved-log replay",
+    "all33 rows plus all M1 course answers and terms published",
+    "every count/band change reported",
+    "new zero referred to lead, no waiver",
+    "positive out-of-band count recentered under existing around rule"
+  ],
+  "stop": "Failing cheap gate prevents capture. Unexpected expensive failure is diagnosed without expensive retry. No repeated completed capture. No new zero authorised locally.",
+  "commit": [
+    "boundary then rules before unchanged ordinary git hook",
+    "no bypass",
+    "no push"
+  ]
+}

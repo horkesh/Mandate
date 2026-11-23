@@ -23,6 +23,11 @@ export interface CoverageAct {
   readonly post?: string;
   readonly to?: string;
   readonly advice?: string;
+  readonly round?: string;
+  readonly course?: string;
+  readonly feasibility?: string;
+  readonly assessment?: import('@mandate/kernel').phase0.CourseAssessment;
+  readonly adviceTerms?: readonly (readonly [string, number])[];
   readonly undertaking?: { readonly undertakingKind: string; readonly undertakingRequest: string | null; readonly clauses: readonly string[] } | null;
   readonly declaredUndertaking?: CoverageAct['undertaking'];
   readonly reservations?: readonly { readonly clause: string; readonly subject: string; readonly effect: string; readonly grounds?: { readonly groundKind: string; readonly groundFact?: string } }[];
@@ -47,7 +52,7 @@ export interface CoverageResult {
 }
 const cmp = (a: string, b: string): number => a < b ? -1 : a > b ? 1 : 0;
 const dayOf = (start: string, date: string) => w.daysFromCivil(w.parseIsoDate(date)) - w.daysFromCivil(w.parseIsoDate(start));
-const MATTER_KEYS = ['kind', 'callId', 'regiments', 'termDays', 'subject', 'objective', 'posture', 'post', 'to'] as const;
+const MATTER_KEYS = ['kind', 'callId', 'regiments', 'termDays', 'subject', 'objective', 'posture', 'post', 'to', 'round', 'course'] as const;
 
 export function coverageScore(registers: readonly PushbackRegister[], acts: readonly CoverageAct[], startDate: string, lastDay: number, daily: readonly { readonly day: number; readonly fires: Readonly<Record<string, number>> }[] = []) {
   const rows: CoverageResult[] = [];
@@ -85,20 +90,26 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
         (a.reservations ?? []).some(r => a.undertaking!.clauses.includes(r.clause) && m.qualification!.some(q => q.subject === r.subject && q.effects.includes(r.effect as 'statement' | 'request' | 'gate' | 'offer') &&
           (q.groundKind === undefined || r.grounds?.groundKind === q.groundKind) && (q.groundFact === undefined || r.grounds?.groundFact === q.groundFact)))
       );
-      const eligible = candidates.filter(a => (m.actual === undefined || a.actual === m.actual) && (m.advice === undefined || a.advice === m.advice) && qualificationMatches(a));
+      const eligible = candidates.filter(a => (m.actual === undefined || a.actual === m.actual) && (m.advice === undefined || a.advice === m.advice) &&
+        (m.feasibility === undefined || a.feasibility === m.feasibility) && qualificationMatches(a));
       const identity = (a: CoverageAct) => a.creditKey ?? `${a.order}|${a.actor}|${a.role}`;
       const available = eligible.find(a => !used.has(identity(a)));
       if (available !== undefined) { used.add(identity(available)); add('matched', 'One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.', candidates, available.id); }
       else if (eligible.length > 0) add('unresolved', 'Every qualifying act has already covered another row; credit cannot be reused.', candidates);
       else if (m.advice !== undefined && candidates.some(a => a.advice === undefined)) add('unresolved', 'Consultation participation is recorded, but matching advice content is missing.', candidates);
       else if (m.qualification !== undefined && candidates.some(a => a.undertaking === undefined || a.reservations === undefined)) add('unresolved', 'The response lacks typed undertaking or actual reservation evidence; the rung alone supplies no qualification credit.', candidates);
+      else if (m.feasibility !== undefined) add('mismatch', 'The scoped assessment did not establish the required feasibility judgment from received needs, means and readiness; unknown evidence is not an adverse military finding.', candidates);
       else add('mismatch', 'The same request received a contrary actual response or advice; declared compliance cannot hide it.', candidates);
     }
   }
   const counts = new Map<string, { side: string | null; actor: string; role: string; kind: string; actual: string; declared: string; count: number }>();
+  const counted = new Set<string>();
   for (const a of diagnostics) {
     const fields = { side: a.side, actor: a.actor, role: a.role, kind: a.kind, actual: a.actual, declared: a.declared };
     const key = JSON.stringify(fields);
+    const occurrence = `${key}|${a.kind === 'verb:consult' ? a.creditKey ?? a.id : a.id}`;
+    if (counted.has(occurrence)) continue;
+    counted.add(occurrence);
     const old = counts.get(key);
     counts.set(key, { ...fields, count: (old?.count ?? 0) + 1 });
   }

@@ -50,7 +50,7 @@
   },
   {
     "path": "packs/union-1861/situations/sumter_garrison.json",
-    "hash": "4dc5d6c0c68181c38db376350cd20fd6c10cf6c35c3223848cdcf13ade577ffb",
+    "hash": "568a753db3d2cb6a11cdcd837a8d1314b64718fc8461449fc35264c07d324a8f",
     "kind": "premise",
     "reason": "Opening premise, explicitly authorized by 0042.",
     "citation": "notes/lane-1.11-situations.md, R69 remaining date-only audit; [{\"source\": \"OR\", \"at\": \"I-1 p. 197 (Anderson's estimate of the force a relief needs, 20,000, per the numbers note's correction 9)\"}, {\"source\": \"NOTE-secession-winter-1861\", \"at\": \"1, 2.1, 2.2\"}, {\"source\": \"NOTE-march-1861-facts\", \"at\": \"2, 4, 5, 7, 11; des. 11, 17, 20\"}]"

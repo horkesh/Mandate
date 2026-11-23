@@ -1,0 +1,39 @@
+{
+  "scope": "S128 only, 0120 item 2; implementation choices for the lead's deferred review, not a new accepted decision",
+  "choices": [
+    {
+      "choice": "Extend consult with an optional authored round identity; keep the legacy verb and all existing memoranda.",
+      "rejected": "A second advice verb, a replacement for the existing situation consultation, or an unsolicited programme/authority protocol (M9)."
+    },
+    {
+      "choice": "A declaration binds question wording, subject, course keys and named people/posts to the round. The packet travels by ordinary courier. Knowledge stores one first/latest dispatch per round/recipient and files a receipt only after authentic terms and the actual destination pass. A deliberate retry names its predecessor; it never happens automatically. A changed question is a new round.",
+      "rejected": "Date-triggered answers, matching by last post or text, sending-as-receipt, altered terms under an authentic key, automatic resend, and a growing archive of journeys."
+    },
+    {
+      "choice": "Return course-addressed statements within one answer packet. Course projections share the original answer credit key, and raw counts count the answer once. A request to advise, compliance with that request, advice against a course, and refusal to answer are separate.",
+      "rejected": "Counting the question as a protest, counting participation as content, or gaining several register credits by splitting one answer into course projections."
+    },
+    {
+      "choice": "Use the existing consultation's integer-permille share of held values for a course's honoured and opposed meanings. A strict difference supplies favour/against. A tie keeps the adviser's last own course stance in command-log order, or stays undetermined. No new trait, historical opinion cell, fitted weight or threshold was entered.",
+      "rejected": "Per-person or per-register answer tables, backdating the March replies into opening values, and treating a missing value as an opinion."
+    },
+    {
+      "choice": "Feasibility reads only the adviser's received situation/course/resource accounts. Each resource takes one newest whole paper, with deterministic date/receipt/id ordering, and exposes needs, known availability, readiness and deadline. Null stays unknown; a known shortage or missed deadline is adverse, and an incomplete account cannot certify feasibility. The March 15 wisdom question expressly assumes physical possibility, so a military shortfall cannot silently replace its policy question.",
+      "rejected": "Reading force truth, another seat, hidden answers, the calendar as new information, splicing missing fields from an older account, or seeding Scott's historical conclusions/numbers as received assessment inputs."
+    },
+    {
+      "choice": "Expose all four authored questions as principal choices. Their dates guide only the history rule seat. The March 5 wording is a paraphrase of the submission for consideration confirmed by Lincoln's March 9 letter (Complete Works II pp.9-10); the March 12 question is quoted in Cameron (OR I-I p.197; Complete Works II p.16); March 15 is on p.11 and March 29 on pp.26-27. Transporting the last verbal question as an authored packet is the protocol adaptation required by 0120.2, not a claim to a written original.",
+      "rejected": "Inventing a recovered March 5 question text, an exact historical receipt day, a separately read Scott March 12 original, or another scripted consultation event."
+    },
+    {
+      "choice": "The same course meanings can be considered as alternatives in a solicited answer. The two-fort course is sourced to Scott's memorandum (OR I-I pp.200-201), with the existing situation's conciliation/caution versus union/duty meanings. U02 requires actual favourable two-fort content but no invented exact round/date: its original question and the memorandum's exact composition/receipt chronology remain unsettled. This compares generated content within the register horizon; it does not date the historical memorandum to either model inquiry.",
+      "rejected": "A new dated principal question invented to obtain U02, a forced Scott memorandum, and using a Sumter-only withdrawal recommendation as advice to evacuate both forts."
+    },
+    {
+      "choice": "Messages own packets in transit, knowledge owns sender copies and delivered papers, and people alone appends stances. The new records are classified as immutable and FOUNDATION section 10 lists their writers. Save schema 6 has an identity migration from 5; absent data stays absent, and all older fixtures are retained.",
+      "rejected": "A second writer for knowledge or judgments, stored derived feasibility, and manufactured old-save receipts or opinions."
+    }
+  ],
+  "measurement_limit": "Building the representation binds all ten M1 rows. It does not promise historical matches. In particular, ordinary historical producers for complete course-specific resource/preparation accounts are not supplied by this build; missing receipt evidence remains unknown rather than an injected historical assessment. The current history declaration schedules two Scott answers, while his three accepted rows require three distinct acts under 0112. The two-fort projection cannot also buy feasibility credit from that same answer. Closing all three therefore also needs an independently sourced third act or exposure; no invented dated question or automatic memorandum is supplied here.",
+  "review": "Maker verification only. Formal standing and any required gate review remain deferred under 0106/0107. Nothing signed or cleared for main."
+}

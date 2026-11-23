@@ -218,6 +218,9 @@ export interface InquireCommand {
 /** Ask the holders of these posts for written advice on an open situation; each answer is a stance on record (0040). */
 export interface ConsultCommand {
   readonly cmd: 'consult';
+  /** Select a declared authored question. Omission keeps the original situation consultation. */
+  readonly round?: LetterIdentity;
+  readonly retryOf?: MessageId;
   readonly situation: SituationId;
   readonly posts: readonly PostId[];
 }

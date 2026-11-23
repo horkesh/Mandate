@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "command": "npm ci",
+      "exit": 0,
+      "log": "runs/s128/npm-ci.log"
+    },
+    {
+      "command": "opening menu, history schedule, headless console and workspace aliases",
+      "exit": 0,
+      "log": "runs/s128/preflight.log"
+    },
+    {
+      "command": "two-day startup with replay/resume",
+      "exit": 0,
+      "log": "runs/s128/smoke.log"
+    },
+    {
+      "command": "single 148-day capture",
+      "exit": 1,
+      "log": "runs/s128/measure.log"
+    },
+    {
+      "command": "retained capture after the one authorised nonzero recentering",
+      "exit": 0,
+      "log": "runs/s128/reevaluate.log"
+    },
+    {
+      "command": "final seven fictional consultation controls",
+      "exit": 0,
+      "log": "runs/s128/final-controls.log"
+    },
+    {
+      "command": "final-code replay of the retained first 60 days",
+      "exit": 0,
+      "log": "runs/s128/final-replay.log"
+    },
+    {
+      "command": "banned API correction verification",
+      "exit": 0,
+      "log": "runs/s128/corrected-static-imports.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "log": "runs/s128/types-vacant.log"
+    },
+    {
+      "command": "npm run check:boundary before hook",
+      "exit": 0,
+      "log": "runs/s128/prehook-boundary.log"
+    },
+    {
+      "command": "npm run check:rules before hook",
+      "exit": 0,
+      "log": "runs/s128/prehook-rules.log"
+    },
+    {
+      "command": "liveness, projection and rule-history tests before hook",
+      "exit": 0,
+      "log": "runs/s128/prehook-rule-tests.log"
+    },
+    {
+      "command": "npm run check:licences",
+      "exit": 0,
+      "log": "runs/s128/licences.log"
+    },
+    {
+      "command": "npm run check:decisions",
+      "exit": 0,
+      "log": "runs/s128/decisions.log"
+    },
+    {
+      "command": "npm run typecheck after final test-only readonly annotation",
+      "exit": 0,
+      "log": "runs/s128/precommit-types-corrected.log"
+    },
+    {
+      "command": "seven controls after test-only annotation",
+      "exit": 0,
+      "log": "runs/s128/precommit-controls.log"
+    }
+  ],
+  "captureExitExplanation": "Only verbs.consulted breached its old band. The same retained capture passes re-evaluation after around(16); no new zero or repeated capture.",
+  "failedCheapChecks": "Retained red/failure logs include absent-feature import, shape/ownership fixes, courier assumption, schema-5 expectation, type-only import syntax, and receipt/stance controls. Each was corrected with focused verification. No expensive failure was retried blindly.",
+  "ordinaryHookReceipt": "runs/s128/commit.json"
+}

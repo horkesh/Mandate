@@ -1,0 +1,16 @@
+{
+  "key": "union-1861, war by decision, 148 days/seats.initiative",
+  "before": {
+    "minFires": 1,
+    "maxFires": 6,
+    "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+  },
+  "after": {
+    "minFires": 6,
+    "maxFires": 24,
+    "why": "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged."
+  },
+  "observed": 12,
+  "cause": "S132 [I]: accepted pre-start conciliation cells admit Bates, Blair and Chase to the unchanged bid_for_direction initiative alongside Seward. Each fires on days7,70,133 under the existing 60-day cooldown and weekly owner: twelve events rather than three. No initiative rule, trait, threshold or starting stance changes.",
+  "evidence": "docs/audit/s132-evidence/initiative-review.json#seats.initiative"
+}

@@ -1,0 +1,3957 @@
+[
+  {
+    "path": "packages/cli/package.json",
+    "bytes": 454,
+    "sha256": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0"
+  },
+  {
+    "path": "packages/cli/src/console/game.ts",
+    "bytes": 9076,
+    "sha256": "36ce13edbb1b75cdb9fdfe87d12b0bf7f524532bb16624f4131e7913d9bf800b"
+  },
+  {
+    "path": "packages/cli/src/console/preview-text.ts",
+    "bytes": 1161,
+    "sha256": "ac41448c15575af55b69def47bba69552322af6b556d8bb173ffe6413cfb4c2c"
+  },
+  {
+    "path": "packages/cli/src/console/session.ts",
+    "bytes": 6699,
+    "sha256": "4398f131855bbf0dcb03541726ac3b6b349b767a061a4ec948ca069fb70adb8c"
+  },
+  {
+    "path": "packages/cli/src/demo.ts",
+    "bytes": 2077,
+    "sha256": "36c9819cdd7403b07c9bc295186ac831ee14d1da126c1ea212952d58e1dd4b67"
+  },
+  {
+    "path": "packages/cli/src/desk/commands.ts",
+    "bytes": 23771,
+    "sha256": "b85b4c87297149c03442ff01b6ce5407053319d6f518101f60912d9251a9cdb5"
+  },
+  {
+    "path": "packages/cli/src/desk/dispatches.ts",
+    "bytes": 8028,
+    "sha256": "63e4114eba8457af8a52b54340ac4f21b3074b7fb34d4eb4ff2b56b24196a22e"
+  },
+  {
+    "path": "packages/cli/src/desk/notes.ts",
+    "bytes": 907,
+    "sha256": "4a9d72d5b6aa73e6769c3e8dcc420074f8480444873fb5e10d8b98461c20da2d"
+  },
+  {
+    "path": "packages/cli/src/desk/press.ts",
+    "bytes": 1604,
+    "sha256": "39ad17cbb74af40decd2b8675a22eb6efd9fb2dddc37a93b32fa3fade1ee238d"
+  },
+  {
+    "path": "packages/cli/src/desk/render.ts",
+    "bytes": 11978,
+    "sha256": "9fc5c08b0d4344875ede6cdb09ef02a8ff155c320ba1511266b3502c306a33d6"
+  },
+  {
+    "path": "packages/cli/src/desk/strings.ts",
+    "bytes": 173,
+    "sha256": "52dbcd027821bad93a438c52a150b3c27ab2ffbade7785bf7982150a6acd3e31"
+  },
+  {
+    "path": "packages/cli/src/done-check.ts",
+    "bytes": 27144,
+    "sha256": "de48d8003895b04f8e92ba714d3cd8db3cf6ac7cc38ab500f4410d6ef8f0a84c"
+  },
+  {
+    "path": "packages/cli/src/drafting-measure.ts",
+    "bytes": 8473,
+    "sha256": "45164aa53397686c027d9b681183f58eb3b2c270ddbd51eb4168732ad15591c7"
+  },
+  {
+    "path": "packages/cli/src/history-run.ts",
+    "bytes": 21846,
+    "sha256": "af29e8e77d769792043021d9ed0a477372d9dc23e15d6adca9293c249192ca3d"
+  },
+  {
+    "path": "packages/cli/src/io/atomic.ts",
+    "bytes": 2075,
+    "sha256": "dd246031f3e65b19a71c4aa8b3e6c4700165fc3631fd395e6a61a51089c88e22"
+  },
+  {
+    "path": "packages/cli/src/io/packs.ts",
+    "bytes": 959,
+    "sha256": "7c7af7c0c3e0f2bf46b39d7fbc86195f5a42f0950f1ad23516f17e336e2b390f"
+  },
+  {
+    "path": "packages/cli/src/io/runs.ts",
+    "bytes": 2417,
+    "sha256": "8c3dc6e9515db1c7d8adea580d71d93b60ea4365d1052380818eeebef0c0bf4b"
+  },
+  {
+    "path": "packages/cli/src/io/saves.ts",
+    "bytes": 723,
+    "sha256": "930f1111948fb66fef104d73f4659b89ba79250d30785993a79afacdabb64c76"
+  },
+  {
+    "path": "packages/cli/src/lever-moves.ts",
+    "bytes": 3231,
+    "sha256": "bc0105eff41b2f40408a62a1b2fc0c2d414f4761c49ad26b244e673a0f50b135"
+  },
+  {
+    "path": "packages/cli/src/lever-sweep.ts",
+    "bytes": 24044,
+    "sha256": "638691798364fdbbd0841e8402844968a201498336b6357b5e397554dfc016c0"
+  },
+  {
+    "path": "packages/cli/src/liveness-gate.ts",
+    "bytes": 56323,
+    "sha256": "2abee86ddb12d2a89188c3d80a2f76f841a7aab1b4ba14c9b25baa12e4dcb6ff"
+  },
+  {
+    "path": "packages/cli/src/pack-files.ts",
+    "bytes": 2287,
+    "sha256": "036a3a0087fc7a33e09c9d2eb3a9c00214da24185e4d2a9216e7b9df04585c19"
+  },
+  {
+    "path": "packages/cli/src/pack-text.ts",
+    "bytes": 509,
+    "sha256": "9dbb3a9623695415d5e1d84ce7e799923f606cb4da328a6e62a8a1efe2ed4479"
+  },
+  {
+    "path": "packages/cli/src/pack.ts",
+    "bytes": 6177,
+    "sha256": "e05c0f59ed62b0378c852a0aec6d11d303be80a4e5938b5cd70ade1e83fe61a5"
+  },
+  {
+    "path": "packages/cli/src/phase0-run.ts",
+    "bytes": 11038,
+    "sha256": "764b1b1a29cde3f49c5ed22aa3458a226fed46a57bc4118659bd626c757ca56c"
+  },
+  {
+    "path": "packages/cli/src/phase0-scores.ts",
+    "bytes": 4261,
+    "sha256": "440e8c12d45ad1f9f531fc2992851b8dd4a5446d663135193f646ba14dd9fc54"
+  },
+  {
+    "path": "packages/cli/src/planner-cases.ts",
+    "bytes": 8567,
+    "sha256": "57aa8221b657b51bdbaf2933a8a249c7142541b2c4074d09826ec4701ef8b79d"
+  },
+  {
+    "path": "packages/cli/src/play.ts",
+    "bytes": 915,
+    "sha256": "3cb678e1585366f294b5d630535ed8b423207e037e62e39c01bc20d4774d36d8"
+  },
+  {
+    "path": "packages/cli/src/pushback-coverage.ts",
+    "bytes": 10125,
+    "sha256": "2e202b192b0b42f423dbb40dc5cc612ff3ce6205d2cf18b1ba78b8432d805fab"
+  },
+  {
+    "path": "packages/cli/src/pushback-exposure.ts",
+    "bytes": 4521,
+    "sha256": "4ce22974064bfa316e6fddc08639eb2497eb5151ef7681c3d9b8ab14eb597301"
+  },
+  {
+    "path": "packages/cli/src/pushback-observer.ts",
+    "bytes": 7872,
+    "sha256": "59e392864d54047749084913691ca0f42b9bd71a8a366177a49b7d22a312cee5"
+  },
+  {
+    "path": "packages/cli/src/register-coverage.ts",
+    "bytes": 4694,
+    "sha256": "247c1edb05184619247e2483db49d78d47ed4d1f5e04c2f52c8e88ce149668e4"
+  },
+  {
+    "path": "packages/cli/src/run-done-check.ts",
+    "bytes": 5294,
+    "sha256": "2f9c43540334c7f9617814b529ae51ca6f36162df245ca37505250d2b46d50e1"
+  },
+  {
+    "path": "packages/cli/src/run-phase0.ts",
+    "bytes": 6522,
+    "sha256": "36ea91dea2c465f2fc7c04f2b1f00b86ef135907814a685e09b9b7425d736f6b"
+  },
+  {
+    "path": "packages/cli/src/run-planner-cases.ts",
+    "bytes": 1449,
+    "sha256": "bc9b7d05c7727f42558fa4ca0258630dbd6a2975bdd68f0a9d9fd51a6ec515ad"
+  },
+  {
+    "path": "packages/cli/src/run-seats.ts",
+    "bytes": 4140,
+    "sha256": "a122ab407ae8304a3e6fec1feeab42855606421b17535afb90f03c60cee74411"
+  },
+  {
+    "path": "packages/cli/src/seats-run.ts",
+    "bytes": 2608,
+    "sha256": "e76ab459943ed1b72513c66ac30d3b9556c6471451d308aa09aab560534cb2be"
+  },
+  {
+    "path": "packages/cli/src/seats-world.ts",
+    "bytes": 4347,
+    "sha256": "376cec0b46179801372a3b90eb2a77620df6ecd85aa1b2f76bad23522a53c6ff"
+  },
+  {
+    "path": "packages/cli/src/stand-ins.ts",
+    "bytes": 7786,
+    "sha256": "2013da54c20159969c2d90f47d02e6469f6f42774f8f5e8da026014bf7dd475c"
+  },
+  {
+    "path": "packages/cli/src/victory.ts",
+    "bytes": 6253,
+    "sha256": "8d58655788fe22bb3502523e18a8ee879e311f328d1549dff6c46b6c43d89ff0"
+  },
+  {
+    "path": "packages/cli/test/bombardment.test.ts",
+    "bytes": 5435,
+    "sha256": "60aaa68132a6a2d5ce27374b582994460880e0ad949fb7247534ddd84b1512dc"
+  },
+  {
+    "path": "packages/cli/test/calls-schedule.test.ts",
+    "bytes": 3828,
+    "sha256": "4dc63d9bb768783bd37e4d98a4fa6484201c2a9024df6d84bd7d78068f757171"
+  },
+  {
+    "path": "packages/cli/test/concentration.test.ts",
+    "bytes": 5112,
+    "sha256": "fd9f50df0c99b04974eaf1a0c77e8ca2d204d15edd6d119e2d17d2830df2b6a6"
+  },
+  {
+    "path": "packages/cli/test/console-session.test.ts",
+    "bytes": 15783,
+    "sha256": "371eb166a4f2f14315870c0a3db7cf5f4fc0711acde790a5d47fa6959e5d4cb8"
+  },
+  {
+    "path": "packages/cli/test/console.test.ts",
+    "bytes": 8213,
+    "sha256": "6e350e981877fd3e9c86726c7d5c4605e84510eb4b3f9e7edde38bc324d1b06d"
+  },
+  {
+    "path": "packages/cli/test/control-words.test.ts",
+    "bytes": 1950,
+    "sha256": "793d06778318c36b03d0a276fa2c49fd487b743ab2c9660a1cc0251a5f0edc39"
+  },
+  {
+    "path": "packages/cli/test/declared-government.test.ts",
+    "bytes": 5713,
+    "sha256": "83fe497bfdf52be7201cb649d20db8a747044811048807b3ca9731cb11f69425"
+  },
+  {
+    "path": "packages/cli/test/desk-localization.test.ts",
+    "bytes": 3279,
+    "sha256": "ea7bd7bbe401728388aea239d567bb7e8c33cd1313db3334e0cb4b15a62c6407"
+  },
+  {
+    "path": "packages/cli/test/done-check-1a.test.ts",
+    "bytes": 30666,
+    "sha256": "2551f80e2793f0cec0689fdcb785b36cd8214b234c89d812f532d61fe1d485b5"
+  },
+  {
+    "path": "packages/cli/test/done-check.test.ts",
+    "bytes": 12761,
+    "sha256": "a7cc35f1024cbac8deab02a05edca0de857b8db4bf60bd531b9a763d8e2d8f0f"
+  },
+  {
+    "path": "packages/cli/test/enlistment-renewal.test.ts",
+    "bytes": 8000,
+    "sha256": "0bf0ee0799041b6fbc2c58f1fbfd67f33209330efebb2c7e8b594f2bf9244380"
+  },
+  {
+    "path": "packages/cli/test/fixtures/field-declarations/as-const.ts",
+    "bytes": 48,
+    "sha256": "28c839dc2b1b3b127ca596ef778951b05c85391773c902e89645b7c7bcbeceb7"
+  },
+  {
+    "path": "packages/cli/test/fixtures/field-declarations/double-quoted.ts",
+    "bytes": 41,
+    "sha256": "72b8efa949ab7cb9389614102a377eb610ab0d93567a9a1dce7964d103d73b04"
+  },
+  {
+    "path": "packages/cli/test/fixtures/field-declarations/literal-typed.ts",
+    "bytes": 65,
+    "sha256": "3c1e264e0de2d721c88bde08589494efe59d4225dd036c54879a23a6157a3aaf"
+  },
+  {
+    "path": "packages/cli/test/fixtures/field-declarations/not-fields.ts",
+    "bytes": 143,
+    "sha256": "a4bb10ede2890425493039bc3fcddec7bce5f950939e737ca134bebcdc421f0a"
+  },
+  {
+    "path": "packages/cli/test/fixtures/field-declarations/single-quoted.ts",
+    "bytes": 39,
+    "sha256": "0f45031a6c3be09af0ad31ea4e75b7f94a04580daa3831b0d9510bd8eba5601d"
+  },
+  {
+    "path": "packages/cli/test/fixtures/field-declarations/typed.ts",
+    "bytes": 47,
+    "sha256": "eacba5ee6c32d105e1d56312e956e2990ae568c201d66541c50cca1d17a0199c"
+  },
+  {
+    "path": "packages/cli/test/fixtures/saves/testbed-seats-day40.json",
+    "bytes": 339958,
+    "sha256": "5b60876c02d2056d8b0f7aeea80c0d86ee9de3abe04c6665322f4c5e757c4007"
+  },
+  {
+    "path": "packages/cli/test/force-withdrawal.test.ts",
+    "bytes": 5217,
+    "sha256": "c18a6c86c3b596c8d47faa6d3b2157519b7558fc0e8f92fdfdd00fd77868f881"
+  },
+  {
+    "path": "packages/cli/test/goal-proposal-observer.test.ts",
+    "bytes": 2508,
+    "sha256": "c0643379b29821a079cb20dca513f4db598f5728bee2bbfec34c8119018a259b"
+  },
+  {
+    "path": "packages/cli/test/io.test.ts",
+    "bytes": 3323,
+    "sha256": "65e78465d767f0adca4ccaea492008b1b0a9d988ecd1d63bd76c9e6964d1e103"
+  },
+  {
+    "path": "packages/cli/test/lever-moves.test.ts",
+    "bytes": 3537,
+    "sha256": "6f567856f51d725997c215a5206de2a1f38cb1e91e0780dd621a3e36d528ba6b"
+  },
+  {
+    "path": "packages/cli/test/liveness-gate.test.ts",
+    "bytes": 8670,
+    "sha256": "a7dff2dfdafa40bd19d229282a3e7f5eefd6686f60ca6895901d2f4432ccdc03"
+  },
+  {
+    "path": "packages/cli/test/men-regions.test.ts",
+    "bytes": 24072,
+    "sha256": "4c241775fc873b645b3d6d29e6b77256f4b09fb20ee515a4d810a5cdf38e0354"
+  },
+  {
+    "path": "packages/cli/test/phase0-run.test.ts",
+    "bytes": 5171,
+    "sha256": "7def83cb7b1ef56ae02b1a093af1d6e4032b9465542dbf14f9cac38e899dcc93"
+  },
+  {
+    "path": "packages/cli/test/phase0-scores.test.ts",
+    "bytes": 1939,
+    "sha256": "329175b035ac2c9f5cecdc4d87192e97918abcd1719bd6897e82f77631fd6f26"
+  },
+  {
+    "path": "packages/cli/test/planner.test.ts",
+    "bytes": 26990,
+    "sha256": "144c30f5ed51a8ebd94447557e0c6830fb9db613020136617dd5cdee3adce537"
+  },
+  {
+    "path": "packages/cli/test/play-fixes.test.ts",
+    "bytes": 3787,
+    "sha256": "dadcfbb3f668169aaa74fce8b9dcf700fb86ed4ca25a412111b28b83cf7042e7"
+  },
+  {
+    "path": "packages/cli/test/post-holder-check.test.ts",
+    "bytes": 5298,
+    "sha256": "5dbc64daa5fa0d5d0ea8421231bff01874b99be287317b007f86811e04f5f9d7"
+  },
+  {
+    "path": "packages/cli/test/press-words.test.ts",
+    "bytes": 1686,
+    "sha256": "4231034cae73871289bbd0f9b278675ab829e57eaa15e7fe725904d1bb61ad4f"
+  },
+  {
+    "path": "packages/cli/test/pushback-coverage.test.ts",
+    "bytes": 9831,
+    "sha256": "347fb2ba3bda643d9ad6627b225976dc2dabdc090a10d8d4f1a97a0e97c9ded8"
+  },
+  {
+    "path": "packages/cli/test/recruiting-office.test.ts",
+    "bytes": 2805,
+    "sha256": "a8ddcef4a415370d7eb7d6c18c71a1a7b07766efa13453f977ae56fff00ca719"
+  },
+  {
+    "path": "packages/cli/test/register-coverage.test.ts",
+    "bytes": 8311,
+    "sha256": "3d4542316417eddd7af95c87681663d71cad52a11978e7566fb401895e5ea2a5"
+  },
+  {
+    "path": "packages/cli/test/resume-check.test.ts",
+    "bytes": 3981,
+    "sha256": "eb6997b6e13c6b1617fe44149c10967e27d7bcdb67e0d7cbc8e0cc660f0d9816"
+  },
+  {
+    "path": "packages/cli/test/run-done-check.test.ts",
+    "bytes": 4770,
+    "sha256": "681dff3cbcb4ca9c346afaa98553a4ebe5457d7dc1ad6bd4dc59cd1b8955cd7f"
+  },
+  {
+    "path": "packages/cli/test/s106-reservation-coverage.test.ts",
+    "bytes": 3277,
+    "sha256": "bfd42f2f8355b899cbc035073b783625e9075fb74a202e0a86d9343127aa31da"
+  },
+  {
+    "path": "packages/cli/test/s111-exposure.test.ts",
+    "bytes": 4486,
+    "sha256": "e438c682c518835406c2bb4b0524e81f005c3736810741f91b89dff0e8853b90"
+  },
+  {
+    "path": "packages/cli/test/s111-pack.test.ts",
+    "bytes": 1415,
+    "sha256": "ebda6ba20d4f9fba33ef63950adffe25419ffd6a1e39b92b708948273a61307a"
+  },
+  {
+    "path": "packages/cli/test/s122-strength-score.test.ts",
+    "bytes": 3378,
+    "sha256": "90bf80a5825ed85421fb3a365d52185f79fbd61e4d3198a946710580b1c81873"
+  },
+  {
+    "path": "packages/cli/test/s123-mandate-pack.test.ts",
+    "bytes": 2290,
+    "sha256": "bb5ccd4ebf7178694583268600eacb219356207bc1a542e77c1830ef68e22b2f"
+  },
+  {
+    "path": "packages/cli/test/scheduled-calls.test.ts",
+    "bytes": 2081,
+    "sha256": "987ce81ffaccb0d33cd4e3d0855ef9dd7f5949f9517fb64c783113f45dbc6d7d"
+  },
+  {
+    "path": "packages/cli/test/seats-run.test.ts",
+    "bytes": 4096,
+    "sha256": "82d0ba07717ce1be4857a0c9c4bb58414c938cc73891bbb587b07267f2add7e2"
+  },
+  {
+    "path": "packages/cli/test/sendback-conditions.test.ts",
+    "bytes": 4942,
+    "sha256": "4621bcddd74fafe888ad5a1e2c50476e90b41783080640c41629542b21147295"
+  },
+  {
+    "path": "packages/cli/test/sendback-notes.test.ts",
+    "bytes": 5462,
+    "sha256": "1a4565dc695d14569f0b7e10a8fe78fec52f414a8013321399ee87eef7b1b25b"
+  },
+  {
+    "path": "packages/cli/test/short-turn-wording.test.ts",
+    "bytes": 563,
+    "sha256": "31e995c156f0d1b6680f01a3a8048d336392648bfa20825cc5aa41e8258135bb"
+  },
+  {
+    "path": "packages/cli/test/situation-calls.test.ts",
+    "bytes": 5521,
+    "sha256": "668bbf36d52439147a453300968c5faa8f4563754ac9c4e76ae8acffe16b8778"
+  },
+  {
+    "path": "packages/cli/test/situation-landing.test.ts",
+    "bytes": 4774,
+    "sha256": "f65621e63beca4bb9cc181b955218565fa5609856c2665fa17d0f1175b1189e2"
+  },
+  {
+    "path": "packages/cli/test/situation-render.test.ts",
+    "bytes": 3467,
+    "sha256": "e16e6d60fe27c1f987ab1fa09ef6d22e7da34a08ae175aab561b4de7d2e28119"
+  },
+  {
+    "path": "packages/cli/test/staff-absence-view.test.ts",
+    "bytes": 1724,
+    "sha256": "32149ff179f10bd635bc43d78cb4320ec79b415e752e1e6070939d7e41214ac9"
+  },
+  {
+    "path": "packages/cli/test/start-copies.test.ts",
+    "bytes": 2160,
+    "sha256": "a4e2c2b2ca2c6c57031f54129f52af2d8c14f2e30a6eb3f7781b7a0f52513b4f"
+  },
+  {
+    "path": "packages/cli/test/state-forces.test.ts",
+    "bytes": 11250,
+    "sha256": "6176ac07586fd4f055902b9d4eefffc773b9b6d4bc3b14aef3bdf4b0a7447c7a"
+  },
+  {
+    "path": "packages/cli/test/temporary-post.test.ts",
+    "bytes": 2469,
+    "sha256": "46851d4e4a999dc587937984af2d94e0ccb5ac3eb9fce217c8d07daefa0bb858"
+  },
+  {
+    "path": "packages/cli/test/turn-limit.test.ts",
+    "bytes": 1526,
+    "sha256": "cc46da0d73274f1f8d4cd657a699db3208199f31af7d8f444461814dda152685"
+  },
+  {
+    "path": "packages/cli/test/turn-stops.test.ts",
+    "bytes": 1577,
+    "sha256": "1412a65d0303fcf2d5964442279475d3e700e1f6ba1b86d0688702e9b6c049f2"
+  },
+  {
+    "path": "packages/cli/test/union-opening.test.ts",
+    "bytes": 9154,
+    "sha256": "208b1d52b3d40209d7092bb368da8df267041af975b34c8acdd3a81bac614735"
+  },
+  {
+    "path": "packages/cli/test/verb-list.test.ts",
+    "bytes": 7161,
+    "sha256": "3d724ed6876464dc0a49bc3ccbdf5aa55ce3a0408204b3fb3b0049fd40abca33"
+  },
+  {
+    "path": "packages/cli/test/war-gate.test.ts",
+    "bytes": 9691,
+    "sha256": "3d3dea75732c83559f37ed6b6bb081b56dec6bee903ba6398e73dede6599c218"
+  },
+  {
+    "path": "packages/kernel/package.json",
+    "bytes": 385,
+    "sha256": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f"
+  },
+  {
+    "path": "packages/kernel/src/audience/audience.ts",
+    "bytes": 12260,
+    "sha256": "56fd622296a3ea9b693a645b1df767d0f19be9ecb83bf6b2800306f0fe7f650c"
+  },
+  {
+    "path": "packages/kernel/src/audience/counters.ts",
+    "bytes": 766,
+    "sha256": "9b71a835dce6d62190e91ea121727708beb60afdf9e65422cb6fc10c4757cb0f"
+  },
+  {
+    "path": "packages/kernel/src/combat/battle.ts",
+    "bytes": 25283,
+    "sha256": "2be2097b4d0a3c22545c04e8f6b485cf7e55d99f4a6f8758a060547761ebbc50"
+  },
+  {
+    "path": "packages/kernel/src/combat/bombard.ts",
+    "bytes": 19822,
+    "sha256": "0178f3de6a1e57b419310184cf7783a8c6090c0504830d8c92557a6feb8a5c16"
+  },
+  {
+    "path": "packages/kernel/src/combat/decide.ts",
+    "bytes": 5376,
+    "sha256": "7f9c3b160a4c8c02aa5336f6fd6d77c4ab2ac2d3ac80ec3c2226085791d9a0ac"
+  },
+  {
+    "path": "packages/kernel/src/combat/order-kinds.ts",
+    "bytes": 2099,
+    "sha256": "bc97c140f577667e4fc6848f28ae9bca7c4573d87a813846889b4fdc253bce32"
+  },
+  {
+    "path": "packages/kernel/src/combat/orders.ts",
+    "bytes": 1872,
+    "sha256": "8a4eb26c12be4384ba617900e65eb590c6cd781f011c040772441af644f52844"
+  },
+  {
+    "path": "packages/kernel/src/combat/records.ts",
+    "bytes": 10244,
+    "sha256": "bdb08101581d091004fa2067ce6e5d417c3c238de5435acdbf2e5a5f9420ab79"
+  },
+  {
+    "path": "packages/kernel/src/combat/resolve.ts",
+    "bytes": 23543,
+    "sha256": "30603af41db9f62972a50cf38fa8f3c090487d7c0245a2de0a6048b94c0cacdb"
+  },
+  {
+    "path": "packages/kernel/src/combat/rules.ts",
+    "bytes": 19102,
+    "sha256": "493fda166977d70edbf015aaeb16a53e8ca65c8609e2291a6cc31998cfdac351"
+  },
+  {
+    "path": "packages/kernel/src/combat/shape.ts",
+    "bytes": 6370,
+    "sha256": "dac5a5025f35de604923bee430d0aac2a10d816e2c975eae9d3fc8a6ded2901d"
+  },
+  {
+    "path": "packages/kernel/src/command/authority.ts",
+    "bytes": 10940,
+    "sha256": "9597902164d1a7b7d5b32406c1f7abc5a23ba6681e6ef0beaf2e9ee0de66f257"
+  },
+  {
+    "path": "packages/kernel/src/command/capitals.ts",
+    "bytes": 915,
+    "sha256": "ef24ec8221d6f4e5034e387160452af6629eb42667f876bd56d88a82a9ce7d72"
+  },
+  {
+    "path": "packages/kernel/src/command/command-assignment.ts",
+    "bytes": 5018,
+    "sha256": "66ef86586bb4ffad69f348d8b3fd66cc433fde45a8463fba923c263e0f1cede2"
+  },
+  {
+    "path": "packages/kernel/src/command/command.ts",
+    "bytes": 53942,
+    "sha256": "452653b53de63569ce984c1b1284fa90d36a9e90ea7f9fce0ff5cfd3f99af14d"
+  },
+  {
+    "path": "packages/kernel/src/command/levies.ts",
+    "bytes": 4574,
+    "sha256": "9a312211b06e981ca3740c617f81ef70f89ea8c0dfb9b71e5cc06723024d72e4"
+  },
+  {
+    "path": "packages/kernel/src/command/observers.ts",
+    "bytes": 2166,
+    "sha256": "5ff01d8fa1204e9a818ed22c5284efcbb01efa00d847004ebf871558e8151251"
+  },
+  {
+    "path": "packages/kernel/src/command/offers.ts",
+    "bytes": 2394,
+    "sha256": "fb2b00a101f65e89862ab407430ca4c44e3d8b73ead9c96d434a2591c1fc8684"
+  },
+  {
+    "path": "packages/kernel/src/command/organisation.ts",
+    "bytes": 2890,
+    "sha256": "83b4f44569438603d094e4d75c9a9dfd007ca49e5a174539a09b51a1668b44ec"
+  },
+  {
+    "path": "packages/kernel/src/compare.ts",
+    "bytes": 697,
+    "sha256": "baa99c5a780105008186d197f5d95097082bd24d9f596193dc5d983f12289808"
+  },
+  {
+    "path": "packages/kernel/src/compliance.ts",
+    "bytes": 21350,
+    "sha256": "90e091f07a07e481a41331c9e00b1fbfc5d63a89a9918a1f826935f386595123"
+  },
+  {
+    "path": "packages/kernel/src/control-index/control-index.ts",
+    "bytes": 12387,
+    "sha256": "a97052895b544caf26d5b771602993f910accdfd9fbf1d9903e29e3652fbe0d5"
+  },
+  {
+    "path": "packages/kernel/src/control-index/derived.ts",
+    "bytes": 4202,
+    "sha256": "3962aa51ad80270b9a3f2f907db6dfa7943dd0afd6def0e2f86fdb8ab8d214bb"
+  },
+  {
+    "path": "packages/kernel/src/control/control.ts",
+    "bytes": 9574,
+    "sha256": "feb5743486dd242025797b385b58a67c0e5861319cf97debcc052a844eab6fa1"
+  },
+  {
+    "path": "packages/kernel/src/control/vocabulary.ts",
+    "bytes": 585,
+    "sha256": "27ce0c624957d314249c97d4ebb0d1978a218e7e558af9b2f04c5af75874499b"
+  },
+  {
+    "path": "packages/kernel/src/directive.ts",
+    "bytes": 12697,
+    "sha256": "35280da61ca705907686d4c77986e5d992c0d66db706b4374e0a1e78c61686c2"
+  },
+  {
+    "path": "packages/kernel/src/forces/detachments.ts",
+    "bytes": 7026,
+    "sha256": "9b020e8d6db4a36ee97655ee7b203f9d753772d7d77a8a6172551db4762e9df9"
+  },
+  {
+    "path": "packages/kernel/src/forces/enlistment.ts",
+    "bytes": 15087,
+    "sha256": "da4fda7cba3497f4eecb9a226457cbde928b92b886fdaabea19edf046816a113"
+  },
+  {
+    "path": "packages/kernel/src/forces/forces.ts",
+    "bytes": 15989,
+    "sha256": "c8ca43c1c3a7c334e0eae07aee4a936b2ec379557608aee22fcb90ae32ca62a9"
+  },
+  {
+    "path": "packages/kernel/src/forces/lots.ts",
+    "bytes": 6828,
+    "sha256": "980b9345943e3dabaf56c67e6961846890e98c4bc1de8c7244566e3957febe2e"
+  },
+  {
+    "path": "packages/kernel/src/forces/migrations.ts",
+    "bytes": 1510,
+    "sha256": "aa4a98b966533a10d7bc722cc43585c9c93bb74f8443240f95ea7e0a092f9f20"
+  },
+  {
+    "path": "packages/kernel/src/forces/offers.ts",
+    "bytes": 494,
+    "sha256": "1acd55d93600b9097cecdc75f57ce414116bb269bc1336e0100d97eb22a6a15e"
+  },
+  {
+    "path": "packages/kernel/src/forces/regroup.ts",
+    "bytes": 5200,
+    "sha256": "b6b6e7c208ecc503bd4498c95d0eec7ee6aac1fa2ab090636a8f55d474b54d94"
+  },
+  {
+    "path": "packages/kernel/src/forces/stores.ts",
+    "bytes": 6225,
+    "sha256": "51bd712b0040f31e31389bbc98dd13fe1cea44cfff5e27addf9aca2d2fc6c039"
+  },
+  {
+    "path": "packages/kernel/src/forces/stragglers.ts",
+    "bytes": 2057,
+    "sha256": "82207dcde36b94bdd4c7497921da951408aa71ba4263f16d9405096da1720001"
+  },
+  {
+    "path": "packages/kernel/src/forces/withdrawal.ts",
+    "bytes": 1282,
+    "sha256": "e82cd079723a86bfebf74b3320670b6269a5de00f2ea83893e3604bdde64cae7"
+  },
+  {
+    "path": "packages/kernel/src/heap.ts",
+    "bytes": 1444,
+    "sha256": "6b1da4062619ca3b8dec867852da36c2b4841c70e015c6ad9838b2f9d8c2b3c5"
+  },
+  {
+    "path": "packages/kernel/src/ids.ts",
+    "bytes": 4826,
+    "sha256": "05da24194d7e7959b38578f7a16071814302828f484d1b122093c1f242b3fdb8"
+  },
+  {
+    "path": "packages/kernel/src/index.ts",
+    "bytes": 1280,
+    "sha256": "affe61b767ff7dcc491818a8c32f9d69fecbf870c4b41164e638da7c089ea4bd"
+  },
+  {
+    "path": "packages/kernel/src/infrastructure/infrastructure.ts",
+    "bytes": 9529,
+    "sha256": "477738d11e682e3e4d9e440b6d72810c53c14847bc18697d6babf8a000e183b7"
+  },
+  {
+    "path": "packages/kernel/src/invariants/map.ts",
+    "bytes": 7843,
+    "sha256": "8cf893a1bd343af2a3d99f5e5c9f0eb8bf20284f10ffe9003b8bc928c10b8965"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/beliefs.ts",
+    "bytes": 5749,
+    "sha256": "be7a595e977a3182f6eea83622a59c568deb22bb7eb284495f92dbcdb736a882"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/call-evidence.ts",
+    "bytes": 5892,
+    "sha256": "fc217925b7464c3cd8e6aae2d7a6b022fdcd23040c533dae3e3f5c7051ca0670"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/confidence.ts",
+    "bytes": 1350,
+    "sha256": "76f9dec62f609036ea5e6126c547b3adffecb45d37f1b2d28b9a0ece4f2bba22"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/control-beliefs.ts",
+    "bytes": 3354,
+    "sha256": "a9114cd92f75568ce2d1409b2fe3396955362df0a14079a70a6f740b5dc7bb3b"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/control-claims.ts",
+    "bytes": 749,
+    "sha256": "4cd5136f0173e55b8d0065a078c9de220244dab33338be676a18c5b0e37294d7"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/evidence-types.ts",
+    "bytes": 1313,
+    "sha256": "c5ccbaa649d963221c7357ab12fb8b85f6ea2a3dd83a53bd8162c562daac0826"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/knowledge.ts",
+    "bytes": 32754,
+    "sha256": "53f32fa7198283f9e8d0f6c9ed1fc0b301b99e7cf214bee6882c0bf286e1ad99"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/opening-control.ts",
+    "bytes": 4033,
+    "sha256": "67dc35ad2c1d4d641a755b157e7bc7410b7ecd229b7eeba971e98ba18a4de7ff"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/papers.ts",
+    "bytes": 8271,
+    "sha256": "3a6ce0f3ca84e87296a27a676ef5de68b2f8a3e595baac763b661fdedab8dd73"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/plan-paper.ts",
+    "bytes": 2102,
+    "sha256": "ededaa0ae882ea8e44c598e329e32c9567dc8afad83175a0f7d92753af0124d6"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/records.ts",
+    "bytes": 625,
+    "sha256": "cb11cdfd3b3806117fddb77c262027926eb34a8c83ee56ef117ba8e283a8fa11"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/report.ts",
+    "bytes": 17537,
+    "sha256": "66d36b1dc59f769a472dbdc5216afee9443dba68343009acec30e31da8d7788c"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/templates.ts",
+    "bytes": 4599,
+    "sha256": "c8d9f7e34d01dba782ecf84377f07762752f60c88c63aabd33b68c55e0d630e3"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/truth.ts",
+    "bytes": 4641,
+    "sha256": "d1a841966cdb860563f68cfcc8bcad03a798211a0efe3cfdbcf33359d5e7c252"
+  },
+  {
+    "path": "packages/kernel/src/ladder/ladder.ts",
+    "bytes": 4472,
+    "sha256": "49b231243ba4fa6a1892af3c097145a81ab3b376596e1fa94ee54deffd7a9faf"
+  },
+  {
+    "path": "packages/kernel/src/log/commands.ts",
+    "bytes": 11128,
+    "sha256": "24357014c66558cfb189707f1c939c341c49b9ed49232caa4903cb6ba71a605d"
+  },
+  {
+    "path": "packages/kernel/src/log/log.ts",
+    "bytes": 18806,
+    "sha256": "7353cdfaf7a6362f7187201a9d93e8da90e240878f79a077137e1fc20be819a4"
+  },
+  {
+    "path": "packages/kernel/src/log/session.ts",
+    "bytes": 10883,
+    "sha256": "67348ff23b348c606336fad96d113c0a12e4a33de3a24f8621b41b5cab9b380c"
+  },
+  {
+    "path": "packages/kernel/src/messages/latency.ts",
+    "bytes": 6549,
+    "sha256": "5b60d01149cc7cba15b159035f1b3e70c4fd8f4133a0f9e33dcd03d7d2ddde32"
+  },
+  {
+    "path": "packages/kernel/src/messages/transit.ts",
+    "bytes": 9945,
+    "sha256": "a02b4e1b191752f9ce604e86c352b167bd78b4736e9ab34e370ba59bf7e3ad98"
+  },
+  {
+    "path": "packages/kernel/src/movement/join.ts",
+    "bytes": 3965,
+    "sha256": "f585882332da666fcf7e2c42b78f4862486a57d6f1382c66938f18065d0dea85"
+  },
+  {
+    "path": "packages/kernel/src/movement/march.ts",
+    "bytes": 13246,
+    "sha256": "4096d4d7dc824e7b6ec611e98d31474336a504ecab55c5b3600cff24c7010da7"
+  },
+  {
+    "path": "packages/kernel/src/movement/movement.ts",
+    "bytes": 6394,
+    "sha256": "ab317f26c7d123086ee36b70bf8d3e3402a87017abfb3bb4d5e21615a91b2ff0"
+  },
+  {
+    "path": "packages/kernel/src/movement/regroup.ts",
+    "bytes": 996,
+    "sha256": "182c4442a2aaf553fc15c002931887244ef2c7dde78b6cb834642f329762b1df"
+  },
+  {
+    "path": "packages/kernel/src/operations/operations.ts",
+    "bytes": 8891,
+    "sha256": "6cd8db966ccae2e04a373200bf5682b1c181014191181f452e69117036172920"
+  },
+  {
+    "path": "packages/kernel/src/operations/rules.ts",
+    "bytes": 3844,
+    "sha256": "72b12ad7e5a6f9cf900e6f768a8a19fdf7eefadff23382588a83aa3b61277d1d"
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "bytes": 22960,
+    "sha256": "cebf4bb4bfb9a1d4fd933797bee2d7b73a4762beca488a6d1d8536e2f2e48b2f"
+  },
+  {
+    "path": "packages/kernel/src/people.ts",
+    "bytes": 1559,
+    "sha256": "3ad8559ee6514f1db0365520a056de842e0e8d9872c8f118732f7787fc60feff"
+  },
+  {
+    "path": "packages/kernel/src/people/advice.ts",
+    "bytes": 4030,
+    "sha256": "febec5aaad62340aa8e7c5601455c8b41b33a23afc133a96fde677ebc28b25a4"
+  },
+  {
+    "path": "packages/kernel/src/people/commissions.ts",
+    "bytes": 1499,
+    "sha256": "6cbccd915964f2a37d0f0df5e6b1099ad880ef0152919f9eaed0244f9cded6ca"
+  },
+  {
+    "path": "packages/kernel/src/people/people.ts",
+    "bytes": 17788,
+    "sha256": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9"
+  },
+  {
+    "path": "packages/kernel/src/people/ranks.ts",
+    "bytes": 4377,
+    "sha256": "97013ecc944c352091aa70549b6f84898dd6f3e848208e0007bd8d48458a0f46"
+  },
+  {
+    "path": "packages/kernel/src/people/resignation.ts",
+    "bytes": 2621,
+    "sha256": "5d725aa58b1f2b45c55590cebc0c8c024e12784307fe93c5bede287c396e4a27"
+  },
+  {
+    "path": "packages/kernel/src/people/rules.ts",
+    "bytes": 11627,
+    "sha256": "48c7f700392d5d0e77bec6d3d83eee0035ad551c18aa27e9f75f6873c3a9ace2"
+  },
+  {
+    "path": "packages/kernel/src/people/traits.ts",
+    "bytes": 4545,
+    "sha256": "855a8b4769f4ea912d3066a9ff608b93a06b2053c56daafd3b7d8d163b174f8c"
+  },
+  {
+    "path": "packages/kernel/src/people/verb-rules.ts",
+    "bytes": 11564,
+    "sha256": "e07a90119745600745c5ec195cba20aafc46534a53b8b196b4aadf0648b22ae6"
+  },
+  {
+    "path": "packages/kernel/src/permille.ts",
+    "bytes": 1470,
+    "sha256": "511f62b3f502d0abb07300d09835700ac4d00357d0f17cd5eefa9dd06da25331"
+  },
+  {
+    "path": "packages/kernel/src/phase0.ts",
+    "bytes": 4627,
+    "sha256": "32c3300e341603ea5635839d8cb5a1aeacf2eb52c7809011660e1bb985851684"
+  },
+  {
+    "path": "packages/kernel/src/planner/axes.ts",
+    "bytes": 6755,
+    "sha256": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90"
+  },
+  {
+    "path": "packages/kernel/src/planner/context.ts",
+    "bytes": 6807,
+    "sha256": "8275158b34d2fd4a0047cbdcc03742852aa9cd67b29fa1848e2378b8f19b6079"
+  },
+  {
+    "path": "packages/kernel/src/planner/discretion.ts",
+    "bytes": 5458,
+    "sha256": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe"
+  },
+  {
+    "path": "packages/kernel/src/planner/draft.ts",
+    "bytes": 4778,
+    "sha256": "265bb5408106891dce2976f54482df18ff85a7843082331e202067d99e157be7"
+  },
+  {
+    "path": "packages/kernel/src/planner/edits.ts",
+    "bytes": 13047,
+    "sha256": "2e578a6aee39411a6cb2d2db5566fc34ba2ee4cf470c5d681a1c9ce59c53cbb2"
+  },
+  {
+    "path": "packages/kernel/src/planner/index.ts",
+    "bytes": 810,
+    "sha256": "5c86d329423c0d0218b3d13f0612a126c9f788087bcb4352b92480a91a394f74"
+  },
+  {
+    "path": "packages/kernel/src/planner/input.ts",
+    "bytes": 8242,
+    "sha256": "4ba7ab2c6a485ffb9d09d7c3692b789a5686e7efc6530c095c25f03d8f8c3d9d"
+  },
+  {
+    "path": "packages/kernel/src/planner/methods.ts",
+    "bytes": 18775,
+    "sha256": "863e571b127c315f243a029e05f9d598bff426d2ff17056b00e7854732bf4564"
+  },
+  {
+    "path": "packages/kernel/src/planner/notes.ts",
+    "bytes": 5490,
+    "sha256": "2058c55e7c3b6486595888cb837a2370e2bc0e866bbc59005398fb46a45370d8"
+  },
+  {
+    "path": "packages/kernel/src/planner/paper.ts",
+    "bytes": 3355,
+    "sha256": "f52f56e4577e97e9d4d7ed0b917210952e6b3038906e3dfc95456a9158db7e23"
+  },
+  {
+    "path": "packages/kernel/src/planner/profile.ts",
+    "bytes": 1617,
+    "sha256": "6fd2307349315033fd0e0f0885dd21b2d6e6608351f14bf40300a28da79747e1"
+  },
+  {
+    "path": "packages/kernel/src/planner/route.ts",
+    "bytes": 12137,
+    "sha256": "b2d641f2a9752dd982c36e7146a58ab56972dfac67b39fa217c46ed6d1867f9d"
+  },
+  {
+    "path": "packages/kernel/src/planner/score.ts",
+    "bytes": 9236,
+    "sha256": "9a28132fce0687d4834610bd735e8c03db40417cb0ede6d69178e28b1faf121f"
+  },
+  {
+    "path": "packages/kernel/src/planner/types.ts",
+    "bytes": 10791,
+    "sha256": "8a9ed06d810e97eb006ed09927dd2583d03990f6052ef39919b41873ce42a7de"
+  },
+  {
+    "path": "packages/kernel/src/plans/goal.ts",
+    "bytes": 9512,
+    "sha256": "0ac5eee64b75287abf1f48730ffd713ec3655915f3fc0afab1dab116feb1ba9b"
+  },
+  {
+    "path": "packages/kernel/src/plans/note-rules.ts",
+    "bytes": 1383,
+    "sha256": "0d9197aecbc0f85f15c8cb15d616bdb7129b1de31b70884e30de58b2455b37d7"
+  },
+  {
+    "path": "packages/kernel/src/plans/notes.ts",
+    "bytes": 2104,
+    "sha256": "cda8297efdc99a4aa8518547bdc87f7b88b9cb455c959d710b2993d5afcb2fb8"
+  },
+  {
+    "path": "packages/kernel/src/plans/plans.ts",
+    "bytes": 13018,
+    "sha256": "e0f8cb80a550193ed41cb917640a31fd976a9fec32d548b9223c6ac3fcb50b96"
+  },
+  {
+    "path": "packages/kernel/src/politics/politics.ts",
+    "bytes": 16359,
+    "sha256": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2"
+  },
+  {
+    "path": "packages/kernel/src/politics/press.ts",
+    "bytes": 10355,
+    "sha256": "7356de5b4cc4e3e441685ad7fac42ae784545f2b828c7d466185f2c9fbebe777"
+  },
+  {
+    "path": "packages/kernel/src/politics/rules.ts",
+    "bytes": 10342,
+    "sha256": "5cca4792a63e0562ed65910dd332fd0f9151d1c9d5dbb5f94b9684dee834fe2f"
+  },
+  {
+    "path": "packages/kernel/src/proxy/responses.ts",
+    "bytes": 8566,
+    "sha256": "7cebfd149d4708ff3353ab6bd25c99befffa542c25c55546647addba78f542ee"
+  },
+  {
+    "path": "packages/kernel/src/reading/orders.ts",
+    "bytes": 18801,
+    "sha256": "753212a69703a6e74c4e3f839817ecf91b45aeee368ec407846eadc233684e06"
+  },
+  {
+    "path": "packages/kernel/src/recruitment/renewal.ts",
+    "bytes": 2822,
+    "sha256": "dc1650441717b4476d9ae32c000bd9b3e18c46647c9be745eee1111cb2d803d1"
+  },
+  {
+    "path": "packages/kernel/src/recruitment/rules.ts",
+    "bytes": 17756,
+    "sha256": "99d1ecd3fe678f15e3d19c522efe9b42e6fbf4d3a919a83f7c465e2c16f4a86a"
+  },
+  {
+    "path": "packages/kernel/src/regions/regions.ts",
+    "bytes": 9490,
+    "sha256": "a138a2fafd882ec98e70b0787ddfe606e4dce8091250eb938340756df661a47b"
+  },
+  {
+    "path": "packages/kernel/src/regions/self-emancipation.ts",
+    "bytes": 10678,
+    "sha256": "6f93793dbe3c4c4157c7137817ce7062fa143812a51c32474b6f519caa10c188"
+  },
+  {
+    "path": "packages/kernel/src/reservations.ts",
+    "bytes": 4989,
+    "sha256": "8c0fde16f6613def1056ce57255d3ba00bc5aece05caeb062c11a866bc4f10e8"
+  },
+  {
+    "path": "packages/kernel/src/rng.ts",
+    "bytes": 2217,
+    "sha256": "3698c90f3387d32fa70febbbd71dc466528f71193ec8bea8cf2c420dc2863217"
+  },
+  {
+    "path": "packages/kernel/src/root-state.ts",
+    "bytes": 13224,
+    "sha256": "6e2607a55f4e5bc57fa79f29630c1f0c44a57305964dfc20bf7fac849f862d43"
+  },
+  {
+    "path": "packages/kernel/src/seat-api.ts",
+    "bytes": 3186,
+    "sha256": "8be2b8865928b90f176467166b5b1e2640d79c8cf67f6330ceda1f7975a437af"
+  },
+  {
+    "path": "packages/kernel/src/seats/api.ts",
+    "bytes": 15577,
+    "sha256": "158892d435763724f5ff320d826c000ffa2d2881eaf0bb91e7cb377175345fcb"
+  },
+  {
+    "path": "packages/kernel/src/seats/attention.ts",
+    "bytes": 3314,
+    "sha256": "5c9ef196655164a846b3de80cf460a9d360836c5f8a5a87a089657c091d9ddab"
+  },
+  {
+    "path": "packages/kernel/src/seats/believed.ts",
+    "bytes": 3344,
+    "sha256": "8c1436e3ea14396041f6e1895e8fcd996c6eeffcb27722d3312d6780a0f82340"
+  },
+  {
+    "path": "packages/kernel/src/seats/local-actions.ts",
+    "bytes": 11738,
+    "sha256": "d398fa2eaaafe99127ed1fecb1858875588269a8edd28c36a94c4259fb21a4ac"
+  },
+  {
+    "path": "packages/kernel/src/seats/onward-assignments.ts",
+    "bytes": 3926,
+    "sha256": "a601ba8238626dcbb2bd42255e24284578f26bd57166b52d1b26ede6b472ce35"
+  },
+  {
+    "path": "packages/kernel/src/seats/posts.ts",
+    "bytes": 8787,
+    "sha256": "b102a1dc5149d42ead2324077ef5fbc05aef4fcf27686d93d047430b0ef47112"
+  },
+  {
+    "path": "packages/kernel/src/seats/received.ts",
+    "bytes": 15330,
+    "sha256": "c47b6188cf6f94e93d4b78b1f7fa90abb6de89e9fb9ffe4787e9d7df865f9bc8"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "bytes": 42470,
+    "sha256": "5b721fab1a70bee1a12509de4bef04e224a5e6b3fda1f7646375e98fcd113ec4"
+  },
+  {
+    "path": "packages/kernel/src/seats/seats.ts",
+    "bytes": 2103,
+    "sha256": "ab887b5a4d506f1e7403845dc3b9d4e5749b499227159699c0b350ce005cbb8a"
+  },
+  {
+    "path": "packages/kernel/src/seats/sender.ts",
+    "bytes": 6530,
+    "sha256": "b0ec943624a600176a9ed086de87e91eb7bb1f23abe6ddd25a0be60288b7632f"
+  },
+  {
+    "path": "packages/kernel/src/seats/turn-stops.ts",
+    "bytes": 536,
+    "sha256": "b507d0217b5d39bce9071eb1a731b5ff9bb0e821b07de7129d75f1c7b2e5e0d6"
+  },
+  {
+    "path": "packages/kernel/src/seats/world.ts",
+    "bytes": 33234,
+    "sha256": "e03e307ff7c65fa2cc1feec0d32501a602402cda7d7b55e584d287d4da117627"
+  },
+  {
+    "path": "packages/kernel/src/serialize/canonical.ts",
+    "bytes": 5405,
+    "sha256": "02fc54d941cbd3a1327c57f1e430338e8a86811dda4c089b6ef431a046ae37b9"
+  },
+  {
+    "path": "packages/kernel/src/serialize/hash.ts",
+    "bytes": 707,
+    "sha256": "a3a4da78fbd4ea3a6f9c1f136ac83bb23c08d2a8c1ea7bf264e0a2aa06a2a133"
+  },
+  {
+    "path": "packages/kernel/src/serialize/save.ts",
+    "bytes": 8601,
+    "sha256": "1bbd5429eb93a82561d6d0232a356e438a2aeb82a9ec9be6114cd52c98cc6eef"
+  },
+  {
+    "path": "packages/kernel/src/serialize/sha256.ts",
+    "bytes": 5289,
+    "sha256": "70c0d2f549d862ef2eb888a789237a48450f7d62d0d178b890e98c71c749eea2"
+  },
+  {
+    "path": "packages/kernel/src/situations/conditions.ts",
+    "bytes": 9475,
+    "sha256": "841122be70571db9d39d1d4aef652799b1ab18b1bd0f725c6d64f6ba7adff760"
+  },
+  {
+    "path": "packages/kernel/src/situations/references.ts",
+    "bytes": 10668,
+    "sha256": "52200daf49a4d327ba9a8bf49ef8e339cfb4ce39d549eef187bba97752e801c8"
+  },
+  {
+    "path": "packages/kernel/src/situations/situations.ts",
+    "bytes": 6417,
+    "sha256": "a31d8ea0d884eed1f1fff08ef50ccd9385796af2bd97a5cfda229d6d4e4c7200"
+  },
+  {
+    "path": "packages/kernel/src/situations/types.ts",
+    "bytes": 20748,
+    "sha256": "15272e59258c88d544c1f455ec5010af83d3cb944d2240480776a9d9061daa59"
+  },
+  {
+    "path": "packages/kernel/src/supply/supply.ts",
+    "bytes": 23952,
+    "sha256": "926a6e2a838dc5743939ffd68e21e6791899e83b5b04b49212f570f6807cd313"
+  },
+  {
+    "path": "packages/kernel/src/telemetry.ts",
+    "bytes": 4279,
+    "sha256": "0099052c6b2005db37fae9c97a7b1bb711d1cc50e0d0a591ca27043911fae405"
+  },
+  {
+    "path": "packages/kernel/src/tick/attention.ts",
+    "bytes": 2379,
+    "sha256": "8bf527bef7f57d957e766c9b75a589ac979692e82c83926a0dfe7664ce5542af"
+  },
+  {
+    "path": "packages/kernel/src/tick/audience-plan.ts",
+    "bytes": 2427,
+    "sha256": "5677b3d626e7b566c9ac2e52d8c4130e23f7157615b745ee83e1cb46752036ed"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "bytes": 15669,
+    "sha256": "8ad3dbae0ba68bdc823e928d0336273541b55d622b54c28c95320ebaf98954aa"
+  },
+  {
+    "path": "packages/kernel/src/tick/bombard.ts",
+    "bytes": 6269,
+    "sha256": "e8f35fd7fba979f6d4cd441261875c846f95ec9787584f9819e7c95699b2aee1"
+  },
+  {
+    "path": "packages/kernel/src/tick/commander-losses.ts",
+    "bytes": 2313,
+    "sha256": "6fd23cf82356df3b6cea9013be361e02d06fb4ec1b2495d2f75e2cf87635b72d"
+  },
+  {
+    "path": "packages/kernel/src/tick/context.ts",
+    "bytes": 17829,
+    "sha256": "184ec6c8a4d4fa94ec79e13c9d975c63f98811ab22e3c2e379eb687462e3009e"
+  },
+  {
+    "path": "packages/kernel/src/tick/control-reports.ts",
+    "bytes": 5131,
+    "sha256": "96f9ba7663363542c70ff962451b74ea8fe90de635cf690b4d7afeb258048454"
+  },
+  {
+    "path": "packages/kernel/src/tick/deliver.ts",
+    "bytes": 10304,
+    "sha256": "0c21cdc165b2b099cb27fbc76fbad3c060d024474cde3ab5bdb06899bbda0cca"
+  },
+  {
+    "path": "packages/kernel/src/tick/detachments.ts",
+    "bytes": 9146,
+    "sha256": "b3011246e6861b65b5ea5a1cc8ddda5b30caf268451c99f4b823fa2cf351c9b2"
+  },
+  {
+    "path": "packages/kernel/src/tick/edit-preview.ts",
+    "bytes": 2214,
+    "sha256": "d5c6c19361362a80f1d4a12e60bd93de175e2e04d11f3bc0e767dceac5425630"
+  },
+  {
+    "path": "packages/kernel/src/tick/forces.ts",
+    "bytes": 13903,
+    "sha256": "47cf5c60a8bf7c5cf5936c981936ceb6053896d1246da3883833d5a9abb916fd"
+  },
+  {
+    "path": "packages/kernel/src/tick/freeze.ts",
+    "bytes": 1486,
+    "sha256": "5945c7ac8b6edcdebcbdc0b45317242dcf32c69398d6da3b3f04fc0970a0ea7d"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "bytes": 12488,
+    "sha256": "37b34806c82f61493739238a7120cff16b12be025643cbc1d0c8a5ed34c87b7c"
+  },
+  {
+    "path": "packages/kernel/src/tick/lot-transfer.ts",
+    "bytes": 3809,
+    "sha256": "fa3899abb5aee7bc07400ca960a1c7ddcef758983657f1702c68f97c868618ff"
+  },
+  {
+    "path": "packages/kernel/src/tick/mandates.ts",
+    "bytes": 13139,
+    "sha256": "7bc88e2198bc5b80e19f52f0a12cb11329aa47604592e681a2a2b498256432d0"
+  },
+  {
+    "path": "packages/kernel/src/tick/map.ts",
+    "bytes": 4357,
+    "sha256": "29629312348e42258b0cdc94eaa1966961a459caf5ba1c564421fb4bed0e4857"
+  },
+  {
+    "path": "packages/kernel/src/tick/offers.ts",
+    "bytes": 4577,
+    "sha256": "d20ad6b02883182ddff51194ad8a9d8b3f2e33f70dc27507f92a82d45fde4f78"
+  },
+  {
+    "path": "packages/kernel/src/tick/onward-assignments.ts",
+    "bytes": 6385,
+    "sha256": "c0c46e6b7f19e46c42c9552bfbdfa01e00682f972fc7cf25e3c36faf86703c6c"
+  },
+  {
+    "path": "packages/kernel/src/tick/operations.ts",
+    "bytes": 33708,
+    "sha256": "5af4d988a350748b085a8584e56622610a01d7ddab555055f2cb1f6bc2a2d79b"
+  },
+  {
+    "path": "packages/kernel/src/tick/orders.ts",
+    "bytes": 39987,
+    "sha256": "66ea553382d7914ef8bcdb73952de66a40f5f9693812087075ccf0ef539eeeee"
+  },
+  {
+    "path": "packages/kernel/src/tick/organisation.ts",
+    "bytes": 9837,
+    "sha256": "b50aa6b8edb1c99f63e43adc9810a6db44226aefe655b37a742bec8584dd0559"
+  },
+  {
+    "path": "packages/kernel/src/tick/passage.ts",
+    "bytes": 3050,
+    "sha256": "fd9e7261463c444fa724750d9dde48aef99ac0aa55b4e8f158f247c04266c0a8"
+  },
+  {
+    "path": "packages/kernel/src/tick/people-week.ts",
+    "bytes": 9707,
+    "sha256": "c36c61339929462cd6c31e09b9a0bad7ea842ff3be697a396d59af37a74fb2ec"
+  },
+  {
+    "path": "packages/kernel/src/tick/plans.ts",
+    "bytes": 26126,
+    "sha256": "73e0d0931d7eb7fb66bfd0f0537f1af513ef5726ed2be83e1db4e2623f5b9dfc"
+  },
+  {
+    "path": "packages/kernel/src/tick/policy.ts",
+    "bytes": 8074,
+    "sha256": "dab689ae33ada2b6ff0972916893d497340a81b6b7654499b97c939cdb96833d"
+  },
+  {
+    "path": "packages/kernel/src/tick/politics.ts",
+    "bytes": 9090,
+    "sha256": "b822d62f0da19d420903bccfd3f62d27d2217fda467ccbaa58dd797ac0ffc8ef"
+  },
+  {
+    "path": "packages/kernel/src/tick/promise-reports.ts",
+    "bytes": 1284,
+    "sha256": "ad4af3bd5ffdc32a8a141106494b96680c350d4b5dff6578e340ce10675131f5"
+  },
+  {
+    "path": "packages/kernel/src/tick/recruitment.ts",
+    "bytes": 32581,
+    "sha256": "3d8ce4c7b05da14ebd9af7515c2d89eb636f52b8f58c9a6b59d27c1e556f4c4b"
+  },
+  {
+    "path": "packages/kernel/src/tick/regions.ts",
+    "bytes": 1382,
+    "sha256": "e2d54d4f8adb7d5cc578f8b529a60a837fa7a638728fb179af16f5c2ef4b08da"
+  },
+  {
+    "path": "packages/kernel/src/tick/setup.ts",
+    "bytes": 10520,
+    "sha256": "ac7d2cd66604e68b81e89fbc7ff269bbb2c61b3479856d9b330c6e6c035c2520"
+  },
+  {
+    "path": "packages/kernel/src/tick/situations.ts",
+    "bytes": 19497,
+    "sha256": "e793d1ac3625104fc5fcb3dcfeec2158eb0e42aafed7c919f014cb63d35a0332"
+  },
+  {
+    "path": "packages/kernel/src/tick/support.ts",
+    "bytes": 5798,
+    "sha256": "cc3d208a164d9325259b3441ba3baf22c197976c9fa2961e41e504962505ff19"
+  },
+  {
+    "path": "packages/kernel/src/tick/tick.ts",
+    "bytes": 22224,
+    "sha256": "9eb28fa4f974825923bb11528d924981a71abcb20d0c80cd7e28484d06c4192c"
+  },
+  {
+    "path": "packages/kernel/src/tick/verbs.ts",
+    "bytes": 39603,
+    "sha256": "a804ee97da6f3a0ba40b08568568ef41677628fd913626985c561ce91db5c95a"
+  },
+  {
+    "path": "packages/kernel/src/view/claimed-control.ts",
+    "bytes": 2239,
+    "sha256": "1070d4c506526c998b57690a2d7bfcee42f2eafdd3f43730c0eafe1a271f25c0"
+  },
+  {
+    "path": "packages/kernel/src/view/desk.ts",
+    "bytes": 6943,
+    "sha256": "24798a75b24adac2bf4412dc0845d434f76629d9bf72037e620335dbd9b8ff64"
+  },
+  {
+    "path": "packages/kernel/src/view/people.ts",
+    "bytes": 13388,
+    "sha256": "024653f1cebeb22a63633ee0cfd5b047624d7b3c1a87c7adcd2893b5e3277113"
+  },
+  {
+    "path": "packages/kernel/src/view/politics.ts",
+    "bytes": 1580,
+    "sha256": "b7b011e7333e7c4b6d6cb0ada96f200b99cf2e8c8735bf82174054cfd8c894a9"
+  },
+  {
+    "path": "packages/kernel/src/view/promises.ts",
+    "bytes": 1495,
+    "sha256": "acfa8daeaa1725bba9d71f0d96df3405a181bea66734e18ac5492f2704ec26ed"
+  },
+  {
+    "path": "packages/kernel/src/view/types.ts",
+    "bytes": 12664,
+    "sha256": "81c56d64505bab1d0279e12f39c16e19c163f189d141c2338e1931836281f31c"
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "bytes": 19739,
+    "sha256": "c64c5e69eb90f4b3993e0cb61566b8c9684b3fc8d3185a3055d4be5bfcbbf768"
+  },
+  {
+    "path": "packages/kernel/src/world/assignments.ts",
+    "bytes": 2129,
+    "sha256": "7ca1784a4f2973d8272e6f9677023a5dd719931d629a35788cf6e335feeb9f5d"
+  },
+  {
+    "path": "packages/kernel/src/world/calendar.ts",
+    "bytes": 3249,
+    "sha256": "59c93944c80d4a4f6e4f075cec0a31fac97e4ae5dfef6cbc984d5b30525aaf1f"
+  },
+  {
+    "path": "packages/kernel/src/world/consultations.ts",
+    "bytes": 2245,
+    "sha256": "2c3bc1083a8c22e1c246299aa064b258a3221e1a1799cc2e16f6d710c2f233a0"
+  },
+  {
+    "path": "packages/kernel/src/world/doctrine.ts",
+    "bytes": 13786,
+    "sha256": "4f0088d90c5d61e16abc63bdfcdb741b6b37f5629fd3261b2b52d233082bfb3d"
+  },
+  {
+    "path": "packages/kernel/src/world/graph.ts",
+    "bytes": 8283,
+    "sha256": "89b530eee9e31c1900a8e2313d34121da31b0d9d05c77de7cd1ad211e3307743"
+  },
+  {
+    "path": "packages/kernel/src/world/index.ts",
+    "bytes": 3055,
+    "sha256": "1297d96ad12177eef484d577ca09295cdea64f9481acb16920b8a243777044a4"
+  },
+  {
+    "path": "packages/kernel/src/world/letters.ts",
+    "bytes": 987,
+    "sha256": "4adbfc4c1e73a90eee8a2d49710cd182b0fd873f77070d6ff4694de5de65bedf"
+  },
+  {
+    "path": "packages/kernel/src/world/mandates.ts",
+    "bytes": 6963,
+    "sha256": "8330e9e5bacb6fd876eabed9b685cdd54f10628b760b016bde699d50a79c5b9c"
+  },
+  {
+    "path": "packages/kernel/src/world/organisation.ts",
+    "bytes": 803,
+    "sha256": "207bfa689ceca1112c154d5ef74ec8cc33d529e2658aa97a6b6fd6b304938a0b"
+  },
+  {
+    "path": "packages/kernel/src/world/paper-selectors.ts",
+    "bytes": 1719,
+    "sha256": "3371482cc23e9ecb8718700faf7491f6e19dea69caaa47520c6f3bd92d9959ef"
+  },
+  {
+    "path": "packages/kernel/src/world/people.ts",
+    "bytes": 5803,
+    "sha256": "559a7cdb41f144b5dcca558bede6288d3c9e1fbbf08c828156790c0ab84ddba3"
+  },
+  {
+    "path": "packages/kernel/src/world/regiments.ts",
+    "bytes": 1304,
+    "sha256": "8754590cab276382c47a0494a4f9be418be62a39c8e987ccea9baa7ce5040c49"
+  },
+  {
+    "path": "packages/kernel/src/world/scenario.ts",
+    "bytes": 11472,
+    "sha256": "c699646ee33a3fd5412931d0b1b0cc44fee835d94e70164507614156e5ae5be0"
+  },
+  {
+    "path": "packages/kernel/src/world/world.ts",
+    "bytes": 26952,
+    "sha256": "36032887148bb99fd10b535df90ea28d4f0ee7454df7074fc2e7b0cc4b3f0720"
+  },
+  {
+    "path": "packages/kernel/test/banned-apis.test.ts",
+    "bytes": 15104,
+    "sha256": "b287229c165873dd9ea6b7b07cd2759d146c59184b30f39f9c42dfdb1838d795"
+  },
+  {
+    "path": "packages/kernel/test/believed-posts.test.ts",
+    "bytes": 14407,
+    "sha256": "1ef941d23b69e0f027c494b5ac21ad7c16787a400270587fe9c2ddd6d28277bd"
+  },
+  {
+    "path": "packages/kernel/test/bombard.test.ts",
+    "bytes": 34079,
+    "sha256": "f7e1ba953d818e6522ea1f4165742e14c0ab061f276c3246855c29d81fb76d9f"
+  },
+  {
+    "path": "packages/kernel/test/boundary.test.ts",
+    "bytes": 11763,
+    "sha256": "791383863d2aa74abc3349fc0f5d1eaa25bdbc45445418172ec0b81372101e93"
+  },
+  {
+    "path": "packages/kernel/test/calendar.test.ts",
+    "bytes": 1774,
+    "sha256": "9c91a273ef0e1d9192fd8769407279f7d84ec586e9a1750dbdfb395da1f7f1fc"
+  },
+  {
+    "path": "packages/kernel/test/canon-receipts.test.ts",
+    "bytes": 13125,
+    "sha256": "a439a00babc5d08fde44f6faa2f6e504f27a13585cf6f455d5393d77acf3ac9b"
+  },
+  {
+    "path": "packages/kernel/test/capitals.test.ts",
+    "bytes": 10275,
+    "sha256": "4c98a7e2b9a5d42cda6242ce72989d12b08244b5b0a248fc83458dd9bddee51a"
+  },
+  {
+    "path": "packages/kernel/test/claimed-control.test.ts",
+    "bytes": 13183,
+    "sha256": "2bac43c0a8de76c423c15a96fb69c8950c3149f7a379b7db2cd80a26e706deab"
+  },
+  {
+    "path": "packages/kernel/test/combat.test.ts",
+    "bytes": 46515,
+    "sha256": "6409e0df7a277cd59f4e631005211afd0a58c8d3b2cdedcf1230f2d575e63e72"
+  },
+  {
+    "path": "packages/kernel/test/command-establishment.test.ts",
+    "bytes": 5481,
+    "sha256": "3318f11e4b2a12090ad3607778ce2c58e2d65d736b73c23af94a0117de97d978"
+  },
+  {
+    "path": "packages/kernel/test/command-kinds.test.ts",
+    "bytes": 7309,
+    "sha256": "44e85a7ef08a406c736b54411fba4fe64f68b7ccb181a123316be9f26b071d94"
+  },
+  {
+    "path": "packages/kernel/test/compliance.test.ts",
+    "bytes": 19103,
+    "sha256": "915df4063e1cb4d8dc749196f665c9984d804736a9f4ed85e18163efb3ed55c4"
+  },
+  {
+    "path": "packages/kernel/test/control-index.test.ts",
+    "bytes": 6215,
+    "sha256": "049f4a472f1a986acf56be3322d3c38b6abaed2b60e294c56c667f90feff5ceb"
+  },
+  {
+    "path": "packages/kernel/test/control-reports.test.ts",
+    "bytes": 5568,
+    "sha256": "f32b5514567938b95b0151636d95a3e4e7defdec1596d3f5e44447d37ca94bc0"
+  },
+  {
+    "path": "packages/kernel/test/control.test.ts",
+    "bytes": 6234,
+    "sha256": "e12821f6746cf3f82109c425b95ee2ca5ca5c7cdbd4eeb8d9a4b9ee35c126397"
+  },
+  {
+    "path": "packages/kernel/test/declared-recruiting.test.ts",
+    "bytes": 2543,
+    "sha256": "593ecba325fe912837d9e6385941d92b856062d4081edd80ab7552e7ce6d3ce3"
+  },
+  {
+    "path": "packages/kernel/test/department-sides.test.ts",
+    "bytes": 19624,
+    "sha256": "d6ad58226db0a7686fd6c5476d1ab5c3d47fd54df1ae40c44d3eb77483955a92"
+  },
+  {
+    "path": "packages/kernel/test/desk-projections.test.ts",
+    "bytes": 9961,
+    "sha256": "c66cce72a52c46263db6745b1235a3baa9c34386416578d226823d387e578699"
+  },
+  {
+    "path": "packages/kernel/test/detachments.test.ts",
+    "bytes": 21279,
+    "sha256": "9a5daa837be38fcda718f96d40599a16cffac023a8c0aaf1433afac3aaf2ea26"
+  },
+  {
+    "path": "packages/kernel/test/field-ids.test.ts",
+    "bytes": 1931,
+    "sha256": "a864ea26af8be8b21433752dac27db729854716e13903fa693a3b2d94a49bad4"
+  },
+  {
+    "path": "packages/kernel/test/fixtures/saves/v1.json",
+    "bytes": 403,
+    "sha256": "3c8778c35e229319bf51605e498eb7242ce65045a62379470b6671a06f064814"
+  },
+  {
+    "path": "packages/kernel/test/fixtures/saves/v2.json",
+    "bytes": 403,
+    "sha256": "bc6b1a37196e6a661efad419ac6c3cf7558836617e877920543368b3e366e2ed"
+  },
+  {
+    "path": "packages/kernel/test/fixtures/saves/v3.json",
+    "bytes": 403,
+    "sha256": "4c8c5cffc36c021ad73530392cde05bb47695651f48b786d06184d44e0d0b02d"
+  },
+  {
+    "path": "packages/kernel/test/fixtures/saves/v4.json",
+    "bytes": 404,
+    "sha256": "e89d9db32ce5e1bef23f493b83797503f29dca6d940068b5f951b6b5932f96e1"
+  },
+  {
+    "path": "packages/kernel/test/fixtures/saves/v5.json",
+    "bytes": 404,
+    "sha256": "f37f39c7537862c731f0477c209c53aaa5a2d8566606b4e11c4ebe00aeadc7f4"
+  },
+  {
+    "path": "packages/kernel/test/fixtures/saves/v6.json",
+    "bytes": 404,
+    "sha256": "4aa4f271132ee02b624c449724c2b2d2126a69d838c8d32f318108e48206152f"
+  },
+  {
+    "path": "packages/kernel/test/forces-command.test.ts",
+    "bytes": 20385,
+    "sha256": "3dc9e47dc129d4508c6d55095a0da48e86a14b8900248d9fb6c32c737560e463"
+  },
+  {
+    "path": "packages/kernel/test/gate-wiring.test.ts",
+    "bytes": 24028,
+    "sha256": "c6c0be6f117983eaf020b44954797bcf655e4d85e0b1eb112610bc1abbe781b4"
+  },
+  {
+    "path": "packages/kernel/test/governments.test.ts",
+    "bytes": 9598,
+    "sha256": "494e0b1cc4ec0a0f3e2dc0fadfa7d41ad9f0d1d36431e626a19996bbb3e2fc6a"
+  },
+  {
+    "path": "packages/kernel/test/ids.test.ts",
+    "bytes": 2906,
+    "sha256": "d9a4acfa400cc10edfcc218311f92e30ccdaf1d31671df2c6d98314ae33a5f6f"
+  },
+  {
+    "path": "packages/kernel/test/infrastructure.test.ts",
+    "bytes": 8038,
+    "sha256": "60c6a7aad5447cd81bdda654598913877716fa5de17f64e00f6a506006fe126e"
+  },
+  {
+    "path": "packages/kernel/test/join.test.ts",
+    "bytes": 4488,
+    "sha256": "086ca056735b78610992fe074a31f8e826a300b43652657fb522fbc4d10ed149"
+  },
+  {
+    "path": "packages/kernel/test/lexer.test.ts",
+    "bytes": 2897,
+    "sha256": "efcc309c8a3408937001319967b6a274398b94f42abc9d3a360f63d123559d09"
+  },
+  {
+    "path": "packages/kernel/test/map-derived.test.ts",
+    "bytes": 9288,
+    "sha256": "7def48a5f77f193b323a6d49395bbdc7885cfe9c22d87063c1bfd9e53f1cca4f"
+  },
+  {
+    "path": "packages/kernel/test/map-performance.test.ts",
+    "bytes": 6693,
+    "sha256": "f92bddb022852ce4bb65f29b44e6a45e47a9aa387b7b418fe2a4cfa37c9f8a11"
+  },
+  {
+    "path": "packages/kernel/test/map-tick.test.ts",
+    "bytes": 9085,
+    "sha256": "f5cdd9435831b55c67bc8def8e2533b32d39baa3299193bf253985be5ca83f1c"
+  },
+  {
+    "path": "packages/kernel/test/march.test.ts",
+    "bytes": 12194,
+    "sha256": "9914dc5ef6fa543843d8705f730ed7eb55036aafcd4527417c6ee7cfba2c6ad0"
+  },
+  {
+    "path": "packages/kernel/test/men-regions-scan.test.ts",
+    "bytes": 2037,
+    "sha256": "14bdad3f993c255a7de23ef1f5b1ab9d4fa93a348511a3fea7ef9ae17edfeaa4"
+  },
+  {
+    "path": "packages/kernel/test/menu-received.test.ts",
+    "bytes": 10413,
+    "sha256": "af82a9adf09e1343eb06676d756bcd04985c1f23b9014c85336ed341ab3816e5"
+  },
+  {
+    "path": "packages/kernel/test/one-writer.test.ts",
+    "bytes": 36172,
+    "sha256": "3fab98a4b4eb6b45e1674328b6df474e6f9372d7002b3c6960657d4710edc4e7"
+  },
+  {
+    "path": "packages/kernel/test/opening-pack.test.ts",
+    "bytes": 1878,
+    "sha256": "ea29f73d71992face2654fdb3122f77c35c94299ba7b2b652c50a1dbb3e67d55"
+  },
+  {
+    "path": "packages/kernel/test/operations.test.ts",
+    "bytes": 36941,
+    "sha256": "1fab5a4c44b62b39cbe127bee54de5f59c7e3734e1835be9707f51d70ae8d2e1"
+  },
+  {
+    "path": "packages/kernel/test/pack-rules.test.ts",
+    "bytes": 11861,
+    "sha256": "4d0fd2dfdea1578b3364cb28ad91ad8cf4226da90297a500324a2cf8d82453c8"
+  },
+  {
+    "path": "packages/kernel/test/people-verbs.test.ts",
+    "bytes": 54857,
+    "sha256": "74b31355faa7f45496823e9d9c8476f5da7f5cee28c28af8b3a524e58c266dc2"
+  },
+  {
+    "path": "packages/kernel/test/people.test.ts",
+    "bytes": 15878,
+    "sha256": "67e2fa4a2df84f9b0c87bb6757d8714255ab0b86f7c63a6b67931f165d900a5d"
+  },
+  {
+    "path": "packages/kernel/test/plans.test.ts",
+    "bytes": 20288,
+    "sha256": "6ee755cfec4ccd53bbba52eb4ede3a74e81bec82ab730f5069f290353c42abb7"
+  },
+  {
+    "path": "packages/kernel/test/politics.test.ts",
+    "bytes": 27004,
+    "sha256": "f87aeee923dc832f79b7fe0a271724e51121f38991d88030cf40a087dea3bc55"
+  },
+  {
+    "path": "packages/kernel/test/post-membership.test.ts",
+    "bytes": 2853,
+    "sha256": "f1daf4f882daf283bd76da0a85c6197c083eadce8e5b6c65e9f6c30390e3c383"
+  },
+  {
+    "path": "packages/kernel/test/post-succession.test.ts",
+    "bytes": 4734,
+    "sha256": "c1c11432507a60239f6845192ce251369219d899b1d8f75cd05a1d8b0efe6321"
+  },
+  {
+    "path": "packages/kernel/test/press-view.test.ts",
+    "bytes": 14101,
+    "sha256": "ad089efae79cc0a3278c0dd9034eb8aa4f1c4ce63fa585eb2d55fedf2e0a210c"
+  },
+  {
+    "path": "packages/kernel/test/principal-candidate-cache.test.ts",
+    "bytes": 4402,
+    "sha256": "040a188059d5e816abfb45fab6ee3b489896c3d44004d98c605bc4b669069da7"
+  },
+  {
+    "path": "packages/kernel/test/principal-menu.test.ts",
+    "bytes": 4268,
+    "sha256": "38a28ae8c9c8bb338a9e1c9d6b217109c099449b7028ce9b155eb6feb738708d"
+  },
+  {
+    "path": "packages/kernel/test/received-concentration.test.ts",
+    "bytes": 5214,
+    "sha256": "6fa19ed92966747511ede46a4163df53e0745831d1f37008298fa80364f14929"
+  },
+  {
+    "path": "packages/kernel/test/received-establishment.test.ts",
+    "bytes": 2866,
+    "sha256": "3a4cf4d287f8904c4a711876d71a83b9686bfe5cdaa6e5ea847eeecd72741fdf"
+  },
+  {
+    "path": "packages/kernel/test/region-governments-tripwire.test.ts",
+    "bytes": 5061,
+    "sha256": "a1fd49061322976f6097d821829b8d39b4a2d61f2397e831cfbfe30b9bd83a10"
+  },
+  {
+    "path": "packages/kernel/test/report-delivery.test.ts",
+    "bytes": 2926,
+    "sha256": "fefd2378095c239df3d4821a1b3f02652dacb1d9f4130ba4b44b29152d73fdac"
+  },
+  {
+    "path": "packages/kernel/test/request-freeze.test.ts",
+    "bytes": 1603,
+    "sha256": "6ba642c98d0f99997efa2897f3f3a3d04dd6e8f339bd0267a9e4f0b8f6b7aee3"
+  },
+  {
+    "path": "packages/kernel/test/resignation.test.ts",
+    "bytes": 12678,
+    "sha256": "b18477dca8f3f5f9eefb33dba00feb0fb3c7b0beb9f85404ca9b82c56b934077"
+  },
+  {
+    "path": "packages/kernel/test/rng.test.ts",
+    "bytes": 1619,
+    "sha256": "15e8652852fe4ac183f732970f539b5bc4bb73a9bb7edc2b88f8aa221a6904c3"
+  },
+  {
+    "path": "packages/kernel/test/s102-call-terms.test.ts",
+    "bytes": 8970,
+    "sha256": "e55c43e8676ce13e8fd0060f45b892d3a5acf67502eda75e57aece33f7a09ecd"
+  },
+  {
+    "path": "packages/kernel/test/s106-reservations.test.ts",
+    "bytes": 6928,
+    "sha256": "022a25fe4a593f9070f021e98aefab098c1dc3d708a0c1b7b52dec9dbcc4cba9"
+  },
+  {
+    "path": "packages/kernel/test/s108-call-temperament.test.ts",
+    "bytes": 2041,
+    "sha256": "03b0cf998fb452a13c5bb40d9d260e0e09240a734d7021504d02e088cd0af42c"
+  },
+  {
+    "path": "packages/kernel/test/s108-value-clauses.test.ts",
+    "bytes": 2512,
+    "sha256": "3ace72f196ec2c3f193c07e407089747e4e59b25f96be8d3be809b2831911a67"
+  },
+  {
+    "path": "packages/kernel/test/s111-call-evidence.test.ts",
+    "bytes": 12283,
+    "sha256": "eb0b973df5d188cd1198c25d59ba90a2f72fa6e1551118c9101e1251176504c9"
+  },
+  {
+    "path": "packages/kernel/test/s112-authored-letters.test.ts",
+    "bytes": 15691,
+    "sha256": "3d890ff1d7dcc2dc894b1b6c2a6bc34a66bada55289f425aba2479c20e179fe7"
+  },
+  {
+    "path": "packages/kernel/test/s112-paper-receipts.test.ts",
+    "bytes": 21784,
+    "sha256": "3b6dc00fdbcf3842566549c7aff8a96f38c938973ce5d1595ee9efd0538cdcc0"
+  },
+  {
+    "path": "packages/kernel/test/s122-strength.test.ts",
+    "bytes": 3939,
+    "sha256": "81c3f3f31ab3cb08fc35ee223cbecf7c2fe4cddd45a63c4202368cbba89ab130"
+  },
+  {
+    "path": "packages/kernel/test/s123-mandates.test.ts",
+    "bytes": 20154,
+    "sha256": "17e5904d6480ceb2d5406f5830de690fa179724b738aca357dbe798702b494bd"
+  },
+  {
+    "path": "packages/kernel/test/s124-office-offers.test.ts",
+    "bytes": 24530,
+    "sha256": "898064a30bc19057ff44662ce71b6c0b46c3a7755ed6146d6340921f959f4772"
+  },
+  {
+    "path": "packages/kernel/test/s128-consultation.test.ts",
+    "bytes": 12347,
+    "sha256": "6ba47258e8eb1293373d579ff9100d67defe06359593a7ae0ce1c87fbd3249bd"
+  },
+  {
+    "path": "packages/kernel/test/s129-command-assignments.test.ts",
+    "bytes": 14911,
+    "sha256": "bf5d68d86bd4d5883ef8eb000098eaac3dcdaa3cfb978f3e4fec696ad85582ca"
+  },
+  {
+    "path": "packages/kernel/test/s25-audience.test.ts",
+    "bytes": 1866,
+    "sha256": "2e0b746850e7e6cc5129d2fc091261c887eb400f914acce45d385bc58f8d262e"
+  },
+  {
+    "path": "packages/kernel/test/s25-combat.test.ts",
+    "bytes": 1396,
+    "sha256": "03e9394b2d3d944ef37aa2da811963e8fd7a281213299d67489b705998408f99"
+  },
+  {
+    "path": "packages/kernel/test/s25-command.test.ts",
+    "bytes": 1374,
+    "sha256": "5f4caa1008d688a689afebe1d774c77b0658d83b9b6fed9179042bad0ad667f3"
+  },
+  {
+    "path": "packages/kernel/test/s25-control-index.test.ts",
+    "bytes": 1390,
+    "sha256": "2f43392c0b79e3b4f5230b1baf73b23944506236f5527c41c29c9531988466da"
+  },
+  {
+    "path": "packages/kernel/test/s25-forces.test.ts",
+    "bytes": 3457,
+    "sha256": "067869eff8113ad279dac6f6b63bdd71154c5bce0eae0563826323dcd4c2e62d"
+  },
+  {
+    "path": "packages/kernel/test/s25-knowledge.test.ts",
+    "bytes": 2229,
+    "sha256": "fc452389f566a8c0905de492fdcda5e88c520258e35af1628d4514acb0dcb496"
+  },
+  {
+    "path": "packages/kernel/test/s25-ladder.test.ts",
+    "bytes": 1994,
+    "sha256": "e8e4869787f194c2546ac7630776194e832eddff0447a3676bfeaeb28817f6e3"
+  },
+  {
+    "path": "packages/kernel/test/s25-log.test.ts",
+    "bytes": 1554,
+    "sha256": "b40bcd65135be2c7ea888e9c160eb1d2bcafe919c3a3565e8629f3590553a237"
+  },
+  {
+    "path": "packages/kernel/test/s25-messages.test.ts",
+    "bytes": 652,
+    "sha256": "e3686c69d0af6d68ae3db5fb172319e75028ce79e15b58e3e0c59405b60d15b1"
+  },
+  {
+    "path": "packages/kernel/test/s25-people.test.ts",
+    "bytes": 360,
+    "sha256": "f3cf9d4de54f2599a484f54c92d2df1c2bdaacd1f12c007f7dd6687c4b5361ba"
+  },
+  {
+    "path": "packages/kernel/test/s25-planner.test.ts",
+    "bytes": 5871,
+    "sha256": "91cc019c993dd48f60dbd58cb0097cd76ee001bc09ae08d8bcb042317fb5c2c8"
+  },
+  {
+    "path": "packages/kernel/test/s25-plans.test.ts",
+    "bytes": 1423,
+    "sha256": "a2174ee9839017278ecdca28a19c7af17bf5b14df38317b184da9a4c27057727"
+  },
+  {
+    "path": "packages/kernel/test/s25-politics.test.ts",
+    "bytes": 997,
+    "sha256": "23ef336032e20db8101e806740f516dc692f91e2b4a6d1649e148a9feaeae51a"
+  },
+  {
+    "path": "packages/kernel/test/s25-primitives.test.ts",
+    "bytes": 1881,
+    "sha256": "8dbbed41a3ae9a3de316e3c5956378067e2cb44478c4c8c2d352b340077e8383"
+  },
+  {
+    "path": "packages/kernel/test/s25-proxy.test.ts",
+    "bytes": 2945,
+    "sha256": "7700029fce611355a2e028e947eb5e5b6fbfcdbb4d6bc299bc30dc91425b1486"
+  },
+  {
+    "path": "packages/kernel/test/s25-reading.test.ts",
+    "bytes": 2115,
+    "sha256": "751a73d7acc1b4b923efaed2bc11a1f0a7cc1ffdb943c4333f46b16f33021262"
+  },
+  {
+    "path": "packages/kernel/test/s25-recruitment.test.ts",
+    "bytes": 722,
+    "sha256": "b753f9270eb62ecc2fd057a90d4299322bb73d7b7d8e4cb9cd9296c88f5a96ba"
+  },
+  {
+    "path": "packages/kernel/test/s25-regions.test.ts",
+    "bytes": 3084,
+    "sha256": "dc26243b7f28ddecc826c3c174bbcf4a7a1521d8185ee3c13cdc2ec6874561c1"
+  },
+  {
+    "path": "packages/kernel/test/s25-seats.test.ts",
+    "bytes": 2807,
+    "sha256": "563d85a3587c8275d99dbd9e7200b59d6cbf48ee0463859fa5fbf294affcef67"
+  },
+  {
+    "path": "packages/kernel/test/s25-situations.test.ts",
+    "bytes": 1572,
+    "sha256": "b66c46a247aaf2226c18be09f21a599edd78551fe10469bebe5c895136de39aa"
+  },
+  {
+    "path": "packages/kernel/test/s25-state-support.test.ts",
+    "bytes": 728,
+    "sha256": "d211682bbe437ccc99b4f8f94a39176b0c4149055ec41bffadaf0f376284b90a"
+  },
+  {
+    "path": "packages/kernel/test/s25-supply.test.ts",
+    "bytes": 1083,
+    "sha256": "edcd9bbaeb2cb652e1646e2bf3f8a2f074696db644a7389f716106561fa07354"
+  },
+  {
+    "path": "packages/kernel/test/s25-tick-orders.test.ts",
+    "bytes": 5348,
+    "sha256": "fe690ed9f9c93e0fae27958c62dd74613989d580864f11152b792afabea9613b"
+  },
+  {
+    "path": "packages/kernel/test/s25-tick-verbs.test.ts",
+    "bytes": 5204,
+    "sha256": "1178668a06b78b6547b4f16d82fb79146b9ba23fa527e4ccb1797681512700ec"
+  },
+  {
+    "path": "packages/kernel/test/s25-tick.test.ts",
+    "bytes": 13151,
+    "sha256": "92870bded20ad051925e30384aa0d384d806467eaff3a3ff07354d1e5601602a"
+  },
+  {
+    "path": "packages/kernel/test/s25-view.test.ts",
+    "bytes": 2418,
+    "sha256": "298bd88a55827409c5cec9c49e8de37ce93ce8fa8a927163782ef68f1c15d650"
+  },
+  {
+    "path": "packages/kernel/test/s25-world.test.ts",
+    "bytes": 323,
+    "sha256": "50193a05466416c25f2d685265120b1724b8dff54a43c8f2537bece6d24099aa"
+  },
+  {
+    "path": "packages/kernel/test/s51-reaffirmation.test.ts",
+    "bytes": 7516,
+    "sha256": "50a8d4812dd809544fc72589d5a396fc2a6a297e309cefb6ffac7e3f7721e9fb"
+  },
+  {
+    "path": "packages/kernel/test/s52-advance-notice.test.ts",
+    "bytes": 2743,
+    "sha256": "3f7d0b373d7d791b4c7647b53e40bd080447ab1987cee7b2c18dff7c150d8162"
+  },
+  {
+    "path": "packages/kernel/test/s54-congress.test.ts",
+    "bytes": 5988,
+    "sha256": "0b7e1c71c68dcaa57e14bd7021cf3f332d26270ecc274ee279c7d21447d33276"
+  },
+  {
+    "path": "packages/kernel/test/s54-politics-view.test.ts",
+    "bytes": 6786,
+    "sha256": "ead5cc47006b75c95190b12d9fd1d64d88114a7bbd7be5e1708431363d9eeb9a"
+  },
+  {
+    "path": "packages/kernel/test/s54-promises.test.ts",
+    "bytes": 7874,
+    "sha256": "ecf560f7ea2c826aa3874c92e7fec3245bd798be7a84cc664d5246cd75e6695e"
+  },
+  {
+    "path": "packages/kernel/test/s54-public-records.test.ts",
+    "bytes": 5067,
+    "sha256": "a6cf5fa51ecb64cdedfa828ecd40bbebf864d0750a921d1e104cfe3526a5cefa"
+  },
+  {
+    "path": "packages/kernel/test/s58-cause-intervals.test.ts",
+    "bytes": 2501,
+    "sha256": "2b69e0782079265e083fd049a3a68ff33b5382f1ce3341207e6ce384386c9a20"
+  },
+  {
+    "path": "packages/kernel/test/s65-sender-belief.test.ts",
+    "bytes": 19334,
+    "sha256": "1d0748301239a38d7680037c7ac121a32db7d345f206b2a886b308290c753d1a"
+  },
+  {
+    "path": "packages/kernel/test/s70-lot-ownership.test.ts",
+    "bytes": 1207,
+    "sha256": "422bf280f7c9a77c68860b3cb528eeff211ba2b287446ef962b1627dd214d30e"
+  },
+  {
+    "path": "packages/kernel/test/s70-lots.test.ts",
+    "bytes": 3465,
+    "sha256": "8e82c111515f79da44280572bd7ee8ecffa34e3c332bc1fb6fff00268b0fa6b8"
+  },
+  {
+    "path": "packages/kernel/test/s70-recruitment-lots.test.ts",
+    "bytes": 8442,
+    "sha256": "09d95dbefe4604fc85d0cc62b606dc5cfcb70bbbc5bd67db258f7da75a6a3f8c"
+  },
+  {
+    "path": "packages/kernel/test/s74-organisation.test.ts",
+    "bytes": 13218,
+    "sha256": "e114fb051c7c06c0480b840e51c027274a9d9e916b6a270a450e1bfc29e8d583"
+  },
+  {
+    "path": "packages/kernel/test/s90-dated-office.test.ts",
+    "bytes": 2906,
+    "sha256": "90225e33812e3b260b41fd087535562de4130e9e82c6c102639c49cf63e2ab72"
+  },
+  {
+    "path": "packages/kernel/test/s96-discretion.test.ts",
+    "bytes": 28863,
+    "sha256": "d5930114aa84c01fd5563527eb433e5f72e5f22de0e77cc76f05897ceb64db53"
+  },
+  {
+    "path": "packages/kernel/test/save.test.ts",
+    "bytes": 5845,
+    "sha256": "47783eea22a6dcdefecf78cc264eac1480087630a78aeebd443e5a0a937848f2"
+  },
+  {
+    "path": "packages/kernel/test/seat-people.test.ts",
+    "bytes": 19803,
+    "sha256": "1985179ede4b45f731754356dd4306a26b6a81f7735a4b15b2e98d75c2998a10"
+  },
+  {
+    "path": "packages/kernel/test/seat-view-contracts.test.ts",
+    "bytes": 7376,
+    "sha256": "395e6c0565cf33e540961ed289e9c380d2f4b5c99741c838826d8fc437fa3265"
+  },
+  {
+    "path": "packages/kernel/test/seats-log.test.ts",
+    "bytes": 25318,
+    "sha256": "553c8a8c99dec877777c9d7bb0c6a1b3fa411df6217d6522fd3d68333db4fea6"
+  },
+  {
+    "path": "packages/kernel/test/seats-orders.test.ts",
+    "bytes": 26543,
+    "sha256": "65b9d43c30ce5392959cbc7968400370b9e6fbf9d8d5d4be076fb4a705356d97"
+  },
+  {
+    "path": "packages/kernel/test/self-emancipation-lookup.test.ts",
+    "bytes": 4028,
+    "sha256": "af2b01a20ab7f6fabc02c91a25b0cb80025e18aec9432001b39337c50f55ede1"
+  },
+  {
+    "path": "packages/kernel/test/self-governing.test.ts",
+    "bytes": 10380,
+    "sha256": "1883b79b4d1af0d66d4a102bd797a3b102e4239ba60e2bce26651bdafddd026d"
+  },
+  {
+    "path": "packages/kernel/test/sendback-notes.test.ts",
+    "bytes": 13754,
+    "sha256": "f0a55e34e135d9335afb89977e67879fa881a5771f5926991556bcf19625f43c"
+  },
+  {
+    "path": "packages/kernel/test/serialize.test.ts",
+    "bytes": 5940,
+    "sha256": "05b39fc3c9cb726ce7d504799edb1b5b811c5fb4e8bf8cb57acf57fe2836a9be"
+  },
+  {
+    "path": "packages/kernel/test/situations.test.ts",
+    "bytes": 30632,
+    "sha256": "cc73d82225d694c03bae00d2c3d685fc6c5eb6957e843854a23ddedead11ad1b"
+  },
+  {
+    "path": "packages/kernel/test/start-copies.test.ts",
+    "bytes": 6985,
+    "sha256": "807662926b21f6385756f8fa6a36e6358f70a0ce8cc182b1714c4ccb43818ad8"
+  },
+  {
+    "path": "packages/kernel/test/state-data.test.ts",
+    "bytes": 2036,
+    "sha256": "75bba9eb8d48c7f32e206b7f3ee347cafada2aa1fff004e617ec4c69bf9a8602"
+  },
+  {
+    "path": "packages/kernel/test/stores.test.ts",
+    "bytes": 6194,
+    "sha256": "758a39179b81020deda0d59b3f2535f1dadb98c99cd1ea1be7e2541261573ee1"
+  },
+  {
+    "path": "packages/kernel/test/supply.test.ts",
+    "bytes": 10136,
+    "sha256": "e67fcb6b7c759f22dfb8f9d69b48d548f3b99f7520f81372e67d7ac106945525"
+  },
+  {
+    "path": "packages/kernel/test/support/forces-fixture.ts",
+    "bytes": 5845,
+    "sha256": "5eda24e8f4c114f351a9cf33bad3fddfa788691a04834ce39726695b9a3b454c"
+  },
+  {
+    "path": "packages/kernel/test/support/lot-fixture.ts",
+    "bytes": 1516,
+    "sha256": "668d9f499f41de93446918b8274e399b5efb84a9d4e6c5b3baa68567414fb0e0"
+  },
+  {
+    "path": "packages/kernel/test/support/map-fixture.ts",
+    "bytes": 22068,
+    "sha256": "188b1ebfc9bde8cab48aade6ab2b2cdf3b5d2a05e2a21ead15c0da5150e7d14f"
+  },
+  {
+    "path": "packages/kernel/test/support/one-writer.ts",
+    "bytes": 36592,
+    "sha256": "994cde6614963aa751ba773c9f4e02da6a31436968db92316c25ca5f9aef4f67"
+  },
+  {
+    "path": "packages/kernel/test/support/opening-comparison.ts",
+    "bytes": 2087,
+    "sha256": "9486d47a7ec360dde61669879a1c8400089f908f285512b591ee889228d24d15"
+  },
+  {
+    "path": "packages/kernel/test/support/s25-equivalence.json",
+    "bytes": 6694,
+    "sha256": "8a8a0ee23284fd5702ccf7c66f80dae54d0fda36b39ed1baab0e7e9a92a623ff"
+  },
+  {
+    "path": "packages/kernel/test/support/s25-fixture.ts",
+    "bytes": 1334,
+    "sha256": "38151656b109dadfbe8945881fd1984869be5d03e828f59db45b2924b4d5d9a2"
+  },
+  {
+    "path": "packages/kernel/test/support/s25-survey-results.json",
+    "bytes": 232809,
+    "sha256": "f7913bba8ae1b9eb0326935e78c202818bf638c7aa058e0e41cd77cc061ffcac"
+  },
+  {
+    "path": "packages/kernel/test/support/s25-survey.mjs",
+    "bytes": 12796,
+    "sha256": "afc79e66707aaeaa830bffca7005b06cbee497a9216f52a6c8d42c57743aee04"
+  },
+  {
+    "path": "packages/kernel/test/support/seats-fixture.ts",
+    "bytes": 6509,
+    "sha256": "55312372d99bf44e23e97179687bd59d90e2b2f27fe1c12957dd535f98c08251"
+  },
+  {
+    "path": "packages/kernel/test/support/source.ts",
+    "bytes": 9709,
+    "sha256": "a2f85d73360b749c4c4ba2a4001d1b575f89f7b8de1433515c4190eb7d0c6da1"
+  },
+  {
+    "path": "packages/kernel/test/support/test-seats.ts",
+    "bytes": 3450,
+    "sha256": "befebeca865bee3ce7272d76c5a63981f91190f782c97a50b3bb4c393817bbd0"
+  },
+  {
+    "path": "packages/kernel/test/support/tick-context.ts",
+    "bytes": 1428,
+    "sha256": "bc831aedbb787825bd19364996af1f63ae89970d727b3a7bec0e40ffb61ea3fc"
+  },
+  {
+    "path": "packages/kernel/test/support/timing.ts",
+    "bytes": 631,
+    "sha256": "c46e2da32415469a374c6b71a0c2172cdad6ba283d3265b2b1954ddf8ce02020"
+  },
+  {
+    "path": "packages/kernel/test/support/union-size-map.ts",
+    "bytes": 3448,
+    "sha256": "9cadee82b370f77b187beab0230d833c9c810f88140209b7d5f2d83e223f8279"
+  },
+  {
+    "path": "packages/kernel/test/support/war-flag-world.ts",
+    "bytes": 529,
+    "sha256": "b261c28a508b9bdb6f559dc2f50104970a800acecab133ecaa2d0e0945f22147"
+  },
+  {
+    "path": "packages/kernel/test/telemetry.test.ts",
+    "bytes": 1868,
+    "sha256": "f55d7cdb2704016743f1a8f9fbeb8f5cbe6e9061389ce2ee306869c4156620cc"
+  },
+  {
+    "path": "packages/kernel/test/unknown-compliance.test.ts",
+    "bytes": 7429,
+    "sha256": "f86e83731a7bc85a41d69542c4d857c6db8bcb0d77dab9ca1280866791ac6b66"
+  },
+  {
+    "path": "packages/kernel/test/war-flags.test.ts",
+    "bytes": 6711,
+    "sha256": "fed6c50bc31a494a1a89a4761717ed9d5d6e03dc658b055a72dd0d8062afffe5"
+  },
+  {
+    "path": "packages/kernel/test/world.test.ts",
+    "bytes": 4678,
+    "sha256": "3f2d6b071cc95224071ef2daa9850e805c8be623e40baac1b49c87ea84e0dc7d"
+  },
+  {
+    "path": "packages/pack-format/package.json",
+    "bytes": 789,
+    "sha256": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33"
+  },
+  {
+    "path": "packages/pack-format/schemas/checkpoints.schema.json",
+    "bytes": 6843,
+    "sha256": "a6238483be17c813764c6a8640552d47b95c07e8e6d0c6fd25bd449254ab95c6"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-anachronisms.schema.json",
+    "bytes": 461,
+    "sha256": "5dd89d1614637cc3758d55f465245b293ed5a126084e9bd7f17af5fef7aec170"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-checklist.schema.json",
+    "bytes": 726,
+    "sha256": "84da41634d08d924eb2dcb872b1f011947fee9664cb29a5f18d681d4d9cd1f79"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-classes.schema.json",
+    "bytes": 518,
+    "sha256": "7921e8f6bcc3698b6cca716dd0bb5f4ea3ae0ca5154afd488717af63e61b394a"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-forbidden.schema.json",
+    "bytes": 732,
+    "sha256": "dca2ad925270c767bbc78785b1065050ef82ffbeaf30c061c7067387d4047bf1"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-register.schema.json",
+    "bytes": 2533,
+    "sha256": "667640e54adfc6521f43dac687ad71d46b81a54096ad8b16b4b01bfc39af7f0c"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-release.schema.json",
+    "bytes": 490,
+    "sha256": "335bf1a7db42a22f1fe7ce613264e040db9b471f53442cc23145ffaf4ec0c4d3"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-reviewers.schema.json",
+    "bytes": 302,
+    "sha256": "2ed455d22215dda2b7d7a3abb7d9508522fa486c34ffb94b36e5625d624212cd"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-source-policy.schema.json",
+    "bytes": 923,
+    "sha256": "6b6d7bc420b0d5811b89b96839c928b51ae5eaa666dc0ca71ff875f77b7cb0d9"
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-triggers.schema.json",
+    "bytes": 485,
+    "sha256": "6d9b8b2975edfeb969e86626249f33738a3ebe9c2fe8ad9b04f4a383eaa31c44"
+  },
+  {
+    "path": "packages/pack-format/schemas/pack.schema.json",
+    "bytes": 122633,
+    "sha256": "2f9f21569d606b878ef4201d54c8012b42ce2dbcff5da1ef397299ede5901574"
+  },
+  {
+    "path": "packages/pack-format/schemas/provenance.schema.json",
+    "bytes": 873,
+    "sha256": "ed8cffc4c672e8d0365ba57c24dc20c93089c6d21c8a9bc03655a112ccd19648"
+  },
+  {
+    "path": "packages/pack-format/schemas/pushback-register.schema.json",
+    "bytes": 2923,
+    "sha256": "824e47c26f01b6f7cf369ba2a5315a160239c32bc0ea828e0e252a9b29c77a73"
+  },
+  {
+    "path": "packages/pack-format/schemas/scenario-header.schema.json",
+    "bytes": 2009,
+    "sha256": "b9132b311c60c921b148998a03b308242e2aff7d9e0b1c04f0ae020ed8d61771"
+  },
+  {
+    "path": "packages/pack-format/schemas/scenario.schema.json",
+    "bytes": 13099,
+    "sha256": "7901670e201faeb76d2f317320df2eebd6bdcb2c1c9e9189b16b46faa7713a5b"
+  },
+  {
+    "path": "packages/pack-format/schemas/situation.schema.json",
+    "bytes": 40076,
+    "sha256": "5939f6c00805c5a277e9eeec92bd38f6b9d1202046bf5b1981b9f954753b9ca0"
+  },
+  {
+    "path": "packages/pack-format/schemas/strings.schema.json",
+    "bytes": 296,
+    "sha256": "23ab1ab6beee390de2822206648bf6d1f61d8701d24ec807d6be42360774ed4e"
+  },
+  {
+    "path": "packages/pack-format/schemas/world.schema.json",
+    "bytes": 142345,
+    "sha256": "2309694da3c0395711f391c97cbecac3ce6a2372550ef04fdc43483720802828"
+  },
+  {
+    "path": "packages/pack-format/src/banned-sources.ts",
+    "bytes": 6122,
+    "sha256": "cde47956d0aad3bb51e3306783085bbeecce37205fcd5ee9004f5f22ca16289a"
+  },
+  {
+    "path": "packages/pack-format/src/call-profiles.ts",
+    "bytes": 2534,
+    "sha256": "535103e106f3454d242ad7ba6672bebff82eca35310acd8faf647690005504d7"
+  },
+  {
+    "path": "packages/pack-format/src/cells.ts",
+    "bytes": 11011,
+    "sha256": "da8bcf0705d49b331317bf8b4970e1dd1ff54061f3f1f1b7b7cee6044bd99ca0"
+  },
+  {
+    "path": "packages/pack-format/src/checkpoints.ts",
+    "bytes": 8999,
+    "sha256": "84ce4ff68f1f66ce49bb000d7fe7ff42577a47495687406d26ca889a478822cf"
+  },
+  {
+    "path": "packages/pack-format/src/csv.ts",
+    "bytes": 2991,
+    "sha256": "dd195b827a69df0228303bc19c7e860d725e76864b3eb85fe9eefc77e4b380df"
+  },
+  {
+    "path": "packages/pack-format/src/format.ts",
+    "bytes": 1180,
+    "sha256": "7abac222a396cba916b71b89f5ba2a110bc22737d603a8ef44581ca75e346500"
+  },
+  {
+    "path": "packages/pack-format/src/gate.ts",
+    "bytes": 65854,
+    "sha256": "4e7ddd4eb6c795ea019746153172317552e5c218144301ecccad9c538a5a8e31"
+  },
+  {
+    "path": "packages/pack-format/src/generate.ts",
+    "bytes": 44628,
+    "sha256": "a5f355652ff5af381af5a14ced2b71bbeec68f47d541ef7dae03847586076f67"
+  },
+  {
+    "path": "packages/pack-format/src/index.ts",
+    "bytes": 881,
+    "sha256": "03c2c70419b9c50ef6ae1718e2ce37e0678453c0b7f37217d50a019c1519bead"
+  },
+  {
+    "path": "packages/pack-format/src/issues.ts",
+    "bytes": 2149,
+    "sha256": "d402ab532ddff82fee173df5627619d2905cf90869ef360a2f994c1d6f73ed6c"
+  },
+  {
+    "path": "packages/pack-format/src/layout.ts",
+    "bytes": 7610,
+    "sha256": "5cc8683c708cdbccbc17d700ad6b816721a1ca595076c7ad1c8ccfbab604d948"
+  },
+  {
+    "path": "packages/pack-format/src/licences.ts",
+    "bytes": 2080,
+    "sha256": "bbd4f62f63486177b94e293aad067f0e9665287744b24347c1ef232180d16093"
+  },
+  {
+    "path": "packages/pack-format/src/load.ts",
+    "bytes": 4821,
+    "sha256": "3d7bb83bbab5f90012248d32b0c701ba319bb61c36134a1c12db4dd6a0a7cee3"
+  },
+  {
+    "path": "packages/pack-format/src/published.ts",
+    "bytes": 4466,
+    "sha256": "66bc797be56f066f7953bfd877b24568ccb20c05f80323132689582cc5476416"
+  },
+  {
+    "path": "packages/pack-format/src/pushback-register.ts",
+    "bytes": 3311,
+    "sha256": "c3aaf9285f9c4f57e72f310168d9061137441eda548b25dee9080a5b04057ee7"
+  },
+  {
+    "path": "packages/pack-format/src/schemas.ts",
+    "bytes": 69090,
+    "sha256": "7b5440a9897737707d160e90499b7778b5da3f3383b7a906d70eb96b99f0882d"
+  },
+  {
+    "path": "packages/pack-format/src/situation-layer.ts",
+    "bytes": 21353,
+    "sha256": "67d4b5427352d9ca8c149c63f38b44626250a3cdcf61655a00da4bb14083b6ce"
+  },
+  {
+    "path": "packages/pack-format/src/situations.ts",
+    "bytes": 57359,
+    "sha256": "89e5f06ec075bd38b5981b2a64ea50d0ffa205b7fe32ce9da7e65a6d881f40e5"
+  },
+  {
+    "path": "packages/pack-format/src/strings.ts",
+    "bytes": 2050,
+    "sha256": "491d5d1485949c82508bacdefc22720a553b3bfae078e227c9176dcf188737fa"
+  },
+  {
+    "path": "packages/pack-format/src/validate.ts",
+    "bytes": 74002,
+    "sha256": "f1f3a9b89c7f3a11d74dc3c0c2790181eb9c624cd172ff0e4bd3be6c06c8055d"
+  },
+  {
+    "path": "packages/pack-format/test/atrocity-decisions.test.ts",
+    "bytes": 2891,
+    "sha256": "1fd8421618fd228913e3a487122cd6d93047ff81f666ce140abd722c77b4a50d"
+  },
+  {
+    "path": "packages/pack-format/test/cells.test.ts",
+    "bytes": 4523,
+    "sha256": "e407ca036e0a41b59a2d239289692689958934a15cf4fa02701fecae612b4a19"
+  },
+  {
+    "path": "packages/pack-format/test/checkpoints.test.ts",
+    "bytes": 5618,
+    "sha256": "e6d2c11dda90f4a11fb5f1ae9805f1a84d6029875639c99af46c7f733edd578c"
+  },
+  {
+    "path": "packages/pack-format/test/command-proposals.test.ts",
+    "bytes": 9203,
+    "sha256": "8dabfc433c7a58129714aec756277dcc37fbb410322ebc6240c8501fe0f32511"
+  },
+  {
+    "path": "packages/pack-format/test/gate.test.ts",
+    "bytes": 58451,
+    "sha256": "9a990b3e3bfb78d3431cbc6daffe36294219c0daba9e8061d7c8d70b33d8cd4f"
+  },
+  {
+    "path": "packages/pack-format/test/generate.test.ts",
+    "bytes": 5461,
+    "sha256": "d270b1ec7e61480aaed40484fa026d159a50d050d6b7cea84198d556651e665f"
+  },
+  {
+    "path": "packages/pack-format/test/nation-acts.test.ts",
+    "bytes": 19617,
+    "sha256": "50154c2c91cf713a165f944525a53605cf0c47036c94f9d126c042c8f77bee12"
+  },
+  {
+    "path": "packages/pack-format/test/packs.test.ts",
+    "bytes": 2959,
+    "sha256": "4b7f8487edc40dd342ddc8d78f10aefb5ae9d53e2d87c4a4b1503f8c51c06605"
+  },
+  {
+    "path": "packages/pack-format/test/policy-rows.test.ts",
+    "bytes": 10284,
+    "sha256": "d408e13208e761158c914e5b139eccb47ab0492191d88b05a0a6f12ede14d230"
+  },
+  {
+    "path": "packages/pack-format/test/post-succession.test.ts",
+    "bytes": 1642,
+    "sha256": "f26449a2d981c1a8d1129e86eb4187bd6f3148b4f1a8d71efd7c2c5a49777940"
+  },
+  {
+    "path": "packages/pack-format/test/proposal-basis.test.ts",
+    "bytes": 3336,
+    "sha256": "79e2b4b66c9775e8c7ee29a2eb13fa7803eb8c72c0d43292ed04e1e71fcaf4c3"
+  },
+  {
+    "path": "packages/pack-format/test/record-terms.test.ts",
+    "bytes": 2082,
+    "sha256": "f026edc19bcfb62057aa36a167233106c811576382fb3c721728c5338fa61175"
+  },
+  {
+    "path": "packages/pack-format/test/renewal-validation.test.ts",
+    "bytes": 2509,
+    "sha256": "15da9cc68555e0843fd39a2a8d2f099ef01c9a599c2ab48c55ef8c86e8e4afb8"
+  },
+  {
+    "path": "packages/pack-format/test/resignation.test.ts",
+    "bytes": 2066,
+    "sha256": "f1dbd1c7ab870ba6ae700032e6f19a0f199be7eac4073298a38b6dc18b5817dc"
+  },
+  {
+    "path": "packages/pack-format/test/s52-source-guards.test.ts",
+    "bytes": 1885,
+    "sha256": "a97cf82e70364c6a0905f63520a38fc3757c551f9bfd3e1bfe7dce95fb853e5b"
+  },
+  {
+    "path": "packages/pack-format/test/schemas.test.ts",
+    "bytes": 7577,
+    "sha256": "6c13f62b418c314aba7972674b9a577f2f285c4634bc1c0251d8ccfaa5370fed"
+  },
+  {
+    "path": "packages/pack-format/test/self-emancipation-gate.test.ts",
+    "bytes": 1318,
+    "sha256": "690ba55742ef30a0680a960b68f1b722200038f0abda12ab02262fa70a8f34f0"
+  },
+  {
+    "path": "packages/pack-format/test/staff-absence.test.ts",
+    "bytes": 2140,
+    "sha256": "35b3cc65969ffd43d773986b92f12309511598c4ca79c77d50fa796c2d8ce5f9"
+  },
+  {
+    "path": "packages/pack-format/test/state-forces.test.ts",
+    "bytes": 1872,
+    "sha256": "b2a9777b8cff019b53f584b358dda353d0816920cbf21843fff8c9b63554c77c"
+  },
+  {
+    "path": "packages/pack-format/test/strings.test.ts",
+    "bytes": 1214,
+    "sha256": "2ff15e191480a229f67dfc9d8d3317d8468511cbe2766055800607d32fda47ef"
+  },
+  {
+    "path": "packages/pack-format/test/support/fixture.ts",
+    "bytes": 22923,
+    "sha256": "511a46c928c668165a65620b78cb434941a1a0b2d02c5ad0dd86165cccdd4d73"
+  },
+  {
+    "path": "packages/pack-format/test/support/testbed.ts",
+    "bytes": 2347,
+    "sha256": "1fd299c4a022127e73b293ad7f903871af4b299427a47b4433815ef4927e5b92"
+  },
+  {
+    "path": "packages/pack-format/test/validate.test.ts",
+    "bytes": 76728,
+    "sha256": "3f67158bd4f161f2636521154e1e904cdc1d272dad989c1ca3bc437c31f4685b"
+  },
+  {
+    "path": "packages/rule-seats/package.json",
+    "bytes": 459,
+    "sha256": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8"
+  },
+  {
+    "path": "packages/rule-seats/src/index.ts",
+    "bytes": 19979,
+    "sha256": "bf9486289606a004d45da8001cb9bfbbfa9c87c301fe2bf311d6ed202b4e828e"
+  },
+  {
+    "path": "packages/rule-seats/test/rule-seats.test.ts",
+    "bytes": 29221,
+    "sha256": "1210b645e1407bf5a74ac11e6cf101dab72ff2ad85f4284eda19d58470077cdd"
+  },
+  {
+    "path": "packs/README.md",
+    "bytes": 695,
+    "sha256": "52c4130c1a186a97a13fa9bb49ee5f61ee76e827efb0ce75b2c01877a21728d1"
+  },
+  {
+    "path": "packs/testbed/PROVENANCE.json",
+    "bytes": 397,
+    "sha256": "2c57f17bfad2a10aae8af5e6429d908beaf01bce5d0cc8d6f0516075e68bf252"
+  },
+  {
+    "path": "packs/testbed/README.md",
+    "bytes": 7818,
+    "sha256": "d3245648c8ad162f37151f3cabc082135ff24dc29bd60f18bf2ff88d81c0f575"
+  },
+  {
+    "path": "packs/testbed/data/GENERATED.md",
+    "bytes": 371,
+    "sha256": "51593e36d133d507e7a5d69e49d4477a1fc8e584910908a7b755a2c3e5d254ae"
+  },
+  {
+    "path": "packs/testbed/data/scenarios/opening.json",
+    "bytes": 23078,
+    "sha256": "c75f07feabd391fbf198f29275d17bba2bd04ec4569476cdf030bc52337f5db1"
+  },
+  {
+    "path": "packs/testbed/data/scenarios/summer_front.json",
+    "bytes": 11364,
+    "sha256": "09e5c812cb8584cc051c2dc4d45868279cef914cf963725d475bb7e83b050fe9"
+  },
+  {
+    "path": "packs/testbed/data/strings/en.json",
+    "bytes": 6768,
+    "sha256": "77ba5333ef7ad272aaed508d4efeb4e16247191f63434821df17ff0b78bf008e"
+  },
+  {
+    "path": "packs/testbed/data/world.json",
+    "bytes": 67838,
+    "sha256": "7938364140a352113ca91bf94875f7b7ace37b1d6cbf435f1c701233e8f18927"
+  },
+  {
+    "path": "packs/testbed/gate/anachronisms.json",
+    "bytes": 101,
+    "sha256": "bdf2030d7f72de5c4e184b059f2f3d59b5c120aa3169b0de87f5daab83a33d1e"
+  },
+  {
+    "path": "packs/testbed/gate/checklist.json",
+    "bytes": 5159,
+    "sha256": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a"
+  },
+  {
+    "path": "packs/testbed/gate/classes.json",
+    "bytes": 335,
+    "sha256": "f115ed874cd4cd9269e2f7c8692f120beb6d239702681daf461095158a117eba"
+  },
+  {
+    "path": "packs/testbed/gate/forbidden.json",
+    "bytes": 1095,
+    "sha256": "7ae42aa1d62c73622b57186049681c64f6fa081974e1f8c9bfbb2659597ae6fc"
+  },
+  {
+    "path": "packs/testbed/gate/register.json",
+    "bytes": 1449,
+    "sha256": "1ec795f9497997ebfd52d5b188c8e1a9a247deb329f1039505a9893cf01cac9e"
+  },
+  {
+    "path": "packs/testbed/gate/release.json",
+    "bytes": 174,
+    "sha256": "a601be0009cf289f19b0e7e26bfe8daafca47e2641cff07f889b768e3ade1cb9"
+  },
+  {
+    "path": "packs/testbed/gate/reviewers.json",
+    "bytes": 35,
+    "sha256": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc"
+  },
+  {
+    "path": "packs/testbed/gate/source-policy.json",
+    "bytes": 32,
+    "sha256": "5b282f86b6703464a9bd2544c8009d9fcfce7e475f3942cf8e06a570374a5a7c"
+  },
+  {
+    "path": "packs/testbed/gate/triggers.json",
+    "bytes": 223,
+    "sha256": "c2cd27e50f1182e47de2f1748d6294a1d84fd31985b668282f3ad5ad9922d7fe"
+  },
+  {
+    "path": "packs/testbed/pack.json",
+    "bytes": 25121,
+    "sha256": "736cd72fff2c4d59bfd7a58dcb3585ad6a8f9794449e6cd197b997640829b943"
+  },
+  {
+    "path": "packs/testbed/situations/eastwatch_followup.json",
+    "bytes": 1784,
+    "sha256": "9fefeee20ebab402d481b4dcd58b81d293983fb9b75a69fce297af1b88a4e7e0"
+  },
+  {
+    "path": "packs/testbed/situations/eastwatch_stalls.json",
+    "bytes": 2083,
+    "sha256": "9ef5170f7f4d6dda0d094184b2685a15e5d65c247d0273e4cfd3cfc81285e769"
+  },
+  {
+    "path": "packs/testbed/situations/fen_arrivals.json",
+    "bytes": 1047,
+    "sha256": "2aa3499c7a6a660adccd4a0145eb7da0eda678bd53f903a881a9375134abb9c4"
+  },
+  {
+    "path": "packs/testbed/situations/fen_crossing.json",
+    "bytes": 2838,
+    "sha256": "a7e5e8b179974bdac616b7f9a88ac2ab2eace09212e55afc5be6ec44ec247035"
+  },
+  {
+    "path": "packs/testbed/situations/harbour_burning.json",
+    "bytes": 1387,
+    "sha256": "7d0bf9cadb9b2b0e6dfb5522c94e5c0e2e2a7945884c2c616566e99b45dd8588"
+  },
+  {
+    "path": "packs/testbed/situations/sanctuary_act.json",
+    "bytes": 1107,
+    "sha256": "8ad270285e84f46bb34b1ee4e47bda2bb581dd1f5575d4a600ae1816ff192001"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/control.csv",
+    "bytes": 718,
+    "sha256": "33762c78570148cde02fca0b233bd56212b155c471d23dac7752405ffd7f5a91"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/department_changes.csv",
+    "bytes": 230,
+    "sha256": "07b83b00c4297fc40199aa7c7f6b15fe6d465e407054fc2e47478f0d143df3c4"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/depot_conditions.csv",
+    "bytes": 59,
+    "sha256": "3241c6695705d01c0929a7ba87b1da851754e88244bb092fe1a0e39257a4e1cd"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/edge_conditions.csv",
+    "bytes": 112,
+    "sha256": "f8cb01faeaf505d82bf58b05c3822fed06c5eb6281c9f15ad31893abe0a140fb"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/force_blocks.csv",
+    "bytes": 2819,
+    "sha256": "ecb7d2293ffee28f27fce08408c87ddeb1d9e767fbbf1d4475bbac4b2de048df"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/fortification.csv",
+    "bytes": 134,
+    "sha256": "6040dedb3c150155372b1d28bd87f73d3163767676d9cb283a7763ea875877e0"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/governments.csv",
+    "bytes": 1144,
+    "sha256": "e581c19a25027eccefe319f0623c3a25411d589f8987e9e661e6e26274042f7a"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/holders.csv",
+    "bytes": 891,
+    "sha256": "ec32c201693f05ca18380b26a33ff88f0f991379db9389a65d2fb4f0462c7b5f"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/loyalty.csv",
+    "bytes": 349,
+    "sha256": "3b1bed7ff9340553eb5b8da3de4fa08fa8b2f969aae046ade72569996ccff0f8"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/obstructions.csv",
+    "bytes": 334,
+    "sha256": "3c6c9c382bdcaa70cefd4ee405bf92dd2bf8556a0bc6ed6a4727f620493b1e05"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/post_links.csv",
+    "bytes": 390,
+    "sha256": "a366aa5a3d2f815fc34ef2fd7cb6e8e38ca4e2c74054ffcc7e3744e85b8bc681"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/posts.csv",
+    "bytes": 3101,
+    "sha256": "038653478ee3df4323594bcfb0c57d864eeaffb26124fc013377b35b2e538831"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/scenario.json",
+    "bytes": 503,
+    "sha256": "852aab3227350509de6c07330deb67a2f74fa40637102b820b3ceb9e579e33cc"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/standing_orders.csv",
+    "bytes": 680,
+    "sha256": "55c2369277843f95d3058219c228459ea80356fd1516403fbd3080b3dcf3736f"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/control.csv",
+    "bytes": 657,
+    "sha256": "728ebe1f62460f18cd67abba77c0d39fa0f86648d74cfd9af880e68d13cc790f"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/force_blocks.csv",
+    "bytes": 1064,
+    "sha256": "94b877e5935673d69fefead05ae7001bb4bcc17d302600d932d11e434ddc35a9"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/fortification.csv",
+    "bytes": 116,
+    "sha256": "536a401d5895dcddec9979ca9734b0da9bc5aacae3aee5ada63d65164e14b703"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/governments.csv",
+    "bytes": 1099,
+    "sha256": "aa2df08078d672268e9c5d5bee5517161b1fd2b84126291511b64a59f109d7df"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/holders.csv",
+    "bytes": 525,
+    "sha256": "602bd851b88a287fe173d1d4d7ed85a89eba0f1c76fea62d298f2a542b5351dc"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/obstructions.csv",
+    "bytes": 130,
+    "sha256": "f03d49a8d20b59ee50bc872f78a797129f8cd76f3588a9185d0fd018b26fd3a1"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/posts.csv",
+    "bytes": 1323,
+    "sha256": "be81838299b585a1c50e9515cafe6f9cf342c2bc90ade5f0000fdb7e03587c61"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/scenario.json",
+    "bytes": 501,
+    "sha256": "faec5bb3fc7863a078a4d7f91542e8c07a48c076d69439939f67aa917ae4da67"
+  },
+  {
+    "path": "packs/testbed/source/world/census.csv",
+    "bytes": 456,
+    "sha256": "46c6510d755561c6d1b81b1ecc6db0721b289861e46948454a11ca50cc7187e7"
+  },
+  {
+    "path": "packs/testbed/source/world/departments.csv",
+    "bytes": 879,
+    "sha256": "32318427d538296d4e78e067dfb48f662d5ffa5d1eab77bb618d12e45082798b"
+  },
+  {
+    "path": "packs/testbed/source/world/depots.csv",
+    "bytes": 344,
+    "sha256": "2948bec2852bc195efb2d92dad3c13d73062069df6482e52104da2da3dba9f91"
+  },
+  {
+    "path": "packs/testbed/source/world/edges.csv",
+    "bytes": 3370,
+    "sha256": "e8e125cf1bc70f36d374ec7107c06cee2e42bb54f5b73ee47cfb6fbfd0c84fe7"
+  },
+  {
+    "path": "packs/testbed/source/world/installations.csv",
+    "bytes": 927,
+    "sha256": "b4fb46701534fa16ce4524d99e9f966b037400c39bbee947fde4de7f59be9bed"
+  },
+  {
+    "path": "packs/testbed/source/world/people.csv",
+    "bytes": 4841,
+    "sha256": "1e4aeff84d619d3ef2f10aeceea293b097a57e278fff56c6d1bc86430efcf30f"
+  },
+  {
+    "path": "packs/testbed/source/world/rail_lines.csv",
+    "bytes": 247,
+    "sha256": "8e98ba341b1b8c2a22e39327275385b95225eaaf3c8c7afc906a8ad1bf4f4535"
+  },
+  {
+    "path": "packs/testbed/source/world/regions.csv",
+    "bytes": 3434,
+    "sha256": "f66a0d8d63ad9209ac4b2aa49d294b843ce299eb52ee568731cbe99893e7b5cd"
+  },
+  {
+    "path": "packs/testbed/source/world/weather_zones.csv",
+    "bytes": 129,
+    "sha256": "b2a4a416e3f5a2976135c2133beee8db0b56215229d38d79332641658b062e5f"
+  },
+  {
+    "path": "packs/testbed/strings/en.json",
+    "bytes": 30698,
+    "sha256": "e0cb14d54978bff10dd2ffdcbf7a41e256019d9e60062e7de4d941f5af80662d"
+  },
+  {
+    "path": "packs/testbed/test/control.test.ts",
+    "bytes": 5871,
+    "sha256": "66c659540ef75fcdefdf7fec60d4a789cb3bdbbab5b9e020cc68078663c75c30"
+  },
+  {
+    "path": "packs/testbed/test/forces.test.ts",
+    "bytes": 2996,
+    "sha256": "d93477515a1b026e2b6c7969849cb5ce7ba833ce823502996499c2c40b404851"
+  },
+  {
+    "path": "packs/testbed/test/seat-people.test.ts",
+    "bytes": 3790,
+    "sha256": "f1711c1c988b04b39d480f6ad6232a5037d1f8858491e0685d0f6e02d01359c9"
+  },
+  {
+    "path": "packs/testbed/test/world-v2.test.ts",
+    "bytes": 9211,
+    "sha256": "fa3d5ca41647074ed7cf2e56cdd6d017815cf6c6afd09dd88d9d84fcad716095"
+  },
+  {
+    "path": "packs/union-1861/PROVENANCE.json",
+    "bytes": 138644,
+    "sha256": "80fe2e0ac219a6891275a5ae7faf3f9ceb550b58bbe8ef2e0a922c2678c502d7"
+  },
+  {
+    "path": "packs/union-1861/README.md",
+    "bytes": 6844,
+    "sha256": "83aa9d9cd61909f3da30473ac9c3315ab9a03c8190ecb2b06e05b5094d68ac6f"
+  },
+  {
+    "path": "packs/union-1861/calls-1861.json",
+    "bytes": 15741,
+    "sha256": "a28eb70d0e8b97d9c499a43b27b56b6ce5de3cf982e69d94e2ec36c513b874e7"
+  },
+  {
+    "path": "packs/union-1861/checkpoints.json",
+    "bytes": 10438,
+    "sha256": "121e97ec90fb9ec31756c0e7250d77ef795869c450a4ede68f7649071d002afd"
+  },
+  {
+    "path": "packs/union-1861/data/GENERATED.md",
+    "bytes": 343,
+    "sha256": "803e5173f49d5223354046ee94b7f05c714c50137c6886780389a853a0e8b805"
+  },
+  {
+    "path": "packs/union-1861/data/scenarios/march_1861.json",
+    "bytes": 190474,
+    "sha256": "94da76d36be9150a541c828c8b81913fdb775349cb26ecd18fc9fd205d7399d9"
+  },
+  {
+    "path": "packs/union-1861/data/strings/en.json",
+    "bytes": 61338,
+    "sha256": "ed80207745a26579d49b8c465dda3fc24a3e43f113df87b8db43dfd28901a056"
+  },
+  {
+    "path": "packs/union-1861/data/world.json",
+    "bytes": 2100184,
+    "sha256": "f214d7575d2c96824c33c9cb07a0ef226367bb5815ccf8ba060f3203d427e718"
+  },
+  {
+    "path": "packs/union-1861/gate/anachronisms.json",
+    "bytes": 1763,
+    "sha256": "6815417aca239ff2c1d78755fc6734f3e5eb73bc58afccc9cb457ae8f9c3ce44"
+  },
+  {
+    "path": "packs/union-1861/gate/checklist.json",
+    "bytes": 5159,
+    "sha256": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a"
+  },
+  {
+    "path": "packs/union-1861/gate/classes.json",
+    "bytes": 683,
+    "sha256": "8f6633af861a289b9eb96999e69bf2ea6b35f93c7b9ce62179875f2d0a766461"
+  },
+  {
+    "path": "packs/union-1861/gate/forbidden.json",
+    "bytes": 10894,
+    "sha256": "f6e1e7221377004ee8ce624a185a534b6442a04243b8aa3cad304e6a486d83d2"
+  },
+  {
+    "path": "packs/union-1861/gate/register.json",
+    "bytes": 27129,
+    "sha256": "11587c14e1cc40aa33fd3dca5bf3289d8d4a26f335ee6ba503dbc8cbe3eabb95"
+  },
+  {
+    "path": "packs/union-1861/gate/reviewers.json",
+    "bytes": 35,
+    "sha256": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc"
+  },
+  {
+    "path": "packs/union-1861/gate/source-policy.json",
+    "bytes": 1377,
+    "sha256": "3044c446843d5db58ec2bbfd2a3da96e53c504efa4ef14a3bfeca4612455808c"
+  },
+  {
+    "path": "packs/union-1861/gate/triggers.json",
+    "bytes": 2972,
+    "sha256": "cc15707d4fe2fa20317183a434da3f1ca418da793843f8ee6ddf1e2a8ae9d6e9"
+  },
+  {
+    "path": "packs/union-1861/pack.json",
+    "bytes": 739197,
+    "sha256": "8002b4e1e755f003eac23286e0f0aa88e688d4d197a8f87007893f63efb76a17"
+  },
+  {
+    "path": "packs/union-1861/pushback-confederate.json",
+    "bytes": 45690,
+    "sha256": "073e993e8052d8d9ea078374a71707ae5318003fab6f7fa5b7d078be94ff2d43"
+  },
+  {
+    "path": "packs/union-1861/pushback-union.json",
+    "bytes": 71861,
+    "sha256": "410075c498583bdd4766ae67d5939f73cb14f859af16a01ee92fe3281f4343d1"
+  },
+  {
+    "path": "packs/union-1861/situations/arkansas_forces_transferred.json",
+    "bytes": 4151,
+    "sha256": "dd378a6183dd35a492cb16f973cb84d1f21d59cf346a57b48abc36d682f4184c"
+  },
+  {
+    "path": "packs/union-1861/situations/arkansas_secedes.json",
+    "bytes": 2610,
+    "sha256": "4b25073e53205ca7536553ff2abc7d0935cead80ed6f2c406f194fb67a04fa10"
+  },
+  {
+    "path": "packs/union-1861/situations/baltimore_route_closed.json",
+    "bytes": 1002,
+    "sha256": "8ca8a9a37f8b86aa24358d9f0f627c18646d15de236298143bb4c3e0fa7d88f3"
+  },
+  {
+    "path": "packs/union-1861/situations/bates_fugitive_law_opinion.json",
+    "bytes": 2294,
+    "sha256": "704540c2aa47854006c1eaae6bc5ddf5acb63c657f0a4b7a9592944c2a368a16"
+  },
+  {
+    "path": "packs/union-1861/situations/black_volunteer_offers.json",
+    "bytes": 2444,
+    "sha256": "b1cc139e07bff97385b2cd7d2c946ab794d761d02762759fc0dfd1b569c82ede"
+  },
+  {
+    "path": "packs/union-1861/situations/blockade_or_closure.json",
+    "bytes": 2219,
+    "sha256": "8b95ed78c15accc251396c7f5a2076d788824f6027f1cf98c6cf86480648f0c9"
+  },
+  {
+    "path": "packs/union-1861/situations/call_for_troops.json",
+    "bytes": 13796,
+    "sha256": "87343ac2c352ed2d2d021e46089dac3c57bf8c072081f6c20df9406edf1cf1b8"
+  },
+  {
+    "path": "packs/union-1861/situations/camp_jackson_deaths.json",
+    "bytes": 2767,
+    "sha256": "80bae2612b449b041a2e012822cdbe4434ec2f52c0bf338fb566c9976f00c867"
+  },
+  {
+    "path": "packs/union-1861/situations/charleston_anderson_command.json",
+    "bytes": 1499,
+    "sha256": "6a07a22200977f83a9f0e4648b31c5d8843fc34b36f8d241de3d93d8a26c02e4"
+  },
+  {
+    "path": "packs/union-1861/situations/cherokee_neutrality.json",
+    "bytes": 2676,
+    "sha256": "6fc6b23600221f414afabfb7b9d613f7e63ee7e1424bf807ded4da1820a1d24b"
+  },
+  {
+    "path": "packs/union-1861/situations/chickasaw_treaty.json",
+    "bytes": 3046,
+    "sha256": "c6288db9dab9a346382a452919d4e70228d92dde15b364b5c23654579515baca"
+  },
+  {
+    "path": "packs/union-1861/situations/choctaw_treaty.json",
+    "bytes": 3034,
+    "sha256": "dcf21dedb00b992e27607d6ae3e0f2e1817114223e8e559ac39525c19dc4f4a9"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_capital_moved.json",
+    "bytes": 1348,
+    "sha256": "52f469e80f72ac96c2f4b6b1ac81b66458a8e83523cd65f0784a19cb6c68bcd8"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_commissioners.json",
+    "bytes": 1739,
+    "sha256": "0345707ec3052d3f6013f4deda730fe1b9c938f190d12f41d7c8637dcb0b6ae1"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_opening.json",
+    "bytes": 2323,
+    "sha256": "80909b7a68db3628041dac1528e419b5c70526bfb74b575587ba2d11d47b3eeb"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_protection_act.json",
+    "bytes": 2681,
+    "sha256": "40bd7d93c82de5458280ab5a058c3ce823db3fd4bdc9adc2d1ff65209ddfeda4"
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/chickasaw_treaty.json",
+    "bytes": 1543,
+    "sha256": "8aa7d22f334908b3a41777492631b692cf160bae31c31b9cf207f3678c8fdf3f"
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/choctaw_treaty.json",
+    "bytes": 1531,
+    "sha256": "7f5859854e9187796cb507651f8bc0c52db2d9e8a449c5a7837d5e7d3275cc68"
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/merryman_answer.json",
+    "bytes": 3275,
+    "sha256": "c15862591643dca18be932366ecb8be5a3781ab143ec39d932569658df5824ce"
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/muscogee_treaty.json",
+    "bytes": 1798,
+    "sha256": "f6e89239e6c38a4b267cfafa22586a52bb31c1e4cd4ba7ec49efd00a84507b37"
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_arrivals.json",
+    "bytes": 5816,
+    "sha256": "8168b73f2c70b952adaa98bf6b6524e96b1c27e89dfffb980b11c6d5336d5b3f"
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape.json",
+    "bytes": 3264,
+    "sha256": "99aa7c1f3f1196bca900f584b1bf937de4fdc773b1370eb9aacffe1f4e39e67e"
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape_asked.json",
+    "bytes": 2905,
+    "sha256": "93d7e40fa7aedf79f757ed6f6d8b704d77e3795c67ccc6bc456c382da01513a3"
+  },
+  {
+    "path": "packs/union-1861/situations/gosport_yard.json",
+    "bytes": 1900,
+    "sha256": "cf021f179cc1533a82d85987514efc7cd0abe11ecdc94363a02835f8d58973c6"
+  },
+  {
+    "path": "packs/union-1861/situations/habeas_on_the_line.json",
+    "bytes": 5331,
+    "sha256": "87ec35d47de726691f43b247aadd5edf3d7b21ab431820abee6f2c1bd3bdcd4c"
+  },
+  {
+    "path": "packs/union-1861/situations/harpers_ferry_assignment_notice.json",
+    "bytes": 933,
+    "sha256": "eea0c3a0cca5266fb911c089fbf58abcff7f00b3d37d55854744dae1e0869f65"
+  },
+  {
+    "path": "packs/union-1861/situations/houston_confederate_obligations.json",
+    "bytes": 1040,
+    "sha256": "5236931c98b05411b23a21f57191b1a18b5e928065ac252d8796d0f855032947"
+  },
+  {
+    "path": "packs/union-1861/situations/indian_territory_posts_given_up.json",
+    "bytes": 2544,
+    "sha256": "bf20ddcda7f25965ad9829882bedb7910a58cacb32a48e438d62888696f368cc"
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality.json",
+    "bytes": 2573,
+    "sha256": "236344d7da7fb37987a85412df87e4bf8201a5177e0bb1f4bf4f59c04cefdb16"
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality_proclaimed.json",
+    "bytes": 1081,
+    "sha256": "b7cd3bee2898a427c467c0cfcd55581c8323948fd67fce57ab5f320787832fa0"
+  },
+  {
+    "path": "packs/union-1861/situations/lamon_promise.json",
+    "bytes": 1656,
+    "sha256": "00bcb47652aa4f67bf8189e4f14c358d997534ccc37543d45a00e596c6a170dd"
+  },
+  {
+    "path": "packs/union-1861/situations/manassas_advance_received.json",
+    "bytes": 1492,
+    "sha256": "c77bbded7dbae8a579f0680dd854c0c640013a5c5b810a5b5655a0c05bc133ec"
+  },
+  {
+    "path": "packs/union-1861/situations/manassas_reinforcement_notice.json",
+    "bytes": 1057,
+    "sha256": "2ff37628c8a38b8602134361797c2d9cec4a6e1f3aca282cbc9f88cca1d8ac8f"
+  },
+  {
+    "path": "packs/union-1861/situations/maryland_legislature.json",
+    "bytes": 1055,
+    "sha256": "a11e2ad5363658f886510756b2e3b52373e3c646a5b51bc7bfe014e5ee7bbc0a"
+  },
+  {
+    "path": "packs/union-1861/situations/mcclellan_proclamation.json",
+    "bytes": 2453,
+    "sha256": "6d308fdc2bfd7f1f3c3f41642bbcda6c385c0fd9d0d9928fc6ebab16bb7d7347"
+  },
+  {
+    "path": "packs/union-1861/situations/mcdowell_advance.json",
+    "bytes": 2044,
+    "sha256": "70aad9ae701322baf25c32562045542220067a5642dc0231b6c55297a0fcc1e4"
+  },
+  {
+    "path": "packs/union-1861/situations/merryman_writ.json",
+    "bytes": 2525,
+    "sha256": "33de8607f4d9dc505ff6898c88bc355f1e649b92be92b24702c920c9f0410fb1"
+  },
+  {
+    "path": "packs/union-1861/situations/minnesota_first_remuster.json",
+    "bytes": 1936,
+    "sha256": "a27bf3035d3b9f596aada30c5ecb2bd31381912b44467bef9795dc60a00b513d"
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_arsenal.json",
+    "bytes": 1852,
+    "sha256": "608841144589f1c203adc14e5d474afbda2a73c51e02427f07bc772a964c6d70"
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_provisional_government.json",
+    "bytes": 1706,
+    "sha256": "42e6f4f7f463648d800a9ef23560f823318c16eeb86b80bd6a52c2317fe2de96"
+  },
+  {
+    "path": "packs/union-1861/situations/muscogee_treaty.json",
+    "bytes": 3563,
+    "sha256": "f9dc9a73c0b3be37118c7aa88a06fa86a5824f382350472dc90709663d04b6a1"
+  },
+  {
+    "path": "packs/union-1861/situations/nelson_arrest_power.json",
+    "bytes": 2298,
+    "sha256": "b06055aa9c8891f0ad8bfd25b322213886f9c5ebd25237b3be162c14b9b6c7e7"
+  },
+  {
+    "path": "packs/union-1861/situations/north_carolina_forces_transferred.json",
+    "bytes": 3607,
+    "sha256": "32030201a0c8a9645b7c6b6f0bc8399dd07c9ce9afb220873a85cebf14c88b18"
+  },
+  {
+    "path": "packs/union-1861/situations/north_carolina_secedes.json",
+    "bytes": 2650,
+    "sha256": "0415cc429cbb1e9b28990092dcae5970ee52504def73c241e2c859b7f361205b"
+  },
+  {
+    "path": "packs/union-1861/situations/officer_resignation.json",
+    "bytes": 912,
+    "sha256": "991741466c1fc2c4a165b3fe16e8dd090d0466bd6a9497b2ce3b3d5f2afce36e"
+  },
+  {
+    "path": "packs/union-1861/situations/patterson_martial_law.json",
+    "bytes": 2263,
+    "sha256": "e993d0d942a6d9b13356b90ce6d547079e27ad61df2e4a7ad32263018e149439"
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_refusal_received.json",
+    "bytes": 1400,
+    "sha256": "4f573324d0545a7d3ed2ad9523b6e00e797eed8d1141471170a52c264e8e3927"
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_refused.json",
+    "bytes": 3596,
+    "sha256": "babd45a82e6749839e40191353d3921864914eb1a90b8affbc04fe5d49b81dd5"
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_reinforcement.json",
+    "bytes": 2144,
+    "sha256": "c1bcfc6b01d3876873946a0ee36dacef041edb7596cf013862071a211263fd31"
+  },
+  {
+    "path": "packs/union-1861/situations/pierpont_aid_requested.json",
+    "bytes": 1055,
+    "sha256": "af92216531c3f4eff18d1d7450c0748e7f85e0c45b1fe078067844f2e4f8ea00"
+  },
+  {
+    "path": "packs/union-1861/situations/pierpont_elected.json",
+    "bytes": 1310,
+    "sha256": "c13ebabe7aa684ec43d836285d432119d3c712ed73619812ab08bbe610bac05e"
+  },
+  {
+    "path": "packs/union-1861/situations/pratt_street_deaths.json",
+    "bytes": 2347,
+    "sha256": "dde10a77c01f648a63373fb2804ee45d397c68323e4e43b99770fa641b357a27"
+  },
+  {
+    "path": "packs/union-1861/situations/seward_memorandum.json",
+    "bytes": 1910,
+    "sha256": "f4758685496e04c305265785e35e4dc633a2f91a8feeec95ebfe361d9bccdc02"
+  },
+  {
+    "path": "packs/union-1861/situations/special_session.json",
+    "bytes": 1900,
+    "sha256": "a1ba2a3d3ddbcf545b31e4a0eeeaa06ff77645627138985deb80b55fefbae501"
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_evacuated.json",
+    "bytes": 2767,
+    "sha256": "269b2a002a89711bd263ceca8af7df65b3a04e8f5878de96e39b36565421424b"
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_fired_upon.json",
+    "bytes": 1370,
+    "sha256": "539090473588ee957b21bb81e780c6df456b5c4064e80aa5fd01f6c20c49e711"
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_garrison.json",
+    "bytes": 3322,
+    "sha256": "569a9254fade31426af88f35391febff08dd6fbb95f0e1312161d280a4b509fe"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_receiving_procedure.json",
+    "bytes": 1141,
+    "sha256": "2febcb70acf82b6e0b2258c5231ecf91f413f8a6964fe3f399516b615af75fcc"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_return.json",
+    "bytes": 2515,
+    "sha256": "0506d230ebbb08e331ce60553a8241774103caec50c9a1ae843e3f331c34f763"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_state_order.json",
+    "bytes": 1195,
+    "sha256": "e0165e803203049c7a13b5c91f6b554fa70433c233123f6c40007e39fd3cc461"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_transferred.json",
+    "bytes": 1010,
+    "sha256": "62a21a10fef09ecd72324d473c1c77eb3c9aa95412b0bfb025712bdabb77ec02"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_military_league.json",
+    "bytes": 1212,
+    "sha256": "933c13cb33d70e73f60fc8b09eb694eb62740141bfad0908b7dd8d39fe7625a5"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_secedes.json",
+    "bytes": 2632,
+    "sha256": "13110b0fe3a50797e6e987f377ff90eecad21b382c006308904e655cd027bd13"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_evacuation_terms.json",
+    "bytes": 3032,
+    "sha256": "cc6ee102019857d91cdae007314214d1104416e60395f6db37a121ee7b3c179c"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_1st_inf.json",
+    "bytes": 2232,
+    "sha256": "1321fb68e99894f109d537168a6d66932d718eaf478dd4eee35268ed3539243f"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_2nd_cav.json",
+    "bytes": 2232,
+    "sha256": "54235d3d15c3fcc1753172d1e1a3c98f2bbf7fd5bb2d4978c9972c994ef4fa1c"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_2nd_cav_eg.json",
+    "bytes": 2250,
+    "sha256": "8034dc38b94205a7cb2b528aea92c9bac705b75485c905400320e45752fa52d3"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_3rd_inf.json",
+    "bytes": 2232,
+    "sha256": "956bd804cbed2e6abcc70c57639b7d27253a77e95df541da7b16dc95671af170"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_8th_inf.json",
+    "bytes": 2232,
+    "sha256": "760500d1d1876b4177b582a9fd7ce3466cf46d57eb4d75fd67e68ce8fd1428fd"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_governor_changed.json",
+    "bytes": 1883,
+    "sha256": "4a79bbe78ff8443bbfa22ec25242cb2d9df3a1dc90c232410e78d574c0a4d6b6"
+  },
+  {
+    "path": "packs/union-1861/situations/thomson_martial_law.json",
+    "bytes": 2260,
+    "sha256": "93b507cbf26dd64832472896a18e081dc0e558a543c4be67952b635140544cf0"
+  },
+  {
+    "path": "packs/union-1861/situations/townsend_fugitive_order.json",
+    "bytes": 2755,
+    "sha256": "08e1dedd80ecd325f7bfc98a13625d0a971b8ff7dfd34513444e124d72d29d35"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_forces_return.json",
+    "bytes": 950,
+    "sha256": "5c989cda696c13f03e3351be7e574a4d36d89e1961b76128015ff03bf1dc8d07"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_forces_transferred.json",
+    "bytes": 3454,
+    "sha256": "2246e2fcb6a068e1c8cbbd19fa003951a251979c971b4e33bdace1a50c55e017"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_harpers_jackson.json",
+    "bytes": 2714,
+    "sha256": "6f2cfa45d5d5eabc953d11b5121480281442d124ac1fd4aba1f8677c9887cd4c"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_harpers_state_forces.json",
+    "bytes": 1755,
+    "sha256": "7300b13f0c1c16c3bbd60336d0abcf255525e8193866513429123d5dc3d7b138"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_manassas_garland_return.json",
+    "bytes": 1952,
+    "sha256": "887cec7d9d129e2c39f479c3ffa6464ada601bf407538b9dbc8875588c2648e7"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_manassas_state_forces.json",
+    "bytes": 1866,
+    "sha256": "a7c869eb2a0c80c7972725983b1e355979de97dcf1a30829fb02d5c64d186787"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_military_convention.json",
+    "bytes": 1159,
+    "sha256": "cee51268e08d64d3225f7c03202e4c57a29f3b8041d57c4221811cc25e0283d2"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_norfolk_gwynn.json",
+    "bytes": 1362,
+    "sha256": "9341cfd9af4d6f6e01d02d09413b1503f7ba3facacb6618b0557b4324e8246fd"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_norfolk_huger.json",
+    "bytes": 1348,
+    "sha256": "c59531ec4f1ecfc01956998897693b47c755674cc5b3c52e14b109a17fc7c0fa"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_norfolk_state_forces.json",
+    "bytes": 1625,
+    "sha256": "354fc1d5d15f786370760ab9cea72653c4b326fa5e907f7820d9340af0ee1cdb"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_peninsula_state_forces.json",
+    "bytes": 1784,
+    "sha256": "b6233b8a8d96d8c4d1992c5ca9974356c767b79eb814c891a069d3518d88cff0"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_potomac_command.json",
+    "bytes": 1133,
+    "sha256": "4357a9d13553286faf4a9d33dc99feb9a696aa2e6f945547f344f4a535d72a33"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_richmond_magruder.json",
+    "bytes": 1371,
+    "sha256": "8691ef03294873e9f9316645b7a925b2bf66886f8ed1ae84f470c798f8e4876e"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_richmond_state_forces.json",
+    "bytes": 1630,
+    "sha256": "4775c9fe0cdb44dba72b1c683db57df0ad2ebcafcc3c75ba23528b373ac4e4bc"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_secedes.json",
+    "bytes": 2660,
+    "sha256": "10733065e6b11ca2a0cacdd616cab147e67ccd2fdd8bb4790b0200cfce517a6a"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_state_calls.json",
+    "bytes": 966,
+    "sha256": "f75a9c0dbc67e903a12b10382d60861b85cecac187023c0dbf645e8c20f9ea3a"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_unionists.json",
+    "bytes": 1819,
+    "sha256": "7218c40e08d030d83de7b3689a2fb559e8b2bae38f472a6d8c5831dd2a76acd4"
+  },
+  {
+    "path": "packs/union-1861/situations/washington_cut_off.json",
+    "bytes": 1965,
+    "sha256": "3c67db5e9c02acb831a75cc455672dc292c4b412abb0ca123dce484385a26e34"
+  },
+  {
+    "path": "packs/union-1861/situations/western_virginia.json",
+    "bytes": 2672,
+    "sha256": "dad2020d3333a6c99609f01cde876e5030491dbe0afd24a379be82d538dc43ca"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_convention.json",
+    "bytes": 844,
+    "sha256": "ff5a24bb536f1e24c53d467ba9743ee9d9088deb58a18505bd2bf73d8db9630d"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_legislature.json",
+    "bytes": 1081,
+    "sha256": "3d6190e887297589f6c9dadf66d05ddff18d446b5225d9dedc6cadfded2c052d"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_ordinance.json",
+    "bytes": 1308,
+    "sha256": "8f3bc8472646e423643c8cdf2dee74d3e158d0852a55a0eda6d31261ac4c1ad3"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_recognition_letter.json",
+    "bytes": 1464,
+    "sha256": "eb07fddd32a455cc34d5f78ee53fb9181fb803ba7e02b864e65e3dd6dadd2f0e"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/calls/README.md",
+    "bytes": 673,
+    "sha256": "4a5bbff34df90fa24eb7a0f54861a3e548ddee9bea3aa8c4ac4b3409ab0579d0"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/calls/union-calls-1861.csv",
+    "bytes": 3453,
+    "sha256": "9a6365ae8eb0d576f6c995649faa8029ad1da260ff3e8a8b48208bf3593f9322"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/README.md",
+    "bytes": 45175,
+    "sha256": "d3f6a67d83120ae7bff8de220af3e68752d239fe5faf15896061c1b2f77a2d4e"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/aggregate-report.txt",
+    "bytes": 3900,
+    "sha256": "3bd27d64be3c7411daef8b97d434a600d8c12255a0403bd7b5ac223e93a84303"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/aggregate.mjs",
+    "bytes": 13704,
+    "sha256": "b894591bf22bdeaeab736bc9ced625bad30b6bc25dca0c3bfba22041c2f8e538"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/enslaved-1860-by-region.csv",
+    "bytes": 78209,
+    "sha256": "906b7e2cb6a66c604405c705c5243cc2e5240bc6bf166e46f0374357418b3ffe"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-baltimore-split-1860.csv",
+    "bytes": 629,
+    "sha256": "12a3803376dcc0252cbae69e1d2347ef588feb3096bd42defb0f3f5cef7b8cc9"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-county-1860.csv",
+    "bytes": 73686,
+    "sha256": "5541b65965f0f0e2bd3995aa0b1e0736a69f14e0d65f5d92b768ac9a23ddb8fa"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-state-summary-1860.csv",
+    "bytes": 3389,
+    "sha256": "2ed96181278a2796acc7f069247f8956070c99e2088bbfcbf7482c59ed977b7a"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/README.md",
+    "bytes": 22448,
+    "sha256": "044425f3c41a494cda5b6ca0429b8eaf8e023aa371346441ea5643798adb4654"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/edges.csv",
+    "bytes": 184575,
+    "sha256": "3df69008f1ff48dd2a34c56d354667fd3177b801cf104c847760b2b5a13af991"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/regions.csv",
+    "bytes": 93951,
+    "sha256": "96fd635eb6a8a6936a07bf8c2a95955c3c85f92b496844a78df883c9eaf97fef"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/README.md",
+    "bytes": 18926,
+    "sha256": "ca603b43b5511d92304e1ac587efd843c14ce26eb5a8cb01b842531dc6625c66"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/force_blocks.csv",
+    "bytes": 69938,
+    "sha256": "a6dd384b3376dabd0157fbd55249f134b4ad258139d61a8ac7e6ae6837916b23"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/people_in_posts.csv",
+    "bytes": 43731,
+    "sha256": "b70feba63d4700c0c8f1352caf0501d409d74dc4cc8f8c69f59531e97a690e08"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/posts.csv",
+    "bytes": 81600,
+    "sha256": "91b5fa49236b81de2d524f6276fb250856910d7137711ab88b94c9141bbc2e97"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/strengths-stores-1861.csv",
+    "bytes": 28729,
+    "sha256": "ae50f8669a1effb60ddd8274cc40c11ffb2e778d3482c4573e6d9247dc514f7a"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/README.md",
+    "bytes": 57100,
+    "sha256": "e6b8db761d8fa8a5f14670b99c72809edfc59fd8382b27177c3244c0afa88a4a"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/cast-1861.csv",
+    "bytes": 62368,
+    "sha256": "f74feaf569fc9599eea3b14680135bed592a68ed48cded3870bafbffc5921735"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-blocs-1861.csv",
+    "bytes": 18492,
+    "sha256": "10e9fc07e5f4e115b631eb31dd3552d557c90a4de87c145ebf875723d4bd21e4"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-judgments-1861.csv",
+    "bytes": 184466,
+    "sha256": "70a56c9e5088535b7f6678f08bf52c062765b59c231a971bb419e147f5b197f0"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-resourced-1861.csv",
+    "bytes": 47690,
+    "sha256": "6257938a9eff6f04103a04a7751f70b9d963e0a0c06e1630d813206370c64c94"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/people-sources.md",
+    "bytes": 446833,
+    "sha256": "8e43b6786db0cb2c412d07471bdbf8ebfae8541366f461b3eb27b0225ac334ea"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/people.csv",
+    "bytes": 220049,
+    "sha256": "39002d114be871b8f4a34c83ff2975bd7e3087c9eec3f1f7113861f5449ede06"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/s9-people-gate.json",
+    "bytes": 4412,
+    "sha256": "c4a333e4c41791cf707cb49cf30c428d26982972d3ac720f3fa42de24687c00f"
+  },
+  {
+    "path": "packs/union-1861/source/evidence/s118/lot-candidates.csv",
+    "bytes": 16687,
+    "sha256": "1eb7ec6069b1fc6048e144c6b6df72dd4c7947a1e8748d21192f31f9d085705e"
+  },
+  {
+    "path": "packs/union-1861/source/evidence/s118/receiving-commands.csv",
+    "bytes": 2692,
+    "sha256": "07912c8a49694529706394a60c5c597cfabe07d8f9020076cfdc201d7559d879"
+  },
+  {
+    "path": "packs/union-1861/source/import/import-drafts.mjs",
+    "bytes": 26968,
+    "sha256": "fc4836c4ba5760abcd66f3c331cd96bfe5bf0adaef836a77b07953cf96aa1d2a"
+  },
+  {
+    "path": "packs/union-1861/source/import/import-people-oob.mjs",
+    "bytes": 43457,
+    "sha256": "4d831bac57d886075d4bdead052c896a76095f9513bf5cd1953ee9e776ab8b40"
+  },
+  {
+    "path": "packs/union-1861/source/import/places.mjs",
+    "bytes": 4575,
+    "sha256": "1f4ac3f4939b2236433984bea2bc36aa6047e3ca90e62a31f916370538ded7ba"
+  },
+  {
+    "path": "packs/union-1861/source/import/registry.mjs",
+    "bytes": 17341,
+    "sha256": "0822e8b1ed5ed9e77f65bfcc40be7a232212bbe3a928629189e95dabe9d27223"
+  },
+  {
+    "path": "packs/union-1861/source/import/vocab.mjs",
+    "bytes": 11005,
+    "sha256": "5dc72f53ab27604225b0fadf0acd44e9e664701f036778135381bec505075e02"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/control.csv",
+    "bytes": 35609,
+    "sha256": "f2b45598b35a2047b4f23cd5d5a874ec8a44b12892f194ecf08834bed484d4e1"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/declared_governments.csv",
+    "bytes": 349,
+    "sha256": "d80e321989ae6ef8e2daec6e595c61eadcd3b5b5d9b52a016383e26d905a3734"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/force_blocks.csv",
+    "bytes": 73483,
+    "sha256": "90f5e48de50044f428d14174e2ed91a7e64e1e1ecc4c3a56a3476987129baa74"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/governments.csv",
+    "bytes": 26949,
+    "sha256": "4affa4cd894b5a3cfc3edc9783e53714ce5f295b3e33783fe40b084aabdf495e"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/holders.csv",
+    "bytes": 29440,
+    "sha256": "b0a12b266223eef8e1d26af9f77e1ebd6e75786d7e42cd40a76576d1444c4bca"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/loyalty.csv",
+    "bytes": 32366,
+    "sha256": "67f0b034b32e832b9c26719fc72e7f075bc224d6926797346a4958b776b9a44c"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/obstructions.csv",
+    "bytes": 2661,
+    "sha256": "13dda28df9127daf53ecb2ef751006d85be1d9ad2eee34a6b9dc064443ccd8ea"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/posts.csv",
+    "bytes": 76476,
+    "sha256": "2cb4d3390700cf7ac63b8d2180937d1294f352871f78df443e4fd8971499efe6"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/scenario.json",
+    "bytes": 555,
+    "sha256": "978e08f81c1e28f34ac1beab2d0f76d6bdddd2c8bdc56cc9d9ae53df40be1879"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/standing_orders.csv",
+    "bytes": 454,
+    "sha256": "1063fe70ac447b436fcd83e625f49a1564fbd6e087f89ca4a6a3ab4a69a069f7"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+    "bytes": 7920,
+    "sha256": "60696fa2694b2dbf961db34cae5f48f55cda8f9f0444d76075a31edc734b3fcd"
+  },
+  {
+    "path": "packs/union-1861/source/world/census.csv",
+    "bytes": 22996,
+    "sha256": "b7396af608d21a3fc384da80408a584faea1137dc6db01e43e8e628ed5bcd5cf"
+  },
+  {
+    "path": "packs/union-1861/source/world/departments.csv",
+    "bytes": 14124,
+    "sha256": "8647370157244340a552c84bcc950a3dfaf23d2c64b1283c924ba31b6557b21d"
+  },
+  {
+    "path": "packs/union-1861/source/world/depots.csv",
+    "bytes": 8206,
+    "sha256": "0ba1846320f7c138e42f04ca5c8b32852eae8623cad5bd0d629ce1592b436170"
+  },
+  {
+    "path": "packs/union-1861/source/world/edges.csv",
+    "bytes": 189624,
+    "sha256": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28"
+  },
+  {
+    "path": "packs/union-1861/source/world/installations.csv",
+    "bytes": 10096,
+    "sha256": "609a29b736e56249df6b528c7d2512ceb5d029b177fbad0c6a296d5db93c4f7b"
+  },
+  {
+    "path": "packs/union-1861/source/world/organisations.json",
+    "bytes": 17835,
+    "sha256": "eacc22f1d86de937bfab62b1e0a6f5905d025109cd3d8f3f145697d107742ed4"
+  },
+  {
+    "path": "packs/union-1861/source/world/people.csv",
+    "bytes": 381552,
+    "sha256": "e2d386f4be6c3e293a3218b75c6975a4d42269a00c1f87659f61c29113a03260"
+  },
+  {
+    "path": "packs/union-1861/source/world/rail_lines.csv",
+    "bytes": 7627,
+    "sha256": "70c3119450e804b2cc25c649a50b11877e142bca3005a31e2493e8152b06f60f"
+  },
+  {
+    "path": "packs/union-1861/source/world/regiments.json",
+    "bytes": 1027363,
+    "sha256": "57f61b4d4b6fffac2b9e09c8d3631185f9e28a34783f080be16d673a17307e5d"
+  },
+  {
+    "path": "packs/union-1861/source/world/regions.csv",
+    "bytes": 100708,
+    "sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8"
+  },
+  {
+    "path": "packs/union-1861/strings/en.json",
+    "bytes": 71770,
+    "sha256": "3ff4db6e3a0cf3b86a47ec7d514de6d50f851c4e8090252dedee8cd47aa52429"
+  },
+  {
+    "path": "packs/union-1861/test/butler-appointment.test.ts",
+    "bytes": 4034,
+    "sha256": "39fda1454452f9bcef0e610a9f1298bfd4c82395e940e41122473445f66b6793"
+  },
+  {
+    "path": "packs/union-1861/test/calls-1861.test.ts",
+    "bytes": 2721,
+    "sha256": "98146bb25bef0531c336fc77d2f78576331ff24c7cb8aa94f54bf97a6cdcd182"
+  },
+  {
+    "path": "packs/union-1861/test/capital-move.test.ts",
+    "bytes": 2655,
+    "sha256": "dea344c5589c3c0b97a31c91abd83353b3fe521c4f9748ddf0bdea6100b1307d"
+  },
+  {
+    "path": "packs/union-1861/test/charleston-strengths.test.ts",
+    "bytes": 1340,
+    "sha256": "f09e9607fbd892bb253c4eb513d09dc67a11a7da56bd5018ccbff4c798bcef3a"
+  },
+  {
+    "path": "packs/union-1861/test/cost-only.test.ts",
+    "bytes": 5119,
+    "sha256": "d33a5b26ce040461a6e7990d18d9b3c9e7269cc2180f8939dd270fc8be92e37b"
+  },
+  {
+    "path": "packs/union-1861/test/dated-appointments.test.ts",
+    "bytes": 4613,
+    "sha256": "eda034193777bf9043f2bf79fea5fbbd85b8f4403d20a39cb5570505369c92c6"
+  },
+  {
+    "path": "packs/union-1861/test/desk-scheduled-calls.test.ts",
+    "bytes": 1520,
+    "sha256": "aa558d97823f3891094170e2adcce50e818b3fc2f42fb4777bb1ae1142813cb6"
+  },
+  {
+    "path": "packs/union-1861/test/discretion-chain.test.ts",
+    "bytes": 2301,
+    "sha256": "b5608df7be67f5bdb883258282b6b30535ebce163a30920db7992a86fc6a9655"
+  },
+  {
+    "path": "packs/union-1861/test/gate-register.test.ts",
+    "bytes": 28501,
+    "sha256": "3345186c6ff7ed1b9322cd2eafbc6191ad3b503bc4728e992fe79ff0efdb29e9"
+  },
+  {
+    "path": "packs/union-1861/test/gated-blocs.test.ts",
+    "bytes": 4191,
+    "sha256": "476463bffe9dc3171de57374e385cd346834a1e26b8e534b250bfab6c87a0893"
+  },
+  {
+    "path": "packs/union-1861/test/gated-rows.test.ts",
+    "bytes": 3289,
+    "sha256": "3b8da27e3b88ee3519c1788a0f949f1f2401b0f3b704b78f4458ec8aee3c5b6e"
+  },
+  {
+    "path": "packs/union-1861/test/livermore.test.ts",
+    "bytes": 10603,
+    "sha256": "ae92d65d88610ee6a597fe9fe48d4f748343d9868073072e669a83a463c71fff"
+  },
+  {
+    "path": "packs/union-1861/test/livermore/README.md",
+    "bytes": 2052,
+    "sha256": "fb5b94840ecc76606b43db28392b4b6bdb7918b49615e2710fd349dc4f98691c"
+  },
+  {
+    "path": "packs/union-1861/test/livermore/livermore-1900.csv",
+    "bytes": 1860,
+    "sha256": "348467f0e1b07d1ca3da25afe7c96429dfa21199b41ca5a19d1ef433b78bf12e"
+  },
+  {
+    "path": "packs/union-1861/test/manassas-junction.test.ts",
+    "bytes": 3044,
+    "sha256": "f1af7e0e92aa953aa8f9260c96f44c83f3c2e1ea450bd6628007acdfd9a39687"
+  },
+  {
+    "path": "packs/union-1861/test/nation-calls.test.ts",
+    "bytes": 5224,
+    "sha256": "e7d2e56de2dc3ab0e1fd938b52f2f9879883dc1981abdb843dac0df9952ebc7c"
+  },
+  {
+    "path": "packs/union-1861/test/national-enlistment.test.ts",
+    "bytes": 8088,
+    "sha256": "8cc2f7c8eaab55baa06fe91916f6c89d0ab493c94809d5f508be1cb991362a8c"
+  },
+  {
+    "path": "packs/union-1861/test/northern-concentration.test.ts",
+    "bytes": 9157,
+    "sha256": "33068c453879e5e9ca26ebe537dba837d8d387a0cfe1f04f0367e35d2001b6a2"
+  },
+  {
+    "path": "packs/union-1861/test/opening-cause.test.ts",
+    "bytes": 4996,
+    "sha256": "1530cc1a4d6da4775c25adf6bbcbb1ff0bec484fefc01509e6c9fc084e7731d3"
+  },
+  {
+    "path": "packs/union-1861/test/passage.test.ts",
+    "bytes": 3848,
+    "sha256": "fe11e80cdb40bfeeaed491a1793ed92491357d67c9329cea8ea7508f6e5c7a6b"
+  },
+  {
+    "path": "packs/union-1861/test/r47-authoring.test.ts",
+    "bytes": 6061,
+    "sha256": "aa8281a108a6bde442fe5dc1ad46b6b151777f350dc4335ce739d4d16d4ef434"
+  },
+  {
+    "path": "packs/union-1861/test/r69-wheeling.test.ts",
+    "bytes": 4003,
+    "sha256": "0658fcbac6feb3ab8680baf9d04c425c45dc6a0017ffd2a35423aa2e147b787f"
+  },
+  {
+    "path": "packs/union-1861/test/r94-missouri.test.ts",
+    "bytes": 3229,
+    "sha256": "29c736ad2fb69a034632916fa5a00c299591464eacaf1cd49b5985b4f857f325"
+  },
+  {
+    "path": "packs/union-1861/test/received-papers.test.ts",
+    "bytes": 544,
+    "sha256": "feb38e6a87399457593ac45e09a339bacbbfbd415e6d627d680b5730ef3a07ff"
+  },
+  {
+    "path": "packs/union-1861/test/record-terms.test.ts",
+    "bytes": 4246,
+    "sha256": "f87bab39708b0ae3daf5ffb271aa0a82730b136d773fe86eeb7b14ae3c98fc4c"
+  },
+  {
+    "path": "packs/union-1861/test/resignation.test.ts",
+    "bytes": 4716,
+    "sha256": "4a7ba53ceb4e2a147af913671ce870e738f1856af9f12d1c88605605e2da3b34"
+  },
+  {
+    "path": "packs/union-1861/test/resource-apply.test.ts",
+    "bytes": 5880,
+    "sha256": "817158dbc0edf120e42a5506aec04937bede4eba66060565036849e1519b4dc9"
+  },
+  {
+    "path": "packs/union-1861/test/s102-call-terms.test.ts",
+    "bytes": 3186,
+    "sha256": "c94c4c3324aeb164b39bd842605e3e4c2eacd095b148645d48b4369237acc929"
+  },
+  {
+    "path": "packs/union-1861/test/s108-value-clauses.test.ts",
+    "bytes": 3239,
+    "sha256": "cedfc9ef35eb1b8bb9234845b7507528109fba8155b809c1536f183580c80fce"
+  },
+  {
+    "path": "packs/union-1861/test/s116-cause.test.ts",
+    "bytes": 4739,
+    "sha256": "a9f469a9ffc2c14153117e633b45cd20b12d048fa3021edb1f7fe032e788aec8"
+  },
+  {
+    "path": "packs/union-1861/test/s122-establishments.test.ts",
+    "bytes": 2342,
+    "sha256": "e8749d5ffd890826dcfacb10dc8dc8803cbad5350503ba2de342b1d938f4bd98"
+  },
+  {
+    "path": "packs/union-1861/test/s128-advice.test.ts",
+    "bytes": 3123,
+    "sha256": "a36ff61225de0c80535563385a4312dadf1eda46a2972247b40d4602b925dbd5"
+  },
+  {
+    "path": "packs/union-1861/test/s132-sumter-data.test.ts",
+    "bytes": 3291,
+    "sha256": "3392f1c9ed4c3e7d3dd7fe79989d5c32eb4f55503ae96b37e429f720f7447a8c"
+  },
+  {
+    "path": "packs/union-1861/test/s27-console-playtests.test.ts",
+    "bytes": 288,
+    "sha256": "3484caa634bf32b0ab5fc34469dc2f014a3469d5b320a7f64e24a4b91be6b4c9"
+  },
+  {
+    "path": "packs/union-1861/test/s35-scoring.test.ts",
+    "bytes": 2350,
+    "sha256": "43c515148d7862fe3d88e748cc664d7480c8549f083386327eec9087bd003d01"
+  },
+  {
+    "path": "packs/union-1861/test/s58-b2-drafts.test.ts",
+    "bytes": 3782,
+    "sha256": "24990bd0156e7bfee75ad7e5130831af3d42612737dc83f8c647bd4809a47d2b"
+  },
+  {
+    "path": "packs/union-1861/test/s58-b2-live.test.ts",
+    "bytes": 9891,
+    "sha256": "de0ecbea60abdb60b3f7539e6ea68558012b4d1f23be545dd41c171cd93d25e5"
+  },
+  {
+    "path": "packs/union-1861/test/s64-command-inclusion.test.ts",
+    "bytes": 6095,
+    "sha256": "660257849e6fe7faef4b32e137ff881a3414646436f5982ab9349e6c39cc7f4f"
+  },
+  {
+    "path": "packs/union-1861/test/s74-cast-templates.test.ts",
+    "bytes": 2817,
+    "sha256": "9a266395e57c643ef762f99fa2a4759289842ff7c0391e45c4a1f9dd38df8769"
+  },
+  {
+    "path": "packs/union-1861/test/s77-concentration.test.ts",
+    "bytes": 14290,
+    "sha256": "6d920b40af65e5e96b088bfbc135be6d1942b14074ac00bd3ddc9beb9eac93e0"
+  },
+  {
+    "path": "packs/union-1861/test/s78-patterson.test.ts",
+    "bytes": 1882,
+    "sha256": "ca01220c5511a27753270080bb82187f5ad863ed1dd97b5b478f183db3b44853"
+  },
+  {
+    "path": "packs/union-1861/test/s78-rail.test.ts",
+    "bytes": 3972,
+    "sha256": "d8f02f05e18fcb7d65897c0cc0563a0d8bb66177433eac9c29fbd60197abc6b8"
+  },
+  {
+    "path": "packs/union-1861/test/s81-terms.test.ts",
+    "bytes": 883,
+    "sha256": "e11e9f36e629d2a6058c3192dc8dfc544c26b5bfccd4ece65b88072a8dc3461a"
+  },
+  {
+    "path": "packs/union-1861/test/s82-anderson.test.ts",
+    "bytes": 2750,
+    "sha256": "46f1915e2ce2c154a1d107e2ee53942d2d5d22a1153f0abcb80dcac9eb0816ed"
+  },
+  {
+    "path": "packs/union-1861/test/s9-people-apply.test.ts",
+    "bytes": 10448,
+    "sha256": "caefafd926cc429f31996f8a32ed114a1f1c9a317063d6f6e4f11be1d7424881"
+  },
+  {
+    "path": "packs/union-1861/test/s90-junction-chain.test.ts",
+    "bytes": 3660,
+    "sha256": "50151b00ef28004fe23c2220b2fd624cb93566ae85c5d29bd4398abe82a7d177"
+  },
+  {
+    "path": "packs/union-1861/test/s90-junction-order.test.ts",
+    "bytes": 4198,
+    "sha256": "20e49bab208d965e84cafc0a8a7fa1acd3cee82fa78e40339c9cf88a1b4fd4f9"
+  },
+  {
+    "path": "packs/union-1861/test/s92-texas.test.ts",
+    "bytes": 1847,
+    "sha256": "c5625d82586def3857c885a6c46fe8646cee16e15b62cafce5c54fc77884aeea"
+  },
+  {
+    "path": "packs/union-1861/test/s98-cast-evidence.test.ts",
+    "bytes": 2423,
+    "sha256": "b9afe66c418762227785867a64145bcd62eea66023def394631e002342de5270"
+  },
+  {
+    "path": "packs/union-1861/test/state-forces.test.ts",
+    "bytes": 5645,
+    "sha256": "879b66dbdd655c0a504dcde077e49752e17f5f21e70c07dda70c396996f92d2d"
+  },
+  {
+    "path": "packs/union-1861/test/virginia-dated-forces.test.ts",
+    "bytes": 5748,
+    "sha256": "96c07d5eb9196afe2bcae40bdcd1711ffbffa6804246bfb259c38f0d94f7fa38"
+  },
+  {
+    "path": "packs/union-1861/test/world-v2.test.ts",
+    "bytes": 21329,
+    "sha256": "cc418747cd5c58ffe72074fb9b861784f46ef68270d7ef954eb6da4fca22d654"
+  },
+  {
+    "path": "tools/rules/cause-exemptions.json",
+    "bytes": 6035,
+    "sha256": "5dcf6120ee572c75655b2670fa0275a80d29d06433e0641607667b47154c20b5"
+  },
+  {
+    "path": "tools/rules/common.ts",
+    "bytes": 5344,
+    "sha256": "eaff494dfcd4012c7ca0794d100d8de55e8487e7ec4642bd1cf47749ba44aeda"
+  },
+  {
+    "path": "tools/rules/existing-findings.json",
+    "bytes": 1101,
+    "sha256": "61a8fc08a8ffc79321f4ceba09af1e2fdfddd662468b62abef2cf80e3a2ec84c"
+  },
+  {
+    "path": "tools/rules/inherited-quiet-bands.json",
+    "bytes": 24187,
+    "sha256": "6542f630d09fb1f6be81379de0274e8fa228aa21e19553ba3b2a39408ef7c11d"
+  },
+  {
+    "path": "tools/rules/liveness-causes.ts",
+    "bytes": 8910,
+    "sha256": "66749c079ca5632b53ac5ddaf465cd1aee257a9f59cc23a1d01d3880db6fd7db"
+  },
+  {
+    "path": "tools/rules/liveness-changes.json",
+    "bytes": 146420,
+    "sha256": "bb8d82e7bd881c583fd9e24539da1e4281510644dc2cc57a9622c6da21bbb802"
+  },
+  {
+    "path": "tools/rules/liveness-origin.json",
+    "bytes": 58725,
+    "sha256": "aac9e2078a34826d7a9d8827a7bac1a54fe2aaed848d10489bf80f2ee994c309"
+  },
+  {
+    "path": "tools/rules/liveness-snapshot.ts",
+    "bytes": 186,
+    "sha256": "bcd1e5b3f2966b6c9f6ff0838c1bd86d4f4dd04e430fce347a1c5eed1af90912"
+  },
+  {
+    "path": "tools/rules/pack-content.ts",
+    "bytes": 1893,
+    "sha256": "1297ca0b9e02b67cc55e8b9e2514e3e96de01ef32c5f7e2b7c141ce602e909ae"
+  },
+  {
+    "path": "tools/rules/projection-derivations.json",
+    "bytes": 23880,
+    "sha256": "3b8d9a549907eb4a9a2a3ceb2229f657dcd7b759360c19c88c2c390fa3210635"
+  },
+  {
+    "path": "tools/rules/projection-truth.ts",
+    "bytes": 11045,
+    "sha256": "9484d0506e6ecc1d18946add5255a18987919fe77572b9de17a53b9d0e782bfb"
+  },
+  {
+    "path": "tools/rules/signed-inventory.json",
+    "bytes": 1665,
+    "sha256": "5559d4c166339533f758ff2bd5c6cef35717276278dc1745f463bea9d781913a"
+  },
+  {
+    "path": "tools/rules/signed-pack.ts",
+    "bytes": 565,
+    "sha256": "10c65a7eb6562495ee68dce4eceb6702ed7fbe7277b46c3dbd13ccf9f4715d78"
+  },
+  {
+    "path": "tools/rules/signed-situations.ts",
+    "bytes": 1813,
+    "sha256": "cadafdc37e1a28d0ab40f03bf13483ab5727988c75df3fa0c009ccac8a3422f5"
+  },
+  {
+    "path": "tools/rules/situation-causes.ts",
+    "bytes": 1737,
+    "sha256": "5a1669f86cdb616b3ac610988eb880bdf6a88d3fa5d31dcdb34762e77dc5a0cd"
+  }
+]

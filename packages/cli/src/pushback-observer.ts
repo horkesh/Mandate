@@ -2,11 +2,12 @@
 import { phase0 } from '@mandate/kernel';
 import type { CoverageAct } from './pushback-coverage.ts';
 
-type Matter = Partial<Pick<CoverageAct, 'side' | 'callId' | 'regiments' | 'termDays' | 'subject' | 'objective' | 'posture' | 'post' | 'to'>>;
+type Matter = Partial<Pick<CoverageAct, 'side' | 'callId' | 'regiments' | 'termDays' | 'subject' | 'objective' | 'posture' | 'post' | 'to' | 'round'>>;
 export function observePushback() {
   const matters = new Map<string, Matter>();
   const acts = new Map<string, CoverageAct>();
   const advice = new Map<string, string>();
+  const scopedAdvice = new Map<string, phase0.ConsultationAdvice>();
   const onTick = (world: phase0.SeatsWorld, r: phase0.TickResult) => {
     const sideOfIssuer = (person: string | undefined): string | null => world.factionIds.find(f => world.faction(f).principal === person) ?? null;
     const merge = (id: string, data: Matter) => matters.set(id, { ...matters.get(id), ...data });
@@ -31,12 +32,14 @@ export function observePushback() {
         ...(order.orderGoal === null ? {} : { objective: order.orderGoal.goalObjective ?? undefined, posture: order.orderGoal.goalPosture }),
       });
       if (verb !== null) merge(m.msgOrigin, { side: sideOfIssuer(verb.verbIssuer), subject: verb.verbSubject ?? undefined, post: verb.verbPost ?? undefined, to: verb.verbTo ?? undefined });
+      if (verb?.verbConsultation !== undefined) merge(m.msgOrigin, { round: `${verb.verbConsultation[0].namespace}.${verb.verbConsultation[0].key}.${verb.verbConsultation[0].revision}` });
       if (m.msgReport !== null && m.msgReport !== undefined) {
         proposal(m.msgReport);
         const recipient = m.msgPending.at(-1)?.hopPerson ?? m.msgTo;
         const side = sideOfIssuer(recipient);
         if (side !== null) merge(m.msgOrigin, { side, subject: m.msgReport.reportSubjectId });
         if (m.msgReport.reportAnswers !== null && m.msgReport.reportAdvice !== null) advice.set(`${m.msgReport.reportAnswers}|${m.msgReport.reportAuthor}`, m.msgReport.reportAdvice.adviceRecommends);
+        if (m.msgReport.reportAnswers !== null && m.msgReport.reportAdvice?.adviceConsultation !== undefined) scopedAdvice.set(`${m.msgReport.reportAnswers}|${m.msgReport.reportAuthor}`, m.msgReport.reportAdvice.adviceConsultation);
       }
     }
     for (const plan of Object.values(r.state.planRecords)) merge(plan.planOrder, { side: sideOfIssuer(plan.planIssuer), objective: plan.planGoal.goalObjective ?? undefined, posture: plan.planGoal.goalPosture });
@@ -47,12 +50,14 @@ export function observePushback() {
     for (const f of world.factionIds) {
       const held = r.state.knowledgeBySeat[phase0.seatIdFor(world.faction(f).principal)];
       for (const sent of held?.knownSentOrders ?? []) merge(sent.sentMessage, { side: f, ...(sent.sentGoal === undefined ? {} : { objective: sent.sentGoal.goalObjective ?? undefined, posture: sent.sentGoal.goalPosture }) });
+      for (const sent of held?.knownConsultationDispatches ?? []) merge(sent.questionOrigin, { side: f, round: `${sent.questionLetter.namespace}.${sent.questionLetter.key}.${sent.questionLetter.revision}` });
       for (const report of held?.knownReports ?? []) {
         if (report.knownReceivedDay <= r.day) proposal(report.knownBody);
         const b = report.knownBody;
         if (b.reportAnswers !== null) {
           merge(b.reportAnswers, { side: f });
           if (b.reportAdvice !== null) advice.set(`${b.reportAnswers}|${b.reportAuthor}`, b.reportAdvice.adviceRecommends);
+          if (b.reportAdvice?.adviceConsultation !== undefined) scopedAdvice.set(`${b.reportAnswers}|${b.reportAuthor}`, b.reportAdvice.adviceConsultation);
         }
       }
     }
@@ -78,5 +83,12 @@ export function observePushback() {
       }
     }
   };
-  return { onTick, observations: (): CoverageAct[] => [...acts.values()].map(a => ({ ...a, ...matters.get(a.order), ...(advice.has(`${a.order}|${a.actor}`) ? { advice: advice.get(`${a.order}|${a.actor}`)! } : {}) })) };
+  return { onTick, observations: (): CoverageAct[] => [...acts.values()].flatMap(a => {
+    const scoped = scopedAdvice.get(`${a.order}|${a.actor}`);
+    if (scoped !== undefined && a.kind === 'verb:consult' && a.role === 'addressee') return scoped.consultationAnswers.map(c => ({ ...a, ...matters.get(a.order),
+      id: `${a.id}|${c.answerCourse}`, subject: scoped.consultationSubject, round: `${scoped.consultationRound.namespace}.${scoped.consultationRound.key}.${scoped.consultationRound.revision}`,
+      course: c.answerCourse, advice: c.answerPosition, adviceTerms: c.answerTerms,
+      ...(c.answerFeasibility === undefined ? {} : { feasibility: c.answerFeasibility.assessmentStatus, assessment: c.answerFeasibility }) }));
+    return [{ ...a, ...matters.get(a.order), ...(advice.has(`${a.order}|${a.actor}`) ? { advice: advice.get(`${a.order}|${a.actor}`)! } : {}) }];
+  }) };
 }

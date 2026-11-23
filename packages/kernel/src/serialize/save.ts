@@ -75,7 +75,7 @@ export const SAVE_MIGRATIONS: readonly SaveMigration[] = [{
   migrate: save => save,
 }, {
   from: 5, to: 6,
-  change: 'Optional received authority and accepted onward journeys. Existing saves gain no grant, directive or receipt.',
+  change: 'Optional received assignments, onward journeys, course advice and consultation copies. Existing saves gain no grant, directive, receipt or judgment.',
   migrate: save => save,
 }];
 

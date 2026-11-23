@@ -400,7 +400,8 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     const hasPerson = (id: PersonId) => map.world.people.some(p => p.id === id);
     const hasPost = (id: PostId) => posts.has(id) || declared.has(id);
     const hasLetter = (issuer: PersonId, letter: LetterIdentity) => rows.some(q =>
-      factions.get(q.faction)?.principal === issuer && q.offensives.some(o => o.letter !== undefined && letterKey(o.letter) === letterKey(letter)));
+      factions.get(q.faction)?.principal === issuer && (q.offensives.some(o => o.letter !== undefined && letterKey(o.letter) === letterKey(letter)) ||
+        q.consultations?.some(c => letterKey(c.letter) === letterKey(letter)) === true));
     for (const p of conditionalDoctrineProblems(r, id => map.regions.has(id), { hasPerson, hasPost, hasLetter })) problems.push(`${at}.${p.field}: ${p.message}`);
     const onSide = (post: string, what: string) => {
       if (!posts.has(post)) problems.push(`${at}.${what}: ${post} is not a start post`);

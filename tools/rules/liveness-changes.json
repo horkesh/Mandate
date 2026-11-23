@@ -2849,5 +2849,36 @@
     "observed": 22,
     "cause": "S129 [I]: twelve recorded bounded local choices and ten explicit plan-menu picks produce22 ordinary choices, including the two onward orders and Lee’s reviews of Holmes/Johnston proposals. Four other plan selections are automatic. No menu cap or choice-counter rule changes.",
     "evidence": "docs/audit/s129-evidence/readiness-band-review.json#seats.choices"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.consulted",
+    "before": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "after": {
+      "minFires": 8,
+      "maxFires": 32,
+      "why": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted."
+    },
+    "observed": 16,
+    "cause": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted.",
+    "evidence": "docs/audit/s128-evidence/band-review.json#verbs.consulted"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/seats.initiative",
+    "before": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+    },
+    "after": {
+      "minFires": 6,
+      "maxFires": 24,
+      "why": "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged."
+    },
+    "observed": 12,
+    "cause": "S132 [I]: accepted pre-start conciliation cells admit Bates, Blair and Chase to the unchanged bid_for_direction initiative alongside Seward. Each fires on days7,70,133 under the existing 60-day cooldown and weekly owner: twelve events rather than three. No initiative rule, trait, threshold or starting stance changes.",
+    "evidence": "docs/audit/s132-evidence/initiative-review.json#seats.initiative"
   }
 ]

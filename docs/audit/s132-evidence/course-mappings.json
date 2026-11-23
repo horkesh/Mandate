@@ -1,0 +1,304 @@
+{
+  "rounds": [
+    {
+      "advisers": [
+        {
+          "person": "scott_winfield",
+          "post": "us_general_in_chief"
+        }
+      ],
+      "alternatives": [
+        {
+          "assumesPossible": false,
+          "honours": [],
+          "id": "abandonment",
+          "opposes": [],
+          "resources": []
+        },
+        {
+          "assumesPossible": false,
+          "honours": [
+            "union",
+            "conciliation"
+          ],
+          "id": "evacuate_both",
+          "opposes": [
+            "duty"
+          ],
+          "resources": []
+        }
+      ],
+      "courses": [
+        {
+          "assumesPossible": false,
+          "honours": [
+            "union",
+            "duty"
+          ],
+          "id": "relief",
+          "opposes": [],
+          "resources": [
+            "regulars",
+            "volunteers",
+            "vessels"
+          ]
+        }
+      ],
+      "fromDate": "1861-03-05",
+      "kind": "feasibility",
+      "letter": {
+        "key": "sumter_0305",
+        "namespace": "us_consultations",
+        "revision": 1
+      },
+      "question": "Consider whether the garrison can be relieved with the means available.",
+      "source": "Lincoln, Complete Works II pp.9-10: March 9 recounts the March 5 transmission for consideration and same-day endorsed opinion; Holt/Scott to Lincoln, March 5, LoC mal0779200, document pp.1-6 (Knox transcript). [I] Paraphrased question, not a recovered March 5 original. The source quantities and conclusions are not seeded as received inputs. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+      "subject": "sumter_garrison"
+    },
+    {
+      "advisers": [
+        {
+          "person": "scott_winfield",
+          "post": "us_general_in_chief"
+        }
+      ],
+      "alternatives": [
+        {
+          "assumesPossible": false,
+          "honours": [],
+          "id": "abandonment",
+          "opposes": [],
+          "resources": []
+        },
+        {
+          "assumesPossible": false,
+          "honours": [
+            "union",
+            "conciliation"
+          ],
+          "id": "evacuate_both",
+          "opposes": [
+            "duty"
+          ],
+          "resources": []
+        }
+      ],
+      "courses": [
+        {
+          "assumesPossible": false,
+          "honours": [
+            "union",
+            "duty"
+          ],
+          "id": "relief",
+          "opposes": [],
+          "resources": [
+            "regulars",
+            "volunteers",
+            "vessels"
+          ]
+        }
+      ],
+      "fromDate": "1861-03-12",
+      "kind": "feasibility",
+      "letter": {
+        "key": "sumter_0312",
+        "namespace": "us_consultations",
+        "revision": 1
+      },
+      "question": "What additional means and preparation would supplying and reinforcing the fort require, and could they be ready in time?",
+      "source": "OR I-I p.197 and Lincoln, Complete Works II p.16: Cameron quotes the President's question of March 12 and Scott's answer. No separately read Scott original or invented receipt date. [I] Paraphrase; alternatives describe possible advice, not additional principal questions. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+      "subject": "sumter_garrison"
+    },
+    {
+      "advisers": [
+        {
+          "person": "seward_william_h",
+          "post": "us_secretary_state"
+        },
+        {
+          "person": "cameron_simon",
+          "post": "us_secretary_war"
+        },
+        {
+          "person": "welles_gideon",
+          "post": "us_secretary_navy"
+        },
+        {
+          "person": "smith_caleb_b",
+          "post": "us_secretary_interior"
+        },
+        {
+          "person": "bates_edward",
+          "post": "us_attorney_general"
+        },
+        {
+          "person": "chase_salmon_p",
+          "post": "us_secretary_treasury"
+        },
+        {
+          "person": "blair_montgomery",
+          "post": "us_postmaster_general"
+        }
+      ],
+      "courses": [
+        {
+          "assumesPossible": true,
+          "honours": [
+            "union",
+            "duty"
+          ],
+          "id": "provisioning",
+          "opposes": [],
+          "resources": []
+        }
+      ],
+      "fromDate": "1861-03-15",
+      "kind": "policy",
+      "letter": {
+        "key": "sumter_0315",
+        "namespace": "us_consultations",
+        "revision": 1
+      },
+      "question": "Assuming provisioning is possible, would attempting it now be wise?",
+      "source": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+      "subject": "sumter_garrison"
+    },
+    {
+      "advisers": [
+        {
+          "person": "seward_william_h",
+          "post": "us_secretary_state"
+        },
+        {
+          "person": "cameron_simon",
+          "post": "us_secretary_war"
+        },
+        {
+          "person": "welles_gideon",
+          "post": "us_secretary_navy"
+        },
+        {
+          "person": "smith_caleb_b",
+          "post": "us_secretary_interior"
+        },
+        {
+          "person": "bates_edward",
+          "post": "us_attorney_general"
+        },
+        {
+          "person": "chase_salmon_p",
+          "post": "us_secretary_treasury"
+        },
+        {
+          "person": "blair_montgomery",
+          "post": "us_postmaster_general"
+        }
+      ],
+      "courses": [
+        {
+          "assumesPossible": false,
+          "honours": [
+            "union",
+            "duty"
+          ],
+          "id": "relief",
+          "opposes": [],
+          "resources": []
+        },
+        {
+          "assumesPossible": false,
+          "honours": [],
+          "id": "abandonment",
+          "opposes": [],
+          "resources": []
+        }
+      ],
+      "fromDate": "1861-03-29",
+      "kind": "policy",
+      "letter": {
+        "key": "sumter_0329",
+        "namespace": "us_consultations",
+        "revision": 1
+      },
+      "question": "Should an expedition relieve the fort, or should its garrison be withdrawn?",
+      "source": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+      "subject": "sumter_garrison"
+    }
+  ],
+  "legacyOptions": [
+    {
+      "id": "give_up_both",
+      "label": "situation.sumter_garrison.option.give_up_both",
+      "displayKey": 1,
+      "proposedBy": [
+        "scott_winfield"
+      ],
+      "honours": [
+        "union",
+        "conciliation"
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 23
+      },
+      "effects": [
+        {
+          "setFlag": "sumter_withdrawn"
+        },
+        {
+          "setFlag": "pickens_given_up"
+        }
+      ]
+    },
+    {
+      "id": "provision_notice",
+      "label": "situation.sumter_garrison.option.provision_notice",
+      "displayKey": 2,
+      "proposedBy": [
+        "welles_gideon",
+        "blair_montgomery",
+        "chase_salmon_p"
+      ],
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "appearsWhen": {
+        "clockAtLeast": 31
+      },
+      "effects": [
+        {
+          "propose": {
+            "owner": "command",
+            "field": "temporary_post",
+            "subject": "us_sumter_relief_expedition",
+            "delta": 1,
+            "reason": "relief-expedition",
+            "side": "union"
+          }
+        },
+        {
+          "setFlag": "sumter_relief_ordered"
+        }
+      ]
+    },
+    {
+      "id": "withdraw",
+      "label": "situation.sumter_garrison.option.withdraw",
+      "displayKey": 3,
+      "proposedBy": [
+        "seward_william_h",
+        "scott_winfield",
+        "smith_caleb_b",
+        "bates_edward",
+        "cameron_simon"
+      ],
+      "honours": [],
+      "effects": [
+        {
+          "setFlag": "sumter_withdrawn"
+        }
+      ]
+    }
+  ]
+}

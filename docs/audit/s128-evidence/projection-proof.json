@@ -1,0 +1,28 @@
+{
+  "baseline": "d5fafb124d5f636c74d54b7b9b44e71ce3054212",
+  "completeReadersEqual": true,
+  "roots": 8,
+  "changes": [
+    {
+      "path": "packages/kernel/src/view/view.ts",
+      "symbol": "viewFor",
+      "before": "6eb64887adcc71a5f00f4e96c71742eb64665cf0c6e9b7d900faf2436e5cddd1",
+      "after": "78d155fb41c2b5a471a0454cd084747c97c6d432e8bf238a5eb80bab012249b8",
+      "readers": "viewFor reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "principalMenu",
+      "before": "d6f6426c044d311aa46f1a19e4bddc35665821ebe0b3cbf430f716ddb3c95e19",
+      "after": "c6db991d28f46a739fa1c05fdcbbede2c60d66c766c0bee4eb2f873cc064ce27",
+      "readers": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "pendingRequests",
+      "before": "1f00104b1e6c44fd6825412d8339dec595f8c322f1c9478d7e5dacd96bffefab",
+      "after": "862c3b5183fbe21a9894f48f0f65196755c063e96b5b01c3c2bf6ad110772cdd",
+      "readers": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+    }
+  ]
+}

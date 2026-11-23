@@ -1,0 +1,2374 @@
+[
+  {
+    "id": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|abandonment",
+    "creditKey": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|",
+    "order": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+    "side": "union",
+    "actor": "scott_winfield",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 1,
+    "post": "us_general_in_chief",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0305.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "feasibility": "unknown",
+    "assessment": {
+      "assessmentStatus": "unknown",
+      "assessmentRequirements": []
+    },
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.9-10: March 9 recounts the March 5 transmission for consideration and same-day endorsed opinion; Holt/Scott to Lincoln, March 5, LoC mal0779200, document pp.1-6 (Knox transcript). [I] Paraphrased question, not a recovered March 5 original. The source quantities and conclusions are not seeded as received inputs. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|evacuate_both",
+    "creditKey": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|",
+    "order": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+    "side": "union",
+    "actor": "scott_winfield",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 1,
+    "post": "us_general_in_chief",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0305.1",
+    "subject": "sumter_garrison",
+    "course": "evacuate_both",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        1000
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "feasibility": "unknown",
+    "assessment": {
+      "assessmentStatus": "unknown",
+      "assessmentRequirements": []
+    },
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "conciliation"
+      ],
+      "id": "evacuate_both",
+      "opposes": [
+        "duty"
+      ],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.9-10: March 9 recounts the March 5 transmission for consideration and same-day endorsed opinion; Holt/Scott to Lincoln, March 5, LoC mal0779200, document pp.1-6 (Knox transcript). [I] Paraphrased question, not a recovered March 5 original. The source quantities and conclusions are not seeded as received inputs. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U02",
+        "verdict": "matched",
+        "credited": true,
+        "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register."
+      }
+    ]
+  },
+  {
+    "id": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|comply|1|relief",
+    "creditKey": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief|scott_winfield|addressee|",
+    "order": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+    "side": "union",
+    "actor": "scott_winfield",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 1,
+    "post": "us_general_in_chief",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.1.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0305.1.us_general_in_chief"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0305.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "feasibility": "unknown",
+    "assessment": {
+      "assessmentStatus": "unknown",
+      "assessmentRequirements": [
+        {
+          "evidenceCourse": "relief",
+          "evidenceResource": "regulars",
+          "evidenceNeeded": null,
+          "evidenceAvailable": null,
+          "evidenceReadyBy": null,
+          "evidenceNeededBy": null,
+          "assessmentPaper": null
+        },
+        {
+          "evidenceCourse": "relief",
+          "evidenceResource": "vessels",
+          "evidenceNeeded": null,
+          "evidenceAvailable": null,
+          "evidenceReadyBy": null,
+          "evidenceNeededBy": null,
+          "assessmentPaper": null
+        },
+        {
+          "evidenceCourse": "relief",
+          "evidenceResource": "volunteers",
+          "evidenceNeeded": null,
+          "evidenceAvailable": null,
+          "evidenceReadyBy": null,
+          "evidenceNeededBy": null,
+          "assessmentPaper": null
+        }
+      ]
+    },
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": [
+        "regulars",
+        "volunteers",
+        "vessels"
+      ]
+    },
+    "courseSource": "Lincoln, Complete Works II pp.9-10: March 9 recounts the March 5 transmission for consideration and same-day endorsed opinion; Holt/Scott to Lincoln, March 5, LoC mal0779200, document pp.1-6 (Knox transcript). [I] Paraphrased question, not a recovered March 5 original. The source quantities and conclusions are not seeded as received inputs. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U42",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The scoped assessment did not establish the required feasibility judgment from received needs, means and readiness; unknown evidence is not an adverse military finding."
+      }
+    ]
+  },
+  {
+    "id": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|comply|7|abandonment",
+    "creditKey": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|",
+    "order": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+    "side": "union",
+    "actor": "scott_winfield",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 7,
+    "post": "us_general_in_chief",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0312.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ],
+      [
+        "prior_course_stance",
+        0
+      ]
+    ],
+    "feasibility": "unknown",
+    "assessment": {
+      "assessmentStatus": "unknown",
+      "assessmentRequirements": []
+    },
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "OR I-I p.197 and Lincoln, Complete Works II p.16: Cameron quotes the President's question of March 12 and Scott's answer. No separately read Scott original or invented receipt date. [I] Paraphrase; alternatives describe possible advice, not additional principal questions. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|comply|7|evacuate_both",
+    "creditKey": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|",
+    "order": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+    "side": "union",
+    "actor": "scott_winfield",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 7,
+    "post": "us_general_in_chief",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0312.1",
+    "subject": "sumter_garrison",
+    "course": "evacuate_both",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        1000
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "feasibility": "unknown",
+    "assessment": {
+      "assessmentStatus": "unknown",
+      "assessmentRequirements": []
+    },
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "conciliation"
+      ],
+      "id": "evacuate_both",
+      "opposes": [
+        "duty"
+      ],
+      "resources": []
+    },
+    "courseSource": "OR I-I p.197 and Lincoln, Complete Works II p.16: Cameron quotes the President's question of March 12 and Scott's answer. No separately read Scott original or invented receipt date. [I] Paraphrase; alternatives describe possible advice, not additional principal questions. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U02",
+        "verdict": "matched",
+        "credited": false,
+        "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register."
+      }
+    ]
+  },
+  {
+    "id": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|comply|7|relief",
+    "creditKey": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief|scott_winfield|addressee|",
+    "order": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+    "side": "union",
+    "actor": "scott_winfield",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 7,
+    "post": "us_general_in_chief",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.7.lincoln_abraham.scott_winfield.verb.consult.us_consultations.sumter_0312.1.us_general_in_chief"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0312.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "feasibility": "unknown",
+    "assessment": {
+      "assessmentStatus": "unknown",
+      "assessmentRequirements": [
+        {
+          "evidenceCourse": "relief",
+          "evidenceResource": "regulars",
+          "evidenceNeeded": null,
+          "evidenceAvailable": null,
+          "evidenceReadyBy": null,
+          "evidenceNeededBy": null,
+          "assessmentPaper": null
+        },
+        {
+          "evidenceCourse": "relief",
+          "evidenceResource": "vessels",
+          "evidenceNeeded": null,
+          "evidenceAvailable": null,
+          "evidenceReadyBy": null,
+          "evidenceNeededBy": null,
+          "assessmentPaper": null
+        },
+        {
+          "evidenceCourse": "relief",
+          "evidenceResource": "volunteers",
+          "evidenceNeeded": null,
+          "evidenceAvailable": null,
+          "evidenceReadyBy": null,
+          "evidenceNeededBy": null,
+          "assessmentPaper": null
+        }
+      ]
+    },
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": [
+        "regulars",
+        "volunteers",
+        "vessels"
+      ]
+    },
+    "courseSource": "OR I-I p.197 and Lincoln, Complete Works II p.16: Cameron quotes the President's question of March 12 and Scott's answer. No separately read Scott original or invented receipt date. [I] Paraphrase; alternatives describe possible advice, not additional principal questions. [I] Supplying and reinforcing the existing federal garrison serves the maintenance purpose in Lincoln, Complete Works II pp.9-10. Scott's forecasts in OR I-I pp.197-198 are attributed assessments. Bare withdrawal carries no attributed motive. Scott's undated proposal expressly seeks reconciliation and continued or restored Union adherence (OR I-I pp.200-201). His prediction of success and forecast that relief is unavailing add no terms. The withdrawal of Sumter and Pickens conflicts with Lincoln's prior maintenance instruction (Complete Works II p.9). Scott expressly retains Jefferson and Taylor. That limit supplies no separate term for the represented act at the two forts.",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "pmanuscript 1-4 dated 1861-03-03",
+            "source": "S98-SCOTT-MAR3"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U01",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The scoped assessment did not establish the required feasibility judgment from received needs, means and readiness; unknown evidence is not an adverse military finding."
+      }
+    ]
+  },
+  {
+    "id": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general|bates_edward|addressee|comply|10|provisioning",
+    "creditKey": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general|bates_edward|addressee|",
+    "order": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general",
+    "side": "union",
+    "actor": "bates_edward",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 10,
+    "post": "us_attorney_general",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0315.1.us_attorney_general"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0315.1",
+    "subject": "sumter_garrison",
+    "course": "provisioning",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": true,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "provisioning",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p43-44 dated 1859-08-20",
+            "source": "S131-SAVAGE-43-44"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p43-44 dated 1859-08-20",
+            "source": "S131-SAVAGE-43-44"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "p41 (printed 1860, letter date unknown)",
+            "source": "S131-SAVAGE-41"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U03e",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+      }
+    ]
+  },
+  {
+    "id": "m.10.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0315.1.us_postmaster_general|blair_montgomery|addressee|comply|10|provisioning",
+    "creditKey": "m.10.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0315.1.us_postmaster_general|blair_montgomery|addressee|",
+    "order": "m.10.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0315.1.us_postmaster_general",
+    "side": "union",
+    "actor": "blair_montgomery",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 10,
+    "post": "us_postmaster_general",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0315.1.us_postmaster_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0315.1.us_postmaster_general"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0315.1.us_postmaster_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0315.1.us_postmaster_general"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0315.1",
+    "subject": "sumter_garrison",
+    "course": "provisioning",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": true,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "provisioning",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war|cameron_simon|addressee|comply|10|provisioning",
+    "creditKey": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war|cameron_simon|addressee|",
+    "order": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war",
+    "side": "union",
+    "actor": "cameron_simon",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 10,
+    "post": "us_secretary_war",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0315.1.us_secretary_war"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0315.1",
+    "subject": "sumter_garrison",
+    "course": "provisioning",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": true,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "provisioning",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+    "heldValues": [],
+    "registerRows": [
+      {
+        "id": "U03b",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+      }
+    ]
+  },
+  {
+    "id": "m.10.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0315.1.us_secretary_treasury|chase_salmon_p|addressee|comply|10|provisioning",
+    "creditKey": "m.10.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0315.1.us_secretary_treasury|chase_salmon_p|addressee|",
+    "order": "m.10.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0315.1.us_secretary_treasury",
+    "side": "union",
+    "actor": "chase_salmon_p",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 10,
+    "post": "us_secretary_treasury",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0315.1.us_secretary_treasury",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0315.1.us_secretary_treasury"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0315.1.us_secretary_treasury",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0315.1.us_secretary_treasury"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0315.1",
+    "subject": "sumter_garrison",
+    "course": "provisioning",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        1000
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": true,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "provisioning",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p293-294 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p292 dated 1860-11-10",
+            "source": "CHASE-D"
+          },
+          {
+            "at": "p293 dated 1860-12-13",
+            "source": "CHASE-D"
+          }
+        ],
+        "value": "free_soil"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4",
+            "source": "CHASE-1847"
+          }
+        ],
+        "value": "fugitive_defence"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293-295 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "duty"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293-295 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state|seward_william_h|addressee|comply|10|provisioning",
+    "creditKey": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state|seward_william_h|addressee|",
+    "order": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state",
+    "side": "union",
+    "actor": "seward_william_h",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 10,
+    "post": "us_secretary_state",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0315.1.us_secretary_state"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0315.1",
+    "subject": "sumter_garrison",
+    "course": "provisioning",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": true,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "provisioning",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p481 dated 1860-12-10",
+            "source": "S131-SEWARD-481"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p481 dated 1860-12-10",
+            "source": "S131-SEWARD-481"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U03a",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+      }
+    ]
+  },
+  {
+    "id": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior|smith_caleb_b|addressee|comply|10|provisioning",
+    "creditKey": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior|smith_caleb_b|addressee|",
+    "order": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior",
+    "side": "union",
+    "actor": "smith_caleb_b",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 10,
+    "post": "us_secretary_interior",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0315.1.us_secretary_interior"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0315.1",
+    "subject": "sumter_garrison",
+    "course": "provisioning",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": true,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "provisioning",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+    "heldValues": [],
+    "registerRows": [
+      {
+        "id": "U03d",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+      }
+    ]
+  },
+  {
+    "id": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy|welles_gideon|addressee|comply|10|provisioning",
+    "creditKey": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy|welles_gideon|addressee|",
+    "order": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy",
+    "side": "union",
+    "actor": "welles_gideon",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 10,
+    "post": "us_secretary_navy",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.10.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0315.1.us_secretary_navy"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0315.1",
+    "subject": "sumter_garrison",
+    "course": "provisioning",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": true,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "provisioning",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II p.11: March 15 written question, same to other cabinet members. Replies pp.11-22. [I] Paraphrase. Provisioning sustains the retained federal garrison under the maintenance purpose (Lincoln, Complete Works II pp.9,11). The question assumes possibility. Advisers' forecasts of collision, loss or escalation and their added clauses supply no course terms (pp.11-22).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "manuscript page 1 (unnumbered) dated 1861-01-31",
+            "source": "S131-WELLES-FOGG-1"
+          }
+        ],
+        "value": "union"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U03c",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+      }
+    ]
+  },
+  {
+    "id": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general|bates_edward|addressee|comply|24|abandonment",
+    "creditKey": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general|bates_edward|addressee|",
+    "order": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general",
+    "side": "union",
+    "actor": "bates_edward",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_attorney_general",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p43-44 dated 1859-08-20",
+            "source": "S131-SAVAGE-43-44"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p43-44 dated 1859-08-20",
+            "source": "S131-SAVAGE-43-44"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "p41 (printed 1860, letter date unknown)",
+            "source": "S131-SAVAGE-41"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general|bates_edward|addressee|comply|24|relief",
+    "creditKey": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general|bates_edward|addressee|",
+    "order": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general",
+    "side": "union",
+    "actor": "bates_edward",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_attorney_general",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.bates_edward.verb.consult.us_consultations.sumter_0329.1.us_attorney_general"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p43-44 dated 1859-08-20",
+            "source": "S131-SAVAGE-43-44"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p43-44 dated 1859-08-20",
+            "source": "S131-SAVAGE-43-44"
+          }
+        ],
+        "value": "conciliation"
+      },
+      {
+        "cites": [
+          {
+            "at": "p41 (printed 1860, letter date unknown)",
+            "source": "S131-SAVAGE-41"
+          }
+        ],
+        "value": "caution"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|comply|24|abandonment",
+    "creditKey": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|",
+    "order": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+    "side": "union",
+    "actor": "blair_montgomery",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_postmaster_general",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U05",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+      }
+    ]
+  },
+  {
+    "id": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|comply|24|relief",
+    "creditKey": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general|blair_montgomery|addressee|",
+    "order": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+    "side": "union",
+    "actor": "blair_montgomery",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_postmaster_general",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.blair_montgomery.verb.consult.us_consultations.sumter_0329.1.us_postmaster_general"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4 dated 1861-01-31",
+            "source": "S131-FOX-I-2-4"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war|cameron_simon|addressee|comply|24|abandonment",
+    "creditKey": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war|cameron_simon|addressee|",
+    "order": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war",
+    "side": "union",
+    "actor": "cameron_simon",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_war",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war|cameron_simon|addressee|comply|24|relief",
+    "creditKey": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war|cameron_simon|addressee|",
+    "order": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war",
+    "side": "union",
+    "actor": "cameron_simon",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_war",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.cameron_simon.verb.consult.us_consultations.sumter_0329.1.us_secretary_war"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury|chase_salmon_p|addressee|comply|24|abandonment",
+    "creditKey": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury|chase_salmon_p|addressee|",
+    "order": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury",
+    "side": "union",
+    "actor": "chase_salmon_p",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_treasury",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p293-294 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p292 dated 1860-11-10",
+            "source": "CHASE-D"
+          },
+          {
+            "at": "p293 dated 1860-12-13",
+            "source": "CHASE-D"
+          }
+        ],
+        "value": "free_soil"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4",
+            "source": "CHASE-1847"
+          }
+        ],
+        "value": "fugitive_defence"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293-295 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "duty"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293-295 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury|chase_salmon_p|addressee|comply|24|relief",
+    "creditKey": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury|chase_salmon_p|addressee|",
+    "order": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury",
+    "side": "union",
+    "actor": "chase_salmon_p",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_treasury",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.chase_salmon_p.verb.consult.us_consultations.sumter_0329.1.us_secretary_treasury"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        1000
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p293-294 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "order"
+      },
+      {
+        "cites": [
+          {
+            "at": "p292 dated 1860-11-10",
+            "source": "CHASE-D"
+          },
+          {
+            "at": "p293 dated 1860-12-13",
+            "source": "CHASE-D"
+          }
+        ],
+        "value": "free_soil"
+      },
+      {
+        "cites": [
+          {
+            "at": "p3-4",
+            "source": "CHASE-1847"
+          }
+        ],
+        "value": "fugitive_defence"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293-295 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "duty"
+      },
+      {
+        "cites": [
+          {
+            "at": "p293-295 dated 1860-12-13",
+            "source": "S131-CHASE-293-295"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state|seward_william_h|addressee|comply|24|abandonment",
+    "creditKey": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state|seward_william_h|addressee|",
+    "order": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+    "side": "union",
+    "actor": "seward_william_h",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_state",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p481 dated 1860-12-10",
+            "source": "S131-SEWARD-481"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p481 dated 1860-12-10",
+            "source": "S131-SEWARD-481"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state|seward_william_h|addressee|comply|24|relief",
+    "creditKey": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state|seward_william_h|addressee|",
+    "order": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+    "side": "union",
+    "actor": "seward_william_h",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_state",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.seward_william_h.verb.consult.us_consultations.sumter_0329.1.us_secretary_state"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "p481 dated 1860-12-10",
+            "source": "S131-SEWARD-481"
+          }
+        ],
+        "value": "union"
+      },
+      {
+        "cites": [
+          {
+            "at": "p481 dated 1860-12-10",
+            "source": "S131-SEWARD-481"
+          }
+        ],
+        "value": "conciliation"
+      }
+    ],
+    "registerRows": [
+      {
+        "id": "U04",
+        "verdict": "mismatch",
+        "credited": false,
+        "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+      }
+    ]
+  },
+  {
+    "id": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior|smith_caleb_b|addressee|comply|24|abandonment",
+    "creditKey": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior|smith_caleb_b|addressee|",
+    "order": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior",
+    "side": "union",
+    "actor": "smith_caleb_b",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_interior",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior|smith_caleb_b|addressee|comply|24|relief",
+    "creditKey": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior|smith_caleb_b|addressee|",
+    "order": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior",
+    "side": "union",
+    "actor": "smith_caleb_b",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_interior",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.smith_caleb_b.verb.consult.us_consultations.sumter_0329.1.us_secretary_interior"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy|welles_gideon|addressee|comply|24|abandonment",
+    "creditKey": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy|welles_gideon|addressee|",
+    "order": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy",
+    "side": "union",
+    "actor": "welles_gideon",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_navy",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "abandonment",
+    "advice": "undetermined",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        0
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [],
+      "id": "abandonment",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "manuscript page 1 (unnumbered) dated 1861-01-31",
+            "source": "S131-WELLES-FOGG-1"
+          }
+        ],
+        "value": "union"
+      }
+    ],
+    "registerRows": []
+  },
+  {
+    "id": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy|welles_gideon|addressee|comply|24|relief",
+    "creditKey": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy|welles_gideon|addressee|",
+    "order": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy",
+    "side": "union",
+    "actor": "welles_gideon",
+    "role": "addressee",
+    "kind": "verb:consult",
+    "actual": "comply",
+    "declared": "comply",
+    "day": 24,
+    "post": "us_secretary_navy",
+    "undertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy"
+    },
+    "declaredUndertaking": {
+      "undertakingKind": "original",
+      "undertakingRequest": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy",
+      "clauses": [
+        "course"
+      ],
+      "undertakingRevision": "m.24.lincoln_abraham.welles_gideon.verb.consult.us_consultations.sumter_0329.1.us_secretary_navy"
+    },
+    "reservations": [],
+    "declaredReservations": [],
+    "reservationGaps": [],
+    "declaredReservationGaps": [],
+    "round": "us_consultations.sumter_0329.1",
+    "subject": "sumter_garrison",
+    "course": "relief",
+    "advice": "favour",
+    "adviceTerms": [
+      [
+        "honoured_values",
+        500
+      ],
+      [
+        "opposed_values",
+        0
+      ]
+    ],
+    "courseTerms": {
+      "assumesPossible": false,
+      "honours": [
+        "union",
+        "duty"
+      ],
+      "id": "relief",
+      "opposes": [],
+      "resources": []
+    },
+    "courseSource": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28).",
+    "heldValues": [
+      {
+        "cites": [
+          {
+            "at": "manuscript page 1 (unnumbered) dated 1861-01-31",
+            "source": "S131-WELLES-FOGG-1"
+          }
+        ],
+        "value": "union"
+      }
+    ],
+    "registerRows": []
+  }
+]

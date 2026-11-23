@@ -31,12 +31,19 @@ describe('S98 accepted cast evidence under 0085/0087', () => {
     expect(person('harris_isham_g').values.map((v: any) => v.value)).toContain('state_autonomy');
     expect(person('pickens_francis_w').temperament.boldness.direction).toBe('above');
     for (const [id, values] of [
-      ['scott_winfield', ['caution']], ['seward_william_h', ['union', 'conciliation']],
+      ['scott_winfield', ['caution']],
       ['hicks_thomas_h', ['union', 'state_autonomy']],
     ] as const) for (const value of values) {
       const cell = person(id).values.find((v: any) => v.value === value);
       expect(cell.cites.every((c: any) => c.source.startsWith('S98-')), `${id}/${value}`).toBe(true);
       expect(cell.cites.every((c: any) => c.at.includes('dated ') && c.at.includes('p')), `${id}/${value}`).toBe(true);
+    }
+    // S131 re-cites the same two held cells to Seward's pre-start letter.
+    for (const value of ['union', 'conciliation']) {
+      const cell = person('seward_william_h').values.find((v: any) => v.value === value);
+      expect(cell.cites, `seward_william_h/${value}`).toEqual([
+        { source: 'S131-SEWARD-481', at: 'p481 dated 1860-12-10' },
+      ]);
     }
   });
 });

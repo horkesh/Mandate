@@ -1407,7 +1407,7 @@
       "kind": "primary",
       "licence": "public-domain",
       "basis": "expired-copyright",
-      "copyUsed": "archive.org completeworksofa02linc_0; p. 6, First Inaugural Address (lane 1.11r3)",
+      "copyUsed": "archive.org completeworksofa02linc_0; p. 6, First Inaugural Address (lane 1.11r3). S131 pages for the Sumter courses are retained under docs/research/S131/read/ and listed in docs/research/S131/sources.csv.",
       "licencePage": null,
       "licenceReadOn": null
     },
@@ -2678,6 +2678,66 @@
       "licence": "public-domain",
       "basis": "expired-copyright",
       "copyUsed": "https://archive.org/details/cu31924079579524/page/n114/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; February 8 subscribers; distinguish later March 2 Texas authorization",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S131-SEWARD-481",
+      "title": "Seward at Washington I, p.481, Seward’s letter of 10 December 1860",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/sewardatwashingt01sewa; retained docs/research/S131/read/SEWARD-481.txt; SHA256 6861bb9f9a7c6ec6cbf4c5f5deab390c02bc7c952e0d44ff1d101e525b436577",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S131-CHASE-293-295",
+      "title": "Diary and Correspondence of Salmon P. Chase II, pp.293–295, Chase to Henry Wilson, 13 December 1860",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/diaryandcorrespo00chasrich/page/n299/mode/1up; retained docs/research/S131/read/CHASE-293-295.txt; SHA256 0829c422cff5790275dbb9a4704f8552c049569533ea25df4e0cbae8acfa490b",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S131-WELLES-FOGG-1",
+      "title": "Gideon Welles to George G. Fogg, 31 January 1861, first unnumbered manuscript page",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://pictures.abebooks.com/inventory/32376714856.jpg; retained docs/research/S131/read/WELLES-FOGG-1.txt; SHA256 2b8511a13c78d4d67925018cd9a73e452e229eb50f5555b52c9ac306c0d53870; The citation uses Welles’s 1861 letter and its observed first page. Dealer text and image are excluded from pack content.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S131-SAVAGE-41",
+      "title": "John Savage, Our Living Representative Men (1860), p.41, Bates’s own quoted policy letter, exact date undetermined",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/ourlivingreprese01sava/page/n49/mode/1up; retained docs/research/S131/read/SAVAGE-41.txt; SHA256 83f78bbb32a82a610dbc30911ef0d73823d85f18c38bcce951ee9f59d216e9d9",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S131-SAVAGE-43-44",
+      "title": "John Savage, Our Living Representative Men (1860), pp.43–44, Bates’s signed letter, 20 August 1859",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/ourlivingreprese01sava/page/n51/mode/1up; retained docs/research/S131/read/SAVAGE-43.txt; SHA256 f8c2e9030745b449397c061c5566f65e552e619cdd510547820b74bf06eeebc4; https://archive.org/details/ourlivingreprese01sava/page/n52/mode/1up; retained docs/research/S131/read/SAVAGE-44.txt; SHA256 1a21fbc1f5f3b2744fe9ced54a1262923f7641b8fb72b295dabcaa9a7632db15",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S131-FOX-I-2-4",
+      "title": "Confidential Correspondence of Gustavus Vasa Fox I, pp.2–4, Blair to Fox, 31 January 1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/confidentialcorr01foxg; retained docs/research/S131/read/FOX-I-2-4.txt; SHA256 4cf6ed2cec7b6974aa7badfe504d950c09705048fd28aa5adc8d620c09342e5c",
       "licencePage": null,
       "licenceReadOn": null
     }

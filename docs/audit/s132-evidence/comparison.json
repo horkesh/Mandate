@@ -1,0 +1,40 @@
+{
+  "baseline": {
+    "commit": "7bc4afce4300214d900a0a1c7c1fa9bdc5ce13c0",
+    "capture": "runs/s129/readiness-capture",
+    "finalHash": "86aa271101a815d9f13151279a066889acc8e8bf020d47c004aa1b1b469b45c0"
+  },
+  "after": {
+    "finalHash": "416675a8549206416acbd8023a42d764112dbc50aa7c97ac399cd350e0ffb4c7",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "416675a8549206416acbd8023a42d764112dbc50aa7c97ac399cd350e0ffb4c7",
+      "matches": true,
+      "savedLogReplays": true
+    }
+  },
+  "coverageBefore": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 4,
+    "not_observed": 2
+  },
+  "coverageAfter": {
+    "mismatch": 13,
+    "matched": 6,
+    "representation_gap": 12,
+    "not_observed": 2
+  },
+  "M1": {
+    "mismatch": 9,
+    "matched": 1
+  },
+  "answerProjections": 27,
+  "changedCounts": 8,
+  "newZeros": []
+}

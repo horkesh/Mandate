@@ -1,0 +1,364 @@
+{
+  "baseline": "S129 third capture at 7bc4afce",
+  "changes": [
+    {
+      "key": "union-1861, war by decision, 148 days/seats.initiative",
+      "before": {
+        "minFires": 1,
+        "maxFires": 6,
+        "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+      },
+      "after": {
+        "minFires": 6,
+        "maxFires": 24,
+        "why": "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged."
+      },
+      "origin": "S132 [I]: accepted pre-start conciliation cells admit Bates, Blair and Chase to the unchanged bid_for_direction initiative alongside Seward. Each fires on days7,70,133 under the existing 60-day cooldown and weekly owner: twelve events rather than three. No initiative rule, trait, threshold or starting stance changes."
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/verbs.consulted",
+      "before": {
+        "minFires": 2,
+        "maxFires": 10
+      },
+      "after": {
+        "minFires": 8,
+        "maxFires": 32,
+        "why": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted."
+      },
+      "origin": "Accepted S128 protocol merge; existing around(16)."
+    }
+  ],
+  "newS132Recenterings": [
+    {
+      "key": "union-1861, war by decision, 148 days/seats.initiative",
+      "before": {
+        "minFires": 1,
+        "maxFires": 6,
+        "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+      },
+      "after": {
+        "minFires": 6,
+        "maxFires": 24,
+        "why": "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged."
+      },
+      "observed": 12,
+      "cause": "S132 [I]: accepted pre-start conciliation cells admit Bates, Blair and Chase to the unchanged bid_for_direction initiative alongside Seward. Each fires on days7,70,133 under the existing 60-day cooldown and weekly owner: twelve events rather than three. No initiative rule, trait, threshold or starting stance changes.",
+      "evidence": "docs/audit/s132-evidence/initiative-review.json#seats.initiative"
+    }
+  ],
+  "changedCounts": [
+    {
+      "mechanic": "knowledge.pruned_age",
+      "before": {
+        "mechanic": "knowledge.pruned_age",
+        "fires": 107,
+        "magnitude": 1535
+      },
+      "after": {
+        "mechanic": "knowledge.pruned_age",
+        "fires": 107,
+        "magnitude": 1536
+      },
+      "cause": "Four authored rounds replace one undifferentiated consultation; sixteen replies replace five. S128 protocol and S131 values jointly change the retained letter/response/report mix; nine additional existing initiatives send memoranda. No transport, attention, pruning or answering rule changed. This is a combined before/after comparison, not an isolated attribution of every downstream pruning unit.",
+      "dailyFireDifferences": []
+    },
+    {
+      "mechanic": "messages.delivered",
+      "before": {
+        "mechanic": "messages.delivered",
+        "fires": 14842,
+        "magnitude": 14842
+      },
+      "after": {
+        "mechanic": "messages.delivered",
+        "fires": 14873,
+        "magnitude": 14873
+      },
+      "cause": "Four authored rounds replace one undifferentiated consultation; sixteen replies replace five. S128 protocol and S131 values jointly change the retained letter/response/report mix; nine additional existing initiatives send memoranda. No transport, attention, pruning or answering rule changed. This is a combined before/after comparison, not an isolated attribution of every downstream pruning unit.",
+      "dailyFireDifferences": [
+        {
+          "day": 1,
+          "before": 3,
+          "after": 5
+        },
+        {
+          "day": 2,
+          "before": 53,
+          "after": 43
+        },
+        {
+          "day": 7,
+          "before": 24,
+          "after": 26
+        },
+        {
+          "day": 8,
+          "before": 55,
+          "after": 58
+        },
+        {
+          "day": 10,
+          "before": 66,
+          "after": 80
+        },
+        {
+          "day": 24,
+          "before": 133,
+          "after": 147
+        },
+        {
+          "day": 71,
+          "before": 90,
+          "after": 93
+        },
+        {
+          "day": 134,
+          "before": 161,
+          "after": 164
+        }
+      ]
+    },
+    {
+      "mechanic": "messages.sent",
+      "before": {
+        "mechanic": "messages.sent",
+        "fires": 15620,
+        "magnitude": 15620
+      },
+      "after": {
+        "mechanic": "messages.sent",
+        "fires": 15651,
+        "magnitude": 15651
+      },
+      "cause": "Four authored rounds replace one undifferentiated consultation; sixteen replies replace five. S128 protocol and S131 values jointly change the retained letter/response/report mix; nine additional existing initiatives send memoranda. No transport, attention, pruning or answering rule changed. This is a combined before/after comparison, not an isolated attribution of every downstream pruning unit.",
+      "dailyFireDifferences": [
+        {
+          "day": 1,
+          "before": 72,
+          "after": 74
+        },
+        {
+          "day": 2,
+          "before": 34,
+          "after": 24
+        },
+        {
+          "day": 7,
+          "before": 300,
+          "after": 305
+        },
+        {
+          "day": 10,
+          "before": 29,
+          "after": 43
+        },
+        {
+          "day": 24,
+          "before": 28,
+          "after": 42
+        },
+        {
+          "day": 70,
+          "before": 293,
+          "after": 296
+        },
+        {
+          "day": 133,
+          "before": 418,
+          "after": 421
+        }
+      ]
+    },
+    {
+      "mechanic": "orders.responses_pruned",
+      "before": {
+        "mechanic": "orders.responses_pruned",
+        "fires": 28,
+        "magnitude": 67
+      },
+      "after": {
+        "mechanic": "orders.responses_pruned",
+        "fires": 30,
+        "magnitude": 78
+      },
+      "cause": "Four authored rounds replace one undifferentiated consultation; sixteen replies replace five. S128 protocol and S131 values jointly change the retained letter/response/report mix; nine additional existing initiatives send memoranda. No transport, attention, pruning or answering rule changed. This is a combined before/after comparison, not an isolated attribution of every downstream pruning unit.",
+      "dailyFireDifferences": [
+        {
+          "day": 63,
+          "before": 1,
+          "after": 0
+        },
+        {
+          "day": 68,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 71,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 85,
+          "before": 0,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "seats.attention_spent",
+      "before": {
+        "mechanic": "seats.attention_spent",
+        "fires": 178,
+        "magnitude": 178
+      },
+      "after": {
+        "mechanic": "seats.attention_spent",
+        "fires": 181,
+        "magnitude": 181
+      },
+      "cause": "Four authored rounds replace one undifferentiated consultation; sixteen replies replace five. S128 protocol and S131 values jointly change the retained letter/response/report mix; nine additional existing initiatives send memoranda. No transport, attention, pruning or answering rule changed. This is a combined before/after comparison, not an isolated attribution of every downstream pruning unit.",
+      "dailyFireDifferences": [
+        {
+          "day": 1,
+          "before": 1,
+          "after": 2
+        },
+        {
+          "day": 2,
+          "before": 1,
+          "after": 0
+        },
+        {
+          "day": 7,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 10,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 24,
+          "before": 0,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "seats.initiative",
+      "before": {
+        "mechanic": "seats.initiative",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "after": {
+        "mechanic": "seats.initiative",
+        "fires": 12,
+        "magnitude": 12
+      },
+      "cause": "S131 adds Bates, Blair and Chase to the unchanged conciliation-backed initiative alongside Seward: three firings each. Exact events, terms, threshold counterfactual and live driver in initiative-review.json.",
+      "dailyFireDifferences": [
+        {
+          "day": 7,
+          "before": 1,
+          "after": 4
+        },
+        {
+          "day": 70,
+          "before": 1,
+          "after": 4
+        },
+        {
+          "day": 133,
+          "before": 1,
+          "after": 4
+        }
+      ]
+    },
+    {
+      "mechanic": "verbs.answered",
+      "before": {
+        "mechanic": "verbs.answered",
+        "fires": 152,
+        "magnitude": 152
+      },
+      "after": {
+        "mechanic": "verbs.answered",
+        "fires": 163,
+        "magnitude": 163
+      },
+      "cause": "Four authored rounds replace one undifferentiated consultation; sixteen replies replace five. S128 protocol and S131 values jointly change the retained letter/response/report mix; nine additional existing initiatives send memoranda. No transport, attention, pruning or answering rule changed. This is a combined before/after comparison, not an isolated attribution of every downstream pruning unit.",
+      "dailyFireDifferences": [
+        {
+          "day": 1,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 2,
+          "before": 5,
+          "after": 0
+        },
+        {
+          "day": 7,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 10,
+          "before": 0,
+          "after": 7
+        },
+        {
+          "day": 24,
+          "before": 0,
+          "after": 7
+        }
+      ]
+    },
+    {
+      "mechanic": "verbs.consulted",
+      "before": {
+        "mechanic": "verbs.consulted",
+        "fires": 5,
+        "magnitude": 5
+      },
+      "after": {
+        "mechanic": "verbs.consulted",
+        "fires": 16,
+        "magnitude": 16
+      },
+      "cause": "Four authored rounds replace one undifferentiated consultation; sixteen replies replace five. S128 protocol and S131 values jointly change the retained letter/response/report mix; nine additional existing initiatives send memoranda. No transport, attention, pruning or answering rule changed. This is a combined before/after comparison, not an isolated attribution of every downstream pruning unit.",
+      "dailyFireDifferences": [
+        {
+          "day": 1,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 2,
+          "before": 5,
+          "after": 0
+        },
+        {
+          "day": 7,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 10,
+          "before": 0,
+          "after": 7
+        },
+        {
+          "day": 24,
+          "before": 0,
+          "after": 7
+        }
+      ]
+    }
+  ]
+}

@@ -150,6 +150,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes', 'a support request answered'], [at('State', 'operationRecords')]),
   field('knowledge (reports and own sent-letter correlations per seat)', 'knowledge', ['opening bulletins', 'message delivery', 'own issued papers', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'openingControlReports'), at('State', 'openingControlClaims'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
+  field('authored consultation dispatch copies and received course advice', 'knowledge', ['own issued questions', 'message delivery'], []),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
   field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"], [at('State', 'situationStates')]),
   // Lane 1.6 (`politics/politics.ts`): bloc support (the mandate is derived from it, never stored; elections are 1B's).
@@ -193,6 +194,12 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
  * as decision 0044 asks. Rename a local rather than reuse such a key.
  */
 export const IMMUTABLE_RECORDS: readonly string[] = [
+  'ConsultationAdvice',
+  'ConsultationAdvice.consultationAnswers',
+  'CourseAssessment.assessmentRequirements',
+  'CourseEvidence',
+  'CourseAssessment',
+  'KnownConsultationDispatch',
   // Seats
   'SeatAssignment',
   // Messages in transit

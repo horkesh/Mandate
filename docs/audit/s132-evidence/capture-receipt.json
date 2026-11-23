@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "runs/s132/capture.ts"
+  ],
+  "exit": 1,
+  "seconds": 214.442,
+  "log": "runs/s132/measure.log"
+}

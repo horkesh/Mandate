@@ -1,0 +1,226 @@
+[
+  {
+    "root": "audienceHeld",
+    "equal": true
+  },
+  {
+    "root": "authorityByPost",
+    "equal": true
+  },
+  {
+    "root": "battleRecords",
+    "equal": true
+  },
+  {
+    "root": "blocSupport",
+    "equal": true
+  },
+  {
+    "root": "calendarStart",
+    "equal": true
+  },
+  {
+    "root": "chamberStates",
+    "equal": true
+  },
+  {
+    "root": "closedGovernments",
+    "equal": true
+  },
+  {
+    "root": "congressLedger",
+    "equal": true
+  },
+  {
+    "root": "departmentFactions",
+    "equal": true
+  },
+  {
+    "root": "factionCapitals",
+    "equal": true
+  },
+  {
+    "root": "forceAssignments",
+    "equal": true
+  },
+  {
+    "root": "forceBlockStates",
+    "equal": true
+  },
+  {
+    "root": "forceJoins",
+    "equal": true
+  },
+  {
+    "root": "forceLocations",
+    "equal": true
+  },
+  {
+    "root": "forceRaisedIdentities",
+    "equal": true
+  },
+  {
+    "root": "gameSeed",
+    "equal": true
+  },
+  {
+    "root": "infraDepotCondition",
+    "equal": true
+  },
+  {
+    "root": "infraEdgeCondition",
+    "equal": true
+  },
+  {
+    "root": "infraObstructions",
+    "equal": true
+  },
+  {
+    "root": "knowledgeBySeat",
+    "equal": false
+  },
+  {
+    "root": "messagesInTransit",
+    "equal": true
+  },
+  {
+    "root": "neutralOffers",
+    "equal": true
+  },
+  {
+    "root": "observerPostings",
+    "equal": true
+  },
+  {
+    "root": "openingControlClaims",
+    "equal": true
+  },
+  {
+    "root": "openingControlReports",
+    "equal": true
+  },
+  {
+    "root": "operationRecords",
+    "equal": true
+  },
+  {
+    "root": "orderResponses",
+    "equal": true
+  },
+  {
+    "root": "personGrievances",
+    "equal": true
+  },
+  {
+    "root": "personInquiries",
+    "equal": true
+  },
+  {
+    "root": "personPromises",
+    "equal": true
+  },
+  {
+    "root": "personRanks",
+    "equal": true
+  },
+  {
+    "root": "personRegard",
+    "equal": true
+  },
+  {
+    "root": "personRivals",
+    "equal": true
+  },
+  {
+    "root": "personRungs",
+    "equal": true
+  },
+  {
+    "root": "personService",
+    "equal": true
+  },
+  {
+    "root": "personStances",
+    "equal": false
+  },
+  {
+    "root": "personStanding",
+    "equal": true
+  },
+  {
+    "root": "personStatus",
+    "equal": true
+  },
+  {
+    "root": "personTraits",
+    "equal": true
+  },
+  {
+    "root": "personTrue",
+    "equal": true
+  },
+  {
+    "root": "planRecords",
+    "equal": true
+  },
+  {
+    "root": "postLevies",
+    "equal": true
+  },
+  {
+    "root": "postStates",
+    "equal": true
+  },
+  {
+    "root": "regionControl",
+    "equal": true
+  },
+  {
+    "root": "regionFortification",
+    "equal": true
+  },
+  {
+    "root": "regionGovernments",
+    "equal": true
+  },
+  {
+    "root": "regionLoyalty",
+    "equal": true
+  },
+  {
+    "root": "regionReachedUnionLines",
+    "equal": true
+  },
+  {
+    "root": "reportTruth",
+    "equal": false
+  },
+  {
+    "root": "seatAssignments",
+    "equal": true
+  },
+  {
+    "root": "seatAttention",
+    "equal": true
+  },
+  {
+    "root": "seatInitiatives",
+    "equal": false
+  },
+  {
+    "root": "situationFlags",
+    "equal": true
+  },
+  {
+    "root": "situationStates",
+    "equal": true
+  },
+  {
+    "root": "stateDay",
+    "equal": true
+  },
+  {
+    "root": "warFraming",
+    "equal": true
+  }
+]

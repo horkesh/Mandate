@@ -1,0 +1,112 @@
+{
+  "parents": [
+    "7bc4afce",
+    "910a0cb8"
+  ],
+  "livenessHistory": {
+    "headRecords": 193,
+    "adviceRecords": 184,
+    "mergedRecords": 194,
+    "headPrefixExact": true,
+    "allAdviceRecordsExact": true,
+    "appendedKey": "union-1861, war by decision, 148 days/verbs.consulted"
+  },
+  "projections": {
+    "changedClosures": 3,
+    "identicalProtectedReaderRoots": 8,
+    "utf8Proof": "docs/audit/s132-evidence/projection-proof.json"
+  },
+  "legacyPremise": {
+    "utf8Proof": "docs/audit/s132-evidence/sumter-premise-proof.json"
+  },
+  "s131Packet": {
+    "commit": "ae965bb3",
+    "trackedCopiesIdentical": true
+  },
+  "checks": {
+    "schemas.log": {
+      "command": "npm run pack:schemas",
+      "exit": 0,
+      "updated": 2
+    },
+    "pack-generate.log": {
+      "command": "npm run pack:generate -- union-1861",
+      "exit": 0,
+      "finalWrites": 0,
+      "unchanged": 4
+    },
+    "sumter-red.log": {
+      "command": "npm test -- packs/union-1861/test/s132-sumter-data.test.ts",
+      "exit": 1,
+      "expectedFailures": 2
+    },
+    "legacy-red.log": {
+      "command": "npm test -- packs/union-1861/test/s132-sumter-data.test.ts",
+      "exit": 1,
+      "expectedFailures": 1
+    },
+    "focused.log": {
+      "command": "npm test -- <12 focused files as named in this log>",
+      "exit": 0,
+      "passed": 98,
+      "filesPassed": 12,
+      "phase": "before legacy metadata edit"
+    },
+    "sumter-green.log": {
+      "command": "npm test -- packs/union-1861/test/s132-sumter-data.test.ts packs/union-1861/test/s128-advice.test.ts",
+      "exit": 0,
+      "passed": 6,
+      "filesPassed": 2,
+      "phase": "after legacy metadata edit"
+    },
+    "typecheck.log": {
+      "command": "npm run typecheck",
+      "exit": 0
+    },
+    "boundary.log": {
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "files": 474,
+      "terms": 61
+    },
+    "rules-legacy-red.log": {
+      "command": "npm run check:rules",
+      "exit": 1,
+      "expectedFindings": 1
+    },
+    "rules-final.log": {
+      "command": "npm run check:rules",
+      "exit": 0,
+      "findings": 0
+    },
+    "history-final.log": {
+      "command": "stagedRuleHistoryProblems(process.cwd()) through node --import tsx",
+      "exit": 0,
+      "problems": []
+    },
+    "pack-validate-final.log": {
+      "command": "npm run pack:validate -- union-1861",
+      "exit": 0,
+      "errors": 0,
+      "warnings": 1244
+    }
+  },
+  "rawFileEncoding": {
+    "boundary.log": "UTF-16LE with BOM",
+    "focused.log": "UTF-16LE with BOM",
+    "history-final.log": "UTF-16LE with BOM",
+    "history.log": "UTF-16LE with BOM",
+    "legacy-red.log": "UTF-16LE with BOM",
+    "pack-generate.log": "UTF-16LE with BOM",
+    "pack-validate-final.log": "UTF-16LE with BOM",
+    "pack-validate.log": "UTF-16LE with BOM",
+    "projection-proof.json": "UTF-16LE with BOM",
+    "rules-final.log": "UTF-16LE with BOM",
+    "rules-legacy-red.log": "UTF-16LE with BOM",
+    "rules.log": "UTF-16LE with BOM",
+    "schemas.log": "UTF-16LE with BOM",
+    "sumter-green.log": "UTF-16LE with BOM",
+    "sumter-red.log": "UTF-16LE with BOM",
+    "typecheck.log": "UTF-16LE with BOM"
+  }
+}

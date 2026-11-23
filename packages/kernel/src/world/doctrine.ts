@@ -91,6 +91,23 @@ export function conditionalDoctrineProblems(row: PrincipalDoctrine, hasRegion: (
     if (letters.has(key)) add(`${field}.letter`, `duplicate authored letter ${key}`);
     letters.set(key, o);
   }
+  const questionKeys = new Set<string>();
+  for (const [i, q] of (row.consultations ?? []).entries()) {
+    const field = `consultations[${i}]`;
+    if (!isLetterIdentity(q.letter) || q.letter.namespace !== row.letterNamespace || q.letter.revision !== 1) add(field, 'a consultation needs a first-revision letter in its issuer namespace; a changed question is a new round');
+    const key = letterKey(q.letter);
+    if (questionKeys.has(key) || letters.has(key)) add(field, 'duplicate authored question identity');
+    questionKeys.add(key);
+    if (!q.question.trim() || !q.source.trim() || !isWellFormedId(q.subject) || !['policy','feasibility'].includes(q.kind)) add(field, 'a question needs its subject, kind, wording and source');
+    try { parseIsoDate(q.fromDate); } catch { add(field, 'invalid consultation date'); }
+    if (q.advisers.length === 0 || new Set(q.advisers.map(a => a.post)).size !== q.advisers.length || new Set(q.advisers.map(a => a.person)).size !== q.advisers.length ||
+      q.advisers.some(a => !isWellFormedId(a.person) || !isWellFormedId(a.post) || references?.hasPerson(a.person) === false || references?.hasPost?.(a.post) === false)) add(field, 'question recipients must be distinct named people and posts');
+    const courses = [...q.courses, ...(q.alternatives ?? [])];
+    if (q.courses.length === 0 || new Set(courses.map(c => c.id)).size !== courses.length || courses.some(c => !isWellFormedId(c.id) ||
+      new Set(c.resources).size !== c.resources.length || c.resources.some(r => !isWellFormedId(r)) ||
+      c.honours.some(v => !isWellFormedId(v) || c.opposes.includes(v)) || c.opposes.some(v => !isWellFormedId(v)))) add(field, 'courses and resources must be distinct well-formed terms, with no value both honoured and opposed');
+    if (q.kind === 'feasibility' && q.courses.some(c => c.resources.length === 0 || c.assumesPossible)) add(field, 'a feasibility inquiry must assess named resources without assuming success');
+  }
   for (const [i, o] of row.offensives.entries()) {
     if (!isLetterIdentity(o.letter)) continue;
     const field = `offensives[${i}]`;
@@ -136,7 +153,7 @@ export function conditionalDoctrineProblems(row: PrincipalDoctrine, hasRegion: (
       if (selector.subjectKind === 'region' && !hasRegion(selector.subjectId as RegionId)) add(here, 'report subject must name a known region');
       if (selector.subjectKind === 'post' && !validPost(selector.subjectId as PostId)) add(here, 'report subject must name a known post');
       if (selector.subjectKind === 'person' && !validPerson(selector.subjectId as PersonId)) add(here, 'report subject must name a known person');
-      if (selector.answers !== undefined && (!isLetterIdentity(selector.answers) || !letters.has(letterKey(selector.answers)))) add(here, 'correlated report must answer the acting principal’s own declared dispatch');
+      if (selector.answers !== undefined && (!isLetterIdentity(selector.answers) || (!letters.has(letterKey(selector.answers)) && !questionKeys.has(letterKey(selector.answers))))) add(here, 'correlated report must answer the acting principal’s own declared dispatch');
       if (selector.claims !== undefined && (limit === undefined || selector.claims.length > limit || selector.claims.length === 0)) add(here, 'claim conjunction must be nonempty and within the pack selector limit');
       for (const c of selector.claims ?? []) {
         if (!CLAIM_KINDS.includes(c.kind) || (c.region !== null && !hasRegion(c.region)) || (c.token !== null && !isWellFormedId(c.token))) add(here, 'claim must name a known claim kind, token and region');

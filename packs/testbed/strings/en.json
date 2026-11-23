@@ -432,5 +432,16 @@
   "console.command.recall-offer": "recall offered troops ({offer})",
   "console.help.mandate": "  mandate paper-id           dispatch a declared assignment offered on this menu",
   "console.error.mandate": "Use mandate paper-id, naming a declared assignment offered on this menu.",
-  "console.command.mandate": "assignment {paper} by {route}"
+  "console.command.mandate": "assignment {paper} by {route}",
+  "console.consultation": "Advice question: {question} Courses: {courses}. Ask with: consult {subject} {posts} round={round}",
+  "console.command.consult-round": "Ask {posts} about {situation}, round {round}",
+  "console.advice.round": "In answer to {round}: {courses}",
+  "console.advice.course": "{course}: {position}{feasibility}",
+  "console.advice.feasibility": "; assessment: {status}",
+  "console.advice.favour": "in favour",
+  "console.advice.against": "against",
+  "console.advice.undetermined": "no settled advice",
+  "console.advice.feasible": "means and time sufficient as reported",
+  "console.advice.infeasible": "reported means or time insufficient",
+  "console.advice.unknown": "means or time not established by received reports"
 }

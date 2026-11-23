@@ -1,0 +1,75 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\LOC-0779200-p1-6.txt",
+    "sha256": "e802f42e728e1b67ae473ec60ceaf692cff5d7e8bc4cc64ee1dcb5f6e8918b24"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\OR-I-I-p197.txt",
+    "sha256": "8c207e39372fdb247ecd94b3cb770484ba675d3185ad6ca04efd7e9249d84983"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\OR-I-I-p200.txt",
+    "sha256": "2178bfe484fa15c2e550cc47bb2a057aef6a80068cfc91ef3cc09f0f2943444f"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\OR-I-I-p201.txt",
+    "sha256": "d7f7da54c9306b7569ea8a65c8be26b70f43fa3432f74cc6510a1203fb64379a"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p11.txt",
+    "sha256": "8d0e6b14daba0697bbe9689b414f1862564f7d07a9470deebfe2538b0e05744a"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p12.txt",
+    "sha256": "3b8f2bab9fa6de71cbbeec54a62a8469fec4b8a71eb0599f14e154f7c729400b"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p13.txt",
+    "sha256": "31ebfb32b317823c76eb16c9595a8a626433b788f3d1f10795322a2b2e01ae8c"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p14.txt",
+    "sha256": "6d6d09a115d0beb2b95e0a02488fc39505b1697b323c12c19501fc806bb74729"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p16.txt",
+    "sha256": "3c688cb061c68fb0921770a4c01dc175ee057928ac28f250598196f021c7528a"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p17.txt",
+    "sha256": "6dc2d5c36851836d1dc7307a1e11185c1a390707323fd89ac662d62ccf2a3e8a"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p18.txt",
+    "sha256": "50634beafd6212be7a63f4c17f9ca4c666e9f3ff472aa65b47f8857c25226ad0"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p19.txt",
+    "sha256": "a487316658459eafa269483242bc353c00cfcf611c04662541bd3037fc70964f"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p20.txt",
+    "sha256": "4d391c6e6fda72976f75fbcbaa3e3d50f2be0365dd9d3e923c115f33546c95be"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p21.txt",
+    "sha256": "ee1187462b73bc62635c29a5eeeb915570bddf6eb57e29b9a3510f7a22e5b457"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p22.txt",
+    "sha256": "2e37f6453fc6a0680750ae131761ef76886d9485c3a45b60ca37a2832ce066c7"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p26.txt",
+    "sha256": "70cc493cc4863fda1a6275fd3fc0b7c83b1308b61915fca7a7698e9a8e8fd5ca"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Lincoln-II-p27.txt",
+    "sha256": "00d544fd6a16326a583bb19b34b5e3b4ed4a6350a31364af2b9abaf0e45e8b74"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\lincoln-works2.txt",
+    "sha256": "0aa94ec41fab888f027af48c6491f31c92ad65c432c817141a7bbfba8160eb5f",
+    "read": "Complete Works II pp.9-10, March 9 letter recounting March 5; excerpt runs/s128/Lincoln-II-pp9-10.txt"
+  }
+]

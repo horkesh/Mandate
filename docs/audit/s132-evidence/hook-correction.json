@@ -1,0 +1,84 @@
+{
+  "firstHook": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s132/commit-message.txt"
+    ],
+    "exit": 1,
+    "seconds": 304.33,
+    "log": "runs/s132/commit.log"
+  },
+  "fullSuite": {
+    "filesPassed": 272,
+    "filesFailed": 1,
+    "testsPassed": 2403,
+    "testsFailed": 1,
+    "skipped": 3
+  },
+  "failure": "S98 historical test demanded only S98 citation IDs on the two Seward cells re-cited by accepted S131.",
+  "correction": {
+    "cause": "The S98 test required an S98 source prefix even for Seward rows recited in approved S131. The underlying dated letter and both held values agree with S131.",
+    "changedFile": "packs/union-1861/test/s98-cast-evidence.test.ts",
+    "additions": 8,
+    "deletions": 1,
+    "sewardValues": [
+      "union",
+      "conciliation"
+    ],
+    "expectedCitation": {
+      "source": "S131-SEWARD-481",
+      "at": "p481 dated 1860-12-10"
+    },
+    "preservedChecks": [
+      "All prior character and value checks",
+      "Scott and Hicks S98 citation checks"
+    ],
+    "rawLogEncoding": "UTF-16LE with BOM",
+    "before": {
+      "path": "runs/s132-implementation/s98-cast-before.log",
+      "command": "npm test -- packs/union-1861/test/s98-cast-evidence.test.ts",
+      "exit": 1,
+      "passed": 2,
+      "failed": 1
+    },
+    "after": {
+      "path": "runs/s132-implementation/s98-cast-after.log",
+      "command": "npm test -- packs/union-1861/test/s98-cast-evidence.test.ts packs/union-1861/test/s132-sumter-data.test.ts packs/union-1861/test/s128-advice.test.ts",
+      "exit": 0,
+      "passed": 9,
+      "failed": 0,
+      "files": 3
+    },
+    "diffCheckExit": 0
+  },
+  "unreachedGates": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:licences"
+      ],
+      "exit": 0,
+      "seconds": 0.67,
+      "log": "runs/s132/unreached-licences.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ],
+      "exit": 0,
+      "seconds": 0.628,
+      "log": "runs/s132/unreached-decisions.log"
+    }
+  ],
+  "independentCorrectionReview": "s98-review.md",
+  "reuse": "All22 raw capture files retain their recorded SHA256s. Only the provenance test changed after the first hook; no simulation or pack data correction. The second full ordinary hook is mandatory commit validation, not a fresh measurement.",
+  "firstLog": {
+    "path": "runs/s132/commit-first.log",
+    "sha256": "7776b01bd24c3a0838ce50f5e5e205b6f601ce2b3672c442816503b0062d1572"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "files": 791,
+  "currentExact": 788,
+  "allArchivedExact": true,
+  "archive": "runs/s132/measured-sources",
+  "validationMetadataChanges": [
+    {
+      "path": "packages/cli/src/liveness-gate.ts",
+      "bytes": 56323,
+      "sha256": "2abee86ddb12d2a89188c3d80a2f76f841a7aab1b4ba14c9b25baa12e4dcb6ff",
+      "currentSha256": "317468020d56bac9565d4fb8f9dbebed4fa2ad0a89fcfc9b782ccfb195d63753"
+    },
+    {
+      "path": "packs/union-1861/test/s98-cast-evidence.test.ts",
+      "bytes": 2423,
+      "sha256": "b9afe66c418762227785867a64145bcd62eea66023def394631e002342de5270",
+      "currentSha256": "b262d7cd8d0bbdbe25a3c7b24e97384b09b7a392dbf556e334253f263c7cb0ca"
+    },
+    {
+      "path": "tools/rules/liveness-changes.json",
+      "bytes": 146420,
+      "sha256": "bb8d82e7bd881c583fd9e24539da1e4281510644dc2cc57a9622c6da21bbb802",
+      "currentSha256": "a2dcee04fa6fb096188f94c29fc1eb4d8c02b44fe7e3a41f1b65ae4453d934b9"
+    }
+  ],
+  "reason": "Only the recorded positive initiative band, its append-only cause record, and the historical provenance test guard changed after measurement. Simulation and pack data stay exact; no second capture."
+}

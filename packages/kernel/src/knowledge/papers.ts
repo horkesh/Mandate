@@ -20,8 +20,9 @@ export interface ReceivedPaperReport {
   readonly receiptClaims: readonly ReceivedPaperClaim[];
 }
 
-function ownOrigin(knowledge: SeatKnowledge, identity: LetterIdentity): MessageId | undefined {
-  return knowledge.knownDoctrineDispatches?.find(d => letterKey(d.dispatchLetter) === letterKey(identity))?.dispatchOrigin;
+function ownOrigin(knowledge: SeatKnowledge, identity: LetterIdentity, post: PostId | null = null): MessageId | undefined {
+  return knowledge.knownDoctrineDispatches?.find(d => letterKey(d.dispatchLetter) === letterKey(identity))?.dispatchOrigin ??
+    knowledge.knownConsultationDispatches?.find(d => d.questionPost === post && letterKey(d.questionLetter) === letterKey(identity))?.questionOrigin;
 }
 
 function receivedMatches(selector: ReportPaperSelector, paper: ReceivedPaperReport, origin: MessageId | null | undefined): boolean {
@@ -31,7 +32,7 @@ function receivedMatches(selector: ReportPaperSelector, paper: ReceivedPaperRepo
 }
 
 function originFor(selector: ReportPaperSelector, knowledge: SeatKnowledge): MessageId | null | undefined {
-  return selector.answers === undefined ? null : ownOrigin(knowledge, selector.answers);
+  return selector.answers === undefined ? null : ownOrigin(knowledge, selector.answers, selector.authorPost);
 }
 
 function compareWitnesses(a: KnownPaperReceipt, b: KnownPaperReceipt): number {

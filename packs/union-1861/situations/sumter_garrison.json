@@ -21,8 +21,8 @@
         "scott_winfield"
       ],
       "honours": [
-        "conciliation",
-        "caution"
+        "union",
+        "conciliation"
       ],
       "appearsWhen": {
         "clockAtLeast": 23
@@ -79,10 +79,7 @@
         "bates_edward",
         "cameron_simon"
       ],
-      "honours": [
-        "conciliation",
-        "caution"
-      ],
+      "honours": [],
       "effects": [
         {
           "setFlag": "sumter_withdrawn"
@@ -126,6 +123,14 @@
     {
       "source": "OR",
       "at": "I-1 p. 197 (Anderson's estimate of the force a relief needs, 20,000, per the numbers note's correction 9)"
+    },
+    {
+      "source": "OR",
+      "at": "I-1 pp. 200-201 (Scott's two-fort proposal and its stated reconciliation and Union purpose; S131 B0-B2)"
+    },
+    {
+      "source": "NH-CW2",
+      "at": "p. 9 (Lincoln's maintenance instruction); pp. 26-28 (withdrawal discussed in the cabinet opinions; S131 A0-A3)"
     },
     {
       "source": "NOTE-secession-winter-1861",

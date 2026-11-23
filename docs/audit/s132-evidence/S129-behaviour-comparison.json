@@ -1,0 +1,50 @@
+{
+  "stateRoots": [
+    {
+      "root": "forceBlockStates",
+      "equal": true
+    },
+    {
+      "root": "forceAssignments",
+      "equal": true
+    },
+    {
+      "root": "forceLocations",
+      "equal": true
+    },
+    {
+      "root": "forceJoins",
+      "equal": true
+    },
+    {
+      "root": "postStates",
+      "equal": true
+    },
+    {
+      "root": "authorityByPost",
+      "equal": true
+    },
+    {
+      "root": "operationRecords",
+      "equal": true
+    },
+    {
+      "root": "battleRecords",
+      "equal": true
+    }
+  ],
+  "retainedArtifacts": [
+    {
+      "file": "union-1861-commands.json",
+      "equal": true
+    },
+    {
+      "file": "union-1861-lot-transitions.json",
+      "equal": true
+    },
+    {
+      "file": "union-1861-choices.json",
+      "equal": true
+    }
+  ]
+}

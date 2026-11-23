@@ -1,0 +1,28 @@
+actor,round,course,day,advice,adviceTerms,feasibility,registerVerdicts
+scott_winfield,us_consultations.sumter_0305.1,abandonment,1,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",unknown,no eligible register row for this answer projection
+scott_winfield,us_consultations.sumter_0305.1,evacuate_both,1,favour,"[[""honoured_values"", 1000], [""opposed_values"", 0]]",unknown,U02:matched
+scott_winfield,us_consultations.sumter_0305.1,relief,1,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",unknown,U42:mismatch
+scott_winfield,us_consultations.sumter_0312.1,abandonment,7,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0], [""prior_course_stance"", 0]]",unknown,no eligible register row for this answer projection
+scott_winfield,us_consultations.sumter_0312.1,evacuate_both,7,favour,"[[""honoured_values"", 1000], [""opposed_values"", 0]]",unknown,U02:matched
+scott_winfield,us_consultations.sumter_0312.1,relief,7,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",unknown,U01:mismatch
+bates_edward,us_consultations.sumter_0315.1,provisioning,10,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,U03e:mismatch
+blair_montgomery,us_consultations.sumter_0315.1,provisioning,10,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+cameron_simon,us_consultations.sumter_0315.1,provisioning,10,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,U03b:mismatch
+chase_salmon_p,us_consultations.sumter_0315.1,provisioning,10,favour,"[[""honoured_values"", 1000], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+seward_william_h,us_consultations.sumter_0315.1,provisioning,10,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",,U03a:mismatch
+smith_caleb_b,us_consultations.sumter_0315.1,provisioning,10,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,U03d:mismatch
+welles_gideon,us_consultations.sumter_0315.1,provisioning,10,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",,U03c:mismatch
+bates_edward,us_consultations.sumter_0329.1,abandonment,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+bates_edward,us_consultations.sumter_0329.1,relief,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+blair_montgomery,us_consultations.sumter_0329.1,abandonment,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,U05:mismatch
+blair_montgomery,us_consultations.sumter_0329.1,relief,24,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+cameron_simon,us_consultations.sumter_0329.1,abandonment,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+cameron_simon,us_consultations.sumter_0329.1,relief,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+chase_salmon_p,us_consultations.sumter_0329.1,abandonment,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+chase_salmon_p,us_consultations.sumter_0329.1,relief,24,favour,"[[""honoured_values"", 1000], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+seward_william_h,us_consultations.sumter_0329.1,abandonment,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+seward_william_h,us_consultations.sumter_0329.1,relief,24,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",,U04:mismatch
+smith_caleb_b,us_consultations.sumter_0329.1,abandonment,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+smith_caleb_b,us_consultations.sumter_0329.1,relief,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+welles_gideon,us_consultations.sumter_0329.1,abandonment,24,undetermined,"[[""honoured_values"", 0], [""opposed_values"", 0]]",,no eligible register row for this answer projection
+welles_gideon,us_consultations.sumter_0329.1,relief,24,favour,"[[""honoured_values"", 500], [""opposed_values"", 0]]",,no eligible register row for this answer projection

@@ -13,12 +13,14 @@
  * unique across all State records (decision 0044).
  */
 import { isWellFormedId, type MessageId, type PersonId, type PostId, type RegionId } from '../ids.ts';
+import { isLetterIdentity } from '../world/letters.ts';
 import type { PlanNote } from '../plans/notes.ts';
 import type { PlanPaper } from './plan-paper.ts';
 import type { DirectiveReservation, DirectiveResponse, Reason, ReservationGap } from '../directive.ts';
 import type { DiscretionCondition, PlanGoal } from '../plans/goal.ts';
 import type { CallInformation, StateCondition } from './evidence-types.ts';
 import type { LetterIdentity } from '../world/letters.ts';
+import type { ConsultationAdvice, CourseEvidence } from '../world/consultations.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
 export const REPORT_TYPES = [
@@ -175,6 +177,7 @@ export interface NoteAccount {
 
 /** The advice payload (0040): a recommended option, stated reasons, and a confidence. */
 export interface AdviceBody {
+  readonly adviceConsultation?: ConsultationAdvice;
   readonly adviceRecommends: string;
   readonly adviceReasons: readonly StatedReason[];
   readonly adviceConfidence: number;
@@ -205,6 +208,7 @@ export interface DiscretionReport {
 
 /** What a report says. Shared by a message in transit and the report as a seat holds it. */
 export interface ReportBody {
+  readonly reportCourseEvidence?: readonly CourseEvidence[];
   /** The requisition answered by a named concentration's prerequisite report. */
   readonly reportRequisition?: string;
   /** Original received call details; never copied from the addressee's answer. */
@@ -273,6 +277,17 @@ export function reportProblems(body: ReportBody): string[] {
   }
   if (body.reportType !== 'advice' && body.reportAdvice !== null) problems.push('only advice carries an advice body');
   if (body.reportAdvice !== null && !isPermille(body.reportAdvice.adviceConfidence)) problems.push('advice confidence must be a permille');
+  const scoped = body.reportAdvice?.adviceConsultation;
+  if (scoped !== undefined) {
+    if (body.reportType !== 'advice' || body.reportSubtype !== 'requested' || body.reportAnswers === null || !isLetterIdentity(scoped.consultationRound) ||
+      !isWellFormedId(scoped.consultationSubject) || scoped.consultationAnswers.length === 0 || new Set(scoped.consultationAnswers.map(a => a.answerCourse)).size !== scoped.consultationAnswers.length) problems.push('scoped advice must answer a dispatch with a round, subject and distinct courses');
+    for (const a of scoped.consultationAnswers) {
+      if (!isWellFormedId(a.answerCourse) || !['favour','against','undetermined'].includes(a.answerPosition) || a.answerTerms.some(t => !isWellFormedId(t[0]) || !Number.isSafeInteger(t[1]))) problems.push('course advice needs a typed position and integer terms');
+      if (a.answerFeasibility !== undefined && (!['feasible','infeasible','unknown'].includes(a.answerFeasibility.assessmentStatus) || a.answerFeasibility.assessmentRequirements.some(r => !validCourseEvidence(r) || (r.assessmentPaper !== null && !isWellFormedId(r.assessmentPaper))))) problems.push('feasibility needs typed requirements and paper provenance');
+    }
+  }
+  if (body.reportCourseEvidence !== undefined && (body.reportSubjectKind !== 'situation' || body.reportCourseEvidence.length === 0 ||
+    body.reportCourseEvidence.some(e => !validCourseEvidence(e)) || new Set(body.reportCourseEvidence.map(e => `${e.evidenceCourse}|${e.evidenceResource}`)).size !== body.reportCourseEvidence.length)) problems.push('course evidence needs a situation and distinct nonnegative resource accounts; unknown is null');
   for (const c of body.reportClaims) {
     if (!isPermille(c.claimConfidence)) problems.push(`claim ${c.claimKind}: confidence must be a permille`);
     if (!Number.isSafeInteger(c.claimValue)) problems.push(`claim ${c.claimKind}: value must be an integer`);
@@ -284,6 +299,10 @@ export function reportProblems(body: ReportBody): string[] {
   }
   if (body.reportHour !== null && (!Number.isSafeInteger(body.reportHour) || body.reportHour < 0 || body.reportHour > 23)) problems.push('hour must be 0..23');
   return problems;
+}
+
+function validCourseEvidence(e: CourseEvidence): boolean {
+  return isWellFormedId(e.evidenceCourse) && isWellFormedId(e.evidenceResource) && [e.evidenceNeeded, e.evidenceAvailable, e.evidenceReadyBy, e.evidenceNeededBy].every(n => n === null || (Number.isSafeInteger(n) && n >= 0));
 }
 
 function isPermille(v: number): boolean {

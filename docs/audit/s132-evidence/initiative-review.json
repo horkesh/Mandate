@@ -1,0 +1,846 @@
+{
+  "cause": "S132 [I]: accepted pre-start conciliation cells admit Bates, Blair and Chase to the unchanged bid_for_direction initiative alongside Seward. Each fires on days7,70,133 under the existing 60-day cooldown and weekly owner: twelve events rather than three. No initiative rule, trait, threshold or starting stance changes.",
+  "baselineFires": 3,
+  "observed": 12,
+  "before": {
+    "minFires": 1,
+    "maxFires": 6,
+    "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+  },
+  "after": {
+    "minFires": 6,
+    "maxFires": 24,
+    "why": "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged."
+  },
+  "events": [
+    {
+      "day": 7,
+      "event": "initiative",
+      "person": "bates_edward",
+      "post": "us_attorney_general",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 40,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "event": "initiative",
+      "person": "blair_montgomery",
+      "post": "us_postmaster_general",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": -20,
+          "termRule": "temperament"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 62,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "event": "initiative",
+      "person": "chase_salmon_p",
+      "post": "us_secretary_treasury",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 90,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 34,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "event": "initiative",
+      "person": "seward_william_h",
+      "post": "us_secretary_state",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 35,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 70,
+      "event": "initiative",
+      "person": "bates_edward",
+      "post": "us_attorney_general",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 41,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 70,
+      "event": "initiative",
+      "person": "blair_montgomery",
+      "post": "us_postmaster_general",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": -20,
+          "termRule": "temperament"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 64,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 70,
+      "event": "initiative",
+      "person": "chase_salmon_p",
+      "post": "us_secretary_treasury",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 90,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 35,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 70,
+      "event": "initiative",
+      "person": "seward_william_h",
+      "post": "us_secretary_state",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 36,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 133,
+      "event": "initiative",
+      "person": "bates_edward",
+      "post": "us_attorney_general",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 41,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "bates_edward",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 133,
+      "event": "initiative",
+      "person": "blair_montgomery",
+      "post": "us_postmaster_general",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": -20,
+          "termRule": "temperament"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 64,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "blair_montgomery",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 133,
+      "event": "initiative",
+      "person": "chase_salmon_p",
+      "post": "us_secretary_treasury",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 90,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 35,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "chase_salmon_p",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    },
+    {
+      "day": 133,
+      "event": "initiative",
+      "person": "seward_william_h",
+      "post": "us_secretary_state",
+      "message": null,
+      "terms": [
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 200,
+          "termRule": "values"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "regard"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 36,
+          "termRule": "deterrence"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "capacity"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "disposition"
+        },
+        {
+          "termKind": "relay_term",
+          "termPerson": "seward_william_h",
+          "termPost": null,
+          "termRegion": null,
+          "termValue": 0,
+          "termRule": "grievances"
+        }
+      ]
+    }
+  ],
+  "counterfactuals": [
+    {
+      "day": 7,
+      "person": "bates_edward",
+      "total": 240,
+      "values": 200,
+      "withoutValues": 40
+    },
+    {
+      "day": 7,
+      "person": "blair_montgomery",
+      "total": 242,
+      "values": 200,
+      "withoutValues": 42
+    },
+    {
+      "day": 7,
+      "person": "chase_salmon_p",
+      "total": 324,
+      "values": 200,
+      "withoutValues": 124
+    },
+    {
+      "day": 7,
+      "person": "seward_william_h",
+      "total": 235,
+      "values": 200,
+      "withoutValues": 35
+    },
+    {
+      "day": 70,
+      "person": "bates_edward",
+      "total": 241,
+      "values": 200,
+      "withoutValues": 41
+    },
+    {
+      "day": 70,
+      "person": "blair_montgomery",
+      "total": 244,
+      "values": 200,
+      "withoutValues": 44
+    },
+    {
+      "day": 70,
+      "person": "chase_salmon_p",
+      "total": 325,
+      "values": 200,
+      "withoutValues": 125
+    },
+    {
+      "day": 70,
+      "person": "seward_william_h",
+      "total": 236,
+      "values": 200,
+      "withoutValues": 36
+    },
+    {
+      "day": 133,
+      "person": "bates_edward",
+      "total": 241,
+      "values": 200,
+      "withoutValues": 41
+    },
+    {
+      "day": 133,
+      "person": "blair_montgomery",
+      "total": 244,
+      "values": 200,
+      "withoutValues": 44
+    },
+    {
+      "day": 133,
+      "person": "chase_salmon_p",
+      "total": 325,
+      "values": 200,
+      "withoutValues": 125
+    },
+    {
+      "day": 133,
+      "person": "seward_william_h",
+      "total": 236,
+      "values": 200,
+      "withoutValues": 36
+    }
+  ],
+  "unchangedInitiative": {
+    "id": "bid_for_direction",
+    "kinds": [
+      "cabinet"
+    ],
+    "boldness": 600,
+    "honours": [
+      "reputation",
+      "conciliation"
+    ],
+    "offends": [],
+    "fromRung": "loyal",
+    "cooldownDays": 60,
+    "recommends": "direct-policy"
+  },
+  "threshold": 150,
+  "owner": "packages/kernel/src/tick/people-week.ts",
+  "ownerUnchanged": true,
+  "liveDriver": {
+    "test": "packages/kernel/test/people-verbs.test.ts",
+    "needle": "an initiative fires through the same compliance machinery",
+    "receipt": {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/kernel/test/people-verbs.test.ts",
+        "-t",
+        "an initiative fires through the same compliance machinery"
+      ],
+      "exit": 0,
+      "seconds": 1.444,
+      "log": "runs/s132/initiative-driver.log"
+    }
+  }
+}

@@ -244,7 +244,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'people.stayed': around(1),
   // The bombardment of Fort the island fort: two days of fire, then Anderson's surrender, evacuated under the record's terms.
   "combat.battle_closed": around(5),
-  'verbs.consulted': around(5),
+  'verbs.consulted': { ...around(16), why: "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted." },
   "combat.battle_day": around(7),
   "combat.battle_opened": around(5),
   "combat.captured": around(5),
@@ -341,7 +341,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'people.grievances_faded': around(30),
   'seats.attention_refilled': around(21),
   "seats.attention_spent": around(153),
-  'seats.initiative': { ...around(3), why: 'S16 dating holds remove two cabinet officers\' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json.' },
+  'seats.initiative': { ...around(12), why: "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged." },
   "operations.repulsed": { ...around(1), why: "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once." },
   "forces.landed_by_situation": {"minFires":1,"maxFires":4,"why":"S124/0126: a whole represented company lands without a numeric split. The block and its lots keep unknown men (OR I-I pp.352-353); the situation fires one landing on day33."},
   'politics.act': around(2),

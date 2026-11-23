@@ -357,6 +357,13 @@ export function parseLine(line: string, request: SeatRequest, t: DeskStrings): D
     }
     case 'consult': {
       const s = words[0];
+      const roundKey = opts.get('round');
+      if (roundKey !== undefined) {
+        const q = menu.consultations?.find(q => `${q.letter.namespace}.${q.letter.key}.${q.letter.revision}` === roundKey && q.subject === s);
+        const targets = words.slice(1) as PostId[];
+        if (q === undefined || targets.length === 0 || !targets.every(p => q.posts.includes(p))) return fail(t('console.error.consult'));
+        return { kind: 'command', word: 'consult', command: { cmd: 'consult', situation: q.subject, posts: targets, round: q.letter } };
+      }
       const problem = situation(s);
       if (problem !== null) return fail(problem);
       const posts = words.slice(1) as PostId[];
