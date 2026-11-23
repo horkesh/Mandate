@@ -1,6 +1,6 @@
 # 0125: A strength is a return, an estimate, a rule's output or unknown
 
-Status: accepted (2026-11-23). From S120's proposal (`docs/research/2026-11-23-S120-strength-under-honest-unknowns.md` and `docs/research/S120/` on `sprint/pushback` at `6e68cded`), with S118's corrections (`sprint/research-military` at `c63aac4f`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0099 (how the men checkpoints read) and clarifies 0110 (which lots stay unknown). Clarified by 0127 (the recruitment rule's basis: each call's legal minimum establishment).
+Status: accepted (2026-11-23). From S120's proposal (`docs/research/2026-11-23-S120-strength-under-honest-unknowns.md` and `docs/research/S120/` on `sprint/pushback` at `6e68cded`), with S118's corrections (`sprint/research-military` at `c63aac4f`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0099 (how the men checkpoints read) and clarifies 0110 (which lots stay unknown). Clarified by 0127 (the recruitment rule's basis: each call's legal minimum establishment) and 0130 (a belief and the planner carry an unknown remainder).
 
 ## Context
 
