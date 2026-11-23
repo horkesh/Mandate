@@ -1,0 +1,11 @@
+{
+  "baseline": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+  "source": "OR IV-I pp.231-232",
+  "destinationsAlreadyCorrect": [
+    "cs_apr22_absolute_georgia",
+    "cs_apr22_absolute_louisiana",
+    "cs_apr22_absolute_kentucky",
+    "cs_apr22_absolute_north_carolina"
+  ],
+  "tennessee": "Three already present in model regiments, destination clause and distribution summary; organisation now explicitly preserves that count. No quota/destination changed."
+}

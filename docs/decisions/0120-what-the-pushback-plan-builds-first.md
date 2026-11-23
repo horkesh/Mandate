@@ -1,6 +1,6 @@
 # 0120: What the pushback plan builds first, and what waits
 
-Status: accepted (2026-11-23). From S109's plan (`docs/research/2026-11-23-S109-pushback-plan.md` and `docs/research/S109/` on `sprint/pushback` at `0b7ab4c9`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0016 (four operational goal forms) and clarifies 0118 (how gates and offers run).
+Status: accepted (2026-11-23). From S109's plan (`docs/research/2026-11-23-S109-pushback-plan.md` and `docs/research/S109/` on `sprint/pushback` at `0b7ab4c9`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0016 (four operational goal forms) and clarifies 0118 (how gates and offers run). Clarified by 0122 (one rule for both sides' calls).
 
 ## Context
 

@@ -811,5 +811,6 @@
   "console.goal.here": "in place",
   "console.report.proposal": "{post} proposes to {posture} {objective} ({reasons}). Reply to paper {paper}.",
   "console.report.discretion": "{post} judged the position {condition} and will {posture} {objective}. He estimates {estimate} men near {region}.",
-  "console.refusal.no_proposal": "There is no received proposal awaiting that answer."
+  "console.refusal.no_proposal": "There is no received proposal awaiting that answer.",
+  "value.confederate_independence": "Confederate independence"
 }

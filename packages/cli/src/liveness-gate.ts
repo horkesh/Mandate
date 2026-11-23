@@ -255,7 +255,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   "combat.withdrew": {"minFires": 0, "maxFires": 0, "why": "S98: the field commander does not launch the later valley assault; no field side records a withdrawal. Five sides rout at the northern objective instead. The testbed still records three withdrawals and the breakout control remains live."},
   "control.changed": {"minFires": 160, "maxFires": 640},
   'control.threshold_crossed': around(39), // S1 effective-date [I]: the command concentration and emerged field movements change occupation through the existing control owner.
-  'forces.stores_fell': around(1443), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
+  'forces.stores_fell': { ...around(2888), why: "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted." },
   "forces.stores_low": around(103),
   "forces.stores_refilled": around(2400),
   "forces.stragglers_returned": {"minFires": 92, "maxFires": 368},

@@ -1,0 +1,49 @@
+{
+  "result": [
+    {
+      "pack": "testbed",
+      "days": 120,
+      "finalHash": "bf799ac4143c7c25e110237ed692b0c64aaafa5e32df2392e1f222376163f6cc",
+      "rejections": 0,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "bf799ac4143c7c25e110237ed692b0c64aaafa5e32df2392e1f222376163f6cc",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "gates": []
+    },
+    {
+      "pack": "union-1861",
+      "days": 148,
+      "finalHash": "6e8d3fa675359b4be87f506b6787761cfdf605093a719b1edbdb24ecac2f58dc",
+      "rejections": 0,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "6e8d3fa675359b4be87f506b6787761cfdf605093a719b1edbdb24ecac2f58dc",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "gates": [
+        {
+          "mechanic": "forces.stores_fell",
+          "problem": "too_frequent",
+          "fires": 2888,
+          "band": {
+            "minFires": 721,
+            "maxFires": 2886
+          }
+        }
+      ]
+    }
+  ],
+  "bandProblems": []
+}

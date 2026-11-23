@@ -416,6 +416,8 @@ A people cell is refused (`weak-citations-only`) when every admissible citation 
 
 **Whose words count** (0085). These are not a validator test; the author applies them when citing, and a reviewer checks:
 
+- Under 0122, `confederate_independence` means an expressed commitment to establishing or sustaining the common Confederate polity and its collective independence. A charter personally signed or oath personally taken supplies the subscriber's own commitment; an office, nomination, anonymous vote, service or another person's policy does not. This value remains distinct from `state_autonomy` and `slavery_defence`, with the sources' slavery context retained. The accepted 64-cell table is in `docs/audit/s116-evidence/accepted-cells.csv`. Only held cells enter `values`; not held and unknown remain recorded in the cast notes and table and add no term. The twelve cause holders and Letcher's nine held values have dated printed-page citations. His seven other existing cells and unknown cause remain absent from runtime values. The two slavery values keep `costOnly`; 0074's attribution/text rules and deferred gate review apply.
+
 - A man's own words are a leg when they are themselves the conduct that shows the trait (Johnston's 29 July letter protesting his rank, for `rank_proud`).
 - A man's own words that assess his own quality (candour, competence, organising) are not a leg: such a cell needs a third party's leg. Cite the own words with `self-report` so the check sees them as weak.
 - An order assigning a man a task shows the assigner's expectation, not the man's gift. It is not a leg for the trait the task needs.

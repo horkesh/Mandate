@@ -5,12 +5,17 @@ import { morningGround,principalMenu } from '../../../packages/kernel/src/seats/
 import { toId } from '../../../packages/kernel/src/ids.ts';
 const {world,setup}=seatsWorld('union-1861');
 const added=world.map.world.people.filter(p=>p.provenance.some(c=>c.source.startsWith('S69-')||c.source==='S72-OR'));
-it('applies 28 factual identities without manufacturing judgments or additional service choices',()=>{
+it('retains 28 factual identities and only the personally subscribed motive accepted under 0122',()=>{
  expect(added).toHaveLength(28);
  for(const p of added){
   expect(Object.values(p.centres).every(c=>c.direction===null),p.id).toBe(true);
   expect(Object.values(p.temperament).every(c=>c.direction===null),p.id).toBe(true);
-  expect(p.regard.direction,p.id).toBeNull();expect(p.values,p.id).toEqual([]);expect(p.traits,p.id).toEqual([]);
+  expect(p.regard.direction,p.id).toBeNull();expect(p.traits,p.id).toEqual([]);
+  // Bartow's personally signed charter supplies a new own-motive leg, not an office-derived judgment.
+  expect(p.values,p.id).toEqual(p.id==='bartow_francis_s' ? [{value:'confederate_independence',cites:[
+   {source:'S116-OR4-92',at:'p92 dated 1861-02-08'},
+   {source:'S116-OR4-99',at:'p99 dated 1861-02-08'},
+  ]}] : []);
  }
  expect(added.filter(p=>p.service!==undefined).map(p=>[p.id,p.service?.historicalOn,p.service?.toFaction])).toEqual([['elzey_arnold','1861-04-25','confederate']]);
 });

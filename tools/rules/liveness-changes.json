@@ -2447,5 +2447,20 @@
     "observed": 0,
     "cause": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once.",
     "evidence": "docs/audit/s106-evidence/band-review.json#recruitment.slow_walked"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stores_fell",
+    "before": {
+      "minFires": 721,
+      "maxFires": 2886
+    },
+    "after": {
+      "minFires": 1444,
+      "maxFires": 5776,
+      "why": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted."
+    },
+    "observed": 2888,
+    "cause": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted.",
+    "evidence": "docs/audit/s116-evidence/band-review.json#forces.stores_fell"
   }
 ]

@@ -1,0 +1,116 @@
+{
+  "head": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+  "capture": "runs/s111/references; actual S111 reference at this commit; no baseline rerun",
+  "files": [
+    {
+      "path": "runs\\s111\\references\\coverage.json",
+      "bytes": 747379,
+      "sha256": "08048c7ea873863b4b59cda32863dfef47ed743f3ab56906c0587b52c32e0fb6"
+    },
+    {
+      "path": "runs\\s111\\references\\exposure.json",
+      "bytes": 35162,
+      "sha256": "a80d76f68980f289e859fe6a5f5b4c1b770a2f0348ddc078847dec629d6f8882"
+    },
+    {
+      "path": "runs\\s111\\references\\result.json",
+      "bytes": 978,
+      "sha256": "35dc2aed70c1db8d73665fda9df8a99a050d4f90004ce1eaa2811142c76b55cc"
+    },
+    {
+      "path": "runs\\s111\\references\\scores.json",
+      "bytes": 211071,
+      "sha256": "5099a2171b835cf06c60be4ee5d47aa0e0281b787baa5be8f11aba1db5dfb3e3"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-calls.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-final-state.json",
+      "bytes": 506549,
+      "sha256": "63437f5c5cec61a7020993729d5d148ee98bda87e73c8ff9e2f5b2ac8eb115a5"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-junction.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-messages.json",
+      "bytes": 3132,
+      "sha256": "5d9311e599c9da009f90dcfa4f76fdb339e8d012db2b156c847d6c56408aee4b"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-observations.json",
+      "bytes": 118144,
+      "sha256": "a03dc97fcc7f3af27edc50d0fadc6412ac1495b7fa3b219b761179157c00ef0e"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-requests.json",
+      "bytes": 10590,
+      "sha256": "114d56a69c62ae842e9dab14dd857a8bf5c36c03d95a40303380c60b88f77b52"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-responses.json",
+      "bytes": 84311,
+      "sha256": "64a0ad3136c1323059cb6eda5c3e3a544e8a60706cb77ca9628bb4610227bf1b"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-save-40.json",
+      "bytes": 337456,
+      "sha256": "9a8d58c215d81ad7cce14c3aed6de9f883e6b10a93651c586f9c3150c7d017fb"
+    },
+    {
+      "path": "runs\\s111\\references\\testbed-summary.json",
+      "bytes": 83552,
+      "sha256": "83f33a1eb7f22c33428fae99e094e2f09346e142153f2618f0e41b54c33ad885"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-calls.json",
+      "bytes": 63551,
+      "sha256": "ebab424ad82c8c3dba16b5e54f208519158b39832e2b0594de3f0aa6de4cc9ad"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-final-state.json",
+      "bytes": 5220209,
+      "sha256": "52544cc0b50101618d9630d995a1bc8e109ed94fc431688ebb6477f07ee47730"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-junction.json",
+      "bytes": 399911,
+      "sha256": "3a7cdf42b663b6c822affee3fa7f8f9cedd74a3d7dd52b66cdd414b6c32b1867"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-messages.json",
+      "bytes": 630081,
+      "sha256": "53025e4706777eebc82a613d6065f54eb3aa65e751b5af44be3e3794ddec4e37"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-observations.json",
+      "bytes": 687289,
+      "sha256": "44a83eae5128d8a6082b86ab8e18e5424b36adbed3d6a2412383fc66f54be37b"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-requests.json",
+      "bytes": 76080,
+      "sha256": "bf5ea2f604fa9c2af447398f987bc662f77741ae709a42f6793006f10a683db7"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-responses.json",
+      "bytes": 1263457,
+      "sha256": "53ac4e84b940ffef84aab5b29f7fc6ddd7fc32cb92a86f4e6afba5040c61c7b1"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-save-60.json",
+      "bytes": 1988987,
+      "sha256": "cb5fd4a68fd47253fd9f7cbe0576b93c82b9763a2ec5f3ad00362c0e78247c6f"
+    },
+    {
+      "path": "runs\\s111\\references\\union-1861-summary.json",
+      "bytes": 136069,
+      "sha256": "fae3668ad0ead5d93ec7504508f917e806cc929d43041e3777c104dcf598a3fd"
+    }
+  ]
+}

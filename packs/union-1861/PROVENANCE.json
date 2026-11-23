@@ -2400,6 +2400,286 @@
       "copyUsed": "https://archive.org/details/rebellrecord01moorrich; retained read text docs/audit/s98-evidence/read/RR-DIARY15.txt; SHA256 cfc49cd64d3139f0d31b126c54692fd7994f357b43f7686ce799128fd25edd9f. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Date heading and selected report read; surrounding running heads bound the printed page. Original address day is not manufactured from a locator. Production use and source limits: docs/audit/s98-evidence/README.md.",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "S116-JC-97",
+      "title": "Journal of the Congress of the Confederate States, volume I; printed p.97; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofcongres00conf/page/n106/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; March 2 Reagan arrival, oath and signing of roll; distinguish Beauregard consent to nomination",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-iv",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.iv; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n331/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-v",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.v; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n332/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-vi",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.vi; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n333/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-viii",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.viii; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n335/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xi",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xi; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n338/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xiii",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xiii; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n340/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xx",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xx; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n347/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xxi",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xxi; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n348/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xxii",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xxii; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n349/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xxiii",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xxiii; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n350/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xxiv",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xxiv; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n351/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-LET-xxv",
+      "title": "Virginia House Journal, Extra Session 1861, Document No. 1; printed p.xxv; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/journalofhouseof1861virg/page/n352/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Letcher's own January 7 message. Quoted earlier speakers are distinguished from his endorsement or rejection; later policy is excluded.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR1-258",
+      "title": "Official Records, series I, volume I; printed p.258; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924077725913/page/n277/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Pickens to Davis, February 27, begins; Bartow February 22 resolution is context",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR1-259",
+      "title": "Official Records, series I, volume I; printed p.259; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924077725913/page/n278/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Same Pickens letter, through signature; Walker March 1 reply is not evidence of Pickens's motive",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR1-261",
+      "title": "Official Records, series I, volume I; printed p.261; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924077725913/page/n280/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Wigfall to Pickens, March 4 telegram only",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-104",
+      "title": "Official Records, series IV, volume I; printed p.104; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n119/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Davis inaugural, February 18, entered February 19",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-120",
+      "title": "Official Records, series IV, volume I; printed p.120; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n135/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; A. B. Moore to Walker, March 4, begins at foot",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-121",
+      "title": "Official Records, series IV, volume I; printed p.121; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n136/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Same Moore letter",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-122",
+      "title": "Official Records, series IV, volume I; printed p.122; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n137/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Same Moore letter, through signature only",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-18",
+      "title": "Official Records, series IV, volume I; printed p.18; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n33/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Brown to Shorter, January 5, 1861",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-19",
+      "title": "Official Records, series IV, volume I; printed p.19; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n34/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Same Brown letter, through signature only",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-85",
+      "title": "Official Records, series IV, volume I; printed p.85; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n100/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Perry message, February 2, begins below Georgia declaration",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-86",
+      "title": "Official Records, series IV, volume I; printed p.86; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n101/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Same Perry message",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-87",
+      "title": "Official Records, series IV, volume I; printed p.87; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n102/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Same Perry message",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-88",
+      "title": "Official Records, series IV, volume I; printed p.88; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n103/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Same Perry message, through signature only",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-92",
+      "title": "Official Records, series IV, volume I; printed p.92; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n107/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; Provisional Constitution preamble, February 8, 1861",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S116-OR4-99",
+      "title": "Official Records, series IV, volume I; printed p.99; period document accepted under 0122",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/cu31924079579524/page/n114/mode/1up; retained S113 OCR in docs/audit/s116-evidence/s113-source-pages.json; February 8 subscribers; distinguish later March 2 Texas authorization",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

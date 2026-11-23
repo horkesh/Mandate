@@ -16,11 +16,19 @@ it('links every value in the twenty S101 profiles, preserving empty arrays and t
     const directive = callDirective(rules, { callRegiments: 1, callTermDays: 30, callProfile: profile });
     for (const link of profile.valueClauseLinks!) {
       expect(link.linkCites.length).toBeGreaterThan(0);
-      expect(directive.clauses!.some(c => c.clauseId === link.linkClause && !!c.clauseWording)).toBe(true);
+      const clause = directive.clauses!.find(c => c.clauseId === link.linkClause)!;
+      expect(clause).toBeDefined();
+      // 0122's by-kind honour has no invented quotation on a silent paper.
+      if (link.linkClause === 'purpose') {
+        expect(clause.clauseSubject).toBe('purpose');
+        expect(clause.clauseProvenance!.length).toBeGreaterThan(0);
+        expect(link.linkRationale).toContain('0122 by-kind');
+      } else expect(clause.clauseWording).toBeTruthy();
     }
   }
   expect(sourceProfiles.size).toBe(20);
-  expect(profiles.find(p => p.sourceProfile === 'CS-J12')!.valueClauseLinks).toBeUndefined();
+  // 0122 includes the later documentary release demand by kind; it creates no levy.
+  expect(profiles.find(p => p.sourceProfile === 'CS-J12')!.valueClauseLinks).toContainEqual(expect.objectContaining({ linkValue: 'confederate_independence', linkClause: 'purpose', linkCites: [['OR-IV-I', 466]] }));
 });
 
 it('puts reserve autonomy on appointments and organisation, and April national repossession on purpose', () => {

@@ -1,0 +1,3870 @@
+[
+  {
+    "id": "cs_apr08_alabama",
+    "sourceProfile": "CS-A08",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 211
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr08_florida",
+    "sourceProfile": "CS-A08",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 211
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr08_georgia",
+    "sourceProfile": "CS-A08",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 211
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr08_louisiana",
+    "sourceProfile": "CS-A08",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 211
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr08_mississippi",
+    "sourceProfile": "CS-A08",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 211
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr08_south_carolina",
+    "sourceProfile": "CS-A08",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 211
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr08_texas",
+    "sourceProfile": "CS-A08",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 211
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr16_alabama",
+    "sourceProfile": "CS-A16",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 221
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 222
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr16_florida",
+    "sourceProfile": "CS-A16",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 221
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 222
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr16_georgia",
+    "sourceProfile": "CS-A16",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 221
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 222
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr16_louisiana",
+    "sourceProfile": "CS-A16",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 221
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 222
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr16_mississippi",
+    "sourceProfile": "CS-A16",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 221
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 222
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr16_south_carolina",
+    "sourceProfile": "CS-A16",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 221
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 222
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr16_texas",
+    "sourceProfile": "CS-A16",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 221
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 222
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_alabama",
+    "sourceProfile": "CS-A22",
+    "beforeHonours": [],
+    "honours": [
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_arkansas",
+    "sourceProfile": "CS-A22-N",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_georgia",
+    "sourceProfile": "CS-A22",
+    "beforeHonours": [],
+    "honours": [
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_kentucky",
+    "sourceProfile": "CS-A22-N",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_louisiana",
+    "sourceProfile": "CS-A22",
+    "beforeHonours": [],
+    "honours": [
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_mississippi",
+    "sourceProfile": "CS-A22",
+    "beforeHonours": [],
+    "honours": [
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 126
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 127
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 233
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_north_carolina",
+    "sourceProfile": "CS-A22-N",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_apr22_absolute_tennessee",
+    "sourceProfile": "CS-A22-N",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "union"
+    ],
+    "offends": [
+      "union"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 231
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 232
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jul01_extra_alabama",
+    "sourceProfile": "CS-J01",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 416
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jul01_extra_georgia",
+    "sourceProfile": "CS-J01",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 416
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun29_extra_louisiana",
+    "sourceProfile": "CS-J29",
+    "beforeHonours": [
+      "order"
+    ],
+    "honours": [
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 411
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun29_extra_mississippi",
+    "sourceProfile": "CS-J29",
+    "beforeHonours": [
+      "order"
+    ],
+    "honours": [
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 411
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_cavalry_alabama",
+    "sourceProfile": "CS-J30-C",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_cavalry_arkansas",
+    "sourceProfile": "CS-J30-C",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_cavalry_georgia",
+    "sourceProfile": "CS-J30-C",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_cavalry_mississippi",
+    "sourceProfile": "CS-J30-C",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_cavalry_tennessee",
+    "sourceProfile": "CS-J30-C",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_alabama",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_arkansas",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_florida",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_georgia",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_louisiana",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_mississippi",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_north_carolina",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_south_carolina",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_tennessee",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_texas",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jun30_reserve_virginia",
+    "sourceProfile": "CS-J30-R",
+    "beforeHonours": [
+      "caution",
+      "order"
+    ],
+    "honours": [
+      "caution",
+      "order",
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 302
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 412
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_mar09_alabama",
+    "sourceProfile": "CS-M09",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 117
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 134
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 135
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_mar09_florida",
+    "sourceProfile": "CS-M09",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 117
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 134
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 135
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_mar09_georgia",
+    "sourceProfile": "CS-M09",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 117
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 134
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 135
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_mar09_louisiana",
+    "sourceProfile": "CS-M09",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 117
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 134
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 135
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_mar09_mississippi",
+    "sourceProfile": "CS-M09",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 117
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 134
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 135
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_mar09_south_carolina",
+    "sourceProfile": "CS-M09",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 117
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 134
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 135
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_mar09_texas",
+    "sourceProfile": "CS-M09",
+    "beforeHonours": [
+      "state_autonomy"
+    ],
+    "honours": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 117
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 134
+      },
+      {
+        "source": "OR-IV-I",
+        "page": 135
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_arkansas",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_connecticut",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_delaware",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_illinois",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_indiana",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_iowa",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_kentucky",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_maine",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_maryland",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_massachusetts",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_michigan",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_minnesota",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_missouri",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_new_hampshire",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_new_jersey",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_new_york",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_north_carolina",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_ohio",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_pennsylvania",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_rhode_island",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_tennessee",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_vermont",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_virginia",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_apr15_wisconsin",
+    "sourceProfile": "US-A15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      67,
+      68
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 67
+      },
+      {
+        "source": "OR-III-I",
+        "page": 68
+      },
+      {
+        "source": "OR-III-I",
+        "page": 69
+      },
+      {
+        "source": "OR-III-I",
+        "page": 76
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_jul25_new_york",
+    "sourceProfile": "US-NY25",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 369
+      },
+      {
+        "source": "OR-III-I",
+        "page": 370
+      },
+      {
+        "source": "OR-III-I",
+        "page": 371
+      },
+      {
+        "source": "OR-III-I",
+        "page": 376
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_jul30_artillery_new_york",
+    "sourceProfile": "US-NY30",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 369
+      },
+      {
+        "source": "OR-III-I",
+        "page": 383
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_jul30_cavalry_new_york",
+    "sourceProfile": "US-NY30",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 369
+      },
+      {
+        "source": "OR-III-I",
+        "page": 383
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_jun11_indiana",
+    "sourceProfile": "US-IN11",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      263,
+      265
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 263
+      },
+      {
+        "source": "OR-III-I",
+        "page": 265
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may03_accepted_new_york",
+    "sourceProfile": "US-NY2",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may04_regular_artillery",
+    "sourceProfile": "US-M04-REG",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 146
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 155
+      },
+      {
+        "source": "OR-III-I",
+        "page": 156
+      },
+      {
+        "source": "OR-III-I",
+        "page": 157
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may04_regular_cavalry",
+    "sourceProfile": "US-M04-REG",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 146
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 155
+      },
+      {
+        "source": "OR-III-I",
+        "page": 156
+      },
+      {
+        "source": "OR-III-I",
+        "page": 157
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may04_regular_infantry",
+    "sourceProfile": "US-M04-REG",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 146
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 155
+      },
+      {
+        "source": "OR-III-I",
+        "page": 156
+      },
+      {
+        "source": "OR-III-I",
+        "page": 157
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may15_minnesota_renewal",
+    "sourceProfile": "US-M15-KNM",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may15_vol_kansas",
+    "sourceProfile": "US-M15-KNM",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may15_vol_massachusetts",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may15_vol_nebraska",
+    "sourceProfile": "US-M15-KNM",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may15_vol_rhode_island",
+    "sourceProfile": "US-M15-RI",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_connecticut",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_illinois",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_indiana",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_iowa",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_maine",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_michigan",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_new_hampshire",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_new_jersey",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_new_york",
+    "sourceProfile": "US-M15-NY",
+    "beforeHonours": [],
+    "honours": [
+      "union"
+    ],
+    "beforeOffends": [],
+    "offends": [],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_ohio",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_vermont",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may16_vol_wisconsin",
+    "sourceProfile": "US-M15",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      151,
+      203,
+      204
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      },
+      {
+        "source": "OR-III-I",
+        "page": 203
+      },
+      {
+        "source": "OR-III-I",
+        "page": 204
+      },
+      {
+        "source": "OR-III-I",
+        "page": 207
+      },
+      {
+        "source": "OR-III-I",
+        "page": 208
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "us_may03_national",
+    "sourceProfile": "US-M03",
+    "beforeHonours": [
+      "union",
+      "order"
+    ],
+    "honours": [
+      "union",
+      "order"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy",
+      "confederate_independence"
+    ],
+    "purposeClause": "condition:purpose:6",
+    "textOffencePages": [
+      145,
+      146
+    ],
+    "callProvenance": [
+      {
+        "source": "OR-III-I",
+        "page": 145
+      },
+      {
+        "source": "OR-III-I",
+        "page": 146
+      },
+      {
+        "source": "OR-III-I",
+        "page": 151
+      },
+      {
+        "source": "OR-III-I",
+        "page": 152
+      },
+      {
+        "source": "OR-III-I",
+        "page": 153
+      },
+      {
+        "source": "OR-III-I",
+        "page": 154
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  },
+  {
+    "id": "cs_jul12_brigade_demand",
+    "sourceProfile": "CS-J12",
+    "beforeHonours": [],
+    "honours": [
+      "confederate_independence"
+    ],
+    "beforeOffends": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "purposeClause": "purpose",
+    "textOffencePages": [],
+    "callProvenance": [
+      {
+        "source": "OR-IV-I",
+        "page": 466
+      }
+    ],
+    "ruling": "0122: by kind for honour; original text only for offence"
+  }
+]
