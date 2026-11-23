@@ -1,0 +1,247 @@
+{
+  "records": {
+    "pickens_reinforcement": {
+      "record": {
+        "sitStatus": "decided",
+        "sitFiredDay": 1,
+        "sitSurfacedDay": 1,
+        "sitOpenOptions": [
+          "land_company"
+        ],
+        "sitResurfaced": [],
+        "sitDecidedDay": 1,
+        "sitChosen": [
+          "land_company"
+        ],
+        "sitDecidedBy": "history-default",
+        "sitDelegate": null,
+        "sitWaitingOn": null,
+        "sitStaffAuthor": "scott_winfield"
+      },
+      "dates": {
+        "sitFiredDay": {
+          "day": 1,
+          "date": "1861-03-06"
+        },
+        "sitSurfacedDay": {
+          "day": 1,
+          "date": "1861-03-06"
+        },
+        "sitDecidedDay": {
+          "day": 1,
+          "date": "1861-03-06"
+        }
+      }
+    },
+    "pickens_refusal_received": {
+      "record": {
+        "sitStatus": "noticed",
+        "sitFiredDay": 32,
+        "sitSurfacedDay": 33,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitDecidedDay": null,
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDelegate": null,
+        "sitWaitingOn": null,
+        "sitStaffAuthor": "welles_gideon"
+      },
+      "dates": {
+        "sitFiredDay": {
+          "day": 32,
+          "date": "1861-04-06"
+        },
+        "sitSurfacedDay": {
+          "day": 33,
+          "date": "1861-04-07"
+        },
+        "sitDecidedDay": {
+          "day": null,
+          "date": null
+        }
+      }
+    },
+    "pickens_refused": {
+      "record": {
+        "sitStatus": "decided",
+        "sitFiredDay": 32,
+        "sitSurfacedDay": 33,
+        "sitOpenOptions": [
+          "courier_order",
+          "department_order",
+          "special_expedition"
+        ],
+        "sitResurfaced": [],
+        "sitDecidedDay": 33,
+        "sitChosen": [
+          "courier_order",
+          "special_expedition"
+        ],
+        "sitDecidedBy": "history-default",
+        "sitDelegate": null,
+        "sitWaitingOn": null,
+        "sitStaffAuthor": "welles_gideon"
+      },
+      "dates": {
+        "sitFiredDay": {
+          "day": 32,
+          "date": "1861-04-06"
+        },
+        "sitSurfacedDay": {
+          "day": 33,
+          "date": "1861-04-07"
+        },
+        "sitDecidedDay": {
+          "day": 33,
+          "date": "1861-04-07"
+        }
+      }
+    }
+  },
+  "received": [
+    {
+      "day": 2,
+      "date": "1861-03-07",
+      "seat": "seat:lincoln_abraham",
+      "paper": {
+        "id": "m.1.scott_winfield.lincoln_abraham.staff.pickens_reinforcement",
+        "knownReceivedDay": 2,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "requested",
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "situation",
+          "reportSubjectId": "pickens_reinforcement",
+          "reportClaims": [],
+          "reportDay": 1,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "give_up_both",
+            "adviceReasons": [
+              {
+                "reasonKind": "caution",
+                "reasonWeight": 700
+              }
+            ],
+            "adviceConfidence": 600
+          },
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "day": 33,
+      "date": "1861-04-07",
+      "seat": "seat:lincoln_abraham",
+      "paper": {
+        "id": "m.32.welles_gideon.lincoln_abraham.notice.pickens_refusal_received",
+        "knownReceivedDay": 33,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "informal",
+          "reportSubtype": "cabinet-word",
+          "reportAuthor": "welles_gideon",
+          "reportAuthorPost": "us_secretary_navy",
+          "reportSubjectKind": "situation",
+          "reportSubjectId": "pickens_refusal_received",
+          "reportClaims": [],
+          "reportDay": 32,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "day": 34,
+      "date": "1861-04-08",
+      "seat": "seat:lincoln_abraham",
+      "paper": {
+        "id": "m.33.welles_gideon.lincoln_abraham.staff.pickens_refused",
+        "knownReceivedDay": 34,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "requested",
+          "reportAuthor": "welles_gideon",
+          "reportAuthorPost": "us_secretary_navy",
+          "reportSubjectKind": "situation",
+          "reportSubjectId": "pickens_refused",
+          "reportClaims": [],
+          "reportDay": 33,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "department_order",
+            "adviceReasons": [
+              {
+                "reasonKind": "order",
+                "reasonWeight": 700
+              }
+            ],
+            "adviceConfidence": 600
+          },
+          "reportAnswers": null
+        }
+      }
+    }
+  ],
+  "decisions": [],
+  "navyOffice": {
+    "postName": "post.us_secretary_navy.name",
+    "postKind": "cabinet",
+    "postDepartment": "us_navy",
+    "postParent": "us_president",
+    "postHolder": "welles_gideon",
+    "postActing": false,
+    "postIntelChief": null,
+    "postSeat": "washington",
+    "postOperation": null,
+    "postInstallation": null,
+    "postLinks": [],
+    "postScheduled": [],
+    "postStandingOrders": []
+  },
+  "navyHeadquarters": [
+    {
+      "day": 1,
+      "headquarters": "washington"
+    },
+    {
+      "day": 31,
+      "headquarters": "washington"
+    },
+    {
+      "day": 32,
+      "headquarters": "washington"
+    },
+    {
+      "day": 33,
+      "headquarters": "washington"
+    },
+    {
+      "day": 34,
+      "headquarters": "washington"
+    },
+    {
+      "day": 38,
+      "headquarters": "washington"
+    },
+    {
+      "day": 39,
+      "headquarters": "washington"
+    }
+  ],
+  "recordCheckpoint": "1861-04-06",
+  "source": {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\orn-i4.txt",
+    "sha256": "c48791afbf0c70d8d5dbf79ee1602b6865bdcbfe9a38d020a3ba924383aadaf0",
+    "pages": "ORN I-4 pp.109-111: Adams refusal and Vogdes enclosure, 1 April; Welles acknowledgement and order, 6 April",
+    "read": true
+  }
+}

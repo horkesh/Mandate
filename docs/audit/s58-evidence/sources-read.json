@@ -1,0 +1,169 @@
+{
+  "files": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\wheeling-journal.txt",
+      "sha256": "1f3d98b951182429267a175513aa2e9277029bc46544b00bf592237edcfc7c1a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\wheeling-ordinances.txt",
+      "sha256": "befd5be639b03ccdf2e7977854e8161c6033e69607592d744145378f3b420669"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\orn-i4.txt",
+      "sha256": "c48791afbf0c70d8d5dbf79ee1602b6865bdcbfe9a38d020a3ba924383aadaf0"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\csa-statutes.txt",
+      "sha256": "d44d8d0804d7e4b7d37058fedb1d8335015c58861ce18082ade131261240aebf"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S1\\OR-I-2.txt",
+      "sha256": "66d9a89b843925389e1d2d5d9798dc4e0c66f9a0488bbfcc8705659e4b37ebbf"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\r65-sources\\journalofsecessi00texa.txt",
+      "sha256": "fdc32a731dfff02da3aeafaaeccac44991d5bafe2c93328a16401bbbe04b1e2b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S1\\OR-I-1.txt",
+      "sha256": "3021eef1063df4ff3854ae416926e21ab294c5f7245a6ff1fcd9fe310c008893"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\OR-I-1-p648.jpg",
+      "sha256": "161c76229236480b4e7a49df4d3d3416f47abdf530b3a517112d461855e5c04a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\OR-I-1-p667.jpg",
+      "sha256": "4de78902981f077e1c0fb033158f79783dbfda847c9b68c34e3d6d5cdf6efa45"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S58\\OR-I-1-p668.jpg",
+      "sha256": "bb7bbe84949222a355e1c0b4c020a63e0685d9d47d4f081808253164ab484be7"
+    }
+  ],
+  "downloads": [
+    [
+      {
+        "name": "wheeling-journal",
+        "url": "https://ia903105.us.archive.org/6/items/esrp904084809/0001.001_djvu.txt",
+        "bytes": 189113,
+        "sha256": "1f3d98b951182429267a175513aa2e9277029bc46544b00bf592237edcfc7c1a"
+      },
+      {
+        "name": "wheeling-ordinances",
+        "url": "https://ia903104.us.archive.org/21/items/esrp681482731/0001.001_djvu.txt",
+        "bytes": 2738929,
+        "sha256": "befd5be639b03ccdf2e7977854e8161c6033e69607592d744145378f3b420669"
+      },
+      {
+        "name": "or-i2-713",
+        "url": "https://ehistory.osu.edu/books/official-records/002/0713",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "name": "or-i2-723",
+        "url": "https://ehistory.osu.edu/books/official-records/002/0723",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "name": "or-i2-724",
+        "url": "https://ehistory.osu.edu/books/official-records/002/0724",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "name": "or-i1-648",
+        "url": "https://ehistory.osu.edu/books/official-records/001/0648",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "name": "or-i1-667",
+        "url": "https://ehistory.osu.edu/books/official-records/001/0667",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ],
+    [
+      {
+        "name": "orn-i4",
+        "url": "https://archive.org/download/cu31924079893859/cu31924079893859_djvu.txt",
+        "bytes": 2633372,
+        "sha256": "c48791afbf0c70d8d5dbf79ee1602b6865bdcbfe9a38d020a3ba924383aadaf0"
+      },
+      {
+        "name": "treaty-index",
+        "url": "https://dheller.org/Timeline-files/US-Statutes/CSA/cp/Indian-Treaties/",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ],
+    [
+      {
+        "name": "csa-statutes",
+        "url": "https://docsouth.unc.edu/imls/19conf/19conf.html",
+        "bytes": 2399389,
+        "sha256": "d44d8d0804d7e4b7d37058fedb1d8335015c58861ce18082ade131261240aebf"
+      },
+      {
+        "name": "csa-treaties",
+        "url": "https://treatiesportal.unl.edu/csaindiantreaties/csa_treaties.html",
+        "bytes": 915772,
+        "sha256": "860ced1ebe97b0aa6a490549e85707a36a47db95b3015c8e3703d34ba8d8cbae"
+      }
+    ]
+  ],
+  "readPages": {
+    "WHEELING-JOURNAL-1861": [
+      "3",
+      "27-28"
+    ],
+    "WHEELING-ORDINANCES-1861": [
+      "6-7",
+      "Acts title page"
+    ],
+    "TX-CONV-1861": [
+      "113-114",
+      "183-187"
+    ],
+    "OR": [
+      "I-2 713",
+      "I-2 723-724",
+      "I-1 612 (Cave continuation)",
+      "I-1 648-649",
+      "I-1 656",
+      "I-1 667-668 (page images inspected)"
+    ],
+    "ORN": [
+      "I-4 90",
+      "I-4 109-111"
+    ],
+    "CSA-STAT": [
+      "289-290",
+      "301-302",
+      "311-312"
+    ]
+  },
+  "inspectedScans": [
+    {
+      "url": "https://archive.org/download/warofrebellionco0001vari/page/n657.jpg",
+      "requestedIndex": 657,
+      "page": 648,
+      "bytes": 900668,
+      "sha256": "161c76229236480b4e7a49df4d3d3416f47abdf530b3a517112d461855e5c04a",
+      "verification": "Printed page 648 inspected using headless image viewing."
+    },
+    {
+      "url": "https://archive.org/download/warofrebellionco0001vari/page/n676.jpg",
+      "requestedIndex": 676,
+      "page": 667,
+      "bytes": 778970,
+      "sha256": "4de78902981f077e1c0fb033158f79783dbfda847c9b68c34e3d6d5cdf6efa45",
+      "verification": "Printed page 667 inspected using headless image viewing."
+    },
+    {
+      "url": "https://archive.org/download/warofrebellionco0001vari/page/n677.jpg",
+      "page": 668,
+      "bytes": 758697,
+      "sha256": "bb7bbe84949222a355e1c0b4c020a63e0685d9d47d4f081808253164ab484be7",
+      "verification": "Printed page 668 inspected using headless image viewing.",
+      "requestedIndex": 677
+    }
+  ]
+}

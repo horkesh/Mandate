@@ -8,14 +8,14 @@
   "event": {
     "all": [
       {
-        "fired": "pierpont_elected"
+        "dayAtLeast": 118
       },
       {
-        "dayAtLeast": 118
+        "fired": "wheeling_ordinance",
+        "forDays": 12
       }
     ]
   },
-  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
   "effects": [],
   "report": {
     "authors": [
@@ -32,6 +32,10 @@
     {
       "source": "WHEELING-ORDINANCES-1861",
       "at": "Acts title page (extra session held July first, 1861); 1866 reprint resolution p. 2"
+    },
+    {
+      "source": "WHEELING-ORDINANCES-1861",
+      "at": "pp. 6-7, section 3 constitutes the legislature and directs assembly on 1 July; [I] retain twelve days after the ordinance when delayed"
     }
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "pack": "testbed",
+  "baseline": "s83/politics",
+  "stage": "b2",
+  "hashes": [],
+  "counters": [],
+  "initial": [],
+  "final": [],
+  "functionalSummary": [],
+  "criteria": {
+    "liveness": [],
+    "checkpoints": null,
+    "pushback": null,
+    "operation": null,
+    "unknownStrength": {
+      "problems": [],
+      "evidence": [
+        "testbed: 4 battles, 4 battle-days read"
+      ]
+    }
+  },
+  "timing": {
+    "unit": "ms",
+    "days": 120,
+    "median": 3.5175000000001546,
+    "p95": 7.652699999999868,
+    "max": 37.45629999999994
+  }
+}

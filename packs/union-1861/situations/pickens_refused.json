@@ -8,17 +8,13 @@
   "event": {
     "all": [
       {
-        "decided": "pickens_reinforcement",
-        "options": [
-          "land_company"
-        ]
+        "dayAtLeast": 32
       },
       {
-        "dayAtLeast": 32
+        "fired": "pickens_refusal_received"
       }
     ]
   },
-  "railroad": "Captain Adams's refusal reaches the president on 6 April: the order's nineteen days out by sea and the five days of the refusal's return are not yet carried by messages at sea (lane 1.4), so the refusal arrives on its date",
   "options": [
     {
       "id": "courier_order",
@@ -135,6 +131,16 @@
     {
       "source": "NOTE-march-1861-facts",
       "at": "3, 7; des. 5, 6; out 1, 7, 8"
+    },
+    {
+      "source": "ORN",
+      "at": "I-4 pp. 109-111, Adams to Welles 1 April and Welles 6 April acknowledging receipt; [I] the decision waits for the Navy receipt notice to reach the principal; the ordinary report route may move presidential surfacing after 6 April"
     }
-  ]
+  ],
+  "knowledge": {
+    "knows": {
+      "subjectKind": "situation",
+      "subjectId": "pickens_refusal_received"
+    }
+  }
 }

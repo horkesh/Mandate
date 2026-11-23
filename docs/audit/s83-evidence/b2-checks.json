@@ -1,0 +1,182 @@
+[
+  {
+    "name": "b2-boundary",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.293
+  },
+  {
+    "name": "b2-decisions",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.203
+  },
+  {
+    "name": "b2-final-rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.59
+  },
+  {
+    "name": "b2-final-typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 1.185
+  },
+  {
+    "name": "b2-fixtures-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "packs/union-1861/test/s58-b2-live.test.ts",
+      "packs/union-1861/test/s35-scoring.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 44.553
+  },
+  {
+    "name": "b2-focused",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "packages/kernel/test/s58-cause-intervals.test.ts",
+      "packs/union-1861/test/s58-b2-live.test.ts",
+      "packs/union-1861/test/s58-b2-drafts.test.ts",
+      "packs/union-1861/test/r69-wheeling.test.ts",
+      "packs/union-1861/test/s35-scoring.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "packages/pack-format/test/schemas.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 54.876
+  },
+  {
+    "name": "b2-licences",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-licences.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.204
+  },
+  {
+    "name": "b2-pack-validation",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "validate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.747
+  },
+  {
+    "name": "b2-rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.303
+  },
+  {
+    "name": "b2-schema",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "schemas"
+    ],
+    "exit": 0,
+    "seconds": 0.909
+  },
+  {
+    "name": "b2-smoke",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/references.ts",
+      "union-1861",
+      "b2",
+      "--smoke"
+    ],
+    "exit": 0,
+    "seconds": 4.194
+  },
+  {
+    "name": "b2-staged-history",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/stage-check.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.656
+  },
+  {
+    "name": "b2-testbed-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/references.ts",
+      "testbed",
+      "b2"
+    ],
+    "exit": 0,
+    "seconds": 7.258
+  },
+  {
+    "name": "b2-typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.942
+  },
+  {
+    "name": "b2-union-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/references.ts",
+      "union-1861",
+      "b2"
+    ],
+    "exit": 0,
+    "seconds": 99.948
+  }
+]

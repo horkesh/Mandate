@@ -8,14 +8,14 @@
   "event": {
     "all": [
       {
-        "fired": "wheeling_convention"
+        "dayAtLeast": 107
       },
       {
-        "dayAtLeast": 107
+        "fired": "wheeling_ordinance",
+        "forDays": 1
       }
     ]
   },
-  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
   "effects": [],
   "report": {
     "authors": [
@@ -36,6 +36,10 @@
     {
       "source": "LEWIS-HWVM",
       "at": "pp. 140, 145"
+    },
+    {
+      "source": "WHEELING-ORDINANCES-1861",
+      "at": "p. 6, section 1 directs appointment of a governor by the convention; WHEELING-JOURNAL-1861 pp. 27-28 records election and oath on 20 June; [I] retain one day after the ordinance if delayed"
     }
   ],
   "namedOnly": "The election and oath as the convention records them, not a quotation or an act by the holder of a pack post. No governor post is opened or filled by this report."

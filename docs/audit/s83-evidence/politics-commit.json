@@ -1,0 +1,24 @@
+{
+  "command": [
+    "git",
+    "commit",
+    "-F",
+    "runs/s83/politics-commit-message.txt"
+  ],
+  "exit": 0,
+  "seconds": 595.763,
+  "commit": "5da5c1a0f1e69f0f928b2a7ec95c19cb43dcb25c",
+  "parents": [
+    "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "5b4212b45c2e34658c02428a84ee60d1d5670d9d"
+  ],
+  "tree": "613c89104620ac13eed10586697e700174a75740",
+  "clean": true,
+  "hook": ".githooks/pre-commit",
+  "summary": [
+    "rules: 0 new, changed or stale findings",
+    "Test Files  228 passed (228)",
+    "Tests  2075 passed | 3 skipped (2078)",
+    "Duration  588.79s (tests 82%, import 18%)"
+  ]
+}

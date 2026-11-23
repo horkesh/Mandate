@@ -315,6 +315,11 @@ The day tick, each phase declaring what it reads and writes:
 6. Operations advance; stores on hand fall or refill from the supply trace.
 7. Weekly: economy, people's politics and seat initiatives, bloc drift, attention refill. Recruitment runs daily instead, because musters and enlistment terms fall on particular days (0078).
 8. Situations fire on their causes over today's State after control and supplies, and surface on the deciding seat's knowledge; live situations check option appearance and expiry over what the principal knows, and their clocks (0057; phase 4b in Phase 0 code). Battle-phase dispatches written during operations enter the delivery owner before situations: due hops and their filter responses settle that day, while positive travel remains in transit. An option's orders enter the delivery owner after situations too: zero-day hops and their replies settle on the issue day; positive travel and relay holds remain in transit. Unselected reports, including surrender reports, retain their dispatch phase.
+   A `fired` or `decided` prerequisite may carry `forDays`: elapsed whole days
+   from that record's actual event or final decision. A named decision choice
+   must still match. These event intervals do not assert receipt; `knows`
+   intervals continue to run from receipt, and notice surfacing waits for its
+   own report. All intervals are pack data; no new saved clock is introduced.
 9. Checkpoints and the verdict.
 10. The invariant barrier.
 11. Decision-point detection.

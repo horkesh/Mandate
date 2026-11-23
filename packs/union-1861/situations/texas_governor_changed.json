@@ -6,9 +6,22 @@
   "text": "situation.texas_governor_changed.text",
   "earliest": "1861-03-16",
   "event": {
-    "dayAtLeast": 11
+    "all": [
+      {
+        "dayAtLeast": 11
+      },
+      {
+        "fired": "houston_confederate_obligations",
+        "forDays": 3
+      },
+      {
+        "holds": {
+          "post": "st_gov_texas",
+          "person": "houston_samuel"
+        }
+      }
+    ]
   },
-  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
   "effects": [
     {
       "propose": {
@@ -39,6 +52,10 @@
     {
       "source": "TX-CONV-1861",
       "at": "pp. 183-187, proceedings of 16 March 1861; p. 197 refers back to the vacancy ordinance"
+    },
+    {
+      "source": "TX-CONV-1861",
+      "at": "pp. 113-114, Houston refuses to recognize the Convention; pp. 183-185, his nonappearance for the oath and the vacancy proceedings, 16 March; [I] the existing refusal correspondence and continued incumbency are the State prerequisite, retaining three days after that notice; no claim that the 6 March reply is the later oath refusal"
     }
   ],
   "namedOnly": "The Convention’s succession proceedings, not a quotation or a discretionary act by either man; command replaces the named incumbent without changing his status."

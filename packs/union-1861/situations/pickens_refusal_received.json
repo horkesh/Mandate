@@ -1,0 +1,40 @@
+{
+  "id": "pickens_refusal_received",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.pickens_refusal_received.title",
+  "text": "situation.pickens_refusal_received.text",
+  "earliest": "1861-04-06",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 32
+      },
+      {
+        "decided": "pickens_reinforcement",
+        "options": [
+          "land_company"
+        ],
+        "forDays": 31
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_navy"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Administrative correspondence only; no secession-cause claim, security order or protected-population policy or effect."
+  },
+  "citations": [
+    {
+      "source": "ORN",
+      "at": "I-4 p. 90, Army order of 12 March; pp. 109-111, Adams refusal of 1 April, Vogdes enclosure reports receipt the previous night, Welles 6 April acknowledges the dispatch; [I] thirty-one model days after the actual opening decision preserve the day-32 Navy receipt checkpoint when the choice is on day 1, and shift with a late choice; this composite interval is not a sourced universal travel duration or a simulated ship or carrier"
+    }
+  ],
+  "namedOnly": "The Navy Department reports receipt of the cited Adams letter. Adams is the author of the historical enclosure, not a newly acting pack officeholder."
+}

@@ -783,5 +783,9 @@
   "situation.virginia_manassas_garland_return.text": "Cocke reports Garland's arriving force as 490 men. This dated return does not quantify Preston's battalion or establish a July strength.",
   "situation.charleston_anderson_command.title": "The Charleston command",
   "situation.charleston_anderson_command.text": "Colonel R. H. Anderson succeeds Beauregard in command of the Confederate forces at Charleston Harbor and its vicinity. The State volunteers remain under Governor Pickens.",
-  "reason.charleston-command-succession": "The local Confederate command passes to Colonel R. H. Anderson."
+  "reason.charleston-command-succession": "The local Confederate command passes to Colonel R. H. Anderson.",
+  "situation.pierpont_aid_requested.title": "Pierpont asks for military aid",
+  "situation.pierpont_aid_requested.text": "Pierpont has written to the President asking for military aid.",
+  "situation.pickens_refusal_received.title": "The Navy receives Adams’s refusal",
+  "situation.pickens_refusal_received.text": "The Navy Department has received Adams’s letter declining to land Vogdes’s company under the Army order. Adams says that his Navy instructions still bind him to the truce."
 }

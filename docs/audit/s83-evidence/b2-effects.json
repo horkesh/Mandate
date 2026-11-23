@@ -1,0 +1,18 @@
+{
+  "changedFinalRootFields": [
+    "forceAssignments",
+    "forceBlockStates",
+    "forceLocations",
+    "situationFlags",
+    "situationStates"
+  ],
+  "allOtherRootFieldsExact": true,
+  "allBattlesExact": true,
+  "onlyChangedForceIdentities": [
+    "fb_us_pickens_vogdes_co_a.det.32",
+    "fb_us_pickens_vogdes_co_a.det.33"
+  ],
+  "menBefore": 90,
+  "menAfter": 90,
+  "cause": "The existing Pickens landing effect follows its now-received decision on day33 instead of32. Its dated identity and location-since stamp follow the same owner; no strength or travel time is edited."
+}
