@@ -7,9 +7,27 @@ import { morningGround, pendingRequests, principalMenu } from '../src/seats/requ
 import { indexSeatsWorld } from '../src/seats/world.ts';
 import { createState } from '../src/tick/setup.ts';
 import { indexWorld } from '../src/world/index.ts';
-import { createViewCache } from '../src/view/view.ts';
+import { createViewCache, viewFor } from '../src/view/view.ts';
 import { fresh, report } from './support/s25-fixture.ts';
 import { F, P, POST, R } from './support/seats-fixture.ts';
+
+it('derives the principal’s force memberships in a single assignment pass', () => {
+  const { world, state, seat } = fresh();
+  const picture = viewFor(world, state, seat);
+  const ground = morningGround(world, state, 1);
+  const expected = principalMenu(world, state, F('a'), ground, undefined, picture);
+  expect(expected.commandable.length).toBeGreaterThan(1);
+
+  let enumerations = 0;
+  const forceAssignments = new Proxy(state.forceAssignments, {
+    ownKeys(assignments) {
+      enumerations++;
+      return Reflect.ownKeys(assignments);
+    },
+  });
+  expect(principalMenu(world, { ...state, forceAssignments }, F('a'), ground, undefined, picture)).toEqual(expected);
+  expect(enumerations).toBe(1);
+});
 
 it('S62: hidden holders, chains, seats, services, sides and remote battles cannot change principal menus or requests', () => {
   const { world, state: opening } = fresh();

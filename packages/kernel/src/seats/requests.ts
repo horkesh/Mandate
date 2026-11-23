@@ -1,4 +1,3 @@
-import { formationPost } from '../command/organisation.ts';
 import { forceTotals } from '../forces/lots.ts';
 /**
  * Which seats must answer, and the kernel's menu for each (Derived).
@@ -9,7 +8,7 @@ import { forceTotals } from '../forces/lots.ts';
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, heldPost } from '../command/command.ts';
+import { heldPost } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
@@ -95,32 +94,34 @@ export function warSince(world: SeatsWorld, state: State, faction: FactionId): n
   return state.situationFlags[row.flag] ?? null;
 }
 
-/** The kinds of a principal's orders and verbs to a post still on their way (lane 1.12: so a rule seat sends each once). */
-function inTransitTo(state: State, principal: PersonId, post: PostId): string[] {
-  const kinds = new Set<string>();
-  if (unansweredAppointments(state, principal).some(a => a.appointmentPost === post)) kinds.add('appoint');
+/** Orders and verbs the principal knows he sent, grouped once by their target. */
+function transitByPost(state: State, principal: PersonId): ReadonlyMap<PostId, ReadonlySet<string>> {
+  const kinds = new Map<PostId, Set<string>>();
+  const add = (post: PostId, kind: string) => {
+    let row = kinds.get(post);
+    if (row === undefined) {
+      row = new Set();
+      kinds.set(post, row);
+    }
+    row.add(kind);
+  };
+  for (const a of unansweredAppointments(state, principal)) add(a.appointmentPost, 'appoint');
   for (const m of state.messagesInTransit) {
-    if (m.msgOrder !== null && m.msgOrder.orderIssuer === principal && m.msgOrder.orderTarget === post) kinds.add(m.msgOrder.orderKind === 'goal' ? 'order' : m.msgOrder.orderKind);
-    if (m.msgVerb !== null && m.msgVerb.verbIssuer === principal && m.msgVerb.verbPost === post) kinds.add(m.msgVerb.verbKind);
+    const order = m.msgOrder;
+    if (order !== null && order.orderIssuer === principal) add(order.orderTarget, order.orderKind === 'goal' ? 'order' : order.orderKind);
+    const verb = m.msgVerb;
+    if (verb !== null && verb.verbIssuer === principal && verb.verbPost !== null) add(verb.verbPost, verb.verbKind);
   }
-  return [...kinds].sort(strictCompare);
-}
-
-/** Whether a principal has called on a raising post: a call on its way, or one its holder has answered (lane 1.12). */
-function calledOn(state: State, principal: PersonId, post: PostId): boolean {
-  if (inTransitTo(state, principal, post).includes('call')) return true;
-  // His governor's answer, kept for good (`pruneResponses`). Only a principal calls, so any call to the post is his.
-  return Object.values(state.orderResponses).some((r) => r.respPost === post && isCallAnswer(r));
+  return kinds;
 }
 
 /** The pack's doctrine for a faction's principal, its offensives' dates as days of the run (day 0 is the start's date). */
-function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView): DoctrineView {
+function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView, sides: ReadonlyMap<DepartmentId, FactionId | null>): DoctrineView {
   const row = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction);
   // No row: no doctrine (he answers his commanders and orders nothing of his own; a pack states one for every faction).
   if (row === undefined) return { crossNeutral: false, concentrateAt: null, calls: [], offensives: [], inquireEveryDays: 0, appointKinds: { land: [], naval: [] } };
   if (state.calendarStart === null) throw new RangeError('the seats layer needs a calendar (a scenario start)');
   const start = daysFromCivil(parseIsoDate(state.calendarStart));
-  const sides = receivedDepartmentSides(world, receivedView);
   const due = (date: string, department: DepartmentId) => state.stateDay + 1 >= daysFromCivil(parseIsoDate(date)) - start && sides.get(department) === faction;
   const concentrations = [...(row.concentrations ?? [])].filter(c => due(c.fromDate, c.requiresDepartment) && receivedPostSide(world, receivedView, sides, c.post) === faction)
     .sort((a, b) => strictCompare(b.fromDate, a.fromDate) || strictCompare(a.post, b.post));
@@ -161,34 +162,57 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const sides = receivedDepartmentSides(world, receivedView);
   const knownPosts = new Map(receivedView.posts.map(p => [p.post, p]));
   // Only public declared structure for a post already named in this seat's establishment or correspondence.
-  const structure = (id: PostId) => {
+  const today = formatIsoDate(dateOfDay(world.start.startDate, receivedView.day));
+  const readStructure = (id: PostId) => {
     const opening = world.start.posts.find(p => p.id === id);
     const declared = opening ?? world.start.temporaryPosts.find(p => p.id === id);
     if (declared === undefined) return undefined;
-    const today = formatIsoDate(dateOfDay(world.start.startDate, receivedView.day));
     const schedule = opening?.departmentChanges.filter(c => c.on <= today).sort((a,b) => strictCompare(a.on,b.on)).at(-1);
     return { ...declared, department: schedule?.department ?? declared.department };
+  };
+  const structures = new Map<PostId, ReturnType<typeof readStructure>>();
+  const structure = (id: PostId) => {
+    if (!structures.has(id)) structures.set(id, readStructure(id));
+    return structures.get(id);
   };
   const side = (id: PostId) => {
     const p = structure(id);
     return p === undefined ? null : sides.get(p.department) ?? null;
   };
-  // Own-force records identify commands (0064). An opening command still believed held does not disappear when
-  // its whole garrison is secretly captured; the received loss closes that belief (0052).
-  const blocks = (id: PostId) => {
-    const templates=world.map.world.organisationTemplates??[];
-    const forms=new Set(templates.flatMap(t=>t.posts.map(p=>p.id)));
-    if(!forms.has(id)&&!templates.some(t=>t.army===id))return commandedBlocks(state,id);
-    return Object.keys(state.forceAssignments).filter(key=>{
-      let assigned=state.forceAssignments[key as ForceBlockId]??null;
-      if(assigned===id)return true;
-      const seen=new Set<PostId>();
-      while(assigned!==null&&forms.has(assigned)&&!seen.has(assigned)){seen.add(assigned);assigned=knownPosts.get(assigned)?.parent??null;if(assigned===id)return true;}
-      return false;
-    }) as ForceBlockId[];
-  };
+  const templates = world.map.world.organisationTemplates ?? [];
+  const forms = new Set(templates.flatMap(t => t.posts.map(p => p.id)));
+  const armies = new Set(templates.map(t => t.army));
+  const blocksByPost = new Map<PostId, ForceBlockId[]>();
+  // Resolve each assigned post’s received formation chain once.
+  const chains = new Map<PostId, PostId[]>();
+  for (const id of Object.keys(state.forceAssignments) as ForceBlockId[]) {
+    const assigned = state.forceAssignments[id];
+    if (assigned == null) continue;
+    let chain = chains.get(assigned);
+    if (chain === undefined) {
+      chain = [assigned];
+      const seen = new Set(chain);
+      let post = assigned;
+      while (forms.has(post)) {
+        const parent = knownPosts.get(post)?.parent;
+        if (parent == null || seen.has(parent)) break;
+        seen.add(parent);
+        if (forms.has(parent) || armies.has(parent)) chain.push(parent);
+        post = parent;
+      }
+      chains.set(assigned, chain);
+    }
+    for (const post of chain) {
+      const list = blocksByPost.get(post);
+      if (list === undefined) blocksByPost.set(post, [id]);
+      else list.push(id);
+    }
+  }
   const institutional = (id: PostId) => world.roleOf(structure(id)?.kind ?? '') === 'office';
-  const field = (id: PostId) => !institutional(id) && (blocks(id).length > 0 || (knownPosts.get(id)?.status === 'held' && (world.start.forceBlocks.some(b => b.post === id) || world.map.world.organisationTemplates?.some(t=>t.army===id)===true)));
+  // A held opening command does not disappear when its garrison is secretly captured.
+  const field = (id: PostId) => !institutional(id) && (blocksByPost.has(id) ||
+    (knownPosts.get(id)?.status === 'held' && (world.start.forceBlocks.some(b => b.post === id) || armies.has(id))));
+  const transit = transitByPost(state, f.principal);
   const relays = (id: PostId): PostId[] => {
     const up: PostId[] = [];
     for (let parent = knownPosts.get(id)?.parent; parent != null && parent !== receivedView.post && !up.includes(parent); parent = knownPosts.get(parent)?.parent) up.push(parent);
@@ -219,13 +243,24 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   // the man he lost, until the report of it reaches him; an order he sends it meanwhile comes back undelivered.
   const ownPosts = receivedView.posts.filter(p => side(p.post) === faction).map(p => p.post).sort(strictCompare);
   const commandable: CommandablePost[] = ownPosts.filter(id => knownPosts.get(id)!.status === 'held' && knownPosts.get(id)!.holder !== null && field(id))
-    .map(id => ({ post: id, holder: knownPosts.get(id)!.holder!, relays: relays(id), routes: routesTo(id), ...receivedStrength(state, f.principal, id), raising: raisesRegiments(id), inTransit: inTransitTo(state, f.principal, id) }));
+    .map(id => ({ post: id, holder: knownPosts.get(id)!.holder!, relays: relays(id), routes: routesTo(id), ...receivedStrength(state, f.principal, id), raising: raisesRegiments(id), inTransit: [...(transit.get(id) ?? [])].sort(strictCompare) }));
+  let callsAnswered: ReadonlySet<PostId | null> | undefined;
+  const calledOn = (id: PostId) => {
+    if (transit.get(id)?.has('call')) return true;
+    callsAnswered ??= new Set(Object.values(state.orderResponses).filter(isCallAnswer).map(r => r.respPost));
+    return callsAnswered.has(id);
+  };
   const raising: RaisingPost[] = receivedView.posts.filter(p => p.status === 'held' && p.holder !== null && (side(p.post) === faction || side(p.post) === null) && raisesRegiments(p.post))
-    .map(p => ({ post: p.post, holder: p.holder!, routes: routesTo(p.post), called: calledOn(state, f.principal, p.post) }));
+    .map(p => ({ post: p.post, holder: p.holder!, routes: routesTo(p.post), called: calledOn(p.post) }));
   // Only received vacancies in commands held at the opening; unknown holders and unreceived losses stay unchanged.
   const heldAtStart = new Set(world.start.posts.filter(p => p.holder !== null).map(p => p.id));
-  const vacancies: Vacancy[] = ownPosts.filter(id => !formationPost(world.map,id) && knownPosts.get(id)!.status === 'vacant' && heldAtStart.has(id) && field(id))
-    .map(id => ({ post: id, arm: blocks(id).length > 0 && blocks(id).every(b => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
+  const vacancies: Vacancy[] = ownPosts.filter(id => !forms.has(id) && knownPosts.get(id)!.status === 'vacant' && heldAtStart.has(id) && field(id))
+    .map(id => {
+      const vacancyBlocks = blocksByPost.get(id) ?? [];
+      if (!armies.has(id)) vacancyBlocks.sort(strictCompare);
+      const naval = vacancyBlocks.length > 0 && vacancyBlocks.every(b => isNaval(world.map, state, b));
+      return { post: id, arm: naval ? 'naval' : 'land', routes: routesTo(id), appointing: transit.get(id)?.has('appoint') === true };
+    });
   const previousCandidates = cache?.candidates.get(faction);
   let candidates: readonly Candidate[];
   if (previousCandidates !== undefined && previousCandidates.world === world && previousCandidates.posts === receivedView.posts && previousCandidates.reports === receivedView.reports && previousCandidates.calendar === state.calendarStart) {
@@ -262,7 +297,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     historicalAppointees.push(...new Set(unsent.map(a => a.person)));
     historicalAppointees.sort(strictCompare);
     for (const a of [...unsent].sort((a, b) => strictCompare(a.post, b.post) || strictCompare(a.person, b.person))) {
-      if (!('onDate' in a) || a.onDate > today || !candidates.some((p) => p.person === a.person) || inTransitTo(state, f.principal, a.post).includes('appoint')) continue;
+      if (!('onDate' in a) || a.onDate > today || !candidates.some((p) => p.person === a.person) || transit.get(a.post)?.has('appoint')) continue;
       const template = world.start.temporaryPosts.find(p => p.id === a.post);
       const kind = world.map.world.vocabularies.postKinds.find(k => k.id === template?.kind);
       const mayEstablish = template !== undefined && !knownPosts.has(a.post) && sides.get(template.department) === faction && kind?.creatable === 'appoint' && kind.temporary && (template.parent === null || (knownPosts.has(template.parent) && side(template.parent) === faction));
@@ -301,13 +336,12 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   }
   const awaiting = postsInStatus(state, 'ready').filter((p) => state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go']));
   const d = world.map.world.rules.plans.goalDefaults;
-  const doctrine = doctrineView(world, state, faction, receivedView);
+  const doctrine = doctrineView(world, state, faction, receivedView, sides);
   const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
   const receivedPosts = receivedView.posts;
-  const receivedSides = receivedDepartmentSides(world, receivedView);
   const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({
     post: a.post, person: a.person, from: a.fromPost,
-    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && receivedSides.get(a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post),
+    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && sides.get(a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post),
     issued: state.messagesInTransit.some(m => m.msgVerb?.verbKind === 'appoint' && m.msgVerb.verbIssuer === f.principal && m.msgVerb.verbPost === a.post) || Object.values(state.orderResponses).some(r => r.respKind === 'verb:appoint' && r.respPost === a.post && r.respPerson === a.person),
     routes: routesTo(a.fromPost ?? a.post),
   }));
