@@ -1,0 +1,20 @@
+[
+  {
+    "source_key": "Moore-proclamation-1",
+    "image": "runs/s125/moore-proclamation.png",
+    "observed": "Signature T. O. Moore; date Nov19, publication Nov27 p1; special session Dec10. Sister-State security wording, no common polity undertaking.",
+    "sha256": "e02c4f9d0c5ea6f0ebac9f549b2a8a6693915b6a46aede388aa4c8acc7aea37b"
+  },
+  {
+    "source_key": "Texas-133",
+    "image": "runs/s125/texas-p133.png",
+    "observed": "Moore letter February25 is lower right; explicit common-destiny text above is Rogers, not Moore. Moore approves Texas defence and conditional further arms aid.",
+    "sha256": "4ffc74b022bd82986dbd4a7102d309967cd2952dc8e7e9d4695fd0c772199154"
+  },
+  {
+    "source_key": "OR-I-I-399",
+    "image": "runs/s125/raw/OR-I-I-p399.jpg",
+    "observed": "Vogdes company 80, not 90; table total992. Context p398 calls it approximate estimate, report dated April25 p393.",
+    "sha256": "7cb9e17a707225de0f7192871c1c8bf502d7f22d6afd7a55dd79d9c20db3f394"
+  }
+]

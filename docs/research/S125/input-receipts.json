@@ -1,0 +1,17 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\unknown-combatants.csv",
+    "sha256": "71db427f099c210caff4c7e076133f50f5eced254296109278edfcc564c95a73",
+    "purpose": "All15 NC lot IDs, original membership holds and battle-record references; read only"
+  },
+  {
+    "path": "C:/Pyrrhic/sprint-research-cast/docs/research/S113/cells.csv",
+    "sha256": "bc96efba41d712e6caa2005ad9810821a4331260bc175a151cf3715c92ded0b7",
+    "purpose": "Moore inherited unknown; finding aid, not new historical evidence"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\packs\\union-1861\\situations\\pickens_refused.json",
+    "sha256": "c66eaf47f7bcf0304b51811be7bfc1c291b90f05c99061ff1e891dbdec5be7ad",
+    "purpose": "Local baseline Vogdes identifier only; stale pack not edited; S122/S124 not evaluated"
+  }
+]
