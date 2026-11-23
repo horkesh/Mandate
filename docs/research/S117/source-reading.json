@@ -1,0 +1,470 @@
+{
+  "request": "S117 only; research, not executable mandates",
+  "read_scope": "Named instruments and continuations in retained extracts; unrelated papers on the same pages are not adopted; no exhaustive archive or fresh scan claim",
+  "sources": [
+    {
+      "path": "sources/OR-I-II-p105.txt",
+      "sha256": "05352ae30e1ec596f9dca922e9281c5d1ff14e481f391e7561a663711a92d4e9",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "105",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n124/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p470.txt",
+      "sha256": "05648a43d9ccf79ec1617464db8d07410d1bbc9b4fd4430211f9aa65968b9146",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "470",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n489/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p471.txt",
+      "sha256": "ebb825553b223ecf2eece1224100e1a210192292c650d2c2435672cc1c836a56",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "471",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n490/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p472.txt",
+      "sha256": "bd4360bc7a4c4d38a2472b676ec9637fc98ebbcdbd335298b186d96a9bffbf8c",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "472",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n491/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p579.txt",
+      "sha256": "02381f207374d537df77b30b41a7a27ab873bad509e90e2e1010ef1455c3320e",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "579",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n598/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p601.txt",
+      "sha256": "95250acfb5a1a2155f6277f54f4c8e9c8d846caa1ff2839a3898b6acf149a592",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "601",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n620/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p602.txt",
+      "sha256": "301903a990624582b3784b848fddd47deeaf048ef5a6aadbeabbf1d000593c61",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "602",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n621/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p607.txt",
+      "sha256": "1585b0b88abf67d7ba57552a0265135dde032c1a4a3de437ce486dbea18bce2c",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "607",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n626/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p611.txt",
+      "sha256": "789182ed8adc3b7cd56874022263d05d29adb67b014eea47dcd1c7a27ff0743c",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "611",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n630/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p652.txt",
+      "sha256": "f96ec6b9da93282b74e4b3370be13b9ecfd27214f60cd9c2f1a9c255c1f92112",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "652",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n671/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p657.txt",
+      "sha256": "7712247b85626f743dbb93b2a04603016a4a78329eaeb240aa7a7a81abf56d2a",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "657",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n676/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p658.txt",
+      "sha256": "a555cd63a9f794699364ae51b60991cf882b1de259b629bc95c2f00112f680c8",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "658",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n677/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p659.txt",
+      "sha256": "4650bd92ff33e99bfffd4ea3093c125a65f305b6d1e5eef00face5c5cb126d3f",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "659",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n678/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p665.txt",
+      "sha256": "d8b9557425d6f10f44992460e2c148c52ad0426a500347d0e95ba67e0b58f05d",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "665",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n684/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p668.txt",
+      "sha256": "8fe19d66364e36c5825272d43ad2cc555d50b5e5bdb3dd0408c5d8918c11399e",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "668",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n687/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p669.txt",
+      "sha256": "1b423182af3bfd42ad84a539963c55541cd69f45d04822930d59fbc12080bff6",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "669",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n688/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p670.txt",
+      "sha256": "427af7221d5ca7a1703b6e3303e21abc521c35f6893fb29f900acefd28cea0e4",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "670",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n689/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p671.txt",
+      "sha256": "18d1c54a89f1b06dd5e5307411c26c99f790fad5713401e6d7afc2b599af6fd9",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "671",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n690/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p676.txt",
+      "sha256": "637a0acc1793c671ec8e1f8739255b3905e7c0ae0c7eb59b5410c1a6a97577ed",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "676",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n695/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p680.txt",
+      "sha256": "6befcc2e01dd251246ecedf3f40d276d00e97bb7f06aa6a923feca6aaa80a4e9",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "680",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n699/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p683.txt",
+      "sha256": "18f23604b02aaf5a22824aa5b02d4fe430aac5d50a7c35fb258c81d152fc2f69",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "683",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n702/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p691.txt",
+      "sha256": "2a32b76aef5d29b1ad93e09754622639aaf2601dd9796415e0f0f749009c13b4",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "691",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n710/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p692.txt",
+      "sha256": "f470a4c455749bea11bf1e15662d481fcb22b9427f5287a862d3a71b5b37dffe",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "692",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n711/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p693.txt",
+      "sha256": "ff514cfa9eaae87ec163771a74dab2efcc6a7fe63147e5ad780d8801b935cf24",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "693",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n712/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p694.txt",
+      "sha256": "0b9009480acb00345ccefbaa40e93730112c9950ec8b7f3de281e88ab6b039c3",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "694",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n713/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p695.txt",
+      "sha256": "6858b913b580d7364f3af6b2184b0a37a4a2453ddf5598336398b6fed39eb7b4",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "695",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n714/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p696.txt",
+      "sha256": "e0c499a4670e50ffc9fa2fcb6e1258a64cec30683d1c8ce06df623c9ba03c3a5",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "696",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n715/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p701.txt",
+      "sha256": "4c8ac509482f55a06d3c51545bcfd5822a3fba2ec81aa41400a093cf6d51c005",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "701",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n720/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p703.txt",
+      "sha256": "98603bc041ab3867b0195289b19f65007dee21138076ee84dcbd3a545618a237",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "703",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n722/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p707.txt",
+      "sha256": "7158a32437d710ac86e88446bf84288658e91ec13cb2047b720337d4d2342d34",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "707",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n726/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p708.txt",
+      "sha256": "47902197e3c30f4de767ecaad665793e414cc1de56aa784ccbba0c76d2f772bf",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "708",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n727/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p709.txt",
+      "sha256": "4c7546fdf3e4fa42aaa1426b83cb07259ab379ed4b92e3579dbaff4976c47b41",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "709",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n728/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p710.txt",
+      "sha256": "289f2dd0051b2a9d6fc9acdebf012f38bd0f4616e6ba78c8cb3bd4fbe40f727a",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "710",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n729/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p711.txt",
+      "sha256": "6c584d3706e2801ca9dc36a58e833ca0641f3fde5f47de22b68a54130aeeb00a",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "711",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n730/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p712.txt",
+      "sha256": "7195db71e598181737f5c396fa0c3716b08c047765e78e38492dce1ebcad559f",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "712",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n731/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p717.txt",
+      "sha256": "b7826e98ae51424ae02a00bbc0e9898d94c21f3f23ff4d47f4c844b1456ab6ad",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "717",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n736/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p775.txt",
+      "sha256": "07fb853c1294e9ddf47ca042f5ebec920cda183561ca7f166cfa4edf4d5602f2",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "775",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n794/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p776.txt",
+      "sha256": "2f017b2174ad769bd1dd32abd85821af7ed7ac1d446666f9f9a3514b2d223b3b",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "776",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n795/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p827.txt",
+      "sha256": "50662c4bd18fe19d1ca78b07f8ef74d20b701bed37c66556e173b37f83818197",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "827",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n846/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p871.txt",
+      "sha256": "7c0af5e7f6c7577071cd858149206b9ac2e6ad65754da66fce0bad48e0a343bb",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "871",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n890/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p872.txt",
+      "sha256": "7caebfed6ffdf9a1c2ce8dc03ec2ccd1d4147a296266b4db553643d27518cb0d",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "872",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n891/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p894.txt",
+      "sha256": "1312d4b7aea4304d07031bc455fbdf381a99ebf1bcb9a665b24f26992328bd8d",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "894",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n913/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p897.txt",
+      "sha256": "f4d41b8818845fa6ebd8c87f6e077e436e9479912f845dba51096acf899d92d8",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "897",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n916/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p910.txt",
+      "sha256": "21886a3d4127c1c998fe15d89fd8f135e876b8e562acbe5b9e657b4b8248b36c",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "910",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n929/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p911.txt",
+      "sha256": "308a6be3a13e854e5912726664d80e01386ee6980c1f15c554c2912d89c7c7e9",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "911",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n930/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p912.txt",
+      "sha256": "01c8ac94f1c8b3b611066d5c33d43c43fe72ade39fb7aecda914a99713138829",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "912",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n931/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p923.txt",
+      "sha256": "30443b634f5243d1394d0ea56b863d6effbdcf23ce08b810bfe94363d0785493",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "923",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n942/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p924.txt",
+      "sha256": "cb3ece79ccfc375904e94dfda2eaaf2c3d775916e0d604c28e97cc2e11eb9371",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "924",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n943/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p925.txt",
+      "sha256": "39c6dd97db5c5bd8e54f8a3b2af6761cfdedd01aaa54715628aeaefb7052cfa5",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "925",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n944/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p929.txt",
+      "sha256": "4bfddba1d4a3623cabc3b93f10232e70d248b7b97a3b55f5fb6193ac3e8a7b66",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "929",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n948/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p930.txt",
+      "sha256": "c15129a2ea8a7986198c093c3eb0384c1780372d03671bb7a9a32fa2aba11055",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "930",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n949/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p934.txt",
+      "sha256": "78c0178437f44b0ad0950ed9a2281178c77764277c1f60a6c29b1608d57287cd",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "934",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n953/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/OR-I-II-p935.txt",
+      "sha256": "aff8e0dd0d750162f730963a8500a8f39261aab62984de47d03e58be313b21b7",
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": "935",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n954/mode/1up",
+      "extraction": "Local S4 PDF; zero-based PDF page = printed page + 19; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/Regs-1857-approval.txt",
+      "sha256": "dd4995b424fc5ba79fb96d6f9ef56305de895d2a9b49e3a10c3c8d3b746a36c2",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "approval leaf unnumbered",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "extraction": "Downloaded IA derivative OCR; printed running headers; cited paragraphs; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/Regs-1857-pp2-3.txt",
+      "sha256": "7351b34d8c0baa74ddbab890325908936d7689ada5b868004321876cb8757a45",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "2-3",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "extraction": "Downloaded IA derivative OCR; printed running headers; cited paragraphs; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/Regs-1857-pp57-60.txt",
+      "sha256": "2a77917eb449b544928b703e2b14baeed296adf5692d88c59b9b9d0071af0c24",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "57-60 (through paragraph447 before XXXV)",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "extraction": "Downloaded IA derivative OCR; printed running headers; cited paragraphs; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/Richardson-IV-p73.txt",
+      "sha256": "7284595e97ad965405ab4b1bfe16a12ec8ddc2ad9c482af92651def9f40eb898",
+      "work": "Richardson, Messages and Papers of the Presidents, IV",
+      "printed_pages": "73",
+      "url": "https://archive.org/details/compilationofmes04unituoft",
+      "extraction": "Downloaded IA derivative OCR; printed running headers; trailing spaces removed and LF normalized; wording uncorrected"
+    },
+    {
+      "path": "sources/Richardson-VI-pp17-19.txt",
+      "sha256": "2fbe42c01814a2b34df40f0ce7898fb6c158c2e470ad957e88d40373636db571",
+      "work": "Richardson, Messages and Papers of the Presidents, VI",
+      "printed_pages": "17-19",
+      "url": "https://archive.org/details/compilationofmes06unituoft",
+      "extraction": "Downloaded IA derivative OCR; printed running headers; trailing spaces removed and LF normalized; wording uncorrected"
+    }
+  ]
+}

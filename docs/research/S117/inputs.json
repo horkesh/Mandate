@@ -1,0 +1,42 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0121-letters-receipts-and-authority-a-commander-receives.md",
+    "sha256": "a57c7dc42c89f6170ee8fdc6a220d9e45ee8ce070d1a28388989cc989494fb70"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0123-attack-or-demonstrate-is-a-duty-to-detain.md",
+    "sha256": "558a05ab276c7a5b6e4de7ed9cc2715244f91a54a8e4054e7abc2c1a7c178b2c"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S99\\june-moves-register.csv",
+    "sha256": "5fc5d524da03d6493fcb7a45ad2c440469e165b1d0c9329bb8c3efd222d4b5ed"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S99\\source-reading.json",
+    "sha256": "370b62be62dd7172692d01a622b0a52d2dd89911252f39e9c7b4932aefcc0eda"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-design\\docs\\design\\S110\\chain.csv",
+    "sha256": "f68c980aa0733af1a6333579b3489d622253b2aacf4f21a286ddd3b3720696eb"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-design\\docs\\design\\S110\\source-pages.csv",
+    "sha256": "8f010e303916ccfe0feaabf2050aac70fed6b4aeda8ebc866604da68781c9802"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+    "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\compilationofmes04unituoft-full.txt",
+    "sha256": "9755a5fedf24d9901a1a86450b05d4f0c1ef263df35e1234f9b08223e4d6484a"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\Richardson-VI-full.txt",
+    "sha256": "7f0e1faa6edf885cb707e4de2361e3a3e8bace2800a0c5732538baf36fa33379"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\0255005.nlm.nih.gov-full.txt",
+    "sha256": "66f94ffd28e07e997e2fa5d9c5f3ecdc284c0c35aa3b7a41c689302c15579499"
+  }
+]
