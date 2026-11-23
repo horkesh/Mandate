@@ -1,0 +1,56 @@
+{
+  "read_only_root": "C:\\Pyrrhic\\sprint-july",
+  "head": "0e7078cb4baf7cd8d47621f3908f07f64232108e",
+  "scope": "Only grammar/semantics read. No pack, research, run or S92 input imported. No command executing July code; no writes in July.",
+  "files": [
+    {
+      "path": "docs/decisions/0026-foundation-review-revisions.md",
+      "sha256": "0d23cdbb36d7ed0fd586c815829d38b466f43725f4cf635a7a0cbc0dc3d5cf0b"
+    },
+    {
+      "path": "packages/kernel/src/plans/goal.ts",
+      "sha256": "ae8f5e577b176f962e95711699b68128f76eea6f00d13131682bc6a361376f7e"
+    },
+    {
+      "path": "packages/kernel/src/plans/plans.ts",
+      "sha256": "172f230590fd495f547861c22cddfdeff11aaf738609611836529a66940fb04a"
+    },
+    {
+      "path": "packages/kernel/src/log/commands.ts",
+      "sha256": "9ea00d1fcf6e70a05cdcdc392cbfd921cae341f2b54566dd1978e7205567d908"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/report.ts",
+      "sha256": "116bb83f9c6de6e487f078f15b70a9a0acea9a1e40ae27b8ec3e0ad29ff9287b"
+    },
+    {
+      "path": "packages/kernel/src/tick/orders.ts",
+      "sha256": "91ee4d94c2bb6eb3517ccd6fd18af8b9063dab80b7bd9fcc15dbcca1ff331446"
+    },
+    {
+      "path": "packages/kernel/src/tick/plans.ts",
+      "sha256": "2a2225a62ee0e74371f3c2d718dfd59d95076065b86165a10de798333e3a3d3b"
+    },
+    {
+      "path": "packages/kernel/src/planner/draft.ts",
+      "sha256": "265bb5408106891dce2976f54482df18ff85a7843082331e202067d99e157be7"
+    },
+    {
+      "path": "packages/kernel/src/planner/methods.ts",
+      "sha256": "863e571b127c315f243a029e05f9d598bff426d2ff17056b00e7854732bf4564"
+    },
+    {
+      "path": "packages/kernel/src/planner/axes.ts",
+      "sha256": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90"
+    },
+    {
+      "path": "packages/kernel/src/planner/edits.ts",
+      "sha256": "b57d0607021b1485c7061fc5a9cdc368d4f9b3356914109f31daf39705dd0a49"
+    },
+    {
+      "path": "packages/kernel/src/seats/posts.ts",
+      "sha256": "b102a1dc5149d42ead2324077ef5fbc05aef4fcf27686d93d047430b0ef47112"
+    }
+  ],
+  "findings": "Existing command/report/plan/operation transport can carry concrete changed goals. Typed commander alternative-objective proposal and receipt-scoped conditional operational discretion are not present in the read grammar. Delegation is for situation decisions, not general military discretion. No implementation in S94."
+}

@@ -1,0 +1,360 @@
+{
+  "request": "S94 research only",
+  "source_pages": 30,
+  "source_artifacts": [
+    {
+      "key": "OR-I-II:470",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 470,
+      "pdf_page_index": 489,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p470.txt",
+      "sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n489/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:471",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 471,
+      "pdf_page_index": 490,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p471.txt",
+      "sha256": "a6cfd41bcaf5c9ec79bd103b432d254bb04a615d4bc72bfad06cd20ac1af5a61",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n490/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:472",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 472,
+      "pdf_page_index": 491,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p472.txt",
+      "sha256": "376533e18e8aa740b0e3663ffb5df4e30adc42fadba8ee692a7805ecc96bf557",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n491/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:473",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 473,
+      "pdf_page_index": 492,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p473.txt",
+      "sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n492/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:478",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 478,
+      "pdf_page_index": 497,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p478.txt",
+      "sha256": "79bacb1af1b96a6760bb758ea3e882b4c180a2370f584882ac93f5637602799d",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n497/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:880",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 880,
+      "pdf_page_index": 899,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p880.txt",
+      "sha256": "d51c203be5621091a1f7768ba1a6658e900094c90ac0e9beef330312b9658e29",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n899/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:881",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 881,
+      "pdf_page_index": 900,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p881.txt",
+      "sha256": "3b74d0abb2d105379a522378d7c74eb7b794d3b1dad56f11c2a6ba0e86325220",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n900/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:889",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 889,
+      "pdf_page_index": 908,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p889.txt",
+      "sha256": "b434a1894c0f417cfffa965b2cc88d3b7ef8557e1030d926b581ed0913314ada",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n908/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:894",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 894,
+      "pdf_page_index": 913,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p894.txt",
+      "sha256": "11978bbb57a1c753028c43172277b9e231866f72af3d32ce74416b17fc0ae041",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n913/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:895",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 895,
+      "pdf_page_index": 914,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p895.txt",
+      "sha256": "9163d1661a23711c5955bd30162081e864a00770af3cf9d3e97d7a50008923d8",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n914/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:896",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 896,
+      "pdf_page_index": 915,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p896.txt",
+      "sha256": "a39ff032b678b3d0f6bbd2a7d30ad389489cb0558639d7f08969b744ef2e2105",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n915/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:897",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 897,
+      "pdf_page_index": 916,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p897.txt",
+      "sha256": "9b6302b5d857fdca6af455b945c1d378e200ef47d699cafc87c468f20c5bfa13",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n916/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:898",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 898,
+      "pdf_page_index": 917,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p898.txt",
+      "sha256": "b04b6914740eca1d75248f89233f28c4413c762c3b63270d480bbe51b5a93103",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n917/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:901",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 901,
+      "pdf_page_index": 920,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p901.txt",
+      "sha256": "d52419d2654c33e2b67ddc0a0904dfccebd1e8eb4c207dc3eca020a069409bf7",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n920/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:907",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 907,
+      "pdf_page_index": 926,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p907.txt",
+      "sha256": "0092a6f587c370bce0b004ebf5d4f8eb41e10df164e302d1b1fa43ab436990e3",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n926/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:908",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 908,
+      "pdf_page_index": 927,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p908.txt",
+      "sha256": "7a67d125051482695ebb2be0ee0d9d5f691f2be947bf0d9bceb3e2a95f7b6462",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n927/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:909",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 909,
+      "pdf_page_index": 928,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p909.txt",
+      "sha256": "826b1119a1e8a9cade6a5f81026d58cc85177647a64bf14b21545a0c289effec",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n928/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:910",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 910,
+      "pdf_page_index": 929,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p910.txt",
+      "sha256": "4a42af8f7c090a87062c609fd3a9170b44b2bd4595abd4a46ddc826629808817",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n929/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:922",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 922,
+      "pdf_page_index": 941,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p922.txt",
+      "sha256": "258d190afacb7e7947402138a0295360e2dc4d179932de8b221a80e44580687b",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n941/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:923",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 923,
+      "pdf_page_index": 942,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p923.txt",
+      "sha256": "2af8538853e0533e179f00996116339e6f1d79de3c54a27f8b31a027e2736108",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n942/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:924",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 924,
+      "pdf_page_index": 943,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p924.txt",
+      "sha256": "ff756cc6eb223fe0d7b7e7c966f2c39530e566706c4c669816e2d6b6bac24a63",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n943/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:925",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 925,
+      "pdf_page_index": 944,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p925.txt",
+      "sha256": "30ca0607da63422562ebddba40f8ac2331ccc579ecb8b467f7fab5d55439e5ab",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n944/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:929",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 929,
+      "pdf_page_index": 948,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p929.txt",
+      "sha256": "dfa609991117186edb05c200e5d553786e6bd509c168a04ee82c7874dfea0e37",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n948/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:930",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 930,
+      "pdf_page_index": 949,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p930.txt",
+      "sha256": "f12c76285306da6b6eaac22e6714b9880b018fa2c2a3f83822b526d293b852bd",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n949/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:934",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 934,
+      "pdf_page_index": 953,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p934.txt",
+      "sha256": "361d43ac5d7945266c1fc2194219b242a13656463d0910640ec38fd9ec87211d",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n953/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:935",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 935,
+      "pdf_page_index": 954,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p935.txt",
+      "sha256": "a469a08dfe01354a93d5b4785a9a7c0e19b2b1c21269161724e005b60aa32e8d",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n954/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:940",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 940,
+      "pdf_page_index": 959,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p940.txt",
+      "sha256": "b8605311ac753ac578d181f36a0275518cb8e087a9ea9ef639a91a580eb0d969",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n959/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:948",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 948,
+      "pdf_page_index": 967,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p948.txt",
+      "sha256": "89fba7cb92009f78f00c91d64a4e06ca66c4ed156271ca3cf71bb1c138369fc3",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n967/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:956",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 956,
+      "pdf_page_index": 975,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p956.txt",
+      "sha256": "4e190ddbf0c6f99d49a259138d3a24732a19834e90fb670c32b8467040910800",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n975/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:967",
+      "work": "Official Records, series I, volume II (1880), chapter IX",
+      "printed_page": 967,
+      "pdf_page_index": 986,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p967.txt",
+      "sha256": "fe38cb924539fb26dad55b7f2ea188d8ba9a96ee8351cfb8359b2d75b9730e65",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n986/mode/1up",
+      "scope": "Cited Johnston/government correspondence, headings, and report passages read; other documents on same page not adopted."
+    },
+    {
+      "key": "OR-I-II:472:image",
+      "printed_page": 472,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p472.png",
+      "sha256": "229ea5907ac6a8f79b5b1dc1257ce0424a2db329c6ac12c6fb71f430ebe93326",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n491/mode/1up",
+      "scope": "Page image inspected headlessly: printed date, heading, receipt/despatch wording and continuation."
+    },
+    {
+      "key": "OR-I-II:929:image",
+      "printed_page": 929,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p929.png",
+      "sha256": "acc8a4e48a524746e8713b8fdf738bdd7360caec75fc56930577549568ad98d0",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n948/mode/1up",
+      "scope": "Page image inspected headlessly: printed date, heading, receipt/despatch wording and continuation."
+    },
+    {
+      "key": "OR-I-II:930:image",
+      "printed_page": 930,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p930.png",
+      "sha256": "95886a67fdf4f2bf65ef1788d202ad3be1f00d935851e4e91f89402f7c0be4fe",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n949/mode/1up",
+      "scope": "Page image inspected headlessly: printed date, heading, receipt/despatch wording and continuation."
+    },
+    {
+      "key": "OR-I-II:934:image",
+      "printed_page": 934,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p934.png",
+      "sha256": "cd2f5005c3fa116ddcd8ad8de3f6d0626527488aac2b6720ae9143b971120b6a",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n953/mode/1up",
+      "scope": "Page image inspected headlessly: printed date, heading, receipt/despatch wording and continuation."
+    }
+  ],
+  "upstream_pdf": {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+    "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+    "sha1": "5181e2d36e7be015b7f8bf6261ca7898ee038005",
+    "metadata_sha1": "5181e2d36e7be015b7f8bf6261ca7898ee038005",
+    "bytes": 124529063,
+    "url": "https://archive.org/download/warofrebellion02secrrich/warofrebellion02secrrich.pdf"
+  },
+  "live_http_metadata": {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S94\\ia-metadata.json",
+    "sha256": "7a739b916248e81b2c74d2a05da403f96c3f388b1f3d63e0de33a0d155ff65b8",
+    "url": "https://archive.org/metadata/warofrebellion02secrrich",
+    "status": 200
+  },
+  "exclusions_and_limits": [
+    "S84 file named warofrebellion02unit proved to be a different OR series/volume on content inspection; no facts adopted from it.",
+    "Web reader failed to open IA text and OSU page URLs; no factual content from those responses. Retained correct PDF, matching live IA SHA1, used instead.",
+    "Scans stay outside all worktrees. Only S94 external folder was written.",
+    "Original Whiting memorandum/endorsed paper, Johnston June14 report to Davis, and Cooper letter of June15 referenced on p934 not established/read; no reconstructed text or exact receipt.",
+    "One government-volume collection supplies contemporaneous papers and a later interested participant report, not independent certification of every assessment or enemy action.",
+    "Printed-page index n+19 checked against page headings; June15/16 receipt discrepancy retained rather than resolved by indexing."
+  ]
+}

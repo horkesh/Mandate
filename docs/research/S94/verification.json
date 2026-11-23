@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "checks": 1989,
+  "original_paths": 1835,
+  "original_bytes_preserved": true,
+  "register_rows": 31,
+  "exchange_rows": 18,
+  "movement_rows": 13,
+  "read_printed_pages": 30,
+  "inspected_page_images": 4,
+  "grammar_files": 12,
+  "pack_and_code_changes": 0,
+  "historical_interpretation": "proposed for lead review; not independently reviewed or signed",
+  "stage": "pre-hook delivery; actual commit/hook in sole main CODEX append and runs/s94/commit.exit.json",
+  "fixture_preflight": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "tools/test/staged-check.test.ts",
+      "tools/test/lfs-git.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 3.886,
+    "log": "runs\\s94\\preflight.log"
+  },
+  "fixture_result": "2 files / 18 passed; zero failures or skips",
+  "node": "v22.23.2",
+  "git": "2.52.0.windows.1",
+  "python": "3.14.3",
+  "scope": "Research Markdown/CSV/JSON additions only. No code/pack changes. July read only for grammar; unknowns not accessed.",
+  "required_hook": "ordinary git commit through configured .githooks/pre-commit; no overrides",
+  "campaign": "not run; no runtime change, no request for a campaign",
+  "review": "Lead sprint review under 0106; author checks are not independent review"
+}
