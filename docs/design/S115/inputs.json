@@ -1,0 +1,238 @@
+{
+  "worktree_base": "0b7ab4c93530a5fb0f5f1494dea356b652484959",
+  "july_pin": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+  "inputs": [
+    {
+      "worktree": "C:\\Pyrrhic\\ByOrderOfThePresident",
+      "head_at_capture": "10103bd21a849d546a299f59e6fdc35c3d51cedd",
+      "path": "docs/decisions/0120-what-the-pushback-plan-builds-first.md",
+      "sha256": "f0ca3ae0a86fb56413b4115894061294a8881971d051111c67ead602e73ed92a",
+      "snapshot": "runs/s115/inputs/00-0120-what-the-pushback-plan-builds-first.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\ByOrderOfThePresident",
+      "head_at_capture": "10103bd21a849d546a299f59e6fdc35c3d51cedd",
+      "path": "docs/decisions/0121-letters-receipts-and-authority-a-commander-receives.md",
+      "sha256": "a57c7dc42c89f6170ee8fdc6a220d9e45ee8ce070d1a28388989cc989494fb70",
+      "snapshot": "runs/s115/inputs/01-0121-letters-receipts-and-authority-a-commander-receives.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-design",
+      "head_at_capture": "986f8ac04bd082b207d67010fbf97068af57b1c6",
+      "path": "docs/design/S110-RECEIPTS-LETTERS-AUTHORITY.md",
+      "sha256": "3ea5a31416b1581aabd9da593db33819ffe295783ef8b0e776c3a9b1de9c664c",
+      "snapshot": "runs/s115/inputs/02-S110-RECEIPTS-LETTERS-AUTHORITY.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-pushback",
+      "head_at_capture": "0b7ab4c93530a5fb0f5f1494dea356b652484959",
+      "path": "CLAUDE.md",
+      "sha256": "8444009f244f310ceb2c59a616f97cc2d294bfe5e4e616d6acbd01d672ed4a7d",
+      "snapshot": "runs/s115/inputs/03-CLAUDE.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-pushback",
+      "head_at_capture": "0b7ab4c93530a5fb0f5f1494dea356b652484959",
+      "path": "docs/LANES.md",
+      "sha256": "a80e6a8b1ef9e828fd41047972b9308ba95b76fb5becb30b81e41f0e755fae0e",
+      "snapshot": "runs/s115/inputs/04-LANES.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-pushback",
+      "head_at_capture": "0b7ab4c93530a5fb0f5f1494dea356b652484959",
+      "path": "docs/research/2026-11-23-S109-pushback-plan.md",
+      "sha256": "f896df2d2da6d2203f69d55bfb86e24fbff8baf28725f9e9bad4d5ea7119f1e3",
+      "snapshot": "runs/s115/inputs/05-2026-11-23-S109-pushback-plan.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-pushback",
+      "head_at_capture": "0b7ab4c93530a5fb0f5f1494dea356b652484959",
+      "path": "docs/research/S109/rows.json",
+      "sha256": "7bac0256a95efde9f61c32a57a01c3326819a438e717f8b4fa516abe14d933a6",
+      "snapshot": "runs/s115/inputs/06-rows.json",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-pushback",
+      "head_at_capture": "0b7ab4c93530a5fb0f5f1494dea356b652484959",
+      "path": "docs/decisions/0106-the-codex-sprint-to-22-november.md",
+      "sha256": "46a0745d0129d2adea42cc4f8d85874294812beb612fb4898d3d94abed81ee22",
+      "snapshot": "runs/s115/inputs/07-0106-the-codex-sprint-to-22-november.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-pushback",
+      "head_at_capture": "0b7ab4c93530a5fb0f5f1494dea356b652484959",
+      "path": "docs/research/S87/0107-the-sprint-continues-on-codexs-renewed-allowance.md",
+      "sha256": "a6db84cbb26fb9457a1067c2c7444d544f63d52221bc86c6b408bcaa715ceb3f",
+      "snapshot": "runs/s115/inputs/08-0107-the-sprint-continues-on-codexs-renewed-allowance.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/plans/goal.ts",
+      "sha256": "abde14155d440730b8bcd2a82473c3b483bd132d608db2a9b6733430b8b415ee",
+      "snapshot": "runs/s115/inputs/09-goal.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/planner/types.ts",
+      "sha256": "8a9ed06d810e97eb006ed09927dd2583d03990f6052ef39919b41873ce42a7de",
+      "snapshot": "runs/s115/inputs/10-types.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/planner/discretion.ts",
+      "sha256": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe",
+      "snapshot": "runs/s115/inputs/11-discretion.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/tick/operations.ts",
+      "sha256": "7448b8c47661c2448c9db0c64a5379fac92ee1e4ad64eea880cc2f98639a6cdd",
+      "snapshot": "runs/s115/inputs/12-operations.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/operations/operations.ts",
+      "sha256": "6cd8db966ccae2e04a373200bf5682b1c181014191181f452e69117036172920",
+      "snapshot": "runs/s115/inputs/13-operations.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/tick/generate.ts",
+      "sha256": "37b34806c82f61493739238a7120cff16b12be025643cbc1d0c8a5ed34c87b7c",
+      "snapshot": "runs/s115/inputs/14-generate.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/knowledge/beliefs.ts",
+      "sha256": "be7a595e977a3182f6eea83622a59c568deb22bb7eb284495f92dbcdb736a882",
+      "snapshot": "runs/s115/inputs/15-beliefs.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/combat/decide.ts",
+      "sha256": "7f9c3b160a4c8c02aa5336f6fd6d77c4ab2ac2d3ac80ec3c2226085791d9a0ac",
+      "snapshot": "runs/s115/inputs/16-decide.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/combat/order-kinds.ts",
+      "sha256": "bc97c140f577667e4fc6848f28ae9bca7c4573d87a813846889b4fdc253bce32",
+      "snapshot": "runs/s115/inputs/17-order-kinds.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packages/kernel/src/combat/orders.ts",
+      "sha256": "8a4eb26c12be4384ba617900e65eb590c6cd781f011c040772441af644f52844",
+      "snapshot": "runs/s115/inputs/18-orders.ts",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packs/union-1861/source/world/regions.csv",
+      "sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+      "snapshot": "runs/s115/inputs/19-regions.csv",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "packs/union-1861/pushback-union.json",
+      "sha256": "ced1c3006268e635f8933154100a59040d4d51de6dedd1336b237ff490aa2376",
+      "snapshot": "runs/s115/inputs/20-pushback-union.json",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/audit/s111-evidence/rows.json",
+      "sha256": "65e898ca46cefebc61de3a49725b813d22b9bbb3cf749f16fccd272aa706b140",
+      "snapshot": "runs/s115/inputs/21-rows.json",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/decisions/0016-goals-plans-and-arrows.md",
+      "sha256": "998281ebdf7807e297e84ea0b338fbc7625dfaa30fdab51c108fbb49c9b177d1",
+      "snapshot": "runs/s115/inputs/22-0016-goals-plans-and-arrows.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/decisions/0026-foundation-review-revisions.md",
+      "sha256": "0d23cdbb36d7ed0fd586c815829d38b466f43725f4cf635a7a0cbc0dc3d5cf0b",
+      "snapshot": "runs/s115/inputs/23-0026-foundation-review-revisions.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/decisions/0052-seats-knowledge-and-the-command-log.md",
+      "sha256": "a63c24dd9a2dba21cc9af51828f26e1a5b8007e11820b70a6b22fb44dac9373a",
+      "snapshot": "runs/s115/inputs/24-0052-seats-knowledge-and-the-command-log.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/decisions/0111-pushback-is-measured-by-named-acts.md",
+      "sha256": "f8050c00a7e52cd44179b5fa208d3915704cf6ddd9489618f10cc4291989f049",
+      "snapshot": "runs/s115/inputs/25-0111-pushback-is-measured-by-named-acts.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/decisions/0112-the-pushback-registers-and-what-1a-requires.md",
+      "sha256": "36364435f3694386354b80a225341ad182ca16765a72c7848a0a86bca02f69c7",
+      "snapshot": "runs/s115/inputs/26-0112-the-pushback-registers-and-what-1a-requires.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/decisions/0114-commanders-propose-and-orders-carry-discretion.md",
+      "sha256": "0ff9ac4eb64eca6d945b703378117a5441d000c98cae0eb5062ed77f27dd31ca",
+      "snapshot": "runs/s115/inputs/27-0114-commanders-propose-and-orders-carry-discretion.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-july",
+      "head_at_capture": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+      "path": "docs/decisions/0116-a-commander-may-propose-while-he-complies.md",
+      "sha256": "caac1912aaf4cb1939233c99887ac984c7deb3a184df914b3acad358c1c6f857",
+      "snapshot": "runs/s115/inputs/28-0116-a-commander-may-propose-while-he-complies.md",
+      "reading": "document read; code inspected at cited entry points, not a whole-file audit"
+    }
+  ]
+}
