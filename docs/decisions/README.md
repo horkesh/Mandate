@@ -109,7 +109,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0103](0103-the-press-carries-received-stories-into-the-seat-view.md) | The press carries received stories into the seat view | accepted |
 | [0104](0104-the-opening-of-the-war-follows-its-causes-and-its-news.md) | The opening of the war follows its causes and its news | accepted |
 | [0105](0105-1as-first-calibration-round-continue-or-park.md) | 1A's first calibration round: continue or park | accepted |
-| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107 |
+| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107, 0115 |
 | [0107](0107-the-sprint-continues-on-codexs-renewed-allowance.md) | The sprint continues on Codex's renewed allowance | accepted |
 | [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted |
 | [0109](0109-two-pushback-floor-cases-belong-to-other-mechanisms.md) | Two pushback floor cases belong to other mechanisms | accepted |
@@ -118,3 +118,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0112](0112-the-pushback-registers-and-what-1a-requires.md) | The pushback registers, and what 1A requires of them | accepted |
 | [0113](0113-a-judgment-without-evidence-adds-no-term.md) | A judgment nobody has evidence for adds no term to a response | accepted |
 | [0114](0114-commanders-propose-and-orders-carry-discretion.md) | A commander may propose another goal, and a goal may carry conditional discretion | accepted |
+| [0115](0115-the-tick-budget-is-measured-on-its-own.md) | The tick budget is measured on its own | accepted |
