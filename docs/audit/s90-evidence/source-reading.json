@@ -1,0 +1,98 @@
+{
+  "reading": {
+    "read": [
+      {
+        "file": "OR-I-I-pp449-451.txt",
+        "sha256": "cc5873d06991c0c8e8d2516eb05ebd8abcd1ae1a759afc7165c8fa98135e0769",
+        "bytes": 7220
+      },
+      {
+        "file": "OR-I-II-p473.json",
+        "sha256": "a9fd03cf09a0007e34bfe831088c6b1047814aaf8bc14297c5fbbe5cfb0af78f",
+        "bytes": 6253
+      },
+      {
+        "file": "OR-I-II-p478.txt",
+        "sha256": "79bacb1af1b96a6760bb758ea3e882b4c180a2370f584882ac93f5637602799d",
+        "bytes": 4093
+      },
+      {
+        "file": "OR-I-II-p980.json",
+        "sha256": "36e81739aabeb58e37528899548049e6e38b93208856a869a8579d956efe7b68",
+        "bytes": 4466
+      },
+      {
+        "file": "OR-I-II-p981.json",
+        "sha256": "192689585a2401a90ad0d3bf70b0dfad265de3219460a32995c330c7ca99f0f1",
+        "bytes": 4636
+      },
+      {
+        "file": "OR-I-II-p982.json",
+        "sha256": "91697f29474b1d227dfb8fc7ea19375de8f397827bd2cfa8e756a34d65b631b5",
+        "bytes": 4991
+      },
+      {
+        "file": "OR-I-II-pp844-845.txt",
+        "sha256": "84215ab8061e71c83b0f6f73027a1acfc722a2f8304eba3f882d9e7fbc3da1e3",
+        "bytes": 4121
+      },
+      {
+        "file": "OR-I-II-pp977-979.txt",
+        "sha256": "54a549b433c59897632692e5d74b2afca30678ae1f18e8e0e89b5286a0697909",
+        "bytes": 11501
+      }
+    ],
+    "rejected": [
+      "OSU OR IV-I pp.169-170 did not contain the expected Cooper locator; no Cooper assertion derived there",
+      "S84 warofrebellion02unit_djvu.txt p.844 is Union correspondence for 1862, not OR I-II; excluded",
+      "HTTP OSU retrievals 403; no content used",
+      "Firecrawl credits exhausted; no content inferred from failed calls"
+    ],
+    "local_books": [
+      {
+        "path": "C:/Pyrrhic/mandate-research-sources/S1/OR-I-1.txt",
+        "pages": "449-451",
+        "sha256": "3021eef1063df4ff3854ae416926e21ab294c5f7245a6ff1fcd9fe310c008893"
+      },
+      {
+        "path": "C:/Pyrrhic/mandate-research-sources/S46/OR-I-2.txt",
+        "pages": "844-845,977-979",
+        "sha256": "66d9a89b843925389e1d2d5d9798dc4e0c66f9a0488bbfcc8705659e4b37ebbf"
+      }
+    ]
+  },
+  "acceptedRecount": "0111 copied as the lead's accepted authority, not a claim to have repeated S87's underlying readings.",
+  "claims": [
+    {
+      "source": "OR I-I",
+      "pages": "449-451",
+      "method": "retained primary-book text",
+      "finding": "Deas acts for the Secretary earlier; Cooper signs the March19 Bragg correspondence as Adjutant-General. March19 is evidence in office, not an inferred formal appointment date."
+    },
+    {
+      "source": "OR I-II",
+      "pages": "473,478",
+      "urls": [
+        "https://ehistory.osu.edu/books/official-records/002/0473",
+        "https://ehistory.osu.edu/books/official-records/002/0478"
+      ],
+      "finding": "Johnston reports the July18 receipt, discretion and march via Ashby's Gap/Piedmont, with infantry taking rail. The corrected copy of Cooper's July17 telegram gives discretion over practicability, sick/baggage and arrangements."
+    },
+    {
+      "source": "OR I-II",
+      "pages": "844-845",
+      "method": "retained primary-book text",
+      "finding": "The May15 assignment is issued through Cooper, with the War Secretary directing the route via Lynchburg. War Department affiliation is retained; the new parent is explicitly an operational representation."
+    },
+    {
+      "source": "OR I-II",
+      "pages": "978-982",
+      "urls": [
+        "https://ehistory.osu.edu/books/official-records/002/0980",
+        "https://ehistory.osu.edu/books/official-records/002/0981",
+        "https://ehistory.osu.edu/books/official-records/002/0982"
+      ],
+      "finding": "The July sample contains Davis's own notes, Cooper's directions to field commanders, and Lee/Deas staff correspondence. It supports the specified channel, not an exclusive claim about every Confederate order."
+    }
+  ]
+}

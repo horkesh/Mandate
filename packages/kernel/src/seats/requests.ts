@@ -327,6 +327,15 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     reviews: reviewsFor(state, f.principal),
     awaiting,
     goalDefaults: { risk: d.risk, deadlineDays: d.deadlineDays, rail: d.rail, river: d.river, sea: d.sea, neutral: d.neutral, awaitWord: d.awaitWord, approveAsDrafted: d.approveAsDrafted },
+    sentGoals: (knowledgeOf(state, seatIdFor(f.principal)).knownSentOrders ?? []).flatMap(s => {
+      const g = s.sentGoal;
+      if (s.sentKind !== 'goal' || s.sentDay > state.stateDay || g === undefined) return [];
+      return [{ post: s.sentPost, message: s.sentMessage, goal: {
+        objective: g.goalObjective, posture: g.goalPosture, risk: g.goalRisk, deadlineDays: g.goalDeadlineDays,
+        rail: g.goalRail, river: g.goalRiver, sea: g.goalSea, neutral: g.goalNeutral,
+        committed: [...g.goalCommitted], awaitWord: g.goalAwaitWord, approveAsDrafted: g.goalApproveAsDrafted,
+      } }];
+    }),
   };
 }
 

@@ -445,7 +445,10 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
       try { parseIsoDate(a.onDate); } catch { problems.push(`${here}.onDate: a full calendar date is required`); }
       if (!a.source.trim()) problems.push(`${here}.source: the appointment must cite its record`);
       const person = map.world.people.find((p) => p.id === a.person);
-      if (person === undefined || person.faction !== r.faction || factions.get(r.faction)?.principal === a.person) problems.push(`${here}.person: an own-side person other than the principal is required`);
+      // A later office may be filled after a declared change of service. The runtime
+      // still waits for the principal's received eligibility; this validates a possible
+      // appointment, without changing the person's opening side or forcing his choice.
+      if (person === undefined || (person.faction !== r.faction && person.service?.toFaction !== r.faction) || factions.get(r.faction)?.principal === a.person) problems.push(`${here}.person: an own-side person or declared service entrant other than the principal is required`);
       const post = posts.get(a.post);
       if (post !== undefined) onSide(a.post, `appointments[${j}].post`);
       else {

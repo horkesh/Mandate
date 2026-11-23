@@ -1,0 +1,22 @@
+{
+  "record": {
+    "key": "union-1861, war by decision, 148 days/messages.special_messenger",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires messages.special_messenger 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#messages.special_messenger."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+    },
+    "observed": 0,
+    "cause": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live.",
+    "evidence": "docs/audit/s90-evidence/liveness-ruling.json#specialMessenger"
+  },
+  "driver": {
+    "test": "packages/kernel/test/seats-orders.test.ts",
+    "needle": "goes around the chain by special messenger"
+  }
+}

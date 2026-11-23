@@ -1,0 +1,1223 @@
+{
+  "status": "BLOCKED; no liveness band or guard changed",
+  "problems": [
+    {
+      "mechanic": "messages.special_messenger",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires messages.special_messenger 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#messages.special_messenger."
+      }
+    },
+    {
+      "mechanic": "orders.relayed",
+      "problem": "too_frequent",
+      "fires": 9,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      }
+    }
+  ],
+  "relayEvents": {
+    "before": [
+      {
+        "day": 60,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -26,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 60,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -26,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 60,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -26,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 112,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -14,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 112,
+        "event": {
+          "event": "relayed",
+          "person": "scott_winfield",
+          "post": "us_general_in_chief",
+          "message": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 200,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 34,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 133,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+          "terms": [
+            {
+              "termKind": "relay_hold",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 2,
+              "termRule": "slow_walk"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -66,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 140,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_hold",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 2,
+              "termRule": "slow_walk"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -14,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -45,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 142,
+        "event": {
+          "event": "relayed",
+          "person": "scott_winfield",
+          "post": "us_general_in_chief",
+          "message": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 200,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 34,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": -60,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": -33,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      }
+    ],
+    "after": [
+      {
+        "day": 60,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -26,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 60,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -26,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 60,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -26,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 112,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -14,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 112,
+        "event": {
+          "event": "relayed",
+          "person": "scott_winfield",
+          "post": "us_general_in_chief",
+          "message": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 200,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 34,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 133,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+          "terms": [
+            {
+              "termKind": "relay_hold",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 2,
+              "termRule": "slow_walk"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -66,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 140,
+        "event": {
+          "event": "relayed",
+          "person": "cameron_simon",
+          "post": "us_secretary_war",
+          "message": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_hold",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 2,
+              "termRule": "slow_walk"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -14,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 50,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cameron_simon",
+              "termPost": "us_secretary_war",
+              "termRegion": null,
+              "termValue": -45,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 142,
+        "event": {
+          "event": "relayed",
+          "person": "scott_winfield",
+          "post": "us_general_in_chief",
+          "message": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 200,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 34,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": -60,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "scott_winfield",
+              "termPost": "us_general_in_chief",
+              "termRegion": null,
+              "termValue": -33,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      },
+      {
+        "day": 142,
+        "event": {
+          "event": "relayed",
+          "person": "cooper_samuel",
+          "post": "cs_war_adjutant_inspector_general",
+          "message": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "terms": [
+            {
+              "termKind": "relay_hold",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 2,
+              "termRule": "slow_walk"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": -53,
+              "termRule": "temperament"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 32,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "messengerDriver": {
+    "test": "packages/kernel/test/seats-orders.test.ts",
+    "needle": "goes around the chain by special messenger",
+    "exit": 0
+  },
+  "requestedRuling": "Review the source-caused disappearance of the old junction bypass, and the added Cooper forwarding act. If accepted, authorize a new causal quiet transition with the independent driver and a causal around(9) record for relays. This packet proposes that ruling; it applies neither change and does not extend the immutable quiet guard.",
+  "rejected": [
+    "Manufacture a messenger trip",
+    "Tune Cooper/Johnston or a refusal to obtain the old count",
+    "Change historical pushback bands or scorer",
+    "Bypass the hook",
+    "Run an unchanged expensive retry"
+  ],
+  "outsideScope": "The existing generic applyScheduledChanges helper is not invoked by the tick. The exploratory general invocation was removed byte-for-byte after it was shown to affect a testbed schedule. S90 uses the ordinary operational-parent link and adds no schedule."
+}

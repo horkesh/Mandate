@@ -32,7 +32,10 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
       // live driver. Bind this single observed transition in full, including
       // its cause/evidence; the immutable inherited baseline is not extended.
       const s82Quiet = fingerprint(r) === '460fa0bdf3671c01fc64013cacdff7506424d57b4054839352b064c5374b6fc9';
-      if (!inherited && !s82Quiet) {
+      // S90 continuation ruling 4 authorizes only the exact messenger return
+      // to quiet, with its named independent driver and retained event evidence.
+      const s90Quiet = fingerprint(r) === '8ba5f6d556f19e7141ca66023f8dbb2b3b257debb6a27a6af2c221a5ccd78dfc';
+      if (!inherited && !s82Quiet && !s90Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

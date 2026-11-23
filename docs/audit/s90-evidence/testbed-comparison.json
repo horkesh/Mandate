@@ -1,0 +1,41 @@
+{
+  "pack": "testbed",
+  "baseline": "117b8ac8b9c8644b83091149a7fdd3bda34b6277",
+  "hashes": [],
+  "counters": [],
+  "initial": [],
+  "final": [],
+  "functionalSummary": [],
+  "changedFinalRoots": [],
+  "criteriaBefore": {
+    "liveness": [],
+    "checkpoints": null,
+    "pushback": null,
+    "operation": null,
+    "unknownStrength": {
+      "problems": [],
+      "evidence": [
+        "testbed: 4 battles, 4 battle-days read"
+      ]
+    }
+  },
+  "criteriaAfter": {
+    "liveness": [],
+    "checkpoints": null,
+    "pushback": null,
+    "operation": null,
+    "unknownStrength": {
+      "problems": [],
+      "evidence": [
+        "testbed: 4 battles, 4 battle-days read"
+      ]
+    }
+  },
+  "timing": {
+    "unit": "ms",
+    "days": 120,
+    "median": 4.21530000000007,
+    "p95": 8.223600000000033,
+    "max": 38.4430000000001
+  }
+}

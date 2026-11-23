@@ -187,7 +187,11 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       if (target === undefined || target.relays.length === 0 || answered.has(target.post)) continue;
       const region = memo.claims.find((c) => c.kind === 'order-objected')?.region ?? null;
       if (region === null) continue;
-      send({ cmd: 'order', to: target.post, goal: takeGoal(menu, region), route: routeTo(target.post, true), bypass: true });
+      const copy = menu.sentGoals?.find(s => s.post === target.post && s.message === memo.answers);
+      // A late objection to a superseded letter cannot replace the newer goal.
+      // Older menus lacked sender copies; keep their legacy objective-only fallback.
+      if (menu.sentGoals !== undefined && copy === undefined) continue;
+      send({ cmd: 'order', to: target.post, goal: copy?.goal ?? takeGoal(menu, region), route: routeTo(target.post, true), bypass: true });
     }
   }
   // The history driver alone is offered sourced appointments due today. These use the same letter and compliance

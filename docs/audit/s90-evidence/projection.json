@@ -1,0 +1,38 @@
+{
+  "updates": [
+    {
+      "symbol": "principalMenu",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "54b5f1d3c707c1a39fe50ca47f14dd4d8a3858b1b25bd6a4f9e24d0bd00b0776",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "93332b766d5f813a8d1fce472bd4bc19691c1838cf74c77b366d42f32af24edc",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+      },
+      "protectedReadersExact": true
+    },
+    {
+      "symbol": "pendingRequests",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "44d42601a3fe36238770c762d20e3d652d51601bdfcae657caf19e3ff6353385",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "687dd1d8ab7538b6f72482f678409e12bfa9834f2d7eb1547a3d45316f8e9e0d",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "protectedReadersExact": true
+    }
+  ]
+}

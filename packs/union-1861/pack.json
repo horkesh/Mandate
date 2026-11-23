@@ -1131,7 +1131,8 @@
               "objective": "manassas",
               "fromDate": "1861-07-17",
               "requiresNotice": "manassas_advance_received",
-              "source": "OR I-2 pp.473,980-982: Cooper telegram of 17 July and Johnston acknowledgement of 18 July. [I] Upon receipt of the caused advance notice, the principal issues an ordinary goal to Johnston; commander compliance, planning and movement determine whether and when he joins. No arrival, battle or outcome is scripted."
+              "source": "OR I-II p.478, Cooper telegram, Richmond to Johnston at Winchester, July 17: reinforce Beauregard if practicable, with discretion over the sick, baggage and arrangements; pp.473,982, Johnston's receipt and decision to assist, retaining the sick at Winchester for lack of transport. [I] The existing relieve goal asks him to reach and hold in support of Beauregard, not take Manassas. The unchanged approve-as-drafted grammar leaves practicability and arrangements to his compliance and plan, including the holding candidate. The grammar has no separate sick/baggage evacuation directive; no sick headcount, Culpeper movement, forced junction or arrival is invented. Only a received advance notice enables the order; the source date never dispatches it by itself.",
+              "posture": "relieve"
             }
           ],
           "inquireEveryDays": 7,
@@ -1144,6 +1145,12 @@
             ]
           },
           "appointments": [
+            {
+              "post": "cs_war_adjutant_inspector_general",
+              "person": "cooper_samuel",
+              "source": "OR I-I p.451, Cooper to Bragg, War Department, March 19, signed Adjutant-General; pp.449-451 distinguish Deas acting earlier. OR I-II pp.478,980-982 show Cooper issuing the July field orders. [I] March 19 is the earliest service evidence used here, not a claimed appointment date. Ordinary appointment dispatch, received service eligibility, attention and delivery open the named office; the March 5 holder remains unknown. No traits, rank, strength or arrival is supplied.",
+              "onDate": "1861-03-19"
+            },
             {
               "post": "cs_cmd_harpers_ferry",
               "person": "johnston_joseph_e",
@@ -2428,6 +2435,13 @@
         "name": "post_kind.bureau",
         "creatable": "start_only",
         "temporary": false
+      },
+      {
+        "id": "staff_office",
+        "name": "post_kind.staff_office",
+        "creatable": "start_only",
+        "temporary": false,
+        "role": "office"
       },
       {
         "id": "general_in_chief",

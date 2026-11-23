@@ -204,6 +204,8 @@ export interface PrincipalMenu {
   readonly awaiting: readonly PostId[];
   /** The goal terms the pack gives an order that names only an objective and a posture (`WorldRules.plans.goalDefaults`). */
   readonly goalDefaults: Omit<GoalTerms, 'objective' | 'posture' | 'committed'>;
+  /** Copies of his own sent goals, keyed by the letter a relay's answer names. Never a live commander's plan. */
+  readonly sentGoals?: readonly { readonly post: PostId; readonly message: MessageId; readonly goal: GoalTerms }[];
 }
 
 /** A holder deciding a situation handed to him: the same options as the principal (0040, gate B7). */

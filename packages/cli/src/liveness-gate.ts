@@ -277,14 +277,14 @@ const UNION_BANDS: Record<string, GateBand> = {
   'messages.mail_delay': around(2703), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
   'messages.delivered': around(11226), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
   'messages.sent': around(11894), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
-  'messages.special_messenger': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires messages.special_messenger 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#messages.special_messenger." },
+  'messages.special_messenger': quiet("S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."),
   'orders.bypassed': around(4),
   'movement.arrived': around(638), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
   'movement.leg_started': around(310), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
   'orders.obeyed': around(3),
   'orders.relay_held': around(1),
   'orders.relay_objected': around(3),
-  'orders.relayed': around(4), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
+  'orders.relayed': around(9), // S90 continuation ruling 4: Cooper forwards the junction letter; eight existing relays remain.
   'plans.goal_reached': around(2), // S1 national [I]: the integrated sourced build changes this existing counter through its normal owner.
   'politics.adjourned': around(1),
   'politics.front_page': around(63),

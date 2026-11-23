@@ -1,0 +1,66 @@
+{
+  "baseline": "117b8ac8b9c8644b83091149a7fdd3bda34b6277",
+  "head": "810380fbd5cc47fc787b0276f7c4a0388d059c31",
+  "branch": "sprint/july",
+  "startingTrackedPaths": 2268,
+  "allStartingPathsPresent": true,
+  "originalChangedPaths": [
+    "docs/decisions/0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+    "docs/decisions/README.md",
+    "packages/kernel/src/seats/api.ts",
+    "packages/kernel/src/seats/requests.ts",
+    "packages/kernel/src/seats/world.ts",
+    "packages/rule-seats/src/index.ts",
+    "packages/rule-seats/test/rule-seats.test.ts",
+    "packs/union-1861/checkpoints.json",
+    "packs/union-1861/data/scenarios/march_1861.json",
+    "packs/union-1861/data/world.json",
+    "packs/union-1861/pack.json",
+    "packs/union-1861/situations/manassas_advance_received.json",
+    "packs/union-1861/source/scenarios/march_1861/posts.csv",
+    "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+    "packs/union-1861/strings/en.json",
+    "packs/union-1861/test/s77-concentration.test.ts",
+    "packs/union-1861/test/world-v2.test.ts",
+    "tools/rules/projection-derivations.json"
+  ],
+  "allOtherOriginalBytesExact": true,
+  "signedFiles": 29,
+  "allSignedBytesExact": true,
+  "retainedRunFiles": 2434,
+  "retainedRunEvidenceByteExact": true,
+  "physicalRulesTraitsAndAssemblyExact": true,
+  "onlyTrimsBandChanged": true,
+  "sourcePeopleRegimentsAndGraphExact": true,
+  "workspaceKernel": "C:\\Pyrrhic\\sprint-july\\packages\\kernel",
+  "node": "v22.23.2",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "packageBuilt": false,
+  "browserOrDesktopUsed": false,
+  "manifests": [
+    {
+      "path": "package.json",
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9"
+    },
+    {
+      "path": "packages/cli/package.json",
+      "sha256": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0"
+    },
+    {
+      "path": "packages/kernel/package.json",
+      "sha256": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f"
+    },
+    {
+      "path": "packages/pack-format/package.json",
+      "sha256": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33"
+    },
+    {
+      "path": "packages/rule-seats/package.json",
+      "sha256": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8"
+    }
+  ]
+}

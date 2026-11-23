@@ -257,6 +257,20 @@ describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)
     expect(quiet(principalOrders(menu, [memo(4, 'far')], 5, { openingDay: 1, goAroundObjections: false }))).toEqual([]);
   });
 
+  it('retries the stored relief goal unchanged, including its discretionary and transport terms', () => {
+    const goal: GoalTerms = { ...take('r5'), posture:'relieve', risk:200, deadlineDays:11,
+      rail:false, river:true, sea:true, neutral:true, committed:[ids.toId('forceBlock','chosen')], awaitWord:true, approveAsDrafted:false };
+    const m = {...menu,sentGoals:[{post:post('far'),message:ids.toId('message','m.1.order'),goal}]};
+    expect(quiet(principalOrders(m,[memo(4,'far')],5))).toEqual([
+      {cmd:'order',to:post('far'),goal,route:'special-messenger',bypass:true},
+    ]);
+  });
+
+  it('does not invent a fresh goal for an objection to a superseded letter', () => {
+    const m = {...menu,sentGoals:[{post:post('far'),message:ids.toId('message','m.3.replacement'),goal:take('r9')}]};
+    expect(quiet(principalOrders(m,[memo(4,'far')],5))).toEqual([]);
+  });
+
   it('uses the wire for a bypass when it beats the messenger, including approvals and the word to go', () => {
     const wired = { ...menu, commandable: menu.commandable.map((c) => ({ ...c, routes: [...c.routes, { route: 'wire' as const, typicalDays: 0, price: 0 }] })) };
     expect(quiet(principalOrders(wired, [memo(4, 'far')], 5))).toEqual([{ cmd: 'order', to: post('far'), goal: take('r5'), route: 'wire', bypass: true }]);

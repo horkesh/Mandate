@@ -1,0 +1,147 @@
+{
+  "dataCommit": "810380fbd5cc47fc787b0276f7c4a0388d059c31",
+  "dataHookInitial": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s90/data-commit-message.txt"
+    ],
+    "exit": 1,
+    "seconds": 784.509
+  },
+  "dataHookCorrected": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s90/data-commit-message.txt"
+    ],
+    "exit": 0,
+    "seconds": 851.137
+  },
+  "chainHook": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s90/chain-commit-message.txt"
+    ],
+    "exit": 1,
+    "seconds": 716.514
+  },
+  "finalFocused": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s90-dated-office.test.ts",
+      "packs/union-1861/test/s90-junction-chain.test.ts",
+      "packs/union-1861/test/s90-junction-order.test.ts",
+      "packs/union-1861/test/world-v2.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 9.043
+  },
+  "retryProjection": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s90-junction-order.test.ts",
+      "packages/rule-seats/test/rule-seats.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/planner-input.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 5.89
+  },
+  "typecheck": {
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.989
+  },
+  "rules": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.427
+  },
+  "boundary": {
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.172
+  },
+  "packFresh": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.605
+  },
+  "testbedReference": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s90/references.ts",
+      "testbed",
+      "final"
+    ],
+    "exit": 0,
+    "seconds": 8.866
+  },
+  "initialHistoryReference": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s90/references.ts",
+      "union-1861",
+      "final"
+    ],
+    "exit": 0,
+    "seconds": 76.294
+  },
+  "correctedHistoryReference": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s90/references.ts",
+      "union-1861",
+      "corrected"
+    ],
+    "exit": 0,
+    "seconds": 72.107
+  },
+  "expensiveRunAccounting": "No standalone duplicate full suite. Three actual hooks: data rejected, corrected data passed, chain rejected. One testbed reference; initial history exposed an address defect and one affected history correction followed cheap diagnosis/verification. No full-suite/hook retry after the confirmed two liveness failures.",
+  "requiredUnmet": [
+    "Passing full hook for remaining build",
+    "Remaining commit(s)",
+    "Post-commit --milestone 1a done check"
+  ],
+  "doneCheck": {
+    "runs": 0,
+    "reason": "Final commit is blocked by confirmed live-band failures. The requested done check follows passing-hook commits; no post-commit clearance is invented."
+  }
+}

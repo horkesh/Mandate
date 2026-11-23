@@ -1,0 +1,44 @@
+{
+  "reusedReference": "runs/s90/final/references/testbed-*",
+  "runtimeInputFiles": 274,
+  "runtimeInputsByteExact": true,
+  "cause": "The attempted general schedule invocation is removed byte-for-byte. All package runtime source, testbed pack inputs and lock/manifests are exact to the original successful reference. Only the other pack's office representation changed. No affected testbed reference is repeated; its complete functional evidence is reused. The dormant generic schedule is disclosed outside S90, not declared fixed.",
+  "files": [
+    {
+      "path": "runs/s90/final/references/testbed-criteria.json",
+      "sha256": "ac55558c5bf8e0616d4e919277e652ccb96bc71f48ed7dbaf93998cc0bf284d8"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-decisions.json",
+      "sha256": "458b5bc63686cdce0a8965de616fdcbb06a32be3f6237583fe73c0d9f38cf705"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-final-state.json",
+      "sha256": "8eca51017532c54e0b836d5f0b015ec6b63d7d958ed854e245533b53facca2b0"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-initial-state.json",
+      "sha256": "8fa467bbcd09a6a2f63a4db981f8a675b39a5574dd7ea6b0382fbbd11b98fdbc"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-july-events.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-observations.json",
+      "sha256": "e61b41c070c4602294291f4ddbda168ceaabfca8f9d037be48530c98fa07c8c9"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-save-day40.json",
+      "sha256": "9c8ea72a3b3462ea731246a29f1070d6b0ac5373e586138ce90a9a22612ea5c7"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-summary.json",
+      "sha256": "9a4f69d555a1260c89a2b56609f26055e931607a860bed258bb7eba2fcd808ef"
+    },
+    {
+      "path": "runs/s90/final/references/testbed-trace.json",
+      "sha256": "e444ae974e6c1d02259fd8e67f04486cad98c916d07865063e5374fe08956148"
+    }
+  ]
+}

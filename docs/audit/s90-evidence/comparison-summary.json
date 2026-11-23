@@ -1,0 +1,158 @@
+[
+  {
+    "pack": "testbed",
+    "hashChanges": 0,
+    "counterChanges": 0,
+    "initialChanges": 0,
+    "finalChanges": 0,
+    "functionalSummaryChanges": 0,
+    "changedFinalRoots": [],
+    "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "criteria": {
+      "liveness": [],
+      "checkpoints": null,
+      "pushback": null,
+      "operation": null,
+      "unknownStrength": {
+        "problems": [],
+        "evidence": [
+          "testbed: 4 battles, 4 battle-days read"
+        ]
+      }
+    },
+    "timing": {
+      "unit": "ms",
+      "days": 120,
+      "median": 4.21530000000007,
+      "p95": 8.223600000000033,
+      "max": 38.4430000000001
+    }
+  },
+  {
+    "pack": "union-1861",
+    "hashChanges": 148,
+    "counterChanges": 23,
+    "initialChanges": 2,
+    "finalChanges": 6123,
+    "functionalSummaryChanges": 258,
+    "changedFinalRoots": [
+      "knowledgeBySeat",
+      "messagesInTransit",
+      "operationRecords",
+      "orderResponses",
+      "personGrievances",
+      "planRecords",
+      "postStates",
+      "reportTruth",
+      "situationStates"
+    ],
+    "finalHash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "criteria": {
+      "liveness": [
+        {
+          "mechanic": "messages.special_messenger",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 1,
+            "maxFires": 4,
+            "why": "S82 ruling 2: the accepted sourced command/concentration path fires messages.special_messenger 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#messages.special_messenger."
+          }
+        },
+        {
+          "mechanic": "orders.relayed",
+          "problem": "too_frequent",
+          "fires": 9,
+          "band": {
+            "minFires": 2,
+            "maxFires": 8
+          }
+        }
+      ],
+      "checkpoints": {
+        "problems": [
+          "men_confederate (1861-07-31, day 148): confederate has 86894 men, below 100000"
+        ],
+        "evidence": [
+          "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+          "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+          "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+          "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+          "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+          "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+          "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+          "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+          "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+          "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+          "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+          "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+          "men_union (1861-07-31, day 148): union 95255 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+          "men_confederate (1861-07-31, day 148): confederate 86894 men of known strength, 22 blocks of unknown strength (band 100000..200000)",
+          "operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+          "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+          "confederate at war since day 36",
+          "union at war since day 41"
+        ]
+      },
+      "pushback": {
+        "problems": [
+          "compliance with reservations: 16, above 9",
+          "slow walks: 18, above 9"
+        ],
+        "evidence": [
+          "relay objections: 2 (band 0..6)",
+          "relay holds: 3 (band 1..4)",
+          "filter holds: 0 (band 0..6)",
+          "trims: 0 (band 0..3)",
+          "compliance with reservations: 16 (band 1..9)",
+          "slow walks: 18 (band 2..9)",
+          "objections to a plan: 38 (band 10..42)"
+        ]
+      },
+      "operation": {
+        "problems": [],
+        "evidence": [
+          "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+          "op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:142"
+        ]
+      },
+      "unknownStrength": {
+        "problems": [
+          "union-1861: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+        ],
+        "evidence": [
+          "union-1861: 4 battles, 5 battle-days read"
+        ]
+      }
+    },
+    "timing": {
+      "unit": "ms",
+      "days": 148,
+      "median": 54.41250000000218,
+      "p95": 110.45240000000194,
+      "max": 187.2403000000004
+    }
+  }
+]

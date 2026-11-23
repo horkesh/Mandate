@@ -1491,5 +1491,35 @@
     "observed": 1,
     "cause": "S82 ruling 2: Beauregard is wounded in the actual 28 July Manassas battle, vacating his command; its ordinary commander-loss report is generated. Robert Anderson remains a distinct person.",
     "evidence": "docs/audit/s82-evidence/liveness-review.json#reports.commander_lost"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.special_messenger",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires messages.special_messenger 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#messages.special_messenger."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+    },
+    "observed": 0,
+    "cause": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live.",
+    "evidence": "docs/audit/s90-evidence/liveness-ruling.json#specialMessenger"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.relayed",
+    "before": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "after": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "observed": 9,
+    "cause": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted operational channel adds Cooper forwarding Davis's junction letter on day142, message m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry. The eight existing Cameron/Scott relays remain; recentre only this reference band with around(9).",
+    "evidence": "docs/audit/s90-evidence/liveness-ruling.json#ordersRelayed"
   }
 ]

@@ -126,8 +126,8 @@ describe('Union 1861 world v2', () => {
   it('has a private-secretary post held by Nicolay, with no engine role, from the Executive Journal and the Times (verification lane; lead ruling 2026-11-15)', () => {
     // role is null on purpose: a role-filter post sits on the wire (0040 leaves the March telegraph filter empty); caller-screening is a Phase 1 item.
     expect(world.vocabularies.postKinds.find((k) => k.id === 'private_secretary')?.role ?? null).toBeNull();
-    // S71 declares the institutional cabinet role; no filter or intelligence role is introduced.
-    expect(world.vocabularies.postKinds.filter((k) => k.role !== null).map(k => ({ id: k.id, role: k.role }))).toEqual([{ id: 'cabinet', role: 'office' }]);
+    // S71's cabinet and S90's one staff office stay with the government; neither is a filter or intelligence role.
+    expect(world.vocabularies.postKinds.filter((k) => k.role !== null).map(k => ({ id: k.id, role: k.role }))).toEqual([{ id: 'cabinet', role: 'office' }, { id: 'staff_office', role: 'office' }]);
     const post = start.posts.find((p) => p.id === 'us_president_secretary')!;
     expect(post.holder).toBe('nicolay_john_g');
     expect(post.intelligenceChief ?? null).toBeNull();

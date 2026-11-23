@@ -1,0 +1,3097 @@
+{
+  "before": {
+    "rows": [
+      {
+        "day": 140,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [],
+        "notices": [
+          {
+            "id": "manassas_advance_received",
+            "before": null,
+            "after": {
+              "sitStatus": "noticed",
+              "sitFiredDay": 140,
+              "sitSurfacedDay": null,
+              "sitOpenOptions": [],
+              "sitResurfaced": [],
+              "sitDecidedDay": null,
+              "sitChosen": [],
+              "sitDecidedBy": null,
+              "sitDelegate": null,
+              "sitWaitingOn": null,
+              "sitStaffAuthor": "walker_leroy_p"
+            }
+          }
+        ]
+      },
+      {
+        "day": 141,
+        "responses": [],
+        "received": [
+          {
+            "seat": "seat:davis_jefferson",
+            "paper": {
+              "id": "m.140.walker_leroy_p.davis_jefferson.notice.manassas_advance_received",
+              "knownReceivedDay": 141,
+              "knownRoute": "wire",
+              "knownVia": [],
+              "knownBody": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "walker_leroy_p",
+                "reportAuthorPost": "cs_secretary_war",
+                "reportSubjectKind": "situation",
+                "reportSubjectId": "manassas_advance_received",
+                "reportClaims": [],
+                "reportDay": 140,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": null
+              }
+            }
+          }
+        ],
+        "plans": [],
+        "operations": [],
+        "transit": [],
+        "notices": [
+          {
+            "id": "manassas_advance_received",
+            "before": {
+              "sitStatus": "noticed",
+              "sitFiredDay": 140,
+              "sitSurfacedDay": null,
+              "sitOpenOptions": [],
+              "sitResurfaced": [],
+              "sitDecidedDay": null,
+              "sitChosen": [],
+              "sitDecidedBy": null,
+              "sitDelegate": null,
+              "sitWaitingOn": null,
+              "sitStaffAuthor": "walker_leroy_p"
+            },
+            "after": {
+              "sitStatus": "noticed",
+              "sitFiredDay": 140,
+              "sitSurfacedDay": 141,
+              "sitOpenOptions": [],
+              "sitResurfaced": [],
+              "sitDecidedDay": null,
+              "sitChosen": [],
+              "sitDecidedBy": null,
+              "sitDelegate": null,
+              "sitWaitingOn": null,
+              "sitStaffAuthor": "walker_leroy_p"
+            }
+          }
+        ]
+      },
+      {
+        "day": 142,
+        "responses": [
+          {
+            "id": "m.142.davis_jefferson.walker_leroy_p.order.cs_cmd_harpers_ferry|walker_leroy_p",
+            "before": null,
+            "after": {
+              "respOrder": "m.142.davis_jefferson.walker_leroy_p.order.cs_cmd_harpers_ferry",
+              "respPerson": "walker_leroy_p",
+              "respPost": "cs_secretary_war",
+              "respRole": "relay",
+              "respKind": "goal",
+              "respDay": 142,
+              "respActual": "object",
+              "respDeclared": "object",
+              "respWillingness": -164,
+              "respTerms": [
+                {
+                  "respTermName": "values",
+                  "respTermAmount": -200
+                },
+                {
+                  "respTermName": "temperament",
+                  "respTermAmount": -105
+                },
+                {
+                  "respTermName": "regard",
+                  "respTermAmount": 90
+                },
+                {
+                  "respTermName": "deterrence",
+                  "respTermAmount": 51
+                },
+                {
+                  "respTermName": "capacity",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "disposition",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "grievances",
+                  "respTermAmount": 0
+                }
+              ],
+              "respReasons": [
+                {
+                  "kind": "values_offended",
+                  "value": "caution"
+                },
+                {
+                  "kind": "trusts_leader"
+                }
+              ],
+              "respStated": [
+                {
+                  "kind": "values_offended",
+                  "value": "caution"
+                },
+                {
+                  "kind": "trusts_leader"
+                }
+              ],
+              "respConditions": []
+            }
+          }
+        ],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [],
+        "notices": []
+      },
+      {
+        "day": 143,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgFrom": "davis_jefferson",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "special-messenger",
+            "msgSentDay": 143,
+            "msgArriveDay": 146,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": true,
+              "orderIssuedDay": 143
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 144,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgFrom": "davis_jefferson",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "special-messenger",
+            "msgSentDay": 143,
+            "msgArriveDay": 146,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": true,
+              "orderIssuedDay": 143
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 145,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgFrom": "davis_jefferson",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "special-messenger",
+            "msgSentDay": 143,
+            "msgArriveDay": 146,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": true,
+              "orderIssuedDay": 143
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 146,
+        "responses": [
+          {
+            "id": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+            "before": null,
+            "after": {
+              "respOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+              "respPerson": "johnston_joseph_e",
+              "respPost": "cs_cmd_harpers_ferry",
+              "respRole": "addressee",
+              "respKind": "goal",
+              "respDay": 146,
+              "respActual": "object",
+              "respDeclared": "object",
+              "respWillingness": -224,
+              "respTerms": [
+                {
+                  "respTermName": "values",
+                  "respTermAmount": -200
+                },
+                {
+                  "respTermName": "temperament",
+                  "respTermAmount": -51
+                },
+                {
+                  "respTermName": "regard",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "deterrence",
+                  "respTermAmount": 27
+                },
+                {
+                  "respTermName": "capacity",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "disposition",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "grievances",
+                  "respTermAmount": 0
+                }
+              ],
+              "respReasons": [
+                {
+                  "kind": "values_offended",
+                  "value": "caution"
+                },
+                {
+                  "kind": "shielded_by_standing"
+                }
+              ],
+              "respStated": [
+                {
+                  "kind": "values_offended",
+                  "value": "caution"
+                },
+                {
+                  "kind": "shielded_by_standing"
+                }
+              ],
+              "respConditions": []
+            }
+          }
+        ],
+        "received": [],
+        "plans": [
+          {
+            "id": "cs_cmd_harpers_ferry",
+            "before": null,
+            "after": {
+              "planGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "planIssuer": "davis_jefferson",
+              "planViaChain": false,
+              "planSetDay": 146,
+              "planIssuedDay": 143,
+              "planOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+              "planResponse": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+              "planStatus": "choosing",
+              "planDraft": {
+                "draftCommander": "johnston_joseph_e",
+                "draftPost": "cs_cmd_harpers_ferry",
+                "draftFaction": "confederate",
+                "draftDay": 146,
+                "draftCandidates": [
+                  {
+                    "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+                    "candMethod": "direct",
+                    "candVariant": "least_cost",
+                    "candAxes": [
+                      {
+                        "axisName": "main",
+                        "axisPost": "cs_cmd_harpers_ferry",
+                        "axisMode": "land",
+                        "axisRoute": {
+                          "routeFrom": "harpers_ferry",
+                          "routeTo": "manassas",
+                          "routeLegs": [
+                            {
+                              "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                              "legFrom": "harpers_ferry",
+                              "legTo": "loudoun_fauquier",
+                              "legType": "road",
+                              "legDays": 4000,
+                              "legThreat": 4612,
+                              "legSupply": 0,
+                              "legObstacleDays": 0,
+                              "legObstacle": null,
+                              "legHeld": false
+                            },
+                            {
+                              "legEdge": "road:loudoun_fauquier:manassas",
+                              "legFrom": "loudoun_fauquier",
+                              "legTo": "manassas",
+                              "legType": "road",
+                              "legDays": 3000,
+                              "legThreat": 0,
+                              "legSupply": 0,
+                              "legObstacleDays": 0,
+                              "legObstacle": null,
+                              "legHeld": false
+                            }
+                          ],
+                          "routeCost": 11612,
+                          "routeDays": 7000
+                        },
+                        "axisBlocks": [
+                          "state-forces.cs_tn_infantry_tennessee",
+                          "raised.st_gov_georgia.d126.2",
+                          "raised.st_gov_georgia.d129",
+                          "state-forces.cs_tn_cavalry_tennessee",
+                          "state-forces.va_harpers_ferry"
+                        ],
+                        "axisStrength": 29000,
+                        "axisPhases": [
+                          {
+                            "phaseKind": "concentrate",
+                            "phaseStart": 0,
+                            "phaseDays": 4000,
+                            "phaseRegion": "harpers_ferry"
+                          },
+                          {
+                            "phaseKind": "march",
+                            "phaseStart": 4000,
+                            "phaseDays": 4000,
+                            "phaseRegion": "loudoun_fauquier"
+                          },
+                          {
+                            "phaseKind": "march",
+                            "phaseStart": 8000,
+                            "phaseDays": 3000,
+                            "phaseRegion": "manassas"
+                          }
+                        ],
+                        "axisArrival": 11000,
+                        "axisOutOfSupply": 0,
+                        "axisStoresDays": 0,
+                        "axisStoresAssumed": false
+                      }
+                    ],
+                    "candRequests": [],
+                    "candConditions": [],
+                    "candTerms": [
+                      {
+                        "contribTerm": "goal_fit",
+                        "contribAmount": 400,
+                        "contribWhy": "reaches manassas"
+                      },
+                      {
+                        "contribTerm": "force_ratio",
+                        "contribAmount": 300,
+                        "contribWhy": "ratio 10000 over his demand 1056"
+                      },
+                      {
+                        "contribTerm": "time",
+                        "contribAmount": 300,
+                        "contribWhy": "arrives 19000 permille days early"
+                      },
+                      {
+                        "contribTerm": "haste",
+                        "contribAmount": 0,
+                        "contribWhy": "concentrated as he wants"
+                      },
+                      {
+                        "contribTerm": "supply",
+                        "contribAmount": 0,
+                        "contribWhy": "0 permille days outside supply"
+                      },
+                      {
+                        "contribTerm": "exposure",
+                        "contribAmount": -172,
+                        "contribWhy": "6336 perceived men along the route"
+                      },
+                      {
+                        "contribTerm": "coordination",
+                        "contribAmount": 0,
+                        "contribWhy": "one axis"
+                      },
+                      {
+                        "contribTerm": "dependence",
+                        "contribAmount": 0,
+                        "contribWhy": "0 support request(s) to other holders"
+                      },
+                      {
+                        "contribTerm": "glory",
+                        "contribAmount": 94,
+                        "contribWhy": "his name on the objective"
+                      },
+                      {
+                        "contribTerm": "caution",
+                        "contribAmount": 0,
+                        "contribWhy": "commits the force"
+                      }
+                    ],
+                    "candScore": 922,
+                    "candPerceived": 0,
+                    "candRatio": 10000
+                  },
+                  {
+                    "id": "holding:hold:harpers_ferry",
+                    "candMethod": "holding",
+                    "candVariant": "hold",
+                    "candAxes": [
+                      {
+                        "axisName": "hold",
+                        "axisPost": "cs_cmd_harpers_ferry",
+                        "axisMode": "land",
+                        "axisRoute": {
+                          "routeFrom": "harpers_ferry",
+                          "routeTo": "harpers_ferry",
+                          "routeLegs": [],
+                          "routeCost": 0,
+                          "routeDays": 0
+                        },
+                        "axisBlocks": [
+                          "state-forces.cs_tn_infantry_tennessee",
+                          "raised.st_gov_georgia.d126.2",
+                          "raised.st_gov_georgia.d129",
+                          "state-forces.cs_tn_cavalry_tennessee",
+                          "state-forces.va_harpers_ferry"
+                        ],
+                        "axisStrength": 29000,
+                        "axisPhases": [
+                          {
+                            "phaseKind": "hold",
+                            "phaseStart": 0,
+                            "phaseDays": 30000,
+                            "phaseRegion": "harpers_ferry"
+                          }
+                        ],
+                        "axisArrival": 0,
+                        "axisOutOfSupply": 0,
+                        "axisStoresDays": 0,
+                        "axisStoresAssumed": false
+                      }
+                    ],
+                    "candRequests": [],
+                    "candConditions": [],
+                    "candTerms": [
+                      {
+                        "contribTerm": "goal_fit",
+                        "contribAmount": 0,
+                        "contribWhy": "does not move on the objective"
+                      },
+                      {
+                        "contribTerm": "time",
+                        "contribAmount": -300,
+                        "contribWhy": "the deadline passes with nothing attempted"
+                      },
+                      {
+                        "contribTerm": "caution",
+                        "contribAmount": 264,
+                        "contribWhy": "keeps the force whole"
+                      }
+                    ],
+                    "candScore": -36,
+                    "candPerceived": 0,
+                    "candRatio": 10000
+                  }
+                ],
+                "draftRejected": [
+                  {
+                    "rejMethod": "flank",
+                    "rejVariant": "penalty",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "alternative shares 1000 permille of the direct route"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "pincer",
+                    "rejVariant": "with_partner",
+                    "rejGates": [
+                      {
+                        "gateKind": "staging_not_adjacent",
+                        "gateHard": true,
+                        "gateDetail": "his own staging harpers_ferry is not beside manassas"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "pincer",
+                    "rejVariant": "two_axis",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "second route repeats the first"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "by_water",
+                    "rejVariant": "clear_first",
+                    "rejGates": [
+                      {
+                        "gateKind": "needs_permission",
+                        "gateHard": true,
+                        "gateDetail": "neither river nor sea is permitted"
+                      },
+                      {
+                        "gateKind": "no_carrier",
+                        "gateHard": true,
+                        "gateDetail": "no ship or boat to carry his troops"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "by_water",
+                    "rejVariant": "run_in",
+                    "rejGates": [
+                      {
+                        "gateKind": "needs_permission",
+                        "gateHard": true,
+                        "gateDetail": "neither river nor sea is permitted"
+                      },
+                      {
+                        "gateKind": "no_carrier",
+                        "gateHard": true,
+                        "gateDetail": "no ship or boat to carry his troops"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "supply_line",
+                    "rejVariant": "depot_steps",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "repeats direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+                      }
+                    ]
+                  }
+                ],
+                "draftSearches": 10,
+                "draftGenerated": 3,
+                "draftDeduplicated": 1
+              },
+              "planChosen": null,
+              "planApproved": null,
+              "planSubmitted": null,
+              "planCounters": [],
+              "planPending": null
+            }
+          }
+        ],
+        "operations": [],
+        "transit": [],
+        "notices": []
+      },
+      {
+        "day": 147,
+        "responses": [],
+        "received": [],
+        "plans": [
+          {
+            "id": "cs_cmd_harpers_ferry",
+            "before": {
+              "planGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "planIssuer": "davis_jefferson",
+              "planViaChain": false,
+              "planSetDay": 146,
+              "planIssuedDay": 143,
+              "planOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+              "planResponse": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+              "planStatus": "choosing",
+              "planDraft": {
+                "draftCommander": "johnston_joseph_e",
+                "draftPost": "cs_cmd_harpers_ferry",
+                "draftFaction": "confederate",
+                "draftDay": 146,
+                "draftCandidates": [
+                  {
+                    "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+                    "candMethod": "direct",
+                    "candVariant": "least_cost",
+                    "candAxes": [
+                      {
+                        "axisName": "main",
+                        "axisPost": "cs_cmd_harpers_ferry",
+                        "axisMode": "land",
+                        "axisRoute": {
+                          "routeFrom": "harpers_ferry",
+                          "routeTo": "manassas",
+                          "routeLegs": [
+                            {
+                              "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                              "legFrom": "harpers_ferry",
+                              "legTo": "loudoun_fauquier",
+                              "legType": "road",
+                              "legDays": 4000,
+                              "legThreat": 4612,
+                              "legSupply": 0,
+                              "legObstacleDays": 0,
+                              "legObstacle": null,
+                              "legHeld": false
+                            },
+                            {
+                              "legEdge": "road:loudoun_fauquier:manassas",
+                              "legFrom": "loudoun_fauquier",
+                              "legTo": "manassas",
+                              "legType": "road",
+                              "legDays": 3000,
+                              "legThreat": 0,
+                              "legSupply": 0,
+                              "legObstacleDays": 0,
+                              "legObstacle": null,
+                              "legHeld": false
+                            }
+                          ],
+                          "routeCost": 11612,
+                          "routeDays": 7000
+                        },
+                        "axisBlocks": [
+                          "state-forces.cs_tn_infantry_tennessee",
+                          "raised.st_gov_georgia.d126.2",
+                          "raised.st_gov_georgia.d129",
+                          "state-forces.cs_tn_cavalry_tennessee",
+                          "state-forces.va_harpers_ferry"
+                        ],
+                        "axisStrength": 29000,
+                        "axisPhases": [
+                          {
+                            "phaseKind": "concentrate",
+                            "phaseStart": 0,
+                            "phaseDays": 4000,
+                            "phaseRegion": "harpers_ferry"
+                          },
+                          {
+                            "phaseKind": "march",
+                            "phaseStart": 4000,
+                            "phaseDays": 4000,
+                            "phaseRegion": "loudoun_fauquier"
+                          },
+                          {
+                            "phaseKind": "march",
+                            "phaseStart": 8000,
+                            "phaseDays": 3000,
+                            "phaseRegion": "manassas"
+                          }
+                        ],
+                        "axisArrival": 11000,
+                        "axisOutOfSupply": 0,
+                        "axisStoresDays": 0,
+                        "axisStoresAssumed": false
+                      }
+                    ],
+                    "candRequests": [],
+                    "candConditions": [],
+                    "candTerms": [
+                      {
+                        "contribTerm": "goal_fit",
+                        "contribAmount": 400,
+                        "contribWhy": "reaches manassas"
+                      },
+                      {
+                        "contribTerm": "force_ratio",
+                        "contribAmount": 300,
+                        "contribWhy": "ratio 10000 over his demand 1056"
+                      },
+                      {
+                        "contribTerm": "time",
+                        "contribAmount": 300,
+                        "contribWhy": "arrives 19000 permille days early"
+                      },
+                      {
+                        "contribTerm": "haste",
+                        "contribAmount": 0,
+                        "contribWhy": "concentrated as he wants"
+                      },
+                      {
+                        "contribTerm": "supply",
+                        "contribAmount": 0,
+                        "contribWhy": "0 permille days outside supply"
+                      },
+                      {
+                        "contribTerm": "exposure",
+                        "contribAmount": -172,
+                        "contribWhy": "6336 perceived men along the route"
+                      },
+                      {
+                        "contribTerm": "coordination",
+                        "contribAmount": 0,
+                        "contribWhy": "one axis"
+                      },
+                      {
+                        "contribTerm": "dependence",
+                        "contribAmount": 0,
+                        "contribWhy": "0 support request(s) to other holders"
+                      },
+                      {
+                        "contribTerm": "glory",
+                        "contribAmount": 94,
+                        "contribWhy": "his name on the objective"
+                      },
+                      {
+                        "contribTerm": "caution",
+                        "contribAmount": 0,
+                        "contribWhy": "commits the force"
+                      }
+                    ],
+                    "candScore": 922,
+                    "candPerceived": 0,
+                    "candRatio": 10000
+                  },
+                  {
+                    "id": "holding:hold:harpers_ferry",
+                    "candMethod": "holding",
+                    "candVariant": "hold",
+                    "candAxes": [
+                      {
+                        "axisName": "hold",
+                        "axisPost": "cs_cmd_harpers_ferry",
+                        "axisMode": "land",
+                        "axisRoute": {
+                          "routeFrom": "harpers_ferry",
+                          "routeTo": "harpers_ferry",
+                          "routeLegs": [],
+                          "routeCost": 0,
+                          "routeDays": 0
+                        },
+                        "axisBlocks": [
+                          "state-forces.cs_tn_infantry_tennessee",
+                          "raised.st_gov_georgia.d126.2",
+                          "raised.st_gov_georgia.d129",
+                          "state-forces.cs_tn_cavalry_tennessee",
+                          "state-forces.va_harpers_ferry"
+                        ],
+                        "axisStrength": 29000,
+                        "axisPhases": [
+                          {
+                            "phaseKind": "hold",
+                            "phaseStart": 0,
+                            "phaseDays": 30000,
+                            "phaseRegion": "harpers_ferry"
+                          }
+                        ],
+                        "axisArrival": 0,
+                        "axisOutOfSupply": 0,
+                        "axisStoresDays": 0,
+                        "axisStoresAssumed": false
+                      }
+                    ],
+                    "candRequests": [],
+                    "candConditions": [],
+                    "candTerms": [
+                      {
+                        "contribTerm": "goal_fit",
+                        "contribAmount": 0,
+                        "contribWhy": "does not move on the objective"
+                      },
+                      {
+                        "contribTerm": "time",
+                        "contribAmount": -300,
+                        "contribWhy": "the deadline passes with nothing attempted"
+                      },
+                      {
+                        "contribTerm": "caution",
+                        "contribAmount": 264,
+                        "contribWhy": "keeps the force whole"
+                      }
+                    ],
+                    "candScore": -36,
+                    "candPerceived": 0,
+                    "candRatio": 10000
+                  }
+                ],
+                "draftRejected": [
+                  {
+                    "rejMethod": "flank",
+                    "rejVariant": "penalty",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "alternative shares 1000 permille of the direct route"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "pincer",
+                    "rejVariant": "with_partner",
+                    "rejGates": [
+                      {
+                        "gateKind": "staging_not_adjacent",
+                        "gateHard": true,
+                        "gateDetail": "his own staging harpers_ferry is not beside manassas"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "pincer",
+                    "rejVariant": "two_axis",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "second route repeats the first"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "by_water",
+                    "rejVariant": "clear_first",
+                    "rejGates": [
+                      {
+                        "gateKind": "needs_permission",
+                        "gateHard": true,
+                        "gateDetail": "neither river nor sea is permitted"
+                      },
+                      {
+                        "gateKind": "no_carrier",
+                        "gateHard": true,
+                        "gateDetail": "no ship or boat to carry his troops"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "by_water",
+                    "rejVariant": "run_in",
+                    "rejGates": [
+                      {
+                        "gateKind": "needs_permission",
+                        "gateHard": true,
+                        "gateDetail": "neither river nor sea is permitted"
+                      },
+                      {
+                        "gateKind": "no_carrier",
+                        "gateHard": true,
+                        "gateDetail": "no ship or boat to carry his troops"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "supply_line",
+                    "rejVariant": "depot_steps",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "repeats direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+                      }
+                    ]
+                  }
+                ],
+                "draftSearches": 10,
+                "draftGenerated": 3,
+                "draftDeduplicated": 1
+              },
+              "planChosen": null,
+              "planApproved": null,
+              "planSubmitted": null,
+              "planCounters": [],
+              "planPending": null
+            },
+            "after": {
+              "planGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "planIssuer": "davis_jefferson",
+              "planViaChain": false,
+              "planSetDay": 146,
+              "planIssuedDay": 143,
+              "planOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+              "planResponse": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+              "planStatus": "approved",
+              "planDraft": {
+                "draftCommander": "johnston_joseph_e",
+                "draftPost": "cs_cmd_harpers_ferry",
+                "draftFaction": "confederate",
+                "draftDay": 146,
+                "draftCandidates": [
+                  {
+                    "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+                    "candMethod": "direct",
+                    "candVariant": "least_cost",
+                    "candAxes": [
+                      {
+                        "axisName": "main",
+                        "axisPost": "cs_cmd_harpers_ferry",
+                        "axisMode": "land",
+                        "axisRoute": {
+                          "routeFrom": "harpers_ferry",
+                          "routeTo": "manassas",
+                          "routeLegs": [
+                            {
+                              "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                              "legFrom": "harpers_ferry",
+                              "legTo": "loudoun_fauquier",
+                              "legType": "road",
+                              "legDays": 4000,
+                              "legThreat": 4612,
+                              "legSupply": 0,
+                              "legObstacleDays": 0,
+                              "legObstacle": null,
+                              "legHeld": false
+                            },
+                            {
+                              "legEdge": "road:loudoun_fauquier:manassas",
+                              "legFrom": "loudoun_fauquier",
+                              "legTo": "manassas",
+                              "legType": "road",
+                              "legDays": 3000,
+                              "legThreat": 0,
+                              "legSupply": 0,
+                              "legObstacleDays": 0,
+                              "legObstacle": null,
+                              "legHeld": false
+                            }
+                          ],
+                          "routeCost": 11612,
+                          "routeDays": 7000
+                        },
+                        "axisBlocks": [
+                          "state-forces.cs_tn_infantry_tennessee",
+                          "raised.st_gov_georgia.d126.2",
+                          "raised.st_gov_georgia.d129",
+                          "state-forces.cs_tn_cavalry_tennessee",
+                          "state-forces.va_harpers_ferry"
+                        ],
+                        "axisStrength": 29000,
+                        "axisPhases": [
+                          {
+                            "phaseKind": "concentrate",
+                            "phaseStart": 0,
+                            "phaseDays": 4000,
+                            "phaseRegion": "harpers_ferry"
+                          },
+                          {
+                            "phaseKind": "march",
+                            "phaseStart": 4000,
+                            "phaseDays": 4000,
+                            "phaseRegion": "loudoun_fauquier"
+                          },
+                          {
+                            "phaseKind": "march",
+                            "phaseStart": 8000,
+                            "phaseDays": 3000,
+                            "phaseRegion": "manassas"
+                          }
+                        ],
+                        "axisArrival": 11000,
+                        "axisOutOfSupply": 0,
+                        "axisStoresDays": 0,
+                        "axisStoresAssumed": false
+                      }
+                    ],
+                    "candRequests": [],
+                    "candConditions": [],
+                    "candTerms": [
+                      {
+                        "contribTerm": "goal_fit",
+                        "contribAmount": 400,
+                        "contribWhy": "reaches manassas"
+                      },
+                      {
+                        "contribTerm": "force_ratio",
+                        "contribAmount": 300,
+                        "contribWhy": "ratio 10000 over his demand 1056"
+                      },
+                      {
+                        "contribTerm": "time",
+                        "contribAmount": 300,
+                        "contribWhy": "arrives 19000 permille days early"
+                      },
+                      {
+                        "contribTerm": "haste",
+                        "contribAmount": 0,
+                        "contribWhy": "concentrated as he wants"
+                      },
+                      {
+                        "contribTerm": "supply",
+                        "contribAmount": 0,
+                        "contribWhy": "0 permille days outside supply"
+                      },
+                      {
+                        "contribTerm": "exposure",
+                        "contribAmount": -172,
+                        "contribWhy": "6336 perceived men along the route"
+                      },
+                      {
+                        "contribTerm": "coordination",
+                        "contribAmount": 0,
+                        "contribWhy": "one axis"
+                      },
+                      {
+                        "contribTerm": "dependence",
+                        "contribAmount": 0,
+                        "contribWhy": "0 support request(s) to other holders"
+                      },
+                      {
+                        "contribTerm": "glory",
+                        "contribAmount": 94,
+                        "contribWhy": "his name on the objective"
+                      },
+                      {
+                        "contribTerm": "caution",
+                        "contribAmount": 0,
+                        "contribWhy": "commits the force"
+                      }
+                    ],
+                    "candScore": 922,
+                    "candPerceived": 0,
+                    "candRatio": 10000
+                  },
+                  {
+                    "id": "holding:hold:harpers_ferry",
+                    "candMethod": "holding",
+                    "candVariant": "hold",
+                    "candAxes": [
+                      {
+                        "axisName": "hold",
+                        "axisPost": "cs_cmd_harpers_ferry",
+                        "axisMode": "land",
+                        "axisRoute": {
+                          "routeFrom": "harpers_ferry",
+                          "routeTo": "harpers_ferry",
+                          "routeLegs": [],
+                          "routeCost": 0,
+                          "routeDays": 0
+                        },
+                        "axisBlocks": [
+                          "state-forces.cs_tn_infantry_tennessee",
+                          "raised.st_gov_georgia.d126.2",
+                          "raised.st_gov_georgia.d129",
+                          "state-forces.cs_tn_cavalry_tennessee",
+                          "state-forces.va_harpers_ferry"
+                        ],
+                        "axisStrength": 29000,
+                        "axisPhases": [
+                          {
+                            "phaseKind": "hold",
+                            "phaseStart": 0,
+                            "phaseDays": 30000,
+                            "phaseRegion": "harpers_ferry"
+                          }
+                        ],
+                        "axisArrival": 0,
+                        "axisOutOfSupply": 0,
+                        "axisStoresDays": 0,
+                        "axisStoresAssumed": false
+                      }
+                    ],
+                    "candRequests": [],
+                    "candConditions": [],
+                    "candTerms": [
+                      {
+                        "contribTerm": "goal_fit",
+                        "contribAmount": 0,
+                        "contribWhy": "does not move on the objective"
+                      },
+                      {
+                        "contribTerm": "time",
+                        "contribAmount": -300,
+                        "contribWhy": "the deadline passes with nothing attempted"
+                      },
+                      {
+                        "contribTerm": "caution",
+                        "contribAmount": 264,
+                        "contribWhy": "keeps the force whole"
+                      }
+                    ],
+                    "candScore": -36,
+                    "candPerceived": 0,
+                    "candRatio": 10000
+                  }
+                ],
+                "draftRejected": [
+                  {
+                    "rejMethod": "flank",
+                    "rejVariant": "penalty",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "alternative shares 1000 permille of the direct route"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "pincer",
+                    "rejVariant": "with_partner",
+                    "rejGates": [
+                      {
+                        "gateKind": "staging_not_adjacent",
+                        "gateHard": true,
+                        "gateDetail": "his own staging harpers_ferry is not beside manassas"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "pincer",
+                    "rejVariant": "two_axis",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "second route repeats the first"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "by_water",
+                    "rejVariant": "clear_first",
+                    "rejGates": [
+                      {
+                        "gateKind": "needs_permission",
+                        "gateHard": true,
+                        "gateDetail": "neither river nor sea is permitted"
+                      },
+                      {
+                        "gateKind": "no_carrier",
+                        "gateHard": true,
+                        "gateDetail": "no ship or boat to carry his troops"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "by_water",
+                    "rejVariant": "run_in",
+                    "rejGates": [
+                      {
+                        "gateKind": "needs_permission",
+                        "gateHard": true,
+                        "gateDetail": "neither river nor sea is permitted"
+                      },
+                      {
+                        "gateKind": "no_carrier",
+                        "gateHard": true,
+                        "gateDetail": "no ship or boat to carry his troops"
+                      }
+                    ]
+                  },
+                  {
+                    "rejMethod": "supply_line",
+                    "rejVariant": "depot_steps",
+                    "rejGates": [
+                      {
+                        "gateKind": "duplicate",
+                        "gateHard": true,
+                        "gateDetail": "repeats direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+                      }
+                    ]
+                  }
+                ],
+                "draftSearches": 10,
+                "draftGenerated": 3,
+                "draftDeduplicated": 1
+              },
+              "planChosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+              "planApproved": {
+                "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+                "candMethod": "direct",
+                "candVariant": "least_cost",
+                "candAxes": [
+                  {
+                    "axisName": "main",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "manassas",
+                      "routeLegs": [
+                        {
+                          "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                          "legFrom": "harpers_ferry",
+                          "legTo": "loudoun_fauquier",
+                          "legType": "road",
+                          "legDays": 4000,
+                          "legThreat": 4612,
+                          "legSupply": 0,
+                          "legObstacleDays": 0,
+                          "legObstacle": null,
+                          "legHeld": false
+                        },
+                        {
+                          "legEdge": "road:loudoun_fauquier:manassas",
+                          "legFrom": "loudoun_fauquier",
+                          "legTo": "manassas",
+                          "legType": "road",
+                          "legDays": 3000,
+                          "legThreat": 0,
+                          "legSupply": 0,
+                          "legObstacleDays": 0,
+                          "legObstacle": null,
+                          "legHeld": false
+                        }
+                      ],
+                      "routeCost": 11612,
+                      "routeDays": 7000
+                    },
+                    "axisBlocks": [
+                      "state-forces.cs_tn_infantry_tennessee",
+                      "raised.st_gov_georgia.d126.2",
+                      "raised.st_gov_georgia.d129",
+                      "state-forces.cs_tn_cavalry_tennessee",
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 29000,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "concentrate",
+                        "phaseStart": 0,
+                        "phaseDays": 4000,
+                        "phaseRegion": "harpers_ferry"
+                      },
+                      {
+                        "phaseKind": "march",
+                        "phaseStart": 4000,
+                        "phaseDays": 4000,
+                        "phaseRegion": "loudoun_fauquier"
+                      },
+                      {
+                        "phaseKind": "march",
+                        "phaseStart": 8000,
+                        "phaseDays": 3000,
+                        "phaseRegion": "manassas"
+                      }
+                    ],
+                    "axisArrival": 11000,
+                    "axisOutOfSupply": 0,
+                    "axisStoresDays": 0,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 400,
+                    "contribWhy": "reaches manassas"
+                  },
+                  {
+                    "contribTerm": "force_ratio",
+                    "contribAmount": 300,
+                    "contribWhy": "ratio 10000 over his demand 1056"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": 300,
+                    "contribWhy": "arrives 19000 permille days early"
+                  },
+                  {
+                    "contribTerm": "haste",
+                    "contribAmount": 0,
+                    "contribWhy": "concentrated as he wants"
+                  },
+                  {
+                    "contribTerm": "supply",
+                    "contribAmount": 0,
+                    "contribWhy": "0 permille days outside supply"
+                  },
+                  {
+                    "contribTerm": "exposure",
+                    "contribAmount": -172,
+                    "contribWhy": "6336 perceived men along the route"
+                  },
+                  {
+                    "contribTerm": "coordination",
+                    "contribAmount": 0,
+                    "contribWhy": "one axis"
+                  },
+                  {
+                    "contribTerm": "dependence",
+                    "contribAmount": 0,
+                    "contribWhy": "0 support request(s) to other holders"
+                  },
+                  {
+                    "contribTerm": "glory",
+                    "contribAmount": 94,
+                    "contribWhy": "his name on the objective"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 0,
+                    "contribWhy": "commits the force"
+                  }
+                ],
+                "candScore": 922,
+                "candPerceived": 0,
+                "candRatio": 10000
+              },
+              "planSubmitted": null,
+              "planCounters": [],
+              "planPending": null
+            }
+          }
+        ],
+        "operations": [
+          {
+            "id": "op:cs_cmd_harpers_ferry:147",
+            "before": null,
+            "after": {
+              "opPost": "cs_cmd_harpers_ferry",
+              "opCommander": "johnston_joseph_e",
+              "opOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+              "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+              "opMethod": "direct",
+              "opPosture": "take",
+              "opObjective": "manassas",
+              "opStartDay": 147,
+              "opEndDay": null,
+              "opOutcome": null,
+              "opAxes": [
+                {
+                  "oaxName": "main",
+                  "oaxPost": "cs_cmd_harpers_ferry",
+                  "oaxBlocks": [
+                    "state-forces.cs_tn_infantry_tennessee",
+                    "raised.st_gov_georgia.d126.2",
+                    "raised.st_gov_georgia.d129",
+                    "state-forces.cs_tn_cavalry_tennessee",
+                    "state-forces.va_harpers_ferry"
+                  ],
+                  "oaxRoute": {
+                    "routeFrom": "harpers_ferry",
+                    "routeTo": "manassas",
+                    "routeLegs": [
+                      {
+                        "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                        "legFrom": "harpers_ferry",
+                        "legTo": "loudoun_fauquier",
+                        "legType": "road",
+                        "legDays": 4000,
+                        "legThreat": 4612,
+                        "legSupply": 0,
+                        "legObstacleDays": 0,
+                        "legObstacle": null,
+                        "legHeld": false
+                      },
+                      {
+                        "legEdge": "road:loudoun_fauquier:manassas",
+                        "legFrom": "loudoun_fauquier",
+                        "legTo": "manassas",
+                        "legType": "road",
+                        "legDays": 3000,
+                        "legThreat": 0,
+                        "legSupply": 0,
+                        "legObstacleDays": 0,
+                        "legObstacle": null,
+                        "legHeld": false
+                      }
+                    ],
+                    "routeCost": 11612,
+                    "routeDays": 7000
+                  },
+                  "oaxPhases": [
+                    {
+                      "phaseKind": "concentrate",
+                      "phaseStart": 0,
+                      "phaseDays": 4000,
+                      "phaseRegion": "harpers_ferry"
+                    },
+                    {
+                      "phaseKind": "march",
+                      "phaseStart": 4000,
+                      "phaseDays": 4000,
+                      "phaseRegion": "loudoun_fauquier"
+                    },
+                    {
+                      "phaseKind": "march",
+                      "phaseStart": 8000,
+                      "phaseDays": 3000,
+                      "phaseRegion": "manassas"
+                    }
+                  ],
+                  "oaxObjective": "manassas",
+                  "oaxStage": "assemble",
+                  "oaxSince": 147,
+                  "oaxUntil": 151,
+                  "oaxRepulses": 0,
+                  "oaxPursuit": null,
+                  "oaxSteps": [],
+                  "oaxArrived": null,
+                  "oaxLog": [
+                    {
+                      "axevDay": 147,
+                      "axevStage": "assemble",
+                      "axevReason": "opened",
+                      "axevRegion": "harpers_ferry"
+                    }
+                  ]
+                }
+              ],
+              "opRequests": [],
+              "opEncirclement": null,
+              "opEncirclementWhy": null
+            }
+          }
+        ],
+        "transit": [],
+        "notices": []
+      }
+    ],
+    "finalOffice": {
+      "postName": "post.cs_war_adjutant_inspector_general.name",
+      "postKind": "bureau",
+      "postDepartment": "cs_war",
+      "postParent": "cs_secretary_war",
+      "postHolder": null,
+      "postActing": false,
+      "postIntelChief": null,
+      "postSeat": "montgomery",
+      "postOperation": null,
+      "postInstallation": null,
+      "postLinks": [],
+      "postScheduled": [],
+      "postStandingOrders": []
+    },
+    "finalPlan": {
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "planIssuer": "davis_jefferson",
+      "planViaChain": false,
+      "planSetDay": 146,
+      "planIssuedDay": 143,
+      "planOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "planResponse": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "johnston_joseph_e",
+        "draftPost": "cs_cmd_harpers_ferry",
+        "draftFaction": "confederate",
+        "draftDay": 146,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "manassas",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                      "legFrom": "harpers_ferry",
+                      "legTo": "loudoun_fauquier",
+                      "legType": "road",
+                      "legDays": 4000,
+                      "legThreat": 4612,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "road:loudoun_fauquier:manassas",
+                      "legFrom": "loudoun_fauquier",
+                      "legTo": "manassas",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 11612,
+                  "routeDays": 7000
+                },
+                "axisBlocks": [
+                  "state-forces.cs_tn_infantry_tennessee",
+                  "raised.st_gov_georgia.d126.2",
+                  "raised.st_gov_georgia.d129",
+                  "state-forces.cs_tn_cavalry_tennessee",
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 29000,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 4000,
+                    "phaseRegion": "harpers_ferry"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 4000,
+                    "phaseDays": 4000,
+                    "phaseRegion": "loudoun_fauquier"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 8000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "manassas"
+                  }
+                ],
+                "axisArrival": 11000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 0,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1056"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 19000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": -172,
+                "contribWhy": "6336 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 94,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 922,
+            "candPerceived": 0,
+            "candRatio": 10000
+          },
+          {
+            "id": "holding:hold:harpers_ferry",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "state-forces.cs_tn_infantry_tennessee",
+                  "raised.st_gov_georgia.d126.2",
+                  "raised.st_gov_georgia.d129",
+                  "state-forces.cs_tn_cavalry_tennessee",
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 29000,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 0,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 264,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": -36,
+            "candPerceived": 0,
+            "candRatio": 10000
+          }
+        ],
+        "draftRejected": [
+          {
+            "rejMethod": "flank",
+            "rejVariant": "penalty",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "alternative shares 1000 permille of the direct route"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "with_partner",
+            "rejGates": [
+              {
+                "gateKind": "staging_not_adjacent",
+                "gateHard": true,
+                "gateDetail": "his own staging harpers_ferry is not beside manassas"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "two_axis",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "second route repeats the first"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "clear_first",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "run_in",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "supply_line",
+            "rejVariant": "depot_steps",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "repeats direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+              }
+            ]
+          }
+        ],
+        "draftSearches": 10,
+        "draftGenerated": 3,
+        "draftDeduplicated": 1
+      },
+      "planChosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "planApproved": {
+        "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "cs_cmd_harpers_ferry",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                  "legFrom": "harpers_ferry",
+                  "legTo": "loudoun_fauquier",
+                  "legType": "road",
+                  "legDays": 4000,
+                  "legThreat": 4612,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "road:loudoun_fauquier:manassas",
+                  "legFrom": "loudoun_fauquier",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 11612,
+              "routeDays": 7000
+            },
+            "axisBlocks": [
+              "state-forces.cs_tn_infantry_tennessee",
+              "raised.st_gov_georgia.d126.2",
+              "raised.st_gov_georgia.d129",
+              "state-forces.cs_tn_cavalry_tennessee",
+              "state-forces.va_harpers_ferry"
+            ],
+            "axisStrength": 29000,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 4000,
+                "phaseRegion": "harpers_ferry"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 4000,
+                "phaseRegion": "loudoun_fauquier"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 8000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "axisArrival": 11000,
+            "axisOutOfSupply": 0,
+            "axisStoresDays": 0,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches manassas"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 10000 over his demand 1056"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 19000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": 0,
+            "contribWhy": "0 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": -172,
+            "contribWhy": "6336 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 94,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 922,
+        "candPerceived": 0,
+        "candRatio": 10000
+      },
+      "planSubmitted": null,
+      "planCounters": [],
+      "planPending": null
+    },
+    "julyHeadquarters": [
+      {
+        "day": 130,
+        "date": "1861-07-13",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 131,
+        "date": "1861-07-14",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 132,
+        "date": "1861-07-15",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 133,
+        "date": "1861-07-16",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 134,
+        "date": "1861-07-17",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 135,
+        "date": "1861-07-18",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 136,
+        "date": "1861-07-19",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 137,
+        "date": "1861-07-20",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 138,
+        "date": "1861-07-21",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 139,
+        "date": "1861-07-22",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 140,
+        "date": "1861-07-23",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 141,
+        "date": "1861-07-24",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 142,
+        "date": "1861-07-25",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 143,
+        "date": "1861-07-26",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 144,
+        "date": "1861-07-27",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 145,
+        "date": "1861-07-28",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 146,
+        "date": "1861-07-29",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 147,
+        "date": "1861-07-30",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 148,
+        "date": "1861-07-31",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      }
+    ],
+    "finalOperations": [
+      {
+        "id": "op:cs_cmd_harpers_ferry:147",
+        "opPost": "cs_cmd_harpers_ferry",
+        "opCommander": "johnston_joseph_e",
+        "opOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+        "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+        "opMethod": "direct",
+        "opPosture": "take",
+        "opObjective": "manassas",
+        "opStartDay": 147,
+        "opEndDay": null,
+        "opOutcome": null,
+        "opAxes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "cs_cmd_harpers_ferry",
+            "oaxBlocks": [
+              "state-forces.cs_tn_infantry_tennessee",
+              "raised.st_gov_georgia.d126.2",
+              "raised.st_gov_georgia.d129",
+              "state-forces.cs_tn_cavalry_tennessee",
+              "state-forces.va_harpers_ferry"
+            ],
+            "oaxRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                  "legFrom": "harpers_ferry",
+                  "legTo": "loudoun_fauquier",
+                  "legType": "road",
+                  "legDays": 4000,
+                  "legThreat": 4612,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "road:loudoun_fauquier:manassas",
+                  "legFrom": "loudoun_fauquier",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 11612,
+              "routeDays": 7000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 4000,
+                "phaseRegion": "harpers_ferry"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 4000,
+                "phaseRegion": "loudoun_fauquier"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 8000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "oaxObjective": "manassas",
+            "oaxStage": "assemble",
+            "oaxSince": 147,
+            "oaxUntil": 151,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": null,
+            "oaxLog": [
+              {
+                "axevDay": 147,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "harpers_ferry"
+              }
+            ]
+          }
+        ],
+        "opRequests": [],
+        "opEncirclement": null,
+        "opEncirclementWhy": null
+      }
+    ]
+  },
+  "after": {
+    "rows": [
+      {
+        "day": 140,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [],
+        "notices": [
+          {
+            "id": "manassas_advance_received",
+            "before": null,
+            "after": {
+              "sitStatus": "noticed",
+              "sitFiredDay": 140,
+              "sitSurfacedDay": null,
+              "sitOpenOptions": [],
+              "sitResurfaced": [],
+              "sitDecidedDay": null,
+              "sitChosen": [],
+              "sitDecidedBy": null,
+              "sitDelegate": null,
+              "sitWaitingOn": null,
+              "sitStaffAuthor": "cooper_samuel"
+            }
+          }
+        ]
+      },
+      {
+        "day": 141,
+        "responses": [],
+        "received": [
+          {
+            "seat": "seat:davis_jefferson",
+            "paper": {
+              "id": "m.140.cooper_samuel.davis_jefferson.notice.manassas_advance_received",
+              "knownReceivedDay": 141,
+              "knownRoute": "wire",
+              "knownVia": [],
+              "knownBody": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cooper_samuel",
+                "reportAuthorPost": "cs_war_adjutant_inspector_general",
+                "reportSubjectKind": "situation",
+                "reportSubjectId": "manassas_advance_received",
+                "reportClaims": [],
+                "reportDay": 140,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": null
+              }
+            }
+          }
+        ],
+        "plans": [],
+        "operations": [],
+        "transit": [],
+        "notices": [
+          {
+            "id": "manassas_advance_received",
+            "before": {
+              "sitStatus": "noticed",
+              "sitFiredDay": 140,
+              "sitSurfacedDay": null,
+              "sitOpenOptions": [],
+              "sitResurfaced": [],
+              "sitDecidedDay": null,
+              "sitChosen": [],
+              "sitDecidedBy": null,
+              "sitDelegate": null,
+              "sitWaitingOn": null,
+              "sitStaffAuthor": "cooper_samuel"
+            },
+            "after": {
+              "sitStatus": "noticed",
+              "sitFiredDay": 140,
+              "sitSurfacedDay": 141,
+              "sitOpenOptions": [],
+              "sitResurfaced": [],
+              "sitDecidedDay": null,
+              "sitChosen": [],
+              "sitDecidedBy": null,
+              "sitDelegate": null,
+              "sitWaitingOn": null,
+              "sitStaffAuthor": "cooper_samuel"
+            }
+          }
+        ]
+      },
+      {
+        "day": 142,
+        "responses": [
+          {
+            "id": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|cooper_samuel",
+            "before": null,
+            "after": {
+              "respOrder": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+              "respPerson": "cooper_samuel",
+              "respPost": "cs_war_adjutant_inspector_general",
+              "respRole": "relay",
+              "respKind": "goal",
+              "respDay": 142,
+              "respActual": "slow_walk",
+              "respDeclared": "comply",
+              "respWillingness": -21,
+              "respTerms": [
+                {
+                  "respTermName": "values",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "temperament",
+                  "respTermAmount": -53
+                },
+                {
+                  "respTermName": "regard",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "deterrence",
+                  "respTermAmount": 32
+                },
+                {
+                  "respTermName": "capacity",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "disposition",
+                  "respTermAmount": 0
+                },
+                {
+                  "respTermName": "grievances",
+                  "respTermAmount": 0
+                }
+              ],
+              "respReasons": [
+                {
+                  "kind": "shielded_by_standing"
+                }
+              ],
+              "respStated": [],
+              "respConditions": []
+            }
+          }
+        ],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 143,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 144,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 145,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 146,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 147,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      },
+      {
+        "day": 148,
+        "responses": [],
+        "received": [],
+        "plans": [],
+        "operations": [],
+        "transit": [
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ],
+        "notices": []
+      }
+    ],
+    "finalOffice": {
+      "postName": "post.cs_war_adjutant_inspector_general.name",
+      "postKind": "staff_office",
+      "postDepartment": "cs_war",
+      "postParent": "cs_president",
+      "postHolder": "cooper_samuel",
+      "postActing": false,
+      "postIntelChief": null,
+      "postSeat": "montgomery",
+      "postOperation": null,
+      "postInstallation": null,
+      "postLinks": [],
+      "postScheduled": [],
+      "postStandingOrders": []
+    },
+    "finalPlan": null,
+    "julyHeadquarters": [
+      {
+        "day": 130,
+        "date": "1861-07-13",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 131,
+        "date": "1861-07-14",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 132,
+        "date": "1861-07-15",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 133,
+        "date": "1861-07-16",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 134,
+        "date": "1861-07-17",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 135,
+        "date": "1861-07-18",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 136,
+        "date": "1861-07-19",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 137,
+        "date": "1861-07-20",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 138,
+        "date": "1861-07-21",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 139,
+        "date": "1861-07-22",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 140,
+        "date": "1861-07-23",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 141,
+        "date": "1861-07-24",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "northern_virginia",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "manassas"
+        }
+      },
+      {
+        "day": 142,
+        "date": "1861-07-25",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 143,
+        "date": "1861-07-26",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 144,
+        "date": "1861-07-27",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 145,
+        "date": "1861-07-28",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 146,
+        "date": "1861-07-29",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 147,
+        "date": "1861-07-30",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      },
+      {
+        "day": 148,
+        "date": "1861-07-31",
+        "headquarters": {
+          "us_secretary_navy": "washington",
+          "cs_secretary_war": "richmond",
+          "us_dept_northeastern_virginia": "manassas",
+          "us_dept_pennsylvania": "lower_valley",
+          "cs_cmd_harpers_ferry": "harpers_ferry",
+          "cs_cmd_manassas": "loudoun_fauquier"
+        }
+      }
+    ],
+    "finalOperations": []
+  }
+}
