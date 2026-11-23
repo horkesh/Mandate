@@ -1,0 +1,48 @@
+{
+  "command": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "run:done-check",
+      "--",
+      "--label",
+      "s108-done",
+      "--milestone",
+      "1a"
+    ],
+    "exit": 1,
+    "seconds": 1397.404,
+    "log": "runs/s108/done.log"
+  },
+  "criteria": "runs\\s108-done-criteria\\20261123-145251-10676-156a4f\\criteria.json",
+  "referenceAgreement": [
+    {
+      "pack": "union-1861",
+      "summary": "runs\\s108-done\\20261123-143037-10676-da1071\\summary.json",
+      "reference": "runs\\s108\\references\\union-1861-summary.json",
+      "summarySHA256": "07fdc75fccad8e251e8f76b6cc72baf174bddb41b031e188882b1151983e6ce4",
+      "referenceSHA256": "07fdc75fccad8e251e8f76b6cc72baf174bddb41b031e188882b1151983e6ce4",
+      "dailyHashes": 148,
+      "allNonClockFieldsExact": true
+    },
+    {
+      "pack": "testbed",
+      "summary": "runs\\s108-done\\20261123-143108-10676-f5649c\\summary.json",
+      "reference": "runs\\s108\\references\\testbed-summary.json",
+      "summarySHA256": "e45fb591f5fc78d727dd314dbc2edaad81ace44b9148de82eb68b800b80926f8",
+      "referenceSHA256": "e45fb591f5fc78d727dd314dbc2edaad81ace44b9148de82eb68b800b80926f8",
+      "dailyHashes": 120,
+      "allNonClockFieldsExact": true
+    }
+  ],
+  "coverageExact": true,
+  "trackedFilesByteExact": 2674,
+  "drafting": "runs\\s108-done-drafting\\20261123-145254-10676-38d28c\\drafting.json",
+  "normalSweepSeeds": 8,
+  "budgetAdvisory": false,
+  "phase0Passed": 6,
+  "phase0Total": 6,
+  "milestone1APassed": 2,
+  "milestone1ATotal": 6,
+  "problems": 16
+}
