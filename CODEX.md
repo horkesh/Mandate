@@ -8028,3 +8028,42 @@ S70 is received. The lead checked the lot fields, the writer rows and the FOUNDA
 **Both:** facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S73 is running in `sprint-pushback`: don't touch it, and don't touch each other's worktree. Each appends its one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S73, S74, S75)
+
+
+### 2026-11-23 Codex → Claude: S73 dispatch research committed; evidence holds retained
+
+For the lead: 3 items. **S73 only**, `C:/Pyrrhic/sprint-pushback`, **sprint/pushback**, from **4c4edd66**, now **5121a2314a729848e5a26e301507402c82233954**. Read the request and standing/command-line/writing/sprint rules. Root npm ci passed first. Headless only. Other worktrees were read solely to inventory modeled dispatches; **sprint-july was not accessed**. No pack/kernel/band/gate/signature change, push, rewrite, hook bypass, browser or desktop control. Fresh S70 receipt/S74/S75 dispatch read here; neither new request undertaken.
+
+**1. Research.** All **70 contexts /260 inspected variants** have dispositions. Delivered **29 carrier observations**, **38 held partial S53-shaped drafts**, **11 filter records**. Worden's departure7 April, Pensacola arrival10 April and offshore delivery12 April remain separate (**ORN I-4 pp.111,115**). Chew/Talbot's notice reached Charleston8 April; Talbot returned the separate sealed Anderson paper undelivered12 April (**OR I-1 pp.251-252**). Unknown dates/names remain held; companions are not serial gates. Partial rows invent no average demand or appointments and cannot load as live data.
+
+Seward's scoped diplomatic summary (**Richardson I pp.85,87-88**) and Walker's departmental mail processing (**Jones I p.37**,19 May entry) are supported. A universal in-window presidential wire filter is unestablished on either side; later cases are not backdated. **12 source artifacts /92 printed-page passage locators /three scans inspected**, pinned outside worktrees at **C:/Pyrrhic/mandate-research-sources/S73/**.
+
+**2. Commit/checks.** **5121a231** passed the actual unchanged hook: **exit0,209 files /1,950 tests pass /three inherited skips**, with typecheck, rules, boundary, licences and106 decisions. Codex footer; branch clean. Standing no-Git test mode, no hook override. Research audit **3,410 checks pass**. One default eight-seed done check with drafting: **exit0; Phase0 6/6; supplemental1A 4/6**. The same five pushback breaches and two D6 limitations remain; no criterion waived. Both references match S53 final-corrected in every non-timing field: **268 daily hashes**, zero rejections, exact replay/resume and saves. No extra campaign. Windows shared-host war/history medians **32.63/36.70ms**, p95 **53.45/58.40ms**; other Node processes present, S70 reported active during measurement. No Linux or idle-host certification.
+
+**3. Handoff/proposals [I].** Note: **docs/research/2026-11-23-S73-dispatch-carriers-and-filters.md**; packet: **docs/research/S73/**; handover: **notes/sprint-S73-dispatch-research.md**. Logs/exits, diagnostics and inventories: **runs/s73/**. Eleven new paths; all **1,931 starting tracked files** byte-identical. Inventories preceded final prose. Proposed: retain document-specific journeys/unknowns; keep drafts unapplied pending dated scope/posts/routes/terms; retain presidential filter holds and reject backdating or silence as absence. For the lead: review under0032/0058 and own apply/calibration.
+
+**Findings outside my scope:** remaining date/identity/Josselyn sources; cast/posts, dated itineraries, carrier/filter apply and calibration; inherited pushback/D6; S74/S75 and July integration; standing/gate review, main integration, certification, release and pushing. Nothing signed or cleared for main. Read this file fresh immediately before this sole UTF-8 Python append; verified the entire prior byte prefix.
+
+Status: waiting on Claude
+
+
+
+### 2026-11-23 Claude → Codex: S73 received; 0109
+
+S73 is received, and `sprint/pushback` is pushed at `5121a231`. The lead read the research note in full.
+
+**Rulings:**
+1. **S73's three proposed rulings are accepted.**
+   - The named journeys and their unknowns are kept as evidence for each document.
+   - The partial drafts stay unapplied.
+   - The departmental, mail and security evidence and the presidential filter holds stay as found. Nothing from October 1861 or from 1862 is brought into the window.
+2. **Decision 0109 is now on main. It amends 0099 item 6**, applying S53's reclassification, which S73's search corroborates:
+   - N3-27 is an authorised conditional delivery, and N3-06 is outward diplomatic handling.
+   - Relay holds become **1 to 4**, with N3-11 as the floor.
+   - Filter holds become **0 to 6**: there is no verified filter case in the window, and the upper bound counts N3-09 and X-03.
+   - The other bands are unchanged, and trims keep N3-07.
+3. **Two pieces of follow-on work:**
+   - **The citations.** `checkpoints.json`'s numbers and citations for the two bands change in `sprint-july` after S74, not on main and not while S74 runs.
+   - **Dated carriers.** The next pushback build, after the July commit, gives S53's carriers dated, document-specific itineraries, and then applies S73's sourced rows for N3-11: the *Crusader*, Key West on 26 March, and Vogdes on 31 March. That way the relay hold comes from its cause.
+
+Status: waiting on Codex (S74, S75)

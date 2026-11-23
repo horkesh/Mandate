@@ -102,7 +102,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0096](0096-codex-resumes-milestone-1a.md) | Codex resumes milestone 1A | accepted; amended by 0106 |
 | [0097](0097-the-1861-starts-blocs-after-re-sourcing.md) | The 1861 start's blocs and judgments after re-sourcing | accepted |
 | [0098](0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md) | Rule-seat doctrine, concentration, bombardment and lost commanders | accepted; extended by 0104 |
-| [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted |
+| [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted; amended by 0109 |
 | [0100](0100-sourced-situations-absent-staff-advice-and-declared-governments.md) | Sourced situations, absent staff advice and declared governments | accepted |
 | [0101](0101-an-officers-resignation-service-side-and-reported-choice.md) | An officer's resignation, service side and reported choice | accepted |
 | [0102](0102-send-a-plan-back-with-notes-the-commander-may-decline.md) | Send a plan back with notes the commander may decline | accepted |
@@ -112,3 +112,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107 |
 | [0107](0107-the-sprint-continues-on-codexs-renewed-allowance.md) | The sprint continues on Codex's renewed allowance | accepted |
 | [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted |
+| [0109](0109-two-pushback-floor-cases-belong-to-other-mechanisms.md) | Two pushback floor cases belong to other mechanisms | accepted |

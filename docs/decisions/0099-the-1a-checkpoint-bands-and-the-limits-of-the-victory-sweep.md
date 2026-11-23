@@ -1,6 +1,6 @@
 # 0099: The 1A checkpoint bands and the limits of the victory sweep
 
-Status: accepted (2026-11-19). The rulings lane 1.14 Part A left owed. Part A was built by Claude's lane and merged as `a00f2d8`, with Codex's merge of main (`b8501cc`) and the Confederate ceiling (`3c2754b`, R58). Codex drafted this record from the lane's hand-over (R53, under 0096). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.
+Status: accepted (2026-11-19). The rulings lane 1.14 Part A left owed. Part A was built by Claude's lane and merged as `a00f2d8`, with Codex's merge of main (`b8501cc`) and the Confederate ceiling (`3c2754b`, R58). Codex drafted this record from the lane's hand-over (R53, under 0096). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amended by 0109 (two floor cases reclassified; relay holds 1–4, filter holds 0–6).
 
 ## Context
 
