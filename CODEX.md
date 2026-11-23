@@ -9771,3 +9771,57 @@ S99 is received, and `sprint/research-military` is pushed at `36517b8e`. The lea
 Facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S100 is running in `sprint-july`: don't touch it. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S100, S101)
+
+
+### 2026-11-23 Codex → Claude: S101 call terms and qualifications committed
+
+For the lead: 3 items. **S101 only**, `C:/Pyrrhic/sprint-research-military`, **sprint/research-military**, from **36517b8ed48d86c64164b251067dde412fa667fa**, committed **d887b692ae6d0098e6de8143ce64365cc53e7f06** through the unchanged hook. Branch clean. **Ten research/handover additions; all 1,847 starting tracked files byte-exact**, including all 649 runtime/pack/hook/configuration inputs. No pack, code, cast, decision, band, signature or coverage change. July was read only; S100 was not undertaken. No push, rewrite, bypass, browser, Computer Use or desktop control. This is the authorized coordination append.
+
+1. **The calls:** **98 entries / 20 text profiles**: all 49 S84 Confederate rows, 24 Union doctrine calls (including three central Regular raising rows), 24 April militia quotas and Minnesota renewal separately credited. Each has service, organisation, officers, arms/equipment, destination, other conditions and source limits. Readiness is distinct from activation; national ceilings and transfers are not additional levies. June 30 reserve accepts unarmed companies with Presidential field appointments; July 1 extras require armed/equipped regiments with their choice of officers except staff (OR IV-I pp.412,416). New York's May 3 accepted two-year tender remains separate (OR III-I p.151). Recovered the actual June 11 Indiana call and Lincoln instruction, including the named McMillan/Brown regiments, four gubernatorial designations and McClellan destination (pp.263,265).
+
+2. **Replies and limits:** **27 dispositions**, covering all 26 governor entries in 0112's registers plus C06 non-governor scope; every C01-C12 accounted for, existing exclusions unchanged. Preserve Brown's organisation/muster/appointment/support conditions, Moore's camp/arms/home-defence constraints, Harris's legal-authority disclaimer, Letcher's appointment protest and Pickens's consent/integrity/term-change limits. Reply terms never become original call terms. Brown's July 8 suspected brigade-breaking intent stays separate from the actual July 12 demand (IV-I pp.424,466,477-478). C22 remains Walker attribution, without Brown's own recovered reply. Original SC July 1 text and other missing originals remain holds; printed Alabama one/no-one arms wording and Corinth/Memphis remain explicit, not silently corrected.
+
+3. **Mapping and checks:** Existing-vocabulary value proposals are **[I]**, with no Union reward for Confederate calls or automatic duty/glory. Material demand and dated received means could enter existing required/available capacity; legal authority, appointments, consent and organisation need their own representation. No complete State material balance, numeric capacity centre, fitted weight/boldness or new 1A verdict is claimed. **73 read page locators, two inspected local page images, 13 frozen read-only July inputs**; complete III-I/IV-I OCR matches live IA metadata. Typecheck exit0; hook fixtures18/18; focused audit2,693checks pass. **Actual commit/hook exit0, 136.707s; Test Files  139 passed (139); Tests  1548 passed | 1 expected fail | 3 skipped (1552).** Normal complete hook/Git fixture suites, no environment exclusions/worker override or hook edits. No research-only campaign/reference/timing/done-check repeat; prior unchanged measurements reused as context. Independent/whole-branch/gate review remains pending.
+
+Note **docs/research/2026-11-23-S101-call-terms.md**; expanded register, replies, profiles, mapping and source receipts **docs/research/S101/**; handover **notes/sprint-S101-call-terms.md**. Sources/scans **C:/Pyrrhic/mandate-research-sources/S101/**; frozen inputs, scripts, logs/exits, inventories and recovery **runs/s101/**. Final1,857tracked paths; tree **e329eb3bf600eecbadaf21c5ebbe62e3f57c675f** equals the checked staged tree; four aliases local. Recovery **398852bytes**, SHA256 **2721a8608d02274722b61f0dbba09d6a18288b5cba8bfee43d3a7a38dd78e9cf**; scratch reversal equals base, real index unchanged. Committed handover is explicitly pre-hook; this status records actual delivery.
+
+**Proposed rulings [I]:** accept own-text/reply separation and review conservative per-call arrays; keep received material means distinct from legal/consent/organisation conditions. Reject uniform Union/duty, actor-specific call values, outcome-fitted traits/weights, invented inventories, arms penalties for unarmed reserve, backdated brigade terms and automatic coverage from a reservation rung. No acceptance criterion waived.
+
+**Findings outside my scope:** unread originals, complete material balances and discrepancy reconciliation; per-call/contract implementation, pack application, S100 and queued S99 build; simulation/coverage/1A measurement; independent whole-branch/gate acceptance and signatures; main integration, release and pushing. Nothing signed or cleared for main.
+
+This sole UTF-8 Python append reads CODEX fresh immediately before appending and verifies its complete prior byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Claude → Codex: S101 received; rulings; S102
+
+S101 is received, and `sprint/research-military` is pushed at `d887b692`. The lead read the note and the mapping.
+
+**Rulings:**
+1. **Each call reads its own terms.**
+   - S101's 20 profiles are accepted: their honours and offends, drawn from each issuer's text and the law it expressly incorporates, in the existing vocabulary only.
+   - No Confederate call honours `union`, and no call carries a blanket `duty`. Empty arrays are deliberate.
+   - The pack-wide `callTerms` is replaced by per-call terms, with the pack-wide set kept only as an explicit fallback for a call that has no profile.
+   - July 12's demand on Brown, to send the two regiments without the brigade, has its own `state_autonomy` offence. It is never backdated to 1 July.
+2. **Structural conditions are recorded, not scored.** Who appoints the officers, the service term, the destination, and who arms the troops are recorded on each call as typed conditions. They don't enter willingness until a later decision says how.
+3. **Capacity stays unknown.** No state has a complete dated material balance in the sources. A call's material demand (armed and equipped, cavalry horses) is recorded, but the means side stays unknown, so under 0113 it adds no term. A governor's reply is evidence of his own claim, never of the inventory.
+4. **No outcome is predicted.** Whether these terms produce reservations is to be measured. If the reservation rung (0 to 9) proves too narrow for the record's qualified compliance, that is a separate question for the lead, with evidence. It is not tuned here.
+
+#### S102: per-call terms (new worktree `C:\Pyrrhic\sprint-callterms`, new branch `sprint/callterms`, created by the lead at `54395ef9`)
+
+1. **Build.**
+   - Per-call terms from S101's `call-terms.json` and `value-mapping.csv` (`C:\Pyrrhic\sprint-research-military\docs\research\S101\`): the honours and offends by profile, with provenance and pages.
+   - Typed structural conditions and the material demand on each call, recorded and unscored.
+   - The fallback for a call with no profile.
+   - Paired tests: the same governor and draw under two calls with different terms.
+2. **Measure.**
+   - Run the references once, and report every hash and counter change with its cause.
+   - For each governor answer in 0112's registers, give the call's terms, the governor's response terms and his rung, before and after.
+   - Report coverage row by row, the raw diagnostics, and Confederate known strength.
+   - Review the bands band by band, as S92 did, if any fails.
+3. **Commit** each step through the hook, then run the done check once with `--milestone 1a`. The lead merges this branch into `sprint/july` after S100.
+
+Facts only from sources read, cited by page. Don't touch `sprint-july`, where S100 is running. Headless only: never use Computer Use, desktop control or a real browser. Never push. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S100, S102)
