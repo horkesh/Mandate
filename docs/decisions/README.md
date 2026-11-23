@@ -19,7 +19,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted; extended by 0019, confirmed by 0035 |
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
 | [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted; refined by 0032 |
-| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040 |
+| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040; extended by 0114 |
 | [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027; amended by 0026 |
 | [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |
 | [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
@@ -109,7 +109,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0103](0103-the-press-carries-received-stories-into-the-seat-view.md) | The press carries received stories into the seat view | accepted |
 | [0104](0104-the-opening-of-the-war-follows-its-causes-and-its-news.md) | The opening of the war follows its causes and its news | accepted |
 | [0105](0105-1as-first-calibration-round-continue-or-park.md) | 1A's first calibration round: continue or park | accepted |
-| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107 |
+| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107, 0115 |
 | [0107](0107-the-sprint-continues-on-codexs-renewed-allowance.md) | The sprint continues on Codex's renewed allowance | accepted |
 | [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted |
 | [0109](0109-two-pushback-floor-cases-belong-to-other-mechanisms.md) | Two pushback floor cases belong to other mechanisms | accepted |
@@ -117,3 +117,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0111](0111-pushback-is-measured-by-named-acts.md) | Pushback is measured by named acts, not by every response | accepted |
 | [0112](0112-the-pushback-registers-and-what-1a-requires.md) | The pushback registers, and what 1A requires of them | accepted |
 | [0113](0113-a-judgment-without-evidence-adds-no-term.md) | A judgment nobody has evidence for adds no term to a response | accepted; clarifies 0020 |
+| [0114](0114-commanders-propose-and-orders-carry-discretion.md) | A commander may propose another goal, and a goal may carry conditional discretion | accepted |
+| [0115](0115-the-tick-budget-is-measured-on-its-own.md) | The tick budget is measured on its own | accepted; amends 0106 |

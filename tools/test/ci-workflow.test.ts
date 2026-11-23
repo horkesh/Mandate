@@ -62,18 +62,26 @@ describe('the CI workflow', () => {
     }
   });
 
-  it('runs the wall-clock budget tests on the Linux job (lane 1.0t: the pre-commit hook leaves them off)', () => {
-    expect(all.check).toMatch(/MANDATE_TIMING: \$\{\{ matrix\.os == 'ubuntu-24\.04' && '1' \|\| '' \}\}/);
-    expect(all.check).toContain('wall-clock budget tests');
+  it('runs the stopwatch files serially after the parallel suite, only on Linux (0115)', () => {
+    const suite = all.check!.slice(all.check!.indexOf('- id: test'), all.check!.indexOf('- id: timing'));
+    const timing = all.check!.slice(all.check!.indexOf('- id: timing'), all.check!.indexOf('- id: no_skips'));
+    expect(suite).not.toContain('MANDATE_TIMING');
+    expect(timing).toContain("matrix.os == 'ubuntu-24.04'");
+    expect(timing).toContain("MANDATE_TIMING: '1'");
+    expect(timing).toContain('--no-file-parallelism');
+    for (const file of ['packages/cli/test/done-check.test.ts', 'packages/cli/test/planner.test.ts', 'packages/kernel/test/map-performance.test.ts']) expect(timing).toContain(file);
+    expect(timing).not.toContain('continue-on-error');
+    expect(all.check!.indexOf('- id: test')).toBeLessThan(all.check!.indexOf('- id: timing'));
+    expect(all.check).toContain('wall-clock budget tests | $TIMING');
   });
 
   it('proves on the Linux job that the timed tests ran: it fails when any test is skipped (lane 1.14, from 0086)', () => {
     const step = all.check!.slice(all.check!.indexOf('- id: no_skips'), all.check!.indexOf('- id: boundary'));
     expect(step).toMatch(/matrix\.os == 'ubuntu-24\.04'/);
     // It reads the report the test step writes, on the same job, after it.
-    expect(step).toContain('run: npx tsx tools/no-skips.ts runs/ci/vitest.json');
-    expect(all.check!.indexOf('- id: test')).toBeLessThan(all.check!.indexOf('- id: no_skips'));
-    expect(all.check).toContain('--outputFile.json=runs/ci/vitest.json');
+    expect(step).toContain('run: npx tsx tools/no-skips.ts runs/ci/timing.json');
+    expect(all.check!.indexOf('- id: timing')).toBeLessThan(all.check!.indexOf('- id: no_skips'));
+    expect(all.check).toContain('--outputFile.json=runs/ci/timing.json');
   });
 
   it('runs on pinned Linux and Windows images, never a moving -latest label', () => {
