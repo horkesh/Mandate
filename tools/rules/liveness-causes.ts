@@ -44,7 +44,20 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
         '2e93b31911e1584cfcc62153fa48095d3800963555bd4ca8394df1e5256e22f7',
         '369be556873a08393c353c4dc15f1c8bbe28bdbba2eeba9b24c365d60700f336',
       ].includes(fingerprint(r));
-      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet) {
+      // S98: review the accepted S97 application band by band, as S92 did.
+      // Bind five now-quiet Union paths and three testbed wording corrections
+      // to their complete observed records and retained live controls.
+      const s98Quiet = [
+        'a7451a43e70a8130c20d6b8adc284081f79f1e253ac118e219d109963081018a',
+        'c0680fd24f7d05223653c54969aa4b3e78c7a57b14bc44c6f436ff64e7dbf417',
+        '752859cc4580b4ad3610a6b74e30a24877d6e57e4eb3935ed0054726591155aa',
+        '050979f2c7a814065b2b31800764ead8f0e228184429b85ab1c09d6286ca88ea',
+        'a980a88dc7af1ed1213a5330e4d2f3d2b6a5f0bcba7c63d911a2bbc42e089822',
+        '9fb4d82ec7415440bd8acf7d3f0ccfa122b8b8f0560d878a239e2865961a1803',
+        '4fa865169228dbab8f3d90ea90fb379afed80e97ae181e8469785fe0c9e5f045',
+        '629dcb749c4a4a0cb3ac02098eb628369b3cffe7df4bee452ca2a092a0df1f33',
+      ].includes(fingerprint(r));
+      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

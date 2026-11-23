@@ -6,6 +6,18 @@ const original = { 'reference/mechanic': { minFires: 5, maxFires: 20 } };
 const current = { 'reference/mechanic': { minFires: 10, maxFires: 40 } };
 const record = { key: 'reference/mechanic', before: original['reference/mechanic'], after: current['reference/mechanic'], observed: 20, cause: 'The new received notice adds ten deliveries.', evidence: 'notes/change.md#notice' };
 describe('liveness changes require a cause and around(observed)', () => {
+  it('S98 permits only its evidence-bound quiet records and preserves their live controls', () => {
+    const receipts = JSON.parse(readFileSync(new URL('./support/s98-quiet-transitions.json', import.meta.url), 'utf8'));
+    expect(receipts).toHaveLength(8); // five Union transitions; three testbed wording corrections
+    for (const { record: r, driver } of receipts) {
+      expect(readFileSync(new URL('../../' + driver.test, import.meta.url), 'utf8')).toContain(driver.needle);
+      expect(livenessProblems({ [r.key]: r.before }, { [r.key]: r.after }, [r])).toEqual([]);
+      for (const changed of [{ ...r, cause: 'another cause' }, { ...r, key: 'another run/mechanic' },
+        { ...r, evidence: 'elsewhere' }, { ...r, observed: 1 }, { ...r, after: { ...r.after, maxFires: 1 } }]) {
+        expect(livenessProblems({ [changed.key]: changed.before }, { [changed.key]: changed.after }, [changed])).not.toEqual([]);
+      }
+    }
+  });
   it('rejects a changed band with no record', () => {
     expect(livenessProblems(original, current, [])).not.toEqual([]);
   });

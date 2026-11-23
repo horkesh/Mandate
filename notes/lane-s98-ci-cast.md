@@ -6,7 +6,9 @@ The fixed plan is two implementation commits through the unchanged hook, then ex
 
 CI follows 0115: the parallel suite has no MANDATE_TIMING; the three existing stopwatch files run serially on Linux, with no other file sharing the done-check measurement. The unchanged no-skips checker positively requires all three timing assertions; its input is the isolated timing report. The summary records the actual timing-step outcome. 0114 is copied from main solely to close the mandatory decision chain before 0115; 0016 and 0106 have their reciprocal links. No S96 implementation is included.
 
-Cast application and final evidence are pending. Formal standing/whole-branch and gate reviews remain deferred under 0106/0107; nothing is signed or cleared for main.
+CI step committed through the unchanged hook as `fa047a19`: 241 files, 2,167 tests passed and five inherited timing-gated skips. The local isolated timing run executed 51 tests with zero skips; 50 passed and the unchanged history budget failed at 64.2 ms median /172.9 ms p95 on this shared Windows host. No retry or hosted-Linux pass is claimed.
+
+The cast application and evidence are prepared in `docs/audit/s98-evidence/`: all 110 original/draft actions, production page/date provenance, preserved source limits and original-chain holds. The 12 failing Union bands were reviewed individually from the single reference capture. Fifteen append-only records implement seven positive recentres, five new Union quiet transitions and three testbed wording corrections; the exact eight zero-count records are fingerprint-bound. All five live controls and 324 rejudged saved band rows pass. The cast/band hook and the single binding done check remain pending. Formal standing/whole-branch and gate reviews remain deferred under 0106/0107; nothing is signed or cleared for main.
 
 ## Findings outside my scope
 

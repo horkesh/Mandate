@@ -2120,6 +2120,286 @@
       "copyUsed": "archive.org cu31924077725913; printed pp.502-504,514,523-524,552,561-564,567-569,572 read from retained page OCR C:/Pyrrhic/mandate-research-sources/S92/. Source receipts and limitations in docs/audit/s92-evidence/README.md.",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-I-I-7",
+      "title": "OR I-I, printed 7; contemporary document dated 1860-12-29",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/001/0007; retained read text docs/audit/s98-evidence/read/OR-I-I-7.txt; SHA256 9f0e90ef1692434838fdce0303ef04a0dfc1f2960dd63bd86d9e77e1bda5646f. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-I-I-166",
+      "title": "OR I-I, printed 166; contemporary document dated 1861-02-06",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/001/0166; retained read text docs/audit/s98-evidence/read/OR-I-I-166.txt; SHA256 185f4c048f02a6c0d5d72cb92dd9a6cced1ac89e1989d3fe2b60f462ed227d65. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-I-I-493",
+      "title": "OR I-I, printed 493; contemporary document dated 1861-01-22",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/001/0493; retained read text docs/audit/s98-evidence/read/OR-I-I-493.txt; SHA256 ff98a04e6cc62e36f2f00d22011577bb792999ded5bf3b44af30dfe2e0ce58a6. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-I-I-494",
+      "title": "OR I-I, printed 494; contemporary document dated 1861-01-22",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/001/0494; retained read text docs/audit/s98-evidence/read/OR-I-I-494.txt; SHA256 49ece77a3717e57a21c4a7e3b91b20a6c27e14e2609627b6b16b3c0721822999. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-I-I-495",
+      "title": "OR I-I, printed 495; contemporary document dated 1861-01-22",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/001/0495; retained read text docs/audit/s98-evidence/read/OR-I-I-495.txt; SHA256 20d21ae884d00088f4b1d4d368cdff052cb06dd8f6b42f17f4c2b665b29278f2. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-I-I-496",
+      "title": "OR I-I, printed 496; contemporary document dated 1861-01-22",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/001/0496; retained read text docs/audit/s98-evidence/read/OR-I-I-496.txt; SHA256 94d54c15169249f00a2e3dd62452e60fc45d78bcb69d3ea781aaf93955211320. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-I-II-1007",
+      "title": "OR I-II, printed 1007; contemporary document dated 1861-07-29",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/002/1007; retained read text docs/audit/s98-evidence/read/OR-I-II-1007.txt; SHA256 8d518b6a47e571220fcdc466152bbcda500e2ab1dfb729b81d70bc09e7b8d74c. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-IV-I-18",
+      "title": "OR IV-I, printed 18; contemporary document dated 1861-01-05",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/127/0018; retained read text docs/audit/s98-evidence/read/OR-IV-I-18.txt; SHA256 6d208c0edf2368d0669f547b2ebc786622e51d1bd1b8ac10c0658e69e561646f. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-IV-I-19",
+      "title": "OR IV-I, printed 19; contemporary document dated 1861-01-05",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/127/0019; retained read text docs/audit/s98-evidence/read/OR-IV-I-19.txt; SHA256 0a3a83d3d2c58b34970bc4c0b0a778546fe51e19bf9d5ba9ac6dd3d972f7c0da. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-III-I-76",
+      "title": "OR III-I, printed 76; contemporary document dated 1861-04-16",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/122/0076; retained read text docs/audit/s98-evidence/read/OR-III-I-76.txt; SHA256 9ed8ee573991e3be68165112c2e2a303fb310306e67b5e74053d09175be8ec59. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-OR-III-I-81",
+      "title": "OR III-I, printed 81; contemporary document dated 1861-04-17",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://ehistory.osu.edu/books/official-records/122/0081; retained read text docs/audit/s98-evidence/read/OR-III-I-81.txt; SHA256 0fcd812cfef3c8b1ba9f40be88f4fb1c77c8b8a687341841642afea88042423e. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-NH-III-388",
+      "title": "Nicolay and Hay, History III, printed 388; contemporary document dated 1861-03-16",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/abrahamlincolnhi03nico; retained read text docs/audit/s98-evidence/read/NH-III-388.txt; SHA256 c47025f794e991e72abe1160d5a57ac06fc985b8d325c1e4dd414465db5abc1b. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-NH-III-432",
+      "title": "Nicolay and Hay, History III, printed 432; contemporary document dated 1861-03-29",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/abrahamlincolnhi03nico; retained read text docs/audit/s98-evidence/read/NH-III-432.txt; SHA256 2fa1b4a9f20765b35397de41dd6b88c403a112f47e73e5f8bd1e998c934bd0ba. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-SEWARD-481",
+      "title": "Seward at Washington I, printed 481; contemporary document dated 1860-12-10",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/sewardatwashingt01sewa; retained read text docs/audit/s98-evidence/read/SEWARD-481.txt; SHA256 6861bb9f9a7c6ec6cbf4c5f5deab390c02bc7c952e0d44ff1d101e525b436577. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-CHI-109",
+      "title": "Chicago Convention Proceedings (1860), printed 109; contemporary document dated 1860-05-18",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/proceedingsofrep00repu; retained read text docs/audit/s98-evidence/read/CHI-109.txt; SHA256 cbca4801a494a9f65908abcf2e5ec30ad463d02a962d858ab7bbe772fe358037. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-CHI-113",
+      "title": "Chicago Convention Proceedings (1860), printed 113; contemporary document dated 1860-05-18",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/proceedingsofrep00repu; retained read text docs/audit/s98-evidence/read/CHI-113.txt; SHA256 3676673190fe0d5a8ef2ac559ae04b5798b3abf9367bb0d82d1d41319e31b68f. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-CHASE-489",
+      "title": "Chase correspondence (AHA 1902 II), printed 489; contemporary document dated 1861-01-07",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/diaryandcorrespo00chasrich; retained read text docs/audit/s98-evidence/read/CHASE-489.txt; SHA256 fcc015832232c8f2e328948713058454c1a7572c5a6e790444367d6fb8b23c92. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-CHASE-490",
+      "title": "Chase correspondence (AHA 1902 II), printed 490; contemporary document dated 1861-01-07",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/diaryandcorrespo00chasrich; retained read text docs/audit/s98-evidence/read/CHASE-490.txt; SHA256 fd54e609a177f300fa09513cb39cfc1583caa455272226f3d8005df133631da0. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-CHASE-491",
+      "title": "Chase correspondence (AHA 1902 II), printed 491; contemporary document dated 1861-01-10",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/diaryandcorrespo00chasrich; retained read text docs/audit/s98-evidence/read/CHASE-491.txt; SHA256 444bbe92994b92848c36b4a98b5bdd70ac3bae795e104e2ddd70da57a9112e4a. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-STAT9-333",
+      "title": "US Statutes at Large IX, printed 333; contemporary document dated 1848-03-09",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://en.wikisource.org/wiki/Page:United_States_Statutes_at_Large_Volume_9.djvu/359; retained read text docs/audit/s98-evidence/read/STAT9-333.txt; SHA256 ccb20dc863d8dcf34b6517765b7da82ab566231787bf6908d26f886b8eeb7949. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-NH-III-431",
+      "title": "Nicolay and Hay, History III, printed 431; contemporary document dated 1861-03-29",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/abrahamlincolnhi03nico; retained read text docs/audit/s98-evidence/read/NH-III-431.txt; SHA256 80f529362450248dcc39d745fec9ac50d9c0c2e517adda9e00f574152f3c7804. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-CHI-108",
+      "title": "Chicago Convention Proceedings (1860), printed 108; contemporary document dated 1860-05-18",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/proceedingsofrep00repu; retained read text docs/audit/s98-evidence/read/CHI-108.txt; SHA256 ab06cc25a306c8a583c8edb692e5af010eb420582a5ce43957b34bbd36ba7ef2. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-RR-DOC16",
+      "title": "Rebellion Record I, Documents, printed 17-18; contemporary document dated 1861-01-06",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/rebellrecord01moorrich; retained read text docs/audit/s98-evidence/read/RR-DOC16.txt; SHA256 1bd012ae615cecfcabe55f6a4c7e291ffd673800c2de4dea6a55bb174869d534. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-HARRIS-JAN7",
+      "title": "Tennessee Senate Journal, extra session (1861), Harris message, printed 6-18; contemporary document dated 1861-01-07",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://civilwarcauses.org/harris.htm; retained read text docs/audit/s98-evidence/read/HARRIS-JAN7.txt; SHA256 4e32801fa432e40206f028c37455eca7820c442dcf15a4e5ff57d8562ae4044c. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Full web-tool transcription read, lines 8-88. Printed range pp6-18 is the transcriber attribution; original page breaks not independently verified. Surrounding site biography is excluded. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-SCOTT-MAR3",
+      "title": "Scott to Seward, March 3 1861, printed manuscript 1-4; contemporary document dated 1861-03-03",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://hd.housedivided.dickinson.edu/index.php/node/35246; retained read text docs/audit/s98-evidence/read/SCOTT-MAR3.txt; SHA256 a039c424e08a78e00b6c144a6a42cab10ddff8e30039d70f923c00bf49ce5625. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Full transcription read. Printed page range is the transcriber’s attribution; original page breaks not supplied or independently verified. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-FOX-I-2-4",
+      "title": "Fox, Confidential Correspondence I, printed 2-4; contemporary document dated 1861-01-31",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/confidentialcorr01foxg; retained read text docs/audit/s98-evidence/read/FOX-I-2-4.txt; SHA256 4cf6ed2cec7b6974aa7badfe504d950c09705048fd28aa5adc8d620c09342e5c. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Complete Blair Jan31 letter; no following February letter or later editorial appraisal supplies a leg. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-RR-DIARY11",
+      "title": "Rebellion Record I, Diary, printed 11; contemporary document dated 1861-01-06",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/rebellrecord01moorrich; retained read text docs/audit/s98-evidence/read/RR-DIARY11.txt; SHA256 6bd1184e199b85954a27b3a93bba7ed95b9d6f1bcee5ae8ba90a896b87967c79. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Date heading and selected report read; surrounding running heads bound the printed page. Original address day is not manufactured from a locator. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S98-RR-DIARY15",
+      "title": "Rebellion Record I, Diary, printed 15; contemporary document dated 1861-01-21",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/rebellrecord01moorrich; retained read text docs/audit/s98-evidence/read/RR-DIARY15.txt; SHA256 cfc49cd64d3139f0d31b126c54692fd7994f357b43f7686ce799128fd25edd9f. Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Date heading and selected report read; surrounding running heads bound the printed page. Original address day is not manufactured from a locator. Production use and source limits: docs/audit/s98-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

@@ -1,0 +1,126 @@
+{
+  "before": [
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "actual": "comply",
+      "count": 107
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "actual": "comply_with_reservations",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "actual": "object",
+      "count": 5
+    },
+    {
+      "side": "confederate",
+      "role": "relay",
+      "actual": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "role": "relay",
+      "actual": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "actual": "comply",
+      "count": 106
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "actual": "object",
+      "count": 7
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "actual": "comply",
+      "count": 7
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "actual": "comply_with_reservations",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "actual": "object",
+      "count": 1
+    }
+  ],
+  "after": [
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "actual": "comply",
+      "count": 123
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "actual": "comply_with_reservations",
+      "count": 2
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "actual": "object",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "role": "relay",
+      "actual": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "role": "relay",
+      "actual": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "actual": "comply",
+      "count": 108
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "actual": "object",
+      "count": 5
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "actual": "comply",
+      "count": 7
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "actual": "comply_with_reservations",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "actual": "object",
+      "count": 1
+    }
+  ]
+}

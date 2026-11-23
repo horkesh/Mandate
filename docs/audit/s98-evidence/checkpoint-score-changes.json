@@ -1,0 +1,1298 @@
+[
+  {
+    "pack": "testbed",
+    "day": 15,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 10,
+          "traced": 12,
+          "controlPermille": 10224,
+          "supplied": 11,
+          "frontLines": 1,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 24119,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 12,
+          "traced": 12,
+          "controlPermille": 11434,
+          "supplied": 12,
+          "frontLines": 1,
+          "frontSegments": 9,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19085,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 2,
+      "blocksMarching": 4,
+      "blocksTotal": 21
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 10,
+          "traced": 12,
+          "controlPermille": 10224,
+          "supplied": 11,
+          "frontLines": 1,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 24119,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 12,
+          "traced": 12,
+          "controlPermille": 11434,
+          "supplied": 12,
+          "frontLines": 1,
+          "frontSegments": 9,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19085,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 2,
+      "blocksMarching": 4,
+      "blocksTotal": 21
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "testbed",
+    "day": 30,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11610,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23937,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10128,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11610,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23937,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10128,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "testbed",
+    "day": 45,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "testbed",
+    "day": 60,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "testbed",
+    "day": 75,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "testbed",
+    "day": 90,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 23949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 21
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "testbed",
+    "day": 105,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 21949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 20
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 21949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 20
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "testbed",
+    "day": 120,
+    "before": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 21949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 20
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "north",
+          "held": 11,
+          "traced": 14,
+          "controlPermille": 11710,
+          "supplied": 13,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 21949,
+          "blocksUnknownStrength": 0
+        },
+        {
+          "faction": "south",
+          "held": 11,
+          "traced": 11,
+          "controlPermille": 10028,
+          "supplied": 1,
+          "frontLines": 2,
+          "frontSegments": 13,
+          "pockets": 1,
+          "pocketRegions": 10,
+          "menKnown": 18473,
+          "blocksUnknownStrength": 0
+        }
+      ],
+      "contestedRegions": 3,
+      "blocksMarching": 0,
+      "blocksTotal": 20
+    },
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "pack": "union-1861",
+    "day": 15,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 20353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 90
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 18353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 89
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 30,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 20353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 90
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 18353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 89
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 45,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 20353,
+          "blocksUnknownStrength": 11
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35000,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 16236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 2,
+      "blocksTotal": 91
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 18353,
+          "blocksUnknownStrength": 11
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35000,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 16236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 2,
+      "blocksTotal": 90
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 60,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 27353,
+          "blocksUnknownStrength": 13
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 35300,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 72236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 123
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 74,
+          "traced": 74,
+          "controlPermille": 73600,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 26353,
+          "blocksUnknownStrength": 13
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 35300,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 72236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 2,
+      "blocksTotal": 123
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 75,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73323,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 28843,
+          "blocksUnknownStrength": 14
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36080,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 107791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 133
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 74,
+          "traced": 74,
+          "controlPermille": 74263,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 32843,
+          "blocksUnknownStrength": 14
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36080,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 107791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 134
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 90,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 75,
+          "traced": 75,
+          "controlPermille": 74398,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 31843,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36080,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 148791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 8,
+      "blocksTotal": 153
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 75638,
+          "supplied": 75,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 35843,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36080,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 148791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 8,
+      "blocksTotal": 154
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 105,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 76,
+          "traced": 76,
+          "controlPermille": 75413,
+          "supplied": 74,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 32843,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37400,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 154791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 165
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 78,
+          "traced": 78,
+          "controlPermille": 76653,
+          "supplied": 76,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 36843,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37400,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 154791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 166
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 120,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 76,
+          "traced": 76,
+          "controlPermille": 75648,
+          "supplied": 74,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 71843,
+          "blocksUnknownStrength": 16
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37440,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 154791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 171
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 78,
+          "traced": 78,
+          "controlPermille": 76888,
+          "supplied": 76,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 75843,
+          "blocksUnknownStrength": 16
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37440,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 154791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 172
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 135,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 77283,
+          "supplied": 75,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 111843,
+          "blocksUnknownStrength": 22
+        },
+        {
+          "faction": "union",
+          "held": 39,
+          "traced": 39,
+          "controlPermille": 37960,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 154791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 2,
+      "blocksTotal": 192
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 85,
+          "traced": 85,
+          "controlPermille": 80723,
+          "supplied": 83,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 116843,
+          "blocksUnknownStrength": 22
+        },
+        {
+          "faction": "union",
+          "held": 39,
+          "traced": 39,
+          "controlPermille": 38000,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 154791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 8,
+      "blocksTotal": 194
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  },
+  {
+    "pack": "union-1861",
+    "day": 148,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 89,
+          "traced": 89,
+          "controlPermille": 81680,
+          "supplied": 87,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 94376,
+          "blocksUnknownStrength": 22
+        },
+        {
+          "faction": "union",
+          "held": 40,
+          "traced": 40,
+          "controlPermille": 39350,
+          "supplied": 39,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 118497,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 9,
+      "blocksTotal": 175
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 91,
+          "traced": 91,
+          "controlPermille": 84160,
+          "supplied": 89,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 88452,
+          "blocksUnknownStrength": 22
+        },
+        {
+          "faction": "union",
+          "held": 40,
+          "traced": 40,
+          "controlPermille": 39440,
+          "supplied": 39,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 115566,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 22,
+      "blocksTotal": 174
+    },
+    "changed": true,
+    "cause": "Downstream of the S98 cast/setup/response/planning changes: existing levy and command paths change field availability, movement, contact, supply and combat. The retained operation/battle observations and daily counter changes identify the resulting events. No movement, combat, strength or historical threshold changed; aggregate effects overlap and are not single-cell causal isolation."
+  }
+]

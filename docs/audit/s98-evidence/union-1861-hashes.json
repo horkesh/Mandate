@@ -1,0 +1,1038 @@
+[
+  {
+    "day": 1,
+    "before": "401f2db8236a5a9b16d4ac95a4875c0193d499b411d45df8a1ed327b5a120acd",
+    "after": "749d054e280499e1ff1fbbd1358dafbac72d0d1d34da7eded3fed18124054765",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 2,
+    "before": "5c9dafb236cc6e4853949064f76707ae04523a26581b47a71b7be63aa0ba710e",
+    "after": "a1066579b77dbdcc86cce03f640294645eaf7e45b2cbd1cb2b7693561b0abddb",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 3,
+    "before": "8de1c7c4e2399dabbfa85d102d733d96be621aff4d2c7bff5834527c1eae5eb7",
+    "after": "872205a6b071833dee5cf44bbb4cb491f1a43fc99620ffd9e275fdb8e70abdc2",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 4,
+    "before": "120fc2303ead3e5a27c6486ddb8200ca5737cada6fb2e4f90ad20c3c2f842a77",
+    "after": "ea58fe4d0424cacc0928a16755c6ea7c956ef926d6f638bf80f094931987adad",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 5,
+    "before": "aef9aacf793296a271adbbbfa8ab54cd3f855576ac3091359302c570890e43f2",
+    "after": "7ea346738d74b25575b6d231dd3c986a2323fe6719afccc90a572865e3eb1c56",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 6,
+    "before": "e178acf4edcfd8f9ca1fe0c7c44c7bf13929a9ac317a1de97aaf3c21c5689cbc",
+    "after": "000e5f26d2910bf5ec39ec4276b504fd411f770df992e9d3a15a9229d4efa1ed",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 7,
+    "before": "fbaffd6fe131e30920ece70d517262cc4f0390d20c716388f22db8951c52efc2",
+    "after": "8252eca561ae3e9f72b0292e4756584adc13c569f455527b9383e3a5fd18c2f5",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 8,
+    "before": "b00ecb17b75578f78b5405fadd5d53a03f1340b82ef93cbd9adf96da5f61bbed",
+    "after": "571ab2ecd32494cbd38cb8a802e506684f24687b1d5b02d23ecdfa8899c88b04",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 9,
+    "before": "540dd7b844b1d0c9044a12953810c3b81915e23ba855f0ae09f120e619b9b79c",
+    "after": "dc69f712319a4b829d7baa5e696a6788b82fa1de0e4dbec3d676b028e3cb2f2d",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 10,
+    "before": "c184857233ee7fbb111c0b4c9c66c839a222c66ec4db7dcb967094099625b0de",
+    "after": "f213bf14b79dd819224705d7d6499e839db44037c03452d61d03f3774683f1dc",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 11,
+    "before": "e6cc67503b0d1ac69d4a4692341d79f83d49d612c191543b2fa21dd395b19bd1",
+    "after": "0cf0cb9f64e315e271aee588eb3ccb1db829e78d98099b587d8c844de09f07e5",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 12,
+    "before": "e9750f591c7a7dde200a96d2ec7439e7437b3a409c6a4486f5b3e1d659d6d841",
+    "after": "35e76ba7e489d3211507d36d3885bdb4709d97fb4177586038416b799cd7f4e1",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 13,
+    "before": "62e12714376b59e93b3483726199647515860db61e3d10da8f5ed106cac4f102",
+    "after": "28ce29b8f96975479494c423f9c4a7bfb9d431393339ee60c774e19b71bafd91",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 14,
+    "before": "a9f768f62fdf629b6fa3eeb42ea0f851d8cc28be5f0cee2bc86f05fa7a972054",
+    "after": "46af2d31ce1d6d3ba92f752d970c5e479884b26057b9099953ceb713e61746c5",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 15,
+    "before": "29056e8c8addd4beef1e3ce880a50699d9d19ccacfa1c92d37b0d0eb6d00c659",
+    "after": "8cbc1a3fee06ea31887361623ffab045d14b3204f923e86ac5d88ba6a0b915ed",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 16,
+    "before": "642ef3d7ddb512f9885811b3957c1b4737917caab9ce3c5e936bb3e2edac2487",
+    "after": "63efc131424fcaca61b3ac7aecc5e2379833311a93be22dab07b618934168b38",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 17,
+    "before": "46accb0013d360d6bb509ebbe9936fccf5b905809df18fa4e6e6996cc4f4868b",
+    "after": "28fa44a4913ecc2a1852feda965459ec359b8dc88b08c4b32c020131a7e3c7d7",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 18,
+    "before": "f142aff576fb1bd2092a95b2ee8ac55ae93e990e8e3fe3c7938b9fd83cb3a6bf",
+    "after": "ead5bc85c6a915336b9e155136a6b98581676b6ba4a0ab0e765459aa1e94de60",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 19,
+    "before": "12c084bb9d13062cf39c606bfbd995c8351d68f94d08aa609f60a31511aa2a40",
+    "after": "31e33b1f863987fe24bddb580fd79835f7734fa71b7ebac838cd57bcfde7fd61",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 20,
+    "before": "748e18ddad0710de3fe4aa5cb2a95b26a8b009004938a80eebf145cc280aa847",
+    "after": "7ff1f7fd065ccba755fe8a5aa252b0d45f3a7bebbdb64a65b46ecb06d7996883",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 21,
+    "before": "5362bb1adf9a5b0004998a79a849211706d317e6428c0406767d43eea259e8f6",
+    "after": "3225e09ed141e2425489bcebf10b2de60e3f538ca3f470c42914264a0ca0996a",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 22,
+    "before": "38c90ac2930f381758e0483098f80514cf32aba0b20cb7e15ea1c21c10ec2f5b",
+    "after": "60fde3b27faa5903f9d1f851c585e072c91cef12091567bfaeb0f96a472dd791",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 23,
+    "before": "edf13d02373e6af7837376bf10bd67c0d5eae62a4c3825ed4c80fd4fd0d0d531",
+    "after": "02957886f4c934d1f25341a7f36045f742722d0b401ea272f0e8e66829668090",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 24,
+    "before": "14f343fab0f50c6f4c1e8f0e88fb738070978be4c68584d2b362a34224ed7720",
+    "after": "587fd1097bc3779a8f9b93b8100774f2eb250d7467ef50593fe0a68d84f3dd04",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 25,
+    "before": "436deb93d7acc5beb7b8e8150b78d54c46c2ef3d312f95eb6d6e9dc3366e5309",
+    "after": "1bd1841adb975c5465e5d14fe07126083b873246eaaef977817728ed3ab00e99",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 26,
+    "before": "618bb91973edae80df4b1cda57c36f0a9c8ffa27a9daf436d131ce6697c5762d",
+    "after": "cad64b40184240eccb4fb83148f52f437b8f29b266465b422e3a4eacf9a191e4",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 27,
+    "before": "252c71f91a001b402a560356a058dad90117f75bce47c91eae67c9b155cbd1ae",
+    "after": "f2bd02f4d212fd5b5b0064c9de36a2405022723c794b461f41a84adcb069e91d",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 28,
+    "before": "1cc0d658b66f4b7d96375de786b798bd37f423041a403e21e0d5f6e5f118130e",
+    "after": "1330301bac8dd045fb7f133648cd043d33820d36dd31fd165fb36eeb1ad82216",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 29,
+    "before": "9aa3f852fa717f3547afe57564d240c82dde41fc3c68c7107e4d5d4dc639baac",
+    "after": "69d711d30ae51dbdc3f7620cea21d0eed2735a01e8900aa1e5dc511aed935883",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 30,
+    "before": "9f24a24c68c89d1a07dc58806239615173984903549f92dd695516f2ee89a6b9",
+    "after": "ae7141dfe1e3381b1419fa349141cbaf5150525b09479d63c40e9922029b30be",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 31,
+    "before": "79f694fbe8a01d34334a88e640b11f6c88e7539b22f8417205baef65be191e15",
+    "after": "6c476b2c1521e6cf60d14225354f037948010cf2addb32bb65349929a7371096",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 32,
+    "before": "f0fb9b6c14a68e6eb8f0e802b9fdc5a95d460ed356978e7dff5b8cdd481b3fa4",
+    "after": "9cd42f6481807bda9d89b097291de90df8a9c3ed3c772bb3330e251c6889c03d",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 33,
+    "before": "1692810960d3a13b4fb1485b05db1056bd54d8221dcf696dd56c1456a84db6c5",
+    "after": "7d407cb83b67141375dec2e7cc9c5b30e232869e1b2bd79322be0b87052bd51e",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 34,
+    "before": "a7487c4356224b7115bdaa4ff2fabf7a13e3c527e459e5eeea4d2c0f49c7102a",
+    "after": "8e4ec20d2a882c983718bf5d04eead934e7a07b21b22a9999ce60b41dc83c711",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 35,
+    "before": "d9bf7654745e9745c6a7334bd024575651379efd25e2b33b80f3f36c68585c76",
+    "after": "18ed486a6897050f670ad38c531f535902aa9e9a303e0a594d819588d1a1b203",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 36,
+    "before": "f4298983174a00f5483cb0f2bf733899d2238862f3d63c5f0c97d66a578fb93e",
+    "after": "b828d43ed8f776e2a566d000b9c6f9ac3fac0b62caed629925b96c590fbaf58e",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 37,
+    "before": "1c64b0dc4df7e0f4881521dfa9aff1f2ae65944b58eebc4ac393374cec915fc4",
+    "after": "1b2a05bb92d443c1cd8ea727624d10ee178b0cab2fcd1a6c8ed47e5549c1ec60",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 38,
+    "before": "a34276b0e307d97c7d98a0342896c783446e2cdfd8aee014425a6820b82f2ccc",
+    "after": "356319196fbc6112a7d5831790daf2aa4a66ecd9e0cb18db287e636ba81e9c1d",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 39,
+    "before": "c0512e674de97a8b4f048375f10ceb9da53dad4e35151ca9efd27987413a894f",
+    "after": "48c9bfcf15fbf9d50fe378ae823a87b8d97ca7f87897054c2ec24fa82040d28a",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 40,
+    "before": "54e8b1b234a8e34feb8c3acc838f623d94e462e664b72c608d5e11d2b278dea3",
+    "after": "23a1e4d000cf4e5c1c4b0b502bbe0a17f29e5c3ca7b20f694599daa32edf069d",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 41,
+    "before": "58918f3dee97e5008de1d1cc264f9f05f0785e2b6beaa6b07f8adf1bf33a001c",
+    "after": "d4ab28196b577899130b9756188258eed749af2f4d8a7360712947d203054dcd",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 42,
+    "before": "2857d1ae4c44e67f871c3e7e4909e7a2694cf819b8aeb0bd33d283c2e04e20c5",
+    "after": "df77ee62e6bb8917a4b51cfac1b1757f0ad8867f4a658f5549f4fce8ea0c9bf7",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 43,
+    "before": "82ac08e05eed706270c98bded7f9eaf73bfe83f0bad8cd37c4c5ea3aefcb063f",
+    "after": "5f4067fef436fd65b1699367e3709e1534a4d68befb8d082b0ec1eba734843c2",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 44,
+    "before": "0e9d5e41fe2314e29b7c8cd9e34d82419842e45ce4aebdf8fc175122dd5d700d",
+    "after": "3cb1220bd773c8030ada88acc4a260ce03d4bd219fb79c10fc15ac4bb3f41928",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 45,
+    "before": "772d03230ff32d1c71f8e8514c777b39651fa31d5b94dc4deccdebdba2300f5b",
+    "after": "7568d243908adf0ec9de55078d3a407c2724fa25e0b674d8ef37b1dbff4c873e",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 46,
+    "before": "893bae270cdd73d68b3ad593aff6788d1ab31ab9d61420cebd7cd2906bb3eb9c",
+    "after": "263b17915af121c307ccbdadc9161c8a8e36caaa0548c495abfcb00198c2780a",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 47,
+    "before": "3d75dd35e3292c5fdd8bef3f9243f921892c1569d3503ef4c2e45e0449be24dd",
+    "after": "7aad3e4a3382bcf14be243b2913244f52f518980bc9916015cef7dcb2b36a683",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 48,
+    "before": "a31efff93ba8c348373b1d3ea54f56a925369d343029d403cce49c0339331ecf",
+    "after": "0c332b73f9fd09ed0379f163dad156c26a8cfc128c96ed56601f6c61c05e6ab3",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 49,
+    "before": "4da61ff751cb53ae6c956155f55be0a397080c95f61e6b4d0167850b5acad41b",
+    "after": "9b67069504cc8b34c87d37438dd30d3725c9925499b466eb5c9ff46ffd741828",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 50,
+    "before": "f9526f73b6cc364c722ad99438ab8622dfb23639789437d4729c1501a83f282e",
+    "after": "bc88311d80faa3ee5ffdcf6bbcb61deffc859f3fdd0d8f99c872731b23102539",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 51,
+    "before": "b91c66cec7e7cbd273923bba843bdb639bce1760879e64440738aaf3ddad694e",
+    "after": "58bc053ec1cb65948e076315a76510bd04f5cae18f8a990bba9f9065b7719360",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 52,
+    "before": "50df8e5becca6ee1c9b227a7f83b91bfd0a37a663b5bef760eabfe65ea5a6045",
+    "after": "b3df110e7544f66f354ee9da7bae866cf51b0538f3dc479b0953949861a37d1b",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 53,
+    "before": "d7be56cca495519b90fc7d4282df07e2cabcde8676d8d2cb20d8d327e206619a",
+    "after": "2b581473ba4985435131389cb87cd1e17ee69df44883110c28dbf223f5f595cd",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 54,
+    "before": "1ffd4a5c4bbe037da2ef130893d72b4e09fb34b2fc5d8434ff0e576298dd0378",
+    "after": "7ebb42c03ccf886138a3f8840d20f5477ae6ac664c724a6b7f48ab3bcd5895be",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 55,
+    "before": "0c87cc23f18e6c81a08881960e4b427f29f808453ec1a1b6faad4c8722a7d1be",
+    "after": "9f4e87beb3be7e3d1bd2f12caf3b84e09068e9e6d369405dac14fb5eb5b7d7e5",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 56,
+    "before": "aeb4c37b5bc2908854be0ad71f2d2c2211da8efcc5f7cebd8310da1b0d2595dc",
+    "after": "396caa0983808c9a215983fe8a032db13095361469fec6604fea6657234533d9",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 57,
+    "before": "e0c3b36faaafbff7571f0859ba7a6986ebc351440d7afcc7f661cbff85bd45d1",
+    "after": "92be6773756413ee86785ddce708a11fb7cfeea39bf21bf0ae0c37de56ab2234",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 58,
+    "before": "96f5e7d41be6db20a595278f0cde48e1c38911f01372097d42a530ffbde0745c",
+    "after": "7179cddbe4adc2ea1dd44b3277e56183a9468fc1ea3bac6b95e6d47544a8ddd8",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 59,
+    "before": "7517f55a6aff78e8f2b1f9d69f3797d55546ee9033aed6370c556c798cc4a935",
+    "after": "bcfc4c90a1567ef1a1dcee498512c90a396d3b68f623db461d8c652e7489f3c4",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 60,
+    "before": "2be55a75b909d11031c5d6eeaf25f580a9b1f710d170b50d1dc3f40d7a1871af",
+    "after": "2947459a9161f13a667da039700211318704c148f13fb0d6a103b8099f363e3f",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 61,
+    "before": "b4c4c590334da459780b822dfa1bc8e0171a7aedc8f023810b2a4e07807578fe",
+    "after": "b03e800226a26c9591b1e621090a2d93d3e6e7b5a7cadb9b578bee5b3f3dd4d9",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 62,
+    "before": "7da39ba3e92ba3e811f787f047a4b46c870423c8ad3ba227102d6b0d32d5831e",
+    "after": "980d731086c28371b7f969b31d3fa439b1e555ca07ddec4618b0b933d9f9e46d",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 63,
+    "before": "c0e8c97ecf1ba117b6195458b745b75020bdd60f72124381f5a76ab931ead2c6",
+    "after": "e4a884cb40ed196164b9147c35e6c8aaf3c87701e893d73b9abac3051a0bb1fb",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 64,
+    "before": "1fe8a6a145ee07e950e1602fba0f47b54848f169c9a4a01e7c9ccd07b4642076",
+    "after": "20876a6cfa46ae0662c9bb4f27862ee3306eac7df72e9bce934a181f77cf054c",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 65,
+    "before": "09e37a4177673f48b41ef9fe716dbe88bd68c5805fe1fad46db9cd614f8f9e53",
+    "after": "a64b284f251b69afddbc6ddf5dfe26cfc1e78e2c0195762442969b0ad2d8fa58",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 66,
+    "before": "53bc33b1bf2f228b01a43b9fb3cfedde0f42ce7b79dd1d4c3fa16bfcd22c1eb4",
+    "after": "2c075d630b1a3362f5a54ece398fc1ad0d8c66f9fdc58c3a8dfd8dd3280f6c8f",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 67,
+    "before": "c3026b1d3adb1cde278f3eb6447cc2644b51d27c1d542022eb52248340730180",
+    "after": "9a8d420401a207255b775e3ebdd4a52061fd9e5c88c1cd7dc25496bcfa00bb1f",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 68,
+    "before": "7ea55ea6da8c68181ddff3bd62db189851b7351ecf0ef765e79e56ef1c1dffeb",
+    "after": "5266cbd41c8268aa5b995a5391753b3a675d5eadf39be3a46609d23c7b5d8b10",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 69,
+    "before": "ddc7d593e70821548989ac20d1c3422b8bb1161ce008fd2b223e1d4f41c28e21",
+    "after": "b03f069261ee29099cb53b69ad2bb771ece0cd6856de74b8c90b0ea7bcbdc982",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 70,
+    "before": "9108d0e2bad46507c29f6ae8bb068c1b36f7500636a601f689d8a6e4c438cf7e",
+    "after": "ac1b90893a5ef7d8d7e7371ccc50eb9a7649d59503963ebbd1773f6ef87e5b12",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 71,
+    "before": "c52d47e3f1609848769ed48404f91777261d151a9c11934b1317d6202eabddc2",
+    "after": "735b8be6f167b95deadd8ce9ca510e7c225b0a357424cacb77507d753482fdb6",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 72,
+    "before": "a514b7e325aede8faba90d99bd70cd824119834a77be885975289099f5ff0775",
+    "after": "638357deeb71c54837ac86ebdc730e1e6373fe6ef467615912bca7d294ed6784",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 73,
+    "before": "03b8802a4e6ae0c406c8d000895fbf40807829f841a7f3d56bc8b465c7013262",
+    "after": "a3d71d7f4d8988bd90bb78d38a417b9d25a4f1f80a5c7944bcbdd0f0368d8c02",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 74,
+    "before": "def131de0fadf045def0f26f2d74198597cad19b267611adbb634301808cfc84",
+    "after": "287821d23d3bae5b3b1946d28436fcda63ff4479c10f6db9248a4098e8fc9e3a",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 75,
+    "before": "641c9b4a5e9417a2af8085ce552a452e7eedd3478c4cb4a45fd107c303280945",
+    "after": "33da01180e7fa4157636e082af9625fee9f2386fb34118fa3d7bcd439688d689",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 76,
+    "before": "b809c433c2c3cfda878d216d71387ffc05ee2a1f6793229bd0de556eeb01db58",
+    "after": "b1fcdd5cd08f1fb736d15561602659c515e95c6a4c433710df92d87f93cbf1ac",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 77,
+    "before": "69d709925f746edc954865275ffd5336d26c79e13a2a76cf6bd2540ba26fb0f6",
+    "after": "151f9c19823e93aa6a80e00355728e16e88f12b5d49d3c4ef81cf5c3826ab6cf",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 78,
+    "before": "475181608d0a21235deb8eba12cbed12ef3ca0a7e224b350a5667a1d14501f69",
+    "after": "7b8517336b866c437392f7ea22db507ac8cc646814bc8b4f5fda70a8f9797545",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 79,
+    "before": "dcd50949c9d1674868d7a16f3d1eca9eeb4b04516fa7247d654583f50775ed73",
+    "after": "c58bdd410e765cae3463028ddecf81e4f5129c312228578382c3bde1ee91df40",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 80,
+    "before": "5ea65cc53d8cf5fb15d6ab5dd6fedde241c33c6513a41a1fb77d0c4a0e55af31",
+    "after": "6efafe27d1f2f0145aafb8341cd22070edd8b62f3a9872e1dd852c8f4018e1a8",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 81,
+    "before": "5fa4cf29de8a920f1c730dccd72bbe599d3aa5eeb28c6a420fb64b51f5528e3e",
+    "after": "bdb13a49a2c72c1b03cb60b36d5c0b82a913157c1c14204a435e19896fdf40ff",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 82,
+    "before": "7e5e52082a8494cb96463f8e5c1da0bcb0c6e53d6a88ee38a32c520f8b893540",
+    "after": "ec2c161ffd0eb2f8aa5d4786109a5f622cb0df0fc48215a8386ca82d469e4f98",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 83,
+    "before": "9118dfb4a9316cfb37aaa294e820db7cafde5014b17bf0491f0d35b948f2dc91",
+    "after": "843a17376a0aa234cd34ebb9137760660ac53f4ba0993b752710b032ed39a11f",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 84,
+    "before": "21b973f18dbd500ee7394bf2400674b970891da694b94ad6cf2b6fb1afce3f95",
+    "after": "94856f11d00ee8786de3f1f31cad265fcd12996b67eee0b43b0a507bcdd96b08",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 85,
+    "before": "16b8e5f7099fa0f7a153e582423d9144c06056e4e6a52de6eb90b09e9ae12798",
+    "after": "ab96825b2fc374e32f03b9d97e3f197afef524a2675f13aacb35844bc766cfb7",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 86,
+    "before": "2f8baa32de2eef3642a11f45b393a40f44979fe30c786fd2de03f69c6c88abb2",
+    "after": "51285fff3568674e22391f96a6fa8fb93224d4ca80d6dd099473e62dbc91f4ea",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 87,
+    "before": "18808ae2ba249741c95b2643f910c91ba4c120e7e8c25bbf24212a7bb8b7f99c",
+    "after": "48d02cad7ac5564e65972eaf678009b0876afebe25c13a392583b3c2e9e816c1",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 88,
+    "before": "38b12cf0ac68353f97ad5072f6424348996fdda0e3506b9f5013eaac40bf51bc",
+    "after": "0fcdbf6809291304d4fea511446ef1d6ec93e8b5d7984c1a9a4639c03c9edbc4",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 89,
+    "before": "0d9f2d3bbb9cb86be5efa5d4b127afdab27059582ae184dc7dbd590622c0f1ab",
+    "after": "279e06b554de84dc64860fd6fc18fa5589fecc59a0d19498184de8410cbddc64",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 90,
+    "before": "79f15804cd1980ea920c16335a18a3f0da36f12e81b9d75877ae7211992d8104",
+    "after": "a7b7b4cf8fade73b90b98679cb5e5c149c65dc63d38a92a5ca27248262197458",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 91,
+    "before": "0abb74d3a010f7bae27173e143df656b655a0e2ce2f7df4f1d29d4ad66cf842d",
+    "after": "a0679b319821c8540133b300f94f6a0f7e6a470774c87e4dee38ada5cfdbf665",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 92,
+    "before": "5530683cd6282d86173c918b0037f38119fb681c4b3d095e55a6c289476db1eb",
+    "after": "9ac49cd9fc9a65e29593274e1256e5aa7f49babc5497a4cf8d6b2dd5c816d725",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 93,
+    "before": "b41887823bacf33548f75750889b75ebe413d8d559db170263f33a0430269382",
+    "after": "764fe589df6f9be3fcc782f2a37ad46f61c59030cfa7f06f8802257284df92e8",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 94,
+    "before": "e742d48a1eb4bdda238ecab1ffb4375462c683f0bcdff1391fb4736c24491fde",
+    "after": "18b3f9022514ab946531d48e20b97bbb4e940374dc8ff7427bda996bf1c7f3cf",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 95,
+    "before": "830f6c7a75ec0b0ff5ee5b3ee8e350e49b219b068d1914098a41451cf3e0e4d4",
+    "after": "f820c935963db8454d271bd57492c7db8e6b072eedd356be93d013dedcaadbd1",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 96,
+    "before": "f1a5ce69127187b9311fb0cfa33e1d7165f6dbf617fa75920e28795054174657",
+    "after": "8b12c572030b4ebe54fed1be8a7d263c025b617b625d58cfa659fcfdff04fb41",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 97,
+    "before": "7104968df2b47eb5715cf418531fcc807b8a59a56b27eb43f4ab9ccc1247bf68",
+    "after": "58cb916b2cec9270c5e7a9619873283283da913220907f6e39a8d270d2c40c66",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 98,
+    "before": "6181db2cdbf25dcda4f3d0ba43415e206521bb284db5b5857421172c4fab205b",
+    "after": "8f65df87a8b619e39c7c99fe1f4c2ceb1c6aed4c44da48e3354f1f4c728b75bc",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 99,
+    "before": "3e1ffd0fcdf1c5cdd7ff4d7b47a984aad37a3a32b9e37b9c963fa69943c9bbaf",
+    "after": "db01a01bc6dc77d617bc09101d41ccd0be84f44a62e99bb5a04fbf5096daaf70",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 100,
+    "before": "743d1038eb0231c99264b936e2d1e9cd7822f224bd718fe888a9d375708dd615",
+    "after": "26cf263757658a4e79103bb179e7060ce6bccf6ed016b655efa8cdd02ec00b8c",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 101,
+    "before": "d6bf098abea7302de3bda43b1bb7b3418870f9fe2e6a709a0ddcf401ef0a8652",
+    "after": "93ade849ea23e79df27bb61991baa9995a1051dce429e003b93cecbff50ed569",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 102,
+    "before": "a27e40d73baa84ac7f1db786978500e41372eb7b5bd2725c2bbbaab477bd69c9",
+    "after": "a6b620e8fe5d4a061be5463046bfe1c38b926d80608a8f7b738ddefe63281026",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 103,
+    "before": "50d576384f3554676304804f7986fdbbb04fc9f0eb6277ca876834deaf28f16d",
+    "after": "9b651b31d5b1da7cb094c95e0c48a126fa9b184a3afd17089f8036757c5715c0",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 104,
+    "before": "189fa2e8300979d6f9d3b0254dc950bf2156c0a7bd65bc34bda0b409a7d7232c",
+    "after": "494da815591a9ffca7f650b04fbd4e068f63bf864299da18aef584071501d2d8",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 105,
+    "before": "bae9b7741744f28901de36eea4c1af60be8ad617f3d6cf5659a3983919e88347",
+    "after": "148c67458b4fbaed63ee9c48633b64a102fef8a14bcdda96e4f3ed5de75807c8",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 106,
+    "before": "bd94319ecd35b75be8ddfaf7da926510b74809dcc330327a415965ff9d1c91ba",
+    "after": "227d4da0ddda47978e657d8455a6d79a9421ea4f13b0727bdb73a2bc74ee63a1",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 107,
+    "before": "09b47ddeaf2fe4c88abd76727283cdbe1f92d8d9ac3a645075ea7881f8f03057",
+    "after": "29140b95b31d1ef611c932341388c78d5d4d1173ff50ccab079fe04093f38357",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 108,
+    "before": "e6f9a09f364b641f2fd8df0aaef10182317518d2c3bc7566e82e15885a228945",
+    "after": "a237017e7a566643ea880e40d1b712f995c486b13fa3b0b2f50cb6c394fb659d",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 109,
+    "before": "72ab87016d90f9d77be78739979e13e5c33530b406d9d38ba28e13733c878feb",
+    "after": "5ec724272cc003c69b229bc6f2b41747091cbc8c718b7e4da09c1a2877772d25",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 110,
+    "before": "b5542786cd8cc7f999e65a6832ff76a0daf0fd04b15053b0a2c5b6f1e356a102",
+    "after": "e36ec0f489fac33506ed1bfe79cbec41b7f69be03356f1a4ae5c60db307224f0",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 111,
+    "before": "d6e5eb5eb0c1924572995dada9a940b2385410728b631cdcb71ce92dbea5635a",
+    "after": "062b01c7857dbc62b20cb06d3cfa8d202b20cd96394bfd73abfee5ff33982760",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 112,
+    "before": "1e843dcbd962b07162a27a51a97cfbd6e1ce3e851a0cbdd183bb463d1d5fb8f7",
+    "after": "89b26302e3b3bcc8d5ec3ad3a7740bcd102573cf359f22d586d9fe511fa0c2f5",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 113,
+    "before": "3fb1f0db892e5577f5281fb4276774ec461105084083f42a6667609a00592861",
+    "after": "d0ce04364cbec4c36012caaa0ca153e55b0a23b14ca8bad10287a25a8a6df696",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 114,
+    "before": "c0da0200e4b9eb1786fde9654eac782462eb542a08c836aa9aeb88589b3bf420",
+    "after": "9f50674a45d1a18d48b4d85e505ff87f0d4f5ab7f2773618ab1890c8a77a5116",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 115,
+    "before": "dcf9900a015f1c4db7d2c50f734829f4a9e947fca1b7574767119067d16f80a9",
+    "after": "8cdc245e4e446bec5ef9e6dcc00dff1455c519c626cde006650d647db14a56fd",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 116,
+    "before": "2122921cb59430acd23bd90115a4def3ebedc1e34bca1e8ee1bbcd3be566a58f",
+    "after": "fe3cbebef5a5df9658ce65cd406b169256169fc2811d0fa863d4ce7630183ee9",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 117,
+    "before": "840ecd7b9d9ab0f44ffae2633b66259a1de75f077f34c4d0f4b4e8ed80b0b9d4",
+    "after": "bbfa3ebf300b8a218ab5b66782a46105db9da7a0cf2f19b52f768d0945de76cd",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 118,
+    "before": "b86057902bc2076ac5e0f508875dde38cd1b5e4b75e92548b4418b1124fc38f6",
+    "after": "f2896a3241c3a236a91ce836c1351f2a30e1da9b55d5d7a2a8ba000c24b0b2b0",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 119,
+    "before": "89bb36daeafe317aea5fc387f4252c62695e1ed9fa916978fcd1461338568c1b",
+    "after": "2f11b9e142b30f1d80a0e9fd2b43625a9140587b592d006448e7d530c3dbaf9f",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 120,
+    "before": "697de39cd8e7ee414031f2589a0519136b62b8a9bca638560464e6f99d547c1e",
+    "after": "9e09f153ceaf752b3f58e1432adb3615c1d3fc47889861837b57c621a306e809",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 121,
+    "before": "88432007695fd10d24b8c1d5579eb958935cf5076596cfda82fadd33239b84c2",
+    "after": "43cec30263b4f176b680d7588b54812f0eda67711b93665a9905fcd2f6590169",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 122,
+    "before": "7d9589bb09a7a4d7bf87b29fb5c480ef45cb91b3bf81cbf7e90f6f414646b06f",
+    "after": "8fe7d8337c4021db256d57c9822a4d770b82cf93b5f1cc7f0500d14618854efd",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 123,
+    "before": "27e0c90ccd4affb0e12f9111756b7273438f14ad6a227af54b1c24554cba9a13",
+    "after": "9f471b510864e86f7bd4df0e0501ac25c23ad8bf621b49a42bf8c6aa2734c7f2",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 124,
+    "before": "f2701c489cd76be609d87f1251b244587a332c5935dab01789214630c7019df2",
+    "after": "1405fb63690e09e569d92282d0c5c4c0d1ba2bf61e385f1cce15eb9e4edb1a62",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 125,
+    "before": "39d8d52444086b672e5ba7a230407742335d8871bdf8d5950d176b3a9ad61cea",
+    "after": "b62d5ca1f71e9a03da71331fd4e2252f2bb600638d7eef486c7a183d8b8614e3",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 126,
+    "before": "ec6bd1edbc6461db0b92c360fe332c42467eb16447feb004898259e700db47a2",
+    "after": "291cf5dcf8252bf87dfd8f485b356ab66269770f41bc672574e86740fedca1d5",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 127,
+    "before": "58e8862fe7f7e92ab0dce62ce5aa2a1427977a4e9a3c85613320f361dd98ddd1",
+    "after": "45abf55d7d718768961a6afeacf15060cfd4e0773c7d68cc1fa71a9e52ccc07e",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 128,
+    "before": "bb66db3f3ffe0da36df8a480e4db282a72eca38812b227c85d4232e093fbb493",
+    "after": "a6afcebd29c27f09068007cbc1e265dea966ee51e2b61623c28fbfd353aeb08b",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 129,
+    "before": "a559ebdddaf50b6b0e1f28739e40396fa79e35bece7d84ad986f07e56474a4f9",
+    "after": "58b016c00686c3ef0a06f1aa579c7a81d6b35a0dc9e61368e03adcd5af2c0606",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 130,
+    "before": "7cc417b1a16170cd1cbf2eee4b123e02910652c10f892087946dafee7737c7ec",
+    "after": "92b9793b421509cf057dbd2b7629a0a0dad1e4b49ed5a3f9db9a802073c4fbd1",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 131,
+    "before": "74adef4eabe6eff844a919008cb810b624cf01f5f009da875982e95b4077a167",
+    "after": "934d54df16ab238b2ec2548774238ee75b035d849a922c7ae93befd911e3ca27",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 132,
+    "before": "dc56e8258e82d34b1795040a7ce2fcb38512a8f07cd56311852c4887162f7f22",
+    "after": "87ae18e1a94795742af2fd4ffb63522af5f311e8c4caeb7bcbd0c4ce31f8ecaa",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 133,
+    "before": "d816783212017df2ddafe8312918cb7c08472d3a3bbc45f6f546ee0eedc8d8f2",
+    "after": "3c94d5141f2f52b97c3e528bce8d686eb6861b8aee55e5bba1434cb1f6b27a23",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 134,
+    "before": "57a0c71f6b1e6d36ec78a6e5a29fc36e8e777ea63679596b905e1e7ce34dd3ff",
+    "after": "ac6e2d0ccbf80886dd588529871c9335b55cb85cfd953ecd56bffcad536b660e",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 135,
+    "before": "a78f7eaaa64f8e90213100d998693831a4c3a201b53bb415721dbc3d46ffe153",
+    "after": "8d2d3671a72591d687d1fa9ae36f3f317d287fdb7936c122e1b935a26fac9907",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 136,
+    "before": "476c57cc3884ec1adb96979bfa7646d100712c40712d36e04e7a07193cf59c4a",
+    "after": "df06b41a006e4a3f6a90877b6e8c116cbb3344fd9601497a8bbe7583b0592db4",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 137,
+    "before": "f34b6d587c771cd72db425a48641df75fedcac2864ac03e99be734b5d350c852",
+    "after": "8918cd06f3eae4713b917aa88fb71809e1fb8880434099910c30e6b31e4a2ed9",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 138,
+    "before": "5e1156062a8c95576a137cabde017efd520ce58230af283f7fa311194248e0c5",
+    "after": "0b99c9a553bce6c5ea84f443faad2e19fe15e774d81f5e6feb66f64a09e4811a",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 139,
+    "before": "5da8853c93d8ef263a9670089365a274ead7bdc0b9f89f457a60c5471f03bfb3",
+    "after": "e42bb73aad88565cddfc6ce9a7fd5a19e093f8a1f31694db5b94273fbe9d7c81",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 140,
+    "before": "1ea5104dd4df7fefd0b7d224db317c4e0ef0541d857234a952f8f229931daad9",
+    "after": "cfb4952a4962fb96b817d83b2b727dd4c0002454179eb0ad2f9ed40991c605d0",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 141,
+    "before": "215bd4fd4214b75f238fe98f4df8bc129706f8c69689cf183ff091e0aace5675",
+    "after": "12fcccf54feabd227f2f96c274f66f2defa5b7f16fa9a3e056ca40406d47841f",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 142,
+    "before": "bbc56d3a1dc03dddd06ef3a65b750a9924229dffcc61557448def0a524a4bbb5",
+    "after": "c185bc6e188286beb795922789f89e332b94f0ce1448268f05e288dae1cb65a7",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 143,
+    "before": "21e64a6eb1db1262cd7bd0ae760c667e906d91008da0aef069e93ec3be2ac3d4",
+    "after": "55be7f2a1dbdbad272effc655de537aa0cd2714e6d35a3bca60f89adf335a136",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 144,
+    "before": "bac6866c09ea356c0ef5132e1dc80660711c8a71323c684c1e0cb852a966d480",
+    "after": "03d06decbfba9fb69fabe14a27dcb593ec92d31d4defea0fbcc649b51b666b25",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 145,
+    "before": "e79dbe3c1030f3dcc78334f28096b83f14de9ffaa6dd6a9d7d0c3da3c818202d",
+    "after": "1b96df9545dc94c49be7d0e7cd6f7b767b7bc6072914c75c8bffc0aea06724ee",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 146,
+    "before": "c8315f82e055b82370ca46ac86695514912dc80b967480a3cccb7fb43391d4b3",
+    "after": "5008678b5643624cac66d83354110a2ac762044c89f88a797f77392789505d42",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 147,
+    "before": "682e9b4280ff2bc6466093e7955d56d5261b93cd2091f8291686bfbb5f52a5ee",
+    "after": "3a5429d344b41838e989dba441e4e77204f9b114f2b56efaa3a0fdc13eca0f06",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  },
+  {
+    "day": 148,
+    "before": "ca9d2b3842eaacea1ad036822545431a4d6ff34967756b340e6446ade8923034",
+    "after": "c117a46e2fb38b16118b733942baff549245e9f1512ce3cdf7e700b5209c0e08",
+    "changed": true,
+    "cause": "S98 changes evidence-backed cast centres in initial State; values/traits/evidence presence also change responses and downstream State. Daily hashes fingerprint the complete State, not a single act."
+  }
+]

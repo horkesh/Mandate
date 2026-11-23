@@ -1,0 +1,3089 @@
+[
+  {
+    "actor": "scott_winfield",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p333 section 2 dated 1848-03-09",
+        "source": "STAT9-SCOTT-1848"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1848-03-09",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "STAT9-333"
+    ],
+    "basis": "Congress expressly commends valor, skill and judicious conduct and unanimously thanks Scott. Retain above ability/high standing [I], with the 1847 campaign scope; this says nothing about 1861 health.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "above",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:STAT9-SCOTT-1848 p333 section 2 dated 1848-03-09",
+    "applied_csv_atom": "above:S98-STAT9-333 p333 dated 1848-03-09",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "reputation",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "p333 sections 1-2 dated 1848-03-09",
+        "source": "STAT9-SCOTT-1848"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1848-03-09",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "STAT9-333"
+    ],
+    "basis": "Congress expressly commends valor, skill and judicious conduct and unanimously thanks Scott. Retain above ability/high standing [I], with the 1847 campaign scope; this says nothing about 1861 health.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "high",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:STAT9-SCOTT-1848 p333 sections 1-2 dated 1848-03-09",
+    "applied_csv_atom": "high:S98-STAT9-333 p333 dated 1848-03-09",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-12-lincoln",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-2 (Scott to Patterson 13-18 Jul)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-03-12; 1861-05..07",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "SCOTT-MAR3",
+      "OR-I-I-200",
+      "OR-I-I-201"
+    ],
+    "basis": "The entered operational advice is after the starting boundary. March3 is separately read but does not validate the inherited average boldness rating. The later memoranda are not backdated.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:DOC-1861 SCOTT 1861-03-12-lincoln+OR I-2 (Scott to Patterson 13-18 Jul)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-51-1 p339 (2 May indorsement)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-03-03; 1861-05-02",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for high",
+    "read_keys": [
+      "SCOTT-MAR3"
+    ],
+    "basis": "March3 is eligible political advice, not a high rating of candid reporting. Blunt alternatives to a confidant do not establish the direction; the May endorsement cannot rescue a starting cell.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:DOC-1861 SCOTT 1861-03-03-seward+OR I-51-1 p339 (2 May indorsement)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "JFEPPERSON SumterScottAL0312",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-03-12",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "SCOTT-MAR3"
+    ],
+    "basis": "The entered March12 letter is late. The March3 greeting wishes Lincoln safety but supplies no calibrated personal average regard. Do not infer it from office or polite wishes.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:DOC-1861 JFEPPERSON SumterScottAL0312",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:union",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-1 p200-201",
+        "source": "OR"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-03-03",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "SCOTT-MAR3"
+    ],
+    "basis": "His first alternative urges conciliatory amendments expressly to prevent further secession and recover departed States. Preserve that qualified priority, alongside the acknowledged depart-in-peace alternative. Drop the later OR memoranda as starting legs.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "union:DOC-1861 SCOTT 1861-03-03-seward+OR I-1 p200-201",
+    "applied_csv_atom": "union:S98-SCOTT-MAR3 pmanuscript 1-4 dated 1861-03-03",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-1 p200-201",
+        "source": "OR"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-03-03",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "SCOTT-MAR3"
+    ],
+    "basis": "His first alternative urges conciliatory amendments expressly to prevent further secession and recover departed States. Preserve that qualified priority, alongside the acknowledged depart-in-peace alternative. Drop the later OR memoranda as starting legs.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "conciliation:DOC-1861 SCOTT 1861-03-03-seward+OR I-1 p200-201",
+    "applied_csv_atom": "conciliation:S98-SCOTT-MAR3 pmanuscript 1-4 dated 1861-03-03",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:caution",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-12-lincoln",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-51-1 p369",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-03-12; 1861-05..07",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "SCOTT-MAR3",
+      "OR-I-I-200",
+      "OR-I-I-201"
+    ],
+    "basis": "The entered operational advice is after the starting boundary. March3 is separately read but does not validate the inherited average boldness rating. The later memoranda are not backdated.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "caution:DOC-1861 SCOTT 1861-03-12-lincoln+OR I-51-1 p369",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-04-19-wright",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-19",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-I-177"
+    ],
+    "basis": "The entered April19 Wright document is late and unpaginated here. The distinct Feb20 supply order is read, but doing an assigned job alone does not prove a general duty value.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "duty:DOC-1861 SCOTT 1861-04-19-wright",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "trait:infirm",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-5-p639 dated 1861-10..1861-11",
+        "source": "OR"
+      },
+      {
+        "at": "1861-11-01",
+        "source": "HAY-D"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-10..11; 1861-11-01",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-5-p639"
+    ],
+    "basis": "Infirm is not in the policy’s innate-trait list, so it requires a pre-start leg. The entered retirement evidence is later even than July31; the retained OR range concerns November. No starting health judgment is established.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "infirm:OR I-5-p639 dated 1861-10..1861-11+HAY-D 1861-11-01",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:seward_william_h",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-03-03",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for above",
+    "read_keys": [
+      "SCOTT-MAR3"
+    ],
+    "basis": "Calling Seward chief of the coming Cabinet identifies office, not above personal regard. Courteous closing does not fix a centre.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "seward_william_h:above:DOC-1861 SCOTT 1861-03-03-seward",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:cameron_simon",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "1 p241",
+        "source": "WELLES-D"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "unverified Welles I p241",
+    "pre_start_contemporary_leg": "unverified",
+    "direction_supported": "not established",
+    "read_keys": [],
+    "basis": "No pre-start contemporary Scott judgment was established from this Welles locator. The live citation does not date the document. Its exact page was not independently re-read in S97; the unresolved locator is not permission to keep a judgment.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "cameron_simon:below:WELLES-D 1 p241",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:mcclellan_george_b",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "I-51-1 p339",
+        "source": "OR"
+      },
+      {
+        "at": "I-51-1 p369",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "May1861 in entered locators; exact I-51 pages not re-certified",
+    "pre_start_contemporary_leg": "unverified",
+    "direction_supported": "not established",
+    "read_keys": [],
+    "basis": "The I-51 pp339,369 locators were not independently re-read in S97. No pre-March5 leg was established, and undated is not permission to retain below regard.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "mcclellan_george_b:below:OR I-51-1 p339+OR I-51-1 p369",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:patterson_robert",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 (telegrams 13-18 Jul)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-07-13..18",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-168"
+    ],
+    "basis": "The read operational telegrams are post-start. Average is an asserted direction and cannot stand in for unknown.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "patterson_robert:average:OR I-2 (telegrams 13-18 Jul)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "vol1 p80 dated 1861-03 (entry date not printed in the OCR, Russell reached Washington 27 March 1861)",
+        "source": "RUSSELL-DIARY"
+      },
+      {
+        "at": "vol1 p30-33 dated 1861-03-26",
+        "source": "NEWTON-LYONS-DOCS"
+      },
+      {
+        "at": "3-p371 dated 1861-03-04",
+        "source": "NH-DOCS"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-01-07; 1861-03-04; 1861-03-26; Russell locator unresolved",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "not above on verified legs",
+    "read_keys": [
+      "LYONS-30",
+      "LYONS-31",
+      "LYONS-32",
+      "LYONS-33",
+      "NH-III-371"
+    ],
+    "basis": "Lyons’s contemporary warning calls him dangerous and describes bluster/reversal, not above competence. Lincoln asks him to retain office: assigner expectation is excluded by 0085. The retained Russell edition’s p80 is not the cited Washington appraisal; that locator is not certified. No admissible above direction established.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:RUSSELL-DIARY vol1 p80 dated 1861-03 (entry date not printed in the OCR, Russell reached Washington 27 March 1861)+NEWTON-LYONS-DOCS vol1 p30-33 dated 1861-03-26+NH-DOCS 3-p371 dated 1861-03-04",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "reputation",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "p108-109,p113 dated 1860-05-18",
+        "source": "CHI-1860"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1860-05-18",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "CHI-108",
+      "CHI-109",
+      "CHI-113"
+    ],
+    "basis": "Others nominate and second Seward, and the first ballot gives the largest support. Retain high [I] within this Republican political sample, not universal public approval or competence.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "high",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:CHI-1860 p108-109,p113 dated 1860-05-18",
+    "applied_csv_atom": "high:S98-CHI-108 p108 dated 1860-05-18+S98-CHI-109 p109 dated 1860-05-18+S98-CHI-113 p113 dated 1860-05-18",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "6 p192-201",
+        "source": "NH-CW"
+      },
+      {
+        "at": "SEWARD 1861-04-01-thoughts",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "3-p370-372",
+        "source": "NH"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-03-02; March-April 1861",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for average",
+    "read_keys": [
+      "NH-III-370",
+      "NH-III-371",
+      "NH-III-372"
+    ],
+    "basis": "The March2 withdrawal request is early but does not establish average risk disposition. The March5 answer is on the excluded starting day; the Sumter opinions and April1 memorandum are later.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:NH-CW 6 p192-201+DOC-1861 SEWARD 1861-04-01-thoughts+NH 3-p370-372",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "candour",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "SEWARD 1861-04-01-thoughts (frank to his president, to the point of presumption; the Confederate-commissioners channel is candour toward an adversary and is not coded)",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-01",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "NH-III-372"
+    ],
+    "basis": "The entered April1 memorandum is after the boundary. Frank policy advice and desire for administrative initiative do not license a backdated candour or reputation motive.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:DOC-1861 SEWARD 1861-04-01-thoughts (frank to his president, to the point of presumption; the Confederate-commissioners channel is candour toward an adversary and is not coded)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "p482 dated 1860-12-16",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p493 dated 1861-01-08",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "3-p370 dated 1861-03-02",
+        "source": "NH-DOCS"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1860-12-16; 1861-01-08; 1861-03-02",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for average",
+    "read_keys": [
+      "SEWARD-482",
+      "SEWARD-493",
+      "NH-III-370"
+    ],
+    "basis": "The dated letters are early, cooperative and courteous. Conventional respect/esteem and thanks for kindness are insufficient to distinguish average personal regard from an unknown centre. Hold both stored versions consistently.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:SEWARD-WASH p482 dated 1860-12-16+SEWARD-WASH p493 dated 1861-01-08+NH-DOCS 3-p370 dated 1861-03-02",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "3-p365-366",
+        "source": "NH"
+      },
+      {
+        "at": "6 p192-201",
+        "source": "NH-CW"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "later N&H narrative; March-April 1861 documents",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "NH-III-370",
+      "LYONS-31"
+    ],
+    "basis": "The entered N&H historical narrative is not a contemporary leg; the entered Sumter opinions and April1 response are post-start. Separate December10 re-sourcing drafts are supplied without treating this inherited citation chain as valid.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "conciliation:NH 3-p365-366+NH-CW 6 p192-201",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:union",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "6 p192-201",
+        "source": "NH-CW"
+      },
+      {
+        "at": "1861-04-01-seward",
+        "source": "LINCOLN"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "later N&H narrative; March-April 1861 documents",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "NH-III-370",
+      "LYONS-31"
+    ],
+    "basis": "The entered N&H historical narrative is not a contemporary leg; the entered Sumter opinions and April1 response are post-start. Separate December10 re-sourcing drafts are supplied without treating this inherited citation chain as valid.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "union:NH-CW 6 p192-201+LINCOLN 1861-04-01-seward",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:reputation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SEWARD 1861-04-01-thoughts",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-01",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "NH-III-372"
+    ],
+    "basis": "The entered April1 memorandum is after the boundary. Frank policy advice and desire for administrative initiative do not license a backdated candour or reputation motive.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "reputation:DOC-1861 SEWARD 1861-04-01-thoughts",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "trait:secretive",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p481 dated 1860-12-13",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p492 dated 1861-01-03",
+        "source": "SEWARD-WASH"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1860-12-13; 1861-01-03",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "wrong conduct for defined trait",
+    "read_keys": [
+      "SEWARD-481",
+      "SEWARD-492"
+    ],
+    "basis": "Both dates pass. Confidential discussion with Weed and an unsigned letter known to Lincoln do not show withholding plans/information from superiors, the people README definition of secretive. No character defect is inferred from normal confidentiality.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "secretive:SEWARD-WASH p481 dated 1860-12-13+SEWARD-WASH p492 dated 1861-01-03",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard_others:chase_salmon_p",
+    "entered": "low",
+    "citations": [
+      {
+        "at": "p191 dated 1852-08-05",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p447 dated 1860-04-27",
+        "source": "SEWARD-WASH"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1852-08-05; 1860-04-27",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for low",
+    "read_keys": [
+      "SEWARD-191",
+      "SEWARD-447"
+    ],
+    "basis": "One distrustful partisan remark and a mixed dinner description (including sound) do not warrant the extreme low personal-regard band. Do not replace it with an invented average or refit a lesser band.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "chase_salmon_p:low:SEWARD-WASH p191 dated 1852-08-05+SEWARD-WASH p447 dated 1860-04-27",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard_others:blair_montgomery",
+    "entered": "low",
+    "citations": [
+      {
+        "at": "6 p230",
+        "source": "NH-CW"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-03-29",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "NH-III-432"
+    ],
+    "basis": "The cited cabinet advice is later than the start. The explicit distrust in Blair’s March29 paper is Blair about Scott, not Seward about Blair; no transposition is permitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "blair_montgomery:low:NH-CW 6 p230",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard_others:lincoln_abraham",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "p482 dated 1860-12-16",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p493 dated 1861-01-08",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "3-p370 dated 1861-03-02",
+        "source": "NH-DOCS"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1860-12-16; 1861-01-08; 1861-03-02",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for average",
+    "read_keys": [
+      "SEWARD-482",
+      "SEWARD-493",
+      "NH-III-370"
+    ],
+    "basis": "The dated letters are early, cooperative and courteous. Conventional respect/esteem and thanks for kindness are insufficient to distinguish average personal regard from an unknown centre. Hold both stored versions consistently.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "lincoln_abraham:average:SEWARD-WASH p482 dated 1860-12-16+SEWARD-WASH p493 dated 1861-01-08+NH-DOCS 3-p370 dated 1861-03-02",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "cameron_simon",
+    "cell": "reputation",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "p489-490 dated 1861-01-07",
+        "source": "CHASE-D"
+      },
+      {
+        "at": "p491 dated 1861-01-10",
+        "source": "CHASE-D"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-07; 1861-01-10",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "CHASE-489",
+      "CHASE-490",
+      "CHASE-491"
+    ],
+    "basis": "Stanton reports strong protests against Cameron; Washburne calls his possible appointment a calamity. Retain below [I] as these Republican critics’ esteem, not proof of corruption or national unanimity.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "below",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "below:CHASE-D p489-490 dated 1861-01-07+CHASE-D p491 dated 1861-01-10",
+    "applied_csv_atom": "below:S98-CHASE-489 p489 dated 1861-01-07+S98-CHASE-490 p490 dated 1861-01-07+S98-CHASE-491 p491 dated 1861-01-10",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "welles_gideon",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "3-p431",
+        "source": "NH"
+      },
+      {
+        "at": "1 p62",
+        "source": "WELLES-D"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-03-29",
+    "pre_start_contemporary_leg": "no; innate exception applies",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "NH-III-431"
+    ],
+    "basis": "The printed memorandum endorses reinforcing retained forts and asserting authority despite resistance: policy conduct, not self-praise. Retain above resolve [I] under the innate exception, not starting boldness. Welles’s retrospective chapter p62 is excluded.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "above",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:NH 3-p431+WELLES-D 1 p62",
+    "applied_csv_atom": "above:S98-NH-III-431 p431 dated 1861-03-29",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "smith_caleb_b",
+    "cell": "regard",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p108-109 dated 1860-05",
+        "source": "CHI-1860"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1860-05-18",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for above",
+    "read_keys": [
+      "CHI-108",
+      "CHI-109"
+    ],
+    "basis": "Smith explicitly seconds Lincoln on behalf of Indiana’s delegation. That delegated act does not establish above personal warmth. His later cabinet office supplies no missing leg.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:CHI-1860 p108-109 dated 1860-05",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "bates_edward",
+    "cell": "nerve",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "3 p388 dated 1861-03-16",
+        "source": "NH-DOCS"
+      },
+      {
+        "at": "3 p432 dated 1861-03-29",
+        "source": "NH-DOCS"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-03-16; 1861-03-29",
+    "pre_start_contemporary_leg": "no; innate exception applies",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "NH-III-388",
+      "NH-III-432"
+    ],
+    "basis": "His printed words combine forbearance with defence of retained forts at all hazards. Retain average resolve [I], within the innate window, not a starting caution value.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "average",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:NH-DOCS 3 p388 dated 1861-03-16+NH-DOCS 3 p432 dated 1861-03-29",
+    "applied_csv_atom": "average:S98-NH-III-388 p388 dated 1861-03-16+S98-NH-III-432 p432 dated 1861-03-29",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "bates_edward",
+    "cell": "reputation",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p108-109,p113 dated 1860-05-18",
+        "source": "CHI-1860"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1860-05-18",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "CHI-109",
+      "CHI-113"
+    ],
+    "basis": "Other delegates nominate Bates and cast 48 first-ballot votes. Retain above [I] as convention esteem, with the limited electorate explicit.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "above",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:CHI-1860 p108-109,p113 dated 1860-05-18",
+    "applied_csv_atom": "above:S98-CHI-109 p109 dated 1860-05-18+S98-CHI-113 p113 dated 1860-05-18",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "blair_montgomery",
+        "source": "APPLETONS"
+      },
+      {
+        "at": "1862-09-02",
+        "source": "CHASE-D"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "later Appletons entry; 1862-09-02",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "NH-III-432"
+    ],
+    "basis": "A later reference work and a September1862 appraisal supply no contemporary leg within the innate window. His own March1861 policy advice is not external appraisal of his gift.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:APPLETONS blair_montgomery+CHASE-D 1862-09-02",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "nerve",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "3 p432 dated 1861-03-29",
+        "source": "NH-DOCS"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-03-29",
+    "pre_start_contemporary_leg": "no; innate exception applies",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "NH-III-432"
+    ],
+    "basis": "The memorandum insists on relief despite risk and refuses responsibility for abandonment. Retain high policy resolve [I] as actual conduct within the innate window, not self-assessed ability.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "high",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:NH-DOCS 3 p432 dated 1861-03-29",
+    "applied_csv_atom": "high:S98-NH-III-432 p432 dated 1861-03-29",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "regard_others:fox_gustavus_v",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "1:2-3 dated 1861-01-31",
+        "source": "FOX-CC"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-01-31",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "not established for Blair personal regard",
+    "read_keys": [
+      "FOX-I-2-4"
+    ],
+    "basis": "Blair forwards Fox’s proposal, reports Scott/Blount’s estimate, and discusses policy. The most explicit estimate is attributed to other men; it does not establish Blair’s above personal regard. Correct reading range is pp2-4, not just pp2-3.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "fox_gustavus_v:above:FOX-CC 1:2-3 dated 1861-01-31",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "p159-160 dated 1861-04-27",
+        "source": "REBREC1"
+      },
+      {
+        "at": "III-1 p190 dated 1861-05-13",
+        "source": "OR"
+      },
+      {
+        "at": "III-1 p79-80 dated 1861-04-17",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-17; 1861-04-27; 1861-05-13",
+    "pre_start_contemporary_leg": "no; innate window but insufficient direction",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-79",
+      "OR-III-I-80",
+      "OR-III-I-190",
+      "RR-DOC16"
+    ],
+    "basis": "Dates are within the innate limit, but own policy correspondence and addresses do not establish average ability. No third-party contemporary quality leg established. Mere official action is not a rating.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:REBREC1 p159-160 dated 1861-04-27+OR III-1 p190 dated 1861-05-13+OR III-1 p79-80 dated 1861-04-17",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p1-2 dated 1860-12-19",
+        "source": "REBREC1"
+      },
+      {
+        "at": "p17-18 dated 1861-01-05",
+        "source": "REBREC1"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "address published by1861-01-06; original Jan5 day not independently verified",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "RR-DOC16",
+      "RR-DIARY11"
+    ],
+    "basis": "The address argues against immediate secession and precipitating civil war. The January6 diary entry explicitly reports its publication and points to Doc16. Keep a qualified conciliation priority [I], not unconditional endorsement of either government. The inherited Dec19 locator is unverified and unnecessary; do not assert an original Jan5 date from the key alone.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "conciliation:REBREC1 p1-2 dated 1860-12-19+REBREC1 p17-18 dated 1861-01-05",
+    "applied_csv_atom": "conciliation:S98-RR-DOC16 p17-18 dated 1861-01-06 (publication bound / address day unverified)+S98-RR-DIARY11 p11 dated 1861-01-06",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:union",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "4 p93-94",
+        "source": "NH"
+      },
+      {
+        "at": "III-1 p80",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-17; later N&H narrative",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-79",
+      "OR-III-I-80"
+    ],
+    "basis": "The entered April call conditions and later narrative fail the starting rule. Separate January5 re-sourcing drafts are provided; no April condition is backdated.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "union:NH 4 p93-94+OR III-1 p80",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:state_autonomy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "III-1 p80",
+        "source": "OR"
+      },
+      {
+        "at": "4 p95 (asked that Maryland troops stay in the state except to defend the capital)",
+        "source": "NH"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-17; later N&H narrative",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-79",
+      "OR-III-I-80"
+    ],
+    "basis": "The entered April call conditions and later narrative fail the starting rule. Separate January5 re-sourcing drafts are provided; no April condition is backdated.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "state_autonomy:OR III-1 p80+NH 4 p95 (asked that Maryland troops stay in the state except to defend the capital)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "competence",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "2-p5",
+        "source": "JCCW"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1863 committee assessment of July1861",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "JCCW-5"
+    ],
+    "basis": "The read p5 is the committee’s later assessment and evidence summary, not a verbatim eligible contemporary judgment. Its embedded July13/17 Scott wires concern orders, not a rating of Patterson’s gifts. Competence/nerve have the innate July limit; overestimates_enemy is not on the innate list and has the stricter starting boundary. Later assessment cannot turn outcomes into starting character.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "below:JCCW 2-p5",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "nerve",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "2-p5",
+        "source": "JCCW"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1863 committee assessment of July1861",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "JCCW-5"
+    ],
+    "basis": "The read p5 is the committee’s later assessment and evidence summary, not a verbatim eligible contemporary judgment. Its embedded July13/17 Scott wires concern orders, not a rating of Patterson’s gifts. Competence/nerve have the innate July limit; overestimates_enemy is not on the innate list and has the stricter starting boundary. Later assessment cannot turn outcomes into starting character.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "below:JCCW 2-p5",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "boldness",
+    "entered": "low",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-06-12-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-09-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-18-report",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-12..07-18 in entered citations",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-167",
+      "OR-I-II-168",
+      "OR-I-II-169",
+      "OR-I-II-734"
+    ],
+    "basis": "The July14/16/18 and June29 correspondence is read and post-start. The exact June12 and July9 shorthand locators remain unresolved; nothing establishes an early leg. Contemporary July conduct is useful to the register, not starting temperament/values/relationships. Defensive reporting is not automatically uncandour; no band is refitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "low:DOC-1861 PATTERSON 1861-06-12-townsend+DOC-1861 PATTERSON 1861-07-09-townsend+DOC-1861 PATTERSON 1861-07-18-report",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "candour",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-16/18 (candid on volunteers' mood; defensive after Scott's telegram)",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-12..07-18 in entered citations",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-167",
+      "OR-I-II-168",
+      "OR-I-II-169",
+      "OR-I-II-734"
+    ],
+    "basis": "The July14/16/18 and June29 correspondence is read and post-start. The exact June12 and July9 shorthand locators remain unresolved; nothing establishes an early leg. Contemporary July conduct is useful to the register, not starting temperament/values/relationships. Defensive reporting is not automatically uncandour; no band is refitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:DOC-1861 PATTERSON 1861-07-16/18 (candid on volunteers' mood; defensive after Scott's telegram)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "value:caution",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-06-12-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-09-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-16/18",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-12..07-18 in entered citations",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-167",
+      "OR-I-II-168",
+      "OR-I-II-169",
+      "OR-I-II-734"
+    ],
+    "basis": "The July14/16/18 and June29 correspondence is read and post-start. The exact June12 and July9 shorthand locators remain unresolved; nothing establishes an early leg. Contemporary July conduct is useful to the register, not starting temperament/values/relationships. Defensive reporting is not automatically uncandour; no band is refitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "caution:DOC-1861 PATTERSON 1861-06-12-townsend+DOC-1861 PATTERSON 1861-07-09-townsend+DOC-1861 PATTERSON 1861-07-16/18",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-14",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-12..07-18 in entered citations",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-167",
+      "OR-I-II-168",
+      "OR-I-II-169",
+      "OR-I-II-734"
+    ],
+    "basis": "The July14/16/18 and June29 correspondence is read and post-start. The exact June12 and July9 shorthand locators remain unresolved; nothing establishes an early leg. Contemporary July conduct is useful to the register, not starting temperament/values/relationships. Defensive reporting is not automatically uncandour; no band is refitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "duty:DOC-1861 PATTERSON 1861-07-14",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "value:reputation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-18-report",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-12..07-18 in entered citations",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-167",
+      "OR-I-II-168",
+      "OR-I-II-169",
+      "OR-I-II-734"
+    ],
+    "basis": "The July14/16/18 and June29 correspondence is read and post-start. The exact June12 and July9 shorthand locators remain unresolved; nothing establishes an early leg. Contemporary July conduct is useful to the register, not starting temperament/values/relationships. Defensive reporting is not automatically uncandour; no band is refitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "reputation:DOC-1861 PATTERSON 1861-07-18-report",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "trait:overestimates_enemy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "2-p5",
+        "source": "JCCW"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1863 committee assessment of July1861",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "JCCW-5"
+    ],
+    "basis": "The read p5 is the committee’s later assessment and evidence summary, not a verbatim eligible contemporary judgment. Its embedded July13/17 Scott wires concern orders, not a rating of Patterson’s gifts. Competence/nerve have the innate July limit; overestimates_enemy is not on the innate list and has the stricter starting boundary. Later assessment cannot turn outcomes into starting character.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "overestimates_enemy:JCCW 2-p5",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "regard_others:scott_winfield",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-18-report",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-12..07-18 in entered citations",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-167",
+      "OR-I-II-168",
+      "OR-I-II-169",
+      "OR-I-II-734"
+    ],
+    "basis": "The July14/16/18 and June29 correspondence is read and post-start. The exact June12 and July9 shorthand locators remain unresolved; nothing establishes an early leg. Contemporary July conduct is useful to the register, not starting temperament/values/relationships. Defensive reporting is not automatically uncandour; no band is refitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "scott_winfield:average:DOC-1861 PATTERSON 1861-07-18-report",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "regard_others:mcclellan_george_b",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-06-29-mcclellan",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-12..07-18 in entered citations",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-166",
+      "OR-I-II-167",
+      "OR-I-II-168",
+      "OR-I-II-169",
+      "OR-I-II-734"
+    ],
+    "basis": "The July14/16/18 and June29 correspondence is read and post-start. The exact June12 and July9 shorthand locators remain unresolved; nothing establishes an early leg. Contemporary July conduct is useful to the register, not starting temperament/values/relationships. Defensive reporting is not automatically uncandour; no band is refitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "mcclellan_george_b:average:DOC-1861 PATTERSON 1861-06-29-mcclellan",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "morgan_edwin_d",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "III-1-p72 dated 1861-04",
+        "source": "OR"
+      },
+      {
+        "at": "III-1-p83 dated 1861-04",
+        "source": "OR"
+      },
+      {
+        "at": "III-2-p881 dated 1862-11",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-15; 1861-04-17; 1862-11",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-72",
+      "OR-III-I-83"
+    ],
+    "basis": "The April wires ask about instructions and equipment, not an external appraisal of ability; the November1862 return is outside the innate window. No admissible above competence established.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:OR III-1-p72 dated 1861-04+OR III-1-p83 dated 1861-04+OR III-2-p881 dated 1862-11",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "morgan_edwin_d",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "III-1 p72,p83 (asks questions, accepts quota; no risk-taking shown)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-15; 1861-04-17",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-72",
+      "OR-III-I-83"
+    ],
+    "basis": "Both wires are later than the starting boundary. Practical clarification is not evidence of an average temperament or personal relationship, even absent dramatic risk.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR III-1 p72,p83 (asks questions, accepts quota; no risk-taking shown)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "morgan_edwin_d",
+    "cell": "regard_others:cameron_simon",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "III-1 p72,p83",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-15; 1861-04-17",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-72",
+      "OR-III-I-83"
+    ],
+    "basis": "Both wires are later than the starting boundary. Practical clarification is not evidence of an average temperament or personal relationship, even absent dramatic risk.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "cameron_simon:average:OR III-1 p72,p83",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1-p535",
+        "source": "OR"
+      },
+      {
+        "at": "brown_joseph_e",
+        "source": "APPLETONS"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-08-07; later Appletons entry",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-IV-I-535"
+    ],
+    "basis": "Brown’s actual complaint is August7, after the innate limit; a later biography cannot stand alone. A complaint about unanswered logistical requests does not by itself prove a personal feud.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:OR IV-1-p535+APPLETONS brown_joseph_e",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "nerve",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "chronology entry 3 Jan 1861 dated 1861-01-03",
+        "source": "REBREC1"
+      },
+      {
+        "at": "Diary p15 (Georgia Convention resolution) dated 1861-01-21",
+        "source": "REBREC1"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-03; 1861-01-21",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "RR-DIARY15",
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "The January21 convention resolution commends the already accomplished armed occupation; Brown says January5 he will hold the fort at all hazards. Retain high resolve [I] from early conduct/third-party approval, without adopting his political claims as fact.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "high",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:REBREC1 chronology entry 3 Jan 1861 dated 1861-01-03+REBREC1 Diary p15 (Georgia Convention resolution) dated 1861-01-21",
+    "applied_csv_atom": "high:S98-RR-DIARY15 p15 dated 1861-01-21+S98-OR-IV-I-18 p18 dated 1861-01-05+S98-OR-IV-I-19 p19 dated 1861-01-05",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "boldness",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19)",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-05",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "He reports seizure and commits to holding Pulaski by force at all hazards before the convention decides. Retain high [I]; the evidence is pre-start, not the later Richmond quarrels.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "high",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:DOC-1861 BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19)",
+    "applied_csv_atom": "high:S98-OR-IV-I-18 p18 dated 1861-01-05+S98-OR-IV-I-19 p19 dated 1861-01-05",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-01-05",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for high",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "A public political explanation and emphatic language do not demonstrate high candour or truthful disclosure of inconvenient facts. Do not infer honesty from forcefulness.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:DOC-1861 BROWN 1861-01-05-alabama-commissioner",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "regard",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "IV-1 (1861-04-19 compliance; later wariness is outside window)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-19 in entered locators",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "The entered April19 wire is post-start and lacks an exact page here. Compliance does not supply personal warmth or a general duty value. No invented page, generic pro-Davis loyalty or average default is substituted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR IV-1 (1861-04-19 compliance; later wariness is outside window)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "IV-1 (Walker-Brown wire 1861-04-19, weak)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-19 in entered locators",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "The entered April19 wire is post-start and lacks an exact page here. Compliance does not supply personal warmth or a general duty value. No invented page, generic pro-Davis loyalty or average default is substituted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "duty:OR IV-1 (Walker-Brown wire 1861-04-19, weak)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "value:state_autonomy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19)",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-05",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "The letter explicitly defends sovereign secession and political unity of pro-slavery States. Retain these distinct values [I], accurately naming the defence of slavery rather than sanitizing it as generic rights.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "state_autonomy:DOC-1861 BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19)",
+    "applied_csv_atom": "state_autonomy:S98-OR-IV-I-18 p18 dated 1861-01-05+S98-OR-IV-I-19 p19 dated 1861-01-05",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "value:slavery_defence",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19: calls Southern states \"pro-slavery States\")",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-05",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "The letter explicitly defends sovereign secession and political unity of pro-slavery States. Retain these distinct values [I], accurately naming the defence of slavery rather than sanitizing it as generic rights.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "slavery_defence:DOC-1861 BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19: calls Southern states \"pro-slavery States\")",
+    "applied_csv_atom": "slavery_defence:S98-OR-IV-I-18 p18 dated 1861-01-05+S98-OR-IV-I-19 p19 dated 1861-01-05",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "trait:makes_policy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "chronology entry 3 Jan 1861 dated 1861-01-03",
+        "source": "REBREC1"
+      },
+      {
+        "at": "Diary p15 (Georgia Convention resolution) dated 1861-01-21",
+        "source": "REBREC1"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-03; 1861-01-21",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "RR-DIARY15",
+      "OR-IV-I-19"
+    ],
+    "basis": "The convention’s approval of his already executed seizure, together with his own January5 explanation, supports issuing political/military policy on his own State authority [I]. No later Confederate disobedience is implied.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "makes_policy:REBREC1 chronology entry 3 Jan 1861 dated 1861-01-03+REBREC1 Diary p15 (Georgia Convention resolution) dated 1861-01-21",
+    "applied_csv_atom": "makes_policy:S98-RR-DIARY15 p15 dated 1861-01-21+S98-OR-IV-I-19 p19 dated 1861-01-05",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "trait:quarrelsome",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "IV-1-p535",
+        "source": "OR"
+      },
+      {
+        "at": "brown_joseph_e",
+        "source": "APPLETONS"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-08-07; later Appletons entry",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-IV-I-535"
+    ],
+    "basis": "Brown’s actual complaint is August7, after the innate limit; a later biography cannot stand alone. A complaint about unanswered logistical requests does not by itself prove a personal feud.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "quarrelsome:OR IV-1-p535+APPLETONS brown_joseph_e",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "regard_others:walker_leroy_p",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (1861-04-19)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-19 in entered locators",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "The entered April19 wire is post-start and lacks an exact page here. Compliance does not supply personal warmth or a general duty value. No invented page, generic pro-Davis loyalty or average default is substituted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "walker_leroy_p:above:OR IV-1 (1861-04-19)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "regard_others:letcher_john",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (1861-04-19)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-19 in entered locators",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-IV-I-18",
+      "OR-IV-I-19"
+    ],
+    "basis": "The entered April19 wire is post-start and lacks an exact page here. Compliance does not supply personal warmth or a general duty value. No invented page, generic pro-Davis loyalty or average default is substituted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "letcher_john:above:OR IV-1 (1861-04-19)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "boldness",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p494 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      },
+      {
+        "at": "p495 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-22",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-I-I-493",
+      "OR-I-I-494",
+      "OR-I-I-495",
+      "OR-I-I-496"
+    ],
+    "basis": "The message explicitly assumes public responsibility, reports pre-emptive seizures with least necessary violence, aids Mississippi, and preserves the convention’s sovereign choice. Keep the three S89/0113 directions [I]; no high candour or slavery_defence is newly inferred.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "above",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:S89-OR-I-I p494 dated 1861-01-22+S89-OR-I-I p495 dated 1861-01-22",
+    "applied_csv_atom": "above:S98-OR-I-I-493 p493 dated 1861-01-22+S98-OR-I-I-494 p494 dated 1861-01-22+S98-OR-I-I-495 p495 dated 1861-01-22+S98-OR-I-I-496 p496 dated 1861-01-22",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p495 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-22",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-I-I-493",
+      "OR-I-I-494",
+      "OR-I-I-495",
+      "OR-I-I-496"
+    ],
+    "basis": "The message explicitly assumes public responsibility, reports pre-emptive seizures with least necessary violence, aids Mississippi, and preserves the convention’s sovereign choice. Keep the three S89/0113 directions [I]; no high candour or slavery_defence is newly inferred.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "duty:S89-OR-I-I p495 dated 1861-01-22",
+    "applied_csv_atom": "duty:S98-OR-I-I-493 p493 dated 1861-01-22+S98-OR-I-I-494 p494 dated 1861-01-22+S98-OR-I-I-495 p495 dated 1861-01-22+S98-OR-I-I-496 p496 dated 1861-01-22",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "value:state_autonomy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p494 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      },
+      {
+        "at": "p496 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-22",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-I-I-493",
+      "OR-I-I-494",
+      "OR-I-I-495",
+      "OR-I-I-496"
+    ],
+    "basis": "The message explicitly assumes public responsibility, reports pre-emptive seizures with least necessary violence, aids Mississippi, and preserves the convention’s sovereign choice. Keep the three S89/0113 directions [I]; no high candour or slavery_defence is newly inferred.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "state_autonomy:S89-OR-I-I p494 dated 1861-01-22+S89-OR-I-I p496 dated 1861-01-22",
+    "applied_csv_atom": "state_autonomy:S98-OR-I-I-493 p493 dated 1861-01-22+S98-OR-I-I-494 p494 dated 1861-01-22+S98-OR-I-I-495 p495 dated 1861-01-22+S98-OR-I-I-496 p496 dated 1861-01-22",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "III-1-p81 dated 1861-04",
+        "source": "OR"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-04-17",
+    "pre_start_contemporary_leg": "no; innate exception applies",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-III-I-81"
+    ],
+    "basis": "The actual reply publicly refuses coercion and offers armed defence: resolve expressed in conduct, not self-rated quality. Retain above [I] under the innate exception only.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "above",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:OR III-1-p81 dated 1861-04",
+    "applied_csv_atom": "above:S98-OR-III-I-81 p81 dated 1861-04-17",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "boldness",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "HARRIS 1861-04-25-message",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "III-1 p81 dated 1861-04",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-17; 1861-04-25",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-81",
+      "HARRIS-JAN7"
+    ],
+    "basis": "Both entered boldness legs are late. The distinct January message favors preparation but does not establish the existing high risk band; no lesser band is fitted.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:DOC-1861 HARRIS 1861-04-25-message+OR III-1 p81 dated 1861-04",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "HARRIS 1861-04-25-message",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "HARRIS 1861-01-07-message",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-01-07; 1861-04-25",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for high",
+    "read_keys": [
+      "HARRIS-JAN7"
+    ],
+    "basis": "January7 is early and admits incomplete returns, but that single acknowledgement plus vehement political advocacy does not prove high candour. April25 is late. Hold rather than treat political frankness as a quality measurement.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:DOC-1861 HARRIS 1861-04-25-message+DOC-1861 HARRIS 1861-01-07-message",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "regard",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "HARRIS 1861-05-07-military-league (action; own words of regard NOT FOUND)",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-05-07",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "HARRIS-JAN7"
+    ],
+    "basis": "The military league is post-start political cooperation, not Harris’s demonstrated above personal regard for Davis. No such personal judgment is established by the January paper.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:DOC-1861 HARRIS 1861-05-07-military-league (action; own words of regard NOT FOUND)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "HARRIS 1861-01-07-message (conditional: \"equality in the Union, or independence out of it\")",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-07",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "HARRIS-JAN7"
+    ],
+    "basis": "Retain conditional conciliation and explicit defence of slavery [I], not unconditional Unionism. The message proposes constitutional guarantees, including fugitive return, and otherwise separation. Citation is Senate Journal pp6-18 as attributed by the read transcription; exact original page breaks remain unverified.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "conciliation:DOC-1861 HARRIS 1861-01-07-message (conditional: \"equality in the Union, or independence out of it\")",
+    "applied_csv_atom": "conciliation:S98-HARRIS-JAN7 p6-18 dated 1861-01-07 (attributed pagination / original images unverified)",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "value:slavery_defence",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "HARRIS 1861-01-07-message (slavery protected property \"interwoven with our wealth\")",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-01-07",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "HARRIS-JAN7"
+    ],
+    "basis": "Retain conditional conciliation and explicit defence of slavery [I], not unconditional Unionism. The message proposes constitutional guarantees, including fugitive return, and otherwise separation. Citation is Senate Journal pp6-18 as attributed by the read transcription; exact original page breaks remain unverified.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "slavery_defence:DOC-1861 HARRIS 1861-01-07-message (slavery protected property \"interwoven with our wealth\")",
+    "applied_csv_atom": "slavery_defence:S98-HARRIS-JAN7 p6-18 dated 1861-01-07 (attributed pagination / original images unverified)",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "IV-1-p969",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "unverified OR IV-I p969",
+    "pre_start_contemporary_leg": "unverified",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-76"
+    ],
+    "basis": "The inherited p969 locator could not be matched in the retained IV-I printing; no date or contemporary external quality assessment is established. An early date is not manufactured from later facts.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR IV-1-p969",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "III-1-p76 dated 1861-04",
+        "source": "OR"
+      },
+      {
+        "at": "letcher_john",
+        "source": "APPLETONS"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-04-16",
+    "pre_start_contemporary_leg": "no; innate exception applies",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-III-I-76"
+    ],
+    "basis": "His signed reply refuses the federal quota and commits to meeting civil war with determination. Retain above resolve [I] under the innate limit; exclude later Appletons characterization and do not backdate boldness.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "above",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:OR III-1-p76 dated 1861-04+APPLETONS letcher_john",
+    "applied_csv_atom": "above:S98-OR-III-I-76 p76 dated 1861-04-16",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "boldness",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (Letcher to Davis 1861-04-18)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-18 in entered locators",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-76"
+    ],
+    "basis": "The entered Davis letter is late and lacks an exact page in the cell. Even its political cooperation could not alone establish personal regard. The separate April16 refusal also cannot source a starting centre.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:OR IV-1 (Letcher to Davis 1861-04-18)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "regard",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (Letcher to Davis 1861-04-18; his own words of regard NOT FOUND)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-04-18 in entered locators",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-III-I-76"
+    ],
+    "basis": "The entered Davis letter is late and lacks an exact page in the cell. Even its political cooperation could not alone establish personal regard. The separate April16 refusal also cannot source a starting centre.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:OR IV-1 (Letcher to Davis 1861-04-18; his own words of regard NOT FOUND)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-1-p113",
+        "source": "OR"
+      },
+      {
+        "at": "IV-1",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1860-12-28; unspecified IV-I",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "insufficient for average",
+    "read_keys": [
+      "OR-I-I-113"
+    ],
+    "basis": "The verified memorandum is political conduct, not third-party appraisal of average ability. The bare volume citation supplies no identifiable additional contemporary leg.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR I-1-p113+OR IV-1",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "I-1-p7",
+        "source": "OR"
+      },
+      {
+        "at": "I-1-p166 dated 1861-02-06",
+        "source": "OR"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1860-12-29..31; 1861-01-12 and 01-26 quoted 02-06",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-I-I-7",
+      "OR-I-I-166"
+    ],
+    "basis": "Pickens directs an armed seizure before the start; Cunningham’s demand and Humphreys’s protest corroborate execution. Holt quotes Pickens’s January demands. Retain above nerve and policy-making [I], without converting task assignment into technical competence.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "above",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:OR I-1-p7+OR I-1-p166 dated 1861-02-06",
+    "applied_csv_atom": "above:S98-OR-I-I-7 p7 dated 1860-12-29+S98-OR-I-I-166 p166 dated 1861-02-06",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "trait:makes_policy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-1-p7",
+        "source": "OR"
+      },
+      {
+        "at": "I-1-p166 dated 1861-02-06",
+        "source": "OR"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1860-12-29..31; 1861-01-12 and 01-26 quoted 02-06",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-I-I-7",
+      "OR-I-I-166"
+    ],
+    "basis": "Pickens directs an armed seizure before the start; Cunningham’s demand and Humphreys’s protest corroborate execution. Holt quotes Pickens’s January demands. Retain above nerve and policy-making [I], without converting task assignment into technical competence.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "makes_policy:OR I-1-p7+OR I-1-p166 dated 1861-02-06",
+    "applied_csv_atom": "makes_policy:S98-OR-I-I-7 p7 dated 1860-12-29+S98-OR-I-I-166 p166 dated 1861-02-06",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "bragg_braxton",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-10-1-p389",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1087 dated 1862-10",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1088",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1109 dated 1862-11",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-04; 1862-10-12; 1862-11",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XVI-I-1087",
+      "OR-I-XVI-I-1109"
+    ],
+    "basis": "The entered Shiloh/Perryville papers are beyond the innate July1861 limit. The verified October/November reports cannot establish an opening trait or ability; his own report is not a leg for his own gifts.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR I-10-1-p389+OR I-16-1-p1087 dated 1862-10+OR I-16-1-p1088+OR I-16-1-p1109 dated 1862-11",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "bragg_braxton",
+    "cell": "nerve",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-10-1-p466",
+        "source": "OR"
+      },
+      {
+        "at": "I-10-1-p467",
+        "source": "OR"
+      },
+      {
+        "at": "I-10-1-p389",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1087 dated 1862-10",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-04; 1862-10-12; 1862-11",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XVI-I-1087",
+      "OR-I-XVI-I-1109"
+    ],
+    "basis": "The entered Shiloh/Perryville papers are beyond the innate July1861 limit. The verified October/November reports cannot establish an opening trait or ability; his own report is not a leg for his own gifts.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR I-10-1-p466+OR I-10-1-p467+OR I-10-1-p389+OR I-16-1-p1087 dated 1862-10",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "bragg_braxton",
+    "cell": "trait:shifts_blame",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-16-1-p1088",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-04; 1862-10-12; 1862-11",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XVI-I-1087",
+      "OR-I-XVI-I-1109"
+    ],
+    "basis": "The entered Shiloh/Perryville papers are beyond the innate July1861 limit. The verified October/November reports cannot establish an opening trait or ability; his own report is not a leg for his own gifts.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "shifts_blame:OR I-16-1-p1088",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "holmes_theophilus_h",
+    "cell": "reputation",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "1 holmes_theophilus_h",
+        "source": "Heitman"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "later Heitman reference entry; no dated contemporary judgment",
+    "pre_start_contemporary_leg": "unverified",
+    "direction_supported": "not established",
+    "read_keys": [],
+    "basis": "Heitman may source factual service but cannot alone support average reputation under 0087. The live locator has no printed page and no separately verified contemporary third-party judgment. Its exact printed page remains unresolved; no page is invented.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:Heitman 1 holmes_theophilus_h",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "ch62",
+        "source": "GRANT-PM"
+      },
+      {
+        "at": "I-11-1-p936-938",
+        "source": "OR"
+      },
+      {
+        "at": "I-11-1-p933-935",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-06-24; other 1862 reports and later memoir",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XI-I-933",
+      "OR-I-XI-I-934",
+      "OR-I-XI-I-935"
+    ],
+    "basis": "The verified Johnston report is dated June24 1862, describes May31 wounding, and criticizes Huger. It is outside the innate window and not external appraisal of his own gifts. Infirm is a starting trait, with the stricter boundary. Other entered 1862 papers and Grant memoir do not rescue these cells.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "above:GRANT-PM ch62+OR I-11-1-p936-938+OR I-11-1-p933-935",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "nerve",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-11-1-p933-935",
+        "source": "OR"
+      },
+      {
+        "at": "I-11-1-p275-276",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-06-24; other 1862 reports and later memoir",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XI-I-933",
+      "OR-I-XI-I-934",
+      "OR-I-XI-I-935"
+    ],
+    "basis": "The verified Johnston report is dated June24 1862, describes May31 wounding, and criticizes Huger. It is outside the innate window and not external appraisal of his own gifts. Infirm is a starting trait, with the stricter boundary. Other entered 1862 papers and Grant memoir do not rescue these cells.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR I-11-1-p933-935+OR I-11-1-p275-276",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "reputation",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "1 johnston_joseph_e",
+        "source": "Heitman"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "later Heitman entry",
+    "pre_start_contemporary_leg": "unverified",
+    "direction_supported": "not established",
+    "read_keys": [],
+    "basis": "A reference entry is insufficient under 0087. No separately verified pre-start reputation leg or exact printed page is established; high cannot be retained merely from rank.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:Heitman 1 johnston_joseph_e",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 p881 (withdrawal)",
+        "source": "OR"
+      },
+      {
+        "at": "I-2 p473,p478 (18 Jul junction)",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-05-24..26; 1861-06-12; later campaign report",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "S94-I-II-880",
+      "S94-I-II-881"
+    ],
+    "basis": "The pre-evacuation papers are contemporary but post-start. Their own risks/reporting cannot establish starting boldness, candour or caution. Event dates inside a later report are not its date.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "average:OR I-2 p881 (withdrawal)+OR I-2 p473,p478 (18 Jul junction)",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "I-2 p881",
+        "source": "OR"
+      },
+      {
+        "at": "JOHNSTON 1861-06-12-report",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-05-24..26; 1861-06-12; later campaign report",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "S94-I-II-880",
+      "S94-I-II-881"
+    ],
+    "basis": "The pre-evacuation papers are contemporary but post-start. Their own risks/reporting cannot establish starting boldness, candour or caution. Event dates inside a later report are not its date.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "high:OR I-2 p881+DOC-1861 JOHNSTON 1861-06-12-report",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "value:caution",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-2 p881",
+        "source": "OR"
+      },
+      {
+        "at": "JOHNSTON 1861-06-12-report",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-05-24..26; 1861-06-12; later campaign report",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "S94-I-II-880",
+      "S94-I-II-881"
+    ],
+    "basis": "The pre-evacuation papers are contemporary but post-start. Their own risks/reporting cannot establish starting boldness, candour or caution. Event dates inside a later report are not its date.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "caution:OR I-2 p881+DOC-1861 JOHNSTON 1861-06-12-report",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-2 p473 [self-report]",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-10-14 report recalling July18-20; embedded telegram July17",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-470",
+      "S94-I-II-473",
+      "S94-I-II-478"
+    ],
+    "basis": "The report and even its embedded July17 telegram are too late for starting values/regard. It expresses confidence in Beauregard, but months after the boundary; obeying Cooper does not establish personal regard.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "duty:OR I-2 p473 [self-report]",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:shifts_blame",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-11-1-p933-935",
+        "source": "OR"
+      },
+      {
+        "at": "I-11-1-p936-938",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-06-24; other 1862 reports and later memoir",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XI-I-933",
+      "OR-I-XI-I-934",
+      "OR-I-XI-I-935"
+    ],
+    "basis": "The verified Johnston report is dated June24 1862, describes May31 wounding, and criticizes Huger. It is outside the innate window and not external appraisal of his own gifts. Infirm is a starting trait, with the stricter boundary. Other entered 1862 papers and Grant memoir do not rescue these cells.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "shifts_blame:OR I-11-1-p933-935+OR I-11-1-p936-938",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:secretive",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-5-p1090",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-03",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-5-p1090"
+    ],
+    "basis": "Secretive is not on the policy’s innate-trait list and requires pre-start evidence. The retained official correspondence is March1862, outside both boundaries. No early withholding leg is established.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "secretive:OR I-5-p1090",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:candid",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-11-3-p455-456",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "unverified I-XI-III pp455-456; 1862 context",
+    "pre_start_contemporary_leg": "unverified",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XI-I-935"
+    ],
+    "basis": "Candid is a starting trait under 0085, not an innate exception. The entered late-war locator has no verified pre-March5 observation. An own-report admission in June1862 also cannot rescue it.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "candid:OR I-11-3-p455-456",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:infirm",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-11-1-p934-935",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1862-06-24; other 1862 reports and later memoir",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-XI-I-933",
+      "OR-I-XI-I-934",
+      "OR-I-XI-I-935"
+    ],
+    "basis": "The verified Johnston report is dated June24 1862, describes May31 wounding, and criticizes Huger. It is outside the innate window and not external appraisal of his own gifts. Infirm is a starting trait, with the stricter boundary. Other entered 1862 papers and Grant memoir do not rescue these cells.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "infirm:OR I-11-1-p934-935",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:rank_proud",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-2 p1007 dated 1861-07-29",
+        "source": "OR"
+      },
+      {
+        "at": "I-p464 dated 1861-08-31",
+        "source": "JCCS"
+      }
+    ],
+    "disposition": "KEEP",
+    "document_dates": "1861-07-29; additional 1861-08-31 citation excluded",
+    "pre_start_contemporary_leg": "yes",
+    "direction_supported": "yes, qualified inference",
+    "read_keys": [
+      "OR-I-II-1007"
+    ],
+    "basis": "Johnston explicitly disputes orders infringing his rank and insists on the proper authority channel. Own conduct is a permitted leg for rank_proud under 0085, inside July31. Retain the July paper; exclude the later JCCS leg. Do not import Davis’s differently dated rank dispute.",
+    "boundary": "1861-07-31 inclusive",
+    "classification": "innate",
+    "proposed": "present",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "rank_proud:OR I-2 p1007 dated 1861-07-29+JCCS I-p464 dated 1861-08-31",
+    "applied_csv_atom": "rank_proud:S98-OR-I-II-1007 p1007 dated 1861-07-29",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "regard_others:lee_robert_e",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "I-2 p897-898",
+        "source": "OR"
+      },
+      {
+        "at": "LEE 1861-06-07-johnston",
+        "source": "DOC-1861"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-06-01; 1861-06-07",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "S94-I-II-897",
+      "S94-I-II-898"
+    ],
+    "basis": "These are post-start instructions from Lee to Johnston. Lee’s confidence is not Johnston’s regard toward Lee; author/subject must not be reversed.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "lee_robert_e:above:OR I-2 p897-898+DOC-1861 LEE 1861-06-07-johnston",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "regard_others:beauregard_pierre_g_t",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 p473",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-10-14 report recalling July18-20; embedded telegram July17",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-470",
+      "S94-I-II-473",
+      "S94-I-II-478"
+    ],
+    "basis": "The report and even its embedded July17 telegram are too late for starting values/regard. It expresses confidence in Beauregard, but months after the boundary; obeying Cooper does not establish personal regard.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "beauregard_pierre_g_t:average:OR I-2 p473",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "regard_others:cooper_samuel",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 p478",
+        "source": "OR"
+      }
+    ],
+    "disposition": "HOLD",
+    "document_dates": "1861-10-14 report recalling July18-20; embedded telegram July17",
+    "pre_start_contemporary_leg": "no",
+    "direction_supported": "not established",
+    "read_keys": [
+      "OR-I-II-470",
+      "S94-I-II-473",
+      "S94-I-II-478"
+    ],
+    "basis": "The report and even its embedded July17 telegram are too late for starting values/regard. It expresses confidence in Beauregard, but months after the boundary; obeying Cooper does not establish personal regard.",
+    "boundary": "before 1861-03-05",
+    "classification": "starting",
+    "proposed": "unknown",
+    "interpretation": "[I]; research proposal only",
+    "prior_csv_atom": "cooper_samuel:average:OR I-2 p478",
+    "applied_csv_atom": "",
+    "stage": "original disposition"
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:caution",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-03-03",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "SCOTT-MAR3"
+    ],
+    "basis": "His own estimates emphasize the immense lives, expense, garrisons and political damage of conquest. This is an expressed priority, not a new numerical boldness band.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "caution:S98-SCOTT-MAR3 pmanuscript 1-4 dated 1861-03-03",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:union",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1860-12-10",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "SEWARD-481"
+    ],
+    "basis": "His dated letter describes the task of reconciling men bent on disunion to the incoming administration. Uses only the verbatim December10 paragraph, not his son’s later narrative.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "union:S98-SEWARD-481 p481 dated 1860-12-10",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:conciliation",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1860-12-10",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "SEWARD-481"
+    ],
+    "basis": "The same paragraph explicitly makes reconciliation rather than civil war his task. This is conditional political conciliation, not a finding of universal tolerance.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "conciliation:S98-SEWARD-481 p481 dated 1860-12-10",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "value:union",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-31",
+    "kind": "new",
+    "read_keys": [
+      "FOX-I-2-4"
+    ],
+    "basis": "His letter explicitly commits to preserving the Union, including enforcement at the cost of blood. Do not replace his coercive conception of reunion with unconditional pacifism.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "union:S98-FOX-I-2-4 p2-4 dated 1861-01-31",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "value:order",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-31",
+    "kind": "new",
+    "read_keys": [
+      "FOX-I-2-4"
+    ],
+    "basis": "He expressly prioritizes enforcing and vindicating the laws against rebellion. The letter’s derogatory sectional and Mexican comparisons remain his claims, never adopted as facts.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "order:S98-FOX-I-2-4 p2-4 dated 1861-01-31",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "boldness",
+    "decision": "DRAFT",
+    "proposed_direction": "above",
+    "document_date": "1861-01-31",
+    "kind": "new",
+    "read_keys": [
+      "FOX-I-2-4"
+    ],
+    "basis": "He accepts the possible necessity of a decisive armed confrontation and loss of life, while favoring an unobtrusive relief method first. Above rather than high is a bounded interpretive direction, without numerical fitting.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "above:S98-FOX-I-2-4 p2-4 dated 1861-01-31",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:union",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-06 latest publication bound",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "RR-DOC16",
+      "RR-DIARY11"
+    ],
+    "basis": "He explicitly wishes to die a citizen of the Union and refuses to hasten its disruption. The January6 diary reports publication and identifies Doc16; the original address day is not manufactured. This early passage is separate from the held April citation chain.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "union:S98-RR-DOC16 p17-18 dated 1861-01-06 (publication bound / address day unverified)+S98-RR-DIARY11 p11 dated 1861-01-06",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:state_autonomy",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-06 latest publication bound",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "RR-DOC16",
+      "RR-DIARY11"
+    ],
+    "basis": "His argument asks whether Maryland must obey South Carolina after forming its own judgment. The January6 publication entry bounds the text before start. This is Maryland’s independent decision, with conditional Southern sympathy retained; no birth-state loyalty is inferred.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "state_autonomy:S98-RR-DOC16 p17-18 dated 1861-01-06 (publication bound / address day unverified)+S98-RR-DIARY11 p11 dated 1861-01-06",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "reputation",
+    "decision": "DRAFT",
+    "proposed_direction": "above",
+    "document_date": "1861-01-21",
+    "kind": "new",
+    "read_keys": [
+      "RR-DIARY15"
+    ],
+    "basis": "The printed convention resolution explicitly and unanimously approves his conduct at Pulaski. This is other people’s early esteem in that political body, not a countrywide popularity rating.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "above:S98-RR-DIARY15 p15 dated 1861-01-21",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "trait:makes_policy",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-22",
+    "kind": "new",
+    "read_keys": [
+      "OR-I-I-493",
+      "OR-I-I-495",
+      "OR-I-I-496"
+    ],
+    "basis": "He reports deciding upon the seizure of federal posts before the State convention and submits the responsibility to the legislature. This is observable policy on his own State authority, not technical organizing ability.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "makes_policy:S98-OR-I-I-493 p493 dated 1861-01-22+S98-OR-I-I-495 p495 dated 1861-01-22+S98-OR-I-I-496 p496 dated 1861-01-22",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "value:state_autonomy",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-07",
+    "kind": "new",
+    "read_keys": [
+      "HARRIS-JAN7"
+    ],
+    "basis": "The read message explicitly reserves Tennessee’s sovereign choice and rejects military coercion of a State. Keep its simultaneous defence of slavery explicit; do not relabel it as a neutral generic rights dispute.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "state_autonomy:S98-HARRIS-JAN7 p6-18 dated 1861-01-07 (attributed pagination / original images unverified)",
+    "stage": "accepted early evidence"
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "boldness",
+    "decision": "DRAFT",
+    "proposed_direction": "above",
+    "document_date": "1860-12-29",
+    "kind": "new",
+    "read_keys": [
+      "OR-I-I-7"
+    ],
+    "basis": "The signed order directs taking the arsenal with force if refused, with forbearance and minimum force. The executed demand/protest corroborates conduct. Above is proposed with those restraints, not a blanket appetite for attack.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit",
+    "prior_csv_atom": "",
+    "applied_csv_atom": "above:S98-OR-I-I-7 p7 dated 1860-12-29",
+    "stage": "accepted early evidence"
+  }
+]

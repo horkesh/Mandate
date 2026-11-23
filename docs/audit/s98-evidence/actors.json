@@ -1,0 +1,477 @@
+[
+  {
+    "actor": "scott_winfield",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U01",
+        "U02",
+        "U42"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 14,
+    "keep": 4,
+    "hold": 10,
+    "correct": 0,
+    "drafts": 1,
+    "empty_groups_retained": [
+      "nerve"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "seward_william_h",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U03a",
+        "U04",
+        "U14"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 12,
+    "keep": 1,
+    "hold": 11,
+    "correct": 0,
+    "drafts": 2,
+    "empty_groups_retained": [
+      "nerve"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "cameron_simon",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U03b"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 1,
+    "keep": 1,
+    "hold": 0,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "competence",
+      "nerve",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "welles_gideon",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U03c"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 1,
+    "keep": 1,
+    "hold": 0,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "competence",
+      "reputation",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "smith_caleb_b",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U03d"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 1,
+    "keep": 0,
+    "hold": 1,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "competence",
+      "nerve",
+      "reputation",
+      "boldness",
+      "candour",
+      "values",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "bates_edward",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U03e"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 2,
+    "keep": 2,
+    "hold": 0,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "competence",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "blair_montgomery",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U05"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 3,
+    "keep": 1,
+    "hold": 2,
+    "correct": 0,
+    "drafts": 3,
+    "empty_groups_retained": [
+      "reputation",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "traits"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U25a"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 4,
+    "keep": 1,
+    "hold": 3,
+    "correct": 0,
+    "drafts": 2,
+    "empty_groups_retained": [
+      "nerve",
+      "reputation",
+      "boldness",
+      "candour",
+      "regard",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "brown_george_w",
+    "live_cast": "absent",
+    "eligible_rows": {
+      "union": [
+        "U25b"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 0,
+    "keep": 0,
+    "hold": 0,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "all; no person authored"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "patterson_robert",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U32",
+        "U33",
+        "U34"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 10,
+    "keep": 0,
+    "hold": 10,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "reputation",
+      "regard"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "mccauley_charles_s",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U40"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 0,
+    "keep": 0,
+    "hold": 0,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "competence",
+      "nerve",
+      "reputation",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "morgan_edwin_d",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [
+        "U39"
+      ],
+      "confederate": []
+    },
+    "entered_judgments": 3,
+    "keep": 0,
+    "hold": 3,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "nerve",
+      "reputation",
+      "candour",
+      "regard",
+      "values",
+      "traits"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "brown_joseph_e",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C01",
+        "C02",
+        "C10",
+        "C12"
+      ]
+    },
+    "entered_judgments": 12,
+    "keep": 5,
+    "hold": 7,
+    "correct": 0,
+    "drafts": 1,
+    "empty_groups_retained": [
+      "reputation"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "moore_thomas_o",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C03",
+        "C11"
+      ]
+    },
+    "entered_judgments": 3,
+    "keep": 3,
+    "hold": 0,
+    "correct": 0,
+    "drafts": 1,
+    "empty_groups_retained": [
+      "competence",
+      "nerve",
+      "reputation",
+      "candour",
+      "regard",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "harris_isham_g",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C05"
+      ]
+    },
+    "entered_judgments": 6,
+    "keep": 3,
+    "hold": 3,
+    "correct": 0,
+    "drafts": 1,
+    "empty_groups_retained": [
+      "competence",
+      "reputation",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "letcher_john",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C07"
+      ]
+    },
+    "entered_judgments": 4,
+    "keep": 1,
+    "hold": 3,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "reputation",
+      "candour",
+      "values",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "pickens_francis_w",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C04",
+        "C09"
+      ]
+    },
+    "entered_judgments": 3,
+    "keep": 2,
+    "hold": 1,
+    "correct": 0,
+    "drafts": 1,
+    "empty_groups_retained": [
+      "reputation",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "bragg_braxton",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C06"
+      ]
+    },
+    "entered_judgments": 3,
+    "keep": 0,
+    "hold": 3,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "reputation",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "holmes_theophilus_h",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C14",
+        "C16",
+        "C25"
+      ]
+    },
+    "entered_judgments": 1,
+    "keep": 0,
+    "hold": 1,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "competence",
+      "nerve",
+      "boldness",
+      "candour",
+      "regard",
+      "values",
+      "traits",
+      "regardOthers"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "live_cast": "present",
+    "eligible_rows": {
+      "union": [],
+      "confederate": [
+        "C15"
+      ]
+    },
+    "entered_judgments": 15,
+    "keep": 1,
+    "hold": 14,
+    "correct": 0,
+    "drafts": 0,
+    "empty_groups_retained": [
+      "regard"
+    ],
+    "window": "Starting cells before1861-03-05; innate through1861-07-31; no individual-window extension."
+  }
+]
