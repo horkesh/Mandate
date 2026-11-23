@@ -1,0 +1,184 @@
+{
+  "net_known_reduction": 8749,
+  "before_net_reduction": 95643,
+  "after_net_reduction": 86894,
+  "days": [
+    {
+      "battle": "battle:fort_sumter:38",
+      "day": 38,
+      "killed": 0,
+      "wounded": 0,
+      "missing": 0,
+      "captured": 0,
+      "blocks": [
+        {
+          "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+          "blossKilled": 0,
+          "blossWounded": 0,
+          "blossMissing": 0,
+          "blossCaptured": 0,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "fb_st_charleston_floating_battery",
+          "blossKilled": 0,
+          "blossWounded": 0,
+          "blossMissing": 0,
+          "blossCaptured": 0,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "fb_st_charleston_fort_johnson",
+          "blossKilled": 0,
+          "blossWounded": 0,
+          "blossMissing": 0,
+          "blossCaptured": 0,
+          "blossStragglersCaptured": 0
+        }
+      ]
+    },
+    {
+      "battle": "battle:fort_sumter:38",
+      "day": 39,
+      "killed": 0,
+      "wounded": 0,
+      "missing": 0,
+      "captured": 0,
+      "blocks": [
+        {
+          "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+          "blossKilled": 0,
+          "blossWounded": 0,
+          "blossMissing": 0,
+          "blossCaptured": 0,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "fb_st_charleston_floating_battery",
+          "blossKilled": 0,
+          "blossWounded": 0,
+          "blossMissing": 0,
+          "blossCaptured": 0,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "fb_st_charleston_fort_johnson",
+          "blossKilled": 0,
+          "blossWounded": 0,
+          "blossMissing": 0,
+          "blossCaptured": 0,
+          "blossStragglersCaptured": 0
+        }
+      ]
+    },
+    {
+      "battle": "battle:manassas:142",
+      "day": 142,
+      "killed": 12,
+      "wounded": 74,
+      "missing": 42,
+      "captured": 18,
+      "blocks": [
+        {
+          "blossBlock": "state-forces.va_manassas_garland",
+          "blossKilled": 12,
+          "blossWounded": 74,
+          "blossMissing": 42,
+          "blossCaptured": 18,
+          "blossStragglersCaptured": 0
+        }
+      ]
+    },
+    {
+      "battle": "battle:manassas:145",
+      "day": 145,
+      "killed": 419,
+      "wounded": 2376,
+      "missing": 1370,
+      "captured": 586,
+      "blocks": [
+        {
+          "blossBlock": "state-forces.cs_nc_additional_north_carolina",
+          "blossKilled": 52,
+          "blossWounded": 297,
+          "blossMissing": 172,
+          "blossCaptured": 73,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "state-forces.cs_nc_state_transfer_north_carolina",
+          "blossKilled": 262,
+          "blossWounded": 1485,
+          "blossMissing": 856,
+          "blossCaptured": 366,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "state-forces.cs_nc_volunteers_north_carolina",
+          "blossKilled": 105,
+          "blossWounded": 594,
+          "blossMissing": 342,
+          "blossCaptured": 147,
+          "blossStragglersCaptured": 0
+        }
+      ]
+    },
+    {
+      "battle": "battle:manassas:146",
+      "day": 146,
+      "killed": 385,
+      "wounded": 2188,
+      "missing": 901,
+      "captured": 385,
+      "blocks": [
+        {
+          "blossBlock": "state-forces.cs_nc_additional_north_carolina",
+          "blossKilled": 48,
+          "blossWounded": 274,
+          "blossMissing": 113,
+          "blossCaptured": 48,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "state-forces.cs_nc_state_transfer_north_carolina",
+          "blossKilled": 241,
+          "blossWounded": 1367,
+          "blossMissing": 563,
+          "blossCaptured": 241,
+          "blossStragglersCaptured": 0
+        },
+        {
+          "blossBlock": "state-forces.cs_nc_volunteers_north_carolina",
+          "blossKilled": 96,
+          "blossWounded": 547,
+          "blossMissing": 225,
+          "blossCaptured": 96,
+          "blossStragglersCaptured": 0
+        }
+      ]
+    }
+  ],
+  "garland_recoveries": [
+    {
+      "day": 142,
+      "block": "state-forces.va_manassas_garland",
+      "lot": "unidentified.state-forces.va_manassas_garland",
+      "before": 490,
+      "after": 344
+    },
+    {
+      "day": 144,
+      "block": "state-forces.va_manassas_garland",
+      "lot": "unidentified.state-forces.va_manassas_garland",
+      "before": 344,
+      "after": 348
+    },
+    {
+      "day": 145,
+      "block": "state-forces.va_manassas_garland",
+      "lot": "unidentified.state-forces.va_manassas_garland",
+      "before": 348,
+      "after": 351
+    }
+  ]
+}

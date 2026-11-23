@@ -1,0 +1,300 @@
+{
+  "request": "S84 only; research proposals, no runtime code or band edits",
+  "sources": [
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 135,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p135.txt",
+      "sha256": "a0d6f9e9aebeef0d94bf14ad1896a14629eb27cb0990e63e76e6bce77a9e4276",
+      "url": "https://archive.org/details/cu31924079579524/page/n150/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 211,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p211.txt",
+      "sha256": "ce4dbb14595d5bdd148d38ac34b722741a39b59a8ba548dbee0a707116664ea6",
+      "url": "https://archive.org/details/cu31924079579524/page/n226/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 221,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p221.txt",
+      "sha256": "a0eb4eb6f66fdf3f6011fcbafcb0f7c4c7ceb2a4316b6505dd554f40caca5737",
+      "url": "https://archive.org/details/cu31924079579524/page/n236/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 222,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p222.txt",
+      "sha256": "1372e81d9db7bad9f8018685746bff2e648d5ac92398ab801c2b2e0acb55cef9",
+      "url": "https://archive.org/details/cu31924079579524/page/n237/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 231,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p231.txt",
+      "sha256": "5df1ac66005fb4aae4e092b01f95948f12dd90d48e3d7a212de8c0d1edeca58c",
+      "url": "https://archive.org/details/cu31924079579524/page/n246/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 232,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p232.txt",
+      "sha256": "4f61bb1140d00a4d16a39fb2330ff4b98a77d1e4430e97a2eef14a46bd20a238",
+      "url": "https://archive.org/details/cu31924079579524/page/n247/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 233,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p233.txt",
+      "sha256": "3af3412358f4ada1ff68363b66286610e5de315f28861c80efb950a2ba6d146b",
+      "url": "https://archive.org/details/cu31924079579524/page/n248/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 388,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p388.txt",
+      "sha256": "35535687c4cf1e4ae882d4bdd43f540ea48d507d28dba52fecac3291baa71a75",
+      "url": "https://archive.org/details/cu31924079579524/page/n403/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 392,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p392.txt",
+      "sha256": "13899a43193272ded7b9eef8d79a457544fe223632cdfef869ff93c9a5809b5a",
+      "url": "https://archive.org/details/cu31924079579524/page/n407/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 396,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p396.txt",
+      "sha256": "bda8f96ef191f2c2cf725ad1f9a99e8c5969d30fbc83fb9c02ec71b682ed7b61",
+      "url": "https://archive.org/details/cu31924079579524/page/n411/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 397,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p397.txt",
+      "sha256": "8575a48a175b090e0b5084ecddf96e00760df8fd07864e27bd8707a7fb776b5c",
+      "url": "https://archive.org/details/cu31924079579524/page/n412/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 402,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p402.txt",
+      "sha256": "9598d96653a41ce3a81b84cf28c6317ad26063fededd24f1f76985ea03926fe5",
+      "url": "https://archive.org/details/cu31924079579524/page/n417/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 403,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p403.txt",
+      "sha256": "8729d0454e5b31e7258c359bb61f2907edf99365115cbad5ca3423b4c30a2e77",
+      "url": "https://archive.org/details/cu31924079579524/page/n418/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 404,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p404.txt",
+      "sha256": "ebcb4805798564dae36803b5fe804724b7fe92beedbe801111e0be1600dbce5f",
+      "url": "https://archive.org/details/cu31924079579524/page/n419/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 411,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p411.txt",
+      "sha256": "2cea8797e35333d3daaea1f6f64228b62c9bc83db1dd3bb831d82e6478d89242",
+      "url": "https://archive.org/details/cu31924079579524/page/n426/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 412,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p412.txt",
+      "sha256": "ad398e53c60f3cb9ccd1ecfea7bc5226c5d95dc2e406893eea6410ac91307593",
+      "url": "https://archive.org/details/cu31924079579524/page/n427/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 416,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p416.txt",
+      "sha256": "aa6f14e5b9366a8fd37023c7f7c7364cb483d0093b0c89896bc77862b1e7aefa",
+      "url": "https://archive.org/details/cu31924079579524/page/n431/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 417,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p417.txt",
+      "sha256": "abff8fe3f7aca264752487fd28a81100069c9317cfad956e228850b801aed77c",
+      "url": "https://archive.org/details/cu31924079579524/page/n432/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 424,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p424.txt",
+      "sha256": "49c778fd8689cb78bd4ca5376d09044f225534157dcae4e119f786950fde137b",
+      "url": "https://archive.org/details/cu31924079579524/page/n439/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 477,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p477.txt",
+      "sha256": "597fea951e4bbc589743d1e6ce418a37fcc99dc4182fb08f8c3755fe39af32f1",
+      "url": "https://archive.org/details/cu31924079579524/page/n492/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 478,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p478.txt",
+      "sha256": "5bb2b4a4cdff4923db87ca233c6fafe6e141306af2bbecd9763213a449edc830",
+      "url": "https://archive.org/details/cu31924079579524/page/n493/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 479,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p479.txt",
+      "sha256": "3568c22b88c275d8ef07f65b90a1a5524a8c5760c68dc6097bd224bb8df78d2f",
+      "url": "https://archive.org/details/cu31924079579524/page/n494/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 480,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p480.txt",
+      "sha256": "960adbf4e59c789373069951e9a9385aee050cf79d4f8dab56fe79b8e4906d6c",
+      "url": "https://archive.org/details/cu31924079579524/page/n495/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 493,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p493.txt",
+      "sha256": "19b2262a57d8ae87cdcdf168e43268e31987f3b1fe5d8e7ce97d7eb2f606ae56",
+      "url": "https://archive.org/details/cu31924079579524/page/n508/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 495,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p495.txt",
+      "sha256": "d6cefda28e3cf9fbb41c75a5c24b0ecabb8448b207eac6c8818bdf56755089d3",
+      "url": "https://archive.org/details/cu31924079579524/page/n510/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 496,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p496.txt",
+      "sha256": "b1c4c5635d9fe0f7237a23ec3253039dbf5207544a45ef39d518766263e53124",
+      "url": "https://archive.org/details/cu31924079579524/page/n511/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, series IV, volume I",
+      "printed_page": 497,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p497.txt",
+      "sha256": "a7d3eda7a427f722b04d0ef268d2570fe68f60c3bfc28905cff8cbf6c9c5dd53",
+      "url": "https://archive.org/details/cu31924079579524/page/n512/mode/1up",
+      "reading": "Selected relevant passages and running head, OCR; not a claim to have read all the volume."
+    },
+    {
+      "work": "Official Records, IV-I",
+      "printed_page": 496,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p496.jpg",
+      "sha256": "d0d9b6df510bf31ddce25d677e5cfe395c87c4d5ccdd349035dfbed6a9f7d2fe",
+      "url": "https://archive.org/download/cu31924079579524/page/n511.jpg",
+      "reading": "Page image inspected; report date, unit totals, exclusions and arms qualifications confirmed."
+    },
+    {
+      "work": "Official Records, IV-I",
+      "printed_page": 497,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S84\\OR-IV-I-p497.jpg",
+      "sha256": "35a395a42a3be432cd1e0110d2191f7b13e6274e37c89629f3b4e7e7c0ecd1be",
+      "url": "https://archive.org/download/cu31924079579524/page/n512.jpg",
+      "reading": "Page image inspected; report date, unit totals, exclusions and arms qualifications confirmed."
+    },
+    {
+      "work": "Official Records, I-II",
+      "printed_page": 473,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S77\\OR-I-2-p473.txt",
+      "sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n492/mode/1up",
+      "reading": "Retained primary-page OCR read; report and endorsement distinguished."
+    },
+    {
+      "work": "Official Records, I-II",
+      "printed_page": 478,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S77\\OR-I-2-p478.txt",
+      "sha256": "79bacb1af1b96a6760bb758ea3e882b4c180a2370f584882ac93f5637602799d",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n497/mode/1up",
+      "reading": "Retained primary-page OCR read; report and endorsement distinguished."
+    },
+    {
+      "work": "Official Records, I-III",
+      "printed_page": 609,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S1\\r97\\003-0609.md",
+      "sha256": "50891a149c8af292c9b3211516e20434b1ad038abd6d5a1b093e351fb1b4bc6f",
+      "url": "https://ehistory.osu.edu/books/official-records/003/0609",
+      "reading": "Retained eHistory transcription, selected transfer articles read."
+    },
+    {
+      "work": "Official Records, I-III",
+      "printed_page": 610,
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S1\\r97\\003-0610.md",
+      "sha256": "7fe1de723230ac6b57d15b08ac7e7e97484356c39e3d163546e53dd4d88f42a3",
+      "url": "https://ehistory.osu.edu/books/official-records/003/0610",
+      "reading": "Retained eHistory transcription, selected transfer articles read."
+    },
+    {
+      "work": "Richardson, Messages and Papers of the Confederacy I",
+      "printed_page": "85-88",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S73\\reading\\Richardson-I-pp85-88.txt",
+      "sha256": "1d9a6b9e422258e9b067cf7465338eb0d0aed3b86b2d3a291597b4c9c3a8b0b9",
+      "url": null,
+      "reading": "Entire retained extract read. Supports N3-06 only; not independent proof of all N3-07 concealment claims."
+    },
+    {
+      "work": "Official Records, I-II",
+      "printed_page": 982,
+      "artifact": null,
+      "sha256": null,
+      "url": "https://www.civilwar.com/battles/570-official-record/series/volume/campaign/first-manassas/152233-982-series-i-volume-ii-serial-2-first-manassas.html",
+      "reading": "Full Johnston letter read in headless web open, lines 266-281; dated acknowledgment, Patterson report, transport and sick constraints. Damaged retained scan is not relied on for obscured words."
+    }
+  ],
+  "failed_or_excluded": [
+    {
+      "item": "OR-I-II-p982-alternate.jpg / warofrebellion02unit",
+      "reason": "Wrong volume and printed page (index p.983); excluded after image inspection. No claim based on it."
+    },
+    {
+      "item": "Original local I-II p.982 scan",
+      "reason": "Damaged overprint obscures words; only readable fragments inspected, full letter read from separate transcription."
+    },
+    {
+      "item": "Ohio State 002/0982 and old civilwar.com URL",
+      "reason": "Headless HTTP 403; corrected indexed civilwar.com path read using web tool."
+    }
+  ],
+  "catalogue": "Appendix C of docs/research/2026-11-16-numbers-and-facts-1861.md, rows and method read. Catalogue classifications are attributed to that note; underlying sources not reread here are not claimed as fresh primary verification."
+}

@@ -1,0 +1,1620 @@
+{
+  "reference_commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "order": {
+    "decision": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "order",
+          "to": "cs_cmd_harpers_ferry",
+          "goal": {
+            "risk": 500,
+            "deadlineDays": 30,
+            "rail": true,
+            "river": false,
+            "sea": false,
+            "neutral": false,
+            "awaitWord": false,
+            "approveAsDrafted": true,
+            "objective": "manassas",
+            "posture": "take",
+            "committed": []
+          },
+          "route": "special-messenger",
+          "bypass": true
+        }
+      ]
+    },
+    "response": {
+      "respOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 146,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -224,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -51
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": []
+    },
+    "traits": [
+      "candid",
+      "infirm",
+      "rank_proud",
+      "secretive",
+      "shifts_blame"
+    ],
+    "true": {
+      "trueCompetence": 633,
+      "trueNerve": 473,
+      "trueExperience": 875,
+      "trueBoldness": 472,
+      "trueCandour": 853
+    },
+    "values": [
+      {
+        "cites": [
+          {
+            "at": "I-2 p881",
+            "source": "OR"
+          },
+          {
+            "at": "JOHNSTON 1861-06-12-report",
+            "source": "DOC-1861"
+          }
+        ],
+        "value": "caution"
+      },
+      {
+        "cites": [
+          {
+            "at": "I-2 p473 [self-report]",
+            "source": "OR"
+          }
+        ],
+        "value": "duty"
+      }
+    ],
+    "plan": {
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "planIssuer": "davis_jefferson",
+      "planViaChain": false,
+      "planSetDay": 146,
+      "planIssuedDay": 143,
+      "planOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "planResponse": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "johnston_joseph_e",
+        "draftPost": "cs_cmd_harpers_ferry",
+        "draftFaction": "confederate",
+        "draftDay": 146,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "manassas",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                      "legFrom": "harpers_ferry",
+                      "legTo": "loudoun_fauquier",
+                      "legType": "road",
+                      "legDays": 4000,
+                      "legThreat": 4612,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "road:loudoun_fauquier:manassas",
+                      "legFrom": "loudoun_fauquier",
+                      "legTo": "manassas",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 11612,
+                  "routeDays": 7000
+                },
+                "axisBlocks": [
+                  "state-forces.cs_tn_infantry_tennessee",
+                  "raised.st_gov_georgia.d126.2",
+                  "raised.st_gov_georgia.d129",
+                  "state-forces.cs_tn_cavalry_tennessee",
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 29000,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 4000,
+                    "phaseRegion": "harpers_ferry"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 4000,
+                    "phaseDays": 4000,
+                    "phaseRegion": "loudoun_fauquier"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 8000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "manassas"
+                  }
+                ],
+                "axisArrival": 11000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 0,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1056"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 19000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": -172,
+                "contribWhy": "6336 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 94,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 922,
+            "candPerceived": 0,
+            "candRatio": 10000
+          },
+          {
+            "id": "holding:hold:harpers_ferry",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "state-forces.cs_tn_infantry_tennessee",
+                  "raised.st_gov_georgia.d126.2",
+                  "raised.st_gov_georgia.d129",
+                  "state-forces.cs_tn_cavalry_tennessee",
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 29000,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 0,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 264,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": -36,
+            "candPerceived": 0,
+            "candRatio": 10000
+          }
+        ],
+        "draftRejected": [
+          {
+            "rejMethod": "flank",
+            "rejVariant": "penalty",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "alternative shares 1000 permille of the direct route"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "with_partner",
+            "rejGates": [
+              {
+                "gateKind": "staging_not_adjacent",
+                "gateHard": true,
+                "gateDetail": "his own staging harpers_ferry is not beside manassas"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "two_axis",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "second route repeats the first"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "clear_first",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "run_in",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "supply_line",
+            "rejVariant": "depot_steps",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "repeats direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+              }
+            ]
+          }
+        ],
+        "draftSearches": 10,
+        "draftGenerated": 3,
+        "draftDeduplicated": 1
+      },
+      "planChosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "planApproved": {
+        "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "cs_cmd_harpers_ferry",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                  "legFrom": "harpers_ferry",
+                  "legTo": "loudoun_fauquier",
+                  "legType": "road",
+                  "legDays": 4000,
+                  "legThreat": 4612,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "road:loudoun_fauquier:manassas",
+                  "legFrom": "loudoun_fauquier",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 11612,
+              "routeDays": 7000
+            },
+            "axisBlocks": [
+              "state-forces.cs_tn_infantry_tennessee",
+              "raised.st_gov_georgia.d126.2",
+              "raised.st_gov_georgia.d129",
+              "state-forces.cs_tn_cavalry_tennessee",
+              "state-forces.va_harpers_ferry"
+            ],
+            "axisStrength": 29000,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 4000,
+                "phaseRegion": "harpers_ferry"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 4000,
+                "phaseRegion": "loudoun_fauquier"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 8000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "axisArrival": 11000,
+            "axisOutOfSupply": 0,
+            "axisStoresDays": 0,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches manassas"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 10000 over his demand 1056"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 19000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": 0,
+            "contribWhy": "0 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": -172,
+            "contribWhy": "6336 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 94,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 922,
+        "candPerceived": 0,
+        "candRatio": 10000
+      },
+      "planSubmitted": null,
+      "planCounters": [],
+      "planPending": null
+    },
+    "operation": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "opMethod": "direct",
+      "opPosture": "take",
+      "opObjective": "manassas",
+      "opStartDay": 147,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.cs_tn_infantry_tennessee",
+            "raised.st_gov_georgia.d126.2",
+            "raised.st_gov_georgia.d129",
+            "state-forces.cs_tn_cavalry_tennessee",
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "manassas",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                "legFrom": "harpers_ferry",
+                "legTo": "loudoun_fauquier",
+                "legType": "road",
+                "legDays": 4000,
+                "legThreat": 4612,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "road:loudoun_fauquier:manassas",
+                "legFrom": "loudoun_fauquier",
+                "legTo": "manassas",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 11612,
+            "routeDays": 7000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 4000,
+              "phaseRegion": "harpers_ferry"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 4000,
+              "phaseDays": 4000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 8000,
+              "phaseDays": 3000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "assemble",
+          "oaxSince": 147,
+          "oaxUntil": 151,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 147,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    }
+  },
+  "received_near_order": [
+    {
+      "trace_day": 138,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.137.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 138,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 137,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 139,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.138.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 139,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 138,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 140,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.139.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 140,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 139,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 141,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.140.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 141,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 140,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 142,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.141.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 142,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 141,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 143,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.142.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 143,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 142,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 144,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.143.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 144,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 143,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 145,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.144.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 145,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 144,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    },
+    {
+      "trace_day": 146,
+      "seat": "seat:johnston_joseph_e",
+      "paper": {
+        "id": "m.145.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+        "knownReceivedDay": 146,
+        "knownRoute": "in-person",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "enemy-estimate",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "enemy",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "frederick_md",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "loudoun_fauquier",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "lower_valley",
+              "claimValue": 16000,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "works",
+              "claimRegion": "lower_valley",
+              "claimValue": 200,
+              "claimToken": null,
+              "claimConfidence": 700
+            },
+            {
+              "claimKind": "enemy-strength",
+              "claimRegion": "western_maryland",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 700
+            }
+          ],
+          "reportDay": 145,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    }
+  ],
+  "day_146_forces": {
+    "forceAssignments": {
+      "state-forces.va_harpers_ferry": "cs_cmd_harpers_ferry",
+      "state-forces.cs_tn_cavalry_tennessee": "cs_cmd_harpers_ferry",
+      "state-forces.cs_tn_infantry_tennessee": "cs_cmd_harpers_ferry",
+      "raised.st_gov_georgia.d126.2": "cs_cmd_harpers_ferry",
+      "raised.st_gov_georgia.d129": "cs_cmd_harpers_ferry"
+    },
+    "forceLocations": {
+      "state-forces.va_harpers_ferry": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 54,
+        "locMarch": null
+      },
+      "state-forces.cs_tn_cavalry_tennessee": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 145,
+        "locMarch": null
+      },
+      "state-forces.cs_tn_infantry_tennessee": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 145,
+        "locMarch": null
+      },
+      "raised.st_gov_georgia.d126.2": {
+        "locRegion": "loudoun_fauquier",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "loudoun_fauquier",
+          "marchTo": "harpers_ferry",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 3000,
+          "marchStartDay": 144
+        }
+      },
+      "raised.st_gov_georgia.d129": {
+        "locRegion": "loudoun_fauquier",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "loudoun_fauquier",
+          "marchTo": "harpers_ferry",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 3000,
+          "marchStartDay": 144
+        }
+      }
+    },
+    "forceJoins": {
+      "raised.st_gov_georgia.d126.2": {
+        "joinPost": "cs_cmd_harpers_ferry",
+        "joinRegion": "harpers_ferry",
+        "joinSinceDay": 131,
+        "joinBlocked": null
+      },
+      "raised.st_gov_georgia.d129": {
+        "joinPost": "cs_cmd_harpers_ferry",
+        "joinRegion": "harpers_ferry",
+        "joinSinceDay": 131,
+        "joinBlocked": null
+      }
+    }
+  },
+  "day_147_menu": {
+    "day": 147,
+    "seat": "seat:johnston_joseph_e",
+    "key": "plan:cs_cmd_harpers_ferry:147",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "cs_cmd_harpers_ferry",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "davis_jefferson",
+        "viaChain": false,
+        "setDay": 146,
+        "status": "choosing"
+      },
+      "options": [
+        {
+          "optionId": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 922,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "force_ratio",
+              "amount": 300
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": 0
+            },
+            {
+              "term": "exposure",
+              "amount": -172
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 94
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry",
+                "loudoun_fauquier",
+                "manassas"
+              ],
+              "strength": 29000,
+              "phases": [
+                "concentrate",
+                "march",
+                "march"
+              ],
+              "arrival": 11000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": 0,
+          "ratio": 10000
+        },
+        {
+          "optionId": "holding:hold:harpers_ferry",
+          "method": "holding",
+          "variant": "hold",
+          "score": -36,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 264
+            }
+          ],
+          "axes": [
+            {
+              "name": "hold",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "strength": 29000,
+              "phases": [
+                "hold"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": 0,
+          "ratio": 10000
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+    }
+  },
+  "relay_response": {
+    "m.142.davis_jefferson.walker_leroy_p.order.cs_cmd_harpers_ferry|walker_leroy_p": {
+      "respOrder": "m.142.davis_jefferson.walker_leroy_p.order.cs_cmd_harpers_ferry",
+      "respPerson": "walker_leroy_p",
+      "respPost": "cs_secretary_war",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 142,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -164,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -105
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": []
+    }
+  },
+  "caused_notice": {
+    "sitStatus": "noticed",
+    "sitFiredDay": 140,
+    "sitSurfacedDay": 141,
+    "sitOpenOptions": [],
+    "sitResurfaced": [],
+    "sitDecidedDay": null,
+    "sitChosen": [],
+    "sitDecidedBy": null,
+    "sitDelegate": null,
+    "sitWaitingOn": null,
+    "sitStaffAuthor": "walker_leroy_p"
+  },
+  "all_junction_orders": [
+    {
+      "decision_day": 142,
+      "command": {
+        "cmd": "order",
+        "to": "cs_cmd_harpers_ferry",
+        "goal": {
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "objective": "manassas",
+          "posture": "take",
+          "committed": []
+        },
+        "route": "courier",
+        "bypass": false
+      }
+    },
+    {
+      "decision_day": 143,
+      "command": {
+        "cmd": "order",
+        "to": "cs_cmd_harpers_ferry",
+        "goal": {
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "objective": "manassas",
+          "posture": "take",
+          "committed": []
+        },
+        "route": "special-messenger",
+        "bypass": true
+      }
+    }
+  ],
+  "notice_received": [
+    {
+      "day": 141,
+      "seat": "seat:davis_jefferson",
+      "paper": {
+        "id": "m.140.walker_leroy_p.davis_jefferson.notice.manassas_advance_received",
+        "knownReceivedDay": 141,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "walker_leroy_p",
+          "reportAuthorPost": "cs_secretary_war",
+          "reportSubjectKind": "situation",
+          "reportSubjectId": "manassas_advance_received",
+          "reportClaims": [],
+          "reportDay": 140,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": null
+        }
+      }
+    }
+  ]
+}

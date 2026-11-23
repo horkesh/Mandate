@@ -1,0 +1,30 @@
+{
+  "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "inputs": {
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-initial-state.json": {
+      "sha256": "375ed6ce4d070fd749f47ee5559b1994d52ccb678fab92438d0ce63696bc8d71",
+      "bytes": 447158
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-final-state.json": {
+      "sha256": "28cd026e3c22a1d6c1239fe1cf221c5b711da5e3423600d3a5fb80a390bd003d",
+      "bytes": 4099733
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-trace.json": {
+      "sha256": "d3b7ed703199b4d8fa0e9ff882428984c03d8a629df5cd301003daaf90e66549",
+      "bytes": 40868075
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-decisions.json": {
+      "sha256": "a427c1137b6e3200e2dbfbb6ad79943d9da3772e40d116da366a964bc1be9cbf",
+      "bytes": 11789430
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-observations.json": {
+      "sha256": "9a5c9ca8eb657f914bd1dc5f1de0bade03cd751039d31b877f849c257a4d4652",
+      "bytes": 142718
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\done-results.json": {
+      "sha256": "b3c5ce7952f72d9425e39da50f668d94b34976d75ee22e1aa382735fbe1059f9",
+      "bytes": 13894
+    }
+  },
+  "policy": "S82 retained reference only; no simulation rerun; other worktree never written."
+}

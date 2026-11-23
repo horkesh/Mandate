@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": 1983,
+  "original_tracked_paths": 1812,
+  "new_delivery_paths": 13,
+  "source_locators": 35,
+  "local_source_hashes": 34,
+  "scope": "No tracked baseline file changed. Only research markdown, evidence CSV/JSON and handover added. No simulation run or other-worktree write.",
+  "preflight": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.284,
+      "log": "runs/s84/typecheck.log",
+      "test_mode": null
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.626,
+      "log": "runs/s84/boundary.log",
+      "test_mode": null
+    }
+  ],
+  "review": "Author evidence check only; independent whole-branch review deferred to Claude under 0096/0106/0107"
+}
