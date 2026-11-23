@@ -1,0 +1,11 @@
+{
+  "commit": {
+    "exit": 0,
+    "elapsedSeconds": 316.4240729000012,
+    "head": "f5e3ceedc58476d98898285d906b529932a862d2"
+  },
+  "hookLog": "runs/s102/build-retry-commit.log",
+  "firstRejectedHook": "runs/s102/build-commit.log",
+  "cheapApplicationAudit": "runs/s102/application-before-measure-report.log",
+  "requiredChecks": "Unchanged normal hook, with Git fixtures; no environment exclusions or worker overrides."
+}

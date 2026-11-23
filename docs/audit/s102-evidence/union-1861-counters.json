@@ -1,0 +1,3527 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.bombardment",
+    "before": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.breakout",
+    "before": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2415
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2352
+    },
+    "changed": true,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed raised forces, assembly and movements alter battle participants and outcomes through the unchanged combat rules; no strength injected. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "combat.cut_off",
+    "before": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.destroyed",
+    "before": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.evacuated",
+    "before": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 22642
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 21784
+    },
+    "changed": true,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed raised forces, assembly and movements alter battle participants and outcomes through the unchanged combat rules; no strength injected. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6820
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6655
+    },
+    "changed": true,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed raised forces, assembly and movements alter battle participants and outcomes through the unchanged combat rules; no strength injected. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 314,
+      "magnitude": 15800
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 286,
+      "magnitude": 14700
+    },
+    "changed": true,
+    "changedFireDays": [
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      125,
+      126,
+      128,
+      129,
+      130,
+      132,
+      133,
+      137,
+      138,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed raised forces, assembly and movements alter battle participants and outcomes through the unchanged combat rules; no strength injected. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "before": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.records_pruned",
+    "before": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.routed",
+    "before": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.surrendered",
+    "before": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "before": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.works_stormed",
+    "before": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_closed",
+    "before": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_established",
+    "before": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_reopened",
+    "before": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.post_succeeded",
+    "before": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.proposal_refused",
+    "before": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.side_changed",
+    "before": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.temporary_post_opened",
+    "before": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "commands.rejected",
+    "before": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 320,
+      "magnitude": 18600
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 292,
+      "magnitude": 17500
+    },
+    "changed": true,
+    "changedFireDays": [
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      125,
+      126,
+      128,
+      129,
+      130,
+      132,
+      133,
+      137,
+      138,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Different physical forces and battles change control under the unchanged contest/occupation rules. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "changed": false,
+    "changedFireDays": [
+      67,
+      71,
+      72,
+      76,
+      78,
+      120,
+      122,
+      128,
+      132,
+      134,
+      135,
+      136,
+      139,
+      140,
+      141
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.landed_by_situation",
+    "before": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.landing_refused",
+    "before": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2794,
+      "magnitude": 2771175
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2404,
+      "magnitude": 2388062
+    },
+    "changed": true,
+    "changedFireDays": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      148
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed muster volumes and physical force paths alter stores, attrition and enlistment consequences; force rules and sourced original strengths are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 109,
+      "magnitude": 109
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 131,
+      "magnitude": 131
+    },
+    "changed": true,
+    "changedFireDays": [
+      69,
+      123,
+      124,
+      125,
+      126,
+      127,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      143,
+      144,
+      146
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed muster volumes and physical force paths alter stores, attrition and enlistment consequences; force rules and sourced original strengths are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2483,
+      "magnitude": 2467029
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2228,
+      "magnitude": 2207500
+    },
+    "changed": true,
+    "changedFireDays": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      87,
+      88,
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      100,
+      101,
+      102,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      141,
+      142,
+      143,
+      145,
+      146,
+      147,
+      148
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed muster volumes and physical force paths alter stores, attrition and enlistment consequences; force rules and sourced original strengths are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 184,
+      "magnitude": 2261
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 176,
+      "magnitude": 2287
+    },
+    "changed": true,
+    "changedFireDays": [
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed muster volumes and physical force paths alter stores, attrition and enlistment consequences; force rules and sourced original strengths are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "infrastructure.changed",
+    "before": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1470
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1443
+    },
+    "changed": true,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Downstream of changed call willingness, accepted levies and ordinary field/received-paper consequences; this mechanic implementation and its parameters are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11881
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11709
+    },
+    "changed": true,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Downstream of changed call willingness, accepted levies and ordinary field/received-paper consequences; this mechanic implementation and its parameters are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "ladder.moved",
+    "before": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "ladder.rival",
+    "before": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changed": false,
+    "changedFireDays": [
+      136,
+      139
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_lost",
+    "before": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "before": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [
+      137,
+      140
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 58,
+      "magnitude": 65
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 53,
+      "magnitude": 59
+    },
+    "changed": true,
+    "changedFireDays": [
+      68,
+      70,
+      71,
+      72,
+      76,
+      78,
+      120
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Derived-map counts follow changed forces, control and supply; no map data changed. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 101,
+      "magnitude": 101
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 108,
+      "magnitude": 108
+    },
+    "changed": true,
+    "changedFireDays": [
+      4,
+      22,
+      29,
+      36,
+      44,
+      98,
+      120,
+      122,
+      127,
+      128,
+      132
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed call answers, levies, dispositions and field activity produce different ordinary dispatches; routing rules and route weights are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14276,
+      "magnitude": 14276
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14061,
+      "magnitude": 14061
+    },
+    "changed": true,
+    "changedFireDays": [
+      7,
+      14,
+      18,
+      27,
+      30,
+      31,
+      32,
+      34,
+      37,
+      38,
+      41,
+      42,
+      46,
+      47,
+      48,
+      49,
+      50,
+      54,
+      55,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      120,
+      121,
+      122,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      136,
+      137,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed call answers, levies, dispositions and field activity produce different ordinary dispatches; routing rules and route weights are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2852,
+      "magnitude": 2852
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2847,
+      "magnitude": 2847
+    },
+    "changed": true,
+    "changedFireDays": [
+      81,
+      111,
+      121,
+      141
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed call answers, levies, dispositions and field activity produce different ordinary dispatches; routing rules and route weights are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 15042,
+      "magnitude": 15042
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 14823,
+      "magnitude": 14823
+    },
+    "changed": true,
+    "changedFireDays": [
+      22,
+      29,
+      36,
+      46,
+      47,
+      48,
+      49,
+      50,
+      53,
+      54,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed call answers, levies, dispositions and field activity produce different ordinary dispatches; routing rules and route weights are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "before": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 728,
+      "magnitude": 728
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 598,
+      "magnitude": 598
+    },
+    "changed": true,
+    "changedFireDays": [
+      41,
+      49,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      120,
+      121,
+      123,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      135,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Different levies, transfers and field plans produce different physical legs and joins; route and headquarters rules are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "before": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.joined",
+    "before": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "after": {
+      "mechanic": "movement.joined",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "changed": true,
+    "changedFireDays": [
+      42,
+      59,
+      64,
+      78,
+      80,
+      82,
+      90,
+      99,
+      138,
+      140
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Different levies, transfers and field plans produce different physical legs and joins; route and headquarters rules are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 398,
+      "magnitude": 398
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 310,
+      "magnitude": 310
+    },
+    "changed": true,
+    "changedFireDays": [
+      47,
+      50,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      120,
+      121,
+      122,
+      123,
+      124,
+      127,
+      129,
+      130,
+      132,
+      133,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Different levies, transfers and field plans produce different physical legs and joins; route and headquarters rules are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "operations.ended",
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.landed",
+    "before": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.opened",
+    "before": {
+      "mechanic": "operations.opened",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "operations.opened",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changed": false,
+    "changedFireDays": [
+      142,
+      144
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 17,
+      "magnitude": 17
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 17,
+      "magnitude": 17
+    },
+    "changed": false,
+    "changedFireDays": [
+      146,
+      148
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_answered",
+    "before": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_refused",
+    "before": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_sent",
+    "before": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.works",
+    "before": {
+      "mechanic": "operations.works",
+      "fires": 7,
+      "magnitude": 350
+    },
+    "after": {
+      "mechanic": "operations.works",
+      "fires": 7,
+      "magnitude": 350
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.bypassed",
+    "before": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.conflict",
+    "before": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "before": {
+      "mechanic": "orders.obeyed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "orders.obeyed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [
+      141,
+      143
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relay_held",
+    "before": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relay_objected",
+    "before": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relayed",
+    "before": {
+      "mechanic": "orders.relayed",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "orders.relayed",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 23,
+      "magnitude": 60
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 22,
+      "magnitude": 54
+    },
+    "changed": true,
+    "changedFireDays": [
+      111
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Calls and their relays read their attached values; changed replies and levies change later reports/orders through the existing received-information and command paths. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "orders.returned",
+    "before": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.grievances_faded",
+    "before": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "after": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_broken",
+    "before": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_kept",
+    "before": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.resigned",
+    "before": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "after": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.stayed",
+    "before": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 5,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 5,
+      "magnitude": 10
+    },
+    "changed": false,
+    "changedFireDays": [
+      141,
+      143
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 5,
+      "magnitude": 28
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 5,
+      "magnitude": 30
+    },
+    "changed": true,
+    "changedFireDays": [
+      141,
+      143
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed actual raised forces and received field picture alter existing draft candidates and contributing-term counts; no planner weight was fitted. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "planner.term.caution",
+    "before": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.coordination",
+    "before": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.dependence",
+    "before": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.exposure",
+    "before": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.force_ratio",
+    "before": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.glory",
+    "before": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.goal_fit",
+    "before": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.haste",
+    "before": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.notes",
+    "before": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.supply",
+    "before": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.approved",
+    "before": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.chosen",
+    "before": {
+      "mechanic": "plans.chosen",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.chosen",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [
+      142,
+      144
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.draft_deferred",
+    "before": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.drafted",
+    "before": {
+      "mechanic": "plans.drafted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.drafted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [
+      141,
+      143
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_answered",
+    "before": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_invalid",
+    "before": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_objected",
+    "before": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_received",
+    "before": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_shirked",
+    "before": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "before": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "before": {
+      "mechanic": "plans.goal_set",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.goal_set",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [
+      141,
+      143
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.released",
+    "before": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.sent_back",
+    "before": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.submitted",
+    "before": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "before": {
+      "mechanic": "plans.went_ahead",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.went_ahead",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [
+      142,
+      144
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.act",
+    "before": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.adjourned",
+    "before": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.answered",
+    "before": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.called",
+    "before": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.framing",
+    "before": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.front_page",
+    "before": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "after": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.met",
+    "before": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.opened",
+    "before": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.press_silent",
+    "before": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.refused",
+    "before": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.support",
+    "before": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "after": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.answered",
+    "before": {
+      "mechanic": "recruitment.answered",
+      "fires": 83,
+      "magnitude": 83
+    },
+    "after": {
+      "mechanic": "recruitment.answered",
+      "fires": 74,
+      "magnitude": 74
+    },
+    "changed": true,
+    "changedFireDays": [
+      34,
+      41,
+      42,
+      44,
+      48,
+      70,
+      71,
+      72,
+      98,
+      116,
+      117,
+      120,
+      122
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Direct: sourced per-call values change willingness, actual rung and accepted/delayed quotas; ordinary musters, expiry and renewal follow. No material capacity term or trait changes. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "recruitment.called",
+    "before": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "after": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changed": false,
+    "changedFireDays": [
+      68,
+      120
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.disbanded",
+    "before": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "after": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changed": true,
+    "changedFireDays": [
+      136,
+      139
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Direct: sourced per-call values change willingness, actual rung and accepted/delayed quotas; ordinary musters, expiry and renewal follow. No material capacity term or trait changes. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "recruitment.lapsed",
+    "before": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.men",
+    "before": {
+      "mechanic": "recruitment.men",
+      "fires": 62,
+      "magnitude": 230700
+    },
+    "after": {
+      "mechanic": "recruitment.men",
+      "fires": 51,
+      "magnitude": 193700
+    },
+    "changed": true,
+    "changedFireDays": [
+      46,
+      49,
+      53,
+      75,
+      76,
+      77,
+      103,
+      121,
+      122,
+      125,
+      127
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Direct: sourced per-call values change willingness, actual rung and accepted/delayed quotas; ordinary musters, expiry and renewal follow. No material capacity term or trait changes. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "recruitment.muster_blocked",
+    "before": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.mustered",
+    "before": {
+      "mechanic": "recruitment.mustered",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "after": {
+      "mechanic": "recruitment.mustered",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "changed": true,
+    "changedFireDays": [
+      46,
+      49,
+      53,
+      75,
+      76,
+      77,
+      103,
+      121,
+      122,
+      125,
+      127
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Direct: sourced per-call values change willingness, actual rung and accepted/delayed quotas; ordinary musters, expiry and renewal follow. No material capacity term or trait changes. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "recruitment.refused",
+    "before": {
+      "mechanic": "recruitment.refused",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "recruitment.refused",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changed": true,
+    "changedFireDays": [
+      34,
+      41,
+      42,
+      44,
+      48,
+      71,
+      72,
+      98,
+      116,
+      117,
+      120,
+      122
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Direct: sourced per-call values change willingness, actual rung and accepted/delayed quotas; ordinary musters, expiry and renewal follow. No material capacity term or trait changes. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "recruitment.renewed",
+    "before": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.slow_walked",
+    "before": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "before": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "after": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "before": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "after": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.filtered",
+    "before": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.observer_letter",
+    "before": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.pocket",
+    "before": {
+      "mechanic": "reports.pocket",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": true,
+    "changedFireDays": [
+      139
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Changed answers and field activity produce different received reports; reporting and filtering rules are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "reports.trimmed",
+    "before": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refilled",
+    "before": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refused",
+    "before": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 170,
+      "magnitude": 170
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 163,
+      "magnitude": 163
+    },
+    "changed": true,
+    "changedFireDays": [
+      50,
+      54,
+      68,
+      76,
+      87,
+      120,
+      121,
+      122,
+      123,
+      128,
+      129,
+      130
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Different received replies and field requests change ordinary menus/attention/decisions; no attention or initiative rule changed. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [
+      142,
+      144
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.defaulted",
+    "before": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.initiative",
+    "before": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.decided",
+    "before": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "after": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.delegated",
+    "before": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.lapsed",
+    "before": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.options_changed",
+    "before": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.orders",
+    "before": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "after": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy",
+    "before": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "after": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy_unpaid",
+    "before": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.proposals",
+    "before": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "after": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.resurfaced",
+    "before": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.staff_lines",
+    "before": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "after": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.waiting",
+    "before": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 143,
+      "magnitude": 143
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 136,
+      "magnitude": 136
+    },
+    "changed": true,
+    "changedFireDays": [
+      50,
+      54,
+      70,
+      78,
+      87,
+      120,
+      121,
+      123,
+      127,
+      128,
+      130
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Different raised forces and received replies change ordinary inquiries/transfers/answers; verb grammar and values are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "verbs.audience",
+    "before": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.consulted",
+    "before": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.declined",
+    "before": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "after": {
+      "mechanic": "verbs.declined",
+      "fires": 31,
+      "magnitude": 31
+    },
+    "changed": true,
+    "changedFireDays": [
+      121,
+      128,
+      129,
+      130
+    ],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "Different raised forces and received replies change ordinary inquiries/transfers/answers; verb grammar and values are unchanged. [I] Causal path of this combined change, not an isolated additive intervention."
+  },
+  {
+    "mechanic": "verbs.in_washington",
+    "before": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedFireDays": [],
+    "magnitudeNote": "Daily summaries retain fire counts only. An empty fire-day difference does not assert unchanged magnitudes; exact total magnitudes and raw battle/event records are retained.",
+    "cause": "unchanged"
+  }
+]

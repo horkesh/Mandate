@@ -1,0 +1,67 @@
+{
+  "acceptedPacket": "S101, d887b692; byte-exact five-input copies retained under inputs; all twenty profiles and per-instance differences read. This is application of accepted research, not a new exhaustive source audit.",
+  "primaryExtractsReadThisLane": [
+    {
+      "source_ref": "OR-IV-I:412",
+      "printed_page": 412,
+      "url": "https://archive.org/details/cu31924079579524/page/n427/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p412.txt",
+      "extract_sha256": "c7c037b8b29b5d8aa5901366d5b3fbee0afe95608c46bff9f96d45063d17934f"
+    },
+    {
+      "source_ref": "OR-IV-I:416",
+      "printed_page": 416,
+      "url": "https://archive.org/details/cu31924079579524/page/n431/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p416.txt",
+      "extract_sha256": "b0cee67a861de6c782cad969b5ae2f3585016b5cd6587bfab24d6073d00d6548"
+    },
+    {
+      "source_ref": "OR-IV-I:466",
+      "printed_page": 466,
+      "url": "https://archive.org/details/cu31924079579524/page/n481/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p466.txt",
+      "extract_sha256": "623bd64a260b0dec78c588379e35aa37c27a0ab30915cc77dcc4f93d3f36f76c"
+    },
+    {
+      "source_ref": "OR-IV-I:477",
+      "printed_page": 477,
+      "url": "https://archive.org/details/cu31924079579524/page/n492/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p477.txt",
+      "extract_sha256": "83a273d54e0b41e8f1a7f7681cde50c54ba8f73d4a0dc961f4ed1501979ac88f"
+    },
+    {
+      "source_ref": "OR-IV-I:478",
+      "printed_page": 478,
+      "url": "https://archive.org/details/cu31924079579524/page/n493/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p478.txt",
+      "extract_sha256": "37675e068e00588a4d936d5a31b79f7abc97a4d882a548ec3024b6e72e916ed7"
+    },
+    {
+      "source_ref": "OR-III-I:151",
+      "printed_page": 151,
+      "url": "https://archive.org/details/cu31924079622175/page/n166/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p151.txt",
+      "extract_sha256": "01d527b0d4a1e554798355bfe4ade2f677619db01118d76f6c39d0a3cc4ffc61"
+    },
+    {
+      "source_ref": "OR-III-I:263",
+      "printed_page": 263,
+      "url": "https://archive.org/details/cu31924079622175/page/n278/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p263.txt",
+      "extract_sha256": "8a6f62cf4fbc11edbaa37cd210f182c6734a343f3020ca7c651840772474b91a"
+    },
+    {
+      "source_ref": "OR-III-I:265",
+      "printed_page": 265,
+      "url": "https://archive.org/details/cu31924079622175/page/n280/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p265.txt",
+      "extract_sha256": "3cc10e1966b9b908bcfc280aaf3fa287b9d578549ca7d71f3da737e6583d458d"
+    }
+  ],
+  "sourceLimits": "S101 holds and disputed wordings remain in each call/reply. The other original pages have inherited S101 receipts; no new independent reading claim for all 73 locators.",
+  "validationEnvironment": {
+    "MANDATE_NO_GIT": null,
+    "MANDATE_TIMING": null,
+    "CI": null
+  }
+}

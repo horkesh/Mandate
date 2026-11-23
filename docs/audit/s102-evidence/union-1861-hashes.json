@@ -1,0 +1,1038 @@
+[
+  {
+    "day": 1,
+    "before": "749d054e280499e1ff1fbbd1358dafbac72d0d1d34da7eded3fed18124054765",
+    "after": "749d054e280499e1ff1fbbd1358dafbac72d0d1d34da7eded3fed18124054765",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 2,
+    "before": "a1066579b77dbdcc86cce03f640294645eaf7e45b2cbd1cb2b7693561b0abddb",
+    "after": "a1066579b77dbdcc86cce03f640294645eaf7e45b2cbd1cb2b7693561b0abddb",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 3,
+    "before": "872205a6b071833dee5cf44bbb4cb491f1a43fc99620ffd9e275fdb8e70abdc2",
+    "after": "872205a6b071833dee5cf44bbb4cb491f1a43fc99620ffd9e275fdb8e70abdc2",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 4,
+    "before": "ea58fe4d0424cacc0928a16755c6ea7c956ef926d6f638bf80f094931987adad",
+    "after": "4977a82996f0636e944af820f6adf8d3558dea8997958395213c83ada12af58e",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 5,
+    "before": "7ea346738d74b25575b6d231dd3c986a2323fe6719afccc90a572865e3eb1c56",
+    "after": "3400dfe2bdfc74978847f8dd3fbc385a04245df5e288e352393f2e878e6095e3",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 6,
+    "before": "000e5f26d2910bf5ec39ec4276b504fd411f770df992e9d3a15a9229d4efa1ed",
+    "after": "67fc077e5074dd90fb1f4ce2b917da78c1ea59339d22005fa8d20d8de17ff066",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 7,
+    "before": "8252eca561ae3e9f72b0292e4756584adc13c569f455527b9383e3a5fd18c2f5",
+    "after": "dd5566213b98b43ef98a6123ebd53d4c05ebde6a51cb6fbe213f104383304f6d",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 8,
+    "before": "571ab2ecd32494cbd38cb8a802e506684f24687b1d5b02d23ecdfa8899c88b04",
+    "after": "3db08a848eedfa692945983255c59b039fe68578218440b9746c21403db741d2",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 9,
+    "before": "dc69f712319a4b829d7baa5e696a6788b82fa1de0e4dbec3d676b028e3cb2f2d",
+    "after": "4f98603f5b7f531c5603d564a23ca6f422cf088259915cb72bc012319d6d5254",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 10,
+    "before": "f213bf14b79dd819224705d7d6499e839db44037c03452d61d03f3774683f1dc",
+    "after": "37c8d6644659200c7b1f1315f241ffe8b7fd18ce1864040be973a6881732293a",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 11,
+    "before": "0cf0cb9f64e315e271aee588eb3ccb1db829e78d98099b587d8c844de09f07e5",
+    "after": "326fae88799b2e0f1e89be729eadea07c2596f7ea4752b5040ebc4d5489545b6",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 12,
+    "before": "35e76ba7e489d3211507d36d3885bdb4709d97fb4177586038416b799cd7f4e1",
+    "after": "a4fc151caa8f372ae3f56d0986b9afe6fb5645d6bce217eb3f39291ae3ab5d25",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 13,
+    "before": "28ce29b8f96975479494c423f9c4a7bfb9d431393339ee60c774e19b71bafd91",
+    "after": "5ce6040ac2dac4ecab384b66f4c986e75eb5275fd399a61c0c2ea82dda18ed9d",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 14,
+    "before": "46af2d31ce1d6d3ba92f752d970c5e479884b26057b9099953ceb713e61746c5",
+    "after": "0e727e37e925ca0949beef973e7d3b49fe992048118fd9e763736e72196c70b5",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 15,
+    "before": "8cbc1a3fee06ea31887361623ffab045d14b3204f923e86ac5d88ba6a0b915ed",
+    "after": "9e0384fa951ec3cad33288e1fb3468c29ed53b76541fd7910df270d525e71644",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 16,
+    "before": "63efc131424fcaca61b3ac7aecc5e2379833311a93be22dab07b618934168b38",
+    "after": "703e98825302a920fffc1c438b13aafb3988df207e52c5c5dcf9aaad9c08560b",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 17,
+    "before": "28fa44a4913ecc2a1852feda965459ec359b8dc88b08c4b32c020131a7e3c7d7",
+    "after": "ad8fe716e65d6a58733af0e2afa12af53e299584088e26333520d705c9641893",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 18,
+    "before": "ead5bc85c6a915336b9e155136a6b98581676b6ba4a0ab0e765459aa1e94de60",
+    "after": "26522560b289409d452693dbf0923ca95eb7225430a9a76e1e58cd22bd0bb10d",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 19,
+    "before": "31e33b1f863987fe24bddb580fd79835f7734fa71b7ebac838cd57bcfde7fd61",
+    "after": "ffe63e3f9afe518ee01f6814af40086a4a16a424930f7dce9fed0ce249d8d230",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 20,
+    "before": "7ff1f7fd065ccba755fe8a5aa252b0d45f3a7bebbdb64a65b46ecb06d7996883",
+    "after": "7ab730b57da6ef3025fcf501ad0e54982ce6bf265f1a33a37b9f54bf7e2a6d60",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 21,
+    "before": "3225e09ed141e2425489bcebf10b2de60e3f538ca3f470c42914264a0ca0996a",
+    "after": "905df8e1964272933033a49e00779b0aa40dcc8dbf71772ffa4c7dc4ddf342ab",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 22,
+    "before": "60fde3b27faa5903f9d1f851c585e072c91cef12091567bfaeb0f96a472dd791",
+    "after": "257118ad3c306d654cad52d5829f5bb8e1ed67d18d802377cf17349c4a7b7c91",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 23,
+    "before": "02957886f4c934d1f25341a7f36045f742722d0b401ea272f0e8e66829668090",
+    "after": "ba7b06496f832c94ae9370b5a979cb4d540dbf28240b0831271cecb11c970173",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 24,
+    "before": "587fd1097bc3779a8f9b93b8100774f2eb250d7467ef50593fe0a68d84f3dd04",
+    "after": "dce581873c59bb6a0fd29a83801cfda7f7d76bc4eade4dc75f1fc9707012b406",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 25,
+    "before": "1bd1841adb975c5465e5d14fe07126083b873246eaaef977817728ed3ab00e99",
+    "after": "e11e9d057fe82363186b31c9490e04cc6ce271b074b2d65a907719a540c8f5f2",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 26,
+    "before": "cad64b40184240eccb4fb83148f52f437b8f29b266465b422e3a4eacf9a191e4",
+    "after": "58f03dc5f64ec8f7d5d20cfc4be1b97703706169f677b955e31a9e3390376d15",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 27,
+    "before": "f2bd02f4d212fd5b5b0064c9de36a2405022723c794b461f41a84adcb069e91d",
+    "after": "11024ce1feda989435f534a87cb4f9c68a3c0a8a9666baacfda31526643b39e8",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 28,
+    "before": "1330301bac8dd045fb7f133648cd043d33820d36dd31fd165fb36eeb1ad82216",
+    "after": "35d91fa883bf76ec3e84d90293886b4f47a0de8a6511840310e5beca1bdb416c",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 29,
+    "before": "69d711d30ae51dbdc3f7620cea21d0eed2735a01e8900aa1e5dc511aed935883",
+    "after": "075071731584a0fcbe87513ac738691cd5840bff210e9868ef1973ab08a1e4b4",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 30,
+    "before": "ae7141dfe1e3381b1419fa349141cbaf5150525b09479d63c40e9922029b30be",
+    "after": "4074c2e53c319ae19b46b95cd44923857264596935f23b221cd91f6df4b5fce0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 31,
+    "before": "6c476b2c1521e6cf60d14225354f037948010cf2addb32bb65349929a7371096",
+    "after": "9c9ebb103ae5ec4c711e3599d84b79c6abf9e452c7e1db287c74a7afe103bf32",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 32,
+    "before": "9cd42f6481807bda9d89b097291de90df8a9c3ed3c772bb3330e251c6889c03d",
+    "after": "39a17ca5df40e7688eb248c29fb837527f355538dc907c9fee7de62eaeacc910",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 33,
+    "before": "7d407cb83b67141375dec2e7cc9c5b30e232869e1b2bd79322be0b87052bd51e",
+    "after": "7264c6802469929ee682dcb6d49f124ba211d3bae50a844b3916a03df52a1e21",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 34,
+    "before": "8e4ec20d2a882c983718bf5d04eead934e7a07b21b22a9999ce60b41dc83c711",
+    "after": "5d6fa8d5bc49a84563dac5d49f60ba94f96e315d486aa85e4858a5a1c0554d4a",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 35,
+    "before": "18ed486a6897050f670ad38c531f535902aa9e9a303e0a594d819588d1a1b203",
+    "after": "d519e3e49a70172afd4e828836e058f46a02ee89a5863dd72c4819482b82438b",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 36,
+    "before": "b828d43ed8f776e2a566d000b9c6f9ac3fac0b62caed629925b96c590fbaf58e",
+    "after": "0cfa5665e0ce86a19042e2b86f6cbcb6dbd76e9988bc69a2e1dccecf14969294",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 37,
+    "before": "1b2a05bb92d443c1cd8ea727624d10ee178b0cab2fcd1a6c8ed47e5549c1ec60",
+    "after": "e89f5b40424f418df7cab530f34c61ee4779b6e589bc71df5ca41e5d9b3ae9bf",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 38,
+    "before": "356319196fbc6112a7d5831790daf2aa4a66ecd9e0cb18db287e636ba81e9c1d",
+    "after": "8d0b3a2fef889796835e02943733e00a8208a47ce1d359dad2e2bdacc4f72235",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 39,
+    "before": "48c9bfcf15fbf9d50fe378ae823a87b8d97ca7f87897054c2ec24fa82040d28a",
+    "after": "e16e241e667ee63c037cc3b2053a569785c64a0c33abb0e6a4eec1a7b2ffd2c4",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 40,
+    "before": "23a1e4d000cf4e5c1c4b0b502bbe0a17f29e5c3ca7b20f694599daa32edf069d",
+    "after": "2d72a3d478bc73b86c9a1681c142c7c55471038e57dda4c53f1539eaf94d8571",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 41,
+    "before": "d4ab28196b577899130b9756188258eed749af2f4d8a7360712947d203054dcd",
+    "after": "f898101ca1352d98d8628a0bca1d192f34cc3a276b6b50729d7a2d9f052625bd",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 42,
+    "before": "df77ee62e6bb8917a4b51cfac1b1757f0ad8867f4a658f5549f4fce8ea0c9bf7",
+    "after": "371ab37bc7d277fe9df9472d700d7a8813edbbf9b740da1316f5719f3ddd29be",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 43,
+    "before": "5f4067fef436fd65b1699367e3709e1534a4d68befb8d082b0ec1eba734843c2",
+    "after": "35b063e80c4d8c0b600a7cfeacd08f991ffbd8564f97fea7685da03cc68aa5a7",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 44,
+    "before": "3cb1220bd773c8030ada88acc4a260ce03d4bd219fb79c10fc15ac4bb3f41928",
+    "after": "e09f1f30f9fabe2e223dc5babae10feeb093852c81bfa974788d0e51c7eccbc7",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 45,
+    "before": "7568d243908adf0ec9de55078d3a407c2724fa25e0b674d8ef37b1dbff4c873e",
+    "after": "49484315e2a98b7565fe78da5cfc3a6671bac7eb694156ad4f235a872188e730",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 46,
+    "before": "263b17915af121c307ccbdadc9161c8a8e36caaa0548c495abfcb00198c2780a",
+    "after": "2407eeb4472f4e0d77be7d3a16184f0f3111576c69509d7e77e04145c9ac2aa8",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 47,
+    "before": "7aad3e4a3382bcf14be243b2913244f52f518980bc9916015cef7dcb2b36a683",
+    "after": "305799eae378c1c5803a000e4dedc446d4ad01e8edea21ba4f3976069970df75",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 48,
+    "before": "0c332b73f9fd09ed0379f163dad156c26a8cfc128c96ed56601f6c61c05e6ab3",
+    "after": "f38d36773278dc4ae92d634525669894dbb4733c34b370d6138dd7718623ccc8",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 49,
+    "before": "9b67069504cc8b34c87d37438dd30d3725c9925499b466eb5c9ff46ffd741828",
+    "after": "f17c7a6828989eed3766af58f490dda987cab34ff7a56ecd9a3cdaef663512d1",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 50,
+    "before": "bc88311d80faa3ee5ffdcf6bbcb61deffc859f3fdd0d8f99c872731b23102539",
+    "after": "adb8442dc037610c02e55048d5f59cee6339e10a9db97d23a9fb4ad9561e0af2",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 51,
+    "before": "58bc053ec1cb65948e076315a76510bd04f5cae18f8a990bba9f9065b7719360",
+    "after": "34247f5ad1595fffb5f3229fdddd84d5ea49c056cfa96e8889a0883c1a82320f",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 52,
+    "before": "b3df110e7544f66f354ee9da7bae866cf51b0538f3dc479b0953949861a37d1b",
+    "after": "a27c9513a8d21f97488e2d4d6b987929bf704e1536440de86d88af3680ea2bf0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 53,
+    "before": "2b581473ba4985435131389cb87cd1e17ee69df44883110c28dbf223f5f595cd",
+    "after": "b96650ee4e31eb0c4d345f8ff34b54a14a6661d5602c22003ecc2189240956c5",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 54,
+    "before": "7ebb42c03ccf886138a3f8840d20f5477ae6ac664c724a6b7f48ab3bcd5895be",
+    "after": "f45fef64031b203842f4a11e43ee59db1e2a52f1f37f1df72aca70ecf9670481",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 55,
+    "before": "9f4e87beb3be7e3d1bd2f12caf3b84e09068e9e6d369405dac14fb5eb5b7d7e5",
+    "after": "a44b31bb350ffca2c35b14722fd39c586608e5b1c83954caaca37581d3504542",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 56,
+    "before": "396caa0983808c9a215983fe8a032db13095361469fec6604fea6657234533d9",
+    "after": "76551092f2f11f1bdb5c93a0b347a0deaa8761bd616828aebc51ed23d74b547e",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 57,
+    "before": "92be6773756413ee86785ddce708a11fb7cfeea39bf21bf0ae0c37de56ab2234",
+    "after": "e64e793e7518f759c69b63f5308fb5f36968ddd0dd2a1271ac3f695306a167d5",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 58,
+    "before": "7179cddbe4adc2ea1dd44b3277e56183a9468fc1ea3bac6b95e6d47544a8ddd8",
+    "after": "5639813dce45458b38564fcf7924003c3bc6a07d89566a1ade372d8f8747c0f9",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 59,
+    "before": "bcfc4c90a1567ef1a1dcee498512c90a396d3b68f623db461d8c652e7489f3c4",
+    "after": "21645e6c428dd319e5c814b457697b59c87ad9e3f7f0b90570ee0f8daedc3578",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 60,
+    "before": "2947459a9161f13a667da039700211318704c148f13fb0d6a103b8099f363e3f",
+    "after": "9b740dec28208dd85c09f5ffba6d7781be5e0d6d54cb26a54841166c6e501260",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 61,
+    "before": "b03e800226a26c9591b1e621090a2d93d3e6e7b5a7cadb9b578bee5b3f3dd4d9",
+    "after": "e6a6127711c632e314145166a71ca1dc691a68e7f81f1e27cbe0ec126ed18c2e",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 62,
+    "before": "980d731086c28371b7f969b31d3fa439b1e555ca07ddec4618b0b933d9f9e46d",
+    "after": "0d82de4569a9970c26d823682458d9407a88675c5f5ba21f3fe224eba5fc067d",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 63,
+    "before": "e4a884cb40ed196164b9147c35e6c8aaf3c87701e893d73b9abac3051a0bb1fb",
+    "after": "c3c15fe5fe8488c96d0fe7397bbfad92ab50ff5ad79428626a39ca28bbba8b30",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 64,
+    "before": "20876a6cfa46ae0662c9bb4f27862ee3306eac7df72e9bce934a181f77cf054c",
+    "after": "7bd0e42451a8b0605197067700b7313d44052f96525aa0ef2cbfeab5e1bbb3bd",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 65,
+    "before": "a64b284f251b69afddbc6ddf5dfe26cfc1e78e2c0195762442969b0ad2d8fa58",
+    "after": "4f120c099352cc8c6f51451d8900adaa36095eecfb7c79b7da2c7ffb91e1fa97",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 66,
+    "before": "2c075d630b1a3362f5a54ece398fc1ad0d8c66f9fdc58c3a8dfd8dd3280f6c8f",
+    "after": "abc0de545bc19d0fd915f9ef5f314b97f924a0aa590ddf3f98b4f55b5f602f6b",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 67,
+    "before": "9a8d420401a207255b775e3ebdd4a52061fd9e5c88c1cd7dc25496bcfa00bb1f",
+    "after": "86ddbb0c3e643e2d90b8a0fbcc6bee80944102b90bb017bcb76f714ab40eb37b",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 68,
+    "before": "5266cbd41c8268aa5b995a5391753b3a675d5eadf39be3a46609d23c7b5d8b10",
+    "after": "c6367845782a127cf452d844fe7eba554ea664d76e4d812ef8c60d3aa490edfd",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 69,
+    "before": "b03f069261ee29099cb53b69ad2bb771ece0cd6856de74b8c90b0ea7bcbdc982",
+    "after": "ac9f17d2b1ffcbb4f4c3f1f1c579bbc48e8a8af4be52b5dc55fc9a9193aeac58",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 70,
+    "before": "ac1b90893a5ef7d8d7e7371ccc50eb9a7649d59503963ebbd1773f6ef87e5b12",
+    "after": "eedc84e8fa5b91be992f3273dda157a921430ff70ddc9bcc188a2fc0738c9c5a",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 71,
+    "before": "735b8be6f167b95deadd8ce9ca510e7c225b0a357424cacb77507d753482fdb6",
+    "after": "20a44b7160ef0012c6d26ca77839d1a0908ae8d7e9aa49ce0318464347514c39",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 72,
+    "before": "638357deeb71c54837ac86ebdc730e1e6373fe6ef467615912bca7d294ed6784",
+    "after": "88c6c91b8f1b5280bf42c5e0a65229634c78b8bc92bea2f69365085c4ac0f8d0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 73,
+    "before": "a3d71d7f4d8988bd90bb78d38a417b9d25a4f1f80a5c7944bcbdd0f0368d8c02",
+    "after": "7437f4a7e1983d120feca5b1e33d42530d4384f7565f182da1166219dfbf2aa4",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 74,
+    "before": "287821d23d3bae5b3b1946d28436fcda63ff4479c10f6db9248a4098e8fc9e3a",
+    "after": "79d2dbb785d4d9e61c314fde846a91ff5382bf7b713135bfd9e25e0ffaee2298",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 75,
+    "before": "33da01180e7fa4157636e082af9625fee9f2386fb34118fa3d7bcd439688d689",
+    "after": "ae9e6e35a1f08e6de9a8f0aa00f2877e9e5c775974c421ca3c73e93285d83953",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 76,
+    "before": "b1fcdd5cd08f1fb736d15561602659c515e95c6a4c433710df92d87f93cbf1ac",
+    "after": "da0d69a80e90e66fdb5d2e110c063c54e4d7e403e548fa6afdad89573d71c389",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 77,
+    "before": "151f9c19823e93aa6a80e00355728e16e88f12b5d49d3c4ef81cf5c3826ab6cf",
+    "after": "643b3f8fda1c20d9b1816edb801a229150835d4e518b86ef4786af0f12f714a8",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 78,
+    "before": "7b8517336b866c437392f7ea22db507ac8cc646814bc8b4f5fda70a8f9797545",
+    "after": "ec2a66090aa12c5e7b4e18f08b68b506529337e3e26edc234d40d66b8603d254",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 79,
+    "before": "c58bdd410e765cae3463028ddecf81e4f5129c312228578382c3bde1ee91df40",
+    "after": "57bf49970291dba42147b1172eaa01bbf869d6c854e68c2cf501b0cb466c9a3b",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 80,
+    "before": "6efafe27d1f2f0145aafb8341cd22070edd8b62f3a9872e1dd852c8f4018e1a8",
+    "after": "a69246ff8f66d5e7163fc293c476957958ff505f135c299217889bce9be919ed",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 81,
+    "before": "bdb13a49a2c72c1b03cb60b36d5c0b82a913157c1c14204a435e19896fdf40ff",
+    "after": "22f74a8e6589facdafb94e00bb03051ef33de539944f1dfd972b4ec832b2af38",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 82,
+    "before": "ec2c161ffd0eb2f8aa5d4786109a5f622cb0df0fc48215a8386ca82d469e4f98",
+    "after": "db7f2f2968e37bc672b2c882c12244d619094af2d102bb1b9f4959447b7a2534",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 83,
+    "before": "843a17376a0aa234cd34ebb9137760660ac53f4ba0993b752710b032ed39a11f",
+    "after": "177af8c61c14ec535f803e36d2179e5b624bb54ad82b134d20d6d18c21cbc1b4",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 84,
+    "before": "94856f11d00ee8786de3f1f31cad265fcd12996b67eee0b43b0a507bcdd96b08",
+    "after": "545cdf1aea81a28020f50140779b2261954999477d06e40d10e13df7577cbe8f",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 85,
+    "before": "ab96825b2fc374e32f03b9d97e3f197afef524a2675f13aacb35844bc766cfb7",
+    "after": "38b0f573e91c9bde9936236223cb87a72eadc745ceb935582d5d73af0ee9ae27",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 86,
+    "before": "51285fff3568674e22391f96a6fa8fb93224d4ca80d6dd099473e62dbc91f4ea",
+    "after": "6be39e13d46a3add514ee09f83d7de0233e5afde1bb4a6c97adcb202c05bad5e",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 87,
+    "before": "48d02cad7ac5564e65972eaf678009b0876afebe25c13a392583b3c2e9e816c1",
+    "after": "ae884e329a08d8bcc1cc842a307f904dfbe8c85d42c6564655108244224fa65f",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 88,
+    "before": "0fcdbf6809291304d4fea511446ef1d6ec93e8b5d7984c1a9a4639c03c9edbc4",
+    "after": "bca267212a3a768c6e9061dc88ec673c05774e39c1ad312de57655a9857440e1",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 89,
+    "before": "279e06b554de84dc64860fd6fc18fa5589fecc59a0d19498184de8410cbddc64",
+    "after": "52a4fe3c9620711090c3eae9f73875a907767c9591fe9b38fe4f0e6a95775e26",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 90,
+    "before": "a7b7b4cf8fade73b90b98679cb5e5c149c65dc63d38a92a5ca27248262197458",
+    "after": "7a026d5b5d452d15068241d294989b1a6c3145fff86ed951869ecc0d415979e5",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 91,
+    "before": "a0679b319821c8540133b300f94f6a0f7e6a470774c87e4dee38ada5cfdbf665",
+    "after": "e79278a4ce6dea88944cd97768dd6381c7c762dbd3f0f4526aa447aff4b006b4",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 92,
+    "before": "9ac49cd9fc9a65e29593274e1256e5aa7f49babc5497a4cf8d6b2dd5c816d725",
+    "after": "4ecfb4f80e38e8a3e206afbd456b5f7d34b87d457394712b1dd8ec49fbb8e8e0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 93,
+    "before": "764fe589df6f9be3fcc782f2a37ad46f61c59030cfa7f06f8802257284df92e8",
+    "after": "b243481caa086eecfaac54491dc2d2190c212867b8f30a2e2c47624240e63836",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 94,
+    "before": "18b3f9022514ab946531d48e20b97bbb4e940374dc8ff7427bda996bf1c7f3cf",
+    "after": "3b0ed65dee71adb3a2bb66d4b2648ee305018ce7ebb528a0e7851aaf37ab0c47",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 95,
+    "before": "f820c935963db8454d271bd57492c7db8e6b072eedd356be93d013dedcaadbd1",
+    "after": "267e8f483fabb13697883a60e01bd22cd7cebef34f8a3d7fe1dab9ac40a6a704",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 96,
+    "before": "8b12c572030b4ebe54fed1be8a7d263c025b617b625d58cfa659fcfdff04fb41",
+    "after": "47dce7130f168a73d12b89f50af7ce23f0336aa24232a07f1f02d04a3ed6947c",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 97,
+    "before": "58cb916b2cec9270c5e7a9619873283283da913220907f6e39a8d270d2c40c66",
+    "after": "4cf9bc568570fe246e6595e12987bbd9128e0ef3488c8e2b55f40449c83683f0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 98,
+    "before": "8f65df87a8b619e39c7c99fe1f4c2ceb1c6aed4c44da48e3354f1f4c728b75bc",
+    "after": "d408b3eee4ef0eb142fa16c2180b290864d33c63d8b6deedae00df8f2c4d11e5",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 99,
+    "before": "db01a01bc6dc77d617bc09101d41ccd0be84f44a62e99bb5a04fbf5096daaf70",
+    "after": "875072f2305cf3b76719fbe189e015942b4a9fd53ab35db0f7deeff20e90d993",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 100,
+    "before": "26cf263757658a4e79103bb179e7060ce6bccf6ed016b655efa8cdd02ec00b8c",
+    "after": "6015a7c3809c672d07aac6bd04842f1e16ca9290db4d0524f7e896cd1babf945",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 101,
+    "before": "93ade849ea23e79df27bb61991baa9995a1051dce429e003b93cecbff50ed569",
+    "after": "04202184f21e2fae40f013dfa29eebe9ce7dd0a847e3c1aa8ced310e0f39d6ab",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 102,
+    "before": "a6b620e8fe5d4a061be5463046bfe1c38b926d80608a8f7b738ddefe63281026",
+    "after": "d86bbd6f58e5f071b45526ee1deb34a5c97b96d0fa077839cf9511d56500c35c",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 103,
+    "before": "9b651b31d5b1da7cb094c95e0c48a126fa9b184a3afd17089f8036757c5715c0",
+    "after": "f901e6278d7fd35468d467b409db8fdee6cac17388f5953d03d7313a2c4cb6a0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 104,
+    "before": "494da815591a9ffca7f650b04fbd4e068f63bf864299da18aef584071501d2d8",
+    "after": "93b07d215ea2fa7d743670a972f81bdfedd7984fe729dd3ae18295f9aa7afed3",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 105,
+    "before": "148c67458b4fbaed63ee9c48633b64a102fef8a14bcdda96e4f3ed5de75807c8",
+    "after": "a6784e433b4e9d49743cec4c2cba6017512442648965ad2342289bdb09fe62c1",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 106,
+    "before": "227d4da0ddda47978e657d8455a6d79a9421ea4f13b0727bdb73a2bc74ee63a1",
+    "after": "6c25640e7624db12f141a5ee013abe81e551e5192e5421645fc50d572a4ee1e6",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 107,
+    "before": "29140b95b31d1ef611c932341388c78d5d4d1173ff50ccab079fe04093f38357",
+    "after": "7e2fbbc1af75b9c7d474921415cef33872bbaa2f704f854970d5ceb73593a382",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 108,
+    "before": "a237017e7a566643ea880e40d1b712f995c486b13fa3b0b2f50cb6c394fb659d",
+    "after": "c8b35d1ae302b9ae8952ba99372215552ec58782bfbad09f33bd1f5481df5cf9",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 109,
+    "before": "5ec724272cc003c69b229bc6f2b41747091cbc8c718b7e4da09c1a2877772d25",
+    "after": "ec2e93afdd36cb2674ec1671b9cf039795c28ca9833f933ddc58e69f1d86d71f",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 110,
+    "before": "e36ec0f489fac33506ed1bfe79cbec41b7f69be03356f1a4ae5c60db307224f0",
+    "after": "7ba8c9177356e66f79e0a4cc66e9191e1495cb57a2095560bd6cb14eb9587f13",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 111,
+    "before": "062b01c7857dbc62b20cb06d3cfa8d202b20cd96394bfd73abfee5ff33982760",
+    "after": "f305e5c39807a693abd8b90786b446582850679d5c80232fa1d7a0a03ba38c38",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 112,
+    "before": "89b26302e3b3bcc8d5ec3ad3a7740bcd102573cf359f22d586d9fe511fa0c2f5",
+    "after": "a018de9d05e8f1bd2bbf7b79b897d0e4f4abfd08a61dad2c201452e79e3b8b6e",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 113,
+    "before": "d0ce04364cbec4c36012caaa0ca153e55b0a23b14ca8bad10287a25a8a6df696",
+    "after": "76e0694ef6ceee3720c09db14ec5274ad77cd8245b1912311778cc8ab7213d61",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 114,
+    "before": "9f50674a45d1a18d48b4d85e505ff87f0d4f5ab7f2773618ab1890c8a77a5116",
+    "after": "c137f8b622f8388de3331b28a84798ee1572e16448104273af7feef5fa3c90ce",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 115,
+    "before": "8cdc245e4e446bec5ef9e6dcc00dff1455c519c626cde006650d647db14a56fd",
+    "after": "b3dfd02fef49de76d9956b0c15ec5338e55eafc19024ab325a60942404fd61d2",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 116,
+    "before": "fe3cbebef5a5df9658ce65cd406b169256169fc2811d0fa863d4ce7630183ee9",
+    "after": "d9baf13d18ddc23bb9c70ef7781d8fd48b8a438d4de0234edfb6a7104518024d",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 117,
+    "before": "bbfa3ebf300b8a218ab5b66782a46105db9da7a0cf2f19b52f768d0945de76cd",
+    "after": "31aa11c960d8894aed51bb1159632c6a76cec9318ac0b909ec0091a354a19003",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 118,
+    "before": "f2896a3241c3a236a91ce836c1351f2a30e1da9b55d5d7a2a8ba000c24b0b2b0",
+    "after": "e6e46787134d855e869e44f639ac261995513dd55d6267794673afd03760956b",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 119,
+    "before": "2f11b9e142b30f1d80a0e9fd2b43625a9140587b592d006448e7d530c3dbaf9f",
+    "after": "b6261cba0c4d1998ea862b62ffb6ad7918eab5de761fc9f66aa25217e37f6aaf",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 120,
+    "before": "9e09f153ceaf752b3f58e1432adb3615c1d3fc47889861837b57c621a306e809",
+    "after": "919e732c3cf6ffe9005358dfd2c15972229d99883395a6c38b5c12d438615625",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 121,
+    "before": "43cec30263b4f176b680d7588b54812f0eda67711b93665a9905fcd2f6590169",
+    "after": "5771080cd8351cefb1db440b61f394a4e0d679618bf132580c88b8c0d1f18273",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 122,
+    "before": "8fe7d8337c4021db256d57c9822a4d770b82cf93b5f1cc7f0500d14618854efd",
+    "after": "bf3b2c417d57b803c049c3e073b375e0df815f43c371c65a1fc42d838d25fbb9",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 123,
+    "before": "9f471b510864e86f7bd4df0e0501ac25c23ad8bf621b49a42bf8c6aa2734c7f2",
+    "after": "458c21d5c3148dd482712896ddd9a40dd021cd8c40e0fe0c15f3fb1e819a1de0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 124,
+    "before": "1405fb63690e09e569d92282d0c5c4c0d1ba2bf61e385f1cce15eb9e4edb1a62",
+    "after": "bb4bf0a1680a6b98d268f8dfeddb041a699fa430586a99935653ff978dcea959",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 125,
+    "before": "b62d5ca1f71e9a03da71331fd4e2252f2bb600638d7eef486c7a183d8b8614e3",
+    "after": "39c628c07bc99f25477ea086b54f023fb08242ef0986bc7262f30bec2b3be93a",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 126,
+    "before": "291cf5dcf8252bf87dfd8f485b356ab66269770f41bc672574e86740fedca1d5",
+    "after": "62297028ffd038f207b0af63627510505cdade76b8548e33d5afdf5ea4072d96",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 127,
+    "before": "45abf55d7d718768961a6afeacf15060cfd4e0773c7d68cc1fa71a9e52ccc07e",
+    "after": "ad636e81b0389f7bff58d761cad760fe44228c95482120253f6682a37f397aa6",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 128,
+    "before": "a6afcebd29c27f09068007cbc1e265dea966ee51e2b61623c28fbfd353aeb08b",
+    "after": "ee00aed89a9ad1aeba44af02750228a09b13b2a76ad5da648931188ab1d06e4e",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 129,
+    "before": "58b016c00686c3ef0a06f1aa579c7a81d6b35a0dc9e61368e03adcd5af2c0606",
+    "after": "fdd9cbb1177a50ec91b0fefd5c9d3ae7b59f307a1920747f39c84d1d283dbb48",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 130,
+    "before": "92b9793b421509cf057dbd2b7629a0a0dad1e4b49ed5a3f9db9a802073c4fbd1",
+    "after": "cf762f1e35f453a6e09bfa77a97529c9bfad8cc2904206b6bc0d9e36dc1b16d3",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 131,
+    "before": "934d54df16ab238b2ec2548774238ee75b035d849a922c7ae93befd911e3ca27",
+    "after": "343d739e0865faa1428331d7f7f20d187410c900e1a85ef46331d2ab15464712",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 132,
+    "before": "87ae18e1a94795742af2fd4ffb63522af5f311e8c4caeb7bcbd0c4ce31f8ecaa",
+    "after": "bf8025db2abcdc76feb72c5940b9d37f3dfa26b3447e5bb32f421f163e807b93",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 133,
+    "before": "3c94d5141f2f52b97c3e528bce8d686eb6861b8aee55e5bba1434cb1f6b27a23",
+    "after": "c6db2a47da511a3e56c5bc39806ad44a93ade2728160e009638cb2cca5d2c208",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 134,
+    "before": "ac6e2d0ccbf80886dd588529871c9335b55cb85cfd953ecd56bffcad536b660e",
+    "after": "f6b594a335c2a41ed6eaf5bd79189eb58609c1262567c296964ef44fbc096e8c",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 135,
+    "before": "8d2d3671a72591d687d1fa9ae36f3f317d287fdb7936c122e1b935a26fac9907",
+    "after": "09f54be42836687bcbc883ffb9428333fe8756c7d564eec7958bd4bc364d6470",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 136,
+    "before": "df06b41a006e4a3f6a90877b6e8c116cbb3344fd9601497a8bbe7583b0592db4",
+    "after": "de55f580178e10904852a415798e31c395d5cfaa466f92743123be16dfc55682",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 137,
+    "before": "8918cd06f3eae4713b917aa88fb71809e1fb8880434099910c30e6b31e4a2ed9",
+    "after": "98b6083ac15f88eba50a958ce26c295047158fc105dcafd98e78bd261832ef2a",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 138,
+    "before": "0b99c9a553bce6c5ea84f443faad2e19fe15e774d81f5e6feb66f64a09e4811a",
+    "after": "f7430b8768d132c3dfcbd8f4d48ee7c8739146ca77a2447485d81a855ac92fda",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 139,
+    "before": "e42bb73aad88565cddfc6ce9a7fd5a19e093f8a1f31694db5b94273fbe9d7c81",
+    "after": "39084d650fbc9df03f9c24d4ff26f30814afc3ddb5e26a85472888ca21678ef6",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 140,
+    "before": "cfb4952a4962fb96b817d83b2b727dd4c0002454179eb0ad2f9ed40991c605d0",
+    "after": "9e8e155298ef8ccdd1327618bbf7aaa1428853f34a0dbf3108387bf91a25e8ff",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 141,
+    "before": "12fcccf54feabd227f2f96c274f66f2defa5b7f16fa9a3e056ca40406d47841f",
+    "after": "08a6a655e76bcee2e4607aea6d8eb643979a4556230f66b78b391a03b1b187b7",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 142,
+    "before": "c185bc6e188286beb795922789f89e332b94f0ce1448268f05e288dae1cb65a7",
+    "after": "64c272567d98c876fdffc427ade1e0f05200649363cfca536cb6707ba582d08e",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 143,
+    "before": "55be7f2a1dbdbad272effc655de537aa0cd2714e6d35a3bca60f89adf335a136",
+    "after": "9a497fc636ceb0d80c19557c86be483bbfbafd68ccd19150426e9e9f8b41977c",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 144,
+    "before": "03d06decbfba9fb69fabe14a27dcb593ec92d31d4defea0fbcc649b51b666b25",
+    "after": "603c6d9a4328dd3591789b83d50010e76b56b1db3714645e66930ec3ad61c5d4",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 145,
+    "before": "1b96df9545dc94c49be7d0e7cd6f7b767b7bc6072914c75c8bffc0aea06724ee",
+    "after": "5b67dc22824d3c02aebc83d875f79f0df3aa5c91594c3e6029028e852a661777",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 146,
+    "before": "5008678b5643624cac66d83354110a2ac762044c89f88a797f77392789505d42",
+    "after": "65ff446e83c61207c0aa8d9f4b540fa085e5c0adf62a07a5a362f09be09a56c0",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 147,
+    "before": "3a5429d344b41838e989dba441e4e77204f9b114f2b56efaa3a0fdc13eca0f06",
+    "after": "690c402446da7549b1f6a4fed0f50d5c8b261e21fcd24fb78eb64e06003fdec6",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  },
+  {
+    "day": 148,
+    "before": "c117a46e2fb38b16118b733942baff549245e9f1512ce3cdf7e700b5209c0e08",
+    "after": "43b6f97952794f430872d2bdc37ff75dc458102c05628db9e300367881eb999b",
+    "changed": true,
+    "cause": "S102: the call paper now carries its own recorded terms; response/levy consequences persist in subsequent State. No starting people draw or non-call rule changed."
+  }
+]
