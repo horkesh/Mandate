@@ -124,6 +124,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0118](0118-an-undertaking-carries-typed-reservations.md) | An undertaking carries typed reservations | accepted; clarified by 0119, 0120 |
 | [0119](0119-a-call-for-troops-asks-no-temperament.md) | A call for troops asks no temperament | accepted |
 | [0120](0120-what-the-pushback-plan-builds-first.md) | What the pushback plan builds first, and what waits | accepted; clarified by 0122, 0123 |
-| [0121](0121-letters-receipts-and-authority-a-commander-receives.md) | Authored letters, their receipt, and the authority a commander receives | accepted |
+| [0121](0121-letters-receipts-and-authority-a-commander-receives.md) | Authored letters, their receipt, and the authority a commander receives | accepted; clarified by 0124 |
 | [0122](0122-the-confederate-cause-is-a-value.md) | The Confederate cause is a value, and a signed undertaking shows who held it | accepted |
 | [0123](0123-attack-or-demonstrate-is-a-duty-to-detain.md) | Attack or demonstrate is a duty to detain | accepted |
+| [0124](0124-standing-authority-comes-from-an-assignment.md) | Standing authority comes from an assignment to command, read with the regulations | accepted |
