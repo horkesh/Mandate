@@ -8,7 +8,7 @@ import { applyVerb, arriveVerb } from '../src/tick/verbs.ts';
 import { issueCall } from '../src/tick/recruitment.ts';
 import { issueOrder } from '../src/tick/orders.ts';
 import { senderFor } from '../src/seats/sender.ts';
-import { viewFor } from '../src/view/view.ts';
+import { createViewCache, viewFor } from '../src/view/view.ts';
 import { R } from './support/seats-fixture.ts';
 import { sendMessages } from '../src/messages/transit.ts';
 import { deliverDue } from '../src/tick/deliver.ts';
@@ -29,6 +29,33 @@ const letters: VerbCommand[] = [
   { cmd: 'relieve', post: POST('a_army'), mode: 'outright', to: null, route: 'courier' },
   { cmd: 'transfer', from: POST('a_army'), to: POST('a_reserve'), force: 'blocks', amount: 1, route: 'courier' },
 ];
+
+it('reuses the current received view when sending, including after a new report or same-day reassignment', () => {
+  const { world, state: opening, seat } = fresh();
+  const state = { ...opening, stateDay: 10 };
+  const cache = createViewCache();
+  const warm = viewFor(world, state, seat, cache);
+  expect(senderFor(world, state, seat, undefined, cache)?.view.reports).toBe(warm.reports);
+
+  const heard = deliverReport(state, seat, report('m.received.loss', {
+    reportDay: 9,
+    reportSubjectKind: 'post',
+    reportSubjectId: POST('a_army'),
+    reportClaims: [claim('commander-lost', 1, 'captured')],
+  }, 10), NO_TRUTH);
+  const office = POST('a_office');
+  const reassigned = {
+    ...heard,
+    postStates: { ...heard.postStates, [office]: { ...heard.postStates[office]!, postHolder: P('a_lead') } },
+  };
+  for (const current of [heard, reassigned, { ...state, stateDay: 8 }, heard, state]) {
+    const reused = senderFor(world, current, seat, undefined, cache)!;
+    const rebuilt = senderFor(world, current, seat)!;
+    expect(reused.view).toEqual(rebuilt.view);
+    expect(reused.chain(POST('a_army'))).toEqual(rebuilt.chain(POST('a_army')));
+  }
+});
+
 it.each(letters)('S65: $cmd sends to the received holder despite hidden vacancy, replacement or side', command => {
   const { world, state: opening, seat } = fresh();
   const state = { ...opening, stateDay: 10 };

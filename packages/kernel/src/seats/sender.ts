@@ -3,7 +3,7 @@ import { strictCompare } from '../compare.ts';
 import { commandedBlocks } from '../command/command.ts';
 import type { PersonId, PostId, SeatId } from '../ids.ts';
 import type { State } from '../root-state.ts';
-import { viewFor } from '../view/view.ts';
+import { viewFor, type ViewCache } from '../view/view.ts';
 import type { SeatView } from '../view/types.ts';
 import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
 import { receivedDepartmentSides } from './received.ts';
@@ -19,13 +19,13 @@ export function receivedPostDefinition(world: SeatsWorld, view: SeatView, id: Po
   return { ...declared, department: schedule?.department ?? declared.department };
 }
 
-export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId) {
+export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache) {
   const person = state.seatAssignments[seat]?.seatPerson;
   const office = world.start.factions.find(f => f.principal === person);
   if (office === undefined || office.principal === null) return null;
   const principal = office.principal;
   const faction = office.faction;
-  const view = viewFor(world, state, seat);
+  const view = viewFor(world, state, seat, cache);
   const posts = new Map(view.posts.map(p => [p.post,p]));
   const sides = receivedDepartmentSides(world, view);
   const definition = (post: PostId) => receivedPostDefinition(world, view, post);

@@ -24,6 +24,7 @@ import { heldPost, sideOfPerson, type HeldPostCache, type SideChange } from '../
 import { filterPostOf, whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { TurnStopPoint } from '../seats/turn-stops.ts';
+import type { ViewCache } from '../view/view.ts';
 
 export type RejectionReason =
   | 'bad_goal'
@@ -152,6 +153,8 @@ export interface TickContext {
   readonly world: SeatsWorld;
   /** Inverse holder lookups shared by this tick's report routes; keyed by the exact post table. */
   readonly postHolders?: HeldPostCache;
+  /** Caller-owned view cache for the sender’s current received establishment. */
+  readonly senderViews?: ViewCache;
   /** Latency on the morning's map: courier days from the edges, the wire of whoever holds each region (0052). */
   readonly latency: LatencyMap;
   readonly day: number;

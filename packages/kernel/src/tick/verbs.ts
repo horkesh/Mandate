@@ -98,7 +98,7 @@ const body = (kind: VerbKind, over: Partial<Omit<VerbBody, 'verbKind' | 'verbIss
  */
 export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbCommand): { readonly state: State; readonly reason: RejectionReason | null } {
   const reject = (reason: RejectionReason) => ({ state: start, reason });
-  const sender = senderFor(ctx.world, start, seat);
+  const sender = senderFor(ctx.world, start, seat, undefined, ctx.senderViews);
   if (sender === null) return reject('not_a_principal');
   const principal = sender.principal;
   const knownPostOnSide = (post: PostId) => sender.side(post) === sender.faction;

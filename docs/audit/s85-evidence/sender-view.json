@@ -1,0 +1,235 @@
+{
+  "optimization": "Reuse the runner\u2019s view cache when validating and routing a principal\u2019s dispatch.",
+  "revision": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "files": {
+    "packages/kernel/src/log/session.ts": "767a64dcd695fbe84b3fc60be636ea46ad0779b91030db2ead575cd630c40d30",
+    "packages/kernel/src/seats/sender.ts": "b9743ce56c789426735773cc7a9edc889c15519ff840d34c119932af0bd74097",
+    "packages/kernel/src/tick/context.ts": "5401cb2808935e49cef94679e8481658bc8f3fd4128b1ceba7db8f9ac7237376",
+    "packages/kernel/src/tick/orders.ts": "91ee4d94c2bb6eb3517ccd6fd18af8b9063dab80b7bd9fcc15dbcca1ff331446",
+    "packages/kernel/src/tick/recruitment.ts": "3dcfe2f040dcef5303e3d2e8801577ab0485b9eb34f4166b4d3ab2a6f0f597ac",
+    "packages/kernel/src/tick/tick.ts": "139e723d161a924766f7518c05fb2642ae7eb1bbed4a93a00247448bc87325e1",
+    "packages/kernel/src/tick/verbs.ts": "51db51e339958a7311fc10298c0ed150c5ef9747e80a13a4ce83902298df5986",
+    "packages/kernel/test/s65-sender-belief.test.ts": "1d0748301239a38d7680037c7ac121a32db7d345f206b2a886b308290c753d1a"
+  },
+  "baselineProfileSenderInclusiveMs": {
+    "war": 641.98,
+    "history": 602.49
+  },
+  "direct": {
+    "fixture": "120 synthetic received reports; 500 sender address-book reads per sample",
+    "medianPairedSavingMs": 64.3938,
+    "pairs": [
+      {
+        "beforeMs": 119.25759999999997,
+        "afterMs": 11.826800000000048,
+        "savingMs": 107.43079999999992
+      },
+      {
+        "beforeMs": 73.55930000000001,
+        "afterMs": 10.024000000000001,
+        "savingMs": 63.53530000000001
+      },
+      {
+        "beforeMs": 71.88290000000006,
+        "afterMs": 10.402100000000019,
+        "savingMs": 61.480800000000045
+      },
+      {
+        "beforeMs": 75.97739999999999,
+        "afterMs": 10.725099999999998,
+        "savingMs": 65.25229999999999
+      }
+    ]
+  },
+  "wholeRun": {
+    "rows": [
+      {
+        "slot": "war",
+        "pair": 1,
+        "order": [
+          "e2-base",
+          "sender-view-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 47.45690000000013,
+          "p95": 93.86300000000028,
+          "max": 156.60199999999986
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 46.060600000000704,
+          "p95": 83.27019999999902,
+          "max": 102.6776000000009
+        },
+        "parentBudgetProblems": [
+          "war: median 47.5 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "war: median 46.1 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 1.396299999999428
+      },
+      {
+        "slot": "war",
+        "pair": 2,
+        "order": [
+          "sender-view-candidate",
+          "e2-base"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 47.503099999999904,
+          "p95": 95.11129999999957,
+          "max": 154.35559999999987
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 43.97830000000022,
+          "p95": 81.80220000000008,
+          "max": 146.2566999999999
+        },
+        "parentBudgetProblems": [
+          "war: median 47.5 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "war: median 44.0 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 3.5247999999996864
+      },
+      {
+        "slot": "history",
+        "pair": 1,
+        "order": [
+          "sender-view-candidate",
+          "e2-base"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 49.048399999999674,
+          "p95": 95.48890000000029,
+          "max": 156.86250000000018
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 45.78769999999986,
+          "p95": 81.19600000000173,
+          "max": 115.45830000000024
+        },
+        "parentBudgetProblems": [
+          "history: median 49.0 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "history: median 45.8 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 3.260699999999815
+      },
+      {
+        "slot": "history",
+        "pair": 2,
+        "order": [
+          "e2-base",
+          "sender-view-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 47.000199999999495,
+          "p95": 93.10319999999956,
+          "max": 171.14330000000064
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 45.27109999999993,
+          "p95": 74.48829999999907,
+          "max": 114.83980000000065
+        },
+        "parentBudgetProblems": [
+          "history: median 47.0 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "history: median 45.3 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 1.729099999999562
+      }
+    ],
+    "medianPairedSavingMs": {
+      "war": 2.4605499999995573,
+      "history": 2.4948999999996886
+    }
+  },
+  "exactReferenceBehavior": {
+    "war": {
+      "hashes": 148,
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    },
+    "testbed": {
+      "hashes": 120,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    },
+    "history": {
+      "hashes": 148,
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    }
+  },
+  "checks": {
+    "typecheckExit": 0,
+    "focusedTestExit": 0,
+    "focusedTestFiles": 5,
+    "focusedTests": 66,
+    "retainedRegression": {
+      "redExit": 1,
+      "greenExit": 0
+    },
+    "projectionPreflightExit": 0
+  },
+  "scope": "Playback and replay own the cache across days in one World. Standalone ticks own it locally. Selected State is passed to viewFor on every authorization. Same-day changed post identity is checked by its existing previous.post === post equality guard. No cache goes into State.",
+  "limit": "All candidate timing samples are still above the unchanged 40 ms median gate; results are local Windows comparisons.",
+  "independentComparison": {
+    "rows": [
+      {
+        "slot": "war",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "dbc7d9254c4f09481adcd54a7550f6e5316eb14a94c809c48d16492f60b651a7",
+        "afterSha256": "acb26690ea74c6c1751bba782c432514aef58cbfba6c077e4f5b73ad80d63cf8"
+      },
+      {
+        "slot": "testbed",
+        "dailyHashes": 120,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "b2e413d302ada5e652d34b9e85e3fee7bbf2596dbfadec202db91a2f3563d7d2",
+        "afterSha256": "2257cc670382779ed47f2c1421627a4d8eda6d65785c4db6f3bfd2ca80b6317f"
+      },
+      {
+        "slot": "history",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "5623b8db44a81006c58b0efd952d65bd99dffd1b69ec2477c75a5592cc048dd9",
+        "afterSha256": "7a6281f4eecb24ac91917ddb55ec20e09d79eb1bba5aacc77a2c961c983d06e6"
+      }
+    ],
+    "frozenReferenceHashes": 268,
+    "additionalHistoryHashes": 148,
+    "differences": 0
+  }
+}
