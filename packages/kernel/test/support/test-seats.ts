@@ -28,6 +28,7 @@ export function scriptedSeats(script: Readonly<Record<string, Readonly<Record<nu
         return { answerKind: 'commands', commands: [{ cmd: 'decide', situation: choice.situation, options: best === undefined ? [] : [best.optionId] }] };
       }
       // A commander's battle (lane 1.12): every point to his traits.
+      if (request.menu.menuKind === 'local-action') return { answerKind: 'choose', option: request.menu.options[0]!.optionId };
       if (request.menu.menuKind === 'battle') return { answerKind: 'commands', commands: [{ cmd: 'battle', post: request.menu.post, commit: 'judge', night: 'judge', cutOff: 'judge', pursue: 'judge' }] };
       const best = [...request.menu.options].sort((a, b) => b.score - a.score || (a.optionId < b.optionId ? -1 : 1))[0]!;
       return { answerKind: 'choose', option: best.optionId };

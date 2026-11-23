@@ -1,0 +1,2626 @@
+[
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.bombardment",
+    "before": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.breakout",
+    "before": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 954
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 954
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.cut_off",
+    "before": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.destroyed",
+    "before": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.evacuated",
+    "before": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 8575
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 8575
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2633
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2633
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 338,
+      "magnitude": 12963
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 338,
+      "magnitude": 12963
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.pursuit_chosen",
+    "before": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.records_pruned",
+    "before": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.routed",
+    "before": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.surrendered",
+    "before": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.withdrew",
+    "before": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "combat.works_stormed",
+    "before": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "after": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "command.government_closed",
+    "before": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "command.government_established",
+    "before": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "command.government_reopened",
+    "before": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "command.post_succeeded",
+    "before": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "command.proposal_refused",
+    "before": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "command.side_changed",
+    "before": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "command.temporary_post_opened",
+    "before": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "after": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "commands.rejected",
+    "before": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 345,
+      "magnitude": 15963
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 345,
+      "magnitude": 15963
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "forces.landed_by_situation",
+    "before": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "forces.landing_refused",
+    "before": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2638,
+      "magnitude": 2609571
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2638,
+      "magnitude": 2609571
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 102,
+      "magnitude": 102
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 102,
+      "magnitude": 102
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2943,
+      "magnitude": 2898839
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2943,
+      "magnitude": 2898839
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 178,
+      "magnitude": 1021
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 178,
+      "magnitude": 1021
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "infrastructure.changed",
+    "before": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1511
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 106,
+      "magnitude": 1518
+    },
+    "changed": true,
+    "cause": "One additional paper ages out in the changed received-mail trajectory; no retention policy changed. This aggregate comparison does not identify an isolated causal paper."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12000
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12000
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "ladder.moved",
+    "before": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "ladder.rival",
+    "before": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "map.pocket_lost",
+    "before": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "map.pocket_relieved",
+    "before": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 59
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 59
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14413,
+      "magnitude": 14413
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14436,
+      "magnitude": 14436
+    },
+    "changed": true,
+    "cause": "The corresponding integrated mail flow delivers23 more papers; no out-of-band shortcut or historical assignment is emitted."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2858,
+      "magnitude": 2858
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2858,
+      "magnitude": 2858
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 15184,
+      "magnitude": 15184
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 15207,
+      "magnitude": 15207
+    },
+    "changed": true,
+    "cause": "Four mandate orders, their five relays and ordinary responses/reports plus two plan submissions and approvals add23 sent papers. Full dispatch and response records retain the actual routes; no new mail timing or stream policy."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "messages.special_messenger",
+    "before": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 701,
+      "magnitude": 701
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 701,
+      "magnitude": 701
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "movement.join_blocked",
+    "before": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "movement.joined",
+    "before": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "after": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 385,
+      "magnitude": 385
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 385,
+      "magnitude": 385
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.ended",
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": true,
+    "cause": "That additional hold operation completes normally; no military onward assignment completed."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.landed",
+    "before": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.opened",
+    "before": {
+      "mechanic": "operations.opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "operations.opened",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": true,
+    "cause": "One additional own-command hold operation for Scott at his existing headquarters; operation-changes.json retains the exact record."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changed": true,
+    "cause": "Three additional normal lifecycle stage transitions associated with the extra hold; stage policy unchanged."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.support_answered",
+    "before": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.support_refused",
+    "before": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.support_sent",
+    "before": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "operations.works",
+    "before": {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    "after": {
+      "mechanic": "operations.works",
+      "fires": 14,
+      "magnitude": 700
+    },
+    "changed": true,
+    "cause": "One additional normal works phase in the integrated hold trajectory; numeric rules unchanged."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.bypassed",
+    "before": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.conflict",
+    "before": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.obeyed",
+    "before": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.relay_held",
+    "before": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.relay_objected",
+    "before": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.relayed",
+    "before": {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "orders.relayed",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changed": true,
+    "cause": "Exactly eight added relay responses: five on four mandate papers and three on two plan approvals. Each issuer, hop, response and day is in relay-delta.json.10->18 remains inside the merged accepted10..40 band."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 23,
+      "magnitude": 60
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 27,
+      "magnitude": 66
+    },
+    "changed": true,
+    "cause": "Four more response records age out after the additional mandate/review traffic; pruning policy unchanged."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "orders.returned",
+    "before": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "people.grievances_faded",
+    "before": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "after": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "people.promise_broken",
+    "before": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "people.promise_kept",
+    "before": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "people.resigned",
+    "before": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "after": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "people.stayed",
+    "before": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 34
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 34
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.caution",
+    "before": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.coordination",
+    "before": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.dependence",
+    "before": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.exposure",
+    "before": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.force_ratio",
+    "before": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.glory",
+    "before": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.goal_fit",
+    "before": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.haste",
+    "before": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.notes",
+    "before": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.supply",
+    "before": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.approved",
+    "before": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.approved",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": true,
+    "cause": "Two additional submitted plans receive ordinary approvals; no direct approval at dispatch."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.chosen",
+    "before": {
+      "mechanic": "plans.chosen",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.chosen",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "changed": true,
+    "cause": "Two additional local plan selections under received mandates; final plan differences and operations retained."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.discretion_exercised",
+    "before": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.draft_deferred",
+    "before": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.drafted",
+    "before": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.edit_answered",
+    "before": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.edit_invalid",
+    "before": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.edit_objected",
+    "before": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.edit_received",
+    "before": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.edit_shirked",
+    "before": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.goal_proposed",
+    "before": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.goal_reached",
+    "before": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "plans.goal_reached",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changed": true,
+    "cause": "One additional completed hold operation at the existing headquarters; no troop placement changes."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.goal_set",
+    "before": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.released",
+    "before": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.sent_back",
+    "before": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.submitted",
+    "before": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.submitted",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": true,
+    "cause": "Two extra plan submissions from the new local choices; the two ordinary approval dispatches remain in issued-correspondence.json."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "plans.went_ahead",
+    "before": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.act",
+    "before": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.adjourned",
+    "before": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.answered",
+    "before": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.called",
+    "before": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.framing",
+    "before": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.front_page",
+    "before": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "after": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.met",
+    "before": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.opened",
+    "before": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.press_silent",
+    "before": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.refused",
+    "before": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "politics.support",
+    "before": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "after": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.answered",
+    "before": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "after": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.called",
+    "before": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "after": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.disbanded",
+    "before": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "after": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.lapsed",
+    "before": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.men",
+    "before": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "after": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.muster_blocked",
+    "before": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.mustered",
+    "before": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "after": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.refused",
+    "before": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.renewed",
+    "before": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "recruitment.slow_walked",
+    "before": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "regions.reached_lines",
+    "before": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "after": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "regions.self_emancipation",
+    "before": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "after": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.filtered",
+    "before": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.observer_letter",
+    "before": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.pocket",
+    "before": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "reports.trimmed",
+    "before": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "seats.attention_refilled",
+    "before": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "seats.attention_refused",
+    "before": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 172,
+      "magnitude": 172
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "changed": true,
+    "cause": "Four extra attention units on the additional received command/review work; limits and costs unchanged."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "changed": true,
+    "cause": "Two additional own-command local choices from received mandates; bounded planner choices, not self-courier orders."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "seats.defaulted",
+    "before": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "seats.initiative",
+    "before": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.decided",
+    "before": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "after": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.delegated",
+    "before": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.lapsed",
+    "before": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.options_changed",
+    "before": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.orders",
+    "before": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "after": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.policy",
+    "before": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "after": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.policy_unpaid",
+    "before": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.proposals",
+    "before": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "after": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.resurfaced",
+    "before": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.staff_lines",
+    "before": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "after": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "situations.waiting",
+    "before": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 145,
+      "magnitude": 145
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 145,
+      "magnitude": 145
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "verbs.audience",
+    "before": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "verbs.consulted",
+    "before": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "verbs.declined",
+    "before": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "after": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  },
+  {
+    "pack": "union-1861",
+    "mechanic": "verbs.in_washington",
+    "before": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "cause": "Unchanged count and magnitude."
+  }
+]

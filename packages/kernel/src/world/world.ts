@@ -1,3 +1,4 @@
+import type { MandatePaper } from './mandates.ts';
 import type { OrganisationTemplate } from './organisation.ts';
 /**
  * World format v2, the whole World: one pack's static data, self-contained so
@@ -36,6 +37,7 @@ import type { CombatRules } from '../combat/rules.ts';
 import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
 import type { RegimentRecord } from './regiments.ts';
+import type { OnwardAssignment } from './assignments.ts';
 import type { LetterIdentity } from './letters.ts';
 import type { PaperSelector } from './paper-selectors.ts';
 export type { PaperSelector, PaperClaimSelector, ReportPaperSelector } from './paper-selectors.ts';
@@ -321,6 +323,8 @@ export interface PlansRules {
 
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
 export interface WorldRules {
+  readonly mandates?: readonly MandatePaper[];
+  readonly onwardAssignments?: readonly OnwardAssignment[];
   /** The top of the pack's capacity scale for edges and depots. */
   readonly capacityMax: number;
   /** Control a faction needs in a region to trace supply or rail through it. */

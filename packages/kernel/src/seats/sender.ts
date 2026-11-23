@@ -8,6 +8,8 @@ import type { SeatView } from '../view/types.ts';
 import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
 import { receivedDepartmentSides } from './received.ts';
 import type { SeatsWorld } from './world.ts';
+import { activeMandate, currentMandates } from '../command/authority.ts';
+import { commandProjection } from '../view/people.ts';
 
 /** Public declared structure, including its labelled administrative schedule; never an actual holder. */
 export function receivedPostDefinition(world: SeatsWorld, view: SeatView, id: PostId) {
@@ -19,13 +21,19 @@ export function receivedPostDefinition(world: SeatsWorld, view: SeatView, id: Po
   return { ...declared, department: schedule?.department ?? declared.department };
 }
 
-export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache) {
+export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache, localPost?: PostId) {
   const person = state.seatAssignments[seat]?.seatPerson;
-  const office = world.start.factions.find(f => f.principal === person);
+  const principalOffice = world.start.factions.find(f => f.principal === person);
+  if (principalOffice !== undefined) localPost = undefined;
+  const office = principalOffice ?? (localPost === undefined || person === undefined ? undefined : { principal: person, faction: state.departmentFactions[state.postStates[localPost]!.postDepartment]! });
   if (office === undefined || office.principal === null) return null;
   const principal = office.principal;
   const faction = office.faction;
-  const view = viewFor(world, state, seat, cache);
+  const baseView = viewFor(world, state, seat, cache);
+  const scope = localPost === undefined ? [] : currentMandates(state,localPost)
+    .filter(a => activeMandate(world.map,state,a,state.stateDay+1)).flatMap(a => a.authorityGrant.mandateRecipients).concat((world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person && p.grant.mandateIssuerPost === localPost && p.grant.mandateParent === null).map(p => p.grant.mandatePost));
+  const view = localPost === undefined ? baseView : { ...baseView,
+    posts: commandProjection(world,person!,baseView.faction,baseView.reports,state.stateDay,state.calendarStart,scope).posts };
   const posts = new Map(view.posts.map(p => [p.post,p]));
   const sides = receivedDepartmentSides(world, view);
   const definition = (post: PostId) => receivedPostDefinition(world, view, post);

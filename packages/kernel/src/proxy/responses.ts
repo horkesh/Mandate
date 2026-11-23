@@ -30,6 +30,8 @@ export interface OrderResponse {
   readonly respRole: 'relay' | 'addressee';
   /** What he answered: the order's kind (a goal, a call, an edit, ...) or the verb's (`verb:audience`); lane 1.11's `callReceived` reads it. */
   readonly respKind: string;
+  /** An institutional refusal made before the recipient judges a directive's terms. */
+  readonly respInstitutionalRefusal?: 'authority_unavailable' | 'regiment_unavailable';
   /** The dated pack call this response answers; independent of message-id shortening. */
   readonly respCallId?: string;
   readonly respDay: number;
@@ -112,6 +114,10 @@ export function recordResponse(state: State, response: OrderResponse): State {
  */
 export function pruneResponses(state: State, day: number, keepDays: number): { readonly state: State; readonly pruned: number } {
   const named = new Set<string>();
+  for (const join of Object.values(state.forceJoins)) {
+    const assignment = join.joinAssignment;
+    if (assignment !== undefined) named.add(responseKey(assignment.assignmentOrder,assignment.assignmentRecipient));
+  }
   for (const r of Object.values(state.planRecords)) {
     named.add(r.planResponse);
     if (r.planChallenge !== undefined) named.add(r.planChallenge.challengeResponse);

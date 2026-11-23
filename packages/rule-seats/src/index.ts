@@ -286,11 +286,12 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
 
 export function respond(request: SeatRequest, policy: RuleSeatPolicy = DEFAULT_RULE_SEAT_POLICY): SeatAnswer {
   const menu = request.menu;
+  if (menu.menuKind === 'local-action') return { answerKind: 'choose', option: menu.options[0]!.optionId };
   if (menu.menuKind === 'plan-selection') return { answerKind: 'choose', option: choosePlan(menu).optionId };
   // A commander's battle (lane 1.12): every point to his traits, so a rule seat's battles are the trait rule's own.
   if (menu.menuKind === 'battle') return { answerKind: 'commands', commands: [battleOrders(menu)] };
   if (menu.menuKind === 'delegated-situation') return { answerKind: 'commands', commands: [{ cmd: 'decide', situation: menu.choice.situation, options: chooseDelegated(menu) }] };
-  return { answerKind: 'commands', commands: principalOrders(menu, request.view.reports, request.requestDay, policy) };
+  return { answerKind: 'commands', commands: [...(menu.mandates ?? []).map(p => ({ cmd: 'mandate' as const, paper: p.paper, route: p.route })), ...principalOrders(menu, request.view.reports, request.requestDay, policy)] };
 }
 
 /** A rule seat. One serves every person: it holds nothing between requests. */

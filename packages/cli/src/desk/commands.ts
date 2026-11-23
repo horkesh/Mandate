@@ -13,6 +13,7 @@ import type { CounterKind, CounterTerms, Discretion, EditKind, EditTerms, GoalTe
 
 /** Each console word that changes the game, and the kernel command it sends: `review` splits by its action. */
 export const VERB_COMMANDS = {
+  mandate: 'mandate',
   order: 'order',
   proposal: 'answer_proposal',
   approve: 'review:approve',
@@ -62,6 +63,7 @@ const HELP_KEYS = [
   'console.help.quit',
   'console.help.orders',
   'console.help.order',
+  'console.help.mandate',
   'console.help.proposal',
   'console.help.review',
   'console.help.edit',
@@ -186,6 +188,11 @@ export function parseLine(line: string, request: SeatRequest, t: DeskStrings): D
   const commandable = (p: string | undefined): string | null => (p === undefined ? t('console.error.post') : menu.commandable.some((c) => c.post === p) ? null : t('console.error.no-post', { post: p }));
   const situation = (s: string | undefined): string | null => (s === undefined ? t('console.error.situation') : menu.situations.some((c) => c.situation === s) ? null : t('console.error.no-situation', { situation: s }));
   switch (word) {
+    case 'mandate': {
+      const offered = menu.mandates?.find(p => p.paper === words[0]);
+      if (words.length !== 1 || opts.size !== 0 || offered === undefined) return fail(t('console.error.mandate'));
+      return {kind:'command',word,command:{cmd:'mandate',paper:offered.paper,route:offered.route}};
+    }
     case 'help':
     case 'inbox':
     case 'situations':

@@ -232,6 +232,13 @@ The plan appears as arrows. The player can:
 
 ## 10. Kernel architecture
 
+Received mandates and shared authority commitments (`State.authorityByPost`) are
+State, written only by `command`, proposed by actual order receipt/compliance
+and logged local choices (0121/0124). Mandate menus are Derived from received
+authority and planner candidates. Older saves have canonical empty authority;
+no grant or receipt is invented.
+
+
 Three layers:
 - **World**: static pack data (region terrain and starting values, edges with lengths and capacities, people's historical records with citations, situations). Immutable, hashed, never saved; a save references it by hash.
 - **State**: mutable truth, including everything that changes during play (control, region population and loyalty, edge condition, divisions, people, plans, knowledge). Saved.
@@ -245,7 +252,7 @@ Module map, adapted from the AWWV-architecture note:
 
 | Proposed State field | Only writer | Proposed by |
 |---|---|---|
-| a block's joining order (`forceJoins`), directing it to its post's seat (0098) | `movement` | transfer verbs; operations resolve the day's legs and request clearing |
+| a block's joining order (`forceJoins`), including an accepted onward assignment awaiting the receiving commander (0098, 0126) | `movement` | transfer verbs and ordinary assignment receipt; operations resolve the day's legs and request clearing |
 
 These three changes reconcile the prose with the implemented writers and `ownership.ts`; they propose no code-owner change or deferred capability.
 
@@ -315,6 +322,7 @@ These three changes reconcile the prose with the implemented writers and `owners
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076); a notice's `post_succession` proposal replaces its named incumbent with a serving successor on the post's side, preserving both statuses and reporting the typed institutional-succession reason |
 | observers in post (`observerPostings`): the observer, the post he watches, who sent him and the day he arrived | `command` | the observer verb and his recall (0040, 0073) |
 | neutral governor offers with original response, troop identities, recall and receiving receipts (`neutralOffers`, absent in older saves) | `command` | recruitment, governor recall, movement arrival (0126) |
+| received mandates, holder-bound enactment history and shared force commitments (`authorityByPost`) | `command` | actual order receipt and compliance; logged local choices (0121/0124) |
 | standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`), its optional arm, unknown strength and war-service term | `command` | verbs, situations, orders from the holder's own department, an absolute call a governor answered (0073); readiness requests record responses without creating levies |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder, a chosen policy's pushback (typed grievances, and the floor's cost to the principal's standing) (0082) |
 | a person's stances on record (from Consult) | `people` | Consult answers (0040, 0041); adviser credibility is derived from the president's knowledge, never stored |
@@ -329,6 +337,7 @@ These three changes reconcile the prose with the implemented writers and `owners
 | immutable proposal enclosure (`ReportBody.reportProposal`, `GoalProposal.goal`, `GoalProposal.reasons`), with existing typed response reasons or `hold_preferred` (`orderedScore`, `preferredScore`) and `safer_position` (`heldThreat`, `preferredThreat`) reasons | `knowledge` | planner-authored report delivered through `messages`; correlated by the existing `reportAnswers`, never by a date or inferred destination (0114) |
 | immutable switch account (`ReportBody.reportDiscretion`, `DiscretionReport.switchCondition`, `switchGoal`, `switchRegion`, `switchEstimate`, `switchStrength`, `switchThreshold`, `switchEvidence`) | `knowledge` | the commander's report of exercising received authority, filed only on message delivery; the transit body is owned by `messages` (0114) |
 | immutable proposal reply correlation (`OrderBody.orderProposal`, `ProposalReply.replyPaper`, `replyOrder`, `replyAction`); sourced doctrine identity (`OrderBody.orderDoctrine`); local-plan release correlation (`OrderBody.orderPlan`) | `messages` | validated accept, decline, discretion and go commands, then ordinary relay and delivery (0114) |
+| immutable onward order enclosure (`OrderBody.orderAssignment`) and its accepted journey (`ForceJoin.joinAssignment`, `AssignmentJourney`) | `messages` in transit, `movement` for the joining order | dispatch carries the sourced paper, block and destination. Once the addressee accepts, the joining order carries the paper, order origin and receiving commander until receipt or cancellation |
 | optional explicit active-authority correlation for a non-adopted challenge (`GoalProposal.proposalBasis`, `ProposalReply.replyBasis`) | `knowledge` for received papers; `messages` in transit | the commander's own report states which active order he retained while challenging another; reply arrival checks that authority and the challenged order are still current (0114) |
 | sender-owned reply, doctrine, plan and reaffirmation copies (`KnownSentOrder.sentProposal`, `sentDoctrine`, `sentPlan`, `sentReaffirms`, and the extended `sentKind`); bounded goal/reply history in `SeatKnowledge.knownSentOrders` | `knowledge` | the principal's own issued papers, including one sender copy per named concentration; received proposal and switch reports select actionable terms, never a private commander plan (0114) |
 | authored instruction and predecessor references (`OrderBody.orderLetter`, `orderSupersedes`, `orderPriorDispatch`) | `messages` | validated issuing choice; immutable through each hop, distinct from the dispatch origin and hop IDs (0121) |
@@ -360,6 +369,8 @@ These three changes reconcile the prose with the implemented writers and `owners
 | each chamber of Congress's state (`chamberStates`: sitting, adjourned, special session called) | `politics` | the pack's session calendar (daily), situations' `session-call` effects (0084) |
 | the framing term (`warFraming`: who the public believes began the war) | `politics` | situations' `framing` effects only; the press prints it and never writes it (0084) |
 | seat assignments | `seats` | setup, the player's settings |
+
+An onward assignment requires a read instrument, an active mandate with the assignment action, and a known subordinate recipient. The issuer chooses the order from his morning menu. Its identified regiment must already be received from the specified call. The addressed commander answers the ordinary letter. If accepted, the regiment travels under the sending post's assignment on a route within the mandate. Command transfers it when the addressed holder receives it at the destination. A replacement holder or lost authority bars completion. The addressee's answer and the later troop receipt are separate events.
 
 The day tick, each phase declaring what it reads and writes:
 1. Apply today's commands, validated; each creates messages in transit (the kernel computes their arrival). Rejections are logged.

@@ -33,6 +33,33 @@ export function peopleProjection(
   return Object.freeze({ posts, people });
 }
 
+/** A received assignment opens only its named command's public establishment.
+ * This reads opening assignments and received corrections, never live holders.
+ */
+export function commandProjection(world: SeatsWorld, person: PersonId, faction: FactionId | null, reports: readonly ReportView[], day: number, calendar: string | null, scope: readonly PostId[]): PeopleProjection {
+  const known = establishmentProjection(world,person,faction,reports,() => null,day,calendar);
+  const byPost = new Map(known.posts.map(p => [p.post,p]));
+  const own = known.posts.find(p => p.holder === person)?.post;
+  const inside = (post: PostId) => {
+    const seen = new Set<PostId>();
+    for (let p: PostId | null = post; p !== null && !seen.has(p); p = byPost.get(p)?.parent ?? null) {
+      if (scope.includes(p)) return true;
+      seen.add(p);
+    }
+    return false;
+  };
+  const included = new Set(known.posts.filter(p => inside(p.post)).map(p => p.post));
+  for (const id of [...included]) {
+    const seen = new Set<PostId>();
+    for (let p: PostId | null = id; p !== null && !seen.has(p); p = byPost.get(p)?.parent ?? null) {
+      included.add(p); seen.add(p);
+      if (p === own) break;
+    }
+  }
+  if (own !== undefined) included.add(own);
+  return { posts: known.posts.filter(p => included.has(p.post)), people: [] };
+}
+
 /** A seat's opening office and side, changed only by papers it has received. */
 export function seatIdentity(world: SeatsWorld, person: PersonId, reports: readonly ReportView[], day: number, calendar: string | null): { post: PostId | null; faction: FactionId | null } {
   const openingSide = world.person(person).faction;

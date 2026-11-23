@@ -1,0 +1,15 @@
+{
+  "baseline": "S124 retained capture; integrated S123 band metadata is accepted as merged",
+  "gates": [],
+  "bandProblems": [],
+  "S126Recentered": [],
+  "S126NewZeros": [],
+  "S123AcceptedRecordsMerged": 3,
+  "relayActualBefore": 10,
+  "relayActualAfter": 18,
+  "relayMergedBand": {
+    "minFires": 10,
+    "maxFires": 40
+  },
+  "rule": "No failing band, so no recenter or new quiet ruling. All15 changed count/magnitude rows published with causes; no criterion is waived."
+}

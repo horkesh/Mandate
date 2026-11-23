@@ -1,6 +1,6 @@
 # 0110: A force of unknown strength is not an empty field, and a block on its way doesn't move headquarters
 
-Status: accepted (2026-11-23). From S77's two proposed rulings (`notes/lane-s77-concentration.md` and `docs/audit/s77-evidence/` on `sprint/july`, staged, backed up as `C:\Pyrrhic\mandate-reviews\staged\s77-july-concentration-staged.patch`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0076; clarifies 0064.
+Status: accepted (2026-11-23). From S77's two proposed rulings (`notes/lane-s77-concentration.md` and `docs/audit/s77-evidence/` on `sprint/july`, staged, backed up as `C:\Pyrrhic\mandate-reviews\staged\s77-july-concentration-staged.patch`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0076; clarifies 0064. Clarified by 0125 (a historical unit named without men stays unknown; a rule's output is the model's own quantity).
 
 ## Context
 

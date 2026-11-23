@@ -1,3 +1,5 @@
+import { executeLocal, issueMandate } from './mandates.ts';
+import { localOptions } from '../seats/local-actions.ts';
 import { advanceCommissions } from '../people/commissions.ts';
 import { dateOfDay,formatIsoDate } from '../world/calendar.ts';
 import { bundleRaised, organisationPhase } from './organisation.ts';
@@ -191,6 +193,9 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (options !== null && options.length > 1) menus.set(post, options);
   }
 
+  const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day)]));
+  const localChosen = new Set<string>();
+
   // 0b. Attention refills weekly to its cap, with no carry-over (lane 1.5; 0025, 0040).
   const refill = refillAttention(state, world.rules.people.attention, day);
   state = applyPhase(refill.state);
@@ -225,6 +230,25 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
       const result = recallOffer(ctx,state,entry.seat,c.offer);
       state = applyPhase(result.state);
       if (result.reason !== null) reject(result.reason);
+      return;
+    }
+    if (c.cmd === 'mandate') {
+      const reason = issueMandate(ctx,state,entry.seat,c);
+      if (reason !== null) reject(reason); else pay();
+      return;
+    }
+    if (c.cmd === 'choose' && c.request.startsWith('local:')) {
+      const person = state.seatAssignments[entry.seat]!.seatPerson;
+      const post = heldPost(state,person);
+      if (post === null || c.request !== `local:${post}:${day}`) return reject('no_such_request');
+      if (localChosen.has(c.request)) return reject('duplicate_choice');
+      const option = localMenus.get(person)?.find(o => o.id === c.option);
+      if (option === undefined) return reject('not_an_option');
+      const result = executeLocal(ctx,state,person,option);
+      if (result.reason !== null) return reject(result.reason);
+      state = applyPhase(result.state);
+      localChosen.add(c.request);
+      fire(ctx,'seats.choices');
       return;
     }
     if (c.cmd === 'call') {

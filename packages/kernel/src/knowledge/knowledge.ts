@@ -85,7 +85,7 @@ export function rememberLetterReceipt(state: State, message: TransitMessage, day
 export interface KnownSentOrder {
   readonly sentPost: PostId;
   readonly sentMessage: MessageId;
-  readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit' | 'decline_proposal' | 'go' | 'transfer';
+  readonly sentKind: 'assignment' | 'mandate' | 'goal' | 'approve' | 'send_back' | 'edit' | 'decline_proposal' | 'go' | 'transfer';
   readonly sentDoctrine?: string;
   readonly sentLetter?: LetterIdentity;
   readonly sentProposal?: NonNullable<TransitMessage['msgOrder']>['orderProposal'];
@@ -126,7 +126,7 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
     }
     const order = message.msgOrder;
     if (order === null || message.msgFrom !== order.orderIssuer || message.msgSentDay !== order.orderIssuedDay ||
-      (!(['goal','approve','send_back','edit','decline_proposal'] as const).some(k => k === order.orderKind) && !(order.orderKind === 'go' && order.orderPlan !== undefined))) continue;
+      (!(['assignment','mandate','goal','approve','send_back','edit','decline_proposal'] as const).some(k => k === order.orderKind) && !(order.orderKind === 'go' && order.orderPlan !== undefined))) continue;
     const seat = seatIdFor(order.orderIssuer);
     if (state.seatAssignments[seat] === undefined) continue;
     const held = storedKnowledgeOf(state, seat);
@@ -150,6 +150,9 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
     };
     const kept = old.filter(o => {
       if (o.sentPost !== row.sentPost || o.sentKind === 'transfer') return true;
+      if (row.sentKind === 'assignment' || o.sentKind === 'assignment') return true;
+      if (row.sentKind === 'mandate') return o.sentKind !== 'mandate';
+      if (o.sentKind === 'mandate') return true;
       if (row.sentKind === 'goal') {
         if (o.sentKind === 'goal') return row.sentProposal !== undefined &&
           (row.sentProposal.replyOrder === o.sentMessage || row.sentProposal.replyOrder === o.sentReaffirms);

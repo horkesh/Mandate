@@ -15,10 +15,18 @@ describe('S90 continuation ruling 4', () => {
       expect(livenessProblems({ [changed.key]: changed.before }, { [changed.key]: changed.after }, [changed])).not.toEqual([]);
     }
   });
-  it('changes only the Union reference to quiet and around(9), leaving the testbed messenger live', () => {
+  it('keeps the authorized quiet messenger transition while sourced positive relay bands advance', () => {
     const union = REFERENCE_RUNS.find(run => run.name === 'union-1861, war by decision, 148 days')!;
     expect(union.bands['messages.special_messenger']).toEqual(r.after);
-    expect(union.bands['orders.relayed']).toEqual({ minFires: 4, maxFires: 18 });
+    const key = `${union.name}/orders.relayed`;
+    const updates = JSON.parse(readFileSync(new URL('../rules/liveness-changes.json', import.meta.url), 'utf8'))
+      .filter((change: { key: string }) => change.key === key);
+    const latest = updates.at(-1);
+    // S123 advances S90's positive relay band; its immutable quiet grant is unchanged.
+    expect(latest.before).toEqual({ minFires: 4, maxFires: 18 });
+    expect(latest.observed).toBe(20);
+    expect(union.bands['orders.relayed']).toEqual({ minFires: 10, maxFires: 40 });
+    expect(livenessProblems({ [key]: latest.before }, { [key]: union.bands['orders.relayed']! }, [latest])).toEqual([]);
     expect(REFERENCE_RUNS.find(run => run.name === 'testbed, 120 days')!.bands['messages.special_messenger']!.minFires).toBe(1);
   });
 });

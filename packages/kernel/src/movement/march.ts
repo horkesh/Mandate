@@ -110,7 +110,7 @@ export function legsFrom(ground: MarchGround, from: RegionId, faction: FactionId
 }
 
 /** Quickest days (permille) from every region to `goal` over legs the side may take: Dijkstra run backwards from the goal. */
-function daysToGoal(ground: MarchGround, goal: RegionId, faction: FactionId, naval: boolean): Map<RegionId, number> {
+function daysToGoal(ground: MarchGround, goal: RegionId, faction: FactionId, naval: boolean, allows?: (leg: EdgeLeg) => boolean): Map<RegionId, number> {
   const best = new Map<RegionId, number>([[goal, 0]]);
   const done = new Set<RegionId>();
   const heap = new MinHeap<{ region: RegionId; days: number }>((a, b) => a.days < b.days || (a.days === b.days && a.region < b.region));
@@ -123,7 +123,7 @@ function daysToGoal(ground: MarchGround, goal: RegionId, faction: FactionId, nav
       if (done.has(from)) continue;
       // The leg as travelled: from `from` into `e.region`.
       const leg = edgeLeg(ground.map, edge, from, ground.month, ground.network);
-      if (marchBar(ground, leg, faction, naval) !== null) continue;
+      if (allows?.(leg) === false || marchBar(ground, leg, faction, naval) !== null) continue;
       const days = e.days + leg.daysPermille;
       const cur = best.get(from);
       if (cur === undefined || days < cur) {
@@ -146,14 +146,14 @@ export interface MarchStep {
  * The first legs of every quickest route from `from` to `goal`, in edge-id
  * order; empty when `from` is the goal or the goal cannot be reached.
  */
-export function marchSteps(ground: MarchGround, from: RegionId, goal: RegionId, faction: FactionId, naval: boolean): MarchStep[] {
+export function marchSteps(ground: MarchGround, from: RegionId, goal: RegionId, faction: FactionId, naval: boolean, allows?: (leg: EdgeLeg) => boolean): MarchStep[] {
   if (!ground.map.regions.has(goal)) throw new MovementError([`goal ${goal} is not in the World`]);
   if (from === goal) return [];
-  const toGoal = daysToGoal(ground, goal, faction, naval);
+  const toGoal = daysToGoal(ground, goal, faction, naval, allows);
   const total = toGoal.get(from);
   if (total === undefined) return [];
   return legsFrom(ground, from, faction, naval)
-    .filter((leg) => toGoal.has(leg.to) && leg.daysPermille + toGoal.get(leg.to)! === total)
+    .filter((leg) => allows?.(leg) !== false && toGoal.has(leg.to) && leg.daysPermille + toGoal.get(leg.to)! === total)
     .map((leg) => ({ leg, remainingMilli: toGoal.get(leg.to)! }));
 }
 

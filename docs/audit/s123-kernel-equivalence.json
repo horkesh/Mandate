@@ -1,0 +1,14 @@
+{
+  "baseline": "C:\\Pyrrhic\\sprint-july\\runs\\s119\\references\\union-1861-summary.json",
+  "baselineSha256": "e8b2a301ffc5db7c6f1dee90c75ff591bee3c7285c3ff2cd7499231c442bf9a6",
+  "actual": "runs/s123/kernel-equivalence.json",
+  "actualSha256": "232a1fbfdde965358c95649469e289872aedc045604d24477b6ef791e9328db1",
+  "days": 148,
+  "allDailyHashesEqual": true,
+  "worldHash": "a68886b68129eb4255320c7c1129c42e27f1e4776d27923d294173886480b5b7",
+  "initialHash": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+  "finalHash": "d5a8e6c67102566f6b773ec0d461a4e6b68eda765da60b92e6f4240e45ad4213",
+  "rejections": 0,
+  "focused": "runs/s123/focused-final.log",
+  "focusedPassed": 142
+}

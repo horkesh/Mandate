@@ -1,0 +1,446 @@
+{
+  "orders.relayed": {
+    "mechanic": "orders.relayed",
+    "beforeObserved": 11,
+    "afterObserved": 20,
+    "beforeBand": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "afterBand": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "cause": "S123: five mandate relay events and four approval relay events for three logged local initiatives add nine to the retained eleven. All eleven inherited successful relay identities remain. No latency, compliance, force or scoring constant changed.",
+    "extraRelayActs": [
+      {
+        "id": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|cameron_simon|relay|comply|1",
+        "creditKey": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|cameron_simon|relay|",
+        "order": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "side": "union",
+        "actor": "cameron_simon",
+        "role": "relay",
+        "kind": "mandate",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 1,
+        "post": "us_secretary_war",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief|cameron_simon|relay|comply|4",
+        "creditKey": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief|cameron_simon|relay|",
+        "order": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+        "side": "union",
+        "actor": "cameron_simon",
+        "role": "relay",
+        "kind": "approve",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 4,
+        "post": "us_secretary_war",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|cameron_simon|relay|comply|54",
+        "creditKey": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|cameron_simon|relay|",
+        "order": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "side": "union",
+        "actor": "cameron_simon",
+        "role": "relay",
+        "kind": "mandate",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 54,
+        "post": "us_secretary_war",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|scott_winfield|relay|comply|54",
+        "creditKey": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|scott_winfield|relay|",
+        "order": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "side": "union",
+        "actor": "scott_winfield",
+        "role": "relay",
+        "kind": "mandate",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 54,
+        "post": "us_general_in_chief",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.86.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1|cooper_samuel|relay|comply|86",
+        "creditKey": "m.86.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1|cooper_samuel|relay|",
+        "order": "m.86.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "side": "confederate",
+        "actor": "cooper_samuel",
+        "role": "relay",
+        "kind": "mandate",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 86,
+        "post": "cs_war_adjutant_inspector_general",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.86.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.86.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.86.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.86.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania|cameron_simon|relay|comply|88",
+        "creditKey": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania|cameron_simon|relay|",
+        "order": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "side": "union",
+        "actor": "cameron_simon",
+        "role": "relay",
+        "kind": "approve",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 88,
+        "post": "us_secretary_war",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania|scott_winfield|relay|comply|88",
+        "creditKey": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania|scott_winfield|relay|",
+        "order": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "side": "union",
+        "actor": "scott_winfield",
+        "role": "relay",
+        "kind": "approve",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 88,
+        "post": "us_general_in_chief",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.104.davis_jefferson.cooper_samuel.approve.cs_cmd_harpers_ferry|cooper_samuel|relay|comply|104",
+        "creditKey": "m.104.davis_jefferson.cooper_samuel.approve.cs_cmd_harpers_ferry|cooper_samuel|relay|",
+        "order": "m.104.davis_jefferson.cooper_samuel.approve.cs_cmd_harpers_ferry",
+        "side": "confederate",
+        "actor": "cooper_samuel",
+        "role": "relay",
+        "kind": "approve",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 104,
+        "post": "cs_war_adjutant_inspector_general",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.104.davis_jefferson.cooper_samuel.approve.cs_cmd_harpers_ferry",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.104.davis_jefferson.cooper_samuel.approve.cs_cmd_harpers_ferry"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.104.davis_jefferson.cooper_samuel.approve.cs_cmd_harpers_ferry",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.104.davis_jefferson.cooper_samuel.approve.cs_cmd_harpers_ferry"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2|cooper_samuel|relay|comply|105",
+        "creditKey": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2|cooper_samuel|relay|",
+        "order": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "side": "confederate",
+        "actor": "cooper_samuel",
+        "role": "relay",
+        "kind": "mandate",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 105,
+        "post": "cs_war_adjutant_inspector_general",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      }
+    ],
+    "inheritedSuccessfulRelayIdentitiesPreserved": true,
+    "newZeroCounters": [],
+    "capture": "runs/s123/measurement-corrected/"
+  },
+  "peace/orders.relayed": {
+    "reference": "union-1861 before the opening decisions, 30 days (the war gate, 0064)",
+    "mechanic": "orders.relayed",
+    "beforeObserved": 0,
+    "afterObserved": 2,
+    "beforeBand": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "afterBand": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "cause": "S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json",
+    "extraRelayActs": [
+      {
+        "id": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|cameron_simon|relay|comply|1",
+        "creditKey": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|cameron_simon|relay|",
+        "order": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "side": "union",
+        "actor": "cameron_simon",
+        "role": "relay",
+        "kind": "mandate",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 1,
+        "post": "us_secretary_war",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      },
+      {
+        "id": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief|cameron_simon|relay|comply|4",
+        "creditKey": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief|cameron_simon|relay|",
+        "order": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+        "side": "union",
+        "actor": "cameron_simon",
+        "role": "relay",
+        "kind": "approve",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 4,
+        "post": "us_secretary_war",
+        "undertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+        },
+        "declaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+        },
+        "reservations": [],
+        "declaredReservations": [],
+        "reservationGaps": [],
+        "declaredReservationGaps": []
+      }
+    ]
+  },
+  "peace/plans.goal_reached": {
+    "reference": "union-1861 before the opening decisions, 30 days (the war gate, 0064)",
+    "mechanic": "plans.goal_reached",
+    "beforeObserved": 0,
+    "afterObserved": 1,
+    "beforeBand": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "afterBand": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "cause": "S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json",
+    "events": [
+      {
+        "day": 9,
+        "fires": 1
+      }
+    ],
+    "goal": {
+      "post": "us_general_in_chief",
+      "goal": {
+        "goalObjective": "washington",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": true,
+        "goalSea": true,
+        "goalNeutral": false,
+        "goalCommitted": [
+          "fb_us_washington_regulars"
+        ],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": false
+      },
+      "issuer": "lincoln_abraham",
+      "setDay": 2
+    }
+  }
+}

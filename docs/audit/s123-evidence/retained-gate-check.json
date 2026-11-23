@@ -1,0 +1,38 @@
+{
+  "capture": "runs/s123/measurement-corrected/summary.json",
+  "newRun": false,
+  "failures": [],
+  "peaceFailures": [],
+  "bandProblems": [],
+  "changedBands": [
+    {
+      "reference": "union-1861, war by decision, 148 days",
+      "mechanic": "orders.relayed",
+      "observed": 20,
+      "limits": {
+        "minFires": 10,
+        "maxFires": 40
+      }
+    },
+    {
+      "reference": "union-1861 before the opening decisions, 30 days (the war gate, 0064)",
+      "mechanic": "orders.relayed",
+      "observed": 2,
+      "limits": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json"
+      }
+    },
+    {
+      "reference": "union-1861 before the opening decisions, 30 days (the war gate, 0064)",
+      "mechanic": "plans.goal_reached",
+      "observed": 1,
+      "limits": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json"
+      }
+    }
+  ]
+}

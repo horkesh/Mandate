@@ -1,0 +1,235 @@
+[
+  {
+    "post": "us_general_in_chief",
+    "before": null,
+    "after": {
+      "planAuthority": {
+        "basisPost": "us_general_in_chief",
+        "basisKey": "scott_army_command"
+      },
+      "planGoal": {
+        "goalObjective": "washington",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": true,
+        "goalSea": true,
+        "goalNeutral": false,
+        "goalCommitted": [
+          "fb_us_washington_regulars"
+        ],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": false
+      },
+      "planIssuer": "lincoln_abraham",
+      "planViaChain": true,
+      "planSetDay": 2,
+      "planIssuedDay": 2,
+      "planOrder": "m.2.scott_winfield.scott_winfield.local.goal:05c4f8e170b7b123600f5753",
+      "planResponse": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|scott_winfield",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "scott_winfield",
+        "draftPost": "us_general_in_chief",
+        "draftFaction": "union",
+        "draftDay": 2,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:washington",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_general_in_chief",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "washington",
+                  "routeTo": "washington",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "fb_us_washington_regulars"
+                ],
+                "axisStrength": 0,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "washington"
+                  }
+                ],
+                "axisArrival": 3000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 0,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches washington"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1216"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 27000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 78,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 1078,
+            "candPerceived": 0,
+            "candRatio": 10000
+          }
+        ],
+        "draftRejected": [],
+        "draftSearches": 0,
+        "draftGenerated": 1,
+        "draftDeduplicated": 0
+      },
+      "planChosen": "direct:least_cost:washington",
+      "planApproved": {
+        "id": "direct:least_cost:washington",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "us_general_in_chief",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "washington",
+              "routeTo": "washington",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "axisBlocks": [
+              "fb_us_washington_regulars"
+            ],
+            "axisStrength": 0,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "washington"
+              }
+            ],
+            "axisArrival": 3000,
+            "axisOutOfSupply": 0,
+            "axisStoresDays": 0,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches washington"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 10000 over his demand 1216"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 27000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": 0,
+            "contribWhy": "0 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 78,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 1078,
+        "candPerceived": 0,
+        "candRatio": 10000
+      },
+      "planSubmitted": "m.3.scott_winfield.lincoln_abraham.plan.us_general_in_chief",
+      "planCounters": [],
+      "planPending": null
+    },
+    "cause": "Received mandate local plan/review and existing subsequent orders, not a historical onward assignment."
+  }
+]

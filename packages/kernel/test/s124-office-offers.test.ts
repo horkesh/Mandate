@@ -19,11 +19,24 @@ import { deliverDue } from '../src/tick/deliver.ts';
 import { senderFor } from '../src/seats/sender.ts';
 import { tick, TICK_MECHANICS } from '../src/tick/tick.ts';
 import type { CallCommand } from '../src/log/commands.ts';
+import type { State } from '../src/root-state.ts';
+import { enactMandate, mandateAt, mayCommit } from '../src/command/authority.ts';
+import { appointHolder, relieveHolder } from '../src/command/command.ts';
+import { replay } from '../src/log/session.ts';
+import { toId } from '../src/ids.ts';
+import { pendingRequests } from '../src/seats/requests.ts';
 
-function fixture() {
+const assignment = {
+ id:'fixture_onward', source:'Fictional onward order, p.2', fromDate:'1900-06-01',
+ issuer:P('a_gen'), from:POST('a_army'), to:POST('a_reserve'), destination:R('a_mid'),
+ mandate:'fixture_command', call:'office_levy', regiment:'fixture_regiment',
+};
+
+function fixture(onward = false) {
  const {world:base,seat}=fresh();
  const raw={...base.map.world,people:base.map.world.people.map(p=>p.id===P('b_gen')?{...p,faction:null}:p),departments:base.map.world.departments.map(d=>d.id==='b_war'?{...d,faction:null}:d),rules:{...base.map.world.rules,recruitment:{...base.map.world.rules.recruitment,raisingPostKinds:['army']},ruleSeats:{...base.map.world.rules.ruleSeats,principals:base.map.world.rules.ruleSeats.principals.map(p=>p.faction===F('a')?{...p,calls:[{id:'office_levy',address:'office' as const,post:POST('b_army'),regiments:1,termDays:90,fromDate:'1900-06-01',source:'fictional office paper',offer:{region:R('a_front'),receiver:POST('a_army')}}]}:p)}}};
- const world=indexSeatsWorld(indexWorld(raw),base.start);
+ const world=indexSeatsWorld(indexWorld(onward ? {...raw,rules:{...raw.rules,onwardAssignments:[assignment]}} : raw),
+  onward ? {...base.start,posts:base.start.posts.map(p=>p.id===assignment.to?{...p,parent:assignment.from}:p)} : base.start);
  return {world,state:createState(world,{seed:17}),seat};
 }
 const call:CallCommand={cmd:'call',to:POST('b_army'),regiments:1,termDays:90,route:'courier',bypass:false,callId:'office_levy',address:'office'};
@@ -54,8 +67,8 @@ it('rejects office addressing for a call that has no office instrument',()=>{
 });
 
 
-function offered() {
- const {world,state,seat}=fixture();const ctx=ctxFor(world,state,1,TICK_MECHANICS);
+function offered(onward = false) {
+ const {world,state,seat}=fixture(onward);const ctx=ctxFor(world,state,1,TICK_MECHANICS);
  expect(issueCall(ctx,state,seat,call)).toBeNull();const letter=ctx.outbox[0]!;
  const received=deliverDue(ctxFor(world,state,letter.msgArriveDay,TICK_MECHANICS),sendMessages(state,[letter]));
  const levy=Object.values(received.postLevies)[0]!;
@@ -103,7 +116,7 @@ it('rejects altered terms on the sourced office instrument',()=>{
 
 it('saves offers, their original reservations and pending journeys; migration from schema4 invents none',()=>{
  const g=offered();const encoded=encodeSave({worldHash:canonicalHash('fixture'),state:g.state,log:[{day:1,seat:'seat:b_gen',command:{cmd:'recall_offer',offer:g.id}}]});
- const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(5);
+ const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(6);
  expect(decoded.state).toEqual(g.state);
  const old=JSON.parse(encodeSave({worldHash:canonicalHash('fixture'),state:fixture().state,log:[]}));old.schemaVersion=4;
  const migrated=decodeSave(JSON.stringify(old));expect(migrated.state).toEqual(old.state);expect(migrated.logHash).toBe(old.logHash);
@@ -132,4 +145,108 @@ it('keeps a holder-addressed known governor envelope unchanged',()=>{
  const {world,state,seat}=fixture();const ctx=ctxFor(world,state,1,TICK_MECHANICS);
  expect(issueCall(ctx,state,seat,{cmd:'call',to:POST('a_army'),regiments:1,termDays:90,route:'courier',bypass:true})).toBeNull();
  expect(ctx.outbox[0]!.msgTo).toBe(P('a_gen'));expect(ctx.outbox[0]!.msgOfficeAddress).toBeUndefined();
+});
+
+function onwardFixture(allowed = true) {
+ const g=offered(true);
+ let state=g.state;
+ for (let d=0; d<12 && state.neutralOffers![g.id]!.offerStatus!=='received'; d++) {
+  state=tick(g.world,state,[],{freeze:true,deepChecks:true}).state;
+ }
+ expect(state.neutralOffers![g.id]!.offerStatus).toBe('received');
+ const block=state.forceBlockStates[g.block]!;
+ state={...state,forceBlockStates:{...state.forceBlockStates,[g.block]:{...block,fbLots:block.fbLots.map(l=>({...l,lotRegiment:'fixture_regiment',lotGenerated:false}))}}};
+ const grant={
+  mandateKey:assignment.mandate,mandateRevision:1,mandateIssuer:P('a_lead'),mandateIssuerPost:null,
+  mandateHolder:assignment.issuer,mandatePost:assignment.from,mandateParent:null,mandateActions:['assign'] as const,
+  mandateRecipients:[assignment.from],mandateRegions:allowed ? [R('a_front'),R('a_mid')] : [R('a_front')],
+  mandateModes:['land','rail'] as const,mandateCeiling:{ceilingPost:assignment.from,ceilingMen:null},
+  mandateGuard:null,mandateExpires:null,mandateReports:[],mandateOnward:true,mandateRevoke:false,
+ };
+ state=enactMandate(g.world.map,state,grant,toId('message','fixture.mandate'),state.stateDay,'fixture-response',['assign','onward']);
+ const day=state.stateDay+1, seat=seatIdFor(assignment.issuer);
+ return {...g,state,grant,entry:{day,seat,command:{cmd:'choose' as const,request:`local:${assignment.from}:${day}`,option:`assignment:${assignment.id}`}}};
+}
+
+it('keeps a received regiment at rendezvous when its onward order has not been issued',()=>{
+ const g=onwardFixture();
+ const request=pendingRequests(g.world,g.state).find(r=>r.requestKey===g.entry.command.request);
+ expect(request?.menu).toMatchObject({menuKind:'local-action',options:[{optionId:g.entry.command.option}]});
+ const state=tick(g.world,g.state,[],{freeze:true,deepChecks:true}).state;
+ expect(state.forceLocations[g.block]!.locRegion).toBe(R('a_front'));
+ expect(state.forceAssignments[g.block]).toBe(assignment.from);
+ expect(state.forceJoins[g.block]).toBeUndefined();
+});
+
+it('refuses the logged selection outside the issuer’s received territorial authority',()=>{
+ const g=onwardFixture(false);
+ const result=tick(g.world,g.state,[g.entry],{freeze:true,deepChecks:true});
+ expect(result.rejections).toHaveLength(1);
+ expect(result.requestDispatches?.some(m=>m.msgOrder?.orderKind==='assignment')).toBeFalsy();
+ expect(result.state.forceAssignments[g.block]).toBe(assignment.from);
+});
+
+it('answers the logged order and transfers command only when the receiving commander receives the regiment',()=>{
+ const g=onwardFixture();
+ expect(entryProblems(g.entry,0)).toEqual([]);
+ const issued=tick(g.world,g.state,[g.entry],{freeze:true,deepChecks:true});
+ expect(issued.rejections).toEqual([]);
+ const dispatch=issued.requestDispatches?.find(m=>m.msgOrder?.orderKind==='assignment');
+ expect(dispatch).toMatchObject({msgTo:P('a_bold'),msgToPost:assignment.to,msgOrder:{orderIssuer:assignment.issuer}});
+ let state=issued.state;
+ expect(state.forceAssignments[g.block]).toBe(assignment.from);
+ for (let d=0; d<15 && state.forceAssignments[g.block]!==assignment.to; d++) {
+  if (state.forceLocations[g.block]!.locRegion!==assignment.destination) expect(state.forceAssignments[g.block]).toBe(assignment.from);
+  state=tick(g.world,state,[],{freeze:true,deepChecks:true}).state;
+ }
+ expect(state.forceAssignments[g.block]).toBe(assignment.to);
+ expect(state.forceLocations[g.block]!.locRegion).toBe(assignment.destination);
+ expect(Object.values(state.orderResponses)).toContainEqual(expect.objectContaining({respOrder:dispatch!.msgOrigin,respKind:'assignment',respPerson:P('a_bold'),respRole:'addressee'}));
+});
+
+it('records an ordinary refusal when the issuer loses his mandate while the letter is in transit',()=>{
+ const g=onwardFixture();
+ const issued=tick(g.world,g.state,[g.entry],{freeze:true,deepChecks:true});
+ const dispatch=issued.requestDispatches?.find(m=>m.msgOrder?.orderKind==='assignment')!;
+ expect(dispatch.msgArriveDay).toBeGreaterThan(issued.state.stateDay);
+ const revoked=enactMandate(g.world.map,issued.state,{...g.grant,mandateRevision:2,mandateRevoke:true},
+  toId('message','fixture.revoked'),issued.state.stateDay,'revocation-answer',[]);
+ const until=dispatch.msgArriveDay+2;
+ const resumed=replay(g.world,revoked,[g.entry],until,{freeze:true,deepChecks:true});
+ const response=Object.values(resumed.state.orderResponses).find(r=>r.respOrder===dispatch.msgOrigin);
+ expect(response).toMatchObject({respKind:'assignment',respRole:'addressee',respActual:'refuse',respInstitutionalRefusal:'authority_unavailable'});
+ expect(resumed.state.forceAssignments[g.block]).toBe(assignment.from);
+ expect(resumed.state.forceJoins[g.block]).toBeUndefined();
+ const encoded=encodeSave({worldHash:canonicalHash('fixture'),state:resumed.state,log:[g.entry]});
+ expect(decodeSave(encoded)).toMatchObject({state:{orderResponses:resumed.state.orderResponses},log:[g.entry]});
+});
+
+it('uses the shared commitment while the order is in transit and while the regiment travels',()=>{
+ const g=onwardFixture();
+ let state=tick(g.world,g.state,[g.entry],{freeze:true,deepChecks:true}).state;
+ const available=()=>mayCommit(g.world.map,state,mandateAt(state,assignment.from,assignment.mandate)!,assignment.from,[g.block]);
+ expect(available()).toBe(false);
+ for (let d=0;d<10 && state.forceJoins[g.block]?.joinAssignment===undefined;d++) {
+  state=tick(g.world,state,[],{freeze:true,deepChecks:true}).state;
+ }
+ expect(state.forceJoins[g.block]?.joinAssignment).toBeDefined();
+ expect(available()).toBe(false);
+});
+
+it('withholds troop receipt if the commander who answered is replaced before arrival',()=>{
+ const g=onwardFixture();
+ let state=tick(g.world,g.state,[g.entry],{freeze:true,deepChecks:true}).state;
+ for (let d=0;d<10 && state.forceJoins[g.block]?.joinAssignment===undefined;d++) {
+  state=tick(g.world,state,[],{freeze:true,deepChecks:true}).state;
+ }
+ const pending=state.forceJoins[g.block]?.joinAssignment;
+ expect(pending).toMatchObject({assignmentRecipient:P('a_bold')});
+ expect(state.forceAssignments[g.block]).toBe(assignment.from);
+ const later=state.stateDay+10;
+ const resumed=decodeSave(encodeSave({worldHash:canonicalHash('fixture'),state,log:[g.entry]})).state as unknown as State;
+ expect(replay(g.world,resumed,[g.entry],later).hashes).toEqual(replay(g.world,state,[g.entry],later).hashes);
+ state=appointHolder(g.world.map,relieveHolder(state,assignment.to),assignment.to,P('a_spy'));
+ const replaced=replay(g.world,state,[g.entry],later,{freeze:true,deepChecks:true}).state;
+ expect(replaced.forceAssignments[g.block]).toBe(assignment.from);
+ expect(replaced.forceJoins[g.block]).toBeUndefined();
 });

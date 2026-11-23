@@ -83,6 +83,7 @@ const field = (f: string, writer: string, proposedBy: readonly string[], code: r
 const at = (record: string, key: string): FieldLocation => ({ record, key });
 
 export const OWNED_FIELDS: readonly OwnedField[] = [
+  field('received mandates and shared authority commitments', 'command', ['order receipt and compliance', 'logged local choices'], [at('State', 'authorityByPost')]),
   field('each faction\'s current capital', 'command', ['scenario start', 'situations'], [at('State', 'factionCapitals')]),
   // Lane 0.4: control, set from the scenario start (0050) and changed only through `applyControl`.
   field('region control', 'control', ['combat', 'occupation'], [at('State', 'regionControl')]),
@@ -97,7 +98,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
   field('division location', 'movement', ['operations', 'recruitment (a new block placed, a disbanded one removed)', 'local organisation (conserved colocated lots)', 'situations (sourced theatre exit)'], [at('State', 'forceLocations')]),
   // Lane 1.12: a transfer orders the blocks it hands over to join the receiving post at its seat.
-  field("a block's order to join its post at the post's seat", 'movement', ['verbs (a transfer)', 'operations (the day\'s legs)'], [at('State', 'forceJoins')]),
+  field("a block's joining order, including an accepted onward assignment awaiting receipt", 'movement', ['verbs (a transfer)', 'order receipt', 'operations (the day\'s legs)'], [at('State', 'forceJoins')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
   // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
@@ -198,6 +199,13 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'TransitMessage',
   'Hop',
   'OrderBody',
+  'OrderBody.orderAssignment',
+  'AuthorityBasis',
+  'MandateGrant',
+  'MandateParent',
+  'MandateCeiling',
+  'EnactedMandate',
+  'AuthorityUse',
   'LetterIdentity',
   'ProposalReply',
   'VerbBody',
@@ -214,6 +222,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'Enlistment',
   // Lane 1.12: a block's order to join its post, replaced whole by `movement`.
   'ForceJoin',
+  'AssignmentJourney',
   'Levy',
   'NeutralOffer',
   'CallSpec',

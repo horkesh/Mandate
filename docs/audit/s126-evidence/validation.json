@@ -1,0 +1,191 @@
+{
+  "commands": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ],
+      "exit": 0,
+      "seconds": 0.639,
+      "log": "runs/s126/decisions.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:licences"
+      ],
+      "exit": 0,
+      "seconds": 0.67,
+      "log": "runs/s126/licences.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.648,
+      "log": "runs/s126/boundary-first.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s126/projection.ts"
+      ],
+      "exit": 0,
+      "seconds": 3.992,
+      "log": "runs/s126/projection.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 2.356,
+      "log": "runs/s126/rules-premeasure.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s126/preflight.ts"
+      ],
+      "exit": 0,
+      "seconds": 5.811,
+      "log": "runs/s126/preflight.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "tools/test/rule-history.test.ts",
+        "tools/test/projection-truth.test.ts",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/s90-liveness-ruling.test.ts",
+        "tools/test/s122-liveness-ruling.test.ts",
+        "tools/test/s124-liveness-boundary.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/one-writer.test.ts",
+        "packages/kernel/test/s122-strength.test.ts",
+        "packages/kernel/test/s112-authored-letters.test.ts",
+        "packages/kernel/test/s112-paper-receipts.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 8.102,
+      "log": "runs/s126/rules-and-invariants.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 2.309,
+      "log": "runs/s126/rules-before-measure.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s126/capture.ts"
+      ],
+      "exit": 0,
+      "seconds": 79.238,
+      "log": "runs/s126/measure.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.626,
+      "log": "runs/s126/boundary-final.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 1.975,
+      "log": "runs/s126/rules-final.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "tools/test/rule-history.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 0.946,
+      "log": "runs/s126/history-final.log"
+    }
+  ],
+  "implementationWorkerEvidence": [
+    {
+      "check": "six focused files",
+      "reportedExit": 0,
+      "passed": 62,
+      "log": "runs/s126/assignment-focused.log"
+    },
+    {
+      "check": "affected assignment fixture after test-only type cast",
+      "reportedExit": 0,
+      "passed": 18,
+      "log": "runs/s126/assignment-corrections-final.log"
+    },
+    {
+      "check": "ownership correction",
+      "reportedExit": 0,
+      "passed": 44,
+      "log": "runs/s126/assignment-one-writer.log"
+    },
+    {
+      "check": "final typecheck",
+      "reportedExit": 0,
+      "log": "runs/s126/assignment-ownership-typecheck.log"
+    },
+    {
+      "check": "published schemas --check",
+      "reportedExit": 0,
+      "log": "runs/s126/assignment-schemas-check.log"
+    }
+  ],
+  "retainedFailures": [
+    {
+      "log": "runs/s126/assignment-red.log",
+      "kind": "test-first absent assignment menu and rejected logged choice; corrected by implementation"
+    },
+    {
+      "log": "runs/s126/rules-merge.log",
+      "kind": "only two stale protected projection roots; examined merged readers, principal identities unchanged, refresh proved in projection-proof.json"
+    },
+    {
+      "log": "runs/s126/rules-and-invariants.log",
+      "kind": "2 failed one-writer tests from six fields in two undeclared immutable records; exact records declared; targeted44 pass. Other10files101tests reused."
+    }
+  ],
+  "evidenceReuse": [
+    "S124 148day baseline capture; no baseline rerun",
+    "Unchanged testbed full-run evidence from S119/S124; new short testbed startup proved local links and replay/resume",
+    "Other10 rules/invariant files101 passing tests reused after immutable-registry-only correction",
+    "No new sweep or isolated tick-budget campaign; inherited unmet criteria remain binding"
+  ],
+  "formalReview": "Deferred to lead under0106/0107; no signatures or main integration",
+  "ordinaryHook": "Required before commit; raw commit log and committed-final receipt under runs/s126 after commit"
+}

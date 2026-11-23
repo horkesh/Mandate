@@ -96,7 +96,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
       msg = { ...msg, msgTo: holder };
     }
     if (msg.msgOrder!.orderKind !== 'support' && msg.msgToPost !== null) {
-      const failure = destinationFailure(ctx,state,msg.msgToPost,msg.msgTo,msg.msgOrder!.orderIssuer,msg.msgOrder!.orderKind === 'call');
+      const failure = destinationFailure(ctx,state,msg.msgToPost,msg.msgTo,msg.msgOrder!.orderIssuer,(msg.msgOrder!.orderKind === 'call' || msg.msgOrder!.orderKind === 'mandate'));
       if (failure !== null) return returnDispatch(ctx,state,msg,failure);
     }
     ctx.requestReceipts?.push(msg);

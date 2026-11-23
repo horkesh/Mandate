@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { phase0Run } from '../packages/cli/src/phase0-run.ts';
+const smoke = process.argv.includes('--smoke');
+const baseline = JSON.parse(readFileSync('C:/Pyrrhic/sprint-july/runs/s119/references/union-1861-summary.json','utf8'));
+const actual = phase0Run({pack:'union-1861',days:smoke?2:148,hash:'daily',replay:false});
+writeFileSync(`runs/s123/kernel-${smoke?'smoke':'equivalence'}.json`,JSON.stringify(actual,null,2)+'\n');
+assert.equal(actual.worldHash,baseline.worldHash);
+assert.equal(actual.initialHash,baseline.initialHash);
+assert.deepEqual(actual.turns,baseline.turns.slice(0,smoke?2:148));
+assert.equal(actual.rejections,0);
+if (!smoke) assert.deepEqual(actual.daily,baseline.daily);
+console.log(JSON.stringify({days:actual.finalDay,worldHash:actual.worldHash,finalHash:actual.finalHash,allHashesEqual:true,rejections:actual.rejections}));

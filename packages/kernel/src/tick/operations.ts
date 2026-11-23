@@ -1,5 +1,7 @@
+import { planAuthorized } from '../seats/local-actions.ts';
 import { withinCommand } from '../command/command.ts';
 import { receiveOffers } from './offers.ts';
+import { assignmentPassage, receiveAssignments } from './onward-assignments.ts';
 import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * Day-tick phase 3 (FOUNDATION section 10; lane 1.4): operations, then movement. It replaces Phase 0's standing-goal
@@ -39,7 +41,7 @@ import { applyDetachmentProposals, type DetachmentProposal } from './detachments
 import type { State } from '../root-state.ts';
 import { postFaction } from '../seats/posts.ts';
 import { morningGround } from '../seats/requests.ts';
-import { edgeLeg } from '../supply/supply.ts';
+import { edgeLeg, type EdgeLeg } from '../supply/supply.ts';
 import { fire, sendReport, type TickContext } from './context.ts';
 import { sendSupportRequest } from './support.ts';
 
@@ -186,7 +188,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   for (const post of planned.sort(strictCompare)) {
     const r = state.planRecords[post]!;
     const plan = r.planApproved;
-    const executing = (r.planStatus === 'approved' || r.planStatus === 'ready') && plan !== null && plan.candMethod !== 'holding';
+    const executing = planAuthorized(world,state,post,r,day,plan ?? undefined) && (r.planStatus === 'approved' || r.planStatus === 'ready') && plan !== null && plan.candMethod !== 'holding';
     const open = openOperationOf(state, post);
     const current = open === null ? null : state.operationRecords[open]!;
     const same = current !== null && executing && current.opOrder === r.planOrder && current.opPlan === plan!.id;
@@ -252,7 +254,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   const marched = advanceMarches(state, day);
   state = marched.state;
   for (const a of marched.arrivals) fire(ctx, 'movement.arrived', 1 + a.carried.length);
-  return receiveOffers(ctx,state);
+  return receiveAssignments(ctx,receiveOffers(ctx,state));
 }
 
 /**
@@ -269,7 +271,7 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
   if (ids.length === 0) return state;
   const inOperation = new Set(openOperations(state).flatMap((id) => state.operationRecords[id]!.opAxes.filter((a) => a.oaxStage !== 'end').flatMap((a) => a.oaxBlocks)));
   const ended: ForceBlockId[] = [];
-  const groups = new Map<string, { readonly from: RegionId; readonly to: RegionId; readonly naval: boolean; readonly side: FactionId | null; readonly blocks: ForceBlockId[] }>();
+  const groups = new Map<string, { readonly from: RegionId; readonly to: RegionId; readonly naval: boolean; readonly side: FactionId | null; readonly blocks: ForceBlockId[]; readonly allows?: (leg: EdgeLeg) => boolean }>();
   for (const b of ids) {
     const j = state.forceJoins[b]!;
     const loc = state.forceLocations[b];
@@ -278,25 +280,31 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
       ended.push(b);
       continue;
     }
+    const assignment = j.joinAssignment;
+    const allows = assignment === undefined ? undefined : assignmentPassage(ctx,state,b,assignment);
+    if (allows === null) { ended.push(b); continue; }
     if (loc.locMarch !== null || loc.locAboard !== null) continue;
     if (loc.locRegion === j.joinRegion) {
-      ended.push(b);
-      fire(ctx, 'movement.joined');
+      if (assignment === undefined) {
+        ended.push(b);
+        fire(ctx, 'movement.joined');
+      }
       continue;
     }
     const naval = isNaval(ctx.world.map, state, b);
     const offer = j.joinOffer === undefined ? undefined : state.neutralOffers?.[j.joinOffer];
     // Voluntary transit uses the recipient's access policy; service and assignment stay the governor's.
     const side = offer === undefined ? factionOfBlock(ctx.world.map,state,b) : postFaction(ctx.world,state,offer.offerReceiver);
-    const key = `${loc.locRegion}|${j.joinRegion}|${naval ? 'n' : 'l'}|${side}`;
-    const g = groups.get(key) ?? { from: loc.locRegion, to: j.joinRegion, naval, side, blocks: [] };
+    const baseKey = `${loc.locRegion}|${j.joinRegion}|${naval ? 'n' : 'l'}|${side}`;
+    const key = assignment === undefined ? baseKey : `${baseKey}|${assignment.assignmentOrder}`;
+    const g = groups.get(key) ?? { from: loc.locRegion, to: j.joinRegion, naval, side, blocks: [], ...(allows === undefined ? {} : {allows}) };
     g.blocks.push(b);
     groups.set(key, g);
   }
   for (const key of [...groups.keys()].sort(strictCompare)) {
     const g = groups.get(key)!;
     const side = g.side;
-    const leg = side === null ? null : (marchSteps(ground, g.from, g.to, side, g.naval)[0]?.leg ?? null);
+    const leg = side === null ? null : (marchSteps(ground, g.from, g.to, side, g.naval,g.allows)[0]?.leg ?? null);
     if (side === null || leg === null) {
       state = markJoins(state, g.blocks, 'no_route');
       fire(ctx, 'movement.join_blocked', g.blocks.length);

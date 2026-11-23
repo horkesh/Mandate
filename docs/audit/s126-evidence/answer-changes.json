@@ -1,0 +1,1494 @@
+[
+  {
+    "identity": [
+      "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+      "cameron_simon",
+      "relay",
+      1
+    ],
+    "before": null,
+    "after": {
+      "key": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|cameron_simon",
+      "respOrder": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "mandate",
+      "respDay": 1,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 48,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 48
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 48
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+      "scott_winfield",
+      "addressee",
+      1
+    ],
+    "before": null,
+    "after": {
+      "key": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|scott_winfield",
+      "respOrder": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "mandate",
+      "respDay": 1,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 233,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "hold",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "onward",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "relieve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "take",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 33
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 200
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+      "cooper_samuel",
+      "relay",
+      105
+    ],
+    "before": null,
+    "after": {
+      "key": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2|cooper_samuel",
+      "respOrder": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "relay",
+      "respKind": "mandate",
+      "respDay": 105,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 32
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+      "johnston_joseph_e",
+      "addressee",
+      111
+    ],
+    "before": null,
+    "after": {
+      "key": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2|johnston_joseph_e",
+      "respOrder": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "mandate",
+      "respDay": 111,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "hold",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "onward",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "relieve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "take",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+      "cameron_simon",
+      "relay",
+      4
+    ],
+    "before": null,
+    "after": {
+      "key": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief|cameron_simon",
+      "respOrder": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "approve",
+      "respDay": 4,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 48,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 48
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 48
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "cameron_simon",
+      "relay",
+      54
+    ],
+    "before": null,
+    "after": {
+      "key": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|cameron_simon",
+      "respOrder": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "mandate",
+      "respDay": 54,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 50,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 50
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 50
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "patterson_robert",
+      "addressee",
+      59
+    ],
+    "before": null,
+    "after": {
+      "key": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|patterson_robert",
+      "respOrder": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "respPerson": "patterson_robert",
+      "respPost": "us_dept_pennsylvania",
+      "respRole": "addressee",
+      "respKind": "mandate",
+      "respDay": 59,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 64,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "hold",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "onward",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "relieve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "take",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 64
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "scott_winfield",
+      "relay",
+      54
+    ],
+    "before": null,
+    "after": {
+      "key": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|scott_winfield",
+      "respOrder": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "relay",
+      "respKind": "mandate",
+      "respDay": 54,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 234,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 34
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 200
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+      "cooper_samuel",
+      "relay",
+      85
+    ],
+    "before": null,
+    "after": {
+      "key": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1|cooper_samuel",
+      "respOrder": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "relay",
+      "respKind": "mandate",
+      "respDay": 85,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 32
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+      "johnston_joseph_e",
+      "addressee",
+      97
+    ],
+    "before": null,
+    "after": {
+      "key": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1|johnston_joseph_e",
+      "respOrder": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "mandate",
+      "respDay": 97,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "hold",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "onward",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "relieve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "take",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "clauses": [
+          "approve",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+      "cameron_simon",
+      "relay",
+      88
+    ],
+    "before": null,
+    "after": {
+      "key": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania|cameron_simon",
+      "respOrder": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "approve",
+      "respDay": 88,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 50,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 50
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 50
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  },
+  {
+    "identity": [
+      "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+      "scott_winfield",
+      "relay",
+      88
+    ],
+    "before": null,
+    "after": {
+      "key": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania|scott_winfield",
+      "respOrder": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "relay",
+      "respKind": "approve",
+      "respDay": 88,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 234,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 34
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 200
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Integration activates S123 received mandates/local choices alongside unchanged S122 strength kinds and S124 office calls/offers. Historical Lee onward papers are withheld because issuer placement/assigned lineage and historical-lot identity are not established; no historical assignment is emitted. Ordinary received authority, orders, planning, movement and combat propagate the integration. Before/after and related events are evidence of this combined trajectory, not one-factor isolation."
+  }
+]

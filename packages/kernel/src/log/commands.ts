@@ -258,8 +258,14 @@ export interface AddressCommand {
 export type VerbCommand = AppointCommand | RelieveCommand | TransferCommand | InquireCommand | ConsultCommand | AudienceCommand | ObserverCommand | PromiseCommand | PressureCommand | AddressCommand;
 
 /** What a seat may send in a `commands` answer. */
-export type SeatCommand = OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand | CallCommand | RecallOfferCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
+export interface MandateCommand {
+  readonly cmd: 'mandate';
+  readonly paper: string;
+  readonly route: RouteKind;
+}
+
+export type SeatCommand = MandateCommand | OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand | CallCommand | RecallOfferCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
 
 export type Command = SeatCommand | ChooseCommand;
 
-export const COMMAND_KINDS = ['address', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'recall_offer', 'relieve', 'review', 'transfer'] as const;
+export const COMMAND_KINDS = ['address', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'mandate', 'observer', 'order', 'pressure', 'promise', 'recall_offer', 'relieve', 'review', 'transfer'] as const;

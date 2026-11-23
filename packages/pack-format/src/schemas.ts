@@ -186,6 +186,25 @@ export const PersonSchema = z.strictObject({
 const term = z.strictObject({ id: termId, name: stringKey });
 
 export const RulesSchema = z.strictObject({
+  onwardAssignments: z.array(z.strictObject({
+    id: termId, source: z.string().min(1), fromDate: historicalDate,
+    issuer: idOf('person'), from: idOf('post'), to: idOf('post'), destination: idOf('region'),
+    mandate: termId, call: termId, regiment: termId,
+  })).optional(),
+  mandates: z.array(z.strictObject({
+    id: termId, fromDate: isoDate, source: z.string().min(1),
+    requiresPapers: z.array(paperSelector).max(16).optional(),
+    grant: z.strictObject({
+      mandateKey: termId, mandateRevision: positive, mandateIssuer: idOf('person'), mandateIssuerPost: idOf('post').nullable(),
+      mandateHolder: idOf('person'), mandatePost: idOf('post'),
+      mandateParent: z.strictObject({ parentPost: idOf('post'), parentKey: termId }).nullable(),
+      mandateActions: z.array(z.enum(['hold', 'relieve', 'take', 'approve', 'assign'])), mandateRecipients: z.array(idOf('post')),
+      mandateRegions: z.array(idOf('region')), mandateModes: z.array(z.enum(['land','rail','river','sea'])),
+      mandateCeiling: z.strictObject({ ceilingPost: idOf('post'), ceilingMen: nonNegative.nullable() }).nullable(),
+      mandateGuard: nonNegative.nullable(), mandateExpires: nonNegative.nullable(),
+      mandateReports: z.array(z.string().min(1)), mandateOnward: z.boolean(), mandateRevoke: z.boolean(),
+    }),
+  })).optional(),
   capacityMax: positive,
   supplyControlPermille: permille,
   retreatControlPermille: permille,

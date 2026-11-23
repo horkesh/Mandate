@@ -1,0 +1,2434 @@
+[
+  {
+    "origin": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+    "issuer": "lincoln_abraham",
+    "fromPerson": "lincoln_abraham",
+    "to": "cameron_simon",
+    "kind": "mandate",
+    "target": "us_general_in_chief",
+    "issuedDay": 1,
+    "issuedDate": "1861-03-06",
+    "letter": {
+      "namespace": "authority.lincoln_abraham",
+      "key": "scott_army_command",
+      "revision": 1
+    },
+    "body": {
+      "orderKind": "mandate",
+      "orderMandate": {
+        "mandateKey": "scott_army_command",
+        "mandateRevision": 1,
+        "mandateIssuer": "lincoln_abraham",
+        "mandateIssuerPost": null,
+        "mandateHolder": "scott_winfield",
+        "mandatePost": "us_general_in_chief",
+        "mandateParent": null,
+        "mandateActions": [
+          "hold",
+          "relieve",
+          "take",
+          "approve"
+        ],
+        "mandateRecipients": [
+          "us_general_in_chief"
+        ],
+        "mandateRegions": [
+          "al_black_belt",
+          "al_east",
+          "al_hills",
+          "al_southwest",
+          "al_valley_east",
+          "al_valley_west",
+          "al_west",
+          "al_wiregrass",
+          "albemarle_pamlico",
+          "ar_northwest",
+          "ar_south",
+          "ar_southwest",
+          "ar_valley_ozarks",
+          "ar_white_arkansas",
+          "arizona",
+          "atlanta",
+          "augusta",
+          "baltimore",
+          "baltimore_county",
+          "baton_rouge",
+          "bluegrass",
+          "bowling_green",
+          "brownsville",
+          "cairo",
+          "cape_fear",
+          "charleston",
+          "charlottesville",
+          "chattanooga",
+          "chesterfield",
+          "cincinnati",
+          "clarksville",
+          "colorado",
+          "columbia_sc",
+          "columbia_tn",
+          "columbus_ky",
+          "corinth",
+          "culpeper_orange",
+          "cumberland_gap",
+          "cumberland_valley_pa",
+          "dakota",
+          "danville",
+          "delaware",
+          "eastern_kentucky",
+          "eastern_shore",
+          "fl_peninsula_north",
+          "fl_peninsula_south",
+          "florida_parishes",
+          "fort_donelson",
+          "fort_henry",
+          "fort_monroe",
+          "fort_pickens",
+          "fort_sumter",
+          "forts_jackson_st_philip",
+          "frederick_md",
+          "fredericksburg",
+          "ga_atlanta_east",
+          "ga_atlanta_west",
+          "ga_chattahoochee",
+          "ga_coast",
+          "ga_dalton",
+          "ga_etowah",
+          "ga_mountains",
+          "ga_northeast",
+          "ga_south",
+          "ga_southwest",
+          "galveston",
+          "georgetown_pee_dee",
+          "grafton",
+          "greensboro",
+          "hanover",
+          "harpers_ferry",
+          "harrisburg",
+          "helena",
+          "holly_springs",
+          "houston",
+          "illinois_north",
+          "illinois_south",
+          "indiana_north",
+          "indiana_south",
+          "iowa",
+          "island_no_10",
+          "it_cherokee",
+          "it_chickasaw",
+          "it_choctaw",
+          "it_leased_district",
+          "it_muscogee",
+          "it_seminole",
+          "jackson_ms",
+          "jackson_purchase",
+          "kanawha",
+          "kansas_east",
+          "kansas_west",
+          "key_west",
+          "knoxville",
+          "ky_between_rivers",
+          "ky_central_south",
+          "ky_green_river",
+          "ky_lake_cumberland",
+          "ky_north",
+          "ky_outer_west",
+          "ky_pennyrile",
+          "ky_upper_cumberland",
+          "ky_west_coal",
+          "la_river_parishes",
+          "la_river_west",
+          "little_rock",
+          "loudoun_fauquier",
+          "louisville",
+          "lowcountry",
+          "lower_valley",
+          "lynchburg",
+          "macon",
+          "manassas",
+          "memphis",
+          "michigan_wisconsin",
+          "middle_valley",
+          "minnesota",
+          "mo_central_river",
+          "mo_east_central",
+          "mo_iron_mountain",
+          "mo_lexington_sedalia",
+          "mo_northeast",
+          "mo_northwest",
+          "mo_ozarks_south",
+          "mo_southeast",
+          "mo_southwest",
+          "mo_west",
+          "mobile",
+          "montgomery",
+          "ms_central_north",
+          "ms_east",
+          "ms_northeast",
+          "ms_south",
+          "ms_southwest",
+          "murfreesboro",
+          "nashville",
+          "natchitoches",
+          "nc_coastal_plain",
+          "nc_foothills",
+          "nc_mountains",
+          "nc_sandhills",
+          "nebraska",
+          "new_bern",
+          "new_england",
+          "new_jersey",
+          "new_madrid",
+          "new_mexico",
+          "new_orleans",
+          "new_york",
+          "norfolk",
+          "north_louisiana",
+          "northeast_arkansas",
+          "northeast_florida",
+          "northern_virginia",
+          "ohio_north",
+          "ohio_southeast",
+          "ohio_southwest",
+          "paducah",
+          "parkersburg",
+          "peninsula",
+          "pennsylvania_north",
+          "pensacola",
+          "petersburg",
+          "philadelphia",
+          "pittsburgh",
+          "port_hudson",
+          "potomac_highlands",
+          "raleigh",
+          "red_river_lower",
+          "richmond",
+          "roanoke_new_river",
+          "rockbridge_highlands",
+          "rolla",
+          "salisbury_charlotte",
+          "savannah",
+          "sc_midlands",
+          "sc_upstate_east",
+          "sc_upstate_west",
+          "ship_island",
+          "shreveport",
+          "southeast_pa",
+          "southern_maryland",
+          "southside",
+          "southside_tidewater",
+          "southwest_louisiana",
+          "southwest_virginia",
+          "springfield_mo",
+          "st_louis",
+          "tallahassee",
+          "tn_cleveland",
+          "tn_holston",
+          "tn_north_middle",
+          "tn_plateau",
+          "tn_rim_south",
+          "tn_southwest",
+          "tn_upper_east",
+          "tn_west_central",
+          "tn_west_north",
+          "tx_brazos",
+          "tx_coastal_bend",
+          "tx_east",
+          "tx_east_central",
+          "tx_north_central",
+          "tx_northeast",
+          "tx_san_antonio_austin",
+          "tx_southeast",
+          "tx_west",
+          "upper_valley",
+          "vicksburg",
+          "virginia_necks",
+          "washington",
+          "west_florida",
+          "western_maryland",
+          "wheeling",
+          "wilmington",
+          "wv_central",
+          "wv_south",
+          "yazoo_delta",
+          "york_adams"
+        ],
+        "mandateModes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "mandateCeiling": {
+          "ceilingPost": "us_general_in_chief",
+          "ceilingMen": null
+        },
+        "mandateGuard": null,
+        "mandateExpires": null,
+        "mandateReports": [
+          "copies_of_orders_to_adjutant_general",
+          "report_bypasses",
+          "operations_and_position"
+        ],
+        "mandateOnward": true,
+        "mandateRevoke": false
+      },
+      "orderLetter": {
+        "namespace": "authority.lincoln_abraham",
+        "key": "scott_army_command",
+        "revision": 1
+      },
+      "orderGoal": null,
+      "orderEdit": null,
+      "orderCall": null,
+      "orderIssuer": "lincoln_abraham",
+      "orderTarget": "us_general_in_chief",
+      "orderBypass": false,
+      "orderIssuedDay": 1
+    },
+    "receipts": [
+      {
+        "id": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "msgOrigin": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "msgFrom": "lincoln_abraham",
+        "msgTo": "cameron_simon",
+        "msgToPost": "us_secretary_war",
+        "msgRole": "relay",
+        "msgRoute": "courier",
+        "msgSentDay": 1,
+        "msgArriveDay": 1,
+        "msgVia": [],
+        "msgPending": [
+          {
+            "hopPerson": "scott_winfield",
+            "hopPost": "us_general_in_chief",
+            "hopRole": "addressee"
+          }
+        ],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "scott_army_command",
+            "mandateRevision": 1,
+            "mandateIssuer": "lincoln_abraham",
+            "mandateIssuerPost": null,
+            "mandateHolder": "scott_winfield",
+            "mandatePost": "us_general_in_chief",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "us_general_in_chief"
+            ],
+            "mandateRegions": [
+              "al_black_belt",
+              "al_east",
+              "al_hills",
+              "al_southwest",
+              "al_valley_east",
+              "al_valley_west",
+              "al_west",
+              "al_wiregrass",
+              "albemarle_pamlico",
+              "ar_northwest",
+              "ar_south",
+              "ar_southwest",
+              "ar_valley_ozarks",
+              "ar_white_arkansas",
+              "arizona",
+              "atlanta",
+              "augusta",
+              "baltimore",
+              "baltimore_county",
+              "baton_rouge",
+              "bluegrass",
+              "bowling_green",
+              "brownsville",
+              "cairo",
+              "cape_fear",
+              "charleston",
+              "charlottesville",
+              "chattanooga",
+              "chesterfield",
+              "cincinnati",
+              "clarksville",
+              "colorado",
+              "columbia_sc",
+              "columbia_tn",
+              "columbus_ky",
+              "corinth",
+              "culpeper_orange",
+              "cumberland_gap",
+              "cumberland_valley_pa",
+              "dakota",
+              "danville",
+              "delaware",
+              "eastern_kentucky",
+              "eastern_shore",
+              "fl_peninsula_north",
+              "fl_peninsula_south",
+              "florida_parishes",
+              "fort_donelson",
+              "fort_henry",
+              "fort_monroe",
+              "fort_pickens",
+              "fort_sumter",
+              "forts_jackson_st_philip",
+              "frederick_md",
+              "fredericksburg",
+              "ga_atlanta_east",
+              "ga_atlanta_west",
+              "ga_chattahoochee",
+              "ga_coast",
+              "ga_dalton",
+              "ga_etowah",
+              "ga_mountains",
+              "ga_northeast",
+              "ga_south",
+              "ga_southwest",
+              "galveston",
+              "georgetown_pee_dee",
+              "grafton",
+              "greensboro",
+              "hanover",
+              "harpers_ferry",
+              "harrisburg",
+              "helena",
+              "holly_springs",
+              "houston",
+              "illinois_north",
+              "illinois_south",
+              "indiana_north",
+              "indiana_south",
+              "iowa",
+              "island_no_10",
+              "it_cherokee",
+              "it_chickasaw",
+              "it_choctaw",
+              "it_leased_district",
+              "it_muscogee",
+              "it_seminole",
+              "jackson_ms",
+              "jackson_purchase",
+              "kanawha",
+              "kansas_east",
+              "kansas_west",
+              "key_west",
+              "knoxville",
+              "ky_between_rivers",
+              "ky_central_south",
+              "ky_green_river",
+              "ky_lake_cumberland",
+              "ky_north",
+              "ky_outer_west",
+              "ky_pennyrile",
+              "ky_upper_cumberland",
+              "ky_west_coal",
+              "la_river_parishes",
+              "la_river_west",
+              "little_rock",
+              "loudoun_fauquier",
+              "louisville",
+              "lowcountry",
+              "lower_valley",
+              "lynchburg",
+              "macon",
+              "manassas",
+              "memphis",
+              "michigan_wisconsin",
+              "middle_valley",
+              "minnesota",
+              "mo_central_river",
+              "mo_east_central",
+              "mo_iron_mountain",
+              "mo_lexington_sedalia",
+              "mo_northeast",
+              "mo_northwest",
+              "mo_ozarks_south",
+              "mo_southeast",
+              "mo_southwest",
+              "mo_west",
+              "mobile",
+              "montgomery",
+              "ms_central_north",
+              "ms_east",
+              "ms_northeast",
+              "ms_south",
+              "ms_southwest",
+              "murfreesboro",
+              "nashville",
+              "natchitoches",
+              "nc_coastal_plain",
+              "nc_foothills",
+              "nc_mountains",
+              "nc_sandhills",
+              "nebraska",
+              "new_bern",
+              "new_england",
+              "new_jersey",
+              "new_madrid",
+              "new_mexico",
+              "new_orleans",
+              "new_york",
+              "norfolk",
+              "north_louisiana",
+              "northeast_arkansas",
+              "northeast_florida",
+              "northern_virginia",
+              "ohio_north",
+              "ohio_southeast",
+              "ohio_southwest",
+              "paducah",
+              "parkersburg",
+              "peninsula",
+              "pennsylvania_north",
+              "pensacola",
+              "petersburg",
+              "philadelphia",
+              "pittsburgh",
+              "port_hudson",
+              "potomac_highlands",
+              "raleigh",
+              "red_river_lower",
+              "richmond",
+              "roanoke_new_river",
+              "rockbridge_highlands",
+              "rolla",
+              "salisbury_charlotte",
+              "savannah",
+              "sc_midlands",
+              "sc_upstate_east",
+              "sc_upstate_west",
+              "ship_island",
+              "shreveport",
+              "southeast_pa",
+              "southern_maryland",
+              "southside",
+              "southside_tidewater",
+              "southwest_louisiana",
+              "southwest_virginia",
+              "springfield_mo",
+              "st_louis",
+              "tallahassee",
+              "tn_cleveland",
+              "tn_holston",
+              "tn_north_middle",
+              "tn_plateau",
+              "tn_rim_south",
+              "tn_southwest",
+              "tn_upper_east",
+              "tn_west_central",
+              "tn_west_north",
+              "tx_brazos",
+              "tx_coastal_bend",
+              "tx_east",
+              "tx_east_central",
+              "tx_north_central",
+              "tx_northeast",
+              "tx_san_antonio_austin",
+              "tx_southeast",
+              "tx_west",
+              "upper_valley",
+              "vicksburg",
+              "virginia_necks",
+              "washington",
+              "west_florida",
+              "western_maryland",
+              "wheeling",
+              "wilmington",
+              "wv_central",
+              "wv_south",
+              "yazoo_delta",
+              "york_adams"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "us_general_in_chief",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "copies_of_orders_to_adjutant_general",
+              "report_bypasses",
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.lincoln_abraham",
+            "key": "scott_army_command",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "lincoln_abraham",
+          "orderTarget": "us_general_in_chief",
+          "orderBypass": false,
+          "orderIssuedDay": 1
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.1.7f2ab4f8e7deed8c",
+        "msgOrigin": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "msgFrom": "cameron_simon",
+        "msgTo": "scott_winfield",
+        "msgToPost": "us_general_in_chief",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 1,
+        "msgArriveDay": 1,
+        "msgVia": [
+          "us_secretary_war"
+        ],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "scott_army_command",
+            "mandateRevision": 1,
+            "mandateIssuer": "lincoln_abraham",
+            "mandateIssuerPost": null,
+            "mandateHolder": "scott_winfield",
+            "mandatePost": "us_general_in_chief",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "us_general_in_chief"
+            ],
+            "mandateRegions": [
+              "al_black_belt",
+              "al_east",
+              "al_hills",
+              "al_southwest",
+              "al_valley_east",
+              "al_valley_west",
+              "al_west",
+              "al_wiregrass",
+              "albemarle_pamlico",
+              "ar_northwest",
+              "ar_south",
+              "ar_southwest",
+              "ar_valley_ozarks",
+              "ar_white_arkansas",
+              "arizona",
+              "atlanta",
+              "augusta",
+              "baltimore",
+              "baltimore_county",
+              "baton_rouge",
+              "bluegrass",
+              "bowling_green",
+              "brownsville",
+              "cairo",
+              "cape_fear",
+              "charleston",
+              "charlottesville",
+              "chattanooga",
+              "chesterfield",
+              "cincinnati",
+              "clarksville",
+              "colorado",
+              "columbia_sc",
+              "columbia_tn",
+              "columbus_ky",
+              "corinth",
+              "culpeper_orange",
+              "cumberland_gap",
+              "cumberland_valley_pa",
+              "dakota",
+              "danville",
+              "delaware",
+              "eastern_kentucky",
+              "eastern_shore",
+              "fl_peninsula_north",
+              "fl_peninsula_south",
+              "florida_parishes",
+              "fort_donelson",
+              "fort_henry",
+              "fort_monroe",
+              "fort_pickens",
+              "fort_sumter",
+              "forts_jackson_st_philip",
+              "frederick_md",
+              "fredericksburg",
+              "ga_atlanta_east",
+              "ga_atlanta_west",
+              "ga_chattahoochee",
+              "ga_coast",
+              "ga_dalton",
+              "ga_etowah",
+              "ga_mountains",
+              "ga_northeast",
+              "ga_south",
+              "ga_southwest",
+              "galveston",
+              "georgetown_pee_dee",
+              "grafton",
+              "greensboro",
+              "hanover",
+              "harpers_ferry",
+              "harrisburg",
+              "helena",
+              "holly_springs",
+              "houston",
+              "illinois_north",
+              "illinois_south",
+              "indiana_north",
+              "indiana_south",
+              "iowa",
+              "island_no_10",
+              "it_cherokee",
+              "it_chickasaw",
+              "it_choctaw",
+              "it_leased_district",
+              "it_muscogee",
+              "it_seminole",
+              "jackson_ms",
+              "jackson_purchase",
+              "kanawha",
+              "kansas_east",
+              "kansas_west",
+              "key_west",
+              "knoxville",
+              "ky_between_rivers",
+              "ky_central_south",
+              "ky_green_river",
+              "ky_lake_cumberland",
+              "ky_north",
+              "ky_outer_west",
+              "ky_pennyrile",
+              "ky_upper_cumberland",
+              "ky_west_coal",
+              "la_river_parishes",
+              "la_river_west",
+              "little_rock",
+              "loudoun_fauquier",
+              "louisville",
+              "lowcountry",
+              "lower_valley",
+              "lynchburg",
+              "macon",
+              "manassas",
+              "memphis",
+              "michigan_wisconsin",
+              "middle_valley",
+              "minnesota",
+              "mo_central_river",
+              "mo_east_central",
+              "mo_iron_mountain",
+              "mo_lexington_sedalia",
+              "mo_northeast",
+              "mo_northwest",
+              "mo_ozarks_south",
+              "mo_southeast",
+              "mo_southwest",
+              "mo_west",
+              "mobile",
+              "montgomery",
+              "ms_central_north",
+              "ms_east",
+              "ms_northeast",
+              "ms_south",
+              "ms_southwest",
+              "murfreesboro",
+              "nashville",
+              "natchitoches",
+              "nc_coastal_plain",
+              "nc_foothills",
+              "nc_mountains",
+              "nc_sandhills",
+              "nebraska",
+              "new_bern",
+              "new_england",
+              "new_jersey",
+              "new_madrid",
+              "new_mexico",
+              "new_orleans",
+              "new_york",
+              "norfolk",
+              "north_louisiana",
+              "northeast_arkansas",
+              "northeast_florida",
+              "northern_virginia",
+              "ohio_north",
+              "ohio_southeast",
+              "ohio_southwest",
+              "paducah",
+              "parkersburg",
+              "peninsula",
+              "pennsylvania_north",
+              "pensacola",
+              "petersburg",
+              "philadelphia",
+              "pittsburgh",
+              "port_hudson",
+              "potomac_highlands",
+              "raleigh",
+              "red_river_lower",
+              "richmond",
+              "roanoke_new_river",
+              "rockbridge_highlands",
+              "rolla",
+              "salisbury_charlotte",
+              "savannah",
+              "sc_midlands",
+              "sc_upstate_east",
+              "sc_upstate_west",
+              "ship_island",
+              "shreveport",
+              "southeast_pa",
+              "southern_maryland",
+              "southside",
+              "southside_tidewater",
+              "southwest_louisiana",
+              "southwest_virginia",
+              "springfield_mo",
+              "st_louis",
+              "tallahassee",
+              "tn_cleveland",
+              "tn_holston",
+              "tn_north_middle",
+              "tn_plateau",
+              "tn_rim_south",
+              "tn_southwest",
+              "tn_upper_east",
+              "tn_west_central",
+              "tn_west_north",
+              "tx_brazos",
+              "tx_coastal_bend",
+              "tx_east",
+              "tx_east_central",
+              "tx_north_central",
+              "tx_northeast",
+              "tx_san_antonio_austin",
+              "tx_southeast",
+              "tx_west",
+              "upper_valley",
+              "vicksburg",
+              "virginia_necks",
+              "washington",
+              "west_florida",
+              "western_maryland",
+              "wheeling",
+              "wilmington",
+              "wv_central",
+              "wv_south",
+              "yazoo_delta",
+              "york_adams"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "us_general_in_chief",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "copies_of_orders_to_adjutant_general",
+              "report_bypasses",
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.lincoln_abraham",
+            "key": "scott_army_command",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "lincoln_abraham",
+          "orderTarget": "us_general_in_chief",
+          "orderBypass": false,
+          "orderIssuedDay": 1
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      }
+    ],
+    "answers": [
+      {
+        "key": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|cameron_simon",
+        "respOrder": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "respPerson": "cameron_simon",
+        "respPost": "us_secretary_war",
+        "respRole": "relay",
+        "respKind": "mandate",
+        "respDay": 1,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 48,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 48
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1|scott_winfield",
+        "respOrder": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "respPerson": "scott_winfield",
+        "respPost": "us_general_in_chief",
+        "respRole": "addressee",
+        "respKind": "mandate",
+        "respDay": 1,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 233,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "hold",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "onward",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "relieve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "take",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  },
+  {
+    "origin": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+    "issuer": "lincoln_abraham",
+    "fromPerson": "lincoln_abraham",
+    "to": "cameron_simon",
+    "kind": "mandate",
+    "target": "us_dept_pennsylvania",
+    "issuedDay": 54,
+    "issuedDate": "1861-04-28",
+    "letter": {
+      "namespace": "authority.lincoln_abraham",
+      "key": "patterson_department_command",
+      "revision": 1
+    },
+    "body": {
+      "orderKind": "mandate",
+      "orderMandate": {
+        "mandateKey": "patterson_department_command",
+        "mandateRevision": 1,
+        "mandateIssuer": "lincoln_abraham",
+        "mandateIssuerPost": null,
+        "mandateHolder": "patterson_robert",
+        "mandatePost": "us_dept_pennsylvania",
+        "mandateParent": null,
+        "mandateActions": [
+          "hold",
+          "relieve",
+          "take",
+          "approve"
+        ],
+        "mandateRecipients": [
+          "us_dept_pennsylvania"
+        ],
+        "mandateRegions": [
+          "cumberland_valley_pa",
+          "delaware",
+          "harrisburg",
+          "pennsylvania_north",
+          "philadelphia",
+          "pittsburgh",
+          "southeast_pa",
+          "western_maryland",
+          "york_adams"
+        ],
+        "mandateModes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "mandateCeiling": {
+          "ceilingPost": "us_dept_pennsylvania",
+          "ceilingMen": null
+        },
+        "mandateGuard": null,
+        "mandateExpires": null,
+        "mandateReports": [
+          "copies_of_orders_to_adjutant_general",
+          "report_bypasses",
+          "operations_and_position"
+        ],
+        "mandateOnward": true,
+        "mandateRevoke": false
+      },
+      "orderLetter": {
+        "namespace": "authority.lincoln_abraham",
+        "key": "patterson_department_command",
+        "revision": 1
+      },
+      "orderGoal": null,
+      "orderEdit": null,
+      "orderCall": null,
+      "orderIssuer": "lincoln_abraham",
+      "orderTarget": "us_dept_pennsylvania",
+      "orderBypass": false,
+      "orderIssuedDay": 54
+    },
+    "receipts": [
+      {
+        "id": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "msgOrigin": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "msgFrom": "lincoln_abraham",
+        "msgTo": "cameron_simon",
+        "msgToPost": "us_secretary_war",
+        "msgRole": "relay",
+        "msgRoute": "courier",
+        "msgSentDay": 54,
+        "msgArriveDay": 54,
+        "msgVia": [],
+        "msgPending": [
+          {
+            "hopPerson": "scott_winfield",
+            "hopPost": "us_general_in_chief",
+            "hopRole": "relay"
+          },
+          {
+            "hopPerson": "patterson_robert",
+            "hopPost": "us_dept_pennsylvania",
+            "hopRole": "addressee"
+          }
+        ],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "patterson_department_command",
+            "mandateRevision": 1,
+            "mandateIssuer": "lincoln_abraham",
+            "mandateIssuerPost": null,
+            "mandateHolder": "patterson_robert",
+            "mandatePost": "us_dept_pennsylvania",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "us_dept_pennsylvania"
+            ],
+            "mandateRegions": [
+              "cumberland_valley_pa",
+              "delaware",
+              "harrisburg",
+              "pennsylvania_north",
+              "philadelphia",
+              "pittsburgh",
+              "southeast_pa",
+              "western_maryland",
+              "york_adams"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "us_dept_pennsylvania",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "copies_of_orders_to_adjutant_general",
+              "report_bypasses",
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.lincoln_abraham",
+            "key": "patterson_department_command",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "lincoln_abraham",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 54
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.54.9366a75dcefb561a",
+        "msgOrigin": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "msgFrom": "cameron_simon",
+        "msgTo": "scott_winfield",
+        "msgToPost": "us_general_in_chief",
+        "msgRole": "relay",
+        "msgRoute": "courier",
+        "msgSentDay": 54,
+        "msgArriveDay": 54,
+        "msgVia": [
+          "us_secretary_war"
+        ],
+        "msgPending": [
+          {
+            "hopPerson": "patterson_robert",
+            "hopPost": "us_dept_pennsylvania",
+            "hopRole": "addressee"
+          }
+        ],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "patterson_department_command",
+            "mandateRevision": 1,
+            "mandateIssuer": "lincoln_abraham",
+            "mandateIssuerPost": null,
+            "mandateHolder": "patterson_robert",
+            "mandatePost": "us_dept_pennsylvania",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "us_dept_pennsylvania"
+            ],
+            "mandateRegions": [
+              "cumberland_valley_pa",
+              "delaware",
+              "harrisburg",
+              "pennsylvania_north",
+              "philadelphia",
+              "pittsburgh",
+              "southeast_pa",
+              "western_maryland",
+              "york_adams"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "us_dept_pennsylvania",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "copies_of_orders_to_adjutant_general",
+              "report_bypasses",
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.lincoln_abraham",
+            "key": "patterson_department_command",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "lincoln_abraham",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 54
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.54.ce45e60bfcc8b13e",
+        "msgOrigin": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "msgFrom": "scott_winfield",
+        "msgTo": "patterson_robert",
+        "msgToPost": "us_dept_pennsylvania",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 54,
+        "msgArriveDay": 59,
+        "msgVia": [
+          "us_secretary_war",
+          "us_general_in_chief"
+        ],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "patterson_department_command",
+            "mandateRevision": 1,
+            "mandateIssuer": "lincoln_abraham",
+            "mandateIssuerPost": null,
+            "mandateHolder": "patterson_robert",
+            "mandatePost": "us_dept_pennsylvania",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "us_dept_pennsylvania"
+            ],
+            "mandateRegions": [
+              "cumberland_valley_pa",
+              "delaware",
+              "harrisburg",
+              "pennsylvania_north",
+              "philadelphia",
+              "pittsburgh",
+              "southeast_pa",
+              "western_maryland",
+              "york_adams"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "us_dept_pennsylvania",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "copies_of_orders_to_adjutant_general",
+              "report_bypasses",
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.lincoln_abraham",
+            "key": "patterson_department_command",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "lincoln_abraham",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 54
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      }
+    ],
+    "answers": [
+      {
+        "key": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|cameron_simon",
+        "respOrder": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "respPerson": "cameron_simon",
+        "respPost": "us_secretary_war",
+        "respRole": "relay",
+        "respKind": "mandate",
+        "respDay": 54,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 50,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|scott_winfield",
+        "respOrder": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "respPerson": "scott_winfield",
+        "respPost": "us_general_in_chief",
+        "respRole": "relay",
+        "respKind": "mandate",
+        "respDay": 54,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 234,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 34
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|patterson_robert",
+        "respOrder": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "mandate",
+        "respDay": 59,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 64,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "hold",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "onward",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "relieve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "take",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  },
+  {
+    "origin": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+    "issuer": "davis_jefferson",
+    "fromPerson": "davis_jefferson",
+    "to": "cooper_samuel",
+    "kind": "mandate",
+    "target": "cs_cmd_harpers_ferry",
+    "issuedDay": 85,
+    "issuedDate": "1861-05-29",
+    "letter": {
+      "namespace": "authority.davis_jefferson",
+      "key": "johnston_harpers_command",
+      "revision": 1
+    },
+    "body": {
+      "orderKind": "mandate",
+      "orderMandate": {
+        "mandateKey": "johnston_harpers_command",
+        "mandateRevision": 1,
+        "mandateIssuer": "davis_jefferson",
+        "mandateIssuerPost": null,
+        "mandateHolder": "johnston_joseph_e",
+        "mandatePost": "cs_cmd_harpers_ferry",
+        "mandateParent": null,
+        "mandateActions": [
+          "hold",
+          "relieve",
+          "take",
+          "approve"
+        ],
+        "mandateRecipients": [
+          "cs_cmd_harpers_ferry"
+        ],
+        "mandateRegions": [
+          "harpers_ferry"
+        ],
+        "mandateModes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "mandateCeiling": {
+          "ceilingPost": "cs_cmd_harpers_ferry",
+          "ceilingMen": null
+        },
+        "mandateGuard": null,
+        "mandateExpires": null,
+        "mandateReports": [
+          "operations_and_position"
+        ],
+        "mandateOnward": true,
+        "mandateRevoke": false
+      },
+      "orderLetter": {
+        "namespace": "authority.davis_jefferson",
+        "key": "johnston_harpers_command",
+        "revision": 1
+      },
+      "orderGoal": null,
+      "orderEdit": null,
+      "orderCall": null,
+      "orderIssuer": "davis_jefferson",
+      "orderTarget": "cs_cmd_harpers_ferry",
+      "orderBypass": false,
+      "orderIssuedDay": 85
+    },
+    "receipts": [
+      {
+        "id": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "msgOrigin": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "msgFrom": "davis_jefferson",
+        "msgTo": "cooper_samuel",
+        "msgToPost": "cs_war_adjutant_inspector_general",
+        "msgRole": "relay",
+        "msgRoute": "courier",
+        "msgSentDay": 85,
+        "msgArriveDay": 85,
+        "msgVia": [],
+        "msgPending": [
+          {
+            "hopPerson": "johnston_joseph_e",
+            "hopPost": "cs_cmd_harpers_ferry",
+            "hopRole": "addressee"
+          }
+        ],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "johnston_harpers_command",
+            "mandateRevision": 1,
+            "mandateIssuer": "davis_jefferson",
+            "mandateIssuerPost": null,
+            "mandateHolder": "johnston_joseph_e",
+            "mandatePost": "cs_cmd_harpers_ferry",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "cs_cmd_harpers_ferry"
+            ],
+            "mandateRegions": [
+              "harpers_ferry"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "cs_cmd_harpers_ferry",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.davis_jefferson",
+            "key": "johnston_harpers_command",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "davis_jefferson",
+          "orderTarget": "cs_cmd_harpers_ferry",
+          "orderBypass": false,
+          "orderIssuedDay": 85
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.85.21de2112ba100f5c",
+        "msgOrigin": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "msgFrom": "cooper_samuel",
+        "msgTo": "johnston_joseph_e",
+        "msgToPost": "cs_cmd_harpers_ferry",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 85,
+        "msgArriveDay": 97,
+        "msgVia": [
+          "cs_war_adjutant_inspector_general"
+        ],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "johnston_harpers_command",
+            "mandateRevision": 1,
+            "mandateIssuer": "davis_jefferson",
+            "mandateIssuerPost": null,
+            "mandateHolder": "johnston_joseph_e",
+            "mandatePost": "cs_cmd_harpers_ferry",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "cs_cmd_harpers_ferry"
+            ],
+            "mandateRegions": [
+              "harpers_ferry"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "cs_cmd_harpers_ferry",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.davis_jefferson",
+            "key": "johnston_harpers_command",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "davis_jefferson",
+          "orderTarget": "cs_cmd_harpers_ferry",
+          "orderBypass": false,
+          "orderIssuedDay": 85
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      }
+    ],
+    "answers": [
+      {
+        "key": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1|cooper_samuel",
+        "respOrder": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "respPerson": "cooper_samuel",
+        "respPost": "cs_war_adjutant_inspector_general",
+        "respRole": "relay",
+        "respKind": "mandate",
+        "respDay": 85,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 32,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1|johnston_joseph_e",
+        "respOrder": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+        "respPerson": "johnston_joseph_e",
+        "respPost": "cs_cmd_harpers_ferry",
+        "respRole": "addressee",
+        "respKind": "mandate",
+        "respDay": 97,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 67,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "hold",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "onward",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "relieve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "take",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.85.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  },
+  {
+    "origin": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+    "issuer": "davis_jefferson",
+    "fromPerson": "davis_jefferson",
+    "to": "cooper_samuel",
+    "kind": "mandate",
+    "target": "cs_cmd_harpers_ferry",
+    "issuedDay": 105,
+    "issuedDate": "1861-06-18",
+    "letter": {
+      "namespace": "authority.davis_jefferson",
+      "key": "johnston_harpers_command",
+      "revision": 2
+    },
+    "body": {
+      "orderKind": "mandate",
+      "orderMandate": {
+        "mandateKey": "johnston_harpers_command",
+        "mandateRevision": 2,
+        "mandateIssuer": "davis_jefferson",
+        "mandateIssuerPost": null,
+        "mandateHolder": "johnston_joseph_e",
+        "mandatePost": "cs_cmd_harpers_ferry",
+        "mandateParent": null,
+        "mandateActions": [
+          "hold",
+          "relieve",
+          "take",
+          "approve"
+        ],
+        "mandateRecipients": [
+          "cs_cmd_harpers_ferry"
+        ],
+        "mandateRegions": [
+          "harpers_ferry",
+          "lower_valley"
+        ],
+        "mandateModes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "mandateCeiling": {
+          "ceilingPost": "cs_cmd_harpers_ferry",
+          "ceilingMen": null
+        },
+        "mandateGuard": null,
+        "mandateExpires": null,
+        "mandateReports": [
+          "frequent_full_position_and_intentions",
+          "prompt_reliable_enemy_information"
+        ],
+        "mandateOnward": true,
+        "mandateRevoke": false
+      },
+      "orderLetter": {
+        "namespace": "authority.davis_jefferson",
+        "key": "johnston_harpers_command",
+        "revision": 2
+      },
+      "orderGoal": null,
+      "orderEdit": null,
+      "orderCall": null,
+      "orderIssuer": "davis_jefferson",
+      "orderTarget": "cs_cmd_harpers_ferry",
+      "orderBypass": false,
+      "orderIssuedDay": 105
+    },
+    "receipts": [
+      {
+        "id": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "msgOrigin": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "msgFrom": "davis_jefferson",
+        "msgTo": "cooper_samuel",
+        "msgToPost": "cs_war_adjutant_inspector_general",
+        "msgRole": "relay",
+        "msgRoute": "courier",
+        "msgSentDay": 105,
+        "msgArriveDay": 105,
+        "msgVia": [],
+        "msgPending": [
+          {
+            "hopPerson": "johnston_joseph_e",
+            "hopPost": "cs_cmd_harpers_ferry",
+            "hopRole": "addressee"
+          }
+        ],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "johnston_harpers_command",
+            "mandateRevision": 2,
+            "mandateIssuer": "davis_jefferson",
+            "mandateIssuerPost": null,
+            "mandateHolder": "johnston_joseph_e",
+            "mandatePost": "cs_cmd_harpers_ferry",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "cs_cmd_harpers_ferry"
+            ],
+            "mandateRegions": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "cs_cmd_harpers_ferry",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "frequent_full_position_and_intentions",
+              "prompt_reliable_enemy_information"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.davis_jefferson",
+            "key": "johnston_harpers_command",
+            "revision": 2
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "davis_jefferson",
+          "orderTarget": "cs_cmd_harpers_ferry",
+          "orderBypass": false,
+          "orderIssuedDay": 105
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.105.a30261a5b3240b14",
+        "msgOrigin": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "msgFrom": "cooper_samuel",
+        "msgTo": "johnston_joseph_e",
+        "msgToPost": "cs_cmd_harpers_ferry",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 105,
+        "msgArriveDay": 111,
+        "msgVia": [
+          "cs_war_adjutant_inspector_general"
+        ],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "johnston_harpers_command",
+            "mandateRevision": 2,
+            "mandateIssuer": "davis_jefferson",
+            "mandateIssuerPost": null,
+            "mandateHolder": "johnston_joseph_e",
+            "mandatePost": "cs_cmd_harpers_ferry",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve"
+            ],
+            "mandateRecipients": [
+              "cs_cmd_harpers_ferry"
+            ],
+            "mandateRegions": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "cs_cmd_harpers_ferry",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "frequent_full_position_and_intentions",
+              "prompt_reliable_enemy_information"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.davis_jefferson",
+            "key": "johnston_harpers_command",
+            "revision": 2
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "davis_jefferson",
+          "orderTarget": "cs_cmd_harpers_ferry",
+          "orderBypass": false,
+          "orderIssuedDay": 105
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      }
+    ],
+    "answers": [
+      {
+        "key": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2|cooper_samuel",
+        "respOrder": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "respPerson": "cooper_samuel",
+        "respPost": "cs_war_adjutant_inspector_general",
+        "respRole": "relay",
+        "respKind": "mandate",
+        "respDay": 105,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 32,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2|johnston_joseph_e",
+        "respOrder": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+        "respPerson": "johnston_joseph_e",
+        "respPost": "cs_cmd_harpers_ferry",
+        "respRole": "addressee",
+        "respKind": "mandate",
+        "respDay": 111,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 67,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "hold",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "onward",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "relieve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "take",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.105.davis_jefferson.cooper_samuel.letter.authority.davis_jefferson.johnston_harpers_command.2"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  }
+]

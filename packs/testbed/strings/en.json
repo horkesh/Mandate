@@ -429,5 +429,8 @@
   "console.command.counter-frame": "frame:{value}",
   "console.command.counter-reinforce": "reinforce:{post}:{men}",
   "console.report.text": "{copy}. {text}",
-  "console.command.recall-offer": "recall offered troops ({offer})"
+  "console.command.recall-offer": "recall offered troops ({offer})",
+  "console.help.mandate": "  mandate paper-id           dispatch a declared assignment offered on this menu",
+  "console.error.mandate": "Use mandate paper-id, naming a declared assignment offered on this menu.",
+  "console.command.mandate": "assignment {paper} by {route}"
 }

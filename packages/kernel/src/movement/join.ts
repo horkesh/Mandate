@@ -11,14 +11,21 @@
  * operations, which then moves it. A block that finds no route waits, re-checked each day, with the typed reason.
  */
 import { strictCompare } from '../compare.ts';
-import type { ForceBlockId, MessageId, PostId, RegionId } from '../ids.ts';
+import type { ForceBlockId, MessageId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 
 /** Why a joining block is not on its way today; null while it can march. */
 export type JoinBar = 'no_route';
 
+export interface AssignmentJourney {
+  readonly assignmentPaper: string;
+  readonly assignmentOrder: MessageId;
+  readonly assignmentRecipient: PersonId;
+}
+
 export interface ForceJoin {
   readonly joinOffer?: MessageId;
+  readonly joinAssignment?: AssignmentJourney;
   readonly joinPost: PostId;
   readonly joinRegion: RegionId;
   readonly joinSinceDay: number;
@@ -29,10 +36,11 @@ export interface ForceJoin {
 export type JoinTable = Readonly<Record<ForceBlockId, ForceJoin>>;
 
 /** Order blocks to join `post` at `region` from `day` (replacing any order they had). */
-export function orderJoins(state: State, blocks: readonly ForceBlockId[], post: PostId, region: RegionId, day: number): State {
+export function orderJoins(state: State, blocks: readonly ForceBlockId[], post: PostId, region: RegionId, day: number, assignment?: AssignmentJourney): State {
   if (blocks.length === 0) return state;
   const next: Record<ForceBlockId, ForceJoin> = { ...state.forceJoins };
-  for (const b of [...blocks].sort(strictCompare)) next[b] = { joinPost: post, joinRegion: region, joinSinceDay: day, joinBlocked: null };
+  for (const b of [...blocks].sort(strictCompare)) next[b] = { joinPost: post, joinRegion: region, joinSinceDay: day, joinBlocked: null,
+    ...(assignment === undefined ? {} : {joinAssignment:assignment}) };
   return { ...state, forceJoins: next };
 }
 

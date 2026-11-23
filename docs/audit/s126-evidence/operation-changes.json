@@ -1,0 +1,80 @@
+[
+  {
+    "id": "op:us_general_in_chief:4",
+    "before": null,
+    "after": {
+      "opPost": "us_general_in_chief",
+      "opCommander": "scott_winfield",
+      "opOrder": "m.2.scott_winfield.scott_winfield.local.goal:05c4f8e170b7b123600f5753",
+      "opPlan": "direct:least_cost:washington",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "washington",
+      "opStartDay": 4,
+      "opEndDay": 9,
+      "opOutcome": "objective_reached",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "us_general_in_chief",
+          "oaxBlocks": [
+            "fb_us_washington_regulars"
+          ],
+          "oaxRoute": {
+            "routeFrom": "washington",
+            "routeTo": "washington",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "washington"
+            }
+          ],
+          "oaxObjective": "washington",
+          "oaxStage": "end",
+          "oaxSince": 9,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 8,
+          "oaxLog": [
+            {
+              "axevDay": 4,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "washington"
+            },
+            {
+              "axevDay": 7,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "washington"
+            },
+            {
+              "axevDay": 8,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "washington"
+            },
+            {
+              "axevDay": 9,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "washington"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "Received mandate local plan and normal operation lifecycle; full before/after records retained."
+  }
+]

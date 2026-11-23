@@ -1,6 +1,6 @@
 # 0121: Authored letters, their receipt, and the authority a commander receives
 
-Status: accepted (2026-11-23). From S110's design (`docs/design/S110-RECEIPTS-LETTERS-AUTHORITY.md` and `docs/design/S110/` on `sprint/design` at `0e7517e6`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0052 (who may order).
+Status: accepted (2026-11-23). From S110's design (`docs/design/S110-RECEIPTS-LETTERS-AUTHORITY.md` and `docs/design/S110/` on `sprint/design` at `0e7517e6`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0052 (who may order). Clarified by 0124 (standing authority comes from an assignment to command) and 0128 (the sortie's safety rule).
 
 ## Context
 

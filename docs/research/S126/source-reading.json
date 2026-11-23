@@ -1,0 +1,68 @@
+{
+  "request": "S126",
+  "primaryReadings": [
+    {
+      "citation": "OR I-II p.827",
+      "readScope": "Retained primary OCR excerpt read; no fresh scan inspection claimed.",
+      "input": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\sources\\OR-I-II-p827.txt",
+      "path": "docs/research/S126/sources/OR-I-II-p827.txt",
+      "sha256": "50662c4bd18fe19d1ca78b07f8ef74d20b701bed37c66556e173b37f83818197"
+    },
+    {
+      "citation": "Army Regulations1857 pp.57-60",
+      "readScope": "Retained primary OCR excerpt read; no fresh scan inspection claimed.",
+      "input": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\sources\\Regs-1857-pp57-60.txt",
+      "path": "docs/research/S126/sources/Regs-1857-pp57-60.txt",
+      "sha256": "2a77917eb449b544928b703e2b14baeed296adf5692d88c59b9b9d0071af0c24"
+    },
+    {
+      "citation": "OR I-LI.2 p.107",
+      "readScope": "Retained primary OCR excerpt read; no fresh scan inspection claimed.",
+      "input": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\LI2-p107.txt",
+      "path": "docs/research/S126/sources/LI2-p107.txt",
+      "sha256": "0d0085d75c1a47839241483ec3f3d44c3375e22fc2a695514e4981ff050307b3"
+    },
+    {
+      "citation": "OR I-II p.897",
+      "readScope": "Retained primary OCR excerpt read; no fresh scan inspection claimed.",
+      "input": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\II-p897.txt",
+      "path": "docs/research/S126/sources/II-p897.txt",
+      "sha256": "59fcb9555eaff2b9a05d0ba5c80d8e587b2d951bcbca10e73149113f7927c1e5"
+    },
+    {
+      "citation": "OR I-II p.898",
+      "readScope": "Retained primary OCR excerpt read; no fresh scan inspection claimed.",
+      "input": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\II-p898.txt",
+      "path": "docs/research/S126/sources/II-p898.txt",
+      "sha256": "f44bcfaa90fc5dde4cd6b3b44f38b74fd30d00beecf944369aa5dff80a22c311"
+    },
+    {
+      "citation": "OR I-LI.2 p.108",
+      "readScope": "Printed p108 heading and SO119 continuation through staff signature read from retained primary OCR; no fresh scan inspection claimed.",
+      "input": "C:\\Pyrrhic\\mandate-research-sources\\S75\\warofrebellion512unit_djvu.txt",
+      "inputSha256": "8c7e5c2419f4e64b0921dce50b4cad4520928641122e297899fbaa996f59b82d",
+      "path": "docs/research/S126/sources/OR-I-LI2-p108-SO119-continuation.txt",
+      "sha256": "32c3e6e0e3af1523292961f0f061ed3ff461c54482db8f4ebd753321762e7a99",
+      "rawExtractSha256": "6aa56a8a4acb68219b460dc44574eda699722dec4282e4cee36cddd40466b9c6",
+      "normalisation": "Only line-ending/trailing whitespace normalized; no OCR wording changed."
+    }
+  ],
+  "researchInputs": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\authority-instruments.csv",
+      "scope": "C01-C11 read; C02 identifies Walker-to-Lee grant and unread President-to-Walker antecedent"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\lot-candidates.csv",
+      "scope": "T01-T03,T23,H05,H09 relevant candidate rows read"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\receiving-commands.csv",
+      "scope": "R01-R07 read; R06-R07 receiving chains and unknowns"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\pack-corrections.csv",
+      "scope": "C04,C06 and warnings against naming generated lots read"
+    }
+  ]
+}

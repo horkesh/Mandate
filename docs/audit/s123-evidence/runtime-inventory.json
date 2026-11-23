@@ -1,0 +1,354 @@
+{
+  "base": "6ef4b4dd",
+  "runtimeAndSources": [
+    {
+      "path": "docs/audit/s123-data-projection.json",
+      "bytes": 11248,
+      "sha256": "dc675c67f4b581c12b80fe70ebe88372356925094d551258fdb46abd8233465e"
+    },
+    {
+      "path": "docs/audit/s123-evidence/authority-and-local-choices.json",
+      "bytes": 22278,
+      "sha256": "6957ec05a38b9201f73c649c9acfac6b7de40fede21763d41e67af238dbe8609"
+    },
+    {
+      "path": "docs/audit/s123-evidence/band-changes.json",
+      "bytes": 19654,
+      "sha256": "584f3a149f329a7d90253399eb4bfeacfb7d2dde23a7b01fa56c56e4c8f53ad4"
+    },
+    {
+      "path": "docs/audit/s123-evidence/comparison.json",
+      "bytes": 222935,
+      "sha256": "88d8ce591575700e92f82fb4e4d8dd3fb31964158966425393054c3067632210"
+    },
+    {
+      "path": "docs/audit/s123-evidence/counter-changes.json",
+      "bytes": 10362,
+      "sha256": "1af483396e873d551d6d7c94a95438e81b12b20d2e89fb3c7ccc0e12dc1f13ee"
+    },
+    {
+      "path": "docs/audit/s123-evidence/issued-correspondence.json",
+      "bytes": 87304,
+      "sha256": "befd86368ffb674defa9bfb0b8358a28e25d63b32dd5f96ad9b01108c52969b0"
+    },
+    {
+      "path": "docs/audit/s123-evidence/peace-reference.json",
+      "bytes": 17081,
+      "sha256": "89a29c666faa0ff8ac5583c0e4fcf18ea4b7b4c23769fecba59b013061692492"
+    },
+    {
+      "path": "docs/audit/s123-evidence/retained-gate-check.json",
+      "bytes": 1239,
+      "sha256": "d5bddbfc8617abd9d417968e19f76720ada1f5e238e43c45cb6f443cedf35ba4"
+    },
+    {
+      "path": "docs/audit/s123-evidence/rows.csv",
+      "bytes": 6403,
+      "sha256": "79ac15cbf5c366e2467687c9d7180c965b238038e62c06b77a6fe2177e66a066"
+    },
+    {
+      "path": "docs/audit/s123-evidence/rows.json",
+      "bytes": 85163,
+      "sha256": "e48c4d71d6c4e498fb6815e1544c908fc72c4c9f357724a9a1fd806c9e7e7b63"
+    },
+    {
+      "path": "docs/decisions/0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+      "bytes": 13061,
+      "sha256": "6e788430b7fbb52e685b9bd08eea172ad252ea0d5b5262fd3dfeb8231f189ff8"
+    },
+    {
+      "path": "docs/decisions/0110-unknown-defenders-and-joining-blocks.md",
+      "bytes": 4109,
+      "sha256": "be9a63da4d5a1b0410128ef29119c90fbc9c40d3008c0d24a292c8858dcb7123"
+    },
+    {
+      "path": "docs/decisions/0120-what-the-pushback-plan-builds-first.md",
+      "bytes": 8559,
+      "sha256": "ec95588f9a26ae3fae009bb93755fdb839ed697c403c062214102bfacfb5c61c"
+    },
+    {
+      "path": "docs/decisions/0121-letters-receipts-and-authority-a-commander-receives.md",
+      "bytes": 9838,
+      "sha256": "f477e16f72fa9aba4e6bb81fcc2a7b2b0e333022096333e27aea828506de88fe"
+    },
+    {
+      "path": "docs/decisions/0123-attack-or-demonstrate-is-a-duty-to-detain.md",
+      "bytes": 7308,
+      "sha256": "558a05ab276c7a5b6e4de7ed9cc2715244f91a54a8e4054e7abc2c1a7c178b2c"
+    },
+    {
+      "path": "docs/decisions/0124-standing-authority-comes-from-an-assignment.md",
+      "bytes": 7314,
+      "sha256": "8fc45815cea0af9afb235ba71e1791609cdd2340e2c8dbd65a2aa96e8896f928"
+    },
+    {
+      "path": "docs/decisions/0125-a-strength-is-a-return-an-estimate-a-rule-or-unknown.md",
+      "bytes": 6417,
+      "sha256": "2cbd1b41d8ca56a778dcedf6c52471cc43666cbd233546385f9ac6d6d8b32b01"
+    },
+    {
+      "path": "docs/decisions/0126-a-call-addressed-to-an-office-reaches-its-holder.md",
+      "bytes": 3935,
+      "sha256": "cd4d0508d1c4286f70fef2f99a6240894a681e2f41775f6285c4b3e895407eb9"
+    },
+    {
+      "path": "docs/decisions/0127-a-raised-regiment-has-its-calls-legal-minimum.md",
+      "bytes": 4511,
+      "sha256": "c3bfeb6f5e51fa7ddb3b2abab8f0d3f2d14649df20d8fb607cbb4bbe4638c9da"
+    },
+    {
+      "path": "docs/decisions/README.md",
+      "bytes": 17944,
+      "sha256": "130fb59939b0f152893f5409f50efe4d11a6d30994795377819653582fe8c703"
+    },
+    {
+      "path": "docs/research/S123/catalogue-input.json",
+      "bytes": 232,
+      "sha256": "afd0c9d327e06a0776bebc13655b99f31e40d5ea2ab05677c4f706e4b10be634"
+    },
+    {
+      "path": "docs/research/S123/source-reading.json",
+      "bytes": 13821,
+      "sha256": "42966da530ccb5e0c160e439c46cb558e50d6abdda08e3790c8d0700c80a03b8"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p607.txt",
+      "bytes": 3447,
+      "sha256": "1585b0b88abf67d7ba57552a0265135dde032c1a4a3de437ce486dbea18bce2c"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p611.txt",
+      "bytes": 3284,
+      "sha256": "789182ed8adc3b7cd56874022263d05d29adb67b014eea47dcd1c7a27ff0743c"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p652.txt",
+      "bytes": 2616,
+      "sha256": "f96ec6b9da93282b74e4b3370be13b9ecfd27214f60cd9c2f1a9c255c1f92112"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p668.txt",
+      "bytes": 3278,
+      "sha256": "8fe19d66364e36c5825272d43ad2cc555d50b5e5bdb3dd0408c5d8918c11399e"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p775.txt",
+      "bytes": 3365,
+      "sha256": "07fb853c1294e9ddf47ca042f5ebec920cda183561ca7f166cfa4edf4d5602f2"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p776.txt",
+      "bytes": 3553,
+      "sha256": "2f017b2174ad769bd1dd32abd85821af7ed7ac1d446666f9f9a3514b2d223b3b"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p827.txt",
+      "bytes": 3185,
+      "sha256": "50662c4bd18fe19d1ca78b07f8ef74d20b701bed37c66556e173b37f83818197"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p871.txt",
+      "bytes": 3115,
+      "sha256": "7c0af5e7f6c7577071cd858149206b9ac2e6ad65754da66fce0bad48e0a343bb"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p872.txt",
+      "bytes": 2722,
+      "sha256": "7caebfed6ffdf9a1c2ce8dc03ec2ccd1d4147a296266b4db553643d27518cb0d"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p894.txt",
+      "bytes": 2940,
+      "sha256": "1312d4b7aea4304d07031bc455fbdf381a99ebf1bcb9a665b24f26992328bd8d"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p897.txt",
+      "bytes": 3554,
+      "sha256": "f4d41b8818845fa6ebd8c87f6e077e436e9479912f845dba51096acf899d92d8"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p910.txt",
+      "bytes": 3335,
+      "sha256": "21886a3d4127c1c998fe15d89fd8f135e876b8e562acbe5b9e657b4b8248b36c"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p911.txt",
+      "bytes": 3444,
+      "sha256": "308a6be3a13e854e5912726664d80e01386ee6980c1f15c554c2912d89c7c7e9"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p912.txt",
+      "bytes": 3255,
+      "sha256": "01c8ac94f1c8b3b611066d5c33d43c43fe72ade39fb7aecda914a99713138829"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p923.txt",
+      "bytes": 3758,
+      "sha256": "30443b634f5243d1394d0ea56b863d6effbdcf23ce08b810bfe94363d0785493"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p924.txt",
+      "bytes": 4518,
+      "sha256": "cb3ece79ccfc375904e94dfda2eaaf2c3d775916e0d604c28e97cc2e11eb9371"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p925.txt",
+      "bytes": 3365,
+      "sha256": "39c6dd97db5c5bd8e54f8a3b2af6761cfdedd01aaa54715628aeaefb7052cfa5"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p934.txt",
+      "bytes": 3468,
+      "sha256": "78c0178437f44b0ad0950ed9a2281178c77764277c1f60a6c29b1608d57287cd"
+    },
+    {
+      "path": "docs/research/S123/sources/OR-I-II-p935.txt",
+      "bytes": 3892,
+      "sha256": "aff8e0dd0d750162f730963a8500a8f39261aab62984de47d03e58be313b21b7"
+    },
+    {
+      "path": "docs/research/S123/sources/Regs-1857-approval.txt",
+      "bytes": 504,
+      "sha256": "dd4995b424fc5ba79fb96d6f9ef56305de895d2a9b49e3a10c3c8d3b746a36c2"
+    },
+    {
+      "path": "docs/research/S123/sources/Regs-1857-pp2-3.txt",
+      "bytes": 5634,
+      "sha256": "7351b34d8c0baa74ddbab890325908936d7689ada5b868004321876cb8757a45"
+    },
+    {
+      "path": "docs/research/S123/sources/Regs-1857-pp57-60.txt",
+      "bytes": 10584,
+      "sha256": "2a77917eb449b544928b703e2b14baeed296adf5692d88c59b9b9d0071af0c24"
+    },
+    {
+      "path": "docs/research/S123/sources/Richardson-IV-p73.txt",
+      "bytes": 2192,
+      "sha256": "7284595e97ad965405ab4b1bfe16a12ec8ddc2ad9c482af92651def9f40eb898"
+    },
+    {
+      "path": "docs/research/S123/standing-mandates.md",
+      "bytes": 7081,
+      "sha256": "b3cdcc70db45caaa8901e37bcb1c677071005bc274ddf8e20afe6f89b0aca5a3"
+    },
+    {
+      "path": "packages/cli/src/liveness-gate.ts",
+      "bytes": 54362,
+      "sha256": "df0c7f64fd3fd7326b61ea1ecc3da7b022e478447f5d69c60cd5e41cba66b1ea"
+    },
+    {
+      "path": "packages/cli/test/s123-mandate-pack.test.ts",
+      "bytes": 2308,
+      "sha256": "2653ff6fc0f7e33a818d66b1c4247ad518bfe37d388b417019d84098c1d19873"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/knowledge.ts",
+      "bytes": 30964,
+      "sha256": "b1136863e4a931565c15de0d3c4765728e8eed33dda3a0288265295adb453d96"
+    },
+    {
+      "path": "packages/kernel/src/seats/local-actions.ts",
+      "bytes": 10973,
+      "sha256": "02269f79b16d2ab3365cd0cff321b56e0c8c596a580d99b6080af8969058b6a4"
+    },
+    {
+      "path": "packages/kernel/src/seats/sender.ts",
+      "bytes": 6486,
+      "sha256": "f026962c1a1f3523fb867500b8179b300a671b841b8437922fa7732f9fb6c4ac"
+    },
+    {
+      "path": "packages/kernel/src/world/mandates.ts",
+      "bytes": 5585,
+      "sha256": "504f0859d43fcb63bb038f0575ef59d073fded483ecc42ebb4911424fae9d272"
+    },
+    {
+      "path": "packages/kernel/test/s123-mandates.test.ts",
+      "bytes": 20408,
+      "sha256": "466c8e26493232dffecf6b1ddc8bd0ed320431fea8af36717ec9065795595e6c"
+    },
+    {
+      "path": "packs/union-1861/data/scenarios/march_1861.json",
+      "bytes": 174661,
+      "sha256": "cd905617727f69ef98c7fdd7c48650b160024273a3f23004c45c42ac2759973a"
+    },
+    {
+      "path": "packs/union-1861/data/strings/en.json",
+      "bytes": 61272,
+      "sha256": "29061c732830c2a64a353c2c028d4f37e49d64d9c412ce8df4478b71db260c2f"
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "bytes": 2080605,
+      "sha256": "c66a92bd513ce848c0ebe63fa4ed68941375482a916481acc596f284088626a6"
+    },
+    {
+      "path": "packs/union-1861/pack.json",
+      "bytes": 727604,
+      "sha256": "473075a2860736960d2a249351a5934b9467b129ccdfae7b7117301e76da80d3"
+    },
+    {
+      "path": "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+      "bytes": 7336,
+      "sha256": "0467ff7168ec598a7e78c94b4c583a49fd44c028c5aed1ecb6ea87ce36aa0cd6"
+    },
+    {
+      "path": "tools/rules/liveness-changes.json",
+      "bytes": 134657,
+      "sha256": "6b09ca09dbdc0152ae50a658290b57fafd8583ceb5a4b7724c1b2e014c6b0eda"
+    },
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "bytes": 21636,
+      "sha256": "50ee006a6e5f5d998b0cd563e6bd2f6ebf0c5ab4f8a22ac2d64ea4549180633d"
+    },
+    {
+      "path": "tools/s123-measure-mandates.ts",
+      "bytes": 4820,
+      "sha256": "2243e3f8de969071c7202ffedb5b2258e16f46bb28156a61cade606f4953ea37"
+    },
+    {
+      "path": "tools/s123-projection-evidence.ts",
+      "bytes": 3676,
+      "sha256": "855fb446c7748e0e6d0df9691421711123df35225009cf44116663ba61e4aade"
+    },
+    {
+      "path": "tools/test/s90-liveness-ruling.test.ts",
+      "bytes": 2186,
+      "sha256": "1a0edad963193dad280285f37d8b58eebb4e60085e0a525a4818d121a2b8f8a4"
+    }
+  ],
+  "primaryTexts": 23,
+  "primaryTextBytesPreserved": true,
+  "checkpointAndCoverageContractsByteExact": true,
+  "newSignatures": false,
+  "notes": "Final report is written after this inventory. Required ordinary-hook regression tests remain separate from the one retained data measurement.",
+  "completedDataMeasurements": 1,
+  "failedDataAttempts": [
+    {
+      "seconds": 22.359,
+      "log": "runs/s123/data-measurement.log",
+      "diagnosis": "runs/s123/data-measurement-diagnosis.json"
+    }
+  ],
+  "validatorOnlyAfterMeasurement": "Reject issuer collisions on a post/family key; all five measured papers already have unique family issuers. Nineteen fictional mandate regressions pass; retained valid-data capture reused.",
+  "peaceDiagnosis": {
+    "days": 30,
+    "seconds": 5.449,
+    "notAnotherFullMeasurement": true,
+    "retainedFirstThirtyDaysExact": true,
+    "allGoalsHold": true,
+    "militaryActions": 0,
+    "positiveBandUpdates": 2,
+    "newZeros": 0
+  },
+  "firstDataHook": {
+    "exit": 1,
+    "seconds": 216.889,
+    "failedTests": 2,
+    "passedTests": 2334,
+    "skippedTests": 3,
+    "diagnosis": "runs/s123/data-hook-diagnosis.json",
+    "behaviorCorrection": false,
+    "nextRun": "Required ordinary hook on corrected positive-band metadata; reuse unaffected capture."
+  }
+}

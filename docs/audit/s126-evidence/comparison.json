@@ -1,0 +1,37 @@
+{
+  "baseline": "S124 d5fafb12; runs/s124/capture (retained, not rerun)",
+  "capture": "runs/s126/capture",
+  "finalHash": "4796168beaff87d60108caadb46a9dd45433e0767ae4042512a81ccde82ce2db",
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "4796168beaff87d60108caadb46a9dd45433e0767ae4042512a81ccde82ce2db",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "finalLotsChanged": 0,
+  "lifetimeLotsChanged": 0,
+  "answerDifferences": 12,
+  "rows": 33,
+  "verdictsBefore": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "verdictsAfter": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "changedRowVerdicts": [],
+  "livenessRows": 164,
+  "changedLivenessCounts": 15,
+  "historicalAssignmentsExecuted": 0,
+  "initialGates": []
+}

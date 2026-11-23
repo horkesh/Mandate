@@ -1,0 +1,70 @@
+{
+  "head": "d5fafb124d5f636c74d54b7b9b44e71ce3054212",
+  "mergeHead": "499607bbdf45df47b18538977cac5f0282779f09",
+  "measurementTrackedFiles": 2975,
+  "changedSinceMeasurement": [
+    "docs/research/S126/source-reading.json",
+    "docs/research/S126/sources/OR-I-LI2-p108-SO119-continuation.txt"
+  ],
+  "runtimeInputChanges": [],
+  "sourceReceiptNormalizationOnly": true,
+  "protectedPreserved": [
+    {
+      "path": ".githooks/pre-commit",
+      "sha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70"
+    },
+    {
+      "path": "tools/staged-check.ts",
+      "sha256": "b338776583ebf96c5a36cb9c25dfd9a2cb3713f65267089f45befd18bda3a3d7"
+    },
+    {
+      "path": "package.json",
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9"
+    },
+    {
+      "path": "packs/union-1861/checkpoints.json",
+      "sha256": "121e97ec90fb9ec31756c0e7250d77ef795869c450a4ede68f7649071d002afd"
+    },
+    {
+      "path": "CODEX.md",
+      "sha256": "a02d41ede487b0236b26c983dcc18ac8a6a4afc616d100117c1f8eae3a1ca03a"
+    },
+    {
+      "path": "packages/kernel/test/fixtures/saves/v1.json",
+      "sha256": "3c8778c35e229319bf51605e498eb7242ce65045a62379470b6671a06f064814"
+    },
+    {
+      "path": "packages/kernel/test/fixtures/saves/v2.json",
+      "sha256": "bc6b1a37196e6a661efad419ac6c3cf7558836617e877920543368b3e366e2ed"
+    },
+    {
+      "path": "packages/kernel/test/fixtures/saves/v3.json",
+      "sha256": "4c8c5cffc36c021ad73530392cde05bb47695651f48b786d06184d44e0d0b02d"
+    },
+    {
+      "path": "packages/kernel/test/fixtures/saves/v4.json",
+      "sha256": "e89d9db32ce5e1bef23f493b83797503f29dca6d940068b5f951b6b5932f96e1"
+    },
+    {
+      "path": "packages/kernel/test/fixtures/saves/v5.json",
+      "sha256": "f37f39c7537862c731f0477c209c53aaa5a2d8566606b4e11c4ebe00aeadc7f4"
+    },
+    {
+      "path": "packs/union-1861/test/gate-register.test.ts",
+      "sha256": "3345186c6ff7ed1b9322cd2eafbc6191ad3b503bc4728e992fe79ff0efdb29e9"
+    }
+  ],
+  "changedSourceCSVs": [
+    "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv"
+  ],
+  "changedPackRuleKeysFromS124": [
+    "mandates"
+  ],
+  "currentTrackedFiles": 2999,
+  "newFiles": [],
+  "noHistoricalAssignmentsDeclared": true
+}

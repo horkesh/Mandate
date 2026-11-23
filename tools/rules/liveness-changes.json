@@ -2696,5 +2696,51 @@
     "observed": 0,
     "cause": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes.",
     "evidence": "docs/audit/s124-evidence/band-review.json#planner.term.supply"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.relayed",
+    "before": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "after": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "observed": 20,
+    "cause": "S123: five mandate relay events and four approval relay events for three logged local initiatives add nine to the retained eleven. All eleven inherited successful relay identities remain. No latency, compliance, force or scoring constant changed.",
+    "evidence": "docs/audit/s123-evidence/band-changes.json#orders.relayed"
+  },
+  {
+    "key": "union-1861 before the opening decisions, 30 days (the war gate, 0064)/orders.relayed",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "observed": 2,
+    "cause": "S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json",
+    "evidence": "docs/audit/s123-evidence/peace-reference.json"
+  },
+  {
+    "key": "union-1861 before the opening decisions, 30 days (the war gate, 0064)/plans.goal_reached",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "observed": 1,
+    "cause": "S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json",
+    "evidence": "docs/audit/s123-evidence/peace-reference.json"
   }
 ]

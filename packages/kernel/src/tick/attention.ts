@@ -36,6 +36,7 @@ function keyOf(world: SeatsWorld, c: Command): AttentionKey | null {
       return same ? 'decide_staff' : 'decide_overrule';
     }
     // A call for regiments (lane 1.7) is an order to a governor: priced as an order.
+    case 'mandate':
     case 'call':
       return 'order';
     case 'answer_proposal':
