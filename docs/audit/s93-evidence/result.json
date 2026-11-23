@@ -1,0 +1,688 @@
+{
+  "base": "d2d66c1c1dd3da497f72f067a77b78954557cc3a",
+  "integrationCommit": "439c3685597d62e15bf11d59c43d89cd3ef626fa",
+  "merges": [
+    {
+      "name": "sprint/perf3",
+      "commit": "e64b2bc8e1fe5505c40eaa481b986cb188a80e24",
+      "source": "94cbbc62237f67641728140027e7d6098c6a8da5"
+    },
+    {
+      "name": "sprint/coverage",
+      "commit": "439c3685597d62e15bf11d59c43d89cd3ef626fa",
+      "source": "d83f76dd1fd5ff3d7aa79a99d009d45457016bec"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "behaviour",
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 528 arrivals, 5 battle-days, 223 control changes, confederate 10 front segments 74 supplied 3 pockets; union 10 front segments 41 supplied 0 pockets",
+        "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "hash",
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 148 daily hashes, final 8a1e85a32d1c6db1",
+        "testbed, 120 days: 120 daily hashes, final 160f67761bda23a1"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "resume",
+      "text": "a mid-run save, loaded, resumes to the continuous run’s final hash, and the log replays to every hash",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: from day 60, matches",
+        "testbed, 120 days: from day 40, matches"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "liveness",
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 162 mechanics inside their bands",
+        "testbed, 120 days: 162 mechanics inside their bands",
+        "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+        "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+        "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "section-ten",
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite’s)",
+      "problems": [],
+      "evidence": [
+        "packages/kernel/test/compliance.test.ts",
+        "packages/kernel/test/rng.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/people-verbs.test.ts"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "budget",
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: median 34.47 ms, p95 66.32 ms, max 94.16 ms over 148 days (plans.drafted 4, ladder.moved 9, situations.fired 81)",
+        "testbed, 120 days: median 3.71 ms, p95 5.86 ms, max 8.71 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+        "union-1861 history run, 148 days to 1861-07-31: median 33.89 ms, p95 66.60 ms, max 92.48 ms over 148 days (plans.drafted 4, ladder.moved 9, situations.fired 81)"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "checkpoints",
+      "milestone": "1A",
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 86894 men, below 100000"
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 95255 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 86894 men of known strength, 22 blocks of unknown strength (band 100000..200000)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+        "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+      ]
+    },
+    {
+      "id": "operation",
+      "milestone": "1A",
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown",
+      "problems": [],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+        "union-1861 history run, 148 days to 1861-07-31: op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:142"
+      ]
+    },
+    {
+      "id": "pushback",
+      "milestone": "1A",
+      "text": "every represented named pushback act is covered once by issuing side, actor, role and matter; representation gaps and raw diagnostics are reported separately (0111/0112)",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C01 brown_joseph_e addressee First Pensacola contingent mustering: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C02 brown_joseph_e addressee April additional regiments for Virginia: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C03 moore_thomas_o addressee April active Virginia regiments and earlier readiness call: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C05 harris_isham_g addressee Initial three Virginia regiments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C07 letcher_john addressee Reserve corps organization and appointments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C09 pickens_francis_w addressee Later two armed regiments: exposure_mismatch: Same actor and role, but the observed requests address different matters. The represented historical request was not issued.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C10 brown_joseph_e addressee Reserve corps and appointment authority: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C11 moore_thomas_o addressee Reserve corps raising and support: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C12 brown_joseph_e addressee Later two armed regiments versus State brigade: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C14 holmes_theophilus_h addressee Supporting Commander Lewis river expedition: not_observed: No act observed for this actor, role and represented matter.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C15 johnston_joseph_e addressee Keeping force at Harpers Ferry: not_observed: No act observed for this actor, role and represented matter.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C25 holmes_theophilus_h addressee Retaining the main force at Fredericksburg: not_observed: No act observed for this actor, role and represented matter."
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: union/U01: representation_gap: Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+        "union-1861 history run, 148 days to 1861-07-31: union/U02: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U03a: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U03b: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U03c: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U03d: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U03e: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U04: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U05: representation_gap: The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "union-1861 history run, 148 days to 1861-07-31: union/U14: representation_gap: Consultation option advice has no structured unsolicited administration programme or transfer of policy direction.; needed: an unsolicited policy programme and delegation proposal with an answer in packages/kernel/src/log/commands.ts; packages/kernel/src/knowledge/report.ts",
+        "union-1861 history run, 148 days to 1861-07-31: union/U25a: representation_gap: A field commander goal and a governor troop-raising call do not carry a governor alternative for troop transit through his state.; needed: civil troop-transit negotiation and alternative-route consent in packages/kernel/src/log/commands.ts; packages/kernel/src/messages/transit.ts",
+        "union-1861 history run, 148 days to 1861-07-31: union/U25b: representation_gap: The mayor is absent from the cast; no civic request carries his conditional protection undertaking. Adding a person alone would not encode the matter.; needed: a civic addressee and conditional troop-protection undertaking in packs/union-1861/source/world/people.csv; packages/kernel/src/messages/transit.ts",
+        "union-1861 history run, 148 days to 1861-07-31: union/U32: representation_gap: Goals hold, take or relieve a place; they do not ask a commander to change his depot and supply base before an advance.; needed: a depot/base-of-supply change request and counterproposal in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "union-1861 history run, 148 days to 1861-07-31: union/U33: representation_gap: The goal grammar has hold, take and relieve, with no demonstrate-or-attack direction. The observed hold goals do not expose that demand.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "union-1861 history run, 148 days to 1861-07-31: union/U34: representation_gap: The goal grammar has hold, take and relieve, with no demonstrate-or-attack direction. The observed hold goals do not expose that demand.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "union-1861 history run, 148 days to 1861-07-31: union/U39: matched: One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register. [m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41]",
+        "union-1861 history run, 148 days to 1861-07-31: union/U40: representation_gap: Land force transfers do not carry a named warship removal and engineering-readiness matter.; needed: a naval vessel removal/readiness instruction and repeated deferral in packages/kernel/src/log/commands.ts; packages/kernel/src/forces/",
+        "union-1861 history run, 148 days to 1861-07-31: union/U42: representation_gap: Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C01: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C02: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C03: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C04: representation_gap: The transfer grammar carries force and destination but no regiment-integrity or permanent-service consent terms.; needed: organisation integrity and gubernatorial consent terms on a troop transfer in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/tick/verbs.ts",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C05: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C06: representation_gap: Land goals do not express stopping shipborne reinforcement at its dock without an island landing.; needed: dock interception of naval reinforcement with supply/transport qualifications in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C07: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C09: exposure_mismatch: Same actor and role, but the observed requests address different matters. The represented historical request was not issued.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C10: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C11: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C12: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C14: not_observed: No act observed for this actor, role and represented matter.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C15: not_observed: No act observed for this actor, role and represented matter.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C16: representation_gap: Hold/take/relieve goals and generic transfers do not carry the stated conditional withdrawal and responsibility terms.; needed: conditional withdrawal tied to an enemy landing, with commander responsibility in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C25: not_observed: No act observed for this actor, role and represented matter.",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/bates_edward/addressee/verb:consult/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/cameron_simon/addressee/verb:consult/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/scott_winfield/addressee/verb:consult/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/seward_william_h/addressee/verb:consult/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/smith_caleb_b/addressee/verb:consult/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/brown_joseph_e/addressee/call/comply (declared comply): 7; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/houston_samuel/addressee/call/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/moore_andrew_b/addressee/call/comply (declared comply): 4; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/moore_thomas_o/addressee/call/object (declared object): 6; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/perry_madison_s/addressee/call/object (declared object): 4; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/pettus_john_j/addressee/call/comply (declared comply): 4; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/pickens_francis_w/addressee/call/slow_walk (declared comply): 4; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/clark_edward/addressee/call/object (declared object): 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/walker_leroy_p/relay/goal/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/beauregard_pierre_g_t/addressee/goal/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/beauregard_pierre_g_t/addressee/verb:inquire/comply (declared comply): 15; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/brown_joseph_e/addressee/verb:transfer/comply (declared comply): 7; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/clark_edward/addressee/verb:transfer/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/cooper_samuel/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/moore_andrew_b/addressee/verb:transfer/comply (declared comply): 6; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/pettus_john_j/addressee/verb:transfer/comply (declared comply): 5; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/pickens_francis_w/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/andrew_john_a/addressee/call/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/blair_austin/addressee/call/object (declared object): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/buckingham_william_a/addressee/call/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/burton_william/addressee/call/slow_walk (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/curtin_andrew_g/addressee/call/slow_walk (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/dennison_william/addressee/call/object (declared object): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/fairbanks_erastus/addressee/call/object (declared object): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/goodwin_ichabod/addressee/call/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/kirkwood_samuel_j/addressee/call/object (declared object): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/letcher_john/addressee/call/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/morgan_edwin_d/addressee/call/comply_with_reservations (declared comply_with_reservations): 6; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/morton_oliver_h_p_t/addressee/call/comply (declared comply): 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/olden_charles_s/addressee/call/object (declared object): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/ramsey_alexander/addressee/call/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/randall_alexander_w/addressee/call/comply_with_reservations (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/sprague_william/addressee/call/comply_with_reservations (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/washburn_israel/addressee/call/slow_walk (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/yates_richard/addressee/call/slow_walk (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/stone_charles_p/addressee/verb:inquire/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/hicks_thomas_h/addressee/call/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/jackson_claiborne_f/addressee/call/slow_walk (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/magoffin_beriah/addressee/call/comply_with_reservations (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/harris_isham_g/addressee/call/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/rector_henry_m/addressee/call/slow_walk (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/ellis_john_w/addressee/call/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/andrew_john_a/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/buckingham_william_a/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/goodwin_ichabod/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/morton_oliver_h_p_t/addressee/verb:transfer/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/morgan_edwin_d/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/randall_alexander_w/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/sprague_william/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/patterson_robert/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/smith_charles_f/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/patterson_robert/addressee/verb:inquire/comply (declared comply): 14; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/curtin_andrew_g/addressee/verb:transfer/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/cameron_simon/relay/call/comply (declared comply): 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/smith_charles_f/addressee/call/object (declared object): 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/robinson_charles/addressee/call/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/saunders_alvin/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/rector_henry_m/addressee/call/comply_with_reservations (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/butler_benjamin_f/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/howard_oliver_o/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/saunders_alvin/addressee/call/slow_walk (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/johnston_joseph_e/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/butler_benjamin_f/addressee/policy/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/magruder_john_b/addressee/verb:appoint/comply_with_reservations (declared comply_with_reservations): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/mcdowell_irvin/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/beauregard_pierre_g_t/addressee/verb:appoint/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/washburn_israel/addressee/verb:transfer/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/anderson_richard_h/addressee/verb:inquire/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/mcdowell_irvin/addressee/verb:inquire/comply (declared comply): 9; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/jackson_thomas_j/addressee/verb:transfer/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/cocke_philip_st_george/addressee/verb:transfer/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/johnston_joseph_e/addressee/verb:inquire/comply (declared comply): 6; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/cameron_simon/relay/goal/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/patterson_robert/addressee/goal/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/scott_winfield/relay/goal/comply (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/pettus_john_j/addressee/call/slow_walk (declared comply): 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/letcher_john/addressee/call/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/moore_andrew_b/addressee/call/comply_with_reservations (declared comply_with_reservations): 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/rector_henry_m/addressee/call/slow_walk (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/ellis_john_w/addressee/call/object (declared object): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/harris_isham_g/addressee/call/object (declared object): 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/harris_isham_g/addressee/verb:transfer/comply (declared comply): 5; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/cameron_simon/relay/goal/slow_walk (declared comply): 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/scott_winfield/relay/goal/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic union/mcdowell_irvin/addressee/goal/object (declared object): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/ellis_john_w/addressee/verb:transfer/comply (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw diagnostic confederate/cooper_samuel/relay/goal/slow_walk (declared comply): 1; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw telemetry diagnostic orders.relay_objected: 2; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw telemetry diagnostic orders.relay_held: 3; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw telemetry diagnostic reports.filtered: 0; no historical ceiling",
+        "union-1861 history run, 148 days to 1861-07-31: raw telemetry diagnostic reports.trimmed: 0; no historical ceiling"
+      ]
+    },
+    {
+      "id": "unknown-strength",
+      "milestone": "1A",
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "problems": [
+        "union-1861, war by decision, 148 days: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)",
+        "union-1861 history run, 148 days to 1861-07-31: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+      ],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 4 battles, 5 battle-days read",
+        "testbed, 120 days: 4 battles, 4 battle-days read",
+        "union-1861 history run, 148 days to 1861-07-31: 4 battles, 5 battle-days read"
+      ]
+    },
+    {
+      "id": "stand-ins",
+      "milestone": "1A",
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "problems": [],
+      "evidence": [
+        "standing goals: gone (lane 1.4’s operations (4a64082))",
+        "the consistency judgement: gone (lane 1.2’s planner (0062))",
+        "the trait adapter: gone (lane 1.1’s people recast (`standin/traits.ts` deleted))",
+        "weakest-first transfers: gone (lane 1.5’s people verbs (0079: the sender’s answer picks the blocks))",
+        "conflicts resolved by department: gone (lane 1.1’s compliance (`resolveConflict`))",
+        "the simple contest: gone (lane 1.3’s battle model (0076))",
+        "the generic rule-seat principal: no label names it, so it is gone",
+        "the capital as objective: no label names it, so it is gone",
+        "other stand-ins: packages/kernel/src/forces/stores.ts:75 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/recruitment/renewal.ts:5 (owner 1B, recruitment and service), packages/kernel/src/situations/types.ts:77 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:69 (owner 1B, conventions and legislatures)",
+        "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+      ]
+    },
+    {
+      "id": "lever-sweep",
+      "milestone": "1A",
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 736 calls for regiments in the base runs",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 2 of 8 seeds weighed"
+      ]
+    }
+  ],
+  "criteriaComparison": [
+    {
+      "id": "behaviour",
+      "milestone": "phase0",
+      "before": "PASS",
+      "after": "PASS",
+      "problemsExact": true,
+      "beforeProblems": [],
+      "afterProblems": []
+    },
+    {
+      "id": "hash",
+      "milestone": "phase0",
+      "before": "PASS",
+      "after": "PASS",
+      "problemsExact": true,
+      "beforeProblems": [],
+      "afterProblems": []
+    },
+    {
+      "id": "resume",
+      "milestone": "phase0",
+      "before": "PASS",
+      "after": "PASS",
+      "problemsExact": true,
+      "beforeProblems": [],
+      "afterProblems": []
+    },
+    {
+      "id": "liveness",
+      "milestone": "phase0",
+      "before": "PASS",
+      "after": "PASS",
+      "problemsExact": true,
+      "beforeProblems": [],
+      "afterProblems": []
+    },
+    {
+      "id": "section-ten",
+      "milestone": "phase0",
+      "before": "PASS",
+      "after": "PASS",
+      "problemsExact": true,
+      "beforeProblems": [],
+      "afterProblems": []
+    },
+    {
+      "id": "budget",
+      "milestone": "phase0",
+      "before": "FAIL",
+      "after": "PASS",
+      "problemsExact": false,
+      "beforeProblems": [
+        "union-1861, war by decision, 148 days: median 47.3 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: median 49.9 ms a day, over the 40 ms budget"
+      ],
+      "afterProblems": []
+    },
+    {
+      "id": "checkpoints",
+      "milestone": "1A",
+      "before": "FAIL",
+      "after": "FAIL",
+      "problemsExact": true,
+      "beforeProblems": [
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 86894 men, below 100000"
+      ],
+      "afterProblems": [
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 86894 men, below 100000"
+      ]
+    },
+    {
+      "id": "operation",
+      "milestone": "1A",
+      "before": "PASS",
+      "after": "PASS",
+      "problemsExact": true,
+      "beforeProblems": [],
+      "afterProblems": []
+    },
+    {
+      "id": "pushback",
+      "milestone": "1A",
+      "before": "FAIL",
+      "after": "FAIL",
+      "problemsExact": false,
+      "beforeProblems": [
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 16, above 9",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9"
+      ],
+      "afterProblems": [
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C01 brown_joseph_e addressee First Pensacola contingent mustering: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C02 brown_joseph_e addressee April additional regiments for Virginia: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C03 moore_thomas_o addressee April active Virginia regiments and earlier readiness call: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C05 harris_isham_g addressee Initial three Virginia regiments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C07 letcher_john addressee Reserve corps organization and appointments: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C09 pickens_francis_w addressee Later two armed regiments: exposure_mismatch: Same actor and role, but the observed requests address different matters. The represented historical request was not issued.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C10 brown_joseph_e addressee Reserve corps and appointment authority: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C11 moore_thomas_o addressee Reserve corps raising and support: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C12 brown_joseph_e addressee Later two armed regiments versus State brigade: mismatch: The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C14 holmes_theophilus_h addressee Supporting Commander Lewis river expedition: not_observed: No act observed for this actor, role and represented matter.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C15 johnston_joseph_e addressee Keeping force at Harpers Ferry: not_observed: No act observed for this actor, role and represented matter.",
+        "union-1861 history run, 148 days to 1861-07-31: confederate/C25 holmes_theophilus_h addressee Retaining the main force at Fredericksburg: not_observed: No act observed for this actor, role and represented matter."
+      ]
+    },
+    {
+      "id": "unknown-strength",
+      "milestone": "1A",
+      "before": "FAIL",
+      "after": "FAIL",
+      "problemsExact": true,
+      "beforeProblems": [
+        "union-1861, war by decision, 148 days: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)",
+        "union-1861 history run, 148 days to 1861-07-31: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+      ],
+      "afterProblems": [
+        "union-1861, war by decision, 148 days: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)",
+        "union-1861 history run, 148 days to 1861-07-31: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+      ]
+    },
+    {
+      "id": "stand-ins",
+      "milestone": "1A",
+      "before": "PASS",
+      "after": "PASS",
+      "problemsExact": true,
+      "beforeProblems": [],
+      "afterProblems": []
+    },
+    {
+      "id": "lever-sweep",
+      "milestone": "1A",
+      "before": "FAIL",
+      "after": "FAIL",
+      "problemsExact": true,
+      "beforeProblems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ],
+      "afterProblems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ]
+    }
+  ],
+  "phase0Passed": 6,
+  "phase1APassed": 2,
+  "doneCheck": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/run-done-check.ts",
+      "--label",
+      "s93-done",
+      "--milestone",
+      "1a"
+    ],
+    "exit": 1,
+    "seconds": 1493.256
+  },
+  "doneRunCount": 1,
+  "ciTiming": [
+    {
+      "name": "union-1861, war by decision, 148 days",
+      "unit": "ms",
+      "days": 148,
+      "median": 33.89990000001853,
+      "p95": 63.67009999998845,
+      "max": 82.42449999999371
+    },
+    {
+      "name": "testbed, 120 days",
+      "unit": "ms",
+      "days": 120,
+      "median": 3.0380000000004657,
+      "p95": 5.242599999997765,
+      "max": 7.683499999984633
+    },
+    {
+      "name": "union-1861 history run, 148 days to 1861-07-31",
+      "unit": "ms",
+      "days": 148,
+      "median": 33.407500000001164,
+      "p95": 59.641499999997905,
+      "max": 92.15009999999893
+    }
+  ],
+  "ciTests": {
+    "files": 238,
+    "tests": 2149,
+    "passed": 2149,
+    "failed": 0,
+    "skipped": 0,
+    "suites": 602
+  },
+  "ciPool": {
+    "root": "C:/Pyrrhic/sprint-july",
+    "pool": "forks",
+    "maxWorkers": 15,
+    "isolate": true,
+    "availableParallelism": 16,
+    "filter": [],
+    "include": [
+      "packages/*/test/**/*.test.ts",
+      "packs/*/test/**/*.test.ts",
+      "tools/test/**/*.test.ts"
+    ],
+    "exclude": []
+  },
+  "coverageCounts": {
+    "representation_gap": 20,
+    "matched": 1,
+    "mismatch": 8,
+    "exposure_mismatch": 1,
+    "not_observed": 3
+  },
+  "coverageRows": 33,
+  "rawActs": 219,
+  "unresolvedSides": 0,
+  "references": [
+    {
+      "pack": "union-1861",
+      "dailyHashes": 148,
+      "finalHash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+      "allNonClockFieldsExact": true,
+      "rejections": 0,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    },
+    {
+      "pack": "testbed",
+      "dailyHashes": 120,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "allNonClockFieldsExact": true,
+      "rejections": 0,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    }
+  ],
+  "preservation": {
+    "commit": "439c3685597d62e15bf11d59c43d89cd3ef626fa",
+    "originalPaths": 2288,
+    "finalPaths": 2309,
+    "missing": [],
+    "byteExactGitBlobs": 2260,
+    "changed": [
+      "docs/decisions/0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+      "docs/decisions/README.md",
+      "docs/design/FOUNDATION.md",
+      "packages/cli/src/done-check.ts",
+      "packages/cli/src/history-run.ts",
+      "packages/cli/src/run-done-check.ts",
+      "packages/kernel/src/log/session.ts",
+      "packages/kernel/src/seats/requests.ts",
+      "packages/kernel/src/seats/sender.ts",
+      "packages/kernel/src/tick/context.ts",
+      "packages/kernel/src/tick/orders.ts",
+      "packages/kernel/src/tick/recruitment.ts",
+      "packages/kernel/src/tick/tick.ts",
+      "packages/kernel/src/tick/verbs.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/seats-orders.test.ts",
+      "packages/pack-format/schemas/checkpoints.schema.json",
+      "packages/pack-format/src/checkpoints.ts",
+      "packages/pack-format/src/index.ts",
+      "packages/pack-format/src/load.ts",
+      "packages/pack-format/src/published.ts",
+      "packages/pack-format/src/validate.ts",
+      "packages/pack-format/test/checkpoints.test.ts",
+      "packs/union-1861/checkpoints.json",
+      "packs/union-1861/test/s77-concentration.test.ts",
+      "packs/union-1861/test/s90-junction-chain.test.ts",
+      "tools/rules/projection-derivations.json"
+    ],
+    "added": [
+      "docs/audit/s85-evidence/README.md",
+      "docs/audit/s85-evidence/loaded-appointment.json",
+      "docs/audit/s85-evidence/menu.json",
+      "docs/audit/s85-evidence/profiles.json",
+      "docs/audit/s85-evidence/report-filter.json",
+      "docs/audit/s85-evidence/sender-view.json",
+      "docs/audit/s85-evidence/verification.json",
+      "docs/audit/s91-evidence/coverage.json",
+      "docs/audit/s91-evidence/criteria-comparison.json",
+      "docs/audit/s91-evidence/criteria.json",
+      "docs/audit/s91-evidence/verification.json",
+      "docs/decisions/0112-the-pushback-registers-and-what-1a-requires.md",
+      "notes/lane-s85-perf.md",
+      "notes/lane-s91-coverage.md",
+      "packages/cli/src/pushback-coverage.ts",
+      "packages/cli/src/pushback-observer.ts",
+      "packages/cli/test/pushback-coverage.test.ts",
+      "packages/pack-format/schemas/pushback-register.schema.json",
+      "packages/pack-format/src/pushback-register.ts",
+      "packs/union-1861/pushback-confederate.json",
+      "packs/union-1861/pushback-union.json"
+    ],
+    "protectedPaths": 98,
+    "protectedExact": true,
+    "signedFiles": 29,
+    "signedExact": true,
+    "retainedFiles": 26,
+    "retainedByteExact": true,
+    "aliases": {
+      "cli": "C:\\Pyrrhic\\sprint-july\\packages\\cli",
+      "kernel": "C:\\Pyrrhic\\sprint-july\\packages\\kernel",
+      "pack-format": "C:\\Pyrrhic\\sprint-july\\packages\\pack-format",
+      "rule-seats": "C:\\Pyrrhic\\sprint-july\\packages\\rule-seats"
+    },
+    "runtimeFiles": 767
+  },
+  "artifacts": [
+    {
+      "path": "runs/s93-done/20261123-074222-26176-231317/save-day-60.json",
+      "bytes": 1654779,
+      "sha256": "cf289658eefde55a5a56db35157a29c40275aa719357e20bff4edaa5842bd17d"
+    },
+    {
+      "path": "runs/s93-done/20261123-074222-26176-231317/summary.json",
+      "bytes": 135061,
+      "sha256": "7fe1eb048219605253cb53b4225113103fbe0ce18139b3622cc37a4146bf60e8"
+    },
+    {
+      "path": "runs/s93-done/20261123-074259-26176-047c57/save-day-40.json",
+      "bytes": 325299,
+      "sha256": "9c8ea72a3b3462ea731246a29f1070d6b0ac5373e586138ce90a9a22612ea5c7"
+    },
+    {
+      "path": "runs/s93-done/20261123-074259-26176-047c57/summary.json",
+      "bytes": 83359,
+      "sha256": "01311a326e7a71b3502081583c66edf280414e79d51657799dedda52f51687aa"
+    },
+    {
+      "path": "runs/s93-done-criteria/20261123-080604-26176-a99343/criteria.json",
+      "bytes": 41978,
+      "sha256": "22da8ccd2f93740704da74120083e65dcd18734afc8e977951a559cbcda31785"
+    },
+    {
+      "path": "runs/s93-done-criteria/20261123-080604-26176-a99343/union-1861-pushback-coverage.json",
+      "bytes": 209076,
+      "sha256": "75399de8ab1e952d6b4b8b41f48dcf444e6349c5177a2dcde4ec7af892827e54"
+    },
+    {
+      "path": "runs/s93-done-drafting/20261123-080607-26176-7eee56/drafting.json",
+      "bytes": 4770,
+      "sha256": "95a989f71f930f8cbdad24c20100401d4cd099bf1e441b6245a038540aea731a"
+    }
+  ],
+  "standaloneTimingLines": [
+    "  union-1861, war by decision, 148 days: median 34.47 ms, p95 66.32 ms, max 94.16 ms over 148 days",
+    "  testbed, 120 days: median 3.71 ms, p95 5.86 ms, max 8.71 ms over 120 days",
+    "  union-1861 history run, 148 days to 1861-07-31: median 33.89 ms, p95 66.60 ms, max 92.48 ms over 148 days"
+  ]
+}

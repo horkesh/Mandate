@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node",
+    "runs/s93/loaded-vitest.mjs",
+    "ci-timing",
+    "clock"
+  ],
+  "exit": 0,
+  "seconds": 178.983
+}

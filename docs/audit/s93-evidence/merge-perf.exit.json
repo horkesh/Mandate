@@ -1,0 +1,10 @@
+{
+  "command": [
+    "git",
+    "commit",
+    "-F",
+    "runs/s93/merge-perf-message.txt"
+  ],
+  "exit": 0,
+  "seconds": 176.811
+}

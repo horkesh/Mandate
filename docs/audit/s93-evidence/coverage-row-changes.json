@@ -1,0 +1,36 @@
+{
+  "changes": [
+    {
+      "id": "C15",
+      "before": {
+        "id": "C15",
+        "side": "confederate",
+        "actor": "johnston_joseph_e",
+        "role": "addressee",
+        "band": "plan_objections",
+        "matter": "Keeping force at Harpers Ferry",
+        "cite": "OR-I-II:896 https://archive.org/details/cu31924077730186/page/n915/mode/1up; OR-I-II:897 https://archive.org/details/cu31924077730186/page/n916/mode/1up; OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:908 https://archive.org/details/cu31924077730186/page/n927/mode/1up; OR-I-II:910 https://archive.org/details/cu31924077730186/page/n929/mode/1up",
+        "verdict": "exposure_mismatch",
+        "reason": "Same actor and role, but the observed requests address different matters. The represented historical request was not issued.",
+        "candidates": [
+          "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e|addressee|object|146"
+        ],
+        "matched": null
+      },
+      "after": {
+        "id": "C15",
+        "side": "confederate",
+        "actor": "johnston_joseph_e",
+        "role": "addressee",
+        "band": "plan_objections",
+        "matter": "Keeping force at Harpers Ferry",
+        "cite": "OR-I-II:896 https://archive.org/details/cu31924077730186/page/n915/mode/1up; OR-I-II:897 https://archive.org/details/cu31924077730186/page/n916/mode/1up; OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:908 https://archive.org/details/cu31924077730186/page/n927/mode/1up; OR-I-II:910 https://archive.org/details/cu31924077730186/page/n929/mode/1up",
+        "verdict": "not_observed",
+        "reason": "No act observed for this actor, role and represented matter.",
+        "candidates": [],
+        "matched": null
+      }
+    }
+  ],
+  "cause": "S90 junction letter is forwarded by Cooper and arrives on day 151, beyond the July horizon; this is absence of an observed Johnston goal answer, not a match."
+}

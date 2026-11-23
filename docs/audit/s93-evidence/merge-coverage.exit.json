@@ -1,0 +1,10 @@
+{
+  "command": [
+    "git",
+    "commit",
+    "-F",
+    "runs/s93/merge-coverage-message.txt"
+  ],
+  "exit": 1,
+  "seconds": 182.226
+}

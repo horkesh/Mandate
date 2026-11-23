@@ -1,0 +1,13 @@
+{
+  "cause": "One inherited S90 test asserted the pre-0112 trim band, now intentionally retired by S91.",
+  "changed": "Replaced the obsolete count assertion with the retained U07/N3-07 exclusion and empty-count assertion.",
+  "cheapVerification": "16 focused tests and typecheck pass",
+  "unaffectedEvidenceReused": [
+    "perf references: all 268 hashes, counters and scores",
+    "coverage references: all 268 hashes, counters and ordinary scores",
+    "observer audit",
+    "decision copies"
+  ],
+  "nextQuestion": "Does the merged staged tree pass the actual complete hook with the corrected 0112 assertion?",
+  "repeatScope": "Required merge commit hook only; no reference rerun."
+}

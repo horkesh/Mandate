@@ -1,0 +1,11 @@
+{
+  "files": [
+    "docs\\decisions\\0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+    "docs\\decisions\\README.md",
+    "packs\\union-1861\\checkpoints.json",
+    "packs\\union-1861\\test\\s77-concentration.test.ts"
+  ],
+  "ordinaryCheckpointsAndVictoryExact": true,
+  "retiredCounts": true,
+  "trimRecountRetainedIn0111": true
+}

@@ -1,0 +1,78 @@
+{
+  "perf": {
+    "results": [
+      {
+        "pack": "testbed",
+        "days": 120,
+        "hash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "hashesExact": true,
+        "countersAndScoresExact": true,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 40,
+          "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+          "matches": true,
+          "savedLogReplays": true
+        }
+      },
+      {
+        "pack": "union-1861",
+        "days": 148,
+        "hash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+        "hashesExact": true,
+        "countersAndScoresExact": true,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+          "matches": true,
+          "savedLogReplays": true
+        }
+      }
+    ]
+  },
+  "coverage": {
+    "results": [
+      {
+        "pack": "testbed",
+        "days": 120,
+        "hash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "hashesExact": true,
+        "countersAndScoresExact": true,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 40,
+          "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+          "matches": true,
+          "savedLogReplays": true
+        }
+      },
+      {
+        "pack": "union-1861",
+        "days": 148,
+        "hash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+        "hashesExact": true,
+        "countersAndScoresExact": true,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+          "matches": true,
+          "savedLogReplays": true
+        }
+      }
+    ]
+  }
+}

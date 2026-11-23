@@ -1,0 +1,27 @@
+{
+  "changes": [
+    {
+      "symbol": "principalMenu",
+      "before": "93332b766d5f813a8d1fce472bd4bc19691c1838cf74c77b366d42f32af24edc",
+      "after": "819da35e8d125e55ce712a436d42c9b9a0425fad598fa8383ecfe02e400179a8",
+      "readersExact": true
+    },
+    {
+      "symbol": "pendingRequests",
+      "before": "687dd1d8ab7538b6f72482f678409e12bfa9834f2d7eb1547a3d45316f8e9e0d",
+      "after": "9a54ab78941691a0377cd6a74ff2a00294588ce62b399630233ecc1142b75ba0",
+      "readersExact": true
+    }
+  ],
+  "allProtectedReadersExact": true,
+  "readers": [
+    "packages/kernel/src/seats/believed.ts:believedHolder reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates)",
+    "packages/kernel/src/seats/believed.ts:vacancyUnreported reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates)",
+    "packages/kernel/src/seats/requests.ts:battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions)",
+    "packages/kernel/src/seats/requests.ts:morningGround reaches packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions)",
+    "packages/kernel/src/seats/requests.ts:pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)",
+    "packages/kernel/src/seats/requests.ts:postOfSeatPerson reaches packages/kernel/src/command/command.ts:heldPost (postStates)",
+    "packages/kernel/src/seats/requests.ts:principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)",
+    "packages/kernel/src/view/view.ts:viewFor reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+  ]
+}

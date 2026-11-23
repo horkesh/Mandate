@@ -1,0 +1,48 @@
+{
+  "timedCallSites": [
+    {
+      "pack": "pack",
+      "days": "days",
+      "atWar": "false",
+      "hash": "\"checkpoints\"",
+      "checkpointEvery": "days",
+      "timings": "true",
+      "replay": "false"
+    },
+    {
+      "pack": "spec.pack",
+      "days": "spec.days",
+      "atWar": "spec.atWar",
+      "hash": "\"checkpoints\"",
+      "checkpointEvery": "spec.days",
+      "timings": "true",
+      "replay": "false"
+    }
+  ],
+  "observedCallSites": [
+    {
+      "pack": "pack",
+      "days": "days",
+      "atWar": "false",
+      "checks": "false",
+      "replay": "false",
+      "hash": "\"checkpoints\"",
+      "checkpointEvery": "days",
+      "onTick": "observer.onTick"
+    },
+    {
+      "pack": "spec.pack",
+      "days": "spec.days",
+      "atWar": "spec.atWar",
+      "hash": "\"daily\"",
+      "checks": "false",
+      "replay": "false",
+      "onTick": "observer.onTick"
+    }
+  ],
+  "coverageObserverOutsideTimedCalls": true,
+  "allOnTickCallbacksAfterTimerStops": true,
+  "hashingAfterOnDay": true,
+  "requestsSeatsAndTickInside": true,
+  "productionChangesRequired": false
+}

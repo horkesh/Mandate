@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "tools/no-skips.ts",
+    "runs/s93/ci-timing.vitest.json"
+  ],
+  "exit": 0,
+  "seconds": 0.486
+}
