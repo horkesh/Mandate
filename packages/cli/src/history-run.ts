@@ -13,6 +13,8 @@ import { forceTotals } from '@mandate/kernel';
  */
 import { phase0, world as w } from '@mandate/kernel';
 import type { Checkpoint, Checkpoints, PushbackBand } from '@mandate/pack-format';
+import type { CoverageAct } from './pushback-coverage.ts';
+import { observePushback } from './pushback-observer.ts';
 
 /** The day number of an ISO date, counting the start date as day 0. */
 export function dayOfDate(startDate: string, date: string): number {
@@ -50,6 +52,7 @@ export interface ObservedResponse {
 }
 
 export interface Observations {
+  readonly pushbackActs?: readonly CoverageAct[];
   /** Every battle seen, as it last stood. */
   readonly battles: ReadonlyMap<string, phase0.BattleRecord>;
   readonly operations: ReadonlyMap<string, ObservedOperation>;
@@ -67,6 +70,7 @@ export interface Observations {
 
 /** A read-only observer of a run: give `onTick` to the runner, then read `observations()`. */
 export function observeRun(c: Checkpoints | null, startDate: string): { readonly onTick: (world: phase0.SeatsWorld, r: phase0.TickResult) => void; readonly observations: () => Observations } {
+  const pushback = observePushback();
   const snapshotDays = new Set((c?.checkpoints ?? []).map((k) => dayOfDate(startDate, k.date)));
   const held = (c?.checkpoints ?? []).filter((k): k is Extract<Checkpoint, { kind: 'held' }> => k.kind === 'held');
   const battles = new Map<string, phase0.BattleRecord>();
@@ -79,6 +83,7 @@ export function observeRun(c: Checkpoints | null, startDate: string): { readonly
   let warSince: Record<string, number | null> = {};
   let lastDay = 0;
   const onTick = (world: phase0.SeatsWorld, r: phase0.TickResult) => {
+    pushback.onTick(world, r);
     const { state, map } = r;
     lastDay = r.day;
     for (const [id, b] of Object.entries(state.battleRecords)) battles.set(id, b);
@@ -120,7 +125,7 @@ export function observeRun(c: Checkpoints | null, startDate: string): { readonly
       snapshots.set(r.day, { day: r.day, sides, kinds, men, holders });
     }
   };
-  return { onTick, observations: () => ({ battles, operations, responses, snapshots, notHeld, unpaidFloors, warSince, lastDay }) };
+  return { onTick, observations: () => ({ battles, operations, responses, snapshots, notHeld, unpaidFloors, warSince, lastDay, pushbackActs: pushback.observations() }) };
 }
 
 /** The operations that fought a battle by `day`: a battle its post caused, opened while the operation ran. */

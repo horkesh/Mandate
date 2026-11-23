@@ -16,8 +16,9 @@
  */
 import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { atrocityDecisions, errorsOf, formatIssue, loadPack, type Checkpoints } from '@mandate/pack-format';
-import { checkpointsScore, historyDays, observeRun, operationScore, pushbackScore, unknownStrengthScore, type Observations } from './history-run.ts';
+import { atrocityDecisions, errorsOf, formatIssue, loadPack, type Checkpoints, type PushbackRegister } from '@mandate/pack-format';
+import { coverageScore } from './pushback-coverage.ts';
+import { checkpointsScore, dayOfDate, historyDays, observeRun, operationScore, pushbackScore, unknownStrengthScore, type Observations } from './history-run.ts';
 import { runSweep, sweepScore, type SweepResult } from './lever-sweep.ts';
 import { gateFailures, REFERENCE_RUNS, referenceRunFor, seatsNamed, type ReferenceRun } from './liveness-gate.ts';
 import { packFilesAt, packRoot, v2Packs } from './pack-files.ts';
@@ -59,6 +60,7 @@ export interface DoneRun {
  * checkpoint date with its own peace and war, observed, timed, and swept by the victory-only bot.
  */
 export interface HistoryRun {
+  readonly pushbackRegisters?: readonly PushbackRegister[];
   readonly name: string;
   readonly pack: string;
   readonly startDate: string;
@@ -216,7 +218,11 @@ export function milestone1A(input: DoneCheckInput): Criterion[] {
   const declared = new Set(seatsMechanics());
   const checkpoints = each((h) => checkpointsScore(h.checkpoints, h.observations, h.startDate, h.summary.atWar));
   const operation = each((h) => operationScore(h.observations));
-  const pushback = each((h) => pushbackScore(h.checkpoints, h.observations, h.summary.daily, h.startDate, declared));
+  const pushback = each((h) => h.checkpoints.pushbackRegisters === undefined
+    ? pushbackScore(h.checkpoints, h.observations, h.summary.daily, h.startDate, declared)
+    : (h.pushbackRegisters === undefined || h.pushbackRegisters.length !== h.checkpoints.pushbackRegisters.length)
+      ? { problems: ['named pushback registers were not loaded'], evidence: [] }
+      : coverageScore(h.pushbackRegisters, h.observations.pushbackActs ?? [], h.startDate, h.observations.lastDay, h.summary.daily));
   const unknown = unknownStrengthScore([
     ...input.runs.filter((r) => r.battles !== undefined).map((r) => ({ name: r.name, battles: r.battles! })),
     ...history.map((h) => ({ name: h.name, battles: h.observations.battles })),
@@ -226,7 +232,7 @@ export function milestone1A(input: DoneCheckInput): Criterion[] {
   return [
     { id: 'checkpoints', milestone: '1A', text: 'the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought', ...checkpoints },
     { id: 'operation', milestone: '1A', text: 'at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown', ...operation },
-    { id: 'pushback', milestone: '1A', text: 'pushback fires inside its bands: lower bounds from the record’s sourced cases (S01–S21), upper bounds the lead’s', ...pushback },
+    { id: 'pushback', milestone: '1A', text: 'every represented named pushback act is covered once by issuing side, actor, role and matter; representation gaps and raw diagnostics are reported separately (0111/0112)', ...pushback },
     { id: 'unknown-strength', milestone: '1A', text: 'no block fights with unknown strength: every battle record, in every run, lists none unknown', problems: [...unknown.problems], evidence: [...unknown.evidence] },
     { id: 'stand-ins', milestone: '1A', text: 'the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane', problems: [...standIns.problems], evidence: [...standIns.evidence] },
     { id: 'lever-sweep', milestone: '1A', text: 'the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active', ...sweep },
@@ -326,20 +332,20 @@ export interface DoneCheckResult {
 export const SWEEP = { seeds: 8, horizonDays: 30 } as const;
 
 /** A pack's done-check bands and what the history run and the sweep need from it; null for a pack without bands. */
-export function historyPack(pack: string): { readonly checkpoints: Checkpoints; readonly startDate: string; readonly seed: number; readonly atrocity: ReadonlySet<string>; readonly rules: unknown } | null {
+export function historyPack(pack: string): { readonly checkpoints: Checkpoints; readonly pushbackRegisters: readonly PushbackRegister[]; readonly startDate: string; readonly seed: number; readonly atrocity: ReadonlySet<string>; readonly rules: unknown } | null {
   const { pack: data, issues } = loadPack(packFilesAt(packRoot(pack)));
   if (data === null) throw new Error(`pack ${pack} does not load:\n${errorsOf(issues).map(formatIssue).join('\n')}`);
   const start = data.scenarios[0];
   if (data.checkpoints === undefined || data.checkpoints === null || start === undefined) return null;
   const atrocity = data.gate === undefined || data.gate === null ? new Set<string>() : atrocityDecisions(data.situations ?? [], data.gate);
-  return { checkpoints: data.checkpoints, startDate: start.startDate, seed: start.seed, atrocity, rules: data.world.rules };
+  return { checkpoints: data.checkpoints, pushbackRegisters: data.pushbackRegisters ?? [], startDate: start.startDate, seed: start.seed, atrocity, rules: data.world.rules };
 }
 
 /** 1A's history run for one pack: observed, timed and (unless `seeds` is 0) swept. */
 export function historyRun(pack: string, options: { readonly sweepSeeds?: number } = {}): HistoryRun | null {
   const h = historyPack(pack);
   if (h === null) return null;
-  const days = historyDays(h.checkpoints, h.startDate);
+  const days = Math.max(historyDays(h.checkpoints, h.startDate), ...h.pushbackRegisters.map(r => dayOfDate(h.startDate, r.through)));
   const observer = observeRun(h.checkpoints, h.startDate);
   const summary = phase0Run({ pack, days, atWar: false, checks: false, replay: false, hash: 'checkpoints', checkpointEvery: days, onTick: observer.onTick });
   const timed = phase0Run({ pack, days, atWar: false, hash: 'checkpoints', checkpointEvery: days, timings: true, replay: false });
@@ -356,7 +362,7 @@ export function historyRun(pack: string, options: { readonly sweepSeeds?: number
           // G-1.14b: the governments whose side could change; their governors close the recruitment chain.
           borderDepartments: h.checkpoints.checkpoints.flatMap((k) => (k.kind === 'government-side' ? k.departments : [])),
         });
-  return { name: `${pack} history run, ${days} days to ${h.checkpoints.checkpoints.map((k) => k.date).sort().at(-1) ?? 'its end'}`, pack, startDate: h.startDate, checkpoints: h.checkpoints, summary, observations: observer.observations(), timed, sweep };
+  return { name: `${pack} history run, ${days} days to ${h.checkpoints.checkpoints.map((k) => k.date).sort().at(-1) ?? 'its end'}`, pack, startDate: h.startDate, checkpoints: h.checkpoints, pushbackRegisters: h.pushbackRegisters, summary, observations: observer.observations(), timed, sweep };
 }
 
 /** The packs with done-check bands, whose history runs 1A's criteria read. */

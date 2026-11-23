@@ -6,6 +6,7 @@
  */
 export * from './banned-sources.ts';
 export * from './checkpoints.ts';
+export * from './pushback-register.ts';
 export * from './cells.ts';
 export * from './csv.ts';
 export * from './format.ts';

@@ -6,6 +6,7 @@
 import type { world as w } from '@mandate/kernel';
 import { readBannedSources, readEvidencePolicy, readWeakSources } from './banned-sources.ts';
 import { CHECKPOINTS_FILE, CheckpointsSchema, validateCheckpoints } from './checkpoints.ts';
+import { PushbackRegisterSchema, type PushbackRegister } from './pushback-register.ts';
 import { readJson, type PackFiles } from './generate.ts';
 import { errorsOf, type Issue, IssueSink } from './issues.ts';
 import { generatedStringsFile, MANIFEST_FILE, PROVENANCE_FILE, scenarioFile, stringsFile, WORLD_FILE } from './layout.ts';
@@ -52,6 +53,21 @@ export function loadPack(files: PackFiles): LoadResult {
   // Lane 1.14: the done check's bands, optional, checked against the World they name.
   const checkpoints = readJson(files, CHECKPOINTS_FILE, CheckpointsSchema, sink, false);
   if (checkpoints !== null) validateCheckpoints(checkpoints, world, scenarios[0]?.startDate ?? null, sink);
-  const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate, checkpoints };
+  const pushbackRegisters: PushbackRegister[] = [];
+  const registerIds = new Set<string>();
+  for (const file of checkpoints?.pushbackRegisters ?? []) {
+    const r = readJson(files, file, PushbackRegisterSchema, sink);
+    if (r === null) continue;
+    if (!world.factions.some(f => f.id === r.side)) sink.error('pushback-register', file, 'side', 'unknown issuing side');
+    if (scenarios[0] !== undefined && r.through < scenarios[0].startDate) sink.error('pushback-register', file, 'through', 'horizon precedes scenario start');
+    for (const row of r.rows) {
+      const key = `${r.side}/${row.id}`;
+      if (registerIds.has(key)) sink.error('pushback-register', file, row.id, 'duplicate named act across registers');
+      registerIds.add(key);
+      if (row.status === 'eligible' && row.gap === undefined && !world.people.some(p => p.id === row.actor)) sink.error('pushback-register', file, row.id, 'eligible actor is absent from World without a representation gap');
+    }
+    pushbackRegisters.push(r);
+  }
+  const pack: PackData = { ...worldPack, situations: layer.situations, gate: layer.gate, checkpoints, pushbackRegisters };
   return { pack: errorsOf(sink.issues).length > 0 ? null : pack, issues: sink.issues };
 }

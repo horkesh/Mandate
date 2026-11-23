@@ -7,8 +7,8 @@
  *   `government-side` (a government whose side could change, and the side it is on; null is neutral), `held` (a region's
  *   holder, on the date or every day to it), `men` (a side's men in blocks of known strength) and `operations-fought`
  *   (how many of a side's planned operations fought a battle).
- * - `pushback`: how often each kind of pushback fires from the start to a date, counted by a telemetry mechanic or by
- *   the rung of the addressees' answers. The lower bound is the record's sourced cases; the upper bound is the lead's.
+ * - `pushbackRegisters`: named acts scored by issuing side, actor, role and matter, with documented representation
+ *   gaps and raw diagnostics (0111/0112). `pushback` holds legacy count bands only for packs without named registers.
  * - `victory`: the weights of the victory measure the lever sweep (D6) reads, from the same scores.
  */
 import { z } from 'zod';
@@ -102,8 +102,10 @@ export type VictoryWeights = z.output<typeof VictoryWeightsSchema>;
 export const CheckpointsSchema = z.strictObject({
   checkpoints: z.array(CheckpointSchema),
   pushback: z.array(PushbackBandSchema),
+  /** Named registers replace pushback counts; filenames stay beside this file. */
+  pushbackRegisters: z.array(z.string().regex(/^pushback-[a-z_]+\.json$/)).min(1).optional(),
   victory: VictoryWeightsSchema,
-});
+}).refine(c => c.pushbackRegisters === undefined || c.pushback.length === 0, 'named coverage retires pushback count bands');
 export type Checkpoints = z.output<typeof CheckpointsSchema>;
 
 /** What the bands name that the World does not have. */

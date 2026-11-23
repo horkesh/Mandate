@@ -15,6 +15,7 @@
 import { runDoneCheck } from './done-check.ts';
 import { measureDrafting } from './drafting-measure.ts';
 import { createRunDir, writeRunFile } from './io/runs.ts';
+import { coverageScore } from './pushback-coverage.ts';
 
 const argv = process.argv.slice(2);
 const flag = (name: string): string | undefined => {
@@ -36,6 +37,13 @@ const result = runDoneCheck({
 });
 
 const lines: string[] = [];
+const reportDir = createRunDir(`${label}-criteria`);
+writeRunFile(reportDir, 'criteria.json', `${JSON.stringify(result.criteria, null, 2)}\n`);
+for (const h of result.history) {
+  if (h.checkpoints.pushbackRegisters === undefined) continue;
+  const coverage = coverageScore(h.pushbackRegisters ?? [], h.observations.pushbackActs ?? [], h.startDate, h.observations.lastDay, h.summary.daily);
+  writeRunFile(reportDir, `${h.pack}-pushback-coverage.json`, `${JSON.stringify(coverage, null, 2)}\n`);
+}
 const report = (title: string, milestone: 'phase0' | '1A') => {
   lines.push(title, '');
   for (const c of result.criteria.filter((x) => x.milestone === milestone)) {

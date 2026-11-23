@@ -35,9 +35,13 @@ it('July field orders pass through the Adjutant and Inspector General, while the
   expect(world.start.posts.find(p => p.id === 'cs_cmd_charleston')!.parent).toBe('cs_secretary_war');
 });
 
-it('0111 changes only the trims obligation while the coverage scorer awaits its own ruling', () => {
+it('0111 excludes the Campbell assurances from trims after 0112 retires count bands', () => {
   const checks=JSON.parse(readFileSync('packs/union-1861/checkpoints.json','utf8'));
-  expect(checks.pushback.find((r:{id:string})=>r.id==='trims')).toMatchObject({min:0,max:3,cite:expect.stringContaining('0111')});
+  expect(checks.pushback).toEqual([]);
+  const register=JSON.parse(readFileSync('packs/union-1861/pushback-union.json','utf8'));
+  expect(register.rows.find((r:{id:string})=>r.id==='U07')).toMatchObject({
+    status:'excluded',band:'trims',source:{catalogue_ids:'N3-07',reason:expect.stringContaining('0111')},
+  });
 });
 
 it('the Adjutant and Inspector General follows the government to Richmond without relocating a field commander',()=>{

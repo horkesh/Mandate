@@ -1,0 +1,199 @@
+{
+  "base": "117b8ac8b9c8644b83091149a7fdd3bda34b6277",
+  "runtime": {
+    "node": "v22.23.2",
+    "npm": "10.9.8",
+    "workspace": "C:\\Pyrrhic\\sprint-coverage",
+    "links": {
+      "cli": "C:\\Pyrrhic\\sprint-coverage\\packages\\cli",
+      "kernel": "C:\\Pyrrhic\\sprint-coverage\\packages\\kernel",
+      "pack-format": "C:\\Pyrrhic\\sprint-coverage\\packages\\pack-format",
+      "rule-seats": "C:\\Pyrrhic\\sprint-coverage\\packages\\rule-seats"
+    },
+    "branch": "sprint/coverage",
+    "base": "117b8ac8b9c8644b83091149a7fdd3bda34b6277",
+    "hookPath": ".githooks",
+    "manifests": {
+      "package.json": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729",
+      "package-lock.json": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9"
+    }
+  },
+  "baselineReuse": {
+    "commit": "117b8ac8b9c8644b83091149a7fdd3bda34b6277",
+    "reused": [
+      {
+        "path": "docs/audit/s82-evidence/union-1861-comparison.json",
+        "sha256": "a0e1d4fde9045b7ac94624eea5f2ceaef56176cdca888564a099c99343680840"
+      },
+      {
+        "path": "docs/audit/s83-evidence/politics-union-1861-comparison.json",
+        "sha256": "7a70cb126dcbc2c38f98612040c60dd02ad9a9b0cff2a7195360e23ab7199355"
+      },
+      {
+        "path": "docs/audit/s83-evidence/b2-union-1861-comparison.json",
+        "sha256": "8861d7bd4ae252d1605497237947b926c96e5d1a3d8e28857677b61060edf919"
+      },
+      {
+        "path": "docs/audit/s77-evidence/testbed-comparison.json",
+        "sha256": "b44eb82509aab542adc765a56437b72444b7f7be2ecaca973c91b844b22a69b8"
+      },
+      {
+        "path": "docs/audit/s78-evidence/testbed-comparison.json",
+        "sha256": "bf1d8292ab3662c2d4402f0c046868de1d0432f4c4e94b3b2d17becfca774233"
+      },
+      {
+        "path": "docs/audit/s81-evidence/testbed-comparison.json",
+        "sha256": "3c6d5c6a89e0dabe714928b1c29247c837b4231f823851a2dd556be8cdb8add6"
+      },
+      {
+        "path": "docs/audit/s82-evidence/testbed-comparison.json",
+        "sha256": "2a0b8831459c5b28d1e2ee04a3a9fe676c1d512f4b520004bcc9b1730a6fb00b"
+      },
+      {
+        "path": "docs/audit/s83-evidence/politics-testbed-comparison.json",
+        "sha256": "cfa2ee1385595842fc5e64b8e656e1d856cd08a3554cbbbde7a0e7d0316f1209"
+      },
+      {
+        "path": "docs/audit/s83-evidence/b2-testbed-comparison.json",
+        "sha256": "5ba7110cd36999a4d0a5d301bbd46c4803a06d4b97a18cea00c1dedd9051954c"
+      }
+    ],
+    "proof": "Union: all148 S82 after-hashes, politics zero changes, overwritten by117 B2 after-hashes. Testbed: all120 S77 after-hashes, S78/S81/S82/S83 zero hash changes. No other-lane run directory read."
+  },
+  "references": [
+    {
+      "pack": "union-1861",
+      "days": 148,
+      "elapsedSeconds": 136.50734,
+      "differentHashes": [],
+      "liveness": [],
+      "finalHash": "03a3ccdbe82abc296e01457cef68ba250d9c7ff6b4aac01af69647e658f35245",
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "03a3ccdbe82abc296e01457cef68ba250d9c7ff6b4aac01af69647e658f35245",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rawResponses": 219,
+      "unresolvedSide": [
+        "m.80.policy.fort_monroe_arrivals.approve_holding|butler_benjamin_f|addressee|comply|80"
+      ],
+      "rejections": 0
+    },
+    {
+      "pack": "testbed",
+      "days": 120,
+      "elapsedSeconds": 18.725327000000018,
+      "differentHashes": [],
+      "liveness": [],
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rawResponses": 44,
+      "unresolvedSide": [],
+      "rejections": 0
+    }
+  ],
+  "checkedDoneHashes": [
+    {
+      "pack": "union-1861",
+      "hashes": 148,
+      "allExact": true,
+      "summary": "runs\\s91-done\\20261123-053729-40680-1d1184\\summary.json",
+      "sha256": "a1a7b1fe266e5e4ebcf4cc49a47070e0368f054799526d068297940d7aee9138",
+      "finalHash": "03a3ccdbe82abc296e01457cef68ba250d9c7ff6b4aac01af69647e658f35245"
+    },
+    {
+      "pack": "testbed",
+      "hashes": 120,
+      "allExact": true,
+      "summary": "runs\\s91-done\\20261123-053821-40680-b6f191\\summary.json",
+      "sha256": "01311a326e7a71b3502081583c66edf280414e79d51657799dedda52f51687aa",
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db"
+    }
+  ],
+  "done": {
+    "seconds": 1734.7371246999999,
+    "command": "npm run run:done-check -- --label s91-done --milestone 1a",
+    "seeds": 8,
+    "drafting": true,
+    "exit": 1
+  },
+  "preservation": {
+    "startTracked": 2268,
+    "allStartingPathsRetained": true,
+    "protectedPaths": 365,
+    "allProtectedByteExact": true,
+    "changedStartingPaths": [
+      "docs/decisions/0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+      "docs/decisions/README.md",
+      "docs/design/FOUNDATION.md",
+      "packages/cli/src/done-check.ts",
+      "packages/cli/src/history-run.ts",
+      "packages/cli/src/run-done-check.ts",
+      "packages/pack-format/schemas/checkpoints.schema.json",
+      "packages/pack-format/src/checkpoints.ts",
+      "packages/pack-format/src/index.ts",
+      "packages/pack-format/src/load.ts",
+      "packages/pack-format/src/published.ts",
+      "packages/pack-format/src/validate.ts",
+      "packages/pack-format/test/checkpoints.test.ts",
+      "packs/union-1861/checkpoints.json",
+      "packs/union-1861/test/s77-concentration.test.ts"
+    ],
+    "originalRegisterColumnsExact": true,
+    "ordinaryCheckpointAndVictoryBandsExact": true,
+    "startingInventorySha256": "670fa0121a52e9b3e0a2bc25c482f399523f6e8f3ab290314cfa0e4f5f3ac987"
+  },
+  "sourceInputs": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S88\\union-register.csv",
+      "sha256": "5b9bc19dc87c88c909c73d37a92033871a05fcd24af6e0a0257cfff6bd0cd4cf"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S88\\confederate-register.csv",
+      "sha256": "093070343fc81a1626d323ba48120dcf8edc91bf0fef25ac7458a1f3f08d9d95"
+    }
+  ],
+  "observerCorrection": {
+    "reason": "same-day call had left transit; policy response needed its typed policy event issuer",
+    "targeted41DayRead": "runs/s91/same-day-verification.json",
+    "targetedSeconds": 6.6966001,
+    "finalAll219SidesResolved": true,
+    "fullReferenceNotRepeated": true,
+    "referenceDiagnosticLimitation": "The dedicated reference predates this observer-only correction; its single null policy side and U39 unresolved are retained in runs/s91. The binding done check provides final corrected observations.",
+    "sameBehaviourPaths": true
+  },
+  "preHookChecks": {
+    "npmCi": 0,
+    "typecheck": 0,
+    "rules": 0,
+    "boundary": 0,
+    "licences": 0,
+    "decisions": 0,
+    "focusedEarly": 45,
+    "retiredBandControlCorrected": 1,
+    "fullSuite": "the unchanged commit hook; actual exit/counts appended to main CODEX after it returns",
+    "finalFocused": 26
+  },
+  "limits": {
+    "timing": "Shared Windows measurement, no causal or Linux CI claim; extra p95 failure retained",
+    "review": "Claude under 0096/0106/0107",
+    "otherLanes": "No read or write of July/perf3/research-cast; S88 read only",
+    "push": false,
+    "hookBypass": false,
+    "browser": false
+  }
+}

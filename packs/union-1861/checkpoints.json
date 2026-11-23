@@ -147,71 +147,8 @@
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B B1-B2: at least one, the Sumter bombardment planned on Davis's government's order (Walker to Beauregard 10 April, OR I-1 p. 297), which lane 1.12's bombardment stage makes fightable; at most four (Sumter, Cole Camp inferred, Mesilla; Carthage disputed). The lead's ruling: FOUNDATION's 'a planned operation fought by each side' stands"
     }
   ],
-  "pushback": [
-    {
-      "id": "relay_objections",
-      "name": "relay objections",
-      "count": { "mechanic": "orders.relay_objected" },
-      "through": "1861-07-31",
-      "min": 0,
-      "max": 6,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C counts: no relay objection is sourced; the record's RELAY cases are two holds (N3-11, N3-27). Upper bound three times those two cases (the lead's ruling)"
-    },
-    {
-      "id": "relay_holds",
-      "name": "relay holds",
-      "count": { "mechanic": "orders.relay_held" },
-      "through": "1861-07-31",
-      "min": 1,
-      "max": 4,
-      "cite": "Decision 0109, amending 0099 item 6; Appendix C N3-11 only: Adjutant-General office and Crusader journey (ORN I-4 pp.89-90,102,104,110-111). Floor 1; upper max(3*1,1+3)=4 [I]. N3-27 is authorised conditional delivery, not resistance (Nicolay and Hay II pp.47-48; OR I-III pp.374,381)."
-    },
-    {
-      "id": "filter_holds",
-      "name": "filter holds",
-      "count": { "mechanic": "reports.filtered" },
-      "through": "1861-07-31",
-      "min": 0,
-      "max": 6,
-      "cite": "Decision 0109, amending 0099 item 6; no verified in-window presidential filter case. N3-06 is outward diplomatic handling (Richardson I pp.85-88). Upper 3*2=6 [I], from remaining Appendix C cases N3-09 (note-only Charleston postal filter) and X-03 (extra War Department directions to Morgan, OR III-1 p.87). No October or 1862 case is backdated."
-    },
-    {
-      "id": "trims",
-      "name": "trims",
-      "count": { "mechanic": "reports.trimmed" },
-      "through": "1861-07-31",
-      "min": 0,
-      "max": 3,
-      "cite": "Decision 0111 item 6, amending 0099 item 6 under 0109's recount rule: Appendix C N3-07 is excluded as a verified incoming-report trim. Richardson I pp.85-88,93-97 describe outward assurances, not an incoming report with a claim removed; disclosure to Lincoln remains unresolved (Burlingame II ch.22 pp.2349-2351 n.87). Floor 0; upper floor+3=3 [I]. Zero required cases does not mean none occurred."
-    },
-    {
-      "id": "reservations",
-      "name": "compliance with reservations",
-      "count": { "response": "comply_with_reservations" },
-      "through": "1861-07-31",
-      "min": 1,
-      "max": 9,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-26 (Harney's agreement with Price, verified primary); upper bound three times the three cases N3-26, N3-15 (note-only) and X-04 (extra) (the lead's ruling)"
-    },
-    {
-      "id": "slow_walks",
-      "name": "slow walks",
-      "count": { "response": "slow_walk" },
-      "through": "1861-07-31",
-      "min": 2,
-      "max": 9,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-10 (Scott and the Pickens order) and N3-34 (Patterson, 17 to 18 July), verified; upper bound three times the three cases N3-10, N3-34 and N3-28 (note-only) (the lead's ruling)"
-    },
-    {
-      "id": "plan_objections",
-      "name": "objections to a plan",
-      "count": { "response": "object" },
-      "through": "1861-07-31",
-      "min": 10,
-      "max": 42,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound the ten verified N3-01, 02, 03, 05, 14, 22, 23, 25, 32 and 33; upper bound three times the fourteen with the note-only N3-04, 08 and 31 and the extra X-05 (the lead's ruling)"
-    }
-  ],
+  "pushback": [],
+  "pushbackRegisters": ["pushback-union.json", "pushback-confederate.json"],
   "victory": {
     "capital": 1000,
     "government": 100,

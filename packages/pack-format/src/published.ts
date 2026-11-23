@@ -8,6 +8,7 @@
  */
 import { z } from 'zod';
 import { CheckpointsSchema } from './checkpoints.ts';
+import { PushbackRegisterSchema } from './pushback-register.ts';
 import { formatGenerated } from './format.ts';
 import { AnachronismsSchema, ChecklistSchema, ClassesSchema, ForbiddenSchema, RegisterSchema, ReleaseSchema, ReviewersSchema, SourcePolicySchema, TriggersSchema } from './gate.ts';
 import { ManifestSchema, ProvenanceFileSchema, ScenarioHeaderSchema, ScenarioSchema, StringTableSchema, WorldSchema } from './schemas.ts';
@@ -16,6 +17,7 @@ import { SituationSchema } from './situations.ts';
 export const PUBLISHED_SCHEMAS_DIR = 'packages/pack-format/schemas';
 
 const SCHEMAS: readonly { readonly file: string; readonly title: string; readonly schema: z.ZodType }[] = [
+  { file: 'pushback-register.schema.json', title: 'Mandate named pushback register (observational calibration)', schema: PushbackRegisterSchema },
   { file: 'pack.schema.json', title: 'Mandate pack manifest (pack.json), format 2', schema: ManifestSchema },
   { file: 'provenance.schema.json', title: 'Mandate pack sources and licences (PROVENANCE.json), format 2', schema: ProvenanceFileSchema },
   { file: 'strings.schema.json', title: 'Mandate pack string table (strings/<locale>.json): keys to ICU messages', schema: StringTableSchema },
