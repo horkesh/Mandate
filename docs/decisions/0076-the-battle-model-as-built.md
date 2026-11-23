@@ -1,6 +1,6 @@
 # 0076: The battle model, as built
 
-Status: accepted (2026-11-16). Amends 0064. From Phase 1 lane 1.3 (`notes/lane-1.3-combat.md`), the standing reviewer's review and re-check (`review-lane-1.3.md`), and the gate reviewer's read of its capture parts (`review-gate-1861.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12's row 1.3 (0073) from `docs/research/2026-11-14-combat-model.md`, under 0074's capture ruling.
+Status: accepted (2026-11-16). Amends 0064. From Phase 1 lane 1.3 (`notes/lane-1.3-combat.md`), the standing reviewer's review and re-check (`review-lane-1.3.md`), and the gate reviewer's read of its capture parts (`review-gate-1861.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12's row 1.3 (0073) from `docs/research/2026-11-14-combat-model.md`, under 0074's capture ruling. Amended by 0110 (a side of unknown strength gives unresolved contact).
 
 ## Context
 

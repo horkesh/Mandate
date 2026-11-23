@@ -67,7 +67,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted; amended by 0064 |
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted; amended by 0074 |
-| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066, 0072, 0076 |
+| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066, 0072, 0076; clarified by 0110 |
 | [0065](0065-a-governments-side-is-state.md) | A government's side can change in play, and stores carry their date | accepted; amended by 0067 |
 | [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted; amended by 0068 |
 | [0067](0067-government-sides-as-built.md) | Government sides as built, and Fort Pickens' stores unknown | accepted |
@@ -79,7 +79,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted; extended by 0108 |
 | [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted; amended by 0082 |
 | [0075](0075-the-planner-as-built.md) | The planner in the kernel, as built | accepted |
-| [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted |
+| [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted; amended by 0110 |
 | [0077](0077-portraits-get-a-procedural-engraving.md) | Portraits of real people get a procedural engraving finish | accepted |
 | [0078](0078-men-and-regions-as-built.md) | Men and regions, as built, and enslaved people in Union-held slave states | accepted |
 | [0079](0079-the-people-verbs-as-built.md) | The people's verbs, the audience and attention, as built | accepted |
@@ -113,3 +113,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0107](0107-the-sprint-continues-on-codexs-renewed-allowance.md) | The sprint continues on Codex's renewed allowance | accepted |
 | [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted |
 | [0109](0109-two-pushback-floor-cases-belong-to-other-mechanisms.md) | Two pushback floor cases belong to other mechanisms | accepted |
+| [0110](0110-unknown-defenders-and-joining-blocks.md) | A force of unknown strength is not an empty field, and a block on its way doesn't move headquarters | accepted |
