@@ -1,0 +1,192 @@
+{
+  "request": "S104 only; proposal, no production changes",
+  "base": "ef689569b0a036c63a527aaa9d1b3bcafcb31255",
+  "read_only_worktrees": {
+    "C:\\Pyrrhic\\sprint-callterms": "e12a85fb32ca707c477998f7266256a030f4512a",
+    "C:\\Pyrrhic\\sprint-july": "15b04bdcc9e9eeb0013aee4207fbf6d8c8944f20"
+  },
+  "lead_message": {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\CODEX.md",
+    "heading": "### 2026-11-23 Claude → Codex: S102 received; S103 received; rulings; S104 and S105",
+    "sha256": "98c19c277da2d5cfeea8be82508dd1c8c38dae17e302315710fd0aaaea87009a"
+  },
+  "inputs": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\CLAUDE.md",
+      "bytes": 6627,
+      "sha256": "8444009f244f310ceb2c59a616f97cc2d294bfe5e4e616d6acbd01d672ed4a7d",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\LANES.md",
+      "bytes": 14090,
+      "sha256": "a80e6a8b1ef9e828fd41047972b9308ba95b76fb5becb30b81e41f0e755fae0e",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\decisions\\0106-the-codex-sprint-to-22-november.md",
+      "bytes": 3226,
+      "sha256": "46a0745d0129d2adea42cc4f8d85874294812beb612fb4898d3d94abed81ee22",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S87\\0107-the-sprint-continues-on-codexs-renewed-allowance.md",
+      "bytes": 2097,
+      "sha256": "a6db84cbb26fb9457a1067c2c7444d544f63d52221bc86c6b408bcaa715ceb3f",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S88\\union-register.csv",
+      "bytes": 23884,
+      "sha256": "5b9bc19dc87c88c909c73d37a92033871a05fcd24af6e0a0257cfff6bd0cd4cf",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S88\\confederate-register.csv",
+      "bytes": 14272,
+      "sha256": "093070343fc81a1626d323ba48120dcf8edc91bf0fef25ac7458a1f3f08d9d95",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\2026-11-23-S88-pushback-registers-and-coverage.md",
+      "bytes": 14441,
+      "sha256": "0b2e0c8f00bd77157d9a3e1829e26f5acee7d5fdd88fbccbc46b201b7aff9ebb",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\.githooks\\pre-commit",
+      "bytes": 659,
+      "sha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\tools\\staged-check.ts",
+      "bytes": 10610,
+      "sha256": "b338776583ebf96c5a36cb9c25dfd9a2cb3713f65267089f45befd18bda3a3d7",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\package.json",
+      "bytes": 1464,
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0111-pushback-is-measured-by-named-acts.md",
+      "bytes": 5551,
+      "sha256": "f8050c00a7e52cd44179b5fa208d3915704cf6ddd9489618f10cc4291989f049",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0112-the-pushback-registers-and-what-1a-requires.md",
+      "bytes": 4782,
+      "sha256": "36364435f3694386354b80a225341ad182ca16765a72c7848a0a86bca02f69c7",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0113-a-judgment-without-evidence-adds-no-term.md",
+      "bytes": 4697,
+      "sha256": "4369ee50dc3a3bc34c42a29fabb0b92044d3084d5573bb1d60dc5c8373cbdad3",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-callterms\\notes\\sprint-S102-callterms.md",
+      "bytes": 4651,
+      "sha256": "57c88242cacc382166a5bcdbeaf4c3f51b881c02a5152c5db0d1e07f2cffbbda",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-callterms\\packages\\kernel\\src\\compliance.ts",
+      "bytes": 18259,
+      "sha256": "f10a9c6b001450dd9dff10712149494978690c499697258288bc518c00c07ecb",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packs\\union-1861\\data\\world.json",
+      "bytes": 1914820,
+      "sha256": "2578f3bad26d0dd664822bf8ceecd4b523794f263a4f9579015431c4eac745dc",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-callterms\\docs\\audit\\s102-evidence\\governor-answers.json",
+      "bytes": 203762,
+      "sha256": "8f1862c78dcf71011a303f8b77156bfc70271da04839561ecd7bd531fb6453a3",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-callterms\\docs\\audit\\s102-evidence\\inputs\\governor-qualifications.csv",
+      "bytes": 18475,
+      "sha256": "e7add7353f2da29169a9df302bb7e4ae81733de005bc555cd5731d727ea050ab",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-callterms\\docs\\audit\\s102-evidence\\inputs\\call-register.csv",
+      "bytes": 102751,
+      "sha256": "caf17e1890b4cd114c877282cd4d3c6a4963efdc022bb38a0fe3146f77931e1b",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-callterms\\docs\\audit\\s102-evidence\\inputs\\source-reading.json",
+      "bytes": 43858,
+      "sha256": "3d51821bd707deaf4646dd7fdc661ed33c6bf27d8c7e96adcc11de872ce81093",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-i3.xml",
+      "bytes": 32717125,
+      "sha256": "a5639bae848dc9dd06a1eaf861a58cf30abf8e06ea4a3f678f63d3a621b98d43",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+      "bytes": 29193431,
+      "sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+      "bytes": 44322389,
+      "sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1_djvu.xml",
+      "bytes": 38443517,
+      "sha256": "c02b84a52766f1ca05bc80996c34e3f1d1fd3c378794feabf6c972e6e32d3b3e",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+      "bytes": 26219689,
+      "sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\ORN-I-4_djvu.xml",
+      "bytes": 30100971,
+      "sha256": "b296398bd020f9c6ac2a7c6887fb2ec2d0a0ac771b59a9a873e19f350b18a2fd",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\web-Holt-Scott-LOC.json",
+      "bytes": 38996,
+      "sha256": "83db7c56d5de718ad8190d821cfcfae3ff85b1511ec0eb600fb00a316c01c41c",
+      "access": "read-only"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\LOC-0779200-p1-6.txt",
+      "bytes": 15782,
+      "sha256": "e802f42e728e1b67ae473ec60ceaf692cff5d7e8bc4cc64ee1dcb5f6e8918b24",
+      "access": "read-only"
+    }
+  ],
+  "page_receipts": 91,
+  "limits": [
+    "Local retained primary-compilation OCR/LoC transcript; no new network identity verification.",
+    "Only selected cited papers and running heads read; search output is discovery, not a historical source.",
+    "No original incoming Pickens transfer/July 1 SC/May 7 A. B. Moore message or Brown May 25 own reply claimed read.",
+    "S101 table inherited C06 scope only; S104 separately read OR I-I456-458.",
+    "No new trait, willingness or material-stock estimates; model diagnostics attributed to S102.",
+    "No writes to sibling worktrees; S105 is outside scope."
+  ]
+}
