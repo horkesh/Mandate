@@ -101,25 +101,6 @@
         "reason": "state-forces-transferred",
         "side": "confederate",
         "stateForces": {
-          "id": "va_manassas_preston",
-          "regiments": null,
-          "men": null,
-          "arm": "infantry",
-          "termDays": null,
-          "termUnknown": true,
-          "transferTo": "cs_war"
-        }
-      }
-    },
-    {
-      "propose": {
-        "owner": "recruitment",
-        "field": "state_forces",
-        "subject": "st_gov_virginia",
-        "delta": 1,
-        "reason": "state-forces-transferred",
-        "side": "confederate",
-        "stateForces": {
           "id": "va_peninsula",
           "regiments": null,
           "men": null,

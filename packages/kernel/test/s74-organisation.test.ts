@@ -134,6 +134,20 @@ it('lets an army plan with its persistent formation blocks',async()=>{
  expect(blocksOf(input,template.army).map(b=>b.id)).toEqual(Object.keys(organised.forceAssignments).filter(id=>organised.forceAssignments[id as keyof typeof organised.forceAssignments]===toId('post','brigade')));
 });
 
+it('transfers only requested named regiments, including unknown strengths, out of a mixed block', async () => {
+ const {transferLots}=await import('../src/tick/lot-transfer.ts');
+ const {world,template,state,id}=await armyFixture();
+ const from=toId('post','a_reserve'),source=state.forceBlockStates[id]!,lot=source.fbLots[0]!;
+ const unknown={...lot,lotId:'named',lotRegiment:'named',lotMen:null,lotStragglers:null};
+ const fallback={...lot,lotId:'other',lotRegiment:'other',lotMen:1000};
+ const current={...state,forceAssignments:{...state.forceAssignments,[id]:from},forceBlockStates:{...state.forceBlockStates,[id]:{...source,fbLots:[fallback,unknown]}}};
+ const result=transferLots(world.map,current,from,template.army,2,'strongest_first',4,['named','absent']);
+ expect(result.moved).toHaveLength(1);
+ expect(result.state.forceBlockStates[result.moved[0]!]!.fbLots).toEqual([unknown]);
+ expect(result.state.forceBlockStates[id]!.fbLots).toEqual([fallback]);
+ expect(result.state.forceLocations[result.moved[0]!]).toEqual(current.forceLocations[id]);
+});
+
 it('clears old commissions only after the actual sourced departure',async()=>{
  const {advanceCommissions}=await import('../src/people/commissions.ts');
  const {indexWorld}=await import('../src/world/index.ts');

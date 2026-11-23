@@ -52,7 +52,7 @@ it('S77 requests actual raised lots from sourced states while keeping unallocate
   expect(rows.every(r => 'receiveLevies' in r && r.receiveLevies === false)).toBe(true);
   expect(rows.flatMap(r => r.fromPosts)).not.toContain('cs_cmd_charleston');
   expect(rows.flatMap(r => r.fromPosts)).not.toContain('us_dc_militia');
-  expect(rows.find(r => r.post === 'cs_cmd_harpers_ferry')?.fromPosts).toEqual(['st_va_harpers_ferry','st_gov_alabama','st_gov_georgia','st_gov_mississippi','st_gov_tennessee','st_gov_virginia']);
+  expect(rows.find(r => r.post === 'cs_cmd_harpers_ferry')?.fromPosts).toEqual(['st_va_harpers_ferry','st_gov_alabama','st_gov_georgia','st_gov_mississippi','st_gov_virginia']);
   expect(rows.find(r => r.post === 'cs_cmd_manassas')?.fromPosts).toEqual(['st_va_potomac','st_gov_alabama','st_gov_louisiana','st_gov_mississippi','st_gov_south_carolina','st_gov_virginia']);
 });
 
@@ -79,7 +79,6 @@ it('projects both independent inclusions from received command papers without wa
       { from: 'st_gov_mississippi', to: 'cs_cmd_manassas' },
       { from: 'st_gov_north_carolina', to: 'cs_cmd_manassas' },
       { from: 'st_gov_south_carolina', to: 'cs_cmd_manassas' },
-      { from: 'st_gov_tennessee', to: 'cs_cmd_harpers_ferry' },
       { from: 'st_gov_virginia', to: 'cs_cmd_manassas' },
       { from: 'st_va_harpers_ferry', to: 'cs_cmd_harpers_ferry' },
       { from: 'st_va_potomac', to: 'cs_cmd_manassas' },
@@ -88,5 +87,6 @@ it('projects both independent inclusions from received command papers without wa
   expect(projected({ ...state, postStates: { ...state.postStates, [P('cs_cmd_manassas')]: {
     ...state.postStates[P('cs_cmd_charleston')]!, postHolder: null,
   } } }).concentrationTransfers).toEqual(projected(state).concentrationTransfers);
+  expect(projected(state).namedConcentrationDonors).toEqual(['st_gov_tennessee']);
   expect(projected(initial).concentrationTransfers).toBeUndefined();
 });

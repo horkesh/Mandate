@@ -29,6 +29,8 @@ import { placeAndRemove, type MusterPlacement } from '../movement/movement.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { reportQualificationOf } from '../knowledge/report.ts';
 import { callQualifications, receiveCallInformation } from '../knowledge/call-evidence.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { hasRequiredPapers } from '../knowledge/papers.ts';
 import { term } from '../knowledge/truth.ts';
 import { answerOrder } from '../reading/orders.ts';
 import { callDirective, type RecruitmentRules } from '../recruitment/rules.ts';
@@ -75,7 +77,13 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   if (cmd.termDays !== null && cmd.termDays > world.map.world.rules.recruitment.maxTermDays) return 'bad_call';
   if (cmd.arm !== undefined && !world.map.world.vocabularies.arms.some(a => a.id === cmd.arm && !a.naval)) return 'bad_call';
   const rules = world.map.world.rules.recruitment;
-  const registered = cmd.callId === undefined ? undefined : world.map.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === cmd.callId)?.termsId;
+  const declared = cmd.callId === undefined ? undefined : world.map.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === cmd.callId);
+  const registered = declared?.termsId;
+  if (declared?.requiresPapers !== undefined) {
+    const own = world.map.world.rules.ruleSeats.principals.find(p => p.faction === sender.faction);
+    if (declared.post !== cmd.to || !own?.calls.includes(declared) ||
+      !hasRequiredPapers(declared.requiresPapers, knowledgeOf(state, seat), state.stateDay, world.rules.templates)) return 'bad_call';
+  }
   if (registered !== undefined && cmd.termsId !== undefined && registered !== cmd.termsId) return 'bad_call';
   const termsId = cmd.termsId ?? registered;
   const profile = termsId === undefined ? undefined : rules.callProfiles?.find(p => p.id === termsId);
@@ -92,7 +100,8 @@ export function regimentsRaised(rules: RecruitmentRules, asked: number | null, r
   if (row === undefined) return null;
   const factor = rules.loyaltyWeight === 0 || loyalty === null ? 1000 : 1000 - rules.loyaltyWeight + Math.trunc((rules.loyaltyWeight * Math.min(loyalty, rules.loyaltyFull)) / rules.loyaltyFull);
   const regiments = asked === null ? null : Math.trunc((Math.trunc((asked * row.sharePermille) / 1000) * factor) / 1000);
-  if ((askedMen === null || (asked === null && askedMen === undefined)) && row.sharePermille > 0 && factor > 0) return { regiments: null, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
+  if (askedMen === null && regiments !== null && regiments > 0) return { regiments, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
+  if (asked === null && (askedMen === null || askedMen === undefined) && row.sharePermille > 0 && factor > 0) return { regiments: null, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
   if (askedMen === null || (asked === null && askedMen === undefined)) return { regiments: 0, men: 0, delayDays: row.delayDays, loyaltyPermille: factor };
   const men = askedMen === undefined ? regiments! * rules.menPerRegiment : Math.trunc((Math.trunc((askedMen * row.sharePermille) / 1000) * factor) / 1000);
   // An explicit headcount can describe a different organization size. Preserve the known nominal quota;
@@ -147,9 +156,12 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
     if (actual.delayDays > 0) fire(ctx, 'recruitment.slow_walked');
   }
   const objects = declared === null;
+  const requisition = call.callId !== undefined && world.map.world.rules.ruleSeats.principals.some(r => r.concentrations?.some(c =>
+    c.namedRegiments?.afterCall === call.callId && c.fromPosts.includes(post))) ? call.callId : undefined;
   sendReport(ctx, state, {
     body: answerBody(governor, post, day, {
       reportType: objects ? 'advice' : 'wire-dispatch',
+      ...(requisition === undefined ? {} : { reportRequisition: requisition }),
       ...reportQualificationOf(answer),
       reportSubtype: objects ? 'memorandum' : null,
       reportClaims: [{ claimKind: 'call-answer', claimRegion: region, claimValue: declared?.regiments ?? 0, claimToken: declared?.men === null ? `${answer.declared}:unknown_strength` : answer.declared, claimConfidence: declared?.men === null ? 0 : 1000 }],
@@ -304,7 +316,8 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
       (entry.men !== null && (!Number.isSafeInteger(entry.men) || entry.men < 0)) ||
       (entry.regiments !== null && (!Number.isSafeInteger(entry.regiments) || entry.regiments < 1)) ||
       (entry.termDays !== null && (!Number.isSafeInteger(entry.termDays) || entry.termDays < 1 || entry.termDays > ctx.world.map.world.rules.recruitment.maxTermDays)) ||
-      (entry.termUnknown === true && entry.termDays !== null)) {
+      (entry.termUnknown === true && entry.termDays !== null) ||
+      (entry.stragglersUnknown === true && (entry.men !== null || entry.release === true || entry.transferTo !== undefined))) {
       refuse('invalid_state_forces_notice'); continue;
     }
     const block = toId('forceBlock', `state-forces.${entry.id}`);
@@ -363,6 +376,7 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
     if (!ctx.world.map.world.regions.some(r => r.id === region && ['land', 'key_point'].includes(r.kind))) { refuse('invalid_state_force_muster_point'); continue; }
     const created = applyMusters(ctx.world.map, state, [{ change: 'create', cause: 'recruitment', create: {
       block, name: `raised.${commandPost}`, department: office.postDepartment, arm: entry.arm, strength: men,
+      ...(entry.stragglersUnknown === true ? { stragglersUnknown: true } : {}),
       storesDays: ctx.world.map.world.rules.recruitment.storesDays,
       enlistment: { enlPost: post, enlRaisedBy: office.postHolder, enlCall: toId('message', `state-act.${p.situation}.${entry.id}`),
         enlRegiments: entry.regiments, enlMusterDay: ctx.day, enlEndsDay: entry.termDays === null ? null : ctx.day + entry.termDays,

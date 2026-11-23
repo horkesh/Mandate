@@ -1,5 +1,4 @@
-import { changeLotTotals } from './lots.ts';
-import { forceTotals } from './lots.ts';
+import { changeLotTotals, forceTotals, knownStragglers } from './lots.ts';
 /**
  * Detachments in play (lane 1.4b; FOUNDATION section 5: detachments below the force block, for garrisons and landings,
  * 0040; section 10's row, which shares the block's own record). A detachment is a `forces` record of kind `detachment`
@@ -80,7 +79,7 @@ export function applyDetachments(state: State, deltas: readonly DetachmentDelta[
       const p = blocks[d.parent]!;
       const strength = forceTotals(p).fbStrength!;
       const stores = p.fbStoresMilli === null ? null : share(p.fbStoresMilli, d.men, strength);
-      const parentLots = changeLotTotals(p.fbLots, strength - d.men, forceTotals(p).fbStragglers);
+      const parentLots = changeLotTotals(p.fbLots, strength - d.men, knownStragglers(p));
       blocks[d.detachment] = { ...p, fbName: d.name, fbKind: 'detachment', fbParent: d.parent, fbLots: p.fbLots.map((l, i) => ({ ...l, lotId: splitId(`${l.lotId}.det.${d.detachment}`), lotMen: l.lotMen === null ? null : l.lotMen - parentLots[i]!.lotMen!, lotStragglers: 0 })), fbNonCombatants: 0, fbStoresMilli: stores, fbSurrenderedDay: null };
       blocks[d.parent] = { ...p, fbLots: parentLots, fbStoresMilli: p.fbStoresMilli === null ? null : p.fbStoresMilli - stores! };
       made.push(d.detachment);

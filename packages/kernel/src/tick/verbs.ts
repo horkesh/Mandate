@@ -55,7 +55,8 @@ const knownPerson = (ctx: TickContext, person: PersonId) => ctx.world.personIds.
 
 /** Send a verb's letter straight to `to` (no relays: it is a letter to one man). */
 function sendVerb(ctx: TickContext, state: State, issuer: PersonId, to: PersonId, toPost: PostId | null, route: TransitMessage['msgRoute'], body: Omit<VerbBody, 'verbIssuer' | 'verbIssuedDay'>): MessageId {
-  const subject = body.verbKind === 'consult' ? `${body.verbSubject}.${body.verbPost}` : body.verbPost ?? body.verbSubject ?? to;
+  const scoped = body.verbKind === 'consult' || (body.verbKind === 'transfer' && body.verbSubject !== null);
+  const subject = scoped ? `${body.verbSubject}.${body.verbPost}` : body.verbPost ?? body.verbSubject ?? to;
   const id = mintMessageId(ctx.mint, ctx.day, issuer, to, `verb.${body.verbKind}.${subject}`);
   const leg = hop(ctx, state, route, issuer, whereIs(ctx, state, issuer), (toPost !== null ? addressRegion(ctx, state, toPost, issuer) : body.verbKind === 'observer' ? addressRegion(ctx, state, body.verbPost!, issuer) : whereIs(ctx, state, to)), id);
   ctx.outbox.push({
@@ -90,6 +91,7 @@ const body = (kind: VerbKind, over: Partial<Omit<VerbBody, 'verbKind' | 'verbIss
   verbTo: over.verbTo ?? null,
   verbMode: over.verbMode ?? null,
   verbAmount: over.verbAmount ?? null,
+  ...(over.verbRegiments === undefined ? {} : { verbRegiments: [...over.verbRegiments] }),
   verbRank: over.verbRank ?? null,
   verbSubject: over.verbSubject ?? null,
 });
@@ -141,7 +143,12 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if ((!knownPostOnSide(c.from) && !sender.promisedTroops(c.from)) || !knownPostOnSide(c.to) || c.from === c.to) return reject('unknown_post');
       const donor = holderOf(c.from);
       if (donor === null) return reject('vacant_post');
-      sendVerb(ctx, start, principal, donor, c.from, c.route, body('transfer', { verbPost: c.from, verbTo: c.to, verbMode: c.force, verbAmount: c.amount }));
+      if (c.regiments !== undefined && !c.regiments.every(id => world.map.world.regimentCatalogue?.some(r => r.id === id && r.side === sender.faction))) return reject('malformed');
+      if (c.concentration !== undefined && !world.map.world.rules.ruleSeats.principals.find(r => r.faction === sender.faction)?.concentrations?.some(r =>
+        r.id === c.concentration && r.post === c.to && r.fromPosts.includes(c.from) && r.namedRegiments !== undefined &&
+        r.namedRegiments.ids.length === c.regiments?.length && r.namedRegiments.ids.every(id => c.regiments!.includes(id)))) return reject('malformed');
+      sendVerb(ctx, start, principal, donor, c.from, c.route, body('transfer', { verbPost: c.from, verbTo: c.to, verbMode: c.force, verbAmount: c.amount,
+        ...(c.regiments === undefined ? {} : { verbRegiments: c.regiments }), ...(c.concentration === undefined ? {} : { verbSubject: c.concentration }) }));
       return { state: start, reason: null };
     }
     case 'inquire': {
@@ -346,7 +353,8 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
         try {
           const lotRequest = v.verbMode === 'men' || (world.map.world.organisationTemplates?.some(t=>t.army===v.verbTo)===true && world.map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[from]!.postKind));
           const requestedMen = v.verbMode === 'men' ? amount : amount * (world.map.world.rules.recruitment.planningRegiments??1) * world.map.world.rules.recruitment.menPerRegiment;
-          const result = lotRequest ? transferLots(world.map,state,from,v.verbTo!,requestedMen,pick,ctx.day) : transferForce(world.map,state,from,v.verbTo!,{force:'blocks',count:amount},pick);
+          const result = v.verbRegiments !== undefined ? transferLots(world.map, state, from, v.verbTo!, amount, pick, ctx.day, v.verbRegiments)
+            : lotRequest ? transferLots(world.map,state,from,v.verbTo!,requestedMen,pick,ctx.day) : transferForce(world.map,state,from,v.verbTo!,{force:'blocks',count:amount},pick);
           state = result.state;
           done = result.moved.length > 0;
           // A transfer concentrates (lane 1.12, the lead's Fix 1): what was handed over is ordered to join the receiving

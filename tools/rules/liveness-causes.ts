@@ -69,7 +69,14 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
       // S106 /0118 retires the numeric-rung muster delay. This exact observed
       // Union zero retains the testbed's live slow-walk control; no other transition is admitted.
       const s106Quiet = fingerprint(r) === 'ce57e127980428ee61974fc114d635695fe316a04a9cc771390594aade04d3ef';
-      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet) {
+      // CODEX 2026-11-23: S119 received; the three quiet bands are authorised; commit.
+      // Only these complete Union records are allowed; their independent live driver is retained.
+      const s119Quiet = [
+        '79d9f1777d4c05289150b08e6b0f5cbcf5175af5d33d9981d432c90a4079afda',
+        'd267609dfc583151e2c695995f945fe29cdb04306ff59448b1147683308fd064',
+        '1a0118e99e7d9c808ee42d1f4d7524fc425281ff8cbaba84238449f9f4562cc4',
+      ].includes(fingerprint(r));
+      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet && !s119Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

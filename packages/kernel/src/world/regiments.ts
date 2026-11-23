@@ -26,6 +26,8 @@ export interface RegimentRecord {
   readonly termDays: readonly number[];
   /** An expressly sourced war contract, distinct from an unestablished term. */
   readonly warTerm?: boolean;
+  /** Read linkage to a specific requisition. It identifies a lot already raised by that call and does not establish a separate service term. */
+  readonly identityCall?: string;
   readonly aliases: readonly string[];
   readonly observations: readonly RegimentObservation[];
   readonly path: Readonly<Record<string, string>>;

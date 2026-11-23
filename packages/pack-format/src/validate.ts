@@ -153,7 +153,8 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   doctrineRows.forEach((row, i) => {
     if (!factionIds.has(row.faction)) err('unknown-reference', W('rules.ruleSeats.principals', i, 'faction'), `"${row.faction}" is not a faction in this pack`, `one of: ${[...factionIds].join(', ')}`);
     if (doctrineRows.findIndex((x) => x.faction === row.faction) !== i) err('duplicate-id', W('rules.ruleSeats.principals', i, 'faction'), `faction "${row.faction}" has more than one doctrine row`);
-    for (const p of conditionalDoctrineProblems(row, id => doctrineRegions.has(id))) err('conditional-doctrine', W('rules.ruleSeats.principals', i, p.field), p.message);
+    if (row.letterNamespace !== undefined && doctrineRows.findIndex(r => r.letterNamespace === row.letterNamespace) !== i) err('duplicate-id', W('rules.ruleSeats.principals', i, 'letterNamespace'), 'duplicate issuer namespace');
+    for (const p of conditionalDoctrineProblems(row, id => doctrineRegions.has(id), { hasPerson: id => world.people.some(p => p.id === id) })) err('conditional-doctrine', W('rules.ruleSeats.principals', i, p.field), p.message);
   });
   for (const f of [...factionIds].sort()) {
     if (!doctrineRows.some((r) => r.faction === f)) err('missing-value', W('rules.ruleSeats', 0, 'principals'), `faction "${f}" has no doctrine row`, 'one row per faction: its rule-seat principal’s doctrine (lane 1.12)');
@@ -273,6 +274,10 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     catalogueOrders.add(r.order);
     if (new Set(r.termDays).size !== r.termDays.length) err('duplicate-service-term', at('termDays'), 'service terms must not repeat');
     if ((r.termDays.length > 0 || r.warTerm === true) && (!r.path.path_source || !r.path.path_pages || r.path.path_source === 'unknown' || r.path.path_pages === 'unknown')) err('unsourced-service-term', at('termDays'), 'a known term requires the read path source and pages');
+    if (r.identityCall !== undefined && (r.scope !== 'regiment' || !r.path.identity_call_source?.trim() ||
+      !world.rules.ruleSeats.principals.find(p => p.faction === r.side)?.calls.some(c => c.id === r.identityCall && (c.arm === undefined || c.arm === r.arm)))) {
+      err('unsourced-regiment-call-identity', at('identityCall'), 'a regiment identity requires a read citation and a same-side requisition for its arm');
+    }
   });
 
   // Organisation records are sourced preferences, not scenario starts or dated effects (0108).

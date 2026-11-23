@@ -488,7 +488,8 @@
       "command_evidence": "Holmes reinforcement 1861-07-21 (OR I-II p565-566; action_report)",
       "path_source": "unknown",
       "path_pages": "unknown",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_hold": "Fagan outside the July State pool (OR I-III pp.609-610; I-LI.2 p.115); Flournoy answers the April22 request (I-I pp.687-688; I-LI.2 p.26). Naming chain to Fagan unread, so no identity assignment or move."
     }
   },
   {
@@ -18530,13 +18531,15 @@
     "order": 141,
     "state": "TN",
     "raisingDepartment": "st_tennessee",
-    "designation": "TN 1 infantry",
+    "designation": "First Tennessee Infantry (Turney, First Confederate)",
     "arm": "infantry",
     "scope": "regiment",
     "side": "confederate",
     "termDays": [],
     "aliases": [
-      "TN 1 infantry"
+      "TN 1 infantry",
+      "First Confederate Infantry",
+      "Turney First Tennessee"
     ],
     "observations": [
       {
@@ -18597,21 +18600,27 @@
       "command_evidence": "Johnston 1861-06-30 (OR I-II p470; administrative_return)",
       "path_source": "unknown",
       "path_pages": "unknown",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
-    }
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_identity_evidence": "OR IV-I pp.272,275; OR I-II pp.470,898; Lindsley p.129 [retrospective].",
+      "S119_hold": "Separate from Maney’s State First. Winchester notice on OR I-II p.908 does not name Turney.",
+      "identity_call_source": "OR IV-I pp.272,275; OR I-II pp.470,898; Lindsley p.129 [retrospective]."
+    },
+    "identityCall": "cs_apr22_absolute_tennessee"
   },
   {
     "id": "tn_2_infantry",
     "order": 142,
     "state": "TN",
     "raisingDepartment": "st_tennessee",
-    "designation": "TN 2 infantry",
+    "designation": "Second Tennessee Infantry (Bate, Walker Legion)",
     "arm": "infantry",
     "scope": "regiment",
     "side": "confederate",
     "termDays": [],
     "aliases": [
-      "TN 2 infantry"
+      "TN 2 infantry",
+      "Bate Second Tennessee",
+      "Walker Legion"
     ],
     "observations": [
       {
@@ -18672,21 +18681,27 @@
       "command_evidence": "Holmes reinforcement 1861-07-21 (OR I-II p565-566; action_report)",
       "path_source": "unknown",
       "path_pages": "unknown",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
-    }
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_identity_evidence": "OR IV-I pp.272,275; OR I-LI.2 p.107; OR I-II pp.56,57; Lindsley p.132 [retrospective].",
+      "S119_hold": "Separate from Knox Walker’s Second and the Walker field battery. Model term remains the requisition’s term; individual contract and headcount unknown.",
+      "identity_call_source": "OR IV-I pp.272,275; OR I-LI.2 p.107; OR I-II pp.56,57; Lindsley p.132 [retrospective]."
+    },
+    "identityCall": "cs_apr22_absolute_tennessee"
   },
   {
     "id": "tn_3_infantry",
     "order": 143,
     "state": "TN",
     "raisingDepartment": "st_tennessee",
-    "designation": "TN 3 infantry",
+    "designation": "Third Tennessee Infantry (Vaughn, Third Confederate)",
     "arm": "infantry",
     "scope": "regiment",
     "side": "confederate",
     "termDays": [],
     "aliases": [
-      "TN 3 infantry"
+      "TN 3 infantry",
+      "Third Confederate Infantry",
+      "Vaughn Third Tennessee"
     ],
     "observations": [
       {
@@ -18786,7 +18801,9 @@
       "command_evidence": "Johnston 1861-06-30 (OR I-II p470; administrative_return); Johnston 1861-07-21 (OR I-II p569; engaged_list)",
       "path_source": "OR I-II",
       "path_pages": "471-472,569",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_identity_evidence": "OR I-II pp.470,472; Lindsley p.137 [retrospective].",
+      "S119_hold": "Separate from Brown’s State Third. April requisition lineage is unread; Harris names Maney alongside Turney and Bate in OR IV-I p.275."
     }
   },
   {
@@ -20868,7 +20885,8 @@
       "command_evidence": "Beauregard-Johnston attack plan 1861-07-20 (OR I-II p479-480; planned_attachment); Holmes reinforcement 1861-07-21 (OR I-II p565-566; action_report)",
       "path_source": "unknown",
       "path_pages": "unknown",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_hold": "OR I-II pp.56,58-59 attest Walker rifled guns by May31 and distinguish Bate’s separate company detail. OR I-II p.565 records Holmes’s battery. No distinct live battery with proved lineage; exact initial join and men unknown."
     }
   },
   {
@@ -24251,13 +24269,15 @@
     "order": 197,
     "state": "VA",
     "raisingDepartment": "st_virginia",
-    "designation": "VA 28 infantry",
+    "designation": "Twenty-eighth Virginia Infantry (Robert T. Preston)",
     "arm": "infantry",
     "scope": "regiment",
     "side": "confederate",
     "termDays": [],
     "aliases": [
-      "VA 28 infantry"
+      "VA 28 infantry",
+      "Twenty-eighth Virginia Infantry",
+      "Robert T. Preston regiment"
     ],
     "observations": [
       {
@@ -24298,6 +24318,19 @@
           "division_order_pages": "unknown",
           "observation_id": "S66-0244"
         }
+      },
+      {
+        "observationId": "S119-VA28",
+        "observedOn": "1861-07-21",
+        "observationKind": "engaged_list",
+        "command": "Beauregard",
+        "division": "none",
+        "brigade": "5",
+        "source": "OR I-II",
+        "pages": "549-551",
+        "evidence": {
+          "notes": "Robert T. Preston identifies his Twenty-eighth in his after-action account; no original seven-company strength."
+        }
       }
     ],
     "path": {
@@ -24318,7 +24351,8 @@
       "command_evidence": "Beauregard 1861-07-21 (OR I-II p469; retrospective_field_roster)",
       "path_source": "unknown",
       "path_pages": "unknown",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_identity_evidence": "OR I-LI.2 p.123; OR I-II pp.944,549-551. The June20 Cocke order names Preston by surname; the July action report identifies Robert T. Preston and the Twenty-eighth. Separate from the original J. F. Preston companies; exact joining date remains unknown."
     }
   },
   {
@@ -24849,7 +24883,8 @@
       "command_evidence": "Johnston 1861-06-30 (OR I-II p470; administrative_return); Johnston 1861-07-21 (OR I-II p569; engaged_list)",
       "path_source": "OR I-II",
       "path_pages": "473",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_lineage": "OR I-II pp.42,826,879,470,486; I-LI.2 p.123. Original J. F. Preston seven companies reported gone to Harpers Ferry on May25; Fourth under Jackson is the probable continuation. Initial discrepancy, original roll and exact receipt remain open."
     }
   },
   {
@@ -25501,7 +25536,7 @@
     "raisingDepartment": "st_virginia",
     "designation": "VA Preston-number-unknown infantry",
     "arm": "infantry",
-    "scope": "regiment",
+    "scope": "unresolved_observation",
     "side": "confederate",
     "termDays": [],
     "aliases": [
@@ -25566,7 +25601,8 @@
       "command_evidence": "Beauregard 1861-06-20 (OR I-II p943-944; administrative_order)",
       "path_source": "unknown",
       "path_pages": "unknown",
-      "notes": "Unknown means not established by the cited passages read, never a claim no record exists."
+      "notes": "Unknown means not established by the cited passages read, never a claim no record exists.",
+      "S119_hold": "June20 OR I-II p.944 identifies Preston by surname only. The Cocke template uses va_28_infantry, identified independently in OR I-II pp.549-551. No join to James F. Preston’s original battalion."
     }
   },
   {

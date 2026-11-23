@@ -67,12 +67,21 @@ describe('S1 national volunteer allocations and Regular recruiting', () => {
     expect(answers).toHaveLength(3);
     const accepted = answers.filter(r => ['exceed', 'comply', 'comply_with_reservations', 'slow_walk', 'reinterpret'].includes(r.respActual));
     const enlistments = Object.entries(enlistmentsOf(state)).filter(([, e]) => requested.some(c => c.id === e.enlCallId));
-    expect(enlistments).toHaveLength(accepted.length);
-    expect(new Set(enlistments.map(([block]) => block)).size).toBe(accepted.length);
+    // A call's lots may occupy more than one brigade block; conserve its origin and quota.
+    expect([...new Set(enlistments.map(([, e]) => e.enlCallId))].sort()).toEqual(accepted.map(r => r.respCallId).sort());
+    expect(new Set(enlistments.map(([block]) => block)).size).toBe(enlistments.length);
+    const lots = enlistments.flatMap(([block]) => state.forceBlockStates[ids.toId('forceBlock', block)]!.fbLots);
+    expect(new Set(lots.map(l => l.lotId)).size).toBe(lots.length);
+    for (const response of accepted) {
+      const call = requested.find(c => c.id === response.respCallId)!;
+      const raised = lots.filter(l => l.lotService?.enlCallId === call.id);
+      expect(raised).toHaveLength(call.regiments!);
+      expect(raised.every(l => l.lotMen === null)).toBe(true);
+    }
     for (const [block, e] of enlistments) {
       const arm = requested.find(c => c.id === e.enlCallId)!.arm;
       expect(e.enlPost).toBe(POST('us_recruiting_service'));
-      expect(e.enlRegiments).toBeNull();
+      expect(e.enlRegiments).toBeGreaterThan(0);
       expect(e.enlEndsDay! - e.enlMusterDay).toBe(1095);
       expect(observeBlock(state.forceBlockStates[ids.toId('forceBlock', block)]!)).toMatchObject({ fbArm: arm, fbStrength: null });
       expect(state.forceAssignments[ids.toId('forceBlock', block)]).toBe(POST('us_recruiting_service'));

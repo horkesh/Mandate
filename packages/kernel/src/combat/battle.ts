@@ -1,4 +1,4 @@
-import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
+import { forceTotals, knownStragglers, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * The battle model in the day tick (lane 1.3; FOUNDATION section 12's row 1.3; the combat note's P1–P9). It replaces
  * Phase 0's simple contest (0064). Pure: it reads State and returns proposals for each owner, and its own battle-record
@@ -311,7 +311,7 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
         commitTerms: commits[i]!.terms,
         blocks: s.blocks.map((b): BlockInput => {
           const f = state.forceBlockStates[b]!;
-          return { id: b, men: forceTotals(f, ground.map.forceTotalsCache).fbStrength, stragglers: forceTotals(f, ground.map.forceTotalsCache).fbStragglers, morale: f.fbMorale, experience: f.fbExperience, equipment: f.fbEquipment };
+          return { id: b, men: forceTotals(f, ground.map.forceTotalsCache).fbStrength, stragglers: knownStragglers(f, ground.map.forceTotalsCache), morale: f.fbMorale, experience: f.fbExperience, equipment: f.fbEquipment };
         }),
         retreatTo: retreatTarget(ground, state, region, s.faction)?.to ?? null,
         breakingOut: breaking[i]!,

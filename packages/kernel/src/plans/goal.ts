@@ -10,6 +10,7 @@
  */
 import type { ForceBlockId, PostId, RegionId } from '../ids.ts';
 import type { GoalTerms } from '../log/commands.ts';
+import type { PaperSelector } from '../world/paper-selectors.ts';
 
 /** What the goal asks of him: take the objective, relieve it (reach it and hold it for a garrison there), or hold it. */
 export const POSTURES = ['hold', 'relieve', 'take'] as const;
@@ -41,6 +42,7 @@ export type DoctrineProposalAnswer = {
   readonly fromDate: string;
   readonly answers: string;
   readonly source: string;
+  readonly requiresPapers?: readonly PaperSelector[];
 } & ({ readonly action: 'accept' | 'decline' } | {
   readonly action: 'discretion';
   readonly objective?: RegionId | null;

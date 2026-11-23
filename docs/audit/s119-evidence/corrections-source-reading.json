@@ -1,0 +1,761 @@
+{
+  "research_commit": "c63aac4f",
+  "research_worktree": "C:/Pyrrhic/sprint-research-military",
+  "scope": "The page entries below are those read by S119. The copied S118 evidence tables retain all S118 citations and qualifications, including additional passages read only by S118. No new external sources were used.",
+  "packet_artifacts": {
+    "pack-corrections.csv": "fd03d98743974140ff85a9a5e71761889ea818007a0541c37fea84eca556b47a",
+    "receiving-commands.csv": "07912c8a49694529706394a60c5c597cfabe07d8f9020076cfdc201d7559d879",
+    "lot-candidates.csv": "1eb7ec6069b1fc6048e144c6b6df72dd4c7947a1e8748d21192f31f9d085705e",
+    "source-reading.json": "74c8190a40c3ae464bb9b419c0b9f97be8e4e3d8c29534ef2d64fac3f6750d13"
+  },
+  "pages_read": [
+    {
+      "key": "BEVENS:10",
+      "work": "Bevens, Reminiscences of a Private (1913)",
+      "page": 10,
+      "retained_path": "docs/research/S118/read/BEVENS-p10.txt",
+      "sha256": "bfdf735a3a0794f2404d07f09016647bc89a2c437257924774a0fdc1f95cf5dd",
+      "urls": [
+        "https://archive.org/details/reminiscencesofp00beve/page/n14/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "BEVENS:7",
+      "work": "Bevens, Reminiscences of a Private (1913)",
+      "page": 7,
+      "retained_path": "docs/research/S118/read/BEVENS-p7.txt",
+      "sha256": "16a0e713a986d191e29d5582391ce5e406ec34028db961500bbce1d41626fce2",
+      "urls": [
+        "https://archive.org/details/reminiscencesofp00beve/page/n11/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "BEVENS:8",
+      "work": "Bevens, Reminiscences of a Private (1913)",
+      "page": 8,
+      "retained_path": "docs/research/S118/read/BEVENS-p8.txt",
+      "sha256": "60ab6702cc3fb30f1e7d795d03154113cc53f2d360e05ae207c7429662666ec3",
+      "urls": [
+        "https://archive.org/details/reminiscencesofp00beve/page/n12/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "HEAD:24",
+      "work": "Head, Campaigns and Battles",
+      "page": 24,
+      "retained_path": "docs/research/S118/read/HEAD-p24.txt",
+      "sha256": "d71874df8d326fc7967a8d809567ebcd755212b6010cab68ecb1bb561e23ca19",
+      "urls": [
+        "https://archive.org/details/campaignsandbatt00headiala/page/n32/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "HEAD:25",
+      "work": "Head, Campaigns and Battles",
+      "page": 25,
+      "retained_path": "docs/research/S118/read/HEAD-p25.txt",
+      "sha256": "849dbe4c670cfac5b704abed62d3bf83f537240e0a45d3e1df43c20381b94edb",
+      "urls": [
+        "https://archive.org/details/campaignsandbatt00headiala/page/n33/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "I:687",
+      "work": "OR I-I",
+      "page": 687,
+      "retained_path": "docs/research/S118/read/I-p687.txt",
+      "sha256": "87281a952a474f13b99636a2ab34f475db73e6d1ee5e7af00277dce5f306d36c",
+      "urls": [
+        "https://archive.org/details/cu31924077725913/page/n706/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "I:688",
+      "work": "OR I-I",
+      "page": 688,
+      "retained_path": "docs/research/S118/read/I-p688.txt",
+      "sha256": "8f3dba2107cfb17a29b70db117943be43f02d0045606ee49b1b3825b15295f1f",
+      "urls": [
+        "https://archive.org/details/cu31924077725913/page/n707/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:1005",
+      "work": "OR I-II",
+      "page": 1005,
+      "retained_path": "docs/research/S118/read/II-p1005.txt",
+      "sha256": "bd351a324aff6b75f6b3fc401a7cd6180c58e7bab9b80106bd8f3aaa6e7581c0",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n1024/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:42",
+      "work": "OR I-II",
+      "page": 42,
+      "retained_path": "docs/research/S118/read/II-p42.txt",
+      "sha256": "8837c321260f4d615df109e55c0e5f2fad2437271d0919676549e088eb028edd",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n61/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:470",
+      "work": "OR I-II",
+      "page": 470,
+      "retained_path": "docs/research/S118/read/II-p470.txt",
+      "sha256": "406ba603ad0734e419bc29418b13ad1b00111be763a12ebff1d356cbe55d1127",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n489/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:472",
+      "work": "OR I-II",
+      "page": 472,
+      "retained_path": "docs/research/S118/read/II-p472.txt",
+      "sha256": "0ea8c4b3f29204a277241d82f9b7785b4237ffca5d15ccf3bec070996d520c89",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n491/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:480",
+      "work": "OR I-II",
+      "page": 480,
+      "retained_path": "docs/research/S118/read/II-p480.txt",
+      "sha256": "1a09cb28dc6fbaf2e63a8d4a79cc772ed1ae5862d0c824e60bc026f0919ffb2b",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n499/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:486",
+      "work": "OR I-II",
+      "page": 486,
+      "retained_path": "docs/research/S118/read/II-p486.txt",
+      "sha256": "07eeb9cb5c896d7b91060de8486446c3b73573151aed95049db599718af019ec",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n505/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:549",
+      "work": "OR I-II",
+      "page": 549,
+      "retained_path": "docs/research/S118/read/II-p549.txt",
+      "sha256": "bb7e0b7fbf7f7a394acb2246c09518b29b94e7f87baa7da25e7c70a217276782",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n568/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:551",
+      "work": "OR I-II",
+      "page": 551,
+      "retained_path": "docs/research/S118/read/II-p551.txt",
+      "sha256": "0624759e19f902de39f8aa790acff8a0cf0843450e6d793ad87c99c0cc98db76",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n570/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:56",
+      "work": "OR I-II",
+      "page": 56,
+      "retained_path": "docs/research/S118/read/II-p56.txt",
+      "sha256": "21afc878869d35036e1f6ed165517fa6a1a1cb2e8f453629a1f051b594733f5e",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n75/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:565",
+      "work": "OR I-II",
+      "page": 565,
+      "retained_path": "docs/research/S118/read/II-p565.txt",
+      "sha256": "c24dbf8512d9098c9ec9642e2cfb53874447f8e9a426a33e67314a8a3147cd4b",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n584/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:57",
+      "work": "OR I-II",
+      "page": 57,
+      "retained_path": "docs/research/S118/read/II-p57.txt",
+      "sha256": "856e459da07ae1c6103b6a239a1250b82fb071cc4cdc2c6cb75f80962c1785fb",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n76/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:58",
+      "work": "OR I-II",
+      "page": 58,
+      "retained_path": "docs/research/S118/read/II-p58.txt",
+      "sha256": "43cae5fc5c643f3eb84f48906c1b640378cb82ff3e0a0f26543c53e92f0dc3d7",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n77/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:59",
+      "work": "OR I-II",
+      "page": 59,
+      "retained_path": "docs/research/S118/read/II-p59.txt",
+      "sha256": "83ba528dafc8f26175d140fc6e7513516574b72164e5e55606f0bc0541c61e96",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n78/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:826",
+      "work": "OR I-II",
+      "page": 826,
+      "retained_path": "docs/research/S118/read/II-p826.txt",
+      "sha256": "7f697ca9e59b224d9cc73fc20c973981eee37e28d57e986dd1fe57a9f713dacb",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n845/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:879",
+      "work": "OR I-II",
+      "page": 879,
+      "retained_path": "docs/research/S118/read/II-p879.txt",
+      "sha256": "aa85cebbf522c5cd53409882d564362d0cd7297b8b29bf522d7c06f9c506ce34",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n898/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:898",
+      "work": "OR I-II",
+      "page": 898,
+      "retained_path": "docs/research/S118/read/II-p898.txt",
+      "sha256": "f44bcfaa90fc5dde4cd6b3b44f38b74fd30d00beecf944369aa5dff80a22c311",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n917/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:907",
+      "work": "OR I-II",
+      "page": 907,
+      "retained_path": "docs/research/S118/read/II-p907.txt",
+      "sha256": "8e06ebbdf531c35babf69dff64c669c1e3b9b1d82db5e9770c8fe1cdf39016a0",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n926/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:908",
+      "work": "OR I-II",
+      "page": 908,
+      "retained_path": "docs/research/S118/read/II-p908.txt",
+      "sha256": "5774354085c6ae3041fc0ccc0709ad3d520c74582ebb2c114db1fdcb0f014990",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n927/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:929",
+      "work": "OR I-II",
+      "page": 929,
+      "retained_path": "docs/research/S118/read/II-p929.txt",
+      "sha256": "a930e41cd545002fd14081539ee95edbb5536dd43456711eb06221a50eff52c1",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n948/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:932",
+      "work": "OR I-II",
+      "page": 932,
+      "retained_path": "docs/research/S118/read/II-p932.txt",
+      "sha256": "e6c0b241153ecf63be54a7f592f67047eadc89f1f0eda6196946c108cb1e7a13",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n951/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:944",
+      "work": "OR I-II",
+      "page": 944,
+      "retained_path": "docs/research/S118/read/II-p944.txt",
+      "sha256": "d369113fee4849375c6378313513593afc95859ed332fbde8be313c1424773f5",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n963/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:963",
+      "work": "OR I-II",
+      "page": 963,
+      "retained_path": "docs/research/S118/read/II-p963.txt",
+      "sha256": "1d33110c4cf6a343e053edbd54eba33aad0e0ad9fcbb517524f03d3f61b8a8de",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n982/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:964",
+      "work": "OR I-II",
+      "page": 964,
+      "retained_path": "docs/research/S118/read/II-p964.txt",
+      "sha256": "530caa8c309903f29339479f755c2b33d70022245ac9532c90ebc21806583968",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n983/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:973",
+      "work": "OR I-II",
+      "page": 973,
+      "retained_path": "docs/research/S118/read/II-p973.txt",
+      "sha256": "b1f0ed708a04b1e31342a69f7f4d53677de1fd1526891aed5436612a7790f3fd",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n992/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:980",
+      "work": "OR I-II",
+      "page": 980,
+      "retained_path": "docs/research/S118/read/II-p980.txt",
+      "sha256": "8b019c55f63c0a876555b70293aeadc8c0587dfa68c54ad46e8fb60fbe92ddc1",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n999/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "II:981",
+      "work": "OR I-II",
+      "page": 981,
+      "retained_path": "docs/research/S118/read/II-p981.txt",
+      "sha256": "53beca77bc03e61e1d7b828412638287a92c9cb7e5deb4c8b23823e75af88dbc",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n1000/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "III:609",
+      "work": "OR I-III",
+      "page": 609,
+      "retained_path": "docs/research/S118/read/III-p609.txt",
+      "sha256": "8eae38db63f88228760d101bc2fa9014c2ef43fe97a14eb4411ef8a7fc4c150f",
+      "urls": [
+        "https://archive.org/details/warofrebellionco03unit/page/n637/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "III:610",
+      "work": "OR I-III",
+      "page": 610,
+      "retained_path": "docs/research/S118/read/III-p610.txt",
+      "sha256": "17677573b08b739b52995948a922c7a23f39b7f6b8e5e17cb913aac9d970f462",
+      "urls": [
+        "https://archive.org/details/warofrebellionco03unit/page/n638/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "III:612",
+      "work": "OR I-III",
+      "page": 612,
+      "retained_path": "docs/research/S118/read/III-p612.txt",
+      "sha256": "93b784b385d4e2bcd6b27054cd95f48beef55b5f29bdd030cceff0890f41a817",
+      "urls": [
+        "https://archive.org/details/warofrebellionco03unit/page/n640/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV1:272",
+      "work": "OR IV-I",
+      "page": 272,
+      "retained_path": "docs/research/S118/read/IV1-p272.txt",
+      "sha256": "f41abacd89ce5cdd62a3a5bda64532821161f982fdad5f847a529aec828ce078",
+      "urls": [
+        "https://archive.org/details/cu31924079579524/page/n287/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV1:275",
+      "work": "OR IV-I",
+      "page": 275,
+      "retained_path": "docs/research/S118/read/IV1-p275.txt",
+      "sha256": "66aa992a7c81bb22797b0e6cdb4eec3f61e8c2939fe9c344ec015b3fab0b633d",
+      "urls": [
+        "https://archive.org/details/cu31924079579524/page/n290/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV1:411",
+      "work": "OR IV-I",
+      "page": 411,
+      "retained_path": "docs/research/S118/read/IV1-p411.txt",
+      "sha256": "8bf9c9ec855e949236bdec0d3a4a621db241988f03cf342281ba24d68403ec15",
+      "urls": [
+        "https://archive.org/details/cu31924079579524/page/n426/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV1:417",
+      "work": "OR IV-I",
+      "page": 417,
+      "retained_path": "docs/research/S118/read/IV1-p417.txt",
+      "sha256": "53a417ad5cfe96c346b91718098106ad914ac60f9ffb46eaaea66388886d07e3",
+      "urls": [
+        "https://archive.org/details/cu31924079579524/page/n432/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:362",
+      "work": "OR I-IV",
+      "page": 362,
+      "retained_path": "docs/research/S118/read/IV-p362.txt",
+      "sha256": "4f822110fa79b9a79031b5ce0d0ad59a590c2a5938e3c79322b2911533b76211",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n367/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:363",
+      "work": "OR I-IV",
+      "page": 363,
+      "retained_path": "docs/research/S118/read/IV-p363.txt",
+      "sha256": "d97f3123bdb46e9433f1a3c39b5a743acc1e92783be69cc9719a57494be6a6ca",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n368/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:371",
+      "work": "OR I-IV",
+      "page": 371,
+      "retained_path": "docs/research/S118/read/IV-p371.txt",
+      "sha256": "4cbb06ead44b4fd0f904422334dee5b551ca6a74cfc6748febd9424006a3263e",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n376/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:375",
+      "work": "OR I-IV",
+      "page": 375,
+      "retained_path": "docs/research/S118/read/IV-p375.txt",
+      "sha256": "677639f99bcf1ce4f2352f7bc452fc6974fb1f127a55df97557cf3ee2c2c1283",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n380/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:377",
+      "work": "OR I-IV",
+      "page": 377,
+      "retained_path": "docs/research/S118/read/IV-p377.txt",
+      "sha256": "f890b6851c3e36463b46bba650471bd6aec93e2d1caf9b22b76e0b43831ea3f6",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n382/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:378",
+      "work": "OR I-IV",
+      "page": 378,
+      "retained_path": "docs/research/S118/read/IV-p378.txt",
+      "sha256": "28adc9aaac58d9fe4424456e74add349c1fae06377a6621a1e21de3b59c8b6d1",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n383/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:431",
+      "work": "OR I-IV",
+      "page": 431,
+      "retained_path": "docs/research/S118/read/IV-p431.txt",
+      "sha256": "a16ad4ee81461382995c724d6a73d230c12fba437a2e2f66307644fbd1f0948b",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n436/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "IV:436",
+      "work": "OR I-IV",
+      "page": 436,
+      "retained_path": "docs/research/S118/read/IV-p436.txt",
+      "sha256": "cf9b4a6f9297830ac2a463fe18168d1a2938e33ced376b9153c95cb81da4fad9",
+      "urls": [
+        "https://archive.org/details/warofrebellionco0004vari/page/n441/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LI2:107",
+      "work": "OR I-LI.2",
+      "page": 107,
+      "retained_path": "docs/research/S118/read/LI2-p107.txt",
+      "sha256": "0d0085d75c1a47839241483ec3f3d44c3375e22fc2a695514e4981ff050307b3",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n115/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LI2:111",
+      "work": "OR I-LI.2",
+      "page": 111,
+      "retained_path": "docs/research/S118/read/LI2-p111.txt",
+      "sha256": "5e308dc101eee53e7000ba6c33d1e844b56a88dff8f657b8a5b6f955446f7c3d",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n119/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LI2:112",
+      "work": "OR I-LI.2",
+      "page": 112,
+      "retained_path": "docs/research/S118/read/LI2-p112.txt",
+      "sha256": "54bc0584d75269d0a952bfd7432e029f1b766b7157585eeea408623b3a8b7515",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n120/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LI2:115",
+      "work": "OR I-LI.2",
+      "page": 115,
+      "retained_path": "docs/research/S118/read/LI2-p115.txt",
+      "sha256": "5df53ee52fde25946f0bfb82bb791a410ed4f8a1ad28551eb505304426daa8a4",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n123/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LI2:123",
+      "work": "OR I-LI.2",
+      "page": 123,
+      "retained_path": "docs/research/S118/read/LI2-p123.txt",
+      "sha256": "a2344cbb81d277dcd681836036af767b94ea3f98ef8d93525c8b19f46efcd5b9",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n131/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LI2:26",
+      "work": "OR I-LI.2",
+      "page": 26,
+      "retained_path": "docs/research/S118/read/LI2-p26.txt",
+      "sha256": "cac64e22a8230cb1c335e367a2db66bbe800f7a228327770eeaf15f2507e4432",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n34/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:129",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 129,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p129.txt",
+      "sha256": "2da044b63e187d18d0b952280194fabf8cb1fb1b9686c1ce621d1e916c10ce99",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n265/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:132",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 132,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p132.txt",
+      "sha256": "0639540b2f09e44edaa9d1fecc9f4310250d9b56c74dcf4409dda21aa2bb4d24",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n273/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:137",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 137,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p137.txt",
+      "sha256": "ca337766dfc8798d1c93e90055f73ba65d2d87d39215620773dc9d2e1e4615c1",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n283/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:176",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 176,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p176.txt",
+      "sha256": "3811b509d994f146f4b19e0e3062e626004df39b7ae19a1b12cc2fd8c538ae87",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n369/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:184",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 184,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p184.txt",
+      "sha256": "ee6250840139968a22c31550708fc8d5922ad91231529fa625e86e1661faf29e",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n387/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:196",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 196,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p196.txt",
+      "sha256": "9a7cd33c473ddd659707776c0d9baed0d6d5986d4a6ac7b5ff91597eb8b4fd3c",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n411/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:206",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 206,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p206.txt",
+      "sha256": "7debc321dceb3980ff740958c7ff66e968c04367e405ecd4cc160a79f0e28e61",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n433/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:273",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 273,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p273.txt",
+      "sha256": "73f60cd0da404f839b0076b2417160fecc51155e346d722fa010c9279b7f9da5",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n571/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:307",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 307,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p307.txt",
+      "sha256": "396919c2eac4723d6952dcd31e6cef59763cc37644ed7ef0fbd8501d19b9a345",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n643/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:314",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 314,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p314.txt",
+      "sha256": "1a3a2f37f2704072178d3278499f8b9763e6a5af54233a26fcbd52be45cbcb9a",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n659/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:323",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 323,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p323.txt",
+      "sha256": "50248420cd9936872bf5c550f739bbc312fb93cf1b6e88a6f9b27b816dd45247",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n677/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:332",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 332,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p332.txt",
+      "sha256": "e1c2a5699836bb018b181f6edc3c74c73f0bc68a5d4c2f5b71e1e986d9ad1328",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n695/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:361",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 361,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p361.txt",
+      "sha256": "96257f7ad30c45935e567bb09f39b900ef8f045fd5074b3b5382c7732245585c",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n755/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    },
+    {
+      "key": "LINDSLEY:373",
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 373,
+      "retained_path": "docs/research/S118/read/LINDSLEY-p373.txt",
+      "sha256": "c24b101f6c2fa08a4cd07b445a68d83ea6ac19dba5a37a858cb5b68448942931",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n779/mode/1up"
+      ],
+      "scope": "Relevant retained page-text passages inspected; no whole-volume or original scan reading claimed by S119."
+    }
+  ]
+}

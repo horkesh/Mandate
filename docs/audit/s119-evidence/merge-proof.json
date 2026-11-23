@@ -1,0 +1,60 @@
+{
+  "base": "a360803f",
+  "merged": "446db668",
+  "days": 148,
+  "dailyHashesEqual": true,
+  "initialHashEqual": true,
+  "worldHashEqual": true,
+  "countersEqual": true,
+  "livenessEqual": true,
+  "rejections": 0,
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/merge-check.ts"
+      ],
+      "exit": 0,
+      "seconds": 27.29,
+      "log": "runs/s119/merge-hashes.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.542,
+      "log": "runs/s119/merge-typecheck.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/kernel/test/s112-letter-identity.test.ts",
+        "packages/kernel/test/s112-paper-receipts.test.ts",
+        "packages/kernel/test/s111-call-evidence.test.ts",
+        "packages/cli/test/s111-exposure.test.ts",
+        "packages/pack-format/test/schemas.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.806,
+      "log": "runs/s119/merge-focused.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/kernel/test/s112-authored-letters.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.442,
+      "log": "runs/s119/merge-authored.log"
+    }
+  ]
+}

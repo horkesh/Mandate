@@ -69,10 +69,15 @@ describe('the migrations registry', () => {
     }
   });
 
-  it('the schema 1 fixture is exactly what this build writes for the same content', () => {
-    // If this fails, the saved shape changed: bump CURRENT_SAVE_SCHEMA, add a
-    // migration and a new fixture. Never edit an old fixture.
-    expect(readFileSync(fixture(1), 'utf8').trimEnd()).toBe(encodeSave(content));
+  it('the current fixture is exactly what this build writes for the same content', () => {
+    expect(readFileSync(fixture(CURRENT_SAVE_SCHEMA), 'utf8').trimEnd()).toBe(encodeSave(content));
+  });
+
+  it('preserves older hashes and round-trips unknown stragglers in schema 3', () => {
+    const original = JSON.parse(readFileSync(fixture(2), 'utf8'));
+    expect(decodeSave(JSON.stringify(original))).toMatchObject({ schemaVersion: 3, stateHash: original.stateHash, logHash: original.logHash });
+    const state = { forceBlockStates: { sample: { fbLots: [{ lotId: 'unknown', lotMen: null, lotStragglers: null }] } } };
+    expect(decodeSave(encodeSave({ worldHash: WORLD, state })).state).toEqual(state);
   });
 
   it('runs migrations in order and recomputes hashes (a hypothetical schema 3)', () => {

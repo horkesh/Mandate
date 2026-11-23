@@ -95,7 +95,8 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     if (c.cmd === 'review') {
       const e = c.edit;
       const edit = e === null ? null : { kind: e.kind, axis: e.axis, region: e.region, via: [...e.via], concentration: e.concentration };
-      return { day, seat, command: { cmd: 'review', to: c.to, action: c.action, edit, ...(c.notes === undefined ? {} : { notes: c.notes.map(copyNote) }), route: c.route, bypass: c.bypass } };
+      return { day, seat, command: { cmd: 'review', to: c.to, action: c.action, edit, ...(c.notes === undefined ? {} : { notes: c.notes.map(copyNote) }),
+        ...(c.paper === undefined ? {} : { paper: c.paper }), route: c.route, bypass: c.bypass } };
     }
     // Lane 1.5: the people verbs, copied field by field like the rest.
     switch (c.cmd) {
@@ -104,7 +105,9 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
       case 'relieve':
         return { day, seat, command: { cmd: 'relieve', post: c.post, mode: c.mode, to: c.to, route: c.route } };
       case 'transfer':
-        return { day, seat, command: { cmd: 'transfer', from: c.from, to: c.to, force: c.force, amount: c.amount, route: c.route } };
+        return { day, seat, command: { cmd: 'transfer', from: c.from, to: c.to, force: c.force, amount: c.amount, route: c.route,
+          ...(c.regiments === undefined ? {} : { regiments: [...c.regiments] }),
+          ...(c.concentration === undefined ? {} : { concentration: c.concentration }) } };
       case 'inquire':
         return { day, seat, command: { cmd: 'inquire', to: c.to, subject: c.subject, route: c.route } };
       case 'consult':
@@ -121,6 +124,8 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
         return { day, seat, command: { cmd: 'address', bloc: c.bloc } };
     }
     return { day, seat, command: { cmd: 'order', to: c.to, goal: copyGoal(c.goal), route: c.route, bypass: c.bypass,
+      ...(c.letter === undefined ? {} : { letter: { namespace: c.letter.namespace, key: c.letter.key, revision: c.letter.revision } }),
+      ...(c.retryOf === undefined ? {} : { retryOf: c.retryOf }),
       ...(c.doctrine === undefined ? {} : { doctrine: c.doctrine }) } };
   });
 }

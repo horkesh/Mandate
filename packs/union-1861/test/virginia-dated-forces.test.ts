@@ -30,30 +30,31 @@ describe('S46 dated Virginia state contingents', () => {
     expect(forceTotals(state.forceBlockStates[B('va_harpers_ferry')]!).fbStrength).toBeNull();
     tick(64); expect(state.postStates[P('st_va_richmond')]?.postHolder).toBe('magruder_john_b');
     tick(71); expect(state.forceLocations[B('va_manassas_garland')]?.locRegion).toBe('manassas');
-    expect(state.forceLocations[B('va_manassas_preston')]?.locRegion).toBe('manassas');
+    expect(state.forceLocations[B('va_manassas_preston')]).toBeUndefined();
+    expect(state.forceLocations[B('va_harpers_ferry')]?.locRegion).toBe('harpers_ferry');
     tick(77); expect(state.forceLocations[B('va_peninsula')]?.locRegion).toBe('peninsula');
     tick(79); expect(state.postStates[P('st_va_norfolk')]?.postHolder).toBe('huger_benjamin');
     const before=state; tick(93);
-    for (const id of ['va_norfolk','va_harpers_ferry','va_richmond','va_manassas_garland','va_manassas_preston','va_peninsula']) {
+    for (const id of ['va_norfolk','va_harpers_ferry','va_richmond','va_manassas_garland','va_peninsula']) {
       expect(observeBlock(state.forceBlockStates[B(id)]!)).toMatchObject({ fbDepartment:'cs_war',fbStrength:id==='va_manassas_garland'?490:null });
       expect(enlistmentsOf(state)[B(id)]).toEqual(enlistmentsOf(before)[B(id)]);
       expect(state.forceAssignments[B(id)]).toBe(before.forceAssignments[B(id)]);
       expect(state.forceLocations[B(id)]).toEqual(before.forceLocations[B(id)]);
     }
     tick(104); expect(state.forceBlockStates[B('cs_va_transfer_virginia')]).toBeUndefined();
-    expect(Object.keys(state.forceBlockStates).filter(b=>b.startsWith('state-forces.va_'))).toHaveLength(6);
+    expect(Object.keys(state.forceBlockStates).filter(b=>b.startsWith('state-forces.va_'))).toHaveLength(5);
   });
 });
 
 
-it('S81 Garland return starts on 12 May, remains its own aggregate, and never backfills Preston', () => {
+it('S81 Garland return remains its own aggregate and leaves Harpers Ferry men unknown', () => {
   const f=fixture();let state=f.state;
   const step=(day:number)=>{state=phase0.tick(f.world,{...state,stateDay:day-1},[],{freeze:true}).state;};
   step(67);expect(state.forceBlockStates[B('va_manassas_garland')]).toBeUndefined();
   step(68);expect(forceTotals(state.forceBlockStates[B('va_manassas_garland')]!).fbStrength).toBe(490);
   expect(enlistmentsOf(state)[B('va_manassas_garland')]?.enlRegiments).toBeNull();
   expect(state.forceBlockStates[B('va_manassas_garland')]!.fbLots).toHaveLength(1);
-  step(71);expect(forceTotals(state.forceBlockStates[B('va_manassas_preston')]!).fbStrength).toBeNull();
+  step(71);expect(state.forceBlockStates[B('va_manassas_preston')]).toBeUndefined();
   expect(forceTotals(state.forceBlockStates[B('va_manassas_garland')]!).fbStrength).toBe(490);
 });
 

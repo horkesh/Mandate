@@ -21,11 +21,11 @@
 import { strictCompare } from '../compare.ts';
 import { daysFromCivil, parseIsoDate } from '../world/calendar.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
-import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { FactionId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
 import { reportConfidenceProblems } from '../knowledge/confidence.ts';
 import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
-import type { PlannerRules, PlansRules, StandingRules } from '../world/world.ts';
+import type { PlannerRules, PlansRules, PrincipalDoctrine, StandingRules } from '../world/world.ts';
 import { noteRulesProblems } from '../plans/note-rules.ts';
 import { situationReferenceProblems } from '../situations/references.ts';
 import type { SituationDef } from '../situations/types.ts';
@@ -39,6 +39,17 @@ import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole, World } from '../world/world.ts';
 import { conditionalDoctrineProblems } from '../world/doctrine.ts';
+import { letterKey, type LetterIdentity } from '../world/letters.ts';
+import { seatIdFor } from './seats.ts';
+
+/** Only principals with explicit paper prerequisites retain report witnesses in this build. */
+export function paperDoctrines(world: SeatsWorld): ReadonlyMap<SeatId, PrincipalDoctrine> | undefined {
+  const rows = world.map.world.rules.ruleSeats.principals.filter(r =>
+    r.offensives.some(o => o.requiresPapers !== undefined) || r.calls.some(c => c.requiresPapers !== undefined) ||
+    r.concentrations?.some(c => c.requiresPapers !== undefined) === true || r.proposalAnswers?.some(a => a.requiresPapers !== undefined) === true);
+  if (rows.length === 0) return undefined;
+  return new Map(rows.map(r => [seatIdFor(world.faction(r.faction).principal), r]));
+}
 
 /**
  * The rules the seats layer reads, all the pack's (`WorldRules`, 0072), read from the World it was indexed with, never
@@ -380,14 +391,19 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
   }
   rows.forEach((r, i) => {
     const at = `rules.ruleSeats.principals[${i}]`;
-    for (const p of conditionalDoctrineProblems(r, id => map.regions.has(id))) problems.push(`${at}.${p.field}: ${p.message}`);
+    if (r.letterNamespace !== undefined && rows.findIndex(q => q.letterNamespace === r.letterNamespace) !== i) problems.push(`${at}.letterNamespace: duplicate issuer namespace`);
+    const declared = new Map(start.temporaryPosts.map(p => [p.id, p]));
+    const hasPerson = (id: PersonId) => map.world.people.some(p => p.id === id);
+    const hasPost = (id: PostId) => posts.has(id) || declared.has(id);
+    const hasLetter = (issuer: PersonId, letter: LetterIdentity) => rows.some(q =>
+      factions.get(q.faction)?.principal === issuer && q.offensives.some(o => o.letter !== undefined && letterKey(o.letter) === letterKey(letter)));
+    for (const p of conditionalDoctrineProblems(r, id => map.regions.has(id), { hasPerson, hasPost, hasLetter })) problems.push(`${at}.${p.field}: ${p.message}`);
     const onSide = (post: string, what: string) => {
       if (!posts.has(post)) problems.push(`${at}.${what}: ${post} is not a start post`);
       else if (postSides.get(post)?.faction !== r.faction) problems.push(`${at}.${what}: ${post} is not on ${r.faction}'s side at the start`);
     };
     if (r.concentrateAt !== null) onSide(r.concentrateAt, 'concentrateAt');
     if ((r.concentrateAt === null) !== (r.concentrateSource === null)) problems.push(`${at}.concentrateSource: a concentration post cites its source, and only a concentration post has one`);
-    const declared = new Map(start.temporaryPosts.map(p => [p.id, p]));
     const onDeclaredSide = (id: PostId, field: string, prerequisite?: string) => {
       const p = posts.get(id) ?? declared.get(id);
       const dept = map.world.departments.find(d => d.id === p?.department);
@@ -412,6 +428,15 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     }
     const concentrationDates = new Set<string>();
     for (const c of r.concentrations ?? []) {
+      if (c.namedRegiments !== undefined) {
+        const named = c.namedRegiments;
+        const from = c.fromPosts[0];
+        if (c.id === undefined || c.fromPosts.length !== 1 || named.ids.length === 0 || new Set(named.ids).size !== named.ids.length ||
+          !r.calls.some(call => call.id === named.afterCall && call.post === from) ||
+          !named.ids.every(id => map.world.regimentCatalogue?.some(record => record.id === id && record.side === r.faction))) {
+          problems.push('named concentration requires an id, one donor with its own call, and distinct same-side catalogue regiments');
+        }
+      }
       onDeclaredSide(c.post, 'concentrations.post', c.requiresDepartment);
       // A source government can join independently of the receiving army's
       // government. The principal's received picture still gates each source.

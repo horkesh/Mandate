@@ -17,61 +17,7 @@
   },
   "effects": [
     {
-      "propose": {
-        "owner": "recruitment",
-        "field": "state_forces",
-        "subject": "st_gov_tennessee",
-        "delta": 1,
-        "reason": "state-forces-transferred",
-        "side": "confederate",
-        "stateForces": {
-          "id": "cs_tn_infantry_tennessee",
-          "regiments": null,
-          "men": null,
-          "arm": "infantry",
-          "termDays": null,
-          "termUnknown": true
-        }
-      }
-    },
-    {
-      "propose": {
-        "owner": "recruitment",
-        "field": "state_forces",
-        "subject": "st_gov_tennessee",
-        "delta": 1,
-        "reason": "state-forces-transferred",
-        "side": "confederate",
-        "stateForces": {
-          "id": "cs_tn_cavalry_tennessee",
-          "regiments": null,
-          "men": null,
-          "arm": "cavalry",
-          "termDays": null,
-          "termUnknown": true
-        }
-      }
-    },
-    {
-      "propose": {
-        "owner": "recruitment",
-        "field": "state_forces",
-        "subject": "st_gov_tennessee",
-        "delta": 1,
-        "reason": "state-forces-transferred",
-        "side": "confederate",
-        "stateForces": {
-          "id": "cs_tn_artillery_tennessee",
-          "regiments": null,
-          "men": null,
-          "arm": "artillery",
-          "termDays": null,
-          "termUnknown": true
-        }
-      }
-    },
-    {
-      "setFlag": "tennessee_forces_transferred"
+      "setFlag": "tennessee_forces_authorized"
     }
   ],
   "report": {

@@ -28,7 +28,8 @@ it('a fictional recruiting office can answer three arm requests concurrently wit
   expect(new Set(entries.map(([id]) => id)).size).toBe(3);
   expect(entries.map(([id]) => state.forceBlockStates[ids.toId('forceBlock', id)]!.fbArm).sort()).toEqual([...arms].sort());
   for (const [id, e] of entries) {
-    expect(e).toMatchObject({ enlPost: office, enlRegiments: null });
+    const askedRegiments = e.enlCallId === 'office_quota_0' ? 8 : 1;
+    expect(e).toMatchObject({ enlPost: office, enlRegiments: askedRegiments });
     expect(e.enlEndsDay! - e.enlMusterDay).toBe(1095);
     expect(forceTotals(state.forceBlockStates[ids.toId('forceBlock', id)]!).fbStrength).toBeNull();
     expect(state.forceAssignments[ids.toId('forceBlock', id)]).toBe(office);

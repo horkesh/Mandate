@@ -1,0 +1,3118 @@
+[
+  {
+    "order": "m.2.lincoln_abraham.bates_edward.verb.consult.sumter_garrison.us_attorney_general",
+    "side": "union",
+    "kind": "verb:consult",
+    "actor": "bates_edward",
+    "issuedDay": 2,
+    "receivedDays": [
+      2
+    ],
+    "subject": "sumter_garrison",
+    "post": "us_attorney_general"
+  },
+  {
+    "order": "m.2.lincoln_abraham.scott_winfield.verb.consult.sumter_garrison.us_general_in_chief",
+    "side": "union",
+    "kind": "verb:consult",
+    "actor": "scott_winfield",
+    "issuedDay": 2,
+    "receivedDays": [
+      2
+    ],
+    "subject": "sumter_garrison",
+    "post": "us_general_in_chief"
+  },
+  {
+    "order": "m.2.lincoln_abraham.smith_caleb_b.verb.consult.sumter_garrison.us_secretary_interior",
+    "side": "union",
+    "kind": "verb:consult",
+    "actor": "smith_caleb_b",
+    "issuedDay": 2,
+    "receivedDays": [
+      2
+    ],
+    "subject": "sumter_garrison",
+    "post": "us_secretary_interior"
+  },
+  {
+    "order": "m.2.lincoln_abraham.seward_william_h.verb.consult.sumter_garrison.us_secretary_state",
+    "side": "union",
+    "kind": "verb:consult",
+    "actor": "seward_william_h",
+    "issuedDay": 2,
+    "receivedDays": [
+      2
+    ],
+    "subject": "sumter_garrison",
+    "post": "us_secretary_state"
+  },
+  {
+    "order": "m.2.lincoln_abraham.cameron_simon.verb.consult.sumter_garrison.us_secretary_war",
+    "side": "union",
+    "kind": "verb:consult",
+    "actor": "cameron_simon",
+    "issuedDay": 2,
+    "receivedDays": [
+      2
+    ],
+    "subject": "sumter_garrison",
+    "post": "us_secretary_war"
+  },
+  {
+    "order": "m.4.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_andrew_b",
+    "issuedDay": 4,
+    "receivedDays": [
+      4
+    ],
+    "post": "st_gov_alabama",
+    "callId": "cs_mar09_alabama",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "perry_madison_s",
+    "issuedDay": 4,
+    "receivedDays": [
+      4
+    ],
+    "post": "st_gov_florida",
+    "callId": "cs_mar09_florida",
+    "regiments": 1,
+    "termDays": 365
+  },
+  {
+    "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "brown_joseph_e",
+    "issuedDay": 4,
+    "receivedDays": [
+      4
+    ],
+    "post": "st_gov_georgia",
+    "callId": "cs_mar09_georgia",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_thomas_o",
+    "issuedDay": 4,
+    "receivedDays": [
+      4
+    ],
+    "post": "st_gov_louisiana",
+    "callId": "cs_mar09_louisiana",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.4.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pettus_john_j",
+    "issuedDay": 4,
+    "receivedDays": [
+      4
+    ],
+    "post": "st_gov_mississippi",
+    "callId": "cs_mar09_mississippi",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pickens_francis_w",
+    "issuedDay": 4,
+    "receivedDays": [
+      4
+    ],
+    "post": "st_gov_south_carolina",
+    "callId": "cs_mar09_south_carolina",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "houston_samuel",
+    "issuedDay": 4,
+    "receivedDays": [
+      4
+    ],
+    "post": "st_gov_texas",
+    "callId": "cs_mar09_texas",
+    "regiments": 1,
+    "termDays": 365
+  },
+  {
+    "order": "m.34.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_andrew_b",
+    "issuedDay": 34,
+    "receivedDays": [
+      34
+    ],
+    "post": "st_gov_alabama",
+    "callId": "cs_apr08_alabama",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "perry_madison_s",
+    "issuedDay": 34,
+    "receivedDays": [
+      34
+    ],
+    "post": "st_gov_florida",
+    "callId": "cs_apr08_florida",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "brown_joseph_e",
+    "issuedDay": 34,
+    "receivedDays": [
+      34
+    ],
+    "post": "st_gov_georgia",
+    "callId": "cs_apr08_georgia",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_thomas_o",
+    "issuedDay": 34,
+    "receivedDays": [
+      34
+    ],
+    "post": "st_gov_louisiana",
+    "callId": "cs_apr08_louisiana",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.34.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pettus_john_j",
+    "issuedDay": 34,
+    "receivedDays": [
+      34
+    ],
+    "post": "st_gov_mississippi",
+    "callId": "cs_apr08_mississippi",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pickens_francis_w",
+    "issuedDay": 34,
+    "receivedDays": [
+      34
+    ],
+    "post": "st_gov_south_carolina",
+    "callId": "cs_apr08_south_carolina",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.34.davis_jefferson.clark_edward.call.st_gov_texas",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "clark_edward",
+    "issuedDay": 34,
+    "receivedDays": [
+      34
+    ],
+    "post": "st_gov_texas",
+    "callId": "cs_apr08_texas",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.36.davis_jefferson.walker_leroy_p.order.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "goal",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 36,
+    "receivedDays": [],
+    "post": "cs_cmd_charleston",
+    "objective": "fort_sumter",
+    "posture": "take"
+  },
+  {
+    "order": "m.37.davis_jefferson.beauregard_pierre_g_t.order.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "goal",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "cs_cmd_charleston",
+    "objective": "fort_sumter",
+    "posture": "take"
+  },
+  {
+    "order": "m.37.davis_jefferson.cooper_samuel.verb.appoint.cs_war_adjutant_inspector_general",
+    "side": "confederate",
+    "kind": "verb:appoint",
+    "actor": "cooper_samuel",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "cs_war_adjutant_inspector_general"
+  },
+  {
+    "order": "m.37.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.37.davis_jefferson.perry_madison_s.verb.transfer.st_gov_florida",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "perry_madison_s",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "st_gov_florida",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.37.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_thomas_o",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "st_gov_louisiana",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.37.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.37.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pickens_francis_w",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "st_gov_south_carolina",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.37.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 37,
+    "receivedDays": [
+      37
+    ],
+    "post": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine",
+    "side": "union",
+    "kind": "call",
+    "actor": "washburn_israel",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_maine",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+    "side": "union",
+    "kind": "call",
+    "actor": "goodwin_ichabod",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_new_hampshire",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+    "side": "union",
+    "kind": "call",
+    "actor": "fairbanks_erastus",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_vermont",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+    "side": "union",
+    "kind": "call",
+    "actor": "andrew_john_a",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_massachusetts",
+    "callId": null,
+    "regiments": 2,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+    "side": "union",
+    "kind": "call",
+    "actor": "sprague_william",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_rhode_island",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+    "side": "union",
+    "kind": "call",
+    "actor": "buckingham_william_a",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_connecticut",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+    "side": "union",
+    "kind": "call",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_new_york",
+    "callId": null,
+    "regiments": 17,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania",
+    "side": "union",
+    "kind": "call",
+    "actor": "curtin_andrew_g",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_pennsylvania",
+    "callId": null,
+    "regiments": 14,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+    "side": "union",
+    "kind": "call",
+    "actor": "olden_charles_s",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_new_jersey",
+    "callId": null,
+    "regiments": 4,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.burton_william.call.st_gov_delaware",
+    "side": "union",
+    "kind": "call",
+    "actor": "burton_william",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_delaware",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+    "side": "union",
+    "kind": "call",
+    "actor": "hicks_thomas_h",
+    "issuedDay": 41,
+    "receivedDays": [
+      43
+    ],
+    "post": "st_gov_maryland",
+    "callId": null,
+    "regiments": 4,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_virginia",
+    "side": "union",
+    "kind": "call",
+    "actor": "letcher_john",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_virginia",
+    "callId": null,
+    "regiments": 3,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina",
+    "side": "union",
+    "kind": "call",
+    "actor": "ellis_john_w",
+    "issuedDay": 41,
+    "receivedDays": [
+      45
+    ],
+    "post": "st_gov_north_carolina",
+    "callId": null,
+    "regiments": 2,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee",
+    "side": "union",
+    "kind": "call",
+    "actor": "harris_isham_g",
+    "issuedDay": 41,
+    "receivedDays": [
+      44
+    ],
+    "post": "st_gov_tennessee",
+    "callId": null,
+    "regiments": 2,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas",
+    "side": "union",
+    "kind": "call",
+    "actor": "rector_henry_m",
+    "issuedDay": 41,
+    "receivedDays": [
+      45
+    ],
+    "post": "st_gov_arkansas",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+    "side": "union",
+    "kind": "call",
+    "actor": "magoffin_beriah",
+    "issuedDay": 41,
+    "receivedDays": [
+      44
+    ],
+    "post": "st_gov_kentucky",
+    "callId": null,
+    "regiments": 4,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+    "side": "union",
+    "kind": "call",
+    "actor": "jackson_claiborne_f",
+    "issuedDay": 41,
+    "receivedDays": [
+      43
+    ],
+    "post": "st_gov_missouri",
+    "callId": null,
+    "regiments": 4,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.yates_richard.call.st_gov_illinois",
+    "side": "union",
+    "kind": "call",
+    "actor": "yates_richard",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_illinois",
+    "callId": null,
+    "regiments": 6,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+    "side": "union",
+    "kind": "call",
+    "actor": "morton_oliver_h_p_t",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_indiana",
+    "callId": null,
+    "regiments": 6,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio",
+    "side": "union",
+    "kind": "call",
+    "actor": "dennison_william",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_ohio",
+    "callId": null,
+    "regiments": 13,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+    "side": "union",
+    "kind": "call",
+    "actor": "blair_austin",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_michigan",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+    "side": "union",
+    "kind": "call",
+    "actor": "randall_alexander_w",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_wisconsin",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+    "side": "union",
+    "kind": "call",
+    "actor": "kirkwood_samuel_j",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_iowa",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+    "side": "union",
+    "kind": "call",
+    "actor": "ramsey_alexander",
+    "issuedDay": 41,
+    "receivedDays": [
+      41
+    ],
+    "post": "st_gov_minnesota",
+    "callId": null,
+    "regiments": 1,
+    "termDays": 90
+  },
+  {
+    "order": "m.42.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_andrew_b",
+    "issuedDay": 42,
+    "receivedDays": [
+      42
+    ],
+    "post": "st_gov_alabama",
+    "callId": "cs_apr16_alabama",
+    "regiments": 5,
+    "termDays": 365
+  },
+  {
+    "order": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "perry_madison_s",
+    "issuedDay": 42,
+    "receivedDays": [
+      42
+    ],
+    "post": "st_gov_florida",
+    "callId": "cs_apr16_florida",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "brown_joseph_e",
+    "issuedDay": 42,
+    "receivedDays": [
+      42
+    ],
+    "post": "st_gov_georgia",
+    "callId": "cs_apr16_georgia",
+    "regiments": 5,
+    "termDays": 365
+  },
+  {
+    "order": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_thomas_o",
+    "issuedDay": 42,
+    "receivedDays": [
+      42
+    ],
+    "post": "st_gov_louisiana",
+    "callId": "cs_apr16_louisiana",
+    "regiments": 5,
+    "termDays": 365
+  },
+  {
+    "order": "m.42.lincoln_abraham.stone_charles_p.verb.inquire.us_dc_militia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "stone_charles_p",
+    "issuedDay": 42,
+    "receivedDays": [
+      42
+    ],
+    "post": "us_dc_militia"
+  },
+  {
+    "order": "m.43.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pettus_john_j",
+    "issuedDay": 43,
+    "receivedDays": [
+      43
+    ],
+    "post": "st_gov_mississippi",
+    "callId": "cs_apr16_mississippi",
+    "regiments": 5,
+    "termDays": 365
+  },
+  {
+    "order": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pickens_francis_w",
+    "issuedDay": 43,
+    "receivedDays": [
+      43
+    ],
+    "post": "st_gov_south_carolina",
+    "callId": "cs_apr16_south_carolina",
+    "regiments": 5,
+    "termDays": 365
+  },
+  {
+    "order": "m.43.davis_jefferson.clark_edward.call.st_gov_texas",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "clark_edward",
+    "issuedDay": 43,
+    "receivedDays": [
+      43
+    ],
+    "post": "st_gov_texas",
+    "callId": "cs_apr16_texas",
+    "regiments": 5,
+    "termDays": 365
+  },
+  {
+    "order": "m.44.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 44,
+    "receivedDays": [
+      44
+    ],
+    "post": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.47.lincoln_abraham.buckingham_william_a.verb.transfer.st_gov_connecticut",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "buckingham_william_a",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_connecticut",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.yates_richard.verb.transfer.st_gov_illinois",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "yates_richard",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_illinois",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.morton_oliver_h_p_t.verb.transfer.st_gov_indiana",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "morton_oliver_h_p_t",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_indiana",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.kirkwood_samuel_j.verb.transfer.st_gov_iowa",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "kirkwood_samuel_j",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_iowa",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.washburn_israel.verb.transfer.st_gov_maine",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "washburn_israel",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_maine",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "andrew_john_a",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_massachusetts",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.blair_austin.verb.transfer.st_gov_michigan",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "blair_austin",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_michigan",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.ramsey_alexander.verb.transfer.st_gov_minnesota",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "ramsey_alexander",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_minnesota",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.goodwin_ichabod.verb.transfer.st_gov_new_hampshire",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "goodwin_ichabod",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_new_hampshire",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.olden_charles_s.verb.transfer.st_gov_new_jersey",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "olden_charles_s",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_new_jersey",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_new_york",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.47.lincoln_abraham.curtin_andrew_g.verb.transfer.st_gov_pennsylvania",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "curtin_andrew_g",
+    "issuedDay": 47,
+    "receivedDays": [
+      47
+    ],
+    "post": "st_gov_pennsylvania",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.48.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_andrew_b",
+    "issuedDay": 48,
+    "receivedDays": [
+      48
+    ],
+    "post": "st_gov_alabama",
+    "callId": "cs_apr22_absolute_alabama",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "brown_joseph_e",
+    "issuedDay": 48,
+    "receivedDays": [
+      48
+    ],
+    "post": "st_gov_georgia",
+    "callId": "cs_apr22_absolute_georgia",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_thomas_o",
+    "issuedDay": 48,
+    "receivedDays": [
+      48
+    ],
+    "post": "st_gov_louisiana",
+    "callId": "cs_apr22_absolute_louisiana",
+    "regiments": 1,
+    "termDays": 365
+  },
+  {
+    "order": "m.48.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pettus_john_j",
+    "issuedDay": 48,
+    "receivedDays": [
+      48
+    ],
+    "post": "st_gov_mississippi",
+    "callId": "cs_apr22_absolute_mississippi",
+    "regiments": 2,
+    "termDays": 365
+  },
+  {
+    "order": "m.49.lincoln_abraham.stone_charles_p.verb.inquire.us_dc_militia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "stone_charles_p",
+    "issuedDay": 49,
+    "receivedDays": [
+      49
+    ],
+    "post": "us_dc_militia"
+  },
+  {
+    "order": "m.50.lincoln_abraham.sprague_william.verb.transfer.st_gov_rhode_island",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "sprague_william",
+    "issuedDay": 50,
+    "receivedDays": [
+      50
+    ],
+    "post": "st_gov_rhode_island",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.50.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "fairbanks_erastus",
+    "issuedDay": 50,
+    "receivedDays": [
+      50
+    ],
+    "post": "st_gov_vermont",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.50.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "randall_alexander_w",
+    "issuedDay": 50,
+    "receivedDays": [
+      50
+    ],
+    "post": "st_gov_wisconsin",
+    "to": "us_dc_militia"
+  },
+  {
+    "order": "m.51.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 51,
+    "receivedDays": [
+      51
+    ],
+    "post": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:appoint",
+    "actor": "patterson_robert",
+    "issuedDay": 53,
+    "receivedDays": [
+      53
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.53.lincoln_abraham.smith_charles_f.verb.appoint.us_recruiting_service",
+    "side": "union",
+    "kind": "verb:appoint",
+    "actor": "smith_charles_f",
+    "issuedDay": 53,
+    "receivedDays": [
+      53
+    ],
+    "post": "us_recruiting_service"
+  },
+  {
+    "order": "m.54.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 54,
+    "receivedDays": [
+      54
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.54.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 54,
+    "receivedDays": [
+      54
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.54.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_thomas_o",
+    "issuedDay": 54,
+    "receivedDays": [
+      54
+    ],
+    "post": "st_gov_louisiana",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.54.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 54,
+    "receivedDays": [
+      54
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.54.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "letcher_john",
+    "issuedDay": 54,
+    "receivedDays": [
+      54
+    ],
+    "post": "st_gov_virginia",
+    "to": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 56,
+    "receivedDays": [
+      56
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.58.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 58,
+    "receivedDays": [
+      58
+    ],
+    "post": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+    "side": "union",
+    "kind": "call",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 59,
+    "receivedDays": [
+      59
+    ],
+    "post": "st_gov_new_york",
+    "callId": "us_may03_accepted_new_york",
+    "regiments": 38,
+    "termDays": 730
+  },
+  {
+    "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+    "side": "union",
+    "kind": "call",
+    "actor": "smith_charles_f",
+    "issuedDay": 60,
+    "receivedDays": [
+      60
+    ],
+    "post": "us_recruiting_service",
+    "callId": "us_may04_regular_infantry",
+    "regiments": 8,
+    "termDays": 1095
+  },
+  {
+    "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+    "side": "union",
+    "kind": "call",
+    "actor": "smith_charles_f",
+    "issuedDay": 60,
+    "receivedDays": [
+      60
+    ],
+    "post": "us_recruiting_service",
+    "callId": "us_may04_regular_cavalry",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+    "side": "union",
+    "kind": "call",
+    "actor": "smith_charles_f",
+    "issuedDay": 60,
+    "receivedDays": [
+      60
+    ],
+    "post": "us_recruiting_service",
+    "callId": "us_may04_regular_artillery",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 63,
+    "receivedDays": [
+      63
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.65.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 65,
+    "receivedDays": [
+      65
+    ],
+    "post": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 70,
+    "receivedDays": [
+      70
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "rector_henry_m",
+    "issuedDay": 71,
+    "receivedDays": [
+      74
+    ],
+    "post": "st_gov_arkansas",
+    "callId": "cs_apr22_absolute_arkansas",
+    "regiments": 1,
+    "termDays": 365
+  },
+  {
+    "order": "m.71.lincoln_abraham.saunders_alvin.verb.appoint.tr_gov_nebraska",
+    "side": "union",
+    "kind": "verb:appoint",
+    "actor": "saunders_alvin",
+    "issuedDay": 71,
+    "receivedDays": [
+      71
+    ],
+    "post": "tr_gov_nebraska"
+  },
+  {
+    "order": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+    "side": "union",
+    "kind": "call",
+    "actor": "andrew_john_a",
+    "issuedDay": 71,
+    "receivedDays": [
+      71
+    ],
+    "post": "st_gov_massachusetts",
+    "callId": "us_may15_vol_massachusetts",
+    "regiments": 6,
+    "termDays": 1095
+  },
+  {
+    "order": "m.71.lincoln_abraham.robinson_charles.call.st_gov_kansas",
+    "side": "union",
+    "kind": "call",
+    "actor": "robinson_charles",
+    "issuedDay": 71,
+    "receivedDays": [
+      71
+    ],
+    "post": "st_gov_kansas",
+    "callId": "us_may15_vol_kansas",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.71.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+    "side": "union",
+    "kind": "call",
+    "actor": "sprague_william",
+    "issuedDay": 71,
+    "receivedDays": [
+      71
+    ],
+    "post": "st_gov_rhode_island",
+    "callId": "us_may15_vol_rhode_island",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.72.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+    "side": "union",
+    "kind": "call",
+    "actor": "buckingham_william_a",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_connecticut",
+    "callId": "us_may16_vol_connecticut",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.lincoln_abraham.yates_richard.call.st_gov_illinois",
+    "side": "union",
+    "kind": "call",
+    "actor": "yates_richard",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_illinois",
+    "callId": "us_may16_vol_illinois",
+    "regiments": 6,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+    "side": "union",
+    "kind": "call",
+    "actor": "morton_oliver_h_p_t",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_indiana",
+    "callId": "us_may16_vol_indiana",
+    "regiments": 4,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+    "side": "union",
+    "kind": "call",
+    "actor": "kirkwood_samuel_j",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_iowa",
+    "callId": "us_may16_vol_iowa",
+    "regiments": 2,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.lincoln_abraham.washburn_israel.call.st_gov_maine",
+    "side": "union",
+    "kind": "call",
+    "actor": "washburn_israel",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_maine",
+    "callId": "us_may16_vol_maine",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.lincoln_abraham.blair_austin.call.st_gov_michigan",
+    "side": "union",
+    "kind": "call",
+    "actor": "blair_austin",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_michigan",
+    "callId": "us_may16_vol_michigan",
+    "regiments": 3,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+    "side": "union",
+    "kind": "call",
+    "actor": "goodwin_ichabod",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_new_hampshire",
+    "callId": "us_may16_vol_new_hampshire",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.72.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+    "side": "union",
+    "kind": "call",
+    "actor": "olden_charles_s",
+    "issuedDay": 72,
+    "receivedDays": [
+      72
+    ],
+    "post": "st_gov_new_jersey",
+    "callId": "us_may16_vol_new_jersey",
+    "regiments": 3,
+    "termDays": 1095
+  },
+  {
+    "order": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula",
+    "side": "confederate",
+    "kind": "verb:appoint",
+    "actor": "magruder_john_b",
+    "issuedDay": 77,
+    "receivedDays": [
+      77
+    ],
+    "post": "st_va_peninsula",
+    "to": "st_va_richmond"
+  },
+  {
+    "order": "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 77,
+    "receivedDays": [
+      77
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.78.lincoln_abraham.butler_benjamin_f.verb.appoint.us_dept_virginia",
+    "side": "union",
+    "kind": "verb:appoint",
+    "actor": "butler_benjamin_f",
+    "issuedDay": 78,
+    "receivedDays": [
+      78
+    ],
+    "post": "us_dept_virginia"
+  },
+  {
+    "order": "m.78.lincoln_abraham.howard_oliver_o.verb.appoint.us_dept_pacific",
+    "side": "union",
+    "kind": "verb:appoint",
+    "actor": "howard_oliver_o",
+    "issuedDay": 78,
+    "receivedDays": [
+      78
+    ],
+    "post": "us_dept_pacific"
+  },
+  {
+    "order": "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio",
+    "side": "union",
+    "kind": "call",
+    "actor": "dennison_william",
+    "issuedDay": 78,
+    "receivedDays": [
+      78
+    ],
+    "post": "st_gov_ohio",
+    "callId": "us_may16_vol_ohio",
+    "regiments": 9,
+    "termDays": 1095
+  },
+  {
+    "order": "m.78.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+    "side": "union",
+    "kind": "call",
+    "actor": "fairbanks_erastus",
+    "issuedDay": 78,
+    "receivedDays": [
+      78
+    ],
+    "post": "st_gov_vermont",
+    "callId": "us_may16_vol_vermont",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.78.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+    "side": "union",
+    "kind": "call",
+    "actor": "randall_alexander_w",
+    "issuedDay": 78,
+    "receivedDays": [
+      78
+    ],
+    "post": "st_gov_wisconsin",
+    "callId": "us_may16_vol_wisconsin",
+    "regiments": 2,
+    "termDays": 1095
+  },
+  {
+    "order": "m.78.lincoln_abraham.saunders_alvin.call.tr_gov_nebraska",
+    "side": "union",
+    "kind": "call",
+    "actor": "saunders_alvin",
+    "issuedDay": 78,
+    "receivedDays": [
+      78
+    ],
+    "post": "tr_gov_nebraska",
+    "callId": "us_may15_vol_nebraska",
+    "regiments": 1,
+    "termDays": 1095
+  },
+  {
+    "order": "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+    "side": "union",
+    "kind": "call",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 78,
+    "receivedDays": [
+      78
+    ],
+    "post": "st_gov_new_york",
+    "callId": "us_may16_vol_new_york",
+    "regiments": 14,
+    "termDays": 1095
+  },
+  {
+    "order": "m.79.davis_jefferson.johnston_joseph_e.verb.appoint.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:appoint",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 79,
+    "receivedDays": [
+      79
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.79.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_charleston",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 79,
+    "receivedDays": [
+      79
+    ],
+    "post": "cs_cmd_charleston"
+  },
+  {
+    "order": "m.84.lincoln_abraham.mcdowell_irvin.verb.appoint.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:appoint",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 84,
+    "receivedDays": [
+      84
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.84.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "randall_alexander_w",
+    "issuedDay": 84,
+    "receivedDays": [
+      84
+    ],
+    "post": "st_gov_wisconsin",
+    "to": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 84,
+    "receivedDays": [
+      84
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.85.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "ellis_john_w",
+    "issuedDay": 85,
+    "receivedDays": [
+      88
+    ],
+    "post": "st_gov_north_carolina",
+    "callId": "cs_apr22_absolute_north_carolina",
+    "regiments": 1,
+    "termDays": 365
+  },
+  {
+    "order": "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "jackson_thomas_j",
+    "issuedDay": 86,
+    "receivedDays": [
+      93
+    ],
+    "post": "st_va_harpers_ferry",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 86,
+    "receivedDays": [
+      93
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.87.davis_jefferson.beauregard_pierre_g_t.verb.appoint.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:appoint",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.87.lincoln_abraham.buckingham_william_a.verb.transfer.st_gov_connecticut",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "buckingham_william_a",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_connecticut",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.washburn_israel.verb.transfer.st_gov_maine",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "washburn_israel",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_maine",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "andrew_john_a",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_massachusetts",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.blair_austin.verb.transfer.st_gov_michigan",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "blair_austin",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_michigan",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.goodwin_ichabod.verb.transfer.st_gov_new_hampshire",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "goodwin_ichabod",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_new_hampshire",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.olden_charles_s.verb.transfer.st_gov_new_jersey",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "olden_charles_s",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_new_jersey",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_new_york",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.sprague_william.verb.transfer.st_gov_rhode_island",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "sprague_william",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_rhode_island",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.87.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "fairbanks_erastus",
+    "issuedDay": 87,
+    "receivedDays": [
+      87
+    ],
+    "post": "st_gov_vermont",
+    "to": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "goal",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 90,
+    "receivedDays": [
+      96
+    ],
+    "post": "cs_cmd_harpers_ferry",
+    "objective": "harpers_ferry",
+    "posture": "hold"
+  },
+  {
+    "order": "m.91.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 91,
+    "receivedDays": [
+      93
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 91,
+    "receivedDays": [
+      91
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.92.davis_jefferson.holmes_theophilus_h.verb.appoint.cs_cmd_fredericksburg",
+    "side": "confederate",
+    "kind": "verb:appoint",
+    "actor": "holmes_theophilus_h",
+    "issuedDay": 92,
+    "receivedDays": [
+      92
+    ],
+    "post": "cs_cmd_fredericksburg"
+  },
+  {
+    "order": "m.93.davis_jefferson.cocke_philip_st_george.verb.transfer.st_va_potomac",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "cocke_philip_st_george",
+    "issuedDay": 93,
+    "receivedDays": [
+      97
+    ],
+    "post": "st_va_potomac",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.93.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 93,
+    "receivedDays": [
+      98
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+    "side": "union",
+    "kind": "call",
+    "actor": "morton_oliver_h_p_t",
+    "issuedDay": 98,
+    "receivedDays": [
+      98
+    ],
+    "post": "st_gov_indiana",
+    "callId": "us_jun11_indiana",
+    "regiments": 6,
+    "termDays": 1095
+  },
+  {
+    "order": "m.98.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 98,
+    "receivedDays": [
+      98
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 98,
+    "receivedDays": [
+      98
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.100.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 100,
+    "receivedDays": [
+      103
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.100.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 100,
+    "receivedDays": [
+      100
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.105.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 105,
+    "receivedDays": [
+      105
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 105,
+    "receivedDays": [
+      105
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.107.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 107,
+    "receivedDays": [
+      110
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.107.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 107,
+    "receivedDays": [
+      107
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "goal",
+    "actor": "patterson_robert",
+    "issuedDay": 112,
+    "receivedDays": [
+      112
+    ],
+    "post": "us_dept_pennsylvania",
+    "objective": "lower_valley",
+    "posture": "hold"
+  },
+  {
+    "order": "m.112.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 112,
+    "receivedDays": [
+      112
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 112,
+    "receivedDays": [
+      112
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.114.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 114,
+    "receivedDays": [
+      117
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.114.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 114,
+    "receivedDays": [
+      114
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_thomas_o",
+    "issuedDay": 116,
+    "receivedDays": [
+      116
+    ],
+    "post": "st_gov_louisiana",
+    "callId": "cs_jun29_extra_louisiana",
+    "regiments": 2,
+    "termDays": null
+  },
+  {
+    "order": "m.116.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pettus_john_j",
+    "issuedDay": 116,
+    "receivedDays": [
+      116
+    ],
+    "post": "st_gov_mississippi",
+    "callId": "cs_jun29_extra_mississippi",
+    "regiments": 2,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_andrew_b",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_alabama",
+    "callId": "cs_jun30_cavalry_alabama",
+    "regiments": null,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "rector_henry_m",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_arkansas",
+    "callId": "cs_jun30_cavalry_arkansas",
+    "regiments": null,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "brown_joseph_e",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_georgia",
+    "callId": "cs_jun30_cavalry_georgia",
+    "regiments": null,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pettus_john_j",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_mississippi",
+    "callId": "cs_jun30_cavalry_mississippi",
+    "regiments": null,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama.2",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_andrew_b",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_alabama",
+    "callId": "cs_jun30_reserve_alabama",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas.2",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "rector_henry_m",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_arkansas",
+    "callId": "cs_jun30_reserve_arkansas",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "perry_madison_s",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_florida",
+    "callId": "cs_jun30_reserve_florida",
+    "regiments": 1,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "brown_joseph_e",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_georgia",
+    "callId": "cs_jun30_reserve_georgia",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_thomas_o",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_louisiana",
+    "callId": "cs_jun30_reserve_louisiana",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pettus_john_j",
+    "issuedDay": 117,
+    "receivedDays": [
+      117
+    ],
+    "post": "st_gov_mississippi",
+    "callId": "cs_jun30_reserve_mississippi",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.119.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 119,
+    "receivedDays": [
+      119
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 119,
+    "receivedDays": [
+      119
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "ellis_john_w",
+    "issuedDay": 120,
+    "receivedDays": [
+      120
+    ],
+    "post": "st_gov_north_carolina",
+    "callId": "cs_jun30_reserve_north_carolina",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "pickens_francis_w",
+    "issuedDay": 120,
+    "receivedDays": [
+      120
+    ],
+    "post": "st_gov_south_carolina",
+    "callId": "cs_jun30_reserve_south_carolina",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.120.davis_jefferson.clark_edward.call.st_gov_texas",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "clark_edward",
+    "issuedDay": 120,
+    "receivedDays": [
+      120
+    ],
+    "post": "st_gov_texas",
+    "callId": "cs_jun30_reserve_texas",
+    "regiments": 2,
+    "termDays": null
+  },
+  {
+    "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "letcher_john",
+    "issuedDay": 120,
+    "receivedDays": [
+      120
+    ],
+    "post": "st_gov_virginia",
+    "callId": "cs_jun30_reserve_virginia",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.120.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "moore_andrew_b",
+    "issuedDay": 120,
+    "receivedDays": [
+      120
+    ],
+    "post": "st_gov_alabama",
+    "callId": "cs_jul01_extra_alabama",
+    "regiments": 2,
+    "termDays": null
+  },
+  {
+    "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "brown_joseph_e",
+    "issuedDay": 120,
+    "receivedDays": [
+      120
+    ],
+    "post": "st_gov_georgia",
+    "callId": "cs_jul01_extra_georgia",
+    "regiments": 2,
+    "termDays": null
+  },
+  {
+    "order": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 121,
+    "receivedDays": [
+      124
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.121.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 121,
+    "receivedDays": [
+      121
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "harris_isham_g",
+    "issuedDay": 122,
+    "receivedDays": [
+      124
+    ],
+    "post": "st_gov_tennessee",
+    "callId": "cs_apr22_absolute_tennessee",
+    "regiments": 3,
+    "termDays": 365
+  },
+  {
+    "order": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "harris_isham_g",
+    "issuedDay": 122,
+    "receivedDays": [
+      124
+    ],
+    "post": "st_gov_tennessee",
+    "callId": "cs_jun30_cavalry_tennessee",
+    "regiments": null,
+    "termDays": null
+  },
+  {
+    "order": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+    "side": "confederate",
+    "kind": "call",
+    "actor": "harris_isham_g",
+    "issuedDay": 122,
+    "receivedDays": [
+      124
+    ],
+    "post": "st_gov_tennessee",
+    "callId": "cs_jun30_reserve_tennessee",
+    "regiments": 3,
+    "termDays": null
+  },
+  {
+    "order": "m.122.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_thomas_o",
+    "issuedDay": 122,
+    "receivedDays": [
+      122
+    ],
+    "post": "st_gov_louisiana",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.122.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 122,
+    "receivedDays": [
+      122
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.123.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 123,
+    "receivedDays": [
+      123
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.126.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 126,
+    "receivedDays": [
+      126
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 126,
+    "receivedDays": [
+      128
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.127.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 127,
+    "receivedDays": [
+      127
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.127.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 127,
+    "receivedDays": [
+      127
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.127.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 127,
+    "receivedDays": [
+      127
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pickens_francis_w",
+    "issuedDay": 127,
+    "receivedDays": [
+      127
+    ],
+    "post": "st_gov_south_carolina",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "letcher_john",
+    "issuedDay": 127,
+    "receivedDays": [
+      127
+    ],
+    "post": "st_gov_virginia",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.128.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 128,
+    "receivedDays": [
+      128
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.128.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 128,
+    "receivedDays": [
+      128
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.128.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 128,
+    "receivedDays": [
+      128
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 128,
+    "receivedDays": [
+      131
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.128.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 128,
+    "receivedDays": [
+      128
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.129.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 129,
+    "receivedDays": [
+      129
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.129.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 129,
+    "receivedDays": [
+      129
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.129.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 129,
+    "receivedDays": [
+      129
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.130.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 130,
+    "receivedDays": [
+      130
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "goal",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 133,
+    "receivedDays": [],
+    "post": "us_dept_northeastern_virginia",
+    "objective": "manassas",
+    "posture": "take"
+  },
+  {
+    "order": "m.133.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 133,
+    "receivedDays": [
+      133
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 133,
+    "receivedDays": [
+      133
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.134.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 134,
+    "receivedDays": [
+      134
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.134.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 134,
+    "receivedDays": [
+      134
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.134.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 134,
+    "receivedDays": [
+      134
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.134.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "ellis_john_w",
+    "issuedDay": 134,
+    "receivedDays": [
+      134
+    ],
+    "post": "st_gov_north_carolina",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "goal",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 134,
+    "receivedDays": [
+      134
+    ],
+    "post": "us_dept_northeastern_virginia",
+    "objective": "manassas",
+    "posture": "take"
+  },
+  {
+    "order": "m.135.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 135,
+    "receivedDays": [
+      135
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.135.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 135,
+    "receivedDays": [
+      135
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.135.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 135,
+    "receivedDays": [
+      135
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.135.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "ellis_john_w",
+    "issuedDay": 135,
+    "receivedDays": [
+      135
+    ],
+    "post": "st_gov_north_carolina",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 135,
+    "receivedDays": [
+      138
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.135.davis_jefferson.beauregard_pierre_g_t.verb.inquire.cs_cmd_manassas",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "beauregard_pierre_g_t",
+    "issuedDay": 135,
+    "receivedDays": [
+      135
+    ],
+    "post": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.136.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 136,
+    "receivedDays": [
+      136
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.136.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 136,
+    "receivedDays": [
+      136
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.136.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 136,
+    "receivedDays": [
+      136
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.136.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "ellis_john_w",
+    "issuedDay": 136,
+    "receivedDays": [
+      136
+    ],
+    "post": "st_gov_north_carolina",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "goal",
+    "actor": "patterson_robert",
+    "issuedDay": 140,
+    "receivedDays": [
+      140
+    ],
+    "post": "us_dept_pennsylvania",
+    "objective": "harpers_ferry",
+    "posture": "hold"
+  },
+  {
+    "order": "m.140.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 140,
+    "receivedDays": [
+      140
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 140,
+    "receivedDays": [
+      140
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "goal",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 141,
+    "receivedDays": [
+      143
+    ],
+    "post": "cs_cmd_harpers_ferry",
+    "objective": "manassas",
+    "posture": "relieve"
+  },
+  {
+    "order": "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "harris_isham_g",
+    "issuedDay": 141,
+    "receivedDays": [
+      143
+    ],
+    "subject": "johnston_tennessee_named",
+    "post": "st_gov_tennessee",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "harris_isham_g",
+    "issuedDay": 141,
+    "receivedDays": [
+      143
+    ],
+    "subject": "fredericksburg_bate_named",
+    "post": "st_gov_tennessee",
+    "to": "cs_cmd_fredericksburg"
+  },
+  {
+    "order": "m.141.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 141,
+    "receivedDays": [
+      141
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.141.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 141,
+    "receivedDays": [
+      141
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.141.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 141,
+    "receivedDays": [
+      141
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.141.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "ellis_john_w",
+    "issuedDay": 141,
+    "receivedDays": [
+      141
+    ],
+    "post": "st_gov_north_carolina",
+    "to": "cs_cmd_manassas"
+  },
+  {
+    "order": "m.142.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 142,
+    "receivedDays": [
+      142
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.142.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 142,
+    "receivedDays": [
+      142
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.142.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 142,
+    "receivedDays": [
+      142
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+    "side": "confederate",
+    "kind": "verb:inquire",
+    "actor": "johnston_joseph_e",
+    "issuedDay": 142,
+    "receivedDays": [
+      144
+    ],
+    "post": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+    "side": "union",
+    "kind": "call",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 142,
+    "receivedDays": [
+      142
+    ],
+    "post": "st_gov_new_york",
+    "callId": "us_jul25_new_york",
+    "regiments": 25,
+    "termDays": 1095
+  },
+  {
+    "order": "m.143.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 143,
+    "receivedDays": [
+      143
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.143.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 143,
+    "receivedDays": [
+      143
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+    "side": "union",
+    "kind": "call",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 147,
+    "receivedDays": [
+      147
+    ],
+    "post": "st_gov_new_york",
+    "callId": "us_jul30_cavalry_new_york",
+    "regiments": 2,
+    "termDays": null
+  },
+  {
+    "order": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2",
+    "side": "union",
+    "kind": "call",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 147,
+    "receivedDays": [
+      147
+    ],
+    "post": "st_gov_new_york",
+    "callId": "us_jul30_artillery_new_york",
+    "regiments": 2,
+    "termDays": null
+  },
+  {
+    "order": "m.147.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "mcdowell_irvin",
+    "issuedDay": 147,
+    "receivedDays": [
+      147
+    ],
+    "post": "us_dept_northeastern_virginia"
+  },
+  {
+    "order": "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+    "side": "union",
+    "kind": "verb:inquire",
+    "actor": "patterson_robert",
+    "issuedDay": 147,
+    "receivedDays": [
+      147
+    ],
+    "post": "us_dept_pennsylvania"
+  },
+  {
+    "order": "m.148.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+    "side": "confederate",
+    "kind": "goal",
+    "actor": "holmes_theophilus_h",
+    "issuedDay": 148,
+    "receivedDays": [],
+    "post": "cs_cmd_fredericksburg",
+    "objective": "fredericksburg",
+    "posture": "hold"
+  },
+  {
+    "order": "m.148.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "moore_andrew_b",
+    "issuedDay": 148,
+    "receivedDays": [
+      148
+    ],
+    "post": "st_gov_alabama",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.148.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "brown_joseph_e",
+    "issuedDay": 148,
+    "receivedDays": [
+      148
+    ],
+    "post": "st_gov_georgia",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.148.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+    "side": "confederate",
+    "kind": "verb:transfer",
+    "actor": "pettus_john_j",
+    "issuedDay": 148,
+    "receivedDays": [
+      148
+    ],
+    "post": "st_gov_mississippi",
+    "to": "cs_cmd_harpers_ferry"
+  },
+  {
+    "order": "m.148.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york",
+    "side": "union",
+    "kind": "verb:transfer",
+    "actor": "morgan_edwin_d",
+    "issuedDay": 148,
+    "receivedDays": [
+      148
+    ],
+    "post": "st_gov_new_york",
+    "to": "us_dept_northeastern_virginia"
+  }
+]

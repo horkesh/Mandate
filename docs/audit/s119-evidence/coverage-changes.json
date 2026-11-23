@@ -1,0 +1,1224 @@
+[
+  {
+    "id": "U01",
+    "before": {
+      "id": "U01",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Sumter relief feasibility, March 12 inquiry",
+      "cite": "OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a scoped feasibility assessment answering a particular proposed course",
+        "location": "packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+        "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+      }
+    },
+    "after": {
+      "id": "U01",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Sumter relief feasibility, March 12 inquiry",
+      "cite": "OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a scoped feasibility assessment answering a particular proposed course",
+        "location": "packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+        "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U02",
+    "before": {
+      "id": "U02",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Evacuating both Sumter and Pickens",
+      "cite": "OR-I-I:200 https://archive.org/details/cu31924077725913/page/n219/mode/1up; OR-I-I:201 https://archive.org/details/cu31924077725913/page/n220/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U02",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Evacuating both Sumter and Pickens",
+      "cite": "OR-I-I:200 https://archive.org/details/cu31924077725913/page/n219/mode/1up; OR-I-I:201 https://archive.org/details/cu31924077725913/page/n220/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U03a",
+    "before": {
+      "id": "U03a",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:11 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:12 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:13 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:14 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U03a",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:11 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:12 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:13 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:14 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U03b",
+    "before": {
+      "id": "U03b",
+      "side": "union",
+      "actor": "cameron_simon",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "OR-I-I:196 https://archive.org/details/cu31924077725913/page/n215/mode/1up; OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U03b",
+      "side": "union",
+      "actor": "cameron_simon",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "OR-I-I:196 https://archive.org/details/cu31924077725913/page/n215/mode/1up; OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U03c",
+    "before": {
+      "id": "U03c",
+      "side": "union",
+      "actor": "welles_gideon",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U03c",
+      "side": "union",
+      "actor": "welles_gideon",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U03d",
+    "before": {
+      "id": "U03d",
+      "side": "union",
+      "actor": "smith_caleb_b",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:19 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:20 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U03d",
+      "side": "union",
+      "actor": "smith_caleb_b",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:19 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:20 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U03e",
+    "before": {
+      "id": "U03e",
+      "side": "union",
+      "actor": "bates_edward",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:21 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:22 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U03e",
+      "side": "union",
+      "actor": "bates_edward",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 15 written Sumter provisioning consultation",
+      "cite": "Lincoln-II:21 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:22 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U04",
+    "before": {
+      "id": "U04",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 29 renewed relief consultation",
+      "cite": "Lincoln-II:26 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U04",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 29 renewed relief consultation",
+      "cite": "Lincoln-II:26 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U05",
+    "before": {
+      "id": "U05",
+      "side": "union",
+      "actor": "blair_montgomery",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 29 proposed Sumter abandonment",
+      "cite": "Lincoln-II:27 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "after": {
+      "id": "U05",
+      "side": "union",
+      "actor": "blair_montgomery",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 29 proposed Sumter abandonment",
+      "cite": "Lincoln-II:27 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "consultation rounds and the proposed course each advice act addresses",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json",
+        "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U14",
+    "before": {
+      "id": "U14",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Some Thoughts administration policy and direction",
+      "cite": "Lincoln-II:29 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:30 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "Consultation option advice has no structured unsolicited administration programme or transfer of policy direction.; needed: an unsolicited policy programme and delegation proposal with an answer in packages/kernel/src/log/commands.ts; packages/kernel/src/knowledge/report.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "an unsolicited policy programme and delegation proposal with an answer",
+        "location": "packages/kernel/src/log/commands.ts; packages/kernel/src/knowledge/report.ts",
+        "reason": "Consultation option advice has no structured unsolicited administration programme or transfer of policy direction."
+      }
+    },
+    "after": {
+      "id": "U14",
+      "side": "union",
+      "actor": "seward_william_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Some Thoughts administration policy and direction",
+      "cite": "Lincoln-II:29 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:30 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "Consultation option advice has no structured unsolicited administration programme or transfer of policy direction.; needed: an unsolicited policy programme and delegation proposal with an answer in packages/kernel/src/log/commands.ts; packages/kernel/src/knowledge/report.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "an unsolicited policy programme and delegation proposal with an answer",
+        "location": "packages/kernel/src/log/commands.ts; packages/kernel/src/knowledge/report.ts",
+        "reason": "Consultation option advice has no structured unsolicited administration programme or transfer of policy direction."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U25a",
+    "before": {
+      "id": "U25a",
+      "side": "union",
+      "actor": "hicks_thomas_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Troop transit through Maryland after Baltimore alternative",
+      "cite": "Lincoln-II:36 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:37 https://archive.org/details/abrahamlincolnco02linco; OR-I-II:581 https://archive.org/details/cu31924077730186/page/n600/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "A field commander goal and a governor troop-raising call do not carry a governor alternative for troop transit through his state.; needed: civil troop-transit negotiation and alternative-route consent in packages/kernel/src/log/commands.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "civil troop-transit negotiation and alternative-route consent",
+        "location": "packages/kernel/src/log/commands.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "A field commander goal and a governor troop-raising call do not carry a governor alternative for troop transit through his state."
+      }
+    },
+    "after": {
+      "id": "U25a",
+      "side": "union",
+      "actor": "hicks_thomas_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Troop transit through Maryland after Baltimore alternative",
+      "cite": "Lincoln-II:36 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:37 https://archive.org/details/abrahamlincolnco02linco; OR-I-II:581 https://archive.org/details/cu31924077730186/page/n600/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "A field commander goal and a governor troop-raising call do not carry a governor alternative for troop transit through his state.; needed: civil troop-transit negotiation and alternative-route consent in packages/kernel/src/log/commands.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "civil troop-transit negotiation and alternative-route consent",
+        "location": "packages/kernel/src/log/commands.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "A field commander goal and a governor troop-raising call do not carry a governor alternative for troop transit through his state."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U25b",
+    "before": {
+      "id": "U25b",
+      "side": "union",
+      "actor": "brown_george_w",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Protecting troops marching around Baltimore",
+      "cite": "OR-I-II:581 https://archive.org/details/cu31924077730186/page/n600/mode/1up; OR-I-II:582 https://archive.org/details/cu31924077730186/page/n601/mode/1up; Lincoln-II:36 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The mayor is absent from the cast; no civic request carries his conditional protection undertaking. Adding a person alone would not encode the matter.; needed: a civic addressee and conditional troop-protection undertaking in packs/union-1861/source/world/people.csv; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a civic addressee and conditional troop-protection undertaking",
+        "location": "packs/union-1861/source/world/people.csv; packages/kernel/src/messages/transit.ts",
+        "reason": "The mayor is absent from the cast; no civic request carries his conditional protection undertaking. Adding a person alone would not encode the matter."
+      }
+    },
+    "after": {
+      "id": "U25b",
+      "side": "union",
+      "actor": "brown_george_w",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Protecting troops marching around Baltimore",
+      "cite": "OR-I-II:581 https://archive.org/details/cu31924077730186/page/n600/mode/1up; OR-I-II:582 https://archive.org/details/cu31924077730186/page/n601/mode/1up; Lincoln-II:36 https://archive.org/details/abrahamlincolnco02linco",
+      "verdict": "representation_gap",
+      "reason": "The mayor is absent from the cast; no civic request carries his conditional protection undertaking. Adding a person alone would not encode the matter.; needed: a civic addressee and conditional troop-protection undertaking in packs/union-1861/source/world/people.csv; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a civic addressee and conditional troop-protection undertaking",
+        "location": "packs/union-1861/source/world/people.csv; packages/kernel/src/messages/transit.ts",
+        "reason": "The mayor is absent from the cast; no civic request carries his conditional protection undertaking. Adding a person alone would not encode the matter."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U32",
+    "before": {
+      "id": "U32",
+      "side": "union",
+      "actor": "patterson_robert",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Changing Valley depot and line before active operations",
+      "cite": "OR-I-II:164 https://archive.org/details/cu31924077730186/page/n183/mode/1up; OR-I-II:165 https://archive.org/details/cu31924077730186/page/n184/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Goals hold, take or relieve a place; they do not ask a commander to change his depot and supply base before an advance.; needed: a depot/base-of-supply change request and counterproposal in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a depot/base-of-supply change request and counterproposal",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "Goals hold, take or relieve a place; they do not ask a commander to change his depot and supply base before an advance."
+      }
+    },
+    "after": {
+      "id": "U32",
+      "side": "union",
+      "actor": "patterson_robert",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Changing Valley depot and line before active operations",
+      "cite": "OR-I-II:164 https://archive.org/details/cu31924077730186/page/n183/mode/1up; OR-I-II:165 https://archive.org/details/cu31924077730186/page/n184/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Goals hold, take or relieve a place; they do not ask a commander to change his depot and supply base before an advance.; needed: a depot/base-of-supply change request and counterproposal in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a depot/base-of-supply change request and counterproposal",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "Goals hold, take or relieve a place; they do not ask a commander to change his depot and supply base before an advance."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U33",
+    "before": {
+      "id": "U33",
+      "side": "union",
+      "actor": "patterson_robert",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Fresh attack or demonstration direction in Valley",
+      "cite": "OR-I-II:166 https://archive.org/details/cu31924077730186/page/n185/mode/1up; OR-I-II:167 https://archive.org/details/cu31924077730186/page/n186/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "an attack-or-demonstrate instruction and its answer",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+      }
+    },
+    "after": {
+      "id": "U33",
+      "side": "union",
+      "actor": "patterson_robert",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Fresh attack or demonstration direction in Valley",
+      "cite": "OR-I-II:166 https://archive.org/details/cu31924077730186/page/n185/mode/1up; OR-I-II:167 https://archive.org/details/cu31924077730186/page/n186/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "an attack-or-demonstrate instruction and its answer",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U34",
+    "before": {
+      "id": "U34",
+      "side": "union",
+      "actor": "patterson_robert",
+      "role": "addressee",
+      "band": "slow_walk",
+      "matter": "Fresh July 17-18 attack/demonstration direction",
+      "cite": "OR-I-II:167 https://archive.org/details/cu31924077730186/page/n186/mode/1up; OR-I-II:168 https://archive.org/details/cu31924077730186/page/n187/mode/1up; OR-I-II:169 https://archive.org/details/cu31924077730186/page/n188/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "an attack-or-demonstrate instruction and its answer",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+      }
+    },
+    "after": {
+      "id": "U34",
+      "side": "union",
+      "actor": "patterson_robert",
+      "role": "addressee",
+      "band": "slow_walk",
+      "matter": "Fresh July 17-18 attack/demonstration direction",
+      "cite": "OR-I-II:167 https://archive.org/details/cu31924077730186/page/n186/mode/1up; OR-I-II:168 https://archive.org/details/cu31924077730186/page/n187/mode/1up; OR-I-II:169 https://archive.org/details/cu31924077730186/page/n188/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "an attack-or-demonstrate instruction and its answer",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U39",
+    "before": {
+      "id": "U39",
+      "side": "union",
+      "actor": "morgan_edwin_d",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "April Union militia requisition",
+      "cite": "OR-III-I:72 https://archive.org/details/warofrebellion0301rootrich/page/n88/mode/1up; OR-III-I:85 https://archive.org/details/warofrebellion0301rootrich/page/n101/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41"
+      ],
+      "matched": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41"
+    },
+    "after": {
+      "id": "U39",
+      "side": "union",
+      "actor": "morgan_edwin_d",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "April Union militia requisition",
+      "cite": "OR-III-I:72 https://archive.org/details/warofrebellion0301rootrich/page/n88/mode/1up; OR-III-I:85 https://archive.org/details/warofrebellion0301rootrich/page/n101/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41"
+      ],
+      "matched": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41"
+    },
+    "changed": false
+  },
+  {
+    "id": "U40",
+    "before": {
+      "id": "U40",
+      "side": "union",
+      "actor": "mccauley_charles_s",
+      "role": "addressee",
+      "band": "slow_walk",
+      "matter": "Peremptory Merrimack removal to Philadelphia",
+      "cite": "ORN-I-IV:275 https://archive.org/details/cu31924079893859/page/n306/mode/1up; ORN-I-IV:281 https://archive.org/details/cu31924079893859/page/n312/mode/1up; ORN-I-IV:288 https://archive.org/details/cu31924079893859/page/n319/mode/1up; ORN-I-IV:289 https://archive.org/details/cu31924079893859/page/n320/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Land force transfers do not carry a named warship removal and engineering-readiness matter.; needed: a naval vessel removal/readiness instruction and repeated deferral in packages/kernel/src/log/commands.ts; packages/kernel/src/forces/",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a naval vessel removal/readiness instruction and repeated deferral",
+        "location": "packages/kernel/src/log/commands.ts; packages/kernel/src/forces/",
+        "reason": "Land force transfers do not carry a named warship removal and engineering-readiness matter."
+      }
+    },
+    "after": {
+      "id": "U40",
+      "side": "union",
+      "actor": "mccauley_charles_s",
+      "role": "addressee",
+      "band": "slow_walk",
+      "matter": "Peremptory Merrimack removal to Philadelphia",
+      "cite": "ORN-I-IV:275 https://archive.org/details/cu31924079893859/page/n306/mode/1up; ORN-I-IV:281 https://archive.org/details/cu31924079893859/page/n312/mode/1up; ORN-I-IV:288 https://archive.org/details/cu31924079893859/page/n319/mode/1up; ORN-I-IV:289 https://archive.org/details/cu31924079893859/page/n320/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Land force transfers do not carry a named warship removal and engineering-readiness matter.; needed: a naval vessel removal/readiness instruction and repeated deferral in packages/kernel/src/log/commands.ts; packages/kernel/src/forces/",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a naval vessel removal/readiness instruction and repeated deferral",
+        "location": "packages/kernel/src/log/commands.ts; packages/kernel/src/forces/",
+        "reason": "Land force transfers do not carry a named warship removal and engineering-readiness matter."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "U42",
+    "before": {
+      "id": "U42",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 5 first Sumter relief assessment",
+      "cite": "LOC-0779200:1-6 https://www.loc.gov/resource/mal.0779200/?st=text",
+      "verdict": "representation_gap",
+      "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a scoped feasibility assessment answering a particular proposed course",
+        "location": "packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+        "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+      }
+    },
+    "after": {
+      "id": "U42",
+      "side": "union",
+      "actor": "scott_winfield",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "March 5 first Sumter relief assessment",
+      "cite": "LOC-0779200:1-6 https://www.loc.gov/resource/mal.0779200/?st=text",
+      "verdict": "representation_gap",
+      "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "a scoped feasibility assessment answering a particular proposed course",
+        "location": "packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts",
+        "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "C01",
+    "before": {
+      "id": "C01",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "First Pensacola contingent mustering",
+      "cite": "OR-IV-I:135 https://archive.org/details/cu31924079579524/page/n150/mode/1up; OR-IV-I:207 https://archive.org/details/cu31924079579524/page/n222/mode/1up; OR-IV-I:214 https://archive.org/details/cu31924079579524/page/n229/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|4"
+      ],
+      "matched": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|4"
+    },
+    "after": {
+      "id": "C01",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "First Pensacola contingent mustering",
+      "cite": "OR-IV-I:135 https://archive.org/details/cu31924079579524/page/n150/mode/1up; OR-IV-I:207 https://archive.org/details/cu31924079579524/page/n222/mode/1up; OR-IV-I:214 https://archive.org/details/cu31924079579524/page/n229/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|4"
+      ],
+      "matched": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|4"
+    },
+    "changed": false
+  },
+  {
+    "id": "C02",
+    "before": {
+      "id": "C02",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "April additional regiments for Virginia",
+      "cite": "OR-IV-I:234 https://archive.org/details/cu31924079579524/page/n249/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|48"
+      ],
+      "matched": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|48"
+    },
+    "after": {
+      "id": "C02",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "April additional regiments for Virginia",
+      "cite": "OR-IV-I:234 https://archive.org/details/cu31924079579524/page/n249/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|48"
+      ],
+      "matched": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|48"
+    },
+    "changed": false
+  },
+  {
+    "id": "C03",
+    "before": {
+      "id": "C03",
+      "side": "confederate",
+      "actor": "moore_thomas_o",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "April active Virginia regiments and earlier readiness call",
+      "cite": "OR-IV-I:232 https://archive.org/details/cu31924079579524/page/n247/mode/1up; OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up; OR-IV-I:235 https://archive.org/details/cu31924079579524/page/n250/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|comply_with_reservations|48"
+      ],
+      "matched": null
+    },
+    "after": {
+      "id": "C03",
+      "side": "confederate",
+      "actor": "moore_thomas_o",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "April active Virginia regiments and earlier readiness call",
+      "cite": "OR-IV-I:232 https://archive.org/details/cu31924079579524/page/n247/mode/1up; OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up; OR-IV-I:235 https://archive.org/details/cu31924079579524/page/n250/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|comply_with_reservations|48"
+      ],
+      "matched": null
+    },
+    "changed": false
+  },
+  {
+    "id": "C04",
+    "before": {
+      "id": "C04",
+      "side": "confederate",
+      "actor": "pickens_francis_w",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Sending South Carolina volunteers to Virginia",
+      "cite": "OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up; OR-IV-I:235 https://archive.org/details/cu31924079579524/page/n250/mode/1up; OR-IV-I:236 https://archive.org/details/cu31924079579524/page/n251/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "The transfer grammar carries force and destination but no regiment-integrity or permanent-service consent terms.; needed: organisation integrity and gubernatorial consent terms on a troop transfer in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/tick/verbs.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "organisation integrity and gubernatorial consent terms on a troop transfer",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/tick/verbs.ts",
+        "reason": "The transfer grammar carries force and destination but no regiment-integrity or permanent-service consent terms."
+      }
+    },
+    "after": {
+      "id": "C04",
+      "side": "confederate",
+      "actor": "pickens_francis_w",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Sending South Carolina volunteers to Virginia",
+      "cite": "OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up; OR-IV-I:235 https://archive.org/details/cu31924079579524/page/n250/mode/1up; OR-IV-I:236 https://archive.org/details/cu31924079579524/page/n251/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "The transfer grammar carries force and destination but no regiment-integrity or permanent-service consent terms.; needed: organisation integrity and gubernatorial consent terms on a troop transfer in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/tick/verbs.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "organisation integrity and gubernatorial consent terms on a troop transfer",
+        "location": "packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/tick/verbs.ts",
+        "reason": "The transfer grammar carries force and destination but no regiment-integrity or permanent-service consent terms."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "C05",
+    "before": {
+      "id": "C05",
+      "side": "confederate",
+      "actor": "harris_isham_g",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Initial three Virginia regiments",
+      "cite": "OR-IV-I:232 https://archive.org/details/cu31924079579524/page/n247/mode/1up; OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g|addressee|comply_with_reservations|122"
+      ],
+      "matched": null
+    },
+    "after": {
+      "id": "C05",
+      "side": "confederate",
+      "actor": "harris_isham_g",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Initial three Virginia regiments",
+      "cite": "OR-IV-I:232 https://archive.org/details/cu31924079579524/page/n247/mode/1up; OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g|addressee|comply_with_reservations|124"
+      ],
+      "matched": null
+    },
+    "changed": true
+  },
+  {
+    "id": "C06",
+    "before": {
+      "id": "C06",
+      "side": "confederate",
+      "actor": "bragg_braxton",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Preventing Pickens reinforcement at dock",
+      "cite": "OR-I-I:456 https://archive.org/details/cu31924077725913/page/n475/mode/1up; OR-I-I:457 https://archive.org/details/cu31924077725913/page/n476/mode/1up; OR-I-I:458 https://archive.org/details/cu31924077725913/page/n477/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Land goals do not express stopping shipborne reinforcement at its dock without an island landing.; needed: dock interception of naval reinforcement with supply/transport qualifications in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "dock interception of naval reinforcement with supply/transport qualifications",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "Land goals do not express stopping shipborne reinforcement at its dock without an island landing."
+      }
+    },
+    "after": {
+      "id": "C06",
+      "side": "confederate",
+      "actor": "bragg_braxton",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Preventing Pickens reinforcement at dock",
+      "cite": "OR-I-I:456 https://archive.org/details/cu31924077725913/page/n475/mode/1up; OR-I-I:457 https://archive.org/details/cu31924077725913/page/n476/mode/1up; OR-I-I:458 https://archive.org/details/cu31924077725913/page/n477/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Land goals do not express stopping shipborne reinforcement at its dock without an island landing.; needed: dock interception of naval reinforcement with supply/transport qualifications in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "dock interception of naval reinforcement with supply/transport qualifications",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "Land goals do not express stopping shipborne reinforcement at its dock without an island landing."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "C07",
+    "before": {
+      "id": "C07",
+      "side": "confederate",
+      "actor": "letcher_john",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps organization and appointments",
+      "cite": "OR-IV-I:419 https://archive.org/details/cu31924079579524/page/n434/mode/1up; OR-IV-I:420 https://archive.org/details/cu31924079579524/page/n435/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|comply_with_reservations|120"
+      ],
+      "matched": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|comply_with_reservations|120"
+    },
+    "after": {
+      "id": "C07",
+      "side": "confederate",
+      "actor": "letcher_john",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps organization and appointments",
+      "cite": "OR-IV-I:419 https://archive.org/details/cu31924079579524/page/n434/mode/1up; OR-IV-I:420 https://archive.org/details/cu31924079579524/page/n435/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|comply_with_reservations|120"
+      ],
+      "matched": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|comply_with_reservations|120"
+    },
+    "changed": false
+  },
+  {
+    "id": "C09",
+    "before": {
+      "id": "C09",
+      "side": "confederate",
+      "actor": "pickens_francis_w",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Later two armed regiments",
+      "cite": "OR-IV-I:420 https://archive.org/details/cu31924079579524/page/n435/mode/1up; OR-IV-I:421 https://archive.org/details/cu31924079579524/page/n436/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Qualification requires service_term/offer; needed: acceptance, consent or prerequisite execution in the recruitment, transfer, enlistment or operation owner. Recording a reservation does not execute it.",
+      "candidates": [],
+      "matched": null
+    },
+    "after": {
+      "id": "C09",
+      "side": "confederate",
+      "actor": "pickens_francis_w",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Later two armed regiments",
+      "cite": "OR-IV-I:420 https://archive.org/details/cu31924079579524/page/n435/mode/1up; OR-IV-I:421 https://archive.org/details/cu31924079579524/page/n436/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Qualification requires service_term/offer; needed: acceptance, consent or prerequisite execution in the recruitment, transfer, enlistment or operation owner. Recording a reservation does not execute it.",
+      "candidates": [],
+      "matched": null
+    },
+    "changed": false
+  },
+  {
+    "id": "C10",
+    "before": {
+      "id": "C10",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps and appointment authority",
+      "cite": "OR-IV-I:421 https://archive.org/details/cu31924079579524/page/n436/mode/1up; OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|comply_with_reservations|117"
+      ],
+      "matched": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|comply_with_reservations|117"
+    },
+    "after": {
+      "id": "C10",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps and appointment authority",
+      "cite": "OR-IV-I:421 https://archive.org/details/cu31924079579524/page/n436/mode/1up; OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up",
+      "verdict": "matched",
+      "reason": "One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.",
+      "candidates": [
+        "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|comply_with_reservations|117"
+      ],
+      "matched": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|comply_with_reservations|117"
+    },
+    "changed": false
+  },
+  {
+    "id": "C11",
+    "before": {
+      "id": "C11",
+      "side": "confederate",
+      "actor": "moore_thomas_o",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps raising and support",
+      "cite": "OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up; OR-IV-I:423 https://archive.org/details/cu31924079579524/page/n438/mode/1up; OR-IV-I:478 https://archive.org/details/cu31924079579524/page/n493/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|object|117"
+      ],
+      "matched": null
+    },
+    "after": {
+      "id": "C11",
+      "side": "confederate",
+      "actor": "moore_thomas_o",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps raising and support",
+      "cite": "OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up; OR-IV-I:423 https://archive.org/details/cu31924079579524/page/n438/mode/1up; OR-IV-I:478 https://archive.org/details/cu31924079579524/page/n493/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|object|117"
+      ],
+      "matched": null
+    },
+    "changed": false
+  },
+  {
+    "id": "C12",
+    "before": {
+      "id": "C12",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Later two armed regiments versus State brigade",
+      "cite": "OR-IV-I:424 https://archive.org/details/cu31924079579524/page/n439/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Qualification requires organisation/offer; needed: acceptance, consent or prerequisite execution in the recruitment, transfer, enlistment or operation owner. Recording a reservation does not execute it.",
+      "candidates": [],
+      "matched": null
+    },
+    "after": {
+      "id": "C12",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Later two armed regiments versus State brigade",
+      "cite": "OR-IV-I:424 https://archive.org/details/cu31924079579524/page/n439/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "Qualification requires organisation/offer; needed: acceptance, consent or prerequisite execution in the recruitment, transfer, enlistment or operation owner. Recording a reservation does not execute it.",
+      "candidates": [],
+      "matched": null
+    },
+    "changed": false
+  },
+  {
+    "id": "C14",
+    "before": {
+      "id": "C14",
+      "side": "confederate",
+      "actor": "holmes_theophilus_h",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Supporting Commander Lewis river expedition",
+      "cite": "OR-I-II:959 https://archive.org/details/cu31924077730186/page/n978/mode/1up",
+      "verdict": "not_observed",
+      "reason": "No act observed for this actor, role and represented matter.",
+      "candidates": [],
+      "matched": null
+    },
+    "after": {
+      "id": "C14",
+      "side": "confederate",
+      "actor": "holmes_theophilus_h",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Supporting Commander Lewis river expedition",
+      "cite": "OR-I-II:959 https://archive.org/details/cu31924077730186/page/n978/mode/1up",
+      "verdict": "not_observed",
+      "reason": "No act observed for this actor, role and represented matter.",
+      "candidates": [],
+      "matched": null
+    },
+    "changed": false
+  },
+  {
+    "id": "C15",
+    "before": {
+      "id": "C15",
+      "side": "confederate",
+      "actor": "johnston_joseph_e",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Keeping force at Harpers Ferry",
+      "cite": "OR-I-II:896 https://archive.org/details/cu31924077730186/page/n915/mode/1up; OR-I-II:897 https://archive.org/details/cu31924077730186/page/n916/mode/1up; OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:908 https://archive.org/details/cu31924077730186/page/n927/mode/1up; OR-I-II:910 https://archive.org/details/cu31924077730186/page/n929/mode/1up",
+      "verdict": "not_observed",
+      "reason": "No act observed for this actor, role and represented matter.",
+      "candidates": [],
+      "matched": null
+    },
+    "after": {
+      "id": "C15",
+      "side": "confederate",
+      "actor": "johnston_joseph_e",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Keeping force at Harpers Ferry",
+      "cite": "OR-I-II:896 https://archive.org/details/cu31924077730186/page/n915/mode/1up; OR-I-II:897 https://archive.org/details/cu31924077730186/page/n916/mode/1up; OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:908 https://archive.org/details/cu31924077730186/page/n927/mode/1up; OR-I-II:910 https://archive.org/details/cu31924077730186/page/n929/mode/1up",
+      "verdict": "not_observed",
+      "reason": "No act observed for this actor, role and represented matter.",
+      "candidates": [],
+      "matched": null
+    },
+    "changed": false
+  },
+  {
+    "id": "C16",
+    "before": {
+      "id": "C16",
+      "side": "confederate",
+      "actor": "holmes_theophilus_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Conditional withdrawal from Mathias Point",
+      "cite": "OR-I-II:959 https://archive.org/details/cu31924077730186/page/n978/mode/1up; OR-I-II:975 https://archive.org/details/cu31924077730186/page/n994/mode/1up; OR-I-II:976 https://archive.org/details/cu31924077730186/page/n995/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "0114 adds received conditional goals and commander proposals, but its turned/outmatched conditions do not express a duty to prevent an enemy landing after withdrawal. OR I-II p.976 makes that responsibility the disputed condition; p.959 supplies battery-site context. No landing condition or Mathias Point mission is authored by S96, so generic fallback permission does not cover this act.; needed: conditional withdrawal tied to an enemy landing, with commander responsibility in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "conditional withdrawal tied to an enemy landing, with commander responsibility",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "0114 adds received conditional goals and commander proposals, but its turned/outmatched conditions do not express a duty to prevent an enemy landing after withdrawal. OR I-II p.976 makes that responsibility the disputed condition; p.959 supplies battery-site context. No landing condition or Mathias Point mission is authored by S96, so generic fallback permission does not cover this act."
+      }
+    },
+    "after": {
+      "id": "C16",
+      "side": "confederate",
+      "actor": "holmes_theophilus_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Conditional withdrawal from Mathias Point",
+      "cite": "OR-I-II:959 https://archive.org/details/cu31924077730186/page/n978/mode/1up; OR-I-II:975 https://archive.org/details/cu31924077730186/page/n994/mode/1up; OR-I-II:976 https://archive.org/details/cu31924077730186/page/n995/mode/1up",
+      "verdict": "representation_gap",
+      "reason": "0114 adds received conditional goals and commander proposals, but its turned/outmatched conditions do not express a duty to prevent an enemy landing after withdrawal. OR I-II p.976 makes that responsibility the disputed condition; p.959 supplies battery-site context. No landing condition or Mathias Point mission is authored by S96, so generic fallback permission does not cover this act.; needed: conditional withdrawal tied to an enemy landing, with commander responsibility in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+      "candidates": [],
+      "matched": null,
+      "gap": {
+        "mechanism": "conditional withdrawal tied to an enemy landing, with commander responsibility",
+        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
+        "reason": "0114 adds received conditional goals and commander proposals, but its turned/outmatched conditions do not express a duty to prevent an enemy landing after withdrawal. OR I-II p.976 makes that responsibility the disputed condition; p.959 supplies battery-site context. No landing condition or Mathias Point mission is authored by S96, so generic fallback permission does not cover this act."
+      }
+    },
+    "changed": false
+  },
+  {
+    "id": "C25",
+    "before": {
+      "id": "C25",
+      "side": "confederate",
+      "actor": "holmes_theophilus_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Retaining the main force at Fredericksburg",
+      "cite": "OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:929 https://archive.org/details/cu31924077730186/page/n948/mode/1up; OR-I-II:932 https://archive.org/details/cu31924077730186/page/n951/mode/1up",
+      "verdict": "not_observed",
+      "reason": "No act observed for this actor, role and represented matter.",
+      "candidates": [],
+      "matched": null
+    },
+    "after": {
+      "id": "C25",
+      "side": "confederate",
+      "actor": "holmes_theophilus_h",
+      "role": "addressee",
+      "band": "plan_objections",
+      "matter": "Retaining the main force at Fredericksburg",
+      "cite": "OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:929 https://archive.org/details/cu31924077730186/page/n948/mode/1up; OR-I-II:932 https://archive.org/details/cu31924077730186/page/n951/mode/1up",
+      "verdict": "not_observed",
+      "reason": "No act observed for this actor, role and represented matter.",
+      "candidates": [],
+      "matched": null
+    },
+    "changed": false
+  }
+]

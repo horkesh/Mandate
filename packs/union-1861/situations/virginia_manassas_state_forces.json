@@ -35,26 +35,6 @@
           "region": "manassas"
         }
       }
-    },
-    {
-      "propose": {
-        "owner": "recruitment",
-        "field": "state_forces",
-        "subject": "st_gov_virginia",
-        "delta": 1,
-        "reason": "state-forces-called-out",
-        "side": "confederate",
-        "stateForces": {
-          "id": "va_manassas_preston",
-          "regiments": null,
-          "men": null,
-          "arm": "infantry",
-          "termDays": null,
-          "termUnknown": true,
-          "post": "st_va_potomac",
-          "region": "manassas"
-        }
-      }
     }
   ],
   "report": {
@@ -70,7 +50,7 @@
   "citations": [
     {
       "source": "OR",
-      "at": "I-2 pp.824,826-827, 10 May orders; pp.846-847, Cocke, 15 May. [I] Use the first observed garrison date; ordered battalions represented as separate unquantified contingents, not a fabricated 1,000 each; S81: Garland's own 490 are entered by the separate 12 May return (p.841); the later unknown observation does not overwrite them. Preston stays unknown."
+      "at": "I-2 pp.824,826-827, 10 May orders; pp.846-847, Cocke, 15 May. [I] Use the first observed garrison date; ordered battalions represented as separate unquantified contingents, not a fabricated 1,000 each; S81: Garland's own 490 are entered by the separate 12 May return (p.841); the later unknown observation does not overwrite them. S119: the seven Preston companies had gone to Harpers Ferry by 25 May (I-II p.42) and are tracked in that existing contingent."
     }
   ],
   "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."

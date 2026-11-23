@@ -58,6 +58,15 @@ const menu: PrincipalMenu = {
 };
 const doctrine = (over: Partial<PrincipalMenu['doctrine']>): PrincipalMenu => ({ ...menu, doctrine: { ...menu.doctrine, ...over } });
 
+it('dispatches only the first ready authored field goal per post in a morning', () => {
+  const first = { post: post('near'), objective: region('r9'), day: 1, ready: true, issued: false, letter: { namespace: 'desk', key: 'a', revision: 1 } };
+  const second = { ...first, letter: { ...first.letter, key: 'b' } };
+  const orders = (offensives: readonly (typeof first)[], day: number) =>
+    principalOrders(doctrine({ offensives }), [], day).filter(c => c.cmd === 'order').map(c => c.letter);
+  expect(orders([first, second], 1)).toEqual([first.letter]);
+  expect(orders([{ ...first, issued: true }, second], 2)).toEqual([second.letter]);
+});
+
 describe('dated command establishments', () => {
   const appointment = { post: post('new_army'), person: person('near_holder'), from: post('near'), ready: true, issued: false, routes: army('near', 2).routes };
   it('issues a ready assignment through the appointment verb, with the old post named', () => {
@@ -71,6 +80,21 @@ describe('dated command establishments', () => {
   it('uses the same transfer path to bring the former concentration forward', () => {
     const m = { ...doctrine({ concentrateAt: post('far'), concentrateFrom: [post('near')] }), commandable: [army('near', 2), army('far', 6)] };
     expect(principalOrders(m, [], 3)).toContainEqual({ cmd: 'transfer', from: post('near'), to: post('far'), force: 'blocks', amount: 999, route: 'courier' });
+  });
+  it('requests only the named regiment when a donor has unknown strength', () => {
+    const named = { id: 'named_request', from: post('near'), to: post('far'), regiments: ['named_regiment'] };
+    const m = { ...doctrine({ namedConcentrationTransfers: [named], concentrateAt: post('far'), concentrateLevies: false }),
+      commandable: [army('near', 2, { men: null, raising: true }), army('far', 6)] };
+    expect(principalOrders(m, [], 3).filter(c => c.cmd === 'transfer')).toEqual([{ cmd: 'transfer', from: named.from, to: named.to,
+      force: 'blocks', amount: 1, regiments: named.regiments, concentration: named.id, route: 'courier' }]);
+  });
+  it('never sweeps a named-only donor through either broad concentration path', () => {
+    const from = post('near'), to = post('far');
+    for (const concentrationTransfers of [[], [{ from, to }]]) {
+      const m = { ...doctrine({ concentrateAt: to, concentrateLevies: true, namedConcentrationDonors: [from], concentrationTransfers }),
+        commandable: [army('near', 2, { raising: true }), army('far', 6)] };
+      expect(principalOrders(m, [], 3).filter(c => c.cmd === 'transfer')).toEqual([]);
+    }
   });
   it('does not appoint an officer to a vacancy while his sourced assignment is being issued or is in transit', () => {
     for (const issued of [false, true]) {

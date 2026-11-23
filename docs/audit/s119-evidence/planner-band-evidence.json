@@ -1,0 +1,2410 @@
+{
+  "scope": "Read retained State and candidate sets only; no simulation or score tuning.",
+  "before": {
+    "drafts": [
+      {
+        "post": "cs_cmd_charleston",
+        "setDay": 37,
+        "day": 37,
+        "chosen": "bombard:across_water:charleston",
+        "method": "bombard",
+        "live": [],
+        "candidates": [
+          {
+            "id": "bombard:across_water:charleston",
+            "method": "bombard",
+            "score": 1146,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches fort_sumter"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 52435 over his demand 1500 (the assault margin, 1500‰, on his open-field demand 1000)"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 30000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": -24,
+                "contribWhy": "moves 1000 permille days before he is concentrated"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 170,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:charleston",
+            "method": "holding",
+            "score": -226,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 74,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          },
+          "force_ratio": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          },
+          "supply": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          },
+          "time": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          }
+        }
+      },
+      {
+        "post": "cs_cmd_harpers_ferry",
+        "setDay": 143,
+        "day": 143,
+        "chosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+        "method": "direct",
+        "live": [],
+        "candidates": [
+          {
+            "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "method": "direct",
+            "score": 1129,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1000"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 19000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": -9,
+                "contribWhy": "500 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 138,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:await:harpers_ferry",
+            "method": "holding",
+            "score": -147,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 153,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "force_ratio": {
+            "chosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "supply": {
+            "chosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "time": {
+            "chosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          }
+        }
+      },
+      {
+        "post": "us_dept_pennsylvania",
+        "setDay": 140,
+        "day": 140,
+        "chosen": "holding:hold:harpers_ferry",
+        "method": "holding",
+        "live": [
+          "caution",
+          "force_ratio",
+          "supply"
+        ],
+        "candidates": [
+          {
+            "id": "holding:hold:harpers_ferry",
+            "method": "holding",
+            "score": 11,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          },
+          {
+            "id": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "score": -13,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": -572,
+                "contribWhy": "ratio 57 under his demand 1244; short 40906 men"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 24000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -216,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "changed": true
+          },
+          "force_ratio": {
+            "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "changed": true
+          },
+          "supply": {
+            "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "changed": true
+          },
+          "time": {
+            "chosen": "holding:hold:harpers_ferry",
+            "method": "holding",
+            "changed": false
+          }
+        }
+      },
+      {
+        "post": "us_dept_northeastern_virginia",
+        "setDay": 134,
+        "day": 134,
+        "chosen": "direct:least_cost:northern_virginia>manassas",
+        "method": "direct",
+        "live": [],
+        "candidates": [
+          {
+            "id": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "score": 727,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 16841 over his demand 1116"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 23000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -361,
+                "contribWhy": "3000 permille days outside supply; outruns his stores"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 88,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:northern_virginia",
+            "method": "holding",
+            "score": -21,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 279,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "force_ratio": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "supply": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "time": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          }
+        }
+      }
+    ],
+    "battles": [
+      {
+        "id": "battle:fort_sumter:38",
+        "region": "fort_sumter",
+        "days": [
+          {
+            "day": 38,
+            "sides": [
+              {
+                "post": "cs_cmd_charleston",
+                "result": "held",
+                "known": 416,
+                "unknown": []
+              },
+              {
+                "post": "us_fort_sumter",
+                "result": "held",
+                "known": 85,
+                "unknown": []
+              }
+            ]
+          },
+          {
+            "day": 39,
+            "sides": [
+              {
+                "post": "cs_cmd_charleston",
+                "result": "gained_ground",
+                "known": 416,
+                "unknown": []
+              },
+              {
+                "post": "us_fort_sumter",
+                "result": "held",
+                "known": 85,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:140",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 140,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 6490,
+                "unknown": [
+                  "state-forces.va_manassas_preston"
+                ]
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 69000,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:141",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 141,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 19000,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 68059,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:142",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 142,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 14813,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 64823,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:143",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 143,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 13743,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 62733,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:146",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 146,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 9807,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 60876,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "operations": [
+      {
+        "id": "op:cs_cmd_charleston:38",
+        "commander": "beauregard_pierre_g_t",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "cs_cmd_charleston",
+            "oaxBlocks": [
+              "fb_cs_charleston",
+              "fb_cs_charleston_castle_pinckney",
+              "fb_st_charleston_1st_artillery_battalion",
+              "fb_st_charleston_1st_infantry_regulars",
+              "fb_st_charleston_floating_battery",
+              "fb_st_charleston_fort_johnson",
+              "fb_st_charleston_fort_palmetto_stono",
+              "fb_st_charleston_moultrie_infantry_recruits",
+              "fb_st_charleston_regiment_of_rifles",
+              "fb_st_charleston_vigilant_rifles"
+            ],
+            "oaxRoute": {
+              "routeFrom": "charleston",
+              "routeTo": "fort_sumter",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 0,
+                "phaseRegion": "charleston"
+              },
+              {
+                "phaseKind": "bombard",
+                "phaseStart": 0,
+                "phaseDays": 30000,
+                "phaseRegion": "fort_sumter"
+              }
+            ],
+            "oaxObjective": "fort_sumter",
+            "oaxStage": "end",
+            "oaxSince": 40,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 39,
+            "oaxLog": [
+              {
+                "axevDay": 38,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "charleston"
+              },
+              {
+                "axevDay": 38,
+                "axevStage": "bombard",
+                "axevReason": "bombarding",
+                "axevRegion": "charleston"
+              },
+              {
+                "axevDay": 39,
+                "axevStage": "bombard",
+                "axevReason": "garrison_surrendered",
+                "axevRegion": "fort_sumter"
+              },
+              {
+                "axevDay": 40,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "fort_sumter"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:cs_cmd_harpers_ferry:97",
+        "commander": "johnston_joseph_e",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "cs_cmd_harpers_ferry",
+            "oaxBlocks": [
+              "state-forces.va_harpers_ferry"
+            ],
+            "oaxRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 2000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "oaxObjective": "harpers_ferry",
+            "oaxStage": "end",
+            "oaxSince": 143,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 100,
+            "oaxLog": [
+              {
+                "axevDay": 97,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "harpers_ferry"
+              },
+              {
+                "axevDay": 99,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "harpers_ferry"
+              },
+              {
+                "axevDay": 100,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "harpers_ferry"
+              },
+              {
+                "axevDay": 143,
+                "axevStage": "end",
+                "axevReason": "superseded",
+                "axevRegion": "harpers_ferry"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:us_dept_pennsylvania:113",
+        "commander": "patterson_robert",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_pennsylvania",
+            "oaxBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "oaxRoute": {
+              "routeFrom": "philadelphia",
+              "routeTo": "lower_valley",
+              "routeLegs": [
+                {
+                  "legEdge": "rail:philadelphia:southeast_pa:pennsylvania",
+                  "legFrom": "philadelphia",
+                  "legTo": "southeast_pa",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "rail:harrisburg:southeast_pa:pennsylvania",
+                  "legFrom": "southeast_pa",
+                  "legTo": "harrisburg",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "rail:cumberland_valley_pa:harrisburg:cumberland_valley",
+                  "legFrom": "harrisburg",
+                  "legTo": "cumberland_valley_pa",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "rail:cumberland_valley_pa:western_maryland:franklin",
+                  "legFrom": "cumberland_valley_pa",
+                  "legTo": "western_maryland",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 722,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "road:lower_valley:western_maryland",
+                  "legFrom": "western_maryland",
+                  "legTo": "lower_valley",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 2166,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 9888,
+              "routeDays": 7000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "philadelphia"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 1000,
+                "phaseRegion": "southeast_pa"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 1000,
+                "phaseRegion": "harrisburg"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 5000,
+                "phaseDays": 1000,
+                "phaseRegion": "cumberland_valley_pa"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 6000,
+                "phaseDays": 1000,
+                "phaseRegion": "western_maryland"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 7000,
+                "phaseDays": 3000,
+                "phaseRegion": "lower_valley"
+              }
+            ],
+            "oaxObjective": "lower_valley",
+            "oaxStage": "end",
+            "oaxSince": 135,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 123,
+            "oaxLog": [
+              {
+                "axevDay": 113,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "philadelphia"
+              },
+              {
+                "axevDay": 116,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "philadelphia"
+              },
+              {
+                "axevDay": 123,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "lower_valley"
+              },
+              {
+                "axevDay": 135,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "lower_valley"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:us_dept_northeastern_virginia:135",
+        "commander": "mcdowell_irvin",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_northeastern_virginia",
+            "oaxBlocks": [
+              "organised.s74_mcdowell_division_5_brigade_2.1",
+              "raised.st_gov_new_york.d64.bundle.3",
+              "raised.st_gov_new_york.d64.bundle.7",
+              "raised.st_gov_new_york.d64.bundle.8",
+              "raised.st_gov_new_york.d64.bundle.9",
+              "raised.st_gov_new_york.d83.bundle.3",
+              "organised.s74_mcdowell_division_4_reserve.1",
+              "raised.st_gov_massachusetts.d76",
+              "raised.st_gov_new_york.d64.bundle.2",
+              "raised.st_gov_new_york.d64.bundle.5",
+              "raised.st_gov_new_york.d64.bundle.6",
+              "raised.st_gov_new_york.d83.bundle.2",
+              "organised.s74_mcdowell_division_3_brigade_2.1",
+              "organised.s74_mcdowell_division_5_brigade_1.1",
+              "raised.st_gov_massachusetts.d76.bundle.2",
+              "raised.st_gov_michigan.d77",
+              "raised.st_gov_new_york.d64",
+              "raised.st_gov_new_york.d64.bundle.10",
+              "raised.st_gov_new_york.d83.bundle.4",
+              "organised.s74_mcdowell_division_1_brigade_2.1",
+              "organised.s74_mcdowell_division_1_brigade_3.1",
+              "organised.s74_mcdowell_division_1_brigade_4.1",
+              "organised.s74_mcdowell_division_1_brigade_4.2",
+              "organised.s74_mcdowell_division_2_brigade_1.1",
+              "organised.s74_mcdowell_division_2_brigade_2.1",
+              "organised.s74_mcdowell_division_2_brigade_2.2",
+              "organised.s74_mcdowell_division_3_brigade_3.1",
+              "organised.s74_mcdowell_division_5_brigade_1.2",
+              "raised.st_gov_connecticut.d77",
+              "raised.st_gov_maine.d77",
+              "raised.st_gov_new_york.d64.bundle.4",
+              "raised.st_gov_new_york.d83"
+            ],
+            "oaxRoute": {
+              "routeFrom": "northern_virginia",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:manassas:northern_virginia",
+                  "legFrom": "northern_virginia",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 1974,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 4974,
+              "routeDays": 3000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "northern_virginia"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              },
+              {
+                "phaseKind": "assault",
+                "phaseStart": 6000,
+                "phaseDays": 1000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "oaxObjective": "manassas",
+            "oaxStage": "end",
+            "oaxSince": 145,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 141,
+            "oaxLog": [
+              {
+                "axevDay": 135,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 138,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 141,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 141,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 142,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 142,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 143,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 143,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 144,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 144,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 145,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "manassas"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:cs_cmd_harpers_ferry:144",
+        "commander": "johnston_joseph_e",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "cs_cmd_harpers_ferry",
+            "oaxBlocks": [
+              "state-forces.cs_tn_infantry_tennessee",
+              "raised.st_gov_georgia.d122.2",
+              "raised.st_gov_tennessee.d127",
+              "raised.st_gov_georgia.d125",
+              "state-forces.cs_tn_cavalry_tennessee",
+              "state-forces.va_harpers_ferry"
+            ],
+            "oaxRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                  "legFrom": "harpers_ferry",
+                  "legTo": "loudoun_fauquier",
+                  "legType": "road",
+                  "legDays": 4000,
+                  "legThreat": 253,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "road:loudoun_fauquier:manassas",
+                  "legFrom": "loudoun_fauquier",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 7253,
+              "routeDays": 7000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 4000,
+                "phaseRegion": "harpers_ferry"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 4000,
+                "phaseRegion": "loudoun_fauquier"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 8000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "oaxObjective": "manassas",
+            "oaxStage": "march",
+            "oaxSince": 148,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": null,
+            "oaxLog": [
+              {
+                "axevDay": 144,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "harpers_ferry"
+              },
+              {
+                "axevDay": 148,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "harpers_ferry"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "drafts": [
+      {
+        "post": "cs_cmd_charleston",
+        "setDay": 37,
+        "day": 37,
+        "chosen": "bombard:across_water:charleston",
+        "method": "bombard",
+        "live": [],
+        "candidates": [
+          {
+            "id": "bombard:across_water:charleston",
+            "method": "bombard",
+            "score": 1146,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches fort_sumter"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 52435 over his demand 1500 (the assault margin, 1500‰, on his open-field demand 1000)"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 30000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": -24,
+                "contribWhy": "moves 1000 permille days before he is concentrated"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 170,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:charleston",
+            "method": "holding",
+            "score": -226,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 74,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          },
+          "force_ratio": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          },
+          "supply": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          },
+          "time": {
+            "chosen": "bombard:across_water:charleston",
+            "method": "bombard",
+            "changed": false
+          }
+        }
+      },
+      {
+        "post": "cs_cmd_harpers_ferry",
+        "setDay": 143,
+        "day": 143,
+        "chosen": "direct:least_cost:loudoun_fauquier>manassas",
+        "method": "direct",
+        "live": [],
+        "candidates": [
+          {
+            "id": "direct:least_cost:loudoun_fauquier>manassas",
+            "method": "direct",
+            "score": 1138,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1000"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 13000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 138,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:await:loudoun_fauquier",
+            "method": "holding",
+            "score": -147,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 153,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "direct:least_cost:loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "force_ratio": {
+            "chosen": "direct:least_cost:loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "supply": {
+            "chosen": "direct:least_cost:loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "time": {
+            "chosen": "direct:least_cost:loudoun_fauquier>manassas",
+            "method": "direct",
+            "changed": false
+          }
+        }
+      },
+      {
+        "post": "us_dept_pennsylvania",
+        "setDay": 140,
+        "day": 140,
+        "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+        "method": "direct",
+        "live": [
+          "time"
+        ],
+        "candidates": [
+          {
+            "id": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "score": 524,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": -35,
+                "contribWhy": "ratio 1171 under his demand 1244; short 123 men"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 24000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -216,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:harpers_ferry",
+            "method": "holding",
+            "score": 11,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "changed": false
+          },
+          "force_ratio": {
+            "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "changed": false
+          },
+          "supply": {
+            "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+            "method": "direct",
+            "changed": false
+          },
+          "time": {
+            "chosen": "holding:hold:harpers_ferry",
+            "method": "holding",
+            "changed": true
+          }
+        }
+      },
+      {
+        "post": "us_dept_northeastern_virginia",
+        "setDay": 134,
+        "day": 134,
+        "chosen": "direct:least_cost:northern_virginia>manassas",
+        "method": "direct",
+        "live": [],
+        "candidates": [
+          {
+            "id": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "score": 727,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 16841 over his demand 1116"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 23000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -361,
+                "contribWhy": "3000 permille days outside supply; outruns his stores"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 88,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:northern_virginia",
+            "method": "holding",
+            "score": -21,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 279,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ],
+        "dropped": {
+          "caution": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "force_ratio": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "supply": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          },
+          "time": {
+            "chosen": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "changed": false
+          }
+        }
+      }
+    ],
+    "battles": [
+      {
+        "id": "battle:fort_sumter:38",
+        "region": "fort_sumter",
+        "days": [
+          {
+            "day": 38,
+            "sides": [
+              {
+                "post": "cs_cmd_charleston",
+                "result": "held",
+                "known": 416,
+                "unknown": []
+              },
+              {
+                "post": "us_fort_sumter",
+                "result": "held",
+                "known": 85,
+                "unknown": []
+              }
+            ]
+          },
+          {
+            "day": 39,
+            "sides": [
+              {
+                "post": "cs_cmd_charleston",
+                "result": "gained_ground",
+                "known": 416,
+                "unknown": []
+              },
+              {
+                "post": "us_fort_sumter",
+                "result": "held",
+                "known": 85,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:140",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 140,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 9490,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 69000,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:141",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 141,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 19000,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 67613,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:142",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 142,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 14826,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 64365,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:143",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 143,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 10754,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 62270,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:harpers_ferry:146",
+        "region": "harpers_ferry",
+        "days": [
+          {
+            "day": 146,
+            "sides": [
+              {
+                "post": "cs_cmd_harpers_ferry",
+                "result": "gained_ground",
+                "known": 5000,
+                "unknown": [
+                  "state-forces.va_harpers_ferry"
+                ]
+              },
+              {
+                "post": "us_dept_pennsylvania",
+                "result": "withdrew",
+                "known": 2000,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battle:manassas:146",
+        "region": "manassas",
+        "days": [
+          {
+            "day": 146,
+            "sides": [
+              {
+                "post": "cs_cmd_manassas",
+                "result": "routed",
+                "known": 7741,
+                "unknown": []
+              },
+              {
+                "post": "us_dept_northeastern_virginia",
+                "result": "gained_ground",
+                "known": 60903,
+                "unknown": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "operations": [
+      {
+        "id": "op:cs_cmd_charleston:38",
+        "commander": "beauregard_pierre_g_t",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "cs_cmd_charleston",
+            "oaxBlocks": [
+              "fb_cs_charleston",
+              "fb_cs_charleston_castle_pinckney",
+              "fb_st_charleston_1st_artillery_battalion",
+              "fb_st_charleston_1st_infantry_regulars",
+              "fb_st_charleston_floating_battery",
+              "fb_st_charleston_fort_johnson",
+              "fb_st_charleston_fort_palmetto_stono",
+              "fb_st_charleston_moultrie_infantry_recruits",
+              "fb_st_charleston_regiment_of_rifles",
+              "fb_st_charleston_vigilant_rifles"
+            ],
+            "oaxRoute": {
+              "routeFrom": "charleston",
+              "routeTo": "fort_sumter",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 0,
+                "phaseRegion": "charleston"
+              },
+              {
+                "phaseKind": "bombard",
+                "phaseStart": 0,
+                "phaseDays": 30000,
+                "phaseRegion": "fort_sumter"
+              }
+            ],
+            "oaxObjective": "fort_sumter",
+            "oaxStage": "end",
+            "oaxSince": 40,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 39,
+            "oaxLog": [
+              {
+                "axevDay": 38,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "charleston"
+              },
+              {
+                "axevDay": 38,
+                "axevStage": "bombard",
+                "axevReason": "bombarding",
+                "axevRegion": "charleston"
+              },
+              {
+                "axevDay": 39,
+                "axevStage": "bombard",
+                "axevReason": "garrison_surrendered",
+                "axevRegion": "fort_sumter"
+              },
+              {
+                "axevDay": 40,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "fort_sumter"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:cs_cmd_harpers_ferry:97",
+        "commander": "johnston_joseph_e",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "cs_cmd_harpers_ferry",
+            "oaxBlocks": [
+              "state-forces.va_harpers_ferry"
+            ],
+            "oaxRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 2000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "oaxObjective": "harpers_ferry",
+            "oaxStage": "end",
+            "oaxSince": 143,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 100,
+            "oaxLog": [
+              {
+                "axevDay": 97,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "harpers_ferry"
+              },
+              {
+                "axevDay": 99,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "harpers_ferry"
+              },
+              {
+                "axevDay": 100,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "harpers_ferry"
+              },
+              {
+                "axevDay": 143,
+                "axevStage": "end",
+                "axevReason": "superseded",
+                "axevRegion": "harpers_ferry"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:us_dept_pennsylvania:113",
+        "commander": "patterson_robert",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_pennsylvania",
+            "oaxBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "oaxRoute": {
+              "routeFrom": "philadelphia",
+              "routeTo": "lower_valley",
+              "routeLegs": [
+                {
+                  "legEdge": "rail:philadelphia:southeast_pa:pennsylvania",
+                  "legFrom": "philadelphia",
+                  "legTo": "southeast_pa",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "rail:harrisburg:southeast_pa:pennsylvania",
+                  "legFrom": "southeast_pa",
+                  "legTo": "harrisburg",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "rail:cumberland_valley_pa:harrisburg:cumberland_valley",
+                  "legFrom": "harrisburg",
+                  "legTo": "cumberland_valley_pa",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "rail:cumberland_valley_pa:western_maryland:franklin",
+                  "legFrom": "cumberland_valley_pa",
+                  "legTo": "western_maryland",
+                  "legType": "rail",
+                  "legDays": 1000,
+                  "legThreat": 0,
+                  "legSupply": 722,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "road:lower_valley:western_maryland",
+                  "legFrom": "western_maryland",
+                  "legTo": "lower_valley",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 2166,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 9888,
+              "routeDays": 7000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "philadelphia"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 1000,
+                "phaseRegion": "southeast_pa"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 1000,
+                "phaseRegion": "harrisburg"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 5000,
+                "phaseDays": 1000,
+                "phaseRegion": "cumberland_valley_pa"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 6000,
+                "phaseDays": 1000,
+                "phaseRegion": "western_maryland"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 7000,
+                "phaseDays": 3000,
+                "phaseRegion": "lower_valley"
+              }
+            ],
+            "oaxObjective": "lower_valley",
+            "oaxStage": "end",
+            "oaxSince": 135,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 123,
+            "oaxLog": [
+              {
+                "axevDay": 113,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "philadelphia"
+              },
+              {
+                "axevDay": 116,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "philadelphia"
+              },
+              {
+                "axevDay": 123,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "lower_valley"
+              },
+              {
+                "axevDay": 135,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "lower_valley"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:us_dept_northeastern_virginia:135",
+        "commander": "mcdowell_irvin",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_northeastern_virginia",
+            "oaxBlocks": [
+              "organised.s74_mcdowell_division_5_brigade_2.1",
+              "raised.st_gov_new_york.d64.bundle.3",
+              "raised.st_gov_new_york.d64.bundle.7",
+              "raised.st_gov_new_york.d64.bundle.8",
+              "raised.st_gov_new_york.d64.bundle.9",
+              "raised.st_gov_new_york.d83.bundle.3",
+              "organised.s74_mcdowell_division_4_reserve.1",
+              "raised.st_gov_massachusetts.d76",
+              "raised.st_gov_new_york.d64.bundle.2",
+              "raised.st_gov_new_york.d64.bundle.5",
+              "raised.st_gov_new_york.d64.bundle.6",
+              "raised.st_gov_new_york.d83.bundle.2",
+              "organised.s74_mcdowell_division_3_brigade_2.1",
+              "organised.s74_mcdowell_division_5_brigade_1.1",
+              "raised.st_gov_massachusetts.d76.bundle.2",
+              "raised.st_gov_michigan.d77",
+              "raised.st_gov_new_york.d64",
+              "raised.st_gov_new_york.d64.bundle.10",
+              "raised.st_gov_new_york.d83.bundle.4",
+              "organised.s74_mcdowell_division_1_brigade_2.1",
+              "organised.s74_mcdowell_division_1_brigade_3.1",
+              "organised.s74_mcdowell_division_1_brigade_4.1",
+              "organised.s74_mcdowell_division_1_brigade_4.2",
+              "organised.s74_mcdowell_division_2_brigade_1.1",
+              "organised.s74_mcdowell_division_2_brigade_2.1",
+              "organised.s74_mcdowell_division_2_brigade_2.2",
+              "organised.s74_mcdowell_division_3_brigade_3.1",
+              "organised.s74_mcdowell_division_5_brigade_1.2",
+              "raised.st_gov_connecticut.d77",
+              "raised.st_gov_maine.d77",
+              "raised.st_gov_new_york.d64.bundle.4",
+              "raised.st_gov_new_york.d83"
+            ],
+            "oaxRoute": {
+              "routeFrom": "northern_virginia",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:manassas:northern_virginia",
+                  "legFrom": "northern_virginia",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 1974,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 4974,
+              "routeDays": 3000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "northern_virginia"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              },
+              {
+                "phaseKind": "assault",
+                "phaseStart": 6000,
+                "phaseDays": 1000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "oaxObjective": "manassas",
+            "oaxStage": "end",
+            "oaxSince": 145,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 141,
+            "oaxLog": [
+              {
+                "axevDay": 135,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 138,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 141,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 141,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 142,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 142,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 143,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 143,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 144,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 144,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "manassas"
+              },
+              {
+                "axevDay": 145,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "manassas"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:us_dept_pennsylvania:141",
+        "commander": "patterson_robert",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_pennsylvania",
+            "oaxBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "oaxRoute": {
+              "routeFrom": "lower_valley",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:lower_valley",
+                  "legFrom": "lower_valley",
+                  "legTo": "harpers_ferry",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 2166,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 5166,
+              "routeDays": 3000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "lower_valley"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "oaxObjective": "harpers_ferry",
+            "oaxStage": "pause",
+            "oaxSince": 148,
+            "oaxUntil": 151,
+            "oaxRepulses": 1,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": null,
+            "oaxLog": [
+              {
+                "axevDay": 141,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "lower_valley"
+              },
+              {
+                "axevDay": 144,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "lower_valley"
+              },
+              {
+                "axevDay": 147,
+                "axevStage": "withdraw",
+                "axevReason": "repulsed",
+                "axevRegion": "lower_valley"
+              },
+              {
+                "axevDay": 148,
+                "axevStage": "pause",
+                "axevReason": "repulsed",
+                "axevRegion": "lower_valley"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "op:cs_cmd_harpers_ferry:144",
+        "commander": "johnston_joseph_e",
+        "axes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "cs_cmd_harpers_ferry",
+            "oaxBlocks": [
+              "raised.st_gov_georgia.d122.2",
+              "raised.st_gov_georgia.d125",
+              "raised.st_gov_tennessee.d129.transfer.143.2",
+              "state-forces.va_harpers_ferry"
+            ],
+            "oaxRoute": {
+              "routeFrom": "loudoun_fauquier",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:loudoun_fauquier:manassas",
+                  "legFrom": "loudoun_fauquier",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 3000,
+              "routeDays": 3000
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 14000,
+                "phaseRegion": "loudoun_fauquier"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 14000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "oaxObjective": "manassas",
+            "oaxStage": "assemble",
+            "oaxSince": 144,
+            "oaxUntil": 158,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": null,
+            "oaxLog": [
+              {
+                "axevDay": 144,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "loudoun_fauquier"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "driver": {
+    "test": "packages/cli/test/planner.test.ts",
+    "needle": "counts every scoring term live",
+    "receipt": {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/cli/test/planner.test.ts",
+        "-t",
+        "counts every scoring term live"
+      ],
+      "exit": 0,
+      "seconds": 2.796,
+      "log": "runs/s119/planner-live-control.log"
+    }
+  }
+}

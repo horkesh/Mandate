@@ -1,0 +1,54 @@
+{
+  "accepted": true,
+  "rows": [
+    {
+      "block": "state-forces.cs_tn_infantry_tennessee",
+      "post": "st_gov_tennessee",
+      "lot": null,
+      "men": null,
+      "location": "nashville"
+    },
+    {
+      "block": "state-forces.cs_tn_cavalry_tennessee",
+      "post": "st_gov_tennessee",
+      "lot": null,
+      "men": null,
+      "location": "nashville"
+    },
+    {
+      "block": "state-forces.cs_tn_river_artillery_tennessee",
+      "post": "st_gov_tennessee",
+      "lot": null,
+      "men": null,
+      "location": "nashville"
+    },
+    {
+      "block": "raised.st_gov_tennessee.d129.2",
+      "post": "st_gov_tennessee",
+      "lot": null,
+      "men": null,
+      "location": "nashville"
+    },
+    {
+      "block": "raised.st_gov_tennessee.d129.transfer.143.1",
+      "post": "cs_cmd_fredericksburg",
+      "lot": "tn_2_infantry",
+      "men": null,
+      "location": "tn_holston"
+    },
+    {
+      "block": "raised.st_gov_tennessee.d129",
+      "post": "st_gov_tennessee",
+      "lot": "generated.raised.st_gov_tennessee.d129.3",
+      "men": null,
+      "location": "nashville"
+    },
+    {
+      "block": "raised.st_gov_tennessee.d129.transfer.143.2",
+      "post": "cs_cmd_harpers_ferry",
+      "lot": "tn_1_infantry",
+      "men": null,
+      "location": "murfreesboro"
+    }
+  ]
+}

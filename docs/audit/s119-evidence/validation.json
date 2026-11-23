@@ -1,0 +1,276 @@
+{
+  "mergeChecks": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.542,
+      "log": "runs/s119/merge-typecheck.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/merge-check.ts",
+        "--smoke"
+      ],
+      "exit": 0,
+      "seconds": 3.206,
+      "log": "runs/s119/merge-smoke.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/merge-check.ts"
+      ],
+      "exit": 0,
+      "seconds": 27.29,
+      "log": "runs/s119/merge-hashes.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/kernel/test/s112-letter-identity.test.ts",
+        "packages/kernel/test/s112-paper-receipts.test.ts",
+        "packages/kernel/test/s111-call-evidence.test.ts",
+        "packages/cli/test/s111-exposure.test.ts",
+        "packages/pack-format/test/schemas.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.806,
+      "log": "runs/s119/merge-focused.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/kernel/test/s112-authored-letters.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.442,
+      "log": "runs/s119/merge-authored.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 1.937,
+      "log": "runs/s119/merge-rules.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.572,
+      "log": "runs/s119/merge-boundary.log"
+    }
+  ],
+  "preflight": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.548,
+      "log": "runs/s119/preflight-typecheck.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 1,
+      "seconds": 2.461,
+      "log": "runs/s119/preflight-rules.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 1.878,
+      "log": "runs/s119/preflight-rules-corrected.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.657,
+      "log": "runs/s119/preflight-boundary.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/references.ts",
+        "--smoke"
+      ],
+      "exit": 0,
+      "seconds": 6.249,
+      "log": "runs/s119/preflight-smoke.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "pack:validate",
+        "--",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 2.267,
+      "log": "runs/s119/preflight-pack.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/make-save-fixture.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.587,
+      "log": "runs/s119/preflight-fixture.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/projection.ts",
+        "--correction"
+      ],
+      "exit": 0,
+      "seconds": 15.181,
+      "log": "runs/s119/correction-projection.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 4.735,
+      "log": "runs/s119/correction-rules-green.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/references.ts",
+        "--smoke"
+      ],
+      "exit": 0,
+      "seconds": 14.562,
+      "log": "runs/s119/correction-smoke.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/cli/test/planner.test.ts",
+        "-t",
+        "counts every scoring term live"
+      ],
+      "exit": 0,
+      "seconds": 2.796,
+      "log": "runs/s119/planner-live-control.log"
+    }
+  ],
+  "workerFocused": {
+    "command": "npm test -- packages/kernel/test/s70-lots.test.ts packages/kernel/test/s70-recruitment-lots.test.ts packages/kernel/test/s74-organisation.test.ts packages/kernel/test/save.test.ts packages/rule-seats/test/rule-seats.test.ts packs/union-1861/test/state-forces.test.ts packs/union-1861/test/virginia-dated-forces.test.ts packs/union-1861/test/s77-concentration.test.ts",
+    "exit": 0,
+    "files": 8,
+    "passed": 81,
+    "log": "runs/s119/corrections-focused.log"
+  },
+  "sessionCorrection": {
+    "diagnosis": "runs/s119/transfer-diagnosis.md",
+    "passing": [
+      "runs/s119/corrections-session-green.log",
+      "runs/s119/corrections-fallback-green.log",
+      "runs/s119/corrections-session-types.log"
+    ],
+    "retainedFailing": [
+      "runs/s119/corrections-session-red.log",
+      "runs/s119/corrections-fallback-red.log"
+    ]
+  },
+  "captures": {
+    "first": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/references.ts"
+      ],
+      "exit": 1,
+      "seconds": 69.975,
+      "log": "runs/s119/references.log"
+    },
+    "correctedUnion": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s119/references.ts",
+        "--union-only"
+      ],
+      "exit": 1,
+      "seconds": 80.471,
+      "log": "runs/s119/references-corrected.log"
+    },
+    "testbed": "Reused exact120-day capture; optional named-only fields do not activate in testbed, and focused session regression guards legacy command copies. No testbed campaign repeated."
+  },
+  "failureRetention": {
+    "limitation": "Worker passing reruns overwrote two earlier focused raw logs. This is disclosed; no full retention claim is made.",
+    "overwritten": [
+      {
+        "path": "runs/s119/corrections-focused.log",
+        "original": "two save-fixture assertions failed, 78 passed across eight files; current-schema fixture/version mismatch before schema3 fixture correction",
+        "current": "81/81 passing",
+        "availableParentExcerpt": "save.test.ts:73 current fixture exactly what build writes; Test Files1 failed|7 passed(8); Tests2 failed|78 passed(80); duration10.74s"
+      },
+      {
+        "path": "runs/s119/corrections-receipt-test.log",
+        "original": "pipeline synthetic setup lacked received Harris holder; unknown_post; worker reported correction by supplying ordinary received post report",
+        "current": "passing call-to-transfer regression",
+        "evidenceClass": "worker closeout disclosure; full original raw output not retained on disk"
+      }
+    ],
+    "retainedFailures": [
+      "runs/s119/corrections-red.log",
+      "runs/s119/corrections-receipt-debug.log",
+      "runs/s119/preflight-rules.log"
+    ],
+    "action": "No campaign rerun for log recovery. Preserve all subsequent logs with distinct names and accurately report the limitation."
+  },
+  "noTimingOrSweep": "Budget not measured/certified here. Prior binding lever-sweep findings unchanged; no new campaign or criterion waiver."
+}

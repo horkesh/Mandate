@@ -64,10 +64,19 @@ const citation = z.strictObject({
 const provenance = z.array(citation).min(1, 'at least one citation of a source in PROVENANCE.json (decisions 0031, 0033)');
 
 const doctrineGoal = z.strictObject({ objective: idOf('region').nullable(), posture: z.enum(['hold', 'relieve', 'take']) });
+const letterToken = z.string().max(ids.ID_MAX_LENGTH).regex(/^[a-z][a-z0-9_]*$/);
+const letterIdentity = z.strictObject({ namespace: letterToken, key: letterToken, revision: positive });
+const paperClaim = z.strictObject({ kind: z.enum(phase0.CLAIM_KINDS), region: idOf('region').nullable(), token: termId.nullable(), min: int.optional(), max: int.optional() });
+const paperSelector = z.discriminatedUnion('kind', [
+  z.strictObject({ kind: z.literal('letter'), issuer: idOf('person'), letter: letterIdentity, post: idOf('post'), role: z.enum(['relay', 'addressee']) }),
+  z.strictObject({ kind: z.literal('report'), author: idOf('person'), authorPost: idOf('post').nullable(), subjectKind: z.enum(phase0.SUBJECT_KINDS),
+    subjectId: termId, reportType: z.enum(phase0.REPORT_TYPES), reportSubtype: termId.nullable(), answers: letterIdentity.optional(), claims: z.array(paperClaim).optional() }),
+]);
+const requiresPapers = z.array(paperSelector).min(1).optional().describe('A conjunction of actual receipts in the acting seat’s own knowledge.');
 const doctrineDiscretion = z.strictObject({ condition: z.enum(DISCRETION_CONDITIONS), fallback: doctrineGoal });
 const nestedDiscretion = doctrineDiscretion.extend({ fallback: doctrineGoal.extend({ discretion: doctrineDiscretion.optional() }) });
 const boundedDiscretion = doctrineDiscretion.extend({ fallback: doctrineGoal.extend({ discretion: nestedDiscretion.optional() }) });
-const proposalReply = z.strictObject({ id: termId, post: idOf('post'), fromDate: historicalDate, answers: termId, source: z.string().min(1) });
+const proposalReply = z.strictObject({ id: termId, post: idOf('post'), fromDate: historicalDate, answers: termId, source: z.string().min(1), requiresPapers });
 const doctrineProposalAnswer = z.union([
   proposalReply.extend({ action: z.enum(['accept', 'decline']) }),
   proposalReply.extend({ action: z.literal('discretion'), objective: doctrineGoal.shape.objective.optional(),
@@ -300,16 +309,18 @@ export const RulesSchema = z.strictObject({
         .array(
           z.strictObject({
             faction: idOf('faction'),
+            letterNamespace: letterToken.optional(),
+            maxPaperSelectors: positive.optional().describe('Pack limit for each receipt conjunction and its per-paper claim tests.'),
             crossNeutral: z.boolean().describe('Whether his goals may cross a neutral government’s open ground: a political act (lane 1.12).'),
             concentrateAt: idOf('post').nullable().describe('The post his raised regiments are transferred to; null leaves them with the governors.'),
             concentrateSource: z.string().min(1).nullable().describe('Why that post: the research it rests on, the choice of post labelled [I]; null exactly when concentrateAt is.'),
-            concentrations: z.array(z.strictObject({ post: idOf('post'), fromDate: historicalDate, requiresDepartment: idOf('department'), fromPosts: z.array(idOf('post')), receiveLevies: z.boolean().optional(), source: z.string().min(1) })).optional().describe('Dated concentration changes after a government joins this side and the receiving command is received. Named sending posts keep independent destinations; receiveLevies false withholds unallocated statewide batches.'),
+            concentrations: z.array(z.strictObject({ id: termId.optional(), post: idOf('post'), fromDate: historicalDate, requiresDepartment: idOf('department'), fromPosts: z.array(idOf('post')), namedRegiments: z.strictObject({ afterCall: termId, ids: z.array(termId).min(1) }).optional(), receiveLevies: z.boolean().optional(), source: z.string().min(1), requiresPapers })).optional().describe('Dated concentration changes after a government joins this side and the receiving command is received. Named regiment requests use one sending post and its received call answer. receiveLevies false withholds unallocated statewide batches.'),
             appointments: z.array(z.union([z.strictObject({ post: idOf('post'), person: idOf('person'), fromPost: idOf('post').nullable(), fromDate: historicalDate, requiresDepartment: idOf('department'), source: z.string().min(1) }), z.strictObject({ post: idOf('post'), person: idOf('person'), onDate: isoDate, source: z.string().min(1) })])).optional().describe('Sourced appointments establishing declared commands through the existing appointment verb, conditional on government side and commander eligibility.'),
             calls: z
-              .array(z.strictObject({ termsId: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1) }))
+              .array(z.strictObject({ termsId: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1), requiresPapers }))
               .describe('Each identified dated requisition goes once; distinct IDs allow repeats to a governor. atPeace permits a cited pre-war call. readiness records an answer without muster. Remove a row when a situation owns the same requisition.'),
             offensives: z
-              .array(z.strictObject({ id: termId.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), source: z.string().min(1) }))
+              .array(z.strictObject({ id: termId.optional(), letter: letterIdentity.optional(), supersedes: letterIdentity.optional(), dependsOn: z.array(letterIdentity).optional(), repeats: letterIdentity.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), requiresPapers, source: z.string().min(1) }))
               .describe('The dated goals he gives (take unless a posture is specified), each from its date (or the day after war, if later); each cites its source.'),
             proposalAnswers: z.array(doctrineProposalAnswer).optional()
               .describe('Sourced replies from their written date, once the commander’s proposal answering the named goal has reached this principal.'),
@@ -685,6 +696,7 @@ export const RegimentCatalogueSchema = z.array(z.strictObject({
   side: z.string().min(1),
   termDays: z.array(positive),
   warTerm: z.boolean().optional().describe('An explicitly sourced war contract; absent does not establish a term.'),
+  identityCall: termId.optional().describe('Read linkage to a particular requisition; the already raised lot keeps its call’s service.'),
   aliases: z.array(z.string().min(1)),
   observations: z.array(z.strictObject({
     observationId: z.string().min(1), observedOn: z.string().min(1),

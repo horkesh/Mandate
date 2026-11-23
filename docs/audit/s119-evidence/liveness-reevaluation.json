@@ -1,0 +1,14 @@
+{
+  "reusedCapture": true,
+  "rows": [
+    {
+      "pack": "testbed",
+      "failed": []
+    },
+    {
+      "pack": "union-1861",
+      "failed": []
+    }
+  ],
+  "bandProblems": []
+}

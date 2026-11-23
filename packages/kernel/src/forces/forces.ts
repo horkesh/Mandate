@@ -10,7 +10,7 @@
  * Stores are held in milli-days (1000 = one day of supply for the block), so
  * a part-day's consumption or delivery never rounds away (decision 0002).
  */
-import { forceTotals, changeLotTotals, unidentifiedLot, type RegimentLot } from './lots.ts';
+import { forceTotals, changeLotTotals, knownStragglers, unidentifiedLot, type RegimentLot } from './lots.ts';
 import { strictCompare } from '../compare.ts';
 import type { DepartmentId, FactionId, ForceBlockId } from '../ids.ts';
 import type { State } from '../root-state.ts';
@@ -224,15 +224,16 @@ export function applyForces(state: State, deltas: readonly ForceDelta[]): { read
     const b = next[d.block];
     if (b === undefined) throw new ForcesError([`unknown force block ${d.block}`]);
     if (d.change === 'battle_losses') {
+      const stragglersBefore = knownStragglers(b);
       const parts = [d.killed, d.wounded, d.missing, d.captured, d.stragglersCaptured];
       if (parts.some((n) => !Number.isSafeInteger(n) || n < 0)) throw new ForcesError([`battle losses for ${d.block} must be whole numbers, at least 0`]);
-      if (d.stragglersCaptured > forceTotals(b).fbStragglers) throw new ForcesError([`${d.block} has ${forceTotals(b).fbStragglers} stragglers, not ${d.stragglersCaptured} to capture`]);
+      if (d.stragglersCaptured > stragglersBefore) throw new ForcesError([`${d.block} has ${stragglersBefore} known stragglers, not ${d.stragglersCaptured} to capture`]);
       // An unknown strength stays unknown (counted as none, never guessed); only its stragglers can change.
       const out = d.killed + d.wounded + d.missing + d.captured;
       if (forceTotals(b).fbStrength! !== null && out > forceTotals(b).fbStrength!) throw new ForcesError([`${d.block} has ${forceTotals(b).fbStrength!} men, not ${out} to lose`]);
       const strength = forceTotals(b).fbStrength! === null ? null : forceTotals(b).fbStrength! - out;
-      const stragglers = forceTotals(b).fbStragglers + (forceTotals(b).fbStrength === null ? 0 : d.missing) - d.stragglersCaptured;
-      if (strength === forceTotals(b).fbStrength && stragglers === forceTotals(b).fbStragglers) continue;
+      const stragglers = stragglersBefore + (forceTotals(b).fbStrength === null ? 0 : d.missing) - d.stragglersCaptured;
+      if (strength === forceTotals(b).fbStrength && stragglers === stragglersBefore) continue;
       next[d.block] = { ...b, fbLots: changeLotTotals(b.fbLots, strength, stragglers) };
       changed = true;
       if (forceTotals(b).fbStrength! !== null && strength !== forceTotals(b).fbStrength!) changes.push({ change: d.change, block: d.block, before: forceTotals(b).fbStrength!, after: strength!, cause: d.cause });
@@ -253,11 +254,12 @@ export function applyForces(state: State, deltas: readonly ForceDelta[]): { read
       continue;
     }
     if (d.change === 'stragglers_returned') {
-      if (!Number.isSafeInteger(d.men) || d.men < 0 || d.men > forceTotals(b).fbStragglers) throw new ForcesError([`${d.block} has ${forceTotals(b).fbStragglers} stragglers, not ${d.men} to return`]);
+      const stragglers = knownStragglers(b);
+      if (!Number.isSafeInteger(d.men) || d.men < 0 || d.men > stragglers) throw new ForcesError([`${d.block} has ${stragglers} known stragglers, not ${d.men} to return`]);
       if (d.men === 0 || forceTotals(b).fbStrength === null) continue;
-      next[d.block] = { ...b, fbLots: changeLotTotals(b.fbLots, forceTotals(b).fbStrength! + d.men, forceTotals(b).fbStragglers - d.men) };
+      next[d.block] = { ...b, fbLots: changeLotTotals(b.fbLots, forceTotals(b).fbStrength! + d.men, stragglers - d.men) };
       changed = true;
-      changes.push({ change: d.change, block: d.block, before: forceTotals(b).fbStragglers, after: forceTotals(b).fbStragglers - d.men, cause: d.cause });
+      changes.push({ change: d.change, block: d.block, before: stragglers, after: stragglers - d.men, cause: d.cause });
       continue;
     }
     const amount = d.change === 'strength' ? d.men : d.milli;
@@ -266,7 +268,7 @@ export function applyForces(state: State, deltas: readonly ForceDelta[]): { read
     if (before === null) continue;
     const after = Math.max(0, before + amount);
     if (after === before) continue;
-    next[d.block] = d.change === 'strength' ? { ...b, fbLots: changeLotTotals(b.fbLots, after, forceTotals(b).fbStragglers) } : { ...b, fbStoresMilli: after };
+    next[d.block] = d.change === 'strength' ? { ...b, fbLots: changeLotTotals(b.fbLots, after, knownStragglers(b)) } : { ...b, fbStoresMilli: after };
     changed = true;
     changes.push({ change: d.change, block: d.block, before, after, cause: d.cause });
   }

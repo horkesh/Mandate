@@ -24,6 +24,7 @@ import { rememberSentOrders } from '../knowledge/knowledge.ts';
 import { sha256OfText } from '../serialize/sha256.ts';
 import type { RouteKind } from './latency.ts';
 import type { CallProfile } from '../recruitment/rules.ts';
+import type { LetterIdentity } from '../world/letters.ts';
 
 /** One more person a message must pass after its current recipient. */
 export interface Hop {
@@ -58,6 +59,9 @@ export interface CallSpec {
 
 export interface OrderBody {
   readonly orderDoctrine?: string;
+  readonly orderLetter?: LetterIdentity;
+  readonly orderSupersedes?: LetterIdentity;
+  readonly orderPriorDispatch?: MessageId;
   readonly orderPlan?: MessageId;
   readonly orderProposal?: ProposalReply;
   readonly orderNotes?: readonly PlanNote[];
@@ -106,6 +110,7 @@ export interface VerbBody {
   /** A relief's mode; a transfer's force kind (blocks or men). */
   readonly verbMode: string | null;
   readonly verbAmount: number | null;
+  readonly verbRegiments?: readonly string[];
   /** A rank an appointment confers, from the pack's vocabulary. */
   readonly verbRank: string | null;
   /** The situation a consultation asks about; the region an inquiry asks about. */

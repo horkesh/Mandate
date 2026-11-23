@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { aggregateLots, changeLotTotals, forceTotals, type RegimentLot } from '../src/forces/lots.ts';
+import { aggregateLots, changeLotTotals, forceTotals, knownStragglers, type RegimentLot } from '../src/forces/lots.ts';
 import { toId } from '../src/ids.ts';
 
 const lot = (id: string, men: number | null, stragglers = 0): RegimentLot => ({
@@ -24,6 +24,13 @@ describe('regiment quantities (0108, S70)', () => {
     expect(aggregateLots(changeLotTotals(a, 2, 1))).toEqual({ fbStrength: 2, fbStragglers: 1 });
     expect(changeLotTotals([lot('a', null, 2)], null, 1)[0]!.lotMen).toBeNull();
   });
+  it('keeps a mixed straggler total unknown while crediting only accounted captures', () => {
+    const held = { ...lot('held', null), lotStragglers: null };
+    const after = changeLotTotals([held, lot('accounted', 3, 2)], null, 1);
+    expect(after).toEqual([held, lot('accounted', 3, 1)]);
+    expect(knownStragglers({ fbLots: after })).toBe(1);
+    expect(aggregateLots(after)).toEqual({ fbStrength: null, fbStragglers: null });
+  });
   it('reuses derived totals across block changes that retain the same lots', () => {
     const cache = new WeakMap();
     const b = { fbLots: [lot('a', 8)] };
@@ -36,7 +43,7 @@ describe('regiment quantities (0108, S70)', () => {
     expect(aggregateLots(changeLotTotals([lot('a', 0), lot('b', 0)], 3, 0)).fbStrength).toBe(3);
     for (let n = 0; n <= 10; n++) {
       const after = changeLotTotals([lot('b', 7), lot('a', 3)], 10 - n, n);
-      expect(after.every(l => l.lotMen! >= 0 && l.lotMen! + l.lotStragglers === (l.lotId === 'a' ? 3 : 7))).toBe(true);
+      expect(after.every(l => l.lotMen! >= 0 && l.lotMen! + l.lotStragglers! === (l.lotId === 'a' ? 3 : 7))).toBe(true);
     }
   });
   it('derives expiry from each regiment rather than a saved block total', () => {

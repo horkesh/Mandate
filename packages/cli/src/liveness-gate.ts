@@ -128,6 +128,8 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  "planner.term.caution": {"why":"S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed.","test":"packages/cli/test/planner.test.ts","needle":"counts every scoring term live"},
+  "planner.term.force_ratio": {"why":"S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted.","test":"packages/cli/test/planner.test.ts","needle":"counts every scoring term live"},
   'plans.goal_proposed': { why: "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted.", test: 'packages/kernel/test/s96-discretion.test.ts', needle: 'complete proposal back along the wire' },
   'plans.discretion_exercised': { why: "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert.", test: 'packages/kernel/test/s96-discretion.test.ts', needle: 'applies the full fallback only after delivery' },
   // R73: doctrine retires the generic Washington attack; the editing exercise edits every reviewed plan.
@@ -187,9 +189,7 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'forces.landing_refused': { why: 'the one situation landing in the reference runs is made', test: 'packages/cli/test/situation-landing.test.ts', needle: 'refuses a landing from a block that is not aboard' },
 
   "combat.cut_off": {"why": "S98: none of the five field routs at the objective is cut off; each has a legal retreat. The island fort remains a bombardment surrender, outside this field counter. The trapped-garrison control remains live.", "test": "packages/kernel/test/combat.test.ts", "needle": "a trapped garrison with nowhere to go surrenders"},
-  "operations.repulsed": {"why": "S98: the field commander chooses a direct plan to his base and completes it without the later assault on the valley command. No operation axis is repulsed in either full reference; the fortified-defender control still repulses an axis.", "test": "packages/kernel/test/operations.test.ts", "needle": "driven back, an axis withdraws, pauses and tries again"},
   "orders.returned": {"why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch.", "test": "packages/kernel/test/believed-posts.test.ts", "needle": "an order sent before the report arrives is accepted, and bounces on arrival"},
-  "planner.term.time": {"why": "S98: the northern field commander chooses direct instead of supply_line, and the later assault on the valley command is absent. No full-reference draft pick depends on time alone. The separate S41 control changes the pick when time is removed.", "test": "packages/cli/test/planner.test.ts", "needle": "S41 time live control: dropping time changes the chosen candidate"},
 };
 
 /** What a pack at peace never does: no order is given and no governor called, so no force marches, no ground is contested. */
@@ -237,7 +237,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  */
 const UNION_BANDS: Record<string, GateBand> = {
   "orders.returned": {"minFires": 0, "maxFires": 0, "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."},
-  "planner.term.time": {"minFires": 0, "maxFires": 0, "why": "S98: the northern field commander chooses direct instead of supply_line, and the later assault on the valley command is absent. No full-reference draft pick depends on time alone. The separate S41 control changes the pick when time is removed."},
+  "planner.term.time": { ...around(1), why: "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed." },
   'people.resigned': { ...around(15), why: "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed." },
   // R82: an integrated government notice offers one officer his choice; he stays.
   'people.stayed': around(1),
@@ -252,7 +252,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   "combat.occupation": {"minFires": 157, "maxFires": 628},
   'combat.pursuit_chosen': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'combat.surrendered': around(1),
-  "combat.withdrew": {"minFires": 0, "maxFires": 0, "why": "S98: the field commander does not launch the later valley assault; no field side records a withdrawal. Five sides rout at the northern objective instead. The testbed still records three withdrawals and the breakout control remains live."},
+  "combat.withdrew": { ...around(1), why: "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged." },
   "control.changed": {"minFires": 160, "maxFires": 640},
   'control.threshold_crossed': around(39), // S1 effective-date [I]: the command concentration and emerged field movements change occupation through the existing control owner.
   'forces.stores_fell': { ...around(2888), why: "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted." },
@@ -263,7 +263,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   "combat.routed": {"minFires": 2, "maxFires": 10},
   'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'operations.ended': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
-  'operations.opened': around(2),
+  "operations.opened": { ...around(6), why: "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed." },
   "operations.stage": {"minFires": 9, "maxFires": 38},
   'operations.works': { ...around(7), why: "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works." },
   'orders.responses_pruned': around(27), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
@@ -305,7 +305,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'plans.approved': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'plans.submitted': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'planner.term.goal_fit': notHere("dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"),
-  'planner.term.supply': { ...around(2), why: "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.supply 2 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.supply." },
+  "planner.term.supply": {"minFires":0,"maxFires":0,"why":"S119: Patterson day140 changes from S116 holding to direct. Dropping supply from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. Supply remains live in the unchanged testbed reference; no supply or scoring rule changed."},
   'planner.term.haste': quiet("an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
   'plans.edit_received': quiet("only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
   'plans.edit_answered': quiet("only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
@@ -341,7 +341,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'seats.attention_refilled': around(21),
   "seats.attention_spent": around(153),
   'seats.initiative': { ...around(3), why: 'S16 dating holds remove two cabinet officers\' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json.' },
-  "operations.repulsed": {"minFires": 0, "maxFires": 0, "why": "S98: the field commander chooses a direct plan to his base and completes it without the later assault on the valley command. No operation axis is repulsed in either full reference; the fortified-defender control still repulses an axis."},
+  "operations.repulsed": { ...around(1), why: "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once." },
   'forces.landed_by_situation': around(1),
   'politics.act': around(2),
   'politics.answered': around(2),
@@ -358,8 +358,8 @@ const UNION_BANDS: Record<string, GateBand> = {
   "verbs.answered": around(123),
   'verbs.declined': notHere("every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"),
   "combat.general_hit": around(1),
-  "planner.term.caution": {"minFires": 1, "maxFires": 4},
-  "planner.term.force_ratio": {"minFires": 1, "maxFires": 4},
+  "planner.term.caution": {"minFires":0,"maxFires":0,"why":"S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed."},
+  "planner.term.force_ratio": {"minFires":0,"maxFires":0,"why":"S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted."},
   "combat.cut_off": {"minFires": 0, "maxFires": 0, "why": "S98: none of the five field routs at the objective is cut off; each has a legal retreat. The island fort remains a bombardment surrender, outside this field counter. The trapped-garrison control remains live."},
   "recruitment.renewed": around(1),
 };

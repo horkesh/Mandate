@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { applyMusters, enlistmentsOf, type NewBlock } from '../src/forces/enlistment.ts';
 import { forceTotals } from '../src/forces/lots.ts';
 import { toId } from '../src/ids.ts';
+import { regimentsRaised } from '../src/tick/recruitment.ts';
 import { createState } from '../src/tick/setup.ts';
 import { indexWorld } from '../src/world/index.ts';
 import type { RegimentRecord } from '../src/world/regiments.ts';
@@ -43,6 +44,23 @@ describe('identities follow actual raising (0108)', () => {
     expect(next.forceBlockStates[b.block]!.fbLots).toHaveLength(1);
     expect(next.forceBlockStates[b.block]!.fbLots[0]).toMatchObject({lotRegiment:null,lotGenerated:false,lotMen:null});
     expect(next.forceRaisedIdentities).toEqual({});
+  });
+  it('uses read call identities within its surviving quota without copying an individual service term or strength', () => {
+    const callId = 'identified_call';
+    const { map, state } = fixture([
+      { ...entry('first', 1, []), identityCall: callId },
+      { ...entry('second', 2, []), identityCall: callId },
+      { ...entry('wrong_call', 0, []), identityCall: 'other_call' },
+    ]);
+    const answered = regimentsRaised(map.world.rules.recruitment, 3, 'comply', null, null)!;
+    expect(answered).toMatchObject({ regiments: 3, men: null });
+    const block = proposal('named_batch', answered.regiments, answered.men);
+    const service = { ...block.enlistment, enlCallId: callId };
+    const mustered = applyMusters(map, state, [{ change: 'create', create: { ...block, enlistment: service }, cause: 'recruitment' }]).state;
+    const raised = mustered.forceBlockStates[block.block]!;
+    expect(raised.fbLots.map(l => [l.lotRegiment, l.lotMen, l.lotStragglers, l.lotService])).toEqual(
+      ['first', 'second', 'generated.named_batch.3'].map(id => [id, null, null, service]));
+    expect(forceTotals(raised)).toEqual({ fbStrength: null, fbStragglers: null });
   });
   it('S77: matches an explicit war contract without treating an unknown term as war service', () => {
     const {map,state}=fixture([{...entry('held',0,[]),warTerm:false},{...entry('war',1,[]),warTerm:true}]);

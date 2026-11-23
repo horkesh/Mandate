@@ -6,6 +6,31 @@ const original = { 'reference/mechanic': { minFires: 5, maxFires: 20 } };
 const current = { 'reference/mechanic': { minFires: 10, maxFires: 40 } };
 const record = { key: 'reference/mechanic', before: original['reference/mechanic'], after: current['reference/mechanic'], observed: 20, cause: 'The new received notice adds ten deliveries.', evidence: 'notes/change.md#notice' };
 describe('liveness changes require a cause and around(observed)', () => {
+  it('S119 permits only its three authorised quiet records with a live driver and rejects altered or additional zeros', () => {
+    const receipts = JSON.parse(readFileSync(new URL('./support/s119-quiet-transitions.json', import.meta.url), 'utf8'));
+    expect(receipts.map(({ record: r }: any) => r.key)).toEqual([
+      'union-1861, war by decision, 148 days/planner.term.caution',
+      'union-1861, war by decision, 148 days/planner.term.force_ratio',
+      'union-1861, war by decision, 148 days/planner.term.supply',
+    ]);
+    for (const { record: r, driver } of receipts) {
+      expect(driver).toEqual({ test: 'packages/cli/test/planner.test.ts', needle: 'counts every scoring term live' });
+      expect(readFileSync(new URL('../../' + driver.test, import.meta.url), 'utf8')).toContain(driver.needle);
+      expect(livenessProblems({ [r.key]: r.before }, { [r.key]: r.after }, [r])).toEqual([]);
+      for (const changed of [{ ...r, cause: 'another cause' }, { ...r, evidence: 'elsewhere' },
+        { ...r, observed: 1 }, { ...r, before: { minFires: 2, maxFires: 4 } },
+        { ...r, after: { ...r.after, why: 'another reason' } },
+        { ...r, after: { ...r.after, maxFires: 1 } },
+        { ...r, key: 'testbed, 120 days/planner.term.supply' },
+        { ...r, key: 'union-1861, war by decision, 148 days/planner.term.coordination' }]) {
+        expect(livenessProblems({ [changed.key]: changed.before }, { [changed.key]: changed.after }, [changed])).not.toEqual([]);
+      }
+    }
+    const original = Object.fromEntries(receipts.map(({ record: r }: any) => [r.key, r.before]));
+    const current = Object.fromEntries(receipts.map(({ record: r }: any) => [r.key, r.after]));
+    const extra = { ...receipts[0].record, key: 'union-1861, war by decision, 148 days/planner.term.coordination', before: null };
+    expect(livenessProblems(original, { ...current, [extra.key]: extra.after }, [...receipts.map(({ record: r }: any) => r), extra])).not.toEqual([]);
+  });
   it('S98 permits only its evidence-bound quiet records and preserves their live controls', () => {
     const receipts = JSON.parse(readFileSync(new URL('./support/s98-quiet-transitions.json', import.meta.url), 'utf8'));
     expect(receipts).toHaveLength(8); // five Union transitions; three testbed wording corrections

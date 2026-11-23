@@ -163,6 +163,7 @@ export interface StateForces {
   readonly termDays: number | null;
   /** Original expiries are unread, distinct from an indefinite war enlistment. */
   readonly termUnknown?: boolean;
+  readonly stragglersUnknown?: boolean;
   /** Prior requisitions included in this return, so their surviving men are not counted twice. */
   readonly includesCalls?: readonly string[];
   /** Local command at first entry; the raising post remains the enlistment source. */

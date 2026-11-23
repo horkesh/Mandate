@@ -1,0 +1,116 @@
+{
+  "head": "a360803f7bd02dacce450fded56f6c749dab991f",
+  "capture": "S116 retained capture, not rerun",
+  "files": [
+    {
+      "path": "runs/s116/references/coverage.json",
+      "bytes": 760339,
+      "sha256": "1db81306b12a67bf3eac2dd8e28323741fdc6426236174a8dbf60ee582834cef"
+    },
+    {
+      "path": "runs/s116/references/exposure.json",
+      "bytes": 35198,
+      "sha256": "4514e15eeccecc2b1e9c20cfa02475707ddbed419636883eb84decf44b9dc94c"
+    },
+    {
+      "path": "runs/s116/references/result.json",
+      "bytes": 1201,
+      "sha256": "8a7e963a106988818eda06610e8a6d28dbe514fbba332e3d348c33e70667d58d"
+    },
+    {
+      "path": "runs/s116/references/scores.json",
+      "bytes": 215741,
+      "sha256": "1016796c3d4ddba620d1e952c09282e67036c32064c73d6394c9161aaabd29d6"
+    },
+    {
+      "path": "runs/s116/references/testbed-calls.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "runs/s116/references/testbed-final-state.json",
+      "bytes": 506549,
+      "sha256": "63437f5c5cec61a7020993729d5d148ee98bda87e73c8ff9e2f5b2ac8eb115a5"
+    },
+    {
+      "path": "runs/s116/references/testbed-junction.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs/s116/references/testbed-messages.json",
+      "bytes": 3132,
+      "sha256": "5d9311e599c9da009f90dcfa4f76fdb339e8d012db2b156c847d6c56408aee4b"
+    },
+    {
+      "path": "runs/s116/references/testbed-observations.json",
+      "bytes": 118144,
+      "sha256": "a03dc97fcc7f3af27edc50d0fadc6412ac1495b7fa3b219b761179157c00ef0e"
+    },
+    {
+      "path": "runs/s116/references/testbed-requests.json",
+      "bytes": 10590,
+      "sha256": "114d56a69c62ae842e9dab14dd857a8bf5c36c03d95a40303380c60b88f77b52"
+    },
+    {
+      "path": "runs/s116/references/testbed-responses.json",
+      "bytes": 84311,
+      "sha256": "64a0ad3136c1323059cb6eda5c3e3a544e8a60706cb77ca9628bb4610227bf1b"
+    },
+    {
+      "path": "runs/s116/references/testbed-save-40.json",
+      "bytes": 337456,
+      "sha256": "9a8d58c215d81ad7cce14c3aed6de9f883e6b10a93651c586f9c3150c7d017fb"
+    },
+    {
+      "path": "runs/s116/references/testbed-summary.json",
+      "bytes": 83552,
+      "sha256": "83f33a1eb7f22c33428fae99e094e2f09346e142153f2618f0e41b54c33ad885"
+    },
+    {
+      "path": "runs/s116/references/union-1861-calls.json",
+      "bytes": 70740,
+      "sha256": "3a5ee99fc0989a982201cf0be1139e4b8c7d56fe4228c024fe334288a56c06b8"
+    },
+    {
+      "path": "runs/s116/references/union-1861-final-state.json",
+      "bytes": 5265705,
+      "sha256": "d7616dd9c5f6f210e8cb3fd03118b2931eb0b7fae81d711fba893f1d4b974b69"
+    },
+    {
+      "path": "runs/s116/references/union-1861-junction.json",
+      "bytes": 400141,
+      "sha256": "71dd4eb6568ed26ef7f23ca1e104a5787a1c049d0d5c2eb9fe6d87b9ec7dee9b"
+    },
+    {
+      "path": "runs/s116/references/union-1861-messages.json",
+      "bytes": 631456,
+      "sha256": "22a3ec22b125f66f8567fe36114cf617c87f157083674864301ea08260f9eb06"
+    },
+    {
+      "path": "runs/s116/references/union-1861-observations.json",
+      "bytes": 695729,
+      "sha256": "640a98d0d4634764c5a1270aa46ac9bf6c19590c3d012c3f2188f548f3f37ed5"
+    },
+    {
+      "path": "runs/s116/references/union-1861-requests.json",
+      "bytes": 76080,
+      "sha256": "bf5ea2f604fa9c2af447398f987bc662f77741ae709a42f6793006f10a683db7"
+    },
+    {
+      "path": "runs/s116/references/union-1861-responses.json",
+      "bytes": 1277006,
+      "sha256": "896e513abfdf0011d884e59f6fd4319ac603d5edda860c4d678db35498a20d5e"
+    },
+    {
+      "path": "runs/s116/references/union-1861-save-60.json",
+      "bytes": 1991861,
+      "sha256": "1edd4d52aec3206d91e04859fa06596e6361f0b10b3a67c44724a896756639b5"
+    },
+    {
+      "path": "runs/s116/references/union-1861-summary.json",
+      "bytes": 136102,
+      "sha256": "255c1cd1628dca591f26f0fb5546dcf89c5877329a83a5ff24a13654469333d6"
+    }
+  ]
+}

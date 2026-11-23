@@ -8,11 +8,12 @@ import type { State } from '../root-state.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { repartition } from './organisation.ts';
 
-export function transferLots(map:WorldIndex,state:State,from:PostId,to:PostId,men:number,pick:TransferPick,day:number):TransferResult{
-  if(from===to||factionOfPost(map,state,from)!==factionOfPost(map,state,to)||!Number.isSafeInteger(men)||men<1)throw new CommandError(['invalid regiment transfer']);
+export function transferLots(map:WorldIndex,state:State,from:PostId,to:PostId,amount:number,pick:TransferPick,day:number,regiments?:readonly string[]):TransferResult{
+  if(from===to||factionOfPost(map,state,from)!==factionOfPost(map,state,to)||!Number.isSafeInteger(amount)||amount<1)throw new CommandError(['invalid regiment transfer']);
   const own=commandedBlocks(state,from).filter(id=>state.forceBlockStates[id]!.fbKind==='block'&&state.forceBlockStates[id]!.fbSurrenderedDay===null);
   const candidates=own.flatMap(block=>state.forceBlockStates[block]!.fbLots.map(lot=>({block,lot})))
     .filter(x=>{
+      if(regiments!==undefined)return x.lot.lotMen!==0 && x.lot.lotRegiment!==null && !x.lot.lotGenerated && regiments.includes(x.lot.lotRegiment);
       const count=x.lot.lotService?.enlRegiments;
       const counted=count!==undefined && count!==null && count>0;
       return x.lot.lotMen!==0 && (!map.world.organisationTemplates?.some(t=>t.army===to) || !map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[from]!.postKind) || x.lot.lotRegiment!==null || counted);
@@ -22,7 +23,7 @@ export function transferLots(map:WorldIndex,state:State,from:PostId,to:PostId,me
       return (pick==='strongest_first'?bm-am:am-bm)||strictCompare(a.lot.lotId,b.lot.lotId);
     });
   const chosen=new Set<string>();let sent=0;
-  for(const c of candidates){if(sent>=men)break;chosen.add(c.lot.lotId);sent+=c.lot.lotMen??0;}
+  for(const c of candidates){if((regiments===undefined?sent:chosen.size)>=amount)break;chosen.add(c.lot.lotId);sent+=c.lot.lotMen??0;}
   let next=state;const moved:ForceBlockId[]=[];
   for(const id of own){
     const b=next.forceBlockStates[id]!,going=b.fbLots.filter(l=>chosen.has(l.lotId));if(going.length===0)continue;

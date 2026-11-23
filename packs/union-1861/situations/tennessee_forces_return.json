@@ -11,7 +11,7 @@
         "dayAtLeast": 119
       },
       {
-        "flag": "tennessee_forces_transferred"
+        "flag": "tennessee_forces_authorized"
       }
     ]
   },
@@ -22,15 +22,16 @@
         "field": "state_forces",
         "subject": "st_gov_tennessee",
         "delta": 1,
-        "reason": "state-forces-transferred",
+        "reason": "state-forces-tendered",
         "side": "confederate",
         "stateForces": {
           "id": "cs_tn_infantry_tennessee",
-          "regiments": 22,
-          "men": 22000,
+          "regiments": null,
+          "men": null,
           "arm": "infantry",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "stragglersUnknown": true
         }
       }
     },
@@ -40,15 +41,16 @@
         "field": "state_forces",
         "subject": "st_gov_tennessee",
         "delta": 1,
-        "reason": "state-forces-transferred",
+        "reason": "state-forces-tendered",
         "side": "confederate",
         "stateForces": {
           "id": "cs_tn_cavalry_tennessee",
-          "regiments": 2,
-          "men": 2000,
+          "regiments": null,
+          "men": null,
           "arm": "cavalry",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "stragglersUnknown": true
         }
       }
     },
@@ -58,17 +60,21 @@
         "field": "state_forces",
         "subject": "st_gov_tennessee",
         "delta": 1,
-        "reason": "state-forces-transferred",
+        "reason": "state-forces-tendered",
         "side": "confederate",
         "stateForces": {
-          "id": "cs_tn_artillery_tennessee",
+          "id": "cs_tn_river_artillery_tennessee",
           "regiments": null,
           "men": null,
           "arm": "artillery",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "stragglersUnknown": true
         }
       }
+    },
+    {
+      "setFlag": "tennessee_forces_tendered"
     }
   ],
   "report": {

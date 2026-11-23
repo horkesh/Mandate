@@ -266,7 +266,9 @@
       ],
       "notices": [
         "tennessee_forces_transferred",
-        "tennessee_forces_return"
+        "tennessee_forces_return",
+        "tennessee_forces_receiving_procedure",
+        "tennessee_forces_state_order"
       ],
       "execution": "R97: the state’s own notice, conditional on its secession; existing forces, placement and command owners; no governor compliance or new enlistment term."
     },

@@ -19,8 +19,12 @@ import { templateKey, type ReportBody, type ReportClaim } from './report.ts';
 import { templateFor, type ReportTemplate } from './templates.ts';
 import type { ReportTruth } from './truth.ts';
 import { sameGoal } from '../plans/goal.ts';
+import { letterKey, type LetterIdentity } from '../world/letters.ts';
+import type { PrincipalDoctrine } from '../world/world.ts';
+import { keepLatestReportWitness, reportWitness, stillReferenced, type ReceivedPaperReport } from './papers.ts';
 
 export type { KnownReport } from './records.ts';
+export { paperReadiness } from './papers.ts';
 
 export interface KnownSentAppointment {
   readonly appointmentPost: PostId;
@@ -32,8 +36,12 @@ export interface KnownSentAppointment {
 export interface SeatKnowledge {
   /** The sender's unanswered appointment copies; never reconstructed from a private response. */
   readonly knownSentAppointments?: readonly KnownSentAppointment[];
-  /** At most the last independent goal, goal-proposal answer and plan-review reply per post. */
+  /** At most the last independent goal, goal-proposal answer and plan-review reply per post, and one copy per named concentration. */
   readonly knownSentOrders?: readonly KnownSentOrder[];
+  /** One entry per declared authored letter, with its first and latest dispatch. */
+  readonly knownDoctrineDispatches?: readonly KnownDoctrineDispatch[];
+  /** Named letters and selected final report deliveries, independent of ordinary report retention. */
+  readonly knownPaperReceipts?: readonly KnownPaperReceipt[];
   /** In (received day, id) order. */
   readonly knownReports: readonly KnownReport[];
   /** Control excerpts of expired reports still supporting the map, in the same order. */
@@ -42,11 +50,44 @@ export interface SeatKnowledge {
   readonly knownOpeningControl?: MessageId;
 }
 
+export interface KnownDoctrineDispatch {
+  readonly dispatchLetter: LetterIdentity;
+  readonly dispatchOrigin: MessageId;
+  readonly dispatchDay: number;
+  readonly dispatchLatest?: MessageId;
+}
+
+export interface KnownPaperReceipt {
+  readonly receiptOrigin: MessageId;
+  readonly receiptPerson: PersonId;
+  readonly receiptPost: PostId | null;
+  readonly receiptRole: 'relay' | 'addressee';
+  readonly receiptDay: number;
+  readonly receiptLetter?: LetterIdentity;
+  readonly receiptIssuer?: PersonId;
+  readonly receiptReport?: ReceivedPaperReport;
+}
+
+/** Record the first actual arrival for a named paper, person, post and role. */
+export function rememberLetterReceipt(state: State, message: TransitMessage, day: number): State {
+  const letter = message.msgOrder?.orderLetter;
+  if (letter === undefined || message.msgRole === 'filter') return state;
+  const seat = seatIdFor(message.msgTo);
+  const held = storedKnowledgeOf(state, seat);
+  const receipts = held.knownPaperReceipts ?? [];
+  if (receipts.some(r => r.receiptLetter !== undefined && r.receiptRole === message.msgRole && r.receiptPost === message.msgToPost &&
+    r.receiptIssuer === message.msgOrder!.orderIssuer && letterKey(r.receiptLetter) === letterKey(letter))) return state;
+  const receipt: KnownPaperReceipt = { receiptOrigin: message.msgOrigin, receiptPerson: message.msgTo, receiptPost: message.msgToPost,
+    receiptRole: message.msgRole, receiptDay: day, receiptLetter: letter, receiptIssuer: message.msgOrder!.orderIssuer };
+  return { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownPaperReceipts: [...receipts, receipt] } } };
+}
+
 export interface KnownSentOrder {
   readonly sentPost: PostId;
   readonly sentMessage: MessageId;
-  readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit' | 'decline_proposal' | 'go';
+  readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit' | 'decline_proposal' | 'go' | 'transfer';
   readonly sentDoctrine?: string;
+  readonly sentLetter?: LetterIdentity;
   readonly sentProposal?: NonNullable<TransitMessage['msgOrder']>['orderProposal'];
   readonly sentPlan?: MessageId;
   readonly sentReaffirms?: MessageId;
@@ -61,6 +102,17 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
   let state = start;
   for (const message of messages) {
     const verb = message.msgVerb;
+    if (verb?.verbKind === 'transfer' && verb.verbPost !== null && verb.verbRegiments !== undefined && verb.verbSubject !== null &&
+      message.msgFrom === verb.verbIssuer && message.msgSentDay === verb.verbIssuedDay) {
+      const seat = seatIdFor(verb.verbIssuer);
+      const held = storedKnowledgeOf(state, seat);
+      const old = held.knownSentOrders ?? [];
+      if (state.seatAssignments[seat] !== undefined && !old.some(o => o.sentKind === 'transfer' && o.sentDoctrine === verb.verbSubject)) {
+        const row: KnownSentOrder = { sentKind: 'transfer', sentPost: verb.verbPost, sentMessage: message.msgOrigin,
+          sentDay: verb.verbIssuedDay, sentDoctrine: verb.verbSubject, sentPaper: null };
+        state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...old, row] } } };
+      }
+    }
     if (verb?.verbKind === 'appoint' && verb.verbPost !== null && message.msgFrom === verb.verbIssuer && message.msgSentDay === verb.verbIssuedDay) {
       const seat = seatIdFor(verb.verbIssuer);
       if (state.seatAssignments[seat] !== undefined) {
@@ -82,19 +134,22 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
     if (old.some(o => o.sentMessage === message.msgOrigin)) continue;
     const paper = [...held.knownReports].filter(r => r.knownBody.reportPlan?.paperPost === order.orderTarget).sort((a,b) => b.knownBody.reportDay - a.knownBody.reportDay || strictCompare(b.id,a.id))[0];
     const previous = old.filter(o => o.sentPost === order.orderTarget && o.sentKind === 'goal').at(-1);
-    const reaffirms = order.orderKind === 'goal' && order.orderProposal === undefined && order.orderGoal !== null &&
+    const sameInstruction = order.orderLetter === undefined ? previous?.sentLetter === undefined : previous?.sentLetter !== undefined &&
+      order.orderPriorDispatch === previous.sentMessage && letterKey(order.orderLetter) === letterKey(previous.sentLetter);
+    const reaffirms = sameInstruction && order.orderKind === 'goal' && order.orderProposal === undefined && order.orderGoal !== null &&
       previous?.sentGoal !== undefined && sameGoal(previous.sentGoal, order.orderGoal) ? previous.sentReaffirms ?? previous.sentMessage : undefined;
     const doctrine = order.orderDoctrine ?? (reaffirms === undefined ? undefined : previous?.sentDoctrine);
     const row: KnownSentOrder = { sentPost: order.orderTarget, sentMessage: message.msgOrigin, sentKind: order.orderKind as KnownSentOrder['sentKind'], sentDay: order.orderIssuedDay,
       sentPaper: order.orderProposal === undefined ? paper?.id ?? null : null,
       ...(order.orderGoal === null ? {} : { sentGoal: order.orderGoal }),
       ...(doctrine === undefined ? {} : { sentDoctrine: doctrine }),
+      ...(order.orderLetter === undefined ? {} : { sentLetter: order.orderLetter }),
       ...(order.orderProposal === undefined ? {} : { sentProposal: order.orderProposal }),
       ...(order.orderPlan === undefined ? {} : { sentPlan: order.orderPlan }),
       ...(reaffirms === undefined ? {} : { sentReaffirms: reaffirms }),
     };
     const kept = old.filter(o => {
-      if (o.sentPost !== row.sentPost) return true;
+      if (o.sentPost !== row.sentPost || o.sentKind === 'transfer') return true;
       if (row.sentKind === 'goal') {
         if (o.sentKind === 'goal') return row.sentProposal !== undefined &&
           (row.sentProposal.replyOrder === o.sentMessage || row.sentProposal.replyOrder === o.sentReaffirms);
@@ -103,7 +158,18 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
       if (row.sentKind === 'decline_proposal' || row.sentKind === 'go') return o.sentKind !== row.sentKind;
       return o.sentKind === 'goal' || o.sentKind === 'decline_proposal' || o.sentKind === 'go';
     });
-    state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...kept,row].sort((a,b) => strictCompare(a.sentPost,b.sentPost) || strictCompare(a.sentKind,b.sentKind)) } } };
+    let dispatches = held.knownDoctrineDispatches;
+    if (order.orderLetter !== undefined && message.id === message.msgOrigin) {
+      const key = letterKey(order.orderLetter);
+      const previous = dispatches?.find(d => letterKey(d.dispatchLetter) === key);
+      if (previous === undefined || (order.orderPriorDispatch === (previous.dispatchLatest ?? previous.dispatchOrigin) && previous.dispatchOrigin !== message.msgOrigin)) {
+        const dispatch = previous === undefined ? { dispatchLetter: order.orderLetter, dispatchOrigin: message.msgOrigin, dispatchDay: order.orderIssuedDay }
+          : { ...previous, dispatchLatest: message.msgOrigin };
+        dispatches = [...(dispatches ?? []).filter(d => d !== previous), dispatch].sort((a, b) => strictCompare(letterKey(a.dispatchLetter), letterKey(b.dispatchLetter)));
+      }
+    }
+    state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...kept,row].sort((a,b) => strictCompare(a.sentPost,b.sentPost) || strictCompare(a.sentKind,b.sentKind)),
+      ...(dispatches === undefined ? {} : { knownDoctrineDispatches: dispatches }) } } };
   }
   return state;
 }
@@ -203,6 +269,7 @@ export interface ReportDelivery {
   readonly seat: SeatId;
   readonly report: KnownReport;
   readonly truth: ReportTruth;
+  readonly paper?: { readonly doctrine: PrincipalDoctrine; readonly person: PersonId; readonly post: PostId | null };
 }
 
 /** Consecutive arrivals, with no intervening reader: copy each table and each seat's list only once. */
@@ -212,6 +279,7 @@ export function deliverReports(state: State, deliveries: readonly ReportDelivery
   let truth: Record<MessageId, ReportTruth> | undefined;
   const lists = new Map<SeatId, KnownReport[]>();
   const ids = new Map<SeatId, Set<MessageId>>();
+  const paperLists = new Map<SeatId, readonly KnownPaperReceipt[]>();
   for (const d of deliveries) {
     let reports = lists.get(d.seat);
     if (reports === undefined) {
@@ -224,15 +292,32 @@ export function deliverReports(state: State, deliveries: readonly ReportDelivery
       ]));
     }
     const seen = ids.get(d.seat)!;
-    if (seen.has(d.report.id)) throw new RangeError(`seat ${d.seat} already holds report ${d.report.id}`);
+    if (seen.has(d.report.id)) {
+      if (d.paper !== undefined) continue;
+      throw new RangeError(`seat ${d.seat} already holds report ${d.report.id}`);
+    }
     seen.add(d.report.id);
     reports.push(d.report);
+    if (d.paper !== undefined && d.report.knownBody.reportDay <= d.report.knownReceivedDay) {
+      const held = storedKnowledgeOf(state, d.seat);
+      const paper = reportWitness(d.paper.doctrine, held, d.report.knownBody);
+      if (paper !== undefined) {
+        const prior = paperLists.get(d.seat) ?? held.knownPaperReceipts ?? [];
+        const receipt: KnownPaperReceipt = { receiptOrigin: d.report.id, receiptPerson: d.paper.person, receiptPost: d.paper.post,
+          receiptDay: d.report.knownReceivedDay, receiptRole: 'addressee', receiptReport: paper };
+        paperLists.set(d.seat, keepLatestReportWitness(prior, receipt));
+      }
+    }
     if ((truth ?? state.reportTruth)[d.report.id] === undefined) {
       truth ??= { ...state.reportTruth };
       truth[d.report.id] = d.truth;
     }
   }
-  for (const [seat, reports] of lists) knowledge[seat] = { ...storedKnowledgeOf(state, seat), knownReports: reports.sort(reportOrder) };
+  for (const [seat, reports] of lists) {
+    const papers = paperLists.get(seat);
+    knowledge[seat] = { ...storedKnowledgeOf(state, seat), knownReports: reports.sort(reportOrder),
+      ...(papers === undefined ? {} : { knownPaperReceipts: papers }) };
+  }
   return { ...state, knowledgeBySeat: knowledge, reportTruth: truth ?? state.reportTruth };
 }
 
@@ -259,14 +344,22 @@ export interface PruneCounts {
  * `keepSupersededDays`. Age runs from the report's stamp, not its arrival:
  * a stale report is stale however late it came. Truth no seat holds is dropped.
  */
-export function pruneKnowledge(state: State, templates: readonly ReportTemplate[], day: number, controlThreshold: number): { readonly state: State; readonly counts: PruneCounts } {
+export function pruneKnowledge(state: State, templates: readonly ReportTemplate[], day: number, controlThreshold: number,
+  paperDoctrines?: ReadonlyMap<SeatId, PrincipalDoctrine>): { readonly state: State; readonly counts: PruneCounts } {
   let byAge = 0;
   let bySupersession = 0;
   let changed = false;
   const next: Record<SeatId, SeatKnowledge> = {};
   for (const seat of Object.keys(state.knowledgeBySeat).sort(strictCompare) as SeatId[]) {
     const original = state.knowledgeBySeat[seat]!;
-    const held = retireAppointments(original, day);
+    let held = retireAppointments(original, day);
+    if (held.knownPaperReceipts?.some(r => r.receiptReport !== undefined)) {
+      const kept = held.knownPaperReceipts.filter(r => stillReferenced(r, paperDoctrines?.get(seat), held));
+      if (held.knownPaperReceipts.length !== kept.length) {
+        const { knownPaperReceipts: _before, ...rest } = held;
+        held = kept.length === 0 ? rest : { ...rest, knownPaperReceipts: kept };
+      }
+    }
     if (held !== original) changed = true;
     if (held.knownReports.length === 0) {
       next[seat] = held;

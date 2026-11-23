@@ -1,0 +1,227 @@
+{
+  "failuresBefore": [
+    {
+      "pack": "union-1861",
+      "mechanic": "combat.withdrew",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the field commander does not launch the later valley assault; no field side records a withdrawal. Five sides rout at the northern objective instead. The testbed still records three withdrawals and the breakout control remains live."
+      }
+    },
+    {
+      "pack": "union-1861",
+      "mechanic": "operations.opened",
+      "problem": "too_frequent",
+      "fires": 6,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      }
+    },
+    {
+      "pack": "union-1861",
+      "mechanic": "operations.repulsed",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the field commander chooses a direct plan to his base and completes it without the later assault on the valley command. No operation axis is repulsed in either full reference; the fortified-defender control still repulses an axis."
+      }
+    },
+    {
+      "pack": "union-1861",
+      "mechanic": "planner.term.caution",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    {
+      "pack": "union-1861",
+      "mechanic": "planner.term.force_ratio",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    {
+      "pack": "union-1861",
+      "mechanic": "planner.term.supply",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.supply 2 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.supply."
+      }
+    },
+    {
+      "pack": "union-1861",
+      "mechanic": "planner.term.time",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the northern field commander chooses direct instead of supply_line, and the later assault on the valley command is absent. No full-reference draft pick depends on time alone. The separate S41 control changes the pick when time is removed."
+      }
+    }
+  ],
+  "limitChanges": [
+    {
+      "key": "union-1861, war by decision, 148 days/combat.withdrew",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the field commander does not launch the later valley assault; no field side records a withdrawal. Five sides rout at the northern objective instead. The testbed still records three withdrawals and the breakout control remains live."
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+      },
+      "observed": 1,
+      "cause": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets Johnston at Harpers Ferry day146: Union2000 against Confederate5000 known plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged.",
+      "evidence": "docs/audit/s119-evidence/band-review.json#combat.withdrew"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.opened",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12,
+        "why": "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed."
+      },
+      "observed": 6,
+      "cause": "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed.",
+      "evidence": "docs/audit/s119-evidence/band-review.json#operations.opened"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.repulsed",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the field commander chooses a direct plan to his base and completes it without the later assault on the valley command. No operation axis is repulsed in either full reference; the fortified-defender control still repulses an axis."
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+      },
+      "observed": 1,
+      "cause": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once.",
+      "evidence": "docs/audit/s119-evidence/band-review.json#operations.repulsed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.time",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: the northern field commander chooses direct instead of supply_line, and the later assault on the valley command is absent. No full-reference draft pick depends on time alone. The separate S41 control changes the pick when time is removed."
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+      },
+      "observed": 1,
+      "cause": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed.",
+      "evidence": "docs/audit/s119-evidence/band-review.json#planner.term.time"
+    }
+  ],
+  "quietProposal": [
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.caution",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed."
+      },
+      "observed": 0,
+      "cause": "S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed.",
+      "evidence": "docs/audit/s119-evidence/band-review.json#planner.term.caution"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.force_ratio",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted."
+      },
+      "observed": 0,
+      "cause": "S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted.",
+      "evidence": "docs/audit/s119-evidence/band-review.json#planner.term.force_ratio"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.supply",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.supply 2 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.supply."
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping supply from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. Supply remains live in the unchanged testbed reference; no supply or scoring rule changed."
+      },
+      "observed": 0,
+      "cause": "S119: Patterson day140 changes from S116 holding to direct. Dropping supply from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. Supply remains live in the unchanged testbed reference; no supply or scoring rule changed.",
+      "evidence": "docs/audit/s119-evidence/band-review.json#planner.term.supply"
+    }
+  ],
+  "quietApplied": true,
+  "driver": {
+    "test": "packages/cli/test/planner.test.ts",
+    "needle": "counts every scoring term live",
+    "receipt": {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/cli/test/planner.test.ts",
+        "-t",
+        "counts every scoring term live"
+      ],
+      "exit": 0,
+      "seconds": 2.796,
+      "log": "runs/s119/planner-live-control.log"
+    }
+  },
+  "evidence": "planner-band-evidence.json contains all retained candidate scores/deletions, battle days and operation records; union-1861-counters.json names every changed firing day.",
+  "rule": "Four positive bands retain their earlier exact around(observed) records. The three proposed Union zero transitions are now applied under the explicit S119 lead ruling, bound to complete fingerprints and independent live/negative controls. No other band or criterion changes.",
+  "method": "Retained corrected capture re-evaluated after band-only changes; no further campaign.",
+  "authorization": "CODEX.md, 2026-11-23 Claude to Codex: S119 received; the three quiet bands are authorised; commit. Exactly the existing three proposed records; no cause/evidence rewrite.",
+  "quietFingerprints": [
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.caution",
+      "fingerprint": "79d9f1777d4c05289150b08e6b0f5cbcf5175af5d33d9981d432c90a4079afda"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.force_ratio",
+      "fingerprint": "d267609dfc583151e2c695995f945fe29cdb04306ff59448b1147683308fd064"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.supply",
+      "fingerprint": "1a0118e99e7d9c808ee42d1f4d7524fc425281ff8cbaba84238449f9f4562cc4"
+    }
+  ]
+}

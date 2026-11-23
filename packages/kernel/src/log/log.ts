@@ -15,6 +15,7 @@ import { ROUTE_KINDS } from '../messages/latency.ts';
 import { DISCRETION_CONDITIONS, EDIT_KINDS, MAX_FALLBACKS, POSTURES } from '../plans/goal.ts';
 import { noteProblems } from '../plans/notes.ts';
 import { COUNTER_KINDS } from '../audience/counters.ts';
+import { isLetterIdentity } from '../world/letters.ts';
 import { COMMAND_KINDS, PROPOSAL_ACTIONS, RELIEF_MODES, REVIEW_ACTIONS, type Command } from './commands.ts';
 
 export interface LogEntry {
@@ -77,10 +78,13 @@ export function entryProblems(raw: unknown, i: number): string[] {
   };
   const fields = [...FIELDS[c.cmd as string]!,
     ...((c.cmd === 'order' || c.cmd === 'answer_proposal') && Object.hasOwn(c, 'doctrine') ? ['doctrine'] : []),
+    ...(c.cmd === 'order' ? ['letter', 'retryOf'].filter(k => Object.hasOwn(c, k)) : []),
     ...(c.cmd === 'answer_proposal' && c.action === 'discretion' ? ['goal'] : []),
     ...(c.cmd === 'review' && Object.hasOwn(c, 'notes') ? ['notes'] : []),
+    ...(c.cmd === 'review' && Object.hasOwn(c, 'paper') ? ['paper'] : []),
     ...(c.cmd === 'call' ? ['men', 'callId', 'arm', 'readiness', 'termsId'].filter(k => Object.hasOwn(c, k)) : []),
     ...(c.cmd === 'appoint' && Object.hasOwn(c, 'from') ? ['from'] : []),
+    ...(c.cmd === 'transfer' ? ['regiments', 'concentration'].filter(k => Object.hasOwn(c, k)) : []),
   ].sort(strictCompare);
   const keys = Object.keys(c).sort(strictCompare);
   if (keys.join() !== fields.join()) return [...problems, `${at}: ${String(c.cmd)} has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
@@ -93,6 +97,8 @@ export function entryProblems(raw: unknown, i: number): string[] {
   if (Object.hasOwn(c, 'doctrine') && !id(c.doctrine)) problems.push(`${at}: doctrine must name a doctrine row`);
   if (c.cmd === 'order') {
     routed();
+    if (Object.hasOwn(c, 'letter') && (!isLetterIdentity(c.letter) || c.doctrine !== undefined)) problems.push(`${at}: invalid authored letter identity`);
+    if (Object.hasOwn(c, 'retryOf') && (!id(c.retryOf) || !isLetterIdentity(c.letter))) problems.push(`${at}: retryOf must identify a dispatch of the authored letter`);
     problems.push(...goalTermsProblems(c.goal).map((p) => `${at}: order.goal ${p}`));
   } else if (c.cmd === 'answer_proposal') {
     routed();
@@ -104,6 +110,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     }
   } else if (c.cmd === 'review') {
     routed();
+    if (Object.hasOwn(c, 'paper') && !id(c.paper)) problems.push(`${at}: review.paper must be a message id`);
     if (Object.hasOwn(c, 'notes')) {
       if (c.action !== 'send_back' || !Array.isArray(c.notes)) problems.push(`${at}: notes belong only to a send-back`);
       else for (const n of c.notes) problems.push(...noteProblems(n).map(p => `${at}: ${p}`));
@@ -176,6 +183,9 @@ function verbProblems(c: Partial<Record<string, unknown>>): string[] {
       need('to', 'a post id');
       if (c.force !== 'blocks' && c.force !== 'men') problems.push('force must be blocks or men');
       if (typeof c.amount !== 'number' || !Number.isSafeInteger(c.amount) || c.amount < 1) problems.push('amount must be a whole number, at least 1');
+      if (c.regiments !== undefined && (c.force !== 'blocks' || !Array.isArray(c.regiments) || c.regiments.length === 0 ||
+        !c.regiments.every(ID) || new Set(c.regiments).size !== c.regiments.length || c.regiments.length !== c.amount)) problems.push('a named transfer must name distinct regiments and their count');
+      if (c.concentration !== undefined && (!ID(c.concentration) || c.regiments === undefined)) problems.push('a concentration id requires a named transfer');
       route();
       break;
     case 'inquire':

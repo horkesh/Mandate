@@ -50,7 +50,7 @@ function game(blocks: Parameters<typeof forcesStart>[2]) {
 const men = (s: State, roots: readonly string[]) =>
   (Object.keys(s.forceBlockStates) as ForceBlockId[])
     .filter((id) => roots.includes(id) || roots.includes(s.forceBlockStates[id]!.fbParent ?? ''))
-    .reduce((a, id) => a + (forceTotals(s.forceBlockStates[id]!).fbStrength ?? 0) + forceTotals(s.forceBlockStates[id]!).fbStragglers, 0);
+    .reduce((a, id) => a + (forceTotals(s.forceBlockStates[id]!).fbStrength ?? 0) + forceTotals(s.forceBlockStates[id]!).fbStragglers!, 0);
 
 const SHIP = [block('a_ship', { department: 'a_war', region: 'w', arm: 'naval', strength: 300, post: P('a_navy') }), block('a_troops', { department: 'a_war', region: 'w', aboard: B('a_ship'), strength: 600, storesDays: 10, post: P('a_army') })];
 

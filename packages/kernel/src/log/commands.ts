@@ -16,6 +16,7 @@ import type { BattleOrders } from '../combat/order-kinds.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { Discretion, EditKind, Posture } from '../plans/goal.ts';
 import type { PlanNote } from '../plans/notes.ts';
+import type { LetterIdentity } from '../world/letters.ts';
 
 /** A goal as a command carries it (the plans record's `PlanGoal`, unprefixed). */
 export interface GoalTerms {
@@ -42,6 +43,9 @@ export interface OrderCommand {
   readonly goal: GoalTerms;
   /** Correlation key of an authored doctrine letter. */
   readonly doctrine?: string;
+  readonly letter?: LetterIdentity;
+  /** A deliberate repeat dispatch of this same authored letter, linked to its latest journey. */
+  readonly retryOf?: MessageId;
   readonly route: RouteKind;
   /** Send it straight to the holder, around the posts that should relay it (0040). */
   readonly bypass: boolean;
@@ -78,6 +82,8 @@ export interface ReviewCommand {
   readonly cmd: 'review';
   /** The post whose plan he reviews. */
   readonly to: PostId;
+  /** The received submission being answered, for authored correspondence. */
+  readonly paper?: MessageId;
   readonly action: ReviewAction;
   /** The edit, for `edit`; null otherwise. */
   readonly edit: EditTerms | null;
@@ -193,6 +199,8 @@ export interface TransferCommand {
   readonly to: PostId;
   readonly force: 'blocks' | 'men';
   readonly amount: number;
+  readonly regiments?: readonly string[];
+  readonly concentration?: string;
   readonly route: RouteKind;
 }
 

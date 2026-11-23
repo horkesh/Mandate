@@ -49,6 +49,7 @@ export interface NewBlock {
   readonly department: DepartmentId;
   readonly arm: string;
   readonly strength: number | null;
+  readonly stragglersUnknown?: boolean;
   readonly storesDays: number;
   readonly enlistment: Enlistment;
 }
@@ -208,13 +209,18 @@ export function enlistmentsOf(state: State, cache?: ForceServiceCache): Enlistme
  * An explicit sub-regimental quota leaves a partial last lot, never extra men.
  * This is model raising arithmetic, never an apportionment of a historical return.
  */
-function raisedLots(map: WorldIndex, state: State, b: Pick<NewBlock, 'block' | 'department' | 'arm' | 'strength' | 'enlistment'>, used: Record<string, true>): readonly RegimentLot[] {
+function raisedLots(map: WorldIndex, state: State, b: NewBlock, used: Record<string, true>): readonly RegimentLot[] {
   const e = b.enlistment;
-  if (e.enlRegiments === null) return [unidentifiedLot(`unidentified.${b.block}`, b.arm, b.strength, 0, e)];
+  if (e.enlRegiments === null) return [unidentifiedLot(`unidentified.${b.block}`, b.arm, b.strength, b.stragglersUnknown === true ? null : 0, e)];
   const raiser = state.postStates[e.enlPost]?.postDepartment ?? b.department;
   const term = e.enlEndsDay === null ? null : e.enlEndsDay - e.enlMusterDay;
-  const catalogue = (map.world.regimentCatalogue ?? []).filter(r => r.raisingDepartment === raiser && r.arm === b.arm && r.scope === 'regiment' && (term === null ? r.warTerm === true && e.enlTermUnknown !== true : r.termDays.includes(term))).sort((a, c) => a.order - c.order || strictCompare(a.id, c.id));
+  const catalogue = (map.world.regimentCatalogue ?? []).filter(r => r.raisingDepartment === raiser && r.arm === b.arm && r.scope === 'regiment' &&
+    (r.identityCall === undefined || r.identityCall === e.enlCallId) &&
+    (r.identityCall !== undefined && r.termDays.length === 0 && r.warTerm !== true ||
+      (term === null ? r.warTerm === true && e.enlTermUnknown !== true : r.termDays.includes(term))))
+    .sort((a, c) => Number(c.identityCall !== undefined) - Number(a.identityCall !== undefined) || a.order - c.order || strictCompare(a.id, c.id));
   let remaining = b.strength;
+  const stragglers = b.stragglersUnknown === true || (b.strength === null && catalogue.some(r => r.identityCall !== undefined)) ? null : 0;
   const out: RegimentLot[] = [];
   for (let n = 0; n < e.enlRegiments; n++) {
     const record = catalogue.find(r => used[r.id] !== true);
@@ -222,7 +228,7 @@ function raisedLots(map: WorldIndex, state: State, b: Pick<NewBlock, 'block' | '
     used[identity] = true;
     const men = remaining === null ? null : n === e.enlRegiments - 1 ? remaining : Math.min(remaining, map.world.rules.recruitment.menPerRegiment);
     if (remaining !== null) remaining -= men!;
-    out.push({ lotId: identity, lotRegiment: identity, lotGenerated: record === undefined, lotArm: b.arm, lotMen: men, lotStragglers: 0, lotService: e });
+    out.push({ lotId: identity, lotRegiment: identity, lotGenerated: record === undefined, lotArm: b.arm, lotMen: men, lotStragglers: stragglers, lotService: e });
   }
   return out;
 }

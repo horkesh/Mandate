@@ -98,7 +98,7 @@ export const EffectSchema = z.union([
       withdrawal: withdrawal.optional(),
       stateForces: z.strictObject({
         id: z.string().regex(/^[a-z][a-z0-9_]*$/), regiments: positive.nullable(), men: nonNegative.nullable(),
-        arm: termId, termDays: positive.nullable(), termUnknown: z.boolean().optional(), includesCalls: z.array(termId).optional(),
+        arm: termId, termDays: positive.nullable(), termUnknown: z.boolean().optional(), stragglersUnknown: z.boolean().optional(), includesCalls: z.array(termId).optional(),
         post: idOf('post').optional(), region: idOf('region').optional(), transferTo: idOf('department').optional(), release: z.boolean().optional(),
       }).optional(),
       side: idOf('faction')
@@ -638,6 +638,7 @@ export function validateSituations(items: readonly { readonly file: string; read
           if (!pack.world.vocabularies.arms.some(a => a.id === entry.arm && !a.naval)) fail('state forces require a land arm from the pack vocabulary');
           if (entry.termDays !== null && entry.termDays > pack.world.rules.recruitment.maxTermDays) fail('term exceeds the pack maximum');
           if (entry.termUnknown === true && entry.termDays !== null) fail('an unknown original expiry cannot also have a fixed term');
+          if (entry.stragglersUnknown === true && (entry.men !== null || entry.release === true || entry.transferTo !== undefined)) fail('unknown stragglers describe only an unquantified initial entry');
           for (const id of entry.includesCalls ?? []) {
             const prior = pack.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === id);
             if (prior === undefined || prior.post !== p.subject || (prior.arm ?? pack.world.rules.recruitment.arm) !== entry.arm) fail('an included call must name a pack requisition for the same post and arm');

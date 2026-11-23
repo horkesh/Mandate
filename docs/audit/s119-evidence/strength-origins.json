@@ -1,0 +1,1480 @@
+{
+  "before": {
+    "confederate": {
+      "known": 90452,
+      "unknownBlocks": 23,
+      "knownLotMen": 90452,
+      "unknownLots": 23
+    },
+    "union": {
+      "known": 121566,
+      "unknownBlocks": 7,
+      "knownLotMen": 121566,
+      "unknownLots": 7
+    }
+  },
+  "after": {
+    "confederate": {
+      "known": 63910,
+      "unknownBlocks": 27,
+      "knownLotMen": 63910,
+      "unknownLots": 27
+    },
+    "union": {
+      "known": 121575,
+      "unknownBlocks": 8,
+      "knownLotMen": 121575,
+      "unknownLots": 14
+    }
+  },
+  "rows": [
+    {
+      "side": "confederate",
+      "origin": "arkansas_forces_transferred",
+      "before": {
+        "knownMen": 8000,
+        "unknownLots": 2,
+        "blocks": [
+          "state-forces.cs_ar_artillery_arkansas",
+          "state-forces.cs_ar_cavalry_arkansas",
+          "state-forces.cs_ar_cavalry_battalion_arkansas",
+          "state-forces.cs_ar_infantry_arkansas"
+        ]
+      },
+      "after": {
+        "knownMen": 8000,
+        "unknownLots": 2,
+        "blocks": [
+          "state-forces.cs_ar_artillery_arkansas",
+          "state-forces.cs_ar_cavalry_arkansas",
+          "state-forces.cs_ar_cavalry_battalion_arkansas",
+          "state-forces.cs_ar_infantry_arkansas"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_apr22_absolute_alabama",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d53"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d53"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_apr22_absolute_arkansas",
+      "before": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_arkansas.d79"
+        ]
+      },
+      "after": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_arkansas.d79"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_apr22_absolute_georgia",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d53"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d53"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_apr22_absolute_louisiana",
+      "before": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_louisiana.d53"
+        ]
+      },
+      "after": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_louisiana.d53"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_apr22_absolute_mississippi",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d53"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d53"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_apr22_absolute_north_carolina",
+      "before": {
+        "knownMen": 226,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_north_carolina.d93"
+        ]
+      },
+      "after": {
+        "knownMen": 224,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_north_carolina.d93"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_apr22_absolute_tennessee",
+      "before": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_tennessee.d127"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 3,
+        "blocks": [
+          "raised.st_gov_tennessee.d129",
+          "raised.st_gov_tennessee.d129.transfer.143.1",
+          "raised.st_gov_tennessee.d129.transfer.143.2"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jul01_extra_alabama",
+      "before": {
+        "knownMen": 920,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d125"
+        ]
+      },
+      "after": {
+        "knownMen": 909,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d125"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jul01_extra_georgia",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d125"
+        ]
+      },
+      "after": {
+        "knownMen": 1849,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d125"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun29_extra_louisiana",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_louisiana.d121"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_louisiana.d121"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun29_extra_mississippi",
+      "before": {
+        "knownMen": 609,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d121"
+        ]
+      },
+      "after": {
+        "knownMen": 602,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d121"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_cavalry_alabama",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_alabama.d122"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_alabama.d122"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_cavalry_arkansas",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_arkansas.d122"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_arkansas.d122"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_cavalry_georgia",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_georgia.d122"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_georgia.d122"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_cavalry_mississippi",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_mississippi.d122"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_mississippi.d122"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_cavalry_tennessee",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_tennessee.d127.2"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.st_gov_tennessee.d129.2"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_alabama",
+      "before": {
+        "knownMen": 1380,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d122.2"
+        ]
+      },
+      "after": {
+        "knownMen": 2262,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d122.2"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_arkansas",
+      "before": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_arkansas.d122.2"
+        ]
+      },
+      "after": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_arkansas.d122.2"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_florida",
+      "before": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_florida.d122"
+        ]
+      },
+      "after": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_florida.d122"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_georgia",
+      "before": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d122.2"
+        ]
+      },
+      "after": {
+        "knownMen": 2771,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d122.2"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_mississippi",
+      "before": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d122.2"
+        ]
+      },
+      "after": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d122.2"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_north_carolina",
+      "before": {
+        "knownMen": 679,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_north_carolina.d125"
+        ]
+      },
+      "after": {
+        "knownMen": 674,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_north_carolina.d125"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_south_carolina",
+      "before": {
+        "knownMen": 2259,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_south_carolina.d125"
+        ]
+      },
+      "after": {
+        "knownMen": 2262,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_south_carolina.d125"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_texas",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_texas.d125"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_texas.d125"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_jun30_reserve_virginia",
+      "before": {
+        "knownMen": 2259,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_virginia.d125"
+        ]
+      },
+      "after": {
+        "knownMen": 2263,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_virginia.d125"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_mar09_alabama",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d9"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_alabama.d9"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_mar09_florida",
+      "before": {
+        "knownMen": 500,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_florida.d9"
+        ]
+      },
+      "after": {
+        "knownMen": 500,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_florida.d9"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_mar09_georgia",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d9"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_georgia.d9"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_mar09_louisiana",
+      "before": {
+        "knownMen": 1700,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_louisiana.d9"
+        ]
+      },
+      "after": {
+        "knownMen": 1700,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_louisiana.d9"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_mar09_mississippi",
+      "before": {
+        "knownMen": 1500,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d9"
+        ]
+      },
+      "after": {
+        "knownMen": 1500,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_mississippi.d9"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "cs_mar09_south_carolina",
+      "before": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_south_carolina.d9"
+        ]
+      },
+      "after": {
+        "knownMen": 3000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_south_carolina.d9"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "initial.forces",
+      "before": {
+        "knownMen": 8653,
+        "unknownLots": 10,
+        "blocks": [
+          "fb_cs_charleston",
+          "fb_cs_charleston_castle_pinckney",
+          "fb_cs_charleston_guard_steamers",
+          "fb_st_charleston_17th_scm",
+          "fb_st_charleston_1st_artillery_battalion",
+          "fb_st_charleston_1st_infantry_regulars",
+          "fb_st_charleston_1st_sc_volunteers",
+          "fb_st_charleston_2nd_artillery_battalion",
+          "fb_st_charleston_floating_battery",
+          "fb_st_charleston_fort_johnson",
+          "fb_st_charleston_fort_palmetto_stono",
+          "fb_st_charleston_hagood_regiment",
+          "fb_st_charleston_kershaw_regiment",
+          "fb_st_charleston_morris_island",
+          "fb_st_charleston_moultrie_infantry_recruits",
+          "fb_st_charleston_regiment_of_rifles",
+          "fb_st_charleston_rion_battalion",
+          "fb_st_charleston_vigilant_rifles",
+          "fb_st_fort_morgan",
+          "fb_st_georgetown_coast_guard",
+          "fb_st_la_forts_jackson_st_philip",
+          "fb_st_tx_ford_regiment",
+          "fb_st_tx_galveston_batteries",
+          "fb_st_tx_northwest_frontier_companies"
+        ]
+      },
+      "after": {
+        "knownMen": 8653,
+        "unknownLots": 10,
+        "blocks": [
+          "fb_cs_charleston",
+          "fb_cs_charleston_castle_pinckney",
+          "fb_cs_charleston_guard_steamers",
+          "fb_st_charleston_17th_scm",
+          "fb_st_charleston_1st_artillery_battalion",
+          "fb_st_charleston_1st_infantry_regulars",
+          "fb_st_charleston_1st_sc_volunteers",
+          "fb_st_charleston_2nd_artillery_battalion",
+          "fb_st_charleston_floating_battery",
+          "fb_st_charleston_fort_johnson",
+          "fb_st_charleston_fort_palmetto_stono",
+          "fb_st_charleston_hagood_regiment",
+          "fb_st_charleston_kershaw_regiment",
+          "fb_st_charleston_morris_island",
+          "fb_st_charleston_moultrie_infantry_recruits",
+          "fb_st_charleston_regiment_of_rifles",
+          "fb_st_charleston_rion_battalion",
+          "fb_st_charleston_vigilant_rifles",
+          "fb_st_fort_morgan",
+          "fb_st_georgetown_coast_guard",
+          "fb_st_la_forts_jackson_st_philip",
+          "fb_st_tx_ford_regiment",
+          "fb_st_tx_galveston_batteries",
+          "fb_st_tx_northwest_frontier_companies"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "north_carolina_forces_transferred",
+      "before": {
+        "knownMen": 3400,
+        "unknownLots": 0,
+        "blocks": [
+          "state-forces.cs_nc_additional_north_carolina",
+          "state-forces.cs_nc_state_transfer_north_carolina",
+          "state-forces.cs_nc_volunteers_north_carolina",
+          "state-forces.cs_nc_volunteers_north_carolina.transfer.134.1"
+        ]
+      },
+      "after": {
+        "knownMen": 3373,
+        "unknownLots": 0,
+        "blocks": [
+          "state-forces.cs_nc_additional_north_carolina",
+          "state-forces.cs_nc_state_transfer_north_carolina",
+          "state-forces.cs_nc_volunteers_north_carolina",
+          "state-forces.cs_nc_volunteers_north_carolina.transfer.134.1"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "tennessee_forces_return",
+      "before": null,
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 3,
+        "blocks": [
+          "state-forces.cs_tn_cavalry_tennessee",
+          "state-forces.cs_tn_infantry_tennessee",
+          "state-forces.cs_tn_river_artillery_tennessee"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "tennessee_forces_transferred",
+      "before": {
+        "knownMen": 24000,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.cs_tn_artillery_tennessee",
+          "state-forces.cs_tn_cavalry_tennessee",
+          "state-forces.cs_tn_infantry_tennessee"
+        ]
+      },
+      "after": null,
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "virginia_harpers_jackson",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_harpers_ferry"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_harpers_ferry"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "virginia_manassas_garland_return",
+      "before": {
+        "knownMen": 367,
+        "unknownLots": 0,
+        "blocks": [
+          "state-forces.va_manassas_garland"
+        ]
+      },
+      "after": {
+        "knownMen": 368,
+        "unknownLots": 0,
+        "blocks": [
+          "state-forces.va_manassas_garland"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "virginia_manassas_state_forces",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_manassas_preston"
+        ]
+      },
+      "after": null,
+      "changed": true
+    },
+    {
+      "side": "confederate",
+      "origin": "virginia_norfolk_state_forces",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_norfolk"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_norfolk"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "virginia_peninsula_state_forces",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_peninsula"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_peninsula"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "confederate",
+      "origin": "virginia_richmond_state_forces",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_richmond"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "state-forces.va_richmond"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "initial.forces",
+      "before": {
+        "knownMen": 13791,
+        "unknownLots": 4,
+        "blocks": [
+          "fb_us_dc_militia",
+          "fb_us_fort_monroe_garrison",
+          "fb_us_key_west_garrison",
+          "fb_us_marines_philadelphia_yard",
+          "fb_us_marines_washington_barracks",
+          "fb_us_new_mexico_troops",
+          "fb_us_pacific_troops",
+          "fb_us_pickens_garrison",
+          "fb_us_pickens_squadron_marines",
+          "fb_us_pickens_vogdes_co_a",
+          "fb_us_pickens_vogdes_co_a.det.33",
+          "fb_us_ship_anacostia",
+          "fb_us_ship_brooklyn",
+          "fb_us_ship_congress",
+          "fb_us_ship_constellation",
+          "fb_us_ship_crusader",
+          "fb_us_ship_cumberland",
+          "fb_us_ship_cyane",
+          "fb_us_ship_dacotah",
+          "fb_us_ship_hartford",
+          "fb_us_ship_iroquois",
+          "fb_us_ship_lancaster",
+          "fb_us_ship_macedonian",
+          "fb_us_ship_michigan",
+          "fb_us_ship_mohawk",
+          "fb_us_ship_mohican",
+          "fb_us_ship_mystic",
+          "fb_us_ship_narragansett",
+          "fb_us_ship_niagara",
+          "fb_us_ship_pawnee",
+          "fb_us_ship_pocahontas",
+          "fb_us_ship_portsmouth",
+          "fb_us_ship_powhatan",
+          "fb_us_ship_pulaski",
+          "fb_us_ship_relief",
+          "fb_us_ship_richmond",
+          "fb_us_ship_sabine",
+          "fb_us_ship_saginaw",
+          "fb_us_ship_san_jacinto",
+          "fb_us_ship_saranac",
+          "fb_us_ship_saratoga",
+          "fb_us_ship_seminole",
+          "fb_us_ship_st_louis",
+          "fb_us_ship_st_marys",
+          "fb_us_ship_sumter",
+          "fb_us_ship_supply",
+          "fb_us_ship_susquehanna",
+          "fb_us_ship_vandalia",
+          "fb_us_ship_water_witch",
+          "fb_us_ship_wyandotte",
+          "fb_us_ship_wyoming",
+          "fb_us_st_louis_arsenal_troops",
+          "fb_us_tortugas_garrison",
+          "fb_us_washington_regulars"
+        ]
+      },
+      "after": {
+        "knownMen": 13791,
+        "unknownLots": 4,
+        "blocks": [
+          "fb_us_dc_militia",
+          "fb_us_fort_monroe_garrison",
+          "fb_us_key_west_garrison",
+          "fb_us_marines_philadelphia_yard",
+          "fb_us_marines_washington_barracks",
+          "fb_us_new_mexico_troops",
+          "fb_us_pacific_troops",
+          "fb_us_pickens_garrison",
+          "fb_us_pickens_squadron_marines",
+          "fb_us_pickens_vogdes_co_a",
+          "fb_us_pickens_vogdes_co_a.det.33",
+          "fb_us_ship_anacostia",
+          "fb_us_ship_brooklyn",
+          "fb_us_ship_congress",
+          "fb_us_ship_constellation",
+          "fb_us_ship_crusader",
+          "fb_us_ship_cumberland",
+          "fb_us_ship_cyane",
+          "fb_us_ship_dacotah",
+          "fb_us_ship_hartford",
+          "fb_us_ship_iroquois",
+          "fb_us_ship_lancaster",
+          "fb_us_ship_macedonian",
+          "fb_us_ship_michigan",
+          "fb_us_ship_mohawk",
+          "fb_us_ship_mohican",
+          "fb_us_ship_mystic",
+          "fb_us_ship_narragansett",
+          "fb_us_ship_niagara",
+          "fb_us_ship_pawnee",
+          "fb_us_ship_pocahontas",
+          "fb_us_ship_portsmouth",
+          "fb_us_ship_powhatan",
+          "fb_us_ship_pulaski",
+          "fb_us_ship_relief",
+          "fb_us_ship_richmond",
+          "fb_us_ship_sabine",
+          "fb_us_ship_saginaw",
+          "fb_us_ship_san_jacinto",
+          "fb_us_ship_saranac",
+          "fb_us_ship_saratoga",
+          "fb_us_ship_seminole",
+          "fb_us_ship_st_louis",
+          "fb_us_ship_st_marys",
+          "fb_us_ship_sumter",
+          "fb_us_ship_supply",
+          "fb_us_ship_susquehanna",
+          "fb_us_ship_vandalia",
+          "fb_us_ship_water_witch",
+          "fb_us_ship_wyandotte",
+          "fb_us_ship_wyoming",
+          "fb_us_st_louis_arsenal_troops",
+          "fb_us_tortugas_garrison",
+          "fb_us_washington_regulars"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+      "before": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_minnesota.d46"
+        ]
+      },
+      "after": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_minnesota.d46"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_jul25_new_york",
+      "before": {
+        "knownMen": 25000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_new_york.d147",
+          "raised.st_gov_new_york.d147.bundle.2",
+          "raised.st_gov_new_york.d147.bundle.3",
+          "raised.st_gov_new_york.d147.bundle.4",
+          "raised.st_gov_new_york.d147.bundle.5",
+          "raised.st_gov_new_york.d147.bundle.6",
+          "raised.st_gov_new_york.d147.bundle.7"
+        ]
+      },
+      "after": {
+        "knownMen": 25000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_new_york.d147",
+          "raised.st_gov_new_york.d147.bundle.2",
+          "raised.st_gov_new_york.d147.bundle.3",
+          "raised.st_gov_new_york.d147.bundle.4",
+          "raised.st_gov_new_york.d147.bundle.5",
+          "raised.st_gov_new_york.d147.bundle.6",
+          "raised.st_gov_new_york.d147.bundle.7"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_jun11_indiana",
+      "before": {
+        "knownMen": 6000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_indiana.d103",
+          "raised.st_gov_indiana.d103.bundle.2"
+        ]
+      },
+      "after": {
+        "knownMen": 6000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_indiana.d103",
+          "raised.st_gov_indiana.d103.bundle.2"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may03_accepted_new_york",
+      "before": {
+        "knownMen": 32922,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_3_brigade_2.1",
+          "organised.s74_mcdowell_division_5_brigade_1.1",
+          "organised.s74_mcdowell_division_5_brigade_2.1",
+          "raised.st_gov_new_york.d64",
+          "raised.st_gov_new_york.d64.bundle.10",
+          "raised.st_gov_new_york.d64.bundle.2",
+          "raised.st_gov_new_york.d64.bundle.3",
+          "raised.st_gov_new_york.d64.bundle.4",
+          "raised.st_gov_new_york.d64.bundle.5",
+          "raised.st_gov_new_york.d64.bundle.6",
+          "raised.st_gov_new_york.d64.bundle.7",
+          "raised.st_gov_new_york.d64.bundle.8",
+          "raised.st_gov_new_york.d64.bundle.9"
+        ]
+      },
+      "after": {
+        "knownMen": 33093,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_3_brigade_2.1",
+          "organised.s74_mcdowell_division_5_brigade_1.1",
+          "organised.s74_mcdowell_division_5_brigade_2.1",
+          "raised.st_gov_new_york.d64",
+          "raised.st_gov_new_york.d64.bundle.10",
+          "raised.st_gov_new_york.d64.bundle.2",
+          "raised.st_gov_new_york.d64.bundle.3",
+          "raised.st_gov_new_york.d64.bundle.4",
+          "raised.st_gov_new_york.d64.bundle.5",
+          "raised.st_gov_new_york.d64.bundle.6",
+          "raised.st_gov_new_york.d64.bundle.7",
+          "raised.st_gov_new_york.d64.bundle.8",
+          "raised.st_gov_new_york.d64.bundle.9"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may04_regular_artillery",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.us_recruiting_service.d65.3"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.us_recruiting_service.d65.3"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may04_regular_cavalry",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.us_recruiting_service.d65.2"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.us_recruiting_service.d65.2"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may04_regular_infantry",
+      "before": {
+        "knownMen": 0,
+        "unknownLots": 1,
+        "blocks": [
+          "raised.us_recruiting_service.d65"
+        ]
+      },
+      "after": {
+        "knownMen": 0,
+        "unknownLots": 8,
+        "blocks": [
+          "raised.us_recruiting_service.d65",
+          "raised.us_recruiting_service.d65.bundle.2"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may15_vol_kansas",
+      "before": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_kansas.d76"
+        ]
+      },
+      "after": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_kansas.d76"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may15_vol_massachusetts",
+      "before": {
+        "knownMen": 5197,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_1_brigade_4.1",
+          "raised.st_gov_massachusetts.d76",
+          "raised.st_gov_massachusetts.d76.bundle.2"
+        ]
+      },
+      "after": {
+        "knownMen": 5222,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_1_brigade_4.1",
+          "raised.st_gov_massachusetts.d76",
+          "raised.st_gov_massachusetts.d76.bundle.2"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may15_vol_nebraska",
+      "before": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.tr_gov_nebraska.d83"
+        ]
+      },
+      "after": {
+        "knownMen": 1000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.tr_gov_nebraska.d83"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may15_vol_rhode_island",
+      "before": {
+        "knownMen": 866,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_2_brigade_2.2"
+        ]
+      },
+      "after": {
+        "knownMen": 870,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_2_brigade_2.2"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_connecticut",
+      "before": {
+        "knownMen": 866,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_connecticut.d77"
+        ]
+      },
+      "after": {
+        "knownMen": 870,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_connecticut.d77"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_illinois",
+      "before": {
+        "knownMen": 6000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_illinois.d77",
+          "raised.st_gov_illinois.d77.bundle.2"
+        ]
+      },
+      "after": {
+        "knownMen": 6000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_illinois.d77",
+          "raised.st_gov_illinois.d77.bundle.2"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_indiana",
+      "before": {
+        "knownMen": 4000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_indiana.d77"
+        ]
+      },
+      "after": {
+        "knownMen": 4000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_indiana.d77"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_iowa",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_iowa.d77"
+        ]
+      },
+      "after": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_iowa.d77"
+        ]
+      },
+      "changed": false
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_maine",
+      "before": {
+        "knownMen": 866,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_maine.d77"
+        ]
+      },
+      "after": {
+        "knownMen": 870,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_maine.d77"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_michigan",
+      "before": {
+        "knownMen": 2598,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_1_brigade_4.2",
+          "raised.st_gov_michigan.d77"
+        ]
+      },
+      "after": {
+        "knownMen": 2610,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_1_brigade_4.2",
+          "raised.st_gov_michigan.d77"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_new_hampshire",
+      "before": {
+        "knownMen": 866,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_2_brigade_2.1"
+        ]
+      },
+      "after": {
+        "knownMen": 869,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_2_brigade_2.1"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_new_jersey",
+      "before": {
+        "knownMen": 2599,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_4_reserve.1"
+        ]
+      },
+      "after": {
+        "knownMen": 2612,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_4_reserve.1"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_new_york",
+      "before": {
+        "knownMen": 12129,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_1_brigade_2.1",
+          "organised.s74_mcdowell_division_1_brigade_3.1",
+          "organised.s74_mcdowell_division_2_brigade_1.1",
+          "organised.s74_mcdowell_division_5_brigade_1.2",
+          "raised.st_gov_new_york.d83",
+          "raised.st_gov_new_york.d83.bundle.2",
+          "raised.st_gov_new_york.d83.bundle.3",
+          "raised.st_gov_new_york.d83.bundle.4"
+        ]
+      },
+      "after": {
+        "knownMen": 12186,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_1_brigade_2.1",
+          "organised.s74_mcdowell_division_1_brigade_3.1",
+          "organised.s74_mcdowell_division_2_brigade_1.1",
+          "organised.s74_mcdowell_division_5_brigade_1.2",
+          "raised.st_gov_new_york.d83",
+          "raised.st_gov_new_york.d83.bundle.2",
+          "raised.st_gov_new_york.d83.bundle.3",
+          "raised.st_gov_new_york.d83.bundle.4"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_vermont",
+      "before": {
+        "knownMen": 866,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_3_brigade_3.1"
+        ]
+      },
+      "after": {
+        "knownMen": 870,
+        "unknownLots": 0,
+        "blocks": [
+          "organised.s74_mcdowell_division_3_brigade_3.1"
+        ]
+      },
+      "changed": true
+    },
+    {
+      "side": "union",
+      "origin": "us_may16_vol_wisconsin",
+      "before": {
+        "knownMen": 2000,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_wisconsin.d83"
+        ]
+      },
+      "after": {
+        "knownMen": 1712,
+        "unknownLots": 0,
+        "blocks": [
+          "raised.st_gov_wisconsin.d83"
+        ]
+      },
+      "changed": true
+    }
+  ]
+}

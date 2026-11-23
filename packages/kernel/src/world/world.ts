@@ -36,6 +36,9 @@ import type { CombatRules } from '../combat/rules.ts';
 import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
 import type { RegimentRecord } from './regiments.ts';
+import type { LetterIdentity } from './letters.ts';
+import type { PaperSelector } from './paper-selectors.ts';
+export type { PaperSelector, PaperClaimSelector, ReportPaperSelector } from './paper-selectors.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -113,8 +116,42 @@ export interface RuleSeatRules {
 }
 
 /** A rule-seat principal's doctrine. Martial actions wait for war; a cited call may explicitly permit peacetime issue. */
+export type { LetterIdentity } from './letters.ts';
+
+export interface DoctrineOffensive {
+  readonly id?: string;
+  readonly letter?: LetterIdentity;
+  readonly supersedes?: LetterIdentity;
+  readonly dependsOn?: readonly LetterIdentity[];
+  readonly repeats?: LetterIdentity;
+  readonly post: PostId;
+  readonly objective: RegionId;
+  readonly fromDate: string;
+  readonly posture?: Posture;
+  readonly discretion?: DoctrineDiscretion;
+  readonly requiresNotice?: SituationId;
+  readonly requiresPapers?: readonly PaperSelector[];
+  readonly source: string;
+}
+
+export interface DoctrineConcentration {
+  readonly id?: string;
+  readonly post: PostId;
+  readonly fromDate: string;
+  readonly requiresDepartment: DepartmentId;
+  readonly fromPosts: readonly PostId[];
+  /** An identified request from a single raising post, after its report answering the requisition reaches the principal. */
+  readonly namedRegiments?: { readonly afterCall: string; readonly ids: readonly string[] };
+  readonly receiveLevies?: boolean;
+  readonly source: string;
+  readonly requiresPapers?: readonly PaperSelector[];
+}
+
 export interface PrincipalDoctrine {
   readonly faction: FactionId;
+  readonly letterNamespace?: string;
+  /** Pack bound on the number of selectors per action and claim tests per selector. */
+  readonly maxPaperSelectors?: number;
   /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
   readonly crossNeutral: boolean;
   /** The initial concentration post, before any eligible dated change; null leaves regiments with governors. */
@@ -122,7 +159,7 @@ export interface PrincipalDoctrine {
   /** Why that post: the research it rests on, the choice of post labelled [I]; null exactly when `concentrateAt` is. */
   readonly concentrateSource: string | null;
   /** Dated, cause-dependent concentration changes. Existing troops move only from the expressly named posts. */
-  readonly concentrations?: readonly { readonly post: PostId; readonly fromDate: string; readonly requiresDepartment: DepartmentId; readonly fromPosts: readonly PostId[]; readonly receiveLevies?: boolean; readonly source: string }[];
+  readonly concentrations?: readonly DoctrineConcentration[];
   /** Establish a declared command through a sourced appointment, after the named government joins this side. */
   readonly appointments?: readonly (({ readonly post: PostId; readonly person: PersonId; readonly source: string }) & ({ readonly fromPost: PostId | null; readonly fromDate: string; readonly requiresDepartment: DepartmentId } | { readonly onDate: string }))[];
   /**
@@ -131,9 +168,9 @@ export interface PrincipalDoctrine {
    * Exact men override conversion by regiment; null men/regiments preserve an unquantified unit. Readiness alone
    * records an answer without mustering. Null termDays means war service, with no invented fixed expiry.
    */
-  readonly calls: readonly { readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string }[];
+  readonly calls: readonly { readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string; readonly requiresPapers?: readonly PaperSelector[] }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
-  readonly offensives: readonly { readonly id?: string; readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly posture?: Posture; readonly discretion?: DoctrineDiscretion; readonly requiresNotice?: SituationId; readonly source: string }[];
+  readonly offensives: readonly DoctrineOffensive[];
   readonly proposalAnswers?: readonly DoctrineProposalAnswer[];
   /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */
   readonly inquireEveryDays: number;

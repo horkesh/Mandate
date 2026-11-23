@@ -1,0 +1,702 @@
+[
+  {
+    "day": 15,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 89
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 89
+    },
+    "changed": false
+  },
+  {
+    "day": 30,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 89
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 72,
+          "traced": 72,
+          "controlPermille": 72000,
+          "supplied": 72,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19353,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36000,
+          "supplied": 35,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 16321,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 89
+    },
+    "changed": false
+  },
+  {
+    "day": 45,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19353,
+          "blocksUnknownStrength": 11
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35000,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 16236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 90
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 19353,
+          "blocksUnknownStrength": 11
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35000,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 16236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 90
+    },
+    "changed": false
+  },
+  {
+    "day": 60,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 74,
+          "traced": 74,
+          "controlPermille": 73600,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 29353,
+          "blocksUnknownStrength": 13
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 35360,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 78236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 2,
+      "blocksTotal": 124
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 74,
+          "traced": 74,
+          "controlPermille": 73600,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 29353,
+          "blocksUnknownStrength": 13
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 35360,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 78236,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 2,
+      "blocksTotal": 124
+    },
+    "changed": false
+  },
+  {
+    "day": 75,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 74,
+          "traced": 74,
+          "controlPermille": 73883,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 30843,
+          "blocksUnknownStrength": 14
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36140,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 113791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 134
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 74,
+          "traced": 74,
+          "controlPermille": 73883,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 30843,
+          "blocksUnknownStrength": 13
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36140,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 113791,
+          "blocksUnknownStrength": 8
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 134
+    },
+    "changed": true
+  },
+  {
+    "day": 90,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 76,
+          "traced": 76,
+          "controlPermille": 74958,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 33843,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36140,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 160791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 8,
+      "blocksTotal": 156
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 76,
+          "traced": 76,
+          "controlPermille": 74958,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 33843,
+          "blocksUnknownStrength": 14
+        },
+        {
+          "faction": "union",
+          "held": 36,
+          "traced": 36,
+          "controlPermille": 36140,
+          "supplied": 36,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 160791,
+          "blocksUnknownStrength": 8
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 8,
+      "blocksTotal": 156
+    },
+    "changed": true
+  },
+  {
+    "day": 105,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 75973,
+          "supplied": 75,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 34843,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37460,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 166791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 168
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 75973,
+          "supplied": 75,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 34843,
+          "blocksUnknownStrength": 14
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37460,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 166791,
+          "blocksUnknownStrength": 8
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 0,
+      "blocksTotal": 168
+    },
+    "changed": true
+  },
+  {
+    "day": 120,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 76208,
+          "supplied": 75,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 73843,
+          "blocksUnknownStrength": 16
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37500,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 166791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 174
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 76108,
+          "supplied": 75,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 49843,
+          "blocksUnknownStrength": 17
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37500,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 166791,
+          "blocksUnknownStrength": 8
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 174
+    },
+    "changed": true
+  },
+  {
+    "day": 135,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 81,
+          "traced": 81,
+          "controlPermille": 80303,
+          "supplied": 78,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 3,
+          "menKnown": 116843,
+          "blocksUnknownStrength": 23
+        },
+        {
+          "faction": "union",
+          "held": 39,
+          "traced": 39,
+          "controlPermille": 38060,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 166791,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 6,
+      "blocksTotal": 198
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 78,
+          "traced": 78,
+          "controlPermille": 78683,
+          "supplied": 75,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 2,
+          "pocketRegions": 3,
+          "menKnown": 89843,
+          "blocksUnknownStrength": 25
+        },
+        {
+          "faction": "union",
+          "held": 39,
+          "traced": 39,
+          "controlPermille": 38060,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 4,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 166791,
+          "blocksUnknownStrength": 8
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 6,
+      "blocksTotal": 198
+    },
+    "changed": true
+  },
+  {
+    "day": 148,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 92,
+          "traced": 92,
+          "controlPermille": 83440,
+          "supplied": 91,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 90452,
+          "blocksUnknownStrength": 23
+        },
+        {
+          "faction": "union",
+          "held": 40,
+          "traced": 40,
+          "controlPermille": 39500,
+          "supplied": 39,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 121566,
+          "blocksUnknownStrength": 7
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 23,
+      "blocksTotal": 178
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 83,
+          "traced": 83,
+          "controlPermille": 81524,
+          "supplied": 82,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 63910,
+          "blocksUnknownStrength": 27
+        },
+        {
+          "faction": "union",
+          "held": 40,
+          "traced": 40,
+          "controlPermille": 39448,
+          "supplied": 39,
+          "frontLines": 3,
+          "frontSegments": 9,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 121575,
+          "blocksUnknownStrength": 8
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 16,
+      "blocksTotal": 180
+    },
+    "changed": true
+  }
+]

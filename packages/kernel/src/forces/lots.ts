@@ -10,13 +10,13 @@ export interface RegimentLot {
   readonly lotGenerated: boolean;
   readonly lotArm: string;
   readonly lotMen: number | null;
-  readonly lotStragglers: number;
+  readonly lotStragglers: number | null;
   readonly lotService: Enlistment | null;
 }
 
 export interface ForceTotals {
   readonly fbStrength: number | null;
-  readonly fbStragglers: number;
+  readonly fbStragglers: number | null;
 }
 
 /** Caller-held, disposable derived data; never part of World data or saved State. */
@@ -31,7 +31,7 @@ export function forceTotals(block: Pick<ForceBlockState, 'fbLots'>, cache?: Forc
 }
 
 /** Existing unlabelled formation, not a claim that a regiment has been identified. */
-export function unidentifiedLot(id: string, arm: string, men: number | null, stragglers = 0, service: Enlistment | null = null): RegimentLot {
+export function unidentifiedLot(id: string, arm: string, men: number | null, stragglers: number | null = 0, service: Enlistment | null = null): RegimentLot {
   return { lotId: id, lotRegiment: null, lotGenerated: false, lotArm: arm, lotMen: men, lotStragglers: stragglers, lotService: service };
 }
 
@@ -39,12 +39,19 @@ export function aggregateLots(lots: readonly RegimentLot[]): ForceTotals {
   let present = 0;
   let absent = 0;
   let unknown = false;
+  let unknownAbsent = false;
   for (const l of lots) {
     if (l.lotMen === null) unknown = true;
     else present += l.lotMen;
-    absent += l.lotStragglers;
+    if (l.lotStragglers === null) unknownAbsent = true;
+    else absent += l.lotStragglers;
   }
-  return { fbStrength: unknown ? null : present, fbStragglers: absent };
+  return { fbStrength: unknown ? null : present, fbStragglers: unknownAbsent ? null : absent };
+}
+
+/** Only accounted stragglers can return or be captured. An incomplete sum stays unknown in returns. */
+export function knownStragglers(block: Pick<ForceBlockState, 'fbLots'>, cache?: ForceTotalsCache): number {
+  return forceTotals(block, cache).fbStragglers ?? block.fbLots.reduce((sum, lot) => sum + (lot.lotStragglers ?? 0), 0);
 }
 
 /**
@@ -72,12 +79,13 @@ export function changeLotTotals(lots: readonly RegimentLot[], men: number | null
   if (!Number.isSafeInteger(stragglers) || stragglers < 0) throw new RangeError('invalid lot stragglers');
   if ((men === null) !== (before.fbStrength === null)) throw new RangeError('a quantity change cannot resolve unknown men');
   const delta = men === null ? 0 : men - before.fbStrength!;
-  const menWeights = lots.map(l => delta < 0 ? l.lotMen ?? 0 : (before.fbStragglers > 0 ? l.lotStragglers : before.fbStrength === 0 && l.lotMen !== null ? 1 : l.lotMen ?? 0));
+  const knownAbsent = before.fbStragglers ?? lots.reduce((sum, lot) => sum + (lot.lotStragglers ?? 0), 0);
+  const menWeights = lots.map(l => delta < 0 ? l.lotMen ?? 0 : (knownAbsent > 0 ? l.lotStragglers ?? 0 : before.fbStrength === 0 && l.lotMen !== null ? 1 : l.lotMen ?? 0));
   const menParts = allocate(lots, Math.abs(delta), menWeights);
-  const absentDelta = stragglers - before.fbStragglers;
-  const absentParts = allocate(lots, Math.abs(absentDelta), lots.map((l, i) => absentDelta < 0 ? l.lotStragglers : delta < 0 ? menParts[i]! : l.lotMen ?? 0));
+  const absentDelta = stragglers - knownAbsent;
+  const absentParts = allocate(lots, Math.abs(absentDelta), lots.map((l, i) => l.lotStragglers === null ? 0 : absentDelta < 0 ? l.lotStragglers : delta < 0 ? menParts[i]! : l.lotMen ?? 0));
   return lots.map((l, i) => ({ ...l,
     lotMen: l.lotMen === null ? null : l.lotMen + Math.sign(delta) * menParts[i]!,
-    lotStragglers: l.lotStragglers + Math.sign(absentDelta) * absentParts[i]!,
+    lotStragglers: l.lotStragglers === null ? null : l.lotStragglers + Math.sign(absentDelta) * absentParts[i]!,
   }));
 }

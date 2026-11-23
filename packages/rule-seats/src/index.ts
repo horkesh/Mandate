@@ -145,7 +145,8 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   const routeTo = (post: string, urgent = false) => (urgent ? fastest : quickest)(menu.commandable.find((c) => c.post === post)?.routes ?? [])?.route ?? 'courier';
   for (const r of menu.reviews) {
     const around = withheld.has(r.post);
-    send({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: routeTo(r.post, around), bypass: around });
+    send({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: routeTo(r.post, around), bypass: around,
+      ...(r.authoredPaper === undefined ? {} : { paper: r.authoredPaper }) });
   }
   for (const post of menu.awaiting) {
     const around = withheld.has(post);
@@ -163,7 +164,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       if (day < call.day || (peaceOnly && call.atPeace !== true)) continue;
       const r = menu.raising.find(x => x.post === call.post);
       const route = r === undefined ? undefined : quickest(r.routes);
-      if (r === undefined || route === undefined || (call.id === undefined ? r.called : call.issued === true)) continue;
+      if (call.ready === false || r === undefined || route === undefined || (call.id === undefined ? r.called : call.issued === true)) continue;
       send({ cmd: 'call', to: r.post, regiments: call.regiments, termDays: call.termDays, route: route.route, bypass: false,
         ...(call.termsId === undefined ? {} : { termsId: call.termsId }), ...(call.id === undefined ? {} : { callId: call.id }), ...(call.men === undefined ? {} : { men: call.men }), ...(call.arm === undefined ? {} : { arm: call.arm }), ...(call.readiness === undefined ? {} : { readiness: call.readiness }) });
     }
@@ -202,13 +203,15 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   // 2. Each offensive goal on its day: the doctrine's dated row, or the opening morning if its date has passed.
   for (const o of doctrine.offensives) {
     if (o.ready === undefined ? day !== Math.max(o.day, opening) : !o.ready || o.issued === true || day < Math.max(o.day, opening)) continue;
+    if (o.letter !== undefined && answered.has(o.post)) continue;
     const target = menu.commandable.find((c) => c.post === o.post);
     const route = target === undefined ? undefined : quickest(target.routes);
     if (target === undefined || route === undefined) continue;
     const primary = { ...takeGoal(menu, o.objective), posture: o.posture ?? 'take' };
     const goal = o.discretion === undefined ? primary : withDiscretion(primary, o.discretion);
-    send({ cmd: 'order', to: target.post, goal, route: route.route, bypass: false, ...(o.id === undefined ? {} : { doctrine: o.id }) });
-    answered.add(target.post);
+    const sent = send({ cmd: 'order', to: target.post, goal, route: route.route, bypass: false,
+      ...(o.id === undefined ? {} : { doctrine: o.id }), ...(o.letter === undefined ? {} : { letter: o.letter }) });
+    if (sent || o.letter === undefined) answered.add(target.post);
   }
   // An order an office withheld is sent again around it, to the objective it named (a fresh goal is never invented).
   if (policy.goAroundObjections) {
@@ -220,7 +223,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       const copy = menu.sentGoals?.find(s => s.post === target.post && s.message === memo.answers);
       // A late objection to a superseded letter cannot replace the newer goal.
       // Older menus lacked sender copies; keep their legacy objective-only fallback.
-      if ((menu.sentGoals !== undefined && copy === undefined) || copy?.proposalReply === true) continue;
+      if ((menu.sentGoals !== undefined && copy === undefined) || copy?.proposalReply === true || copy?.letter !== undefined) continue;
       send({ cmd: 'order', to: target.post, goal: copy?.goal ?? takeGoal(menu, region), route: routeTo(target.post, true), bypass: true,
         ...(copy?.doctrine === undefined ? {} : { doctrine: copy.doctrine }) });
     }
@@ -250,8 +253,15 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   // A reported zero is not authority to discard an expressly named contingent of unknown strength.
   // The receiving post must have become known; the ordinary verb still owns compliance and joining.
   const inclusions = new Map(doctrine.concentrationTransfers?.map(t => [t.from, t.to]));
+  for (const t of doctrine.namedConcentrationTransfers ?? []) {
+    const donor = menu.commandable.find(c => c.post === t.from && !c.inTransit.includes('transfer'));
+    const route = donor === undefined ? undefined : quickest(donor.routes);
+    if (route !== undefined) send({ cmd: 'transfer', from: t.from, to: t.to, force: 'blocks', amount: t.regiments.length,
+      regiments: t.regiments, concentration: t.id, route: route.route });
+  }
   if (doctrine.concentrateAt !== null) {
     for (const c of menu.commandable) {
+      if (doctrine.namedConcentrationDonors?.includes(c.post)) continue;
       const named = inclusions.get(c.post) ?? (doctrine.concentrationTransfers === undefined && doctrine.concentrateFrom?.includes(c.post) ? doctrine.concentrateAt : undefined);
       const to = named ?? (c.raising && doctrine.concentrateLevies !== false ? doctrine.concentrateAt : undefined);
       if (to === undefined || c.post === to || (named === undefined && c.men === 0) || c.inTransit.includes('transfer')) continue;

@@ -1,4 +1,4 @@
-import { forceTotals } from '../forces/lots.ts';
+import { forceTotals, knownStragglers } from '../forces/lots.ts';
 /**
  * Bombardment across water (lane 1.12; the lead's rulings on Sumter and the gate's three conditions). A general stage,
  * not a script for one fort: an operation whose objective lies across a short water edge from ground its side holds
@@ -244,7 +244,8 @@ export function fortDay(world: SeatsWorld, state: State, attackers: readonly For
     for (const b of defenders) {
       const f = state.forceBlockStates[b]!;
       const lost = forceTotals(f, world.map.forceTotalsCache).fbStrength! === null ? 0 : forceTotals(f, world.map.forceTotalsCache).fbStrength! - (b === lead ? d.losses : 0);
-      if (lost > 0 || forceTotals(f, world.map.forceTotalsCache).fbStragglers > 0) forces.push({ change: 'battle_losses', block: b, killed: 0, wounded: 0, missing: 0, captured: lost, stragglersCaptured: forceTotals(f, world.map.forceTotalsCache).fbStragglers, cause: 'combat' });
+      const stragglers = knownStragglers(f, world.map.forceTotalsCache);
+      if (lost > 0 || stragglers > 0) forces.push({ change: 'battle_losses', block: b, killed: 0, wounded: 0, missing: 0, captured: lost, stragglersCaptured: stragglers, cause: 'combat' });
       forces.push({ change: 'condition', block: b, morale: 0, experience: 0, equipment: 0, routedDay: null, surrenderedDay: day, cause: 'combat' });
       command.push({ change: 'release', block: b, battle });
     }
