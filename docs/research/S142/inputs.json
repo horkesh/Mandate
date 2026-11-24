@@ -1,0 +1,56 @@
+[
+  {
+    "commit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+    "path": "packs/union-1861/source/world/regiments.json",
+    "method": "git show",
+    "sha256": "57f61b4d4b6fffac2b9e09c8d3631185f9e28a34783f080be16d673a17307e5d",
+    "retained_copy": "runs\\s142\\catalogue.json"
+  },
+  {
+    "path": "C:/Pyrrhic/ByOrderOfThePresident/docs/decisions/0127-a-raised-regiment-has-its-calls-legal-minimum.md",
+    "method": "read-only file",
+    "sha256": "d646c2b54795ce872fa52f1b2c3d6a856e8c4a4effeacff2b7fae72233370d09",
+    "retained_copy": "runs\\s142\\0127-a-raised-regiment-has-its-calls-legal-minimum.md"
+  },
+  {
+    "path": "C:/Pyrrhic/ByOrderOfThePresident/docs/decisions/0132-each-regiment-musters-on-its-own-clock.md",
+    "method": "read-only file",
+    "sha256": "8ce0c8f1aa42aec0d9cefc11bb3bdf394ccecf4a68bc3adaab5dd63933c0388b",
+    "retained_copy": "runs\\s142\\0132-each-regiment-musters-on-its-own-clock.md"
+  },
+  {
+    "path": "docs/research/S76/service-observations.csv",
+    "method": "read-only committed local research reused with selected primary passages re-read",
+    "sha256": "50fce9b7b4c55a0765cb6273b1998e02ed5f4197a1a29d605a9f43a9b3e8bb30"
+  },
+  {
+    "path": "docs/research/S76/source-reading.json",
+    "method": "read-only committed local research reused with selected primary passages re-read",
+    "sha256": "19da050bfbc518714125ca56cfa48f65c1e56723389157c5d4b15fc49cc0f877"
+  },
+  {
+    "path": "docs/research/S75/source-reading.json",
+    "method": "read-only committed local research reused with selected primary passages re-read",
+    "sha256": "9a05a17575070853b590aa05f782ffd4c044178285749f9ce6498446727a22c0"
+  },
+  {
+    "path": "docs/research/S140/muster-observations.csv",
+    "method": "read-only committed local research reused with selected primary passages re-read",
+    "sha256": "02bb73e1d4ff0689c0c544a1c02ee67c71a7ef88fa43b182de092e18375cf501"
+  },
+  {
+    "path": "docs/research/S140/call-receipts.csv",
+    "method": "read-only committed local research reused with selected primary passages re-read",
+    "sha256": "5dbcf376d0b2b315785bdd12d6994dcdde000a133e1be5bc775fe045f38e462f"
+  },
+  {
+    "path": "docs/research/S140/source-reading.json",
+    "method": "read-only committed local research reused with selected primary passages re-read",
+    "sha256": "cc5935e63595425eaf2f136c207df4d71aa269661f448b95bc810c167d2b4b76"
+  },
+  {
+    "path": "docs/research/S137/mcdowell-roster.csv",
+    "method": "read-only committed local research reused with selected primary passages re-read",
+    "sha256": "b3c02c71ad92384b6726e5e91cc1035ffaa7694ad064ea301d6a5cf41bb491ea"
+  }
+]

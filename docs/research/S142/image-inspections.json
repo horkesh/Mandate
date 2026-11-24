@@ -1,0 +1,146 @@
+[
+  {
+    "path": "runs\\s142\\Bates-extra-headers-1.png",
+    "sha256": "1d04d5970fb58149378b7096caeaf2057b27c4dfd2498194f8b681a0d88436e8",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-extra-headers-2.png",
+    "sha256": "8b7577e7a95d6213bc6a772ea745222c5736ab274011b6626212d5ff0c79fd65",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-extra-headers-3.png",
+    "sha256": "27aed5c9c438a1a98ea89dc41464f13b31e17f7b5808d1751f8a5cb5621ed20f",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-extra-headers-4.png",
+    "sha256": "432db2470eb88130928419483fc52f8cc87b43e4191abd4e53eaae41fa53aa38",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-extra-headers-5.png",
+    "sha256": "35e75044aeb7de5c1179f1730add66a21257163b4bf2773c9c608c2d85c09914",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-extra-headers-6.png",
+    "sha256": "61cb32586e265c0e5c90fbd176abe5b20e6eba3d8593b05cdf647ae152329893",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-last-headers.png",
+    "sha256": "61dedc3f212b4bdc035c9fa0b28b9b09344800880dfc6de5a2ea5da86f8fe609",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p137-header0.png",
+    "sha256": "a6119ea358b656eae563985e866a903756c188a6951a23f2fb50331516bb2642",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p137-header1.png",
+    "sha256": "d577059ed152c6b9b2f27a695d05b77216287d119d3423d21837096d2449c3f9",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p137.png",
+    "sha256": "4c900624b2a23d9f03155351bb7e9a5fd065674a95daf3823830d28d7d9b5e5a",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p147.png",
+    "sha256": "e30a7da657b0d9ea10de32ac795920c6f29fe090760d0b9382ccf7f3e8200c25",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p148.png",
+    "sha256": "2d4f8a04f2f51f3ea4ddadab627732de346fb7b1c28097a4d29c9396b896e009",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p20-header0.png",
+    "sha256": "7726bfda4fd180968d2967a1b5635e54bc040fe7790a725a46a2f252cf4a780d",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p20-header1.png",
+    "sha256": "dbd388290f6eb30ff6b168d99b8647a45839de1f23cfe4c9262c4f324737e294",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p20.png",
+    "sha256": "a577b837d09949ed12b1955be8caa3227dfede6897f4ddc9011076a75ef2dbc6",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p218-header0.png",
+    "sha256": "705208678d07b691e8ef24f87e8db5c123482318b0630b756481892b89291a8e",
+    "status": "derived header crop; parent page inspected, crop not separately viewed",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p218.png",
+    "sha256": "f0a9afe4c8a70ee921fcbccecc4568bb5925db5a5e7266574f4c3fd5580d1a2d",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p219-header0.png",
+    "sha256": "5be26dfac6870738403d774dcdf350c0275b4cf260b6eb7e0e800686d829739d",
+    "status": "derived header crop; parent page inspected, crop not separately viewed",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p219-header1.png",
+    "sha256": "12d7dc2714136484731d5853b6db694357976bc8a2c588aa4e5c20d97eab18ba",
+    "status": "derived header crop; parent page inspected, crop not separately viewed",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\Bates-p219.png",
+    "sha256": "28d935129f256429217b2248b4a7626e65c101d17a45e9a3e611deebc38878e5",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\sources\\IN2-p31.jpg",
+    "sha256": "9d20b1a3375916a6349b9914120e8aa3aa9a94f40e80b5470d69dec368d965c6",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\sources\\NY3-p1908.jpg",
+    "sha256": "c3b719913a4484c8b990713d46b24168965bee98d429c82dc4e1325e1110b5db",
+    "status": "rejected locator",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs\\s142\\sources\\NY3-p1912.jpg",
+    "sha256": "858ebf49bf94b01da9daf1b549640ab904b2271642196fea325f07dbcf64ebaa",
+    "status": "static source page/header inspected",
+    "qualification": "No browser or desktop; image derived from identified scan or direct archive page."
+  },
+  {
+    "path": "runs/s142/sources/OH-first-opening.jpg",
+    "sha256": "49f766b8471eae5c577481e419197a326dec7df19503cb5b8104edf5c1075cf4",
+    "status": "static source page inspected",
+    "qualification": "Footer(1), April15,1861 call and April29,1861 performed muster verified; OCRproclamation-year1863 rejected."
+  }
+]

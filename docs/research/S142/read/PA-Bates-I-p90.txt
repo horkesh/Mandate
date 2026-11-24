@@ -1,0 +1,144 @@
+90
+KINTH   REGIMEXT,
+Brown,  Joseph   Private.
+Benner,  William   do.
+Boyd,  Francis   do.
+Davis,  Alexander  S   do.
+Dugan,  James   do.
+Davis,  George  W   do.
+Edwards,  Philip   do.
+Fluke,  Alfred  L   do.
+Frederick,  John   do.
+Frederick,  August   do.
+Fishter,  Michael   do.
+Frailey,  George  S   do.
+Frailej%  William   do.
+Gates,  Joseph   do.
+Garver,  Joseph   do.
+Hill,  William   do.
+Hobaugh,  Jacob   do.
+Hoaks,  Henry  W   do.
+Hetherington,  James   do.
+Henry,  Hiram   do.
+Henry,  Aldin   do.
+King,  Charles  M   do.
+Kerr,  Valentine   do.
+Keiner,  Samuel  F   do.
+Logan,  William  A   do.
+Mott,  John   do.
+Mackey,  George  W   do.
+M'Millen,  George  W   do.
+M'Masters,  James   do.
+M'Candless,  George   do.
+M'Vey,  David  L   do.
+M'Mett,  Robert   Private.
+M'Cormick,  Milton   do.
+M'Manus,  Charles   do.
+M'Elunin,  John  L   do.
+M'MuUin,  Arcliibald   do.
+M'Garvey,  James   do.
+Mathews,  George   do.
+Oswald,  Randolph   do.
+Phelps,  Plenry  F   do.
+Premkard,  Harrison   do.
+Price,  Isaac  A,   do.
+Porter,  James   do.
+Reynold,  Jeflferson   do.
+Robinson,  Albert   do.
+Rhoads,  James   do.
+Ross,  Orlando  W   do.
+Stevenson,  James  H   do.
+Smith,  Charles  W   do.
+Singer,  August   do.
+Shoup,  Francis   do.
+Sintser,  George   do.
+Serene,  George   do.
+Truby,  John  H   do.
+Trew,  Charles   do.
+Truit,  Jefferson   do.
+Walker,  Samuel   do.
+W^elty,  James  B   do.
+Wasson,  Samuel   do.
+Wygant,  Henry   do.
+Wagoner,  Frederick   do.
+Company    C.
+RECRUITED  AT  OART^ISLE,  CUMBERI.AND  COUNTY.
+MUSTERED  IN,  APRIL  23,  18G1.
+Christian  Kuhns   Captain.
+Augustus  Zag   First  Lieutenant.
+John  B.  Alexander   Second  Lieutenant.
+John  S.  Lyne   First  Sergeant.
+Barnet  Shafer   Second  Sergeant.
+John  W.  Keeney   Third  Sergeant.
+John  Low   Fourth  Sergeant.
+Charles  Sanno   First  Corporal.
+Charles  H.  Foulk   Second  Corporal.
+Thomas  Colwell   Third  Corporal.
+John  W.  Shafer   Fourth  Corporal.
+John  M'Master   Musician.
+John  S.  Cole   do.
+Armstrong,  Calives   Private.
+Alguier,  Samuel   do.
+Bailey,  David   do.
+Blaine,  William  S
+ do.
+Curn,  Henry   do.
+Caufman,  John  H   do.
+Cornman,  Augustus   do.
+Deamer,  Alexander  T   do.
+Durnin,  Matthew  W   do.
+Demole,  Edward   do.
+Ebright,H   do.
+Erick,  George   do.
+Elliott,  Samuel   do.
+Engelberger,  Wilham   do.
+Egolf,  Lemuel   do.
+Fink,  John  C   do.
+Gregg,  William  B   do.
+Gilmore,  Peter   do.
+Grier,  Samuel   do.
+Gregg,  JohnM   do.
+Gauld,  George  W   do.
+Hippie,  Benjamin   do.
+Heavinger,  George  W   do.
+Keller,  Henry   do.
+Keeserman,  William   do.
+Kuntz,  Philip   do.
+Lippart,  William   Private
+Lobach,  Albert  T   do.
+Long,  Andrew  K   do.
+Low,  Jacob  M   do.
+Lisman,  Casper   do.
+M'Gibbens,  Patrick   do.
+M'Gown,  WiUiam   do.
+Martin,  Robert  A   do.
+Noble,  James   do.
+Noble,  Jackens  W.  J   do.
+Noljle,  James  H   do.
+Nealy,  William   do.
+Peatus,  David   do.
+Peatus,  Alexander   do.
+Rodgers,  Alexander   do.
+Robinson,  John   do.
+Ramsey,  William   do.
+Swartz,  John.   do.
+Swartz,  Andrew   do.
+Snodgrass,  William  M   do.
+Sitts,  Samuel   do.
+Smith,  Alfred  B   do.
+Shuserman,  John  C   do.
+Spottswood,  Edward   do.
+Sanno,  Edward  B   do.
+Sterrett,  James   do.
+Stinmyer,  Harman   do.
+Sadler,  Samuel  G   do.
+Stouf,  Michael  B   do.
+Spong,  John   do.
+Thompson,  David.... ^  do.
+Vansant,  .John   ..do.
+Vanard,  Wilson   do.
+Watts,  William  M   do.
+Winnans,  Jackson  W   do.
+Wolf,  Alexander   do.
+Wert,  Henry  P   ...do,
+Weaklv,  Jauus  G   do,

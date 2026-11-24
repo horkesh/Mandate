@@ -1,0 +1,146 @@
+100
+TENTH   REGIMENT,
+Bell,  Walker  R   Private.
+Bell,  Wiliiaru  R   do.
+Barringer,  Andrew   do.
+Benner,  A.  Ilarvey   do.
+Beck,  Henry   do.
+Brocker,  Samuel   do.
+Blessing,  Lewis   do.
+Burket,  Brastus   do.
+Biddleman,  Sylvanus   do.
+Bell,  William  S   do.
+Cook,  Henry  C   do.
+Cook,  Lindsey  W   do.
+Cook,  Christopher   do.
+Childs,  John   do.
+Campbell,  George   do.
+Dixon,  Samuel  G   do.
+Fulmer,  Levi  H   do.
+Finkle,  John   do.
+Frazier,  Alfred  C   do.
+Giffer,  Oliver  D   do.
+Guusallas,  John   do.
+Huntzleman,  Michael   do.
+Hannan,  Daniel  J
+ do.
+Hamlin,  Milton  W   do.
+Houtz,  John   do.
+Hendershot,  David   do.
+Hinton,  Joseph  L   do.
+Hinton,  Charles   do.
+Hudson,  John   do.
+Johnston,  Charles.   do.
+Keys,  Curtin   do.
+Limtaert,  John   Private.
+Lucas,  William   do.
+Lucas,  Harrison   do.
+Myers,  Theodore   do.
+Mjrers.  James   do.
+M'Bride,  James  E   do.
+Metzgar,  Philip   do.
+Otto,  Samuel  D   do.
+Peters,  Joseph  J   do.
+Patterson,  James  S  do.
+Pruner,  Daniel  D   do.
+Rodgers,  George  D   do.
+Rothrick,  Thomas   do.
+Rohrback,  John  W   do.
+Reyleman,  John   do.
+Sell,  Augustus   do.
+Shearer,  Henry  H   do.
+Showers,  William   do.
+Spangler,  Simon   do.
+Spence,  John   do.
+Stone,  Joseph  G   do.
+Schwann,  Nicholas   do.
+Thomas,  Francis   do.
+Trochamiller,  Joseph   do.
+Updegrove,  Ellis   do.
+Ulrich,  George   do.
+Walter,  David   do.
+Walter,  George   do.
+Williams,  John   do.
+Winters,  Charles  H   do.
+White,  David   do.
+Company  C.
+KEUKUITED  AT  TAMAQUA,   SCeHJYIiKILIj  COUNTY.
+MUSTERED  IN,  APRIL  24,  1861.
+William  B.  Lebo   Captain.
+Solomon  H.  Lutz   First  Lieutenant.
+William  Depue   Second  Lieutenant.
+Edward  Davis   First  Sergeant.
+Samuel  B.  Graeff.   Second  Sergeant.
+Daniel  W.  Davis   Third  Sergeant.
+William  M.  Miller   Fourth  Sergeant.
+Charles  Freidenberger   First  Corporal.
+Edward  P.  Jones   Second  Corporal.
+John  Southam   .Third  Corporal.
+David  Nahf   Fourth  Corporal.
+John  Dunn   Musician.
+Albert  Moyer   do.
+Allen,  William   Private.
+Bropst,  Samuel   do.
+Burkey,  David  R   do.
+Braise,  Daniel  G   do.
+Bartin,  James   do.
+Barr,  Martin   do.
+Casey,  Theodore   do.
+Casey,  Robert  L   do.
+Chester,  Isaac...   do.
+Delay,  Jeremiah   do.
+Delamon,  William   do.
+Davis,  David  E   do.
+Fatzinf^er,  Elias,   do.
+Fairchild,  John   do.
+Greathead,  John   do.
+Griffus,  Thomas  W   do.
+Hein,  Joseph   do.
+Hauser,  Barnard  A    do.
+Housberger,  Charles  C   do.
+Haker,  John,  Jr   do.
+Heilman,  Philip   do.
+Higgens,  William   do.
+Hughes,  George  B   do.
+Henrie,  George  W   do.
+Jones,  Edward  J   do.
+Klechner,  Antanis   do.
+Krechmer,  Elisha   Private.
+Kepley,  Israel   do.
+Kehl,  Samuel  F   do.
+King,  William   do.
+Kitchen,  Richard   do.
+Keistler,  George   do.
+Kershner,  John.   do.
+Kolb,  Charles   do.
+Lucb,  Nicholas   do.
+Lane,  William   do.
+Landig,  John   do.
+M'Manimer,  Patrick   do.
+Murry,  Joseph   do.
+Macord,  Elias   do.
+Markle,  Abraham   do.
+Messersmith,  Jeremiah   do.
+Moyer,  James  M   do.
+March,  Thomas   do.
+Moser,  Ephraim   do.
+Minnier,  John   do.
+March,  George  W   do.
+Moyer,  William  K   do.
+Rinehart,  John  M   do.
+Richardson,  John   do.
+Reese,  David   do.
+Richard,  Tiiomas  T   do.
+Scheiffly,  James  K   do.
+Snyder,  Henry  H   do.
+Shoemaker,  William   do.
+Shlasser,  Peter   do.
+Schwartz,  William   do.
+Thomas,  Edward  B   do.
+Treichler,  Oliver   do.
+Trout,  Jei-emiah   do.
+Thomas,  William  T   do.
+Vai-dy,  George   do.
+William,  Beneville   do.
+Williams,  William  J   do.
+Zimmerman,  Henry   do.

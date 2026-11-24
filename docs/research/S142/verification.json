@@ -1,0 +1,38 @@
+{
+  "scope": "S142 research data only; an integrity audit is not independent historical review or source-hold clearance.",
+  "focused": {
+    "checks": 10864,
+    "passed": 10864,
+    "failed": [],
+    "catalogue": 214,
+    "mcdowell49_dated": 48,
+    "baseline_preserved": 2368
+  },
+  "preflight": [
+    {
+      "check": "boundary",
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.57
+    },
+    {
+      "check": "pack-rules",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/pack-rules.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 0.7
+    }
+  ],
+  "hook_policy": "Ordinary git commit hook mandatory. Actual log/exit captured at commit in runs/s142/commit-hook.log and commit-exit.json. No bypass or push.",
+  "review": "Formal whole-branch review and gate signatures remain deferred by0106/0107. Requested5.6 worker IDs unavailable; no substitute or independent-review claim.",
+  "reused_evidence": "S137/S140/S76/S75 source artifacts and baseline preserved. No scenario, package build, timing run or production change.",
+  "remaining": "Universal receipt/muster/contract recovery is incomplete;208 identities lack a demonstrated receipt/identity pair, and all existing unmet criteria and source holds remain open."
+}

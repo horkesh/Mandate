@@ -1,0 +1,146 @@
+80
+EIGHTH   EE&TMENT,
+Austin,  Shadrach  G   Private.
+Austin,  Ricliard   do.
+Aten,  James  R   do.
+Bird,  Jolin   do.
+Bender,  Adolph   do.
+Brennan,  Thomas   do.
+Barclay,  Matthias   do.
+Barnes,  George   do.
+Benson,  Thomas  L   do.
+Cooper,  Nicholas   do.
+Curtis,  Nodiah   do.
+Chrisman,  George   do.
+Clouse,  Charles   do.
+Colvin,  Horatio  V   do.
+Conner,  Thomas  R   do.
+Davenport,  Henry  L   do.
+Davenport,  James  T   do.
+Felts,  Horatio  P   do.
+Gilchrist,  Samuel   do.
+Hoover,  Lorenzo  D   ^  do.
+Hinds,  Henry  M   do.
+Hurley,  Michael  W   do.
+John,  Frederick   do.
+Kiser,  Abraham   do.
+Kilpatrick,  Samuel   ..do.
+Knapp,  Joseph   do.
+lia  France,  William   do^
+La  France,  Joseph   do.
+Le  Compt,  Benjamin   do.
+Murring,  Westbrook   do.
+Martin,  Ezra  B   do.
+M'Guigan,  Jamea   do.
+M'Doherty,  James  S   Private.
+Nogle,  Herbert  M   do.
+Powell,  Levi   do.
+Robinson,  David   do.
+Rhodes,  Thomas  P   do.
+Roach,  James  A   do.
+Rhodes,  Morris  H   do.
+RockweD,  William  R   do.
+Rodgers,  Benjamin  F   do.
+Ryan,  G.  William   do.
+Rease,  William   do.
+Scott,  Richard  H   do.
+Smith,  Freeman  „   do.
+Switer,  Francis   do.
+Smith,  Robert   do.
+Stalbert,  Merrit   do.
+Swan,  Nelson   do.
+Sterling,  David  C
+ do.
+Sherwood,  Obediah   do.
+Scott,  Jerome   do.
+Shaffer,  John   do.
+Sayers,  Vincent  J   do.
+Smith,  John   do.
+Sylich,  Milton   do.
+Tanfield,  John  A   do.
+Tompkins,  Levi  B   do.
+Wallace,  Joseph  W   do.
+Wilber,  Chester   do.
+Wood,  Patrick   do.
+Yarrington,  Dorman  A   do.
+Yeager,  Spencer   do.
+Company  C.
+RECEtriTED  AT  WIIiKESBARKE,   LUZERNE  COUNTY.
+MUSTERED  IN,  APRIL  22,  1861.
+William  Brisbane   ,   Captain.
+Joseph  Wright   First  Lieutenant.
+John  B.  Conyngham   Second  Lieutenant.
+Lyman  R.  Nicholson   First  Sergeant.
+WUliam  J.  Fell   Second  Sergeant.
+Beriah  S.  Bowers   Third  Sergeant.
+WilUam  C.  Rohn   Fourth  Sergeant
+Treat  B.  Camp   First  Corporal.
+Samuel  B.  Hibler   Second  Corporal.
+Albert  M.  Bailey   Third  Corporal.
+Edwin  S.  Osborne   Fourth  Corporal.
+Thomas  J.  Schleppy   Musician.
+Joseph  W.  CoUings   do.
+Orusan,  Andrew  J   Private*
+Chase,  Edward  H   do.
+Cook,  William  H   do.
+Clossen,  Daniel   do.
+Clossen,  Andrew   do.
+Carey,  George  B...   do.
+Deitrick,  Orlando   do.
+Downs,  William  G   do.
+Dailey,  Elisha  A   do.
+Everett,  Joseph  H   do.
+Gray,  Peter   do.
+Gregory,  Jacob   do.
+Gorham,  Willett  E   do.
+Harvey,  James   do.
+Humble,  John   do.
+Hughey,  Andrew  J   do.
+Hoover,  George   do.
+Harris,  James  D   do.
+Irvin,  Burtis   do.
+Jumper,  George  W   do.
+Keller,  Charles   do.
+Kearney,  Patrick   do.
+Kelley,  George  W   do.
+Kelley,  James   do.
+Kizer,  IsaJah   do.
+Moser,  William   do.
+M'  Williams,  Charles   Private.
+M'Gee,  Daniel  W   do.
+M'Neil,  Norman   do.
+M'Cormick,  John   do.
+M'Farlane,  Roderick   do.
+Powell,  John   do.
+Piper,  John   do.
+Patten,  Joseph  W   do.
+Puterbaugh,  Alex'r   do.
+Partington,  William  A   dp.
+Pnterbaugh,  Samuel  H   dp.  •
+Prideaux,  Richard   do,
+Reymer,  John   do.
+Robbins,  Stephen  D   do.
+Robbins,  Adam   do.
+Reel,  Miles   do.
+Reese,  George  A..   do.
+Rittenhouse,  Wesley    do.
+Rohn,  David  L      do.
+Rennard,  Charles   do.
+Remmel,  Jacob   do.
+Raub,  James  A   dO;
+Riues,  William  W   do;
+Stevens,  Giles  E   do''-
+Schoonover,  Nathan   da.
+Stevens,  Charles  F   do.
+Stroh,  Henry   do?
+Smith,  Frank   ,   do.
+Stookey,  Samuel   do.
+Tripp,  Isaac   ..do.
+Taylor,  Preserve   do.
+Vanscoten,  William  H   do.
+Waring,  George  E   do.
+Ward,  William  H.,  Jr   do.
+Wood,  Daniel   do.
+Walker,  Lazarus  S    ...do.
+Watson,  WilUam  W   do.
+Youngst,  Alexander   do.

@@ -1,0 +1,137 @@
+26
+SECOND    KE(li:srEXT,
+Baker,  George  W   Private.
+Bryson,  John  W   do.
+Cordes,  Harry   do.
+Coleman,  Lawson   do.
+Dorty,  Peter   do.
+Dailev,  George  W   do.
+Elser,  John   do.
+Fisher,  John   do.
+Forney,  Eraannel  H   do.
+Flack,'  Alexander   do.
+Fentiman ,  William   do.
+Frederick,  John  N   do.
+Gipe,  Franklin   do.
+Hardy,  Samuel   do.
+Hardy,  Isaac   do.
+Harmony,  Michael   do.
+Hicks,  John   do.
+Hershberger,  John   do.
+Hazelett,  William  T   do.
+Heuebergcr,  William   do.
+Hutton,  Harrison   do.
+Jones,  Charles   do.
+Jones,  John   do.
+Kline,  Frank   do.
+King,  John   do.
+Eadd,  Julius  C
+ do.
+Lowman,  Martin   do.
+Martin,  I.  H   do.
+M'Geehaii,  James   do.
+Atoore,  Robert  M   Private^
+M'Curdy,  Alexander   do.
+M'Laughlin,  Edward  G   do.
+Monath,  Edward   do.
+M'Guigan,  A.  C
+ do.
+Pressor,  Alexander   do.
+Perrie,  Jeremiah   do.
+Pence,  William  H   do.
+Pence,  John   do.
+Riley,  Dennis   do.
+Ridgeley,  John   do.
+Spence,  Hamilton   do.
+Seabrooks,  George   do.
+Stratton,  Theophilus   do.
+Swuninska,  John   do.
+Smith,  Jeremiah   do.
+Seabrooks,  Hemy   do.
+Snively,  Lark   do.
+Smith,' Robert   do.
+Shanebrook,  Charles   do.
+Shearer,  Walker   do.
+Smith,  John  W   do.
+Snider,  Peter  A.  I   do.
+Smith,  William  T   do.
+Snider,  Peter   do.
+Shoemaker,  Samuel   do.
+Uglow,  Samuel   do.
+White,  John  S   do.
+Company   C.
+BEORUITED   AT  ST.   THOMAS,    FRANKLIN   COUNTY.
+MUSTERED  IN,  APRIL  20,  1861.
+James  G.  Elder   Captain.
+Joseph  B.  Strickler   First  Lieutenant.
+Jacob  West   Second  Lieutenant.
+William  H.  Shorb   Mrst  Sergeant.
+George  H.  Miller   Secoi;id  Sergeant.
+Jacob  Snider   Third  Sergeant.
+George  A.  Pool   Fourth  Sergeant.
+Theodore  Koons   First  Corporal.
+ThaddeusS.  Riley   Second  Corporal.
+Thomas  Hill   Third  Corporal.
+David  C.  Shafer   Fourth  Corporal.
+JoelHapple   Musician.
+Edwin  Byers   do.
+Antrim,  Samuel   Private.
+Bence,  George   do.
+Byers,  Charles   do.
+Barnhisel,  Cornelius   do.
+Byers,  John  B   do.
+Byers,  William   do.
+Bush,  George  W   do.
+Butts,  George   do.
+Burkholder ,  Christian   do.
+Cummins,  James  R   do.
+Carpenter,  Em.anuel   do.
+Cassatt,  William  A   do.
+Daley,  Thomas   do.
+Doubleman,  John   do.
+Detrich,  Jacob   do.
+Ferry,  John   do.
+Funk,  Jacob  H   do.
+GaflF,  James.   do.
+Gossert,  Cyrus   do.
+Grabill,  Henry   do.
+Hosier,  William  A   do.
+Hays,  David   do.
+Hess,  David   do.
+Koons,  John  T   do.
+Little,  George   Pi'ivate.
+Long,  John  H   do.
+Miller,  Christian   do.
+Missavey,  George  F   do.
+M'Elwea,  James   do.
+Mickley,  John   do.
+Marshal,  John  A   do.
+Morehead,  David   do.
+Martin,  Morgan   do.
+Martin,  Jeremiah   do.
+Norrjs,  Jesse  R   do.
+Pensiii  ;;er,  WilliamH   do.
+Prather,  Samuel  H   do.
+Pool,  John  E   do.
+Rennecker,  Samuel   do.
+Rowe,  John  G   do.
+Riley,  Dennis   do.
+Rupert,  Simon   do.
+Shatzer,  John   do.
+Stoner,  Joseph   do,
+Shealey,  Abraham   do.
+Sullivan,  George   do.
+Spear,  Alexander   do.
+Shatzer,  Emanuel  F   do.
+Stickel,  John  R   do.
+Shorts,  William   do,
+Snow,  William  H   ....^o,
+Spidle,  Henry  M   do.
+Tracy,  David   do,
+Unger,  John  H   do.
+Vories,  George   do.
+Wason,  Jacob   do.
+Wilders,  William  A   do.
+Wilders,  Joseph   do.
+Weyant,  William  H   do.
+Zook,  Leandpr  K   do.
