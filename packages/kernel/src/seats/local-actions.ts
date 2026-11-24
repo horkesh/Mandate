@@ -99,7 +99,7 @@ export type LocalOption = ForceOption |
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'review'; readonly received: KnownReport } |
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'goal'; readonly target: PostId; readonly goal: PlanGoal; readonly candidate: PlanCandidate };
 
-export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, cache: ViewCache = createViewCache(), ground: LocalPlanningGround = localPlanningGround(world,state,day)): readonly LocalOption[] {
+export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, cache: ViewCache = createViewCache(), ground: LocalPlanningGround = localPlanningGround(world,state,day,cache.planningGround)): readonly LocalOption[] {
   let morning = cache.localOptions.get(state);
   if (morning?.world !== world || morning.day !== day) {
     morning = { world, day, people: new Map() };

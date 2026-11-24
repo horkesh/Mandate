@@ -18,7 +18,7 @@ import type { PlanGoal } from '../plans/goal.ts';
 import { callEstablishment } from '../recruitment/rules.ts';
 import type { State } from '../root-state.ts';
 import { canonicalHash } from '../serialize/hash.ts';
-import { viewFor, type ViewCache } from '../view/view.ts';
+import { plannerViewFor, type ViewCache } from '../view/view.ts';
 import type { AllocationInstrument } from '../world/allocation.ts';
 import { localPlanningGround, type LocalPlanningGround } from './planning-ground.ts';
 import { headquartersOf } from './posts.ts';
@@ -30,9 +30,9 @@ export type ForceOption =
  {readonly id:string;readonly kind:'force-answer';readonly authority:null;readonly request:MessageId;readonly need:ForceNeed;readonly post:PostId;readonly issuer:PersonId;
   readonly modeAuthority?:ForceRequestModeAuthority};
 function inputFor(world:SeatsWorld,state:State,person:PersonId,post:PostId,goal:PlanGoal,day:number,ground:LocalPlanningGround,cache?:ViewCache) {
- const view=viewFor(world,state,seatIdFor(person),cache);
- const {derived,network,month,plannerCache}=ground();
- return plannerInputFor(world,state,derived,network,month,view,post,goal,day,plannerCache);
+ const view=plannerViewFor(world,state,seatIdFor(person),cache);
+ const planning=ground();
+ return plannerInputFor(world,state,()=>planning.derived,planning.network,planning.month,view,post,goal,day,planning.plannerCache);
 }
 function joinedMissionBlocks(world:SeatsWorld,state:State,post:PostId):ForceBlockId[] {
  return allCommandedBlocks(world.map,state,post).filter(b=>{

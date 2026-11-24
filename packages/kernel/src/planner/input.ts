@@ -29,7 +29,7 @@ import type { NetworkConditions } from '../supply/supply.ts';
 import { regardOf, trueOf } from '../people/people.ts';
 import { traitsOf } from '../people/traits.ts';
 import { templateFor } from '../knowledge/templates.ts';
-import type { SeatView } from '../view/types.ts';
+import type { PlannerView, SeatView } from '../view/types.ts';
 import type { PlannerInput } from './context.ts';
 import { profileOf } from './profile.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
@@ -38,8 +38,9 @@ import type { PlannerForce, PlannerPost } from './types.ts';
 /** Disposable projections for exact immutable inputs; never State or saved data. */
 export interface PlannerInputCache {
   readonly states: WeakMap<State, { readonly world: SeatsWorld; readonly forces: Map<FactionId, readonly PlannerForce[]>; readonly posts: Map<FactionId, readonly Omit<PlannerPost, 'holderWillingness'>[]> }>;
+  readonly control: WeakMap<SeatView['controlBeliefs'], { readonly world: SeatsWorld; readonly index: ReturnType<typeof buildControlIndex> }>;
 }
-export function createPlannerInputCache(): PlannerInputCache { return { states: new WeakMap() }; }
+export function createPlannerInputCache(): PlannerInputCache { return { states: new WeakMap(), control: new WeakMap() }; }
 function projections(world: SeatsWorld, state: State, cache?: PlannerInputCache) {
   if (cache === undefined) return undefined;
   let row = cache.states.get(state);
@@ -129,7 +130,7 @@ export function sidePosts(world: SeatsWorld, state: State, faction: FactionId, d
 }
 
 /** What the commander's view says of the enemy and the ground, as the planner reads it. */
-export function viewGround(view: SeatView): { readonly beliefs: Map<RegionId, number | null>; readonly beliefDetails: Map<RegionId, StrengthEstimate>; readonly works: Map<RegionId, number>; readonly obstructions: Map<EdgeId, RegionId | null> } {
+export function viewGround(view: PlannerView): { readonly beliefs: Map<RegionId, number | null>; readonly beliefDetails: Map<RegionId, StrengthEstimate>; readonly works: Map<RegionId, number>; readonly obstructions: Map<EdgeId, RegionId | null> } {
   const beliefs = new Map<RegionId, number | null>();
   const beliefDetails = new Map<RegionId, StrengthEstimate>();
   for (const r of (Object.keys(view.enemyBeliefs) as RegionId[]).sort(strictCompare)) beliefs.set(r, view.enemyBeliefs[r]!.value);
@@ -145,19 +146,32 @@ export function viewGround(view: SeatView): { readonly beliefs: Map<RegionId, nu
 }
 
 /** The input for drafting `goal` for `post`, whose holder's view is `view`, on the morning's derived map. */
-export function plannerInputFor(world: SeatsWorld, state: State, derived: DerivedMap, network: NetworkConditions, month: number, view: SeatView, post: PostId, goal: PlanGoal, day: number, cache?: PlannerInputCache): PlannerInput {
+export function plannerInputFor(world: SeatsWorld, state: State, derived: DerivedMap | (() => DerivedMap), network: NetworkConditions, month: number, view: PlannerView, post: PostId, goal: PlanGoal, day: number, cache?: PlannerInputCache): PlannerInput {
   const faction = postFaction(world, state, post);
   if (faction === null) throw new RangeError(`post ${post} has no side to plan for`);
-  const supply = derived.supply.factions.get(faction);
-  if (supply === undefined) throw new RangeError(`the derived map has no supply for ${faction}`);
+  const readSupply = () => {
+    const value = (typeof derived === 'function' ? derived() : derived).supply.factions.get(faction);
+    if (value === undefined) throw new RangeError(`the derived map has no supply for ${faction}`);
+    return value;
+  };
+  // Existing eager callers retain their validation; local holding scores can leave supply untouched.
+  let supply: PlannerInput['supply'] | undefined = typeof derived === 'function' ? undefined : readSupply();
   const holder = state.postStates[post]!.postHolder;
   if (holder === null) throw new RangeError(`post ${post} is vacant: nobody to plan`);
   const person = traitsOf(world, state, holder);
   const people = world.rules.people;
   const { beliefs, beliefDetails, works, obstructions } = viewGround(view);
+  let control = cache?.control.get(view.controlBeliefs);
+  const readControl = () => {
+    if (control?.world !== world) {
+      control = { world, index: buildControlIndex(world.map, Object.fromEntries(Object.entries(view.controlBeliefs).map(([region, belief]) => [region, belief.shares]))) };
+      cache?.control.set(view.controlBeliefs,control);
+    }
+    return control.index;
+  };
   return {
-    ground: { map: world.map, index: buildControlIndex(world.map, Object.fromEntries(Object.entries(view.controlBeliefs).map(([region, belief]) => [region, belief.shares]))), network: plannerNetwork(network), month },
-    supply,
+    ground: { map: world.map, get index() { return readControl(); }, network: plannerNetwork(network), month },
+    get supply() { return supply ??= readSupply(); },
     faction,
     beliefs,
     beliefDetails,

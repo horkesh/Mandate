@@ -190,6 +190,22 @@ function establishmentProjection(
       }
     }
   }
+  // Index received advice once in the existing chronology, rather than rescan all papers for every person.
+  const stancesByPerson = new Map<PersonId, KnownStanceView[]>();
+  const assessmentsByPerson = new Map<PersonId, KnownPersonView['assessments'][number][]>();
+  for (const r of chronological) {
+    if (r.type === 'advice' && r.subtype === 'requested' && r.advice !== null && r.claims.some(c => c.kind === 'verb-answered' && c.token?.startsWith('consult:') && c.value === 1)) {
+      const rows = stancesByPerson.get(r.author) ?? [];
+      rows.push(Object.freeze({ subjectKind: r.subjectKind, subjectId: r.subjectId, recommends: r.advice.recommends, confidence: r.advice.confidence, day: r.day, source: r.id }));
+      stancesByPerson.set(r.author,rows);
+    }
+    if (r.subjectKind === 'person' && r.author !== r.subjectId && r.type === 'advice' && r.advice !== null) {
+      const person = r.subjectId as PersonId;
+      const rows = assessmentsByPerson.get(person) ?? [];
+      rows.push(r.id);
+      assessmentsByPerson.set(person,rows);
+    }
+  }
   const sides = new Map<PersonId, FactionId | null>();
   const personViews: KnownPersonView[] = [...people].sort(strictCompare).map(person => {
     let side = world.personIds.includes(person) ? world.person(person).faction : null;
@@ -201,14 +217,8 @@ function establishmentProjection(
     // An explicit service choice supersedes the side inferred from a government's posts (0101, R76).
     if (serviceSides.has(person)) side = serviceSides.get(person)!;
     sides.set(person, side);
-    const stances: KnownStanceView[] = [];
-    const assessments: KnownPersonView['assessments'][number][] = [];
-    for (const r of chronological) {
-      if (r.author === person && r.type === 'advice' && r.subtype === 'requested' && r.advice !== null && r.claims.some(c => c.kind === 'verb-answered' && c.token?.startsWith('consult:') && c.value === 1)) {
-        stances.push(Object.freeze({ subjectKind: r.subjectKind, subjectId: r.subjectId, recommends: r.advice.recommends, confidence: r.advice.confidence, day: r.day, source: r.id }));
-      }
-      if (r.author !== person && r.subjectKind === 'person' && r.subjectId === person && r.type === 'advice' && r.advice !== null) assessments.push(r.id);
-    }
+    const stances = stancesByPerson.get(person) ?? [];
+    const assessments = assessmentsByPerson.get(person) ?? [];
     return Object.freeze({ person, standing: side === faction ? standingFor(person) : null, stances: Object.freeze(stances), assessments: Object.freeze(assessments) });
   });
   return Object.freeze({

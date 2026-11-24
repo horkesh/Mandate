@@ -587,7 +587,7 @@ export function battleMenus(world: SeatsWorld, state: State, ground: MarchGround
 export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCache = createViewCache()): SeatRequest[] {
   const day = state.stateDay + 1;
   const ground = morningGround(world, state, day);
-  const localGround = localPlanningGround(world,state,day);
+  const localGround = localPlanningGround(world,state,day,cache.planningGround);
   const out: SeatRequest[] = [];
   for (const faction of world.factionIds) {
     const seat = seatIdFor(world.faction(faction).principal);

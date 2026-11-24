@@ -1,0 +1,1369 @@
+{
+  "source": "runs\\s153\\step7-profile\\history-cpu.json",
+  "sampleMs": 12266.355,
+  "samples": 8344,
+  "self": [
+    {
+      "function": "(garbage collector)",
+      "file": "",
+      "line": 0,
+      "column": -1,
+      "ms": 764.4,
+      "share": 6.232
+    },
+    {
+      "function": "sha256Hex",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/sha256.ts",
+      "line": 1,
+      "column": 1609,
+      "ms": 626.83,
+      "share": 5.11
+    },
+    {
+      "function": "write",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/canonical.ts",
+      "line": 1,
+      "column": 791,
+      "ms": 599.62,
+      "share": 4.888
+    },
+    {
+      "function": "deepFreeze",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/freeze.ts",
+      "line": 1,
+      "column": 230,
+      "ms": 526.01,
+      "share": 4.288
+    },
+    {
+      "function": "tokenMatches",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 6393,
+      "ms": 374.0,
+      "share": 3.049
+    },
+    {
+      "function": "courierTable",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/world.ts",
+      "line": 2,
+      "column": 8349,
+      "ms": 356.87,
+      "share": 2.909
+    },
+    {
+      "function": "deliverReports",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/knowledge.ts",
+      "line": 1,
+      "column": 11777,
+      "ms": 315.0,
+      "share": 2.568
+    },
+    {
+      "function": "establishmentProjection",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/people.ts",
+      "line": 1,
+      "column": 3154,
+      "ms": 235.89,
+      "share": 1.923
+    },
+    {
+      "function": "heldPost",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 5388,
+      "ms": 231.26,
+      "share": 1.885
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 7656,
+      "ms": 219.64,
+      "share": 1.791
+    },
+    {
+      "function": "set filename",
+      "file": "",
+      "line": 0,
+      "column": -1,
+      "ms": 202.23,
+      "share": 1.649
+    },
+    {
+      "function": "controlEvidence",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/control-beliefs.ts",
+      "line": 1,
+      "column": 420,
+      "ms": 178.04,
+      "share": 1.451
+    },
+    {
+      "function": "pruneKnowledge",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/knowledge.ts",
+      "line": 1,
+      "column": 13868,
+      "ms": 174.27,
+      "share": 1.421
+    },
+    {
+      "function": "canonicalJson",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/canonical.ts",
+      "line": 1,
+      "column": 398,
+      "ms": 166.54,
+      "share": 1.358
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 5410,
+      "ms": 154.6,
+      "share": 1.26
+    },
+    {
+      "function": "allCommandedBlocks",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 8016,
+      "ms": 142.74,
+      "share": 1.164
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/world.ts",
+      "line": 2,
+      "column": 5157,
+      "ms": 136.48,
+      "share": 1.113
+    },
+    {
+      "function": "contactEdgesOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 1499,
+      "ms": 136.41,
+      "share": 1.112
+    },
+    {
+      "function": "sideOfPerson",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 6716,
+      "ms": 136.29,
+      "share": 1.111
+    },
+    {
+      "function": "tick",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/tick.ts",
+      "line": 1,
+      "column": 3398,
+      "ms": 131.21,
+      "share": 1.07
+    },
+    {
+      "function": "triggerMatches",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 6031,
+      "ms": 109.83,
+      "share": 0.895
+    },
+    {
+      "function": "utf8Bytes",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/sha256.ts",
+      "line": 1,
+      "column": 928,
+      "ms": 108.31,
+      "share": 0.883
+    },
+    {
+      "function": "localOptions",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 4743,
+      "ms": 107.41,
+      "share": 0.876
+    },
+    {
+      "function": "legOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/supply/supply.ts",
+      "line": 1,
+      "column": 2989,
+      "ms": 104.83,
+      "share": 0.855
+    },
+    {
+      "function": "claimedControlView",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/claimed-control.ts",
+      "line": 1,
+      "column": 441,
+      "ms": 99.94,
+      "share": 0.815
+    },
+    {
+      "function": "generateReports",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/generate.ts",
+      "line": 1,
+      "column": 4798,
+      "ms": 99.54,
+      "share": 0.811
+    },
+    {
+      "function": "postIdsOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 5176,
+      "ms": 97.96,
+      "share": 0.799
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 8504,
+      "ms": 86.3,
+      "share": 0.704
+    },
+    {
+      "function": "inSubtree",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/authority.ts",
+      "line": 1,
+      "column": 297,
+      "ms": 85.87,
+      "share": 0.7
+    },
+    {
+      "function": "commandedBlocks",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 7593,
+      "ms": 85.77,
+      "share": 0.699
+    },
+    {
+      "function": "checkGate",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 8111,
+      "ms": 85.43,
+      "share": 0.696
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/people.ts",
+      "line": 1,
+      "column": 9192,
+      "ms": 82.81,
+      "share": 0.675
+    },
+    {
+      "function": "governmentRailOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 16581,
+      "ms": 77.28,
+      "share": 0.63
+    },
+    {
+      "function": "makeCtx",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/planner/context.ts",
+      "line": 1,
+      "column": 211,
+      "ms": 74.46,
+      "share": 0.607
+    },
+    {
+      "function": "receivedCandidates",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/received.ts",
+      "line": 1,
+      "column": 4019,
+      "ms": 72.34,
+      "share": 0.59
+    },
+    {
+      "function": "inst._zod.parse",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/zod/v4/core/schemas.js",
+      "line": 1199,
+      "column": 22,
+      "ms": 70.23,
+      "share": 0.573
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 7608,
+      "ms": 69.81,
+      "share": 0.569
+    },
+    {
+      "function": "__name",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 47,
+      "ms": 68.27,
+      "share": 0.557
+    },
+    {
+      "function": "buildControlIndex",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 628,
+      "ms": 65.38,
+      "share": 0.533
+    },
+    {
+      "function": "(anonymous)",
+      "file": "",
+      "line": 3,
+      "column": 16,
+      "ms": 64.27,
+      "share": 0.524
+    },
+    {
+      "function": "escapeRegExp",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 6737,
+      "ms": 62.26,
+      "share": 0.508
+    },
+    {
+      "function": "search",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/supply/supply.ts",
+      "line": 1,
+      "column": 4093,
+      "ms": 59.49,
+      "share": 0.485
+    },
+    {
+      "function": "__name",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 47,
+      "ms": 57.81,
+      "share": 0.471
+    },
+    {
+      "function": "edgeLeg",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/supply/supply.ts",
+      "line": 1,
+      "column": 1678,
+      "ms": 56.3,
+      "share": 0.459
+    },
+    {
+      "function": "postStateOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 5014,
+      "ms": 55.87,
+      "share": 0.455
+    },
+    {
+      "function": "receivedPicture",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/view.ts",
+      "line": 1,
+      "column": 6232,
+      "ms": 53.17,
+      "share": 0.433
+    },
+    {
+      "function": "forceOptions",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/force-requests.ts",
+      "line": 1,
+      "column": 2458,
+      "ms": 51.55,
+      "share": 0.42
+    },
+    {
+      "function": "neutralGroundOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 16193,
+      "ms": 50.52,
+      "share": 0.412
+    },
+    {
+      "function": "isWellFormedId",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/ids.ts",
+      "line": 1,
+      "column": 774,
+      "ms": 49.18,
+      "share": 0.401
+    },
+    {
+      "function": "connectedGroups",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 5439,
+      "ms": 47.01,
+      "share": 0.383
+    },
+    {
+      "function": "sendReport",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/context.ts",
+      "line": 1,
+      "column": 3154,
+      "ms": 46.31,
+      "share": 0.378
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/knowledge.ts",
+      "line": 1,
+      "column": 18503,
+      "ms": 46.01,
+      "share": 0.375
+    },
+    {
+      "function": "filterPostOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/posts.ts",
+      "line": 1,
+      "column": 4199,
+      "ms": 45.82,
+      "share": 0.374
+    },
+    {
+      "function": "compile",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/zod/v4/core/doc.js",
+      "line": 32,
+      "column": 11,
+      "ms": 43.83,
+      "share": 0.357
+    },
+    {
+      "function": "latestEnemyClaims",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/beliefs.ts",
+      "line": 1,
+      "column": 692,
+      "ms": 43.19,
+      "share": 0.352
+    },
+    {
+      "function": "strictCompare",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/compare.ts",
+      "line": 1,
+      "column": 136,
+      "ms": 41.73,
+      "share": 0.34
+    },
+    {
+      "function": "principalMenu",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 10980,
+      "ms": 41.55,
+      "share": 0.339
+    },
+    {
+      "function": "enemyBeliefs",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/beliefs.ts",
+      "line": 1,
+      "column": 4606,
+      "ms": 39.37,
+      "share": 0.321
+    },
+    {
+      "function": "mainBody",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/posts.ts",
+      "line": 1,
+      "column": 2199,
+      "ms": 39.12,
+      "share": 0.319
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/desk.ts",
+      "line": 1,
+      "column": 1967,
+      "ms": 39.02,
+      "share": 0.318
+    },
+    {
+      "function": "IntlMessageFormat.resolveLocale",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/intl-messageformat/index.js",
+      "line": 253,
+      "column": 23,
+      "ms": 38.12,
+      "share": 0.311
+    },
+    {
+      "function": "__name",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/messages/latency.ts",
+      "line": 1,
+      "column": 47,
+      "ms": 38.0,
+      "share": 0.31
+    },
+    {
+      "function": "mapSignature",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/derived.ts",
+      "line": 1,
+      "column": 533,
+      "ms": 36.88,
+      "share": 0.301
+    },
+    {
+      "function": "sideForces",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/planner/input.ts",
+      "line": 1,
+      "column": 1177,
+      "ms": 35.91,
+      "share": 0.293
+    },
+    {
+      "function": "subtree",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/posts.ts",
+      "line": 1,
+      "column": 1686,
+      "ms": 35.48,
+      "share": 0.289
+    },
+    {
+      "function": "post",
+      "file": "node:inspector",
+      "line": 118,
+      "column": 6,
+      "ms": 34.85,
+      "share": 0.284
+    },
+    {
+      "function": "audienceProjection",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/desk.ts",
+      "line": 1,
+      "column": 4845,
+      "ms": 33.91,
+      "share": 0.276
+    },
+    {
+      "function": "presenceByRegion",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/combat/battle.ts",
+      "line": 1,
+      "column": 997,
+      "ms": 31.85,
+      "share": 0.26
+    },
+    {
+      "function": "reportView",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/view.ts",
+      "line": 1,
+      "column": 2782,
+      "ms": 31.51,
+      "share": 0.257
+    },
+    {
+      "function": "localOptionsAt",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 6062,
+      "ms": 31.17,
+      "share": 0.254
+    }
+  ],
+  "inclusive": [
+    {
+      "function": "(root)",
+      "file": "",
+      "line": 0,
+      "column": -1,
+      "ms": 12266.35,
+      "share": 100.0
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/tools/s153-measure.ts",
+      "line": 0,
+      "column": -1,
+      "ms": 11501.92,
+      "share": 93.768
+    },
+    {
+      "function": "phase0Run",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/cli/src/phase0-run.ts",
+      "line": 1,
+      "column": 920,
+      "ms": 11465.51,
+      "share": 93.471
+    },
+    {
+      "function": "playDays",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/log/session.ts",
+      "line": 1,
+      "column": 5090,
+      "ms": 9082.16,
+      "share": 74.041
+    },
+    {
+      "function": "tick",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/tick.ts",
+      "line": 1,
+      "column": 3398,
+      "ms": 4382.41,
+      "share": 35.727
+    },
+    {
+      "function": "pendingRequests",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 27972,
+      "ms": 3462.2,
+      "share": 28.225
+    },
+    {
+      "function": "seatsWorld",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/cli/src/seats-world.ts",
+      "line": 2,
+      "column": 224,
+      "ms": 2192.92,
+      "share": 17.878
+    },
+    {
+      "function": "loadPack",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/load.ts",
+      "line": 1,
+      "column": 836,
+      "ms": 1699.96,
+      "share": 13.859
+    },
+    {
+      "function": "canonicalHash",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/hash.ts",
+      "line": 1,
+      "column": 261,
+      "ms": 1497.3,
+      "share": 12.207
+    },
+    {
+      "function": "localOptions",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 4743,
+      "ms": 1432.63,
+      "share": 11.679
+    },
+    {
+      "function": "localMenu",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 12836,
+      "ms": 1398.34,
+      "share": 11.4
+    },
+    {
+      "function": "readSituationLayer",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/situation-layer.ts",
+      "line": 1,
+      "column": 447,
+      "ms": 1226.48,
+      "share": 9.999
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 5504,
+      "ms": 1162.09,
+      "share": 9.474
+    },
+    {
+      "function": "localOptionsAt",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 6062,
+      "ms": 1158.99,
+      "share": 9.449
+    },
+    {
+      "function": "v2Map",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/cli/src/seats-world.ts",
+      "line": 1,
+      "column": 430,
+      "ms": 1145.22,
+      "share": 9.336
+    },
+    {
+      "function": "generateReports",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/generate.ts",
+      "line": 1,
+      "column": 4798,
+      "ms": 1065.13,
+      "share": 8.683
+    },
+    {
+      "function": "viewFor",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/view.ts",
+      "line": 1,
+      "column": 9026,
+      "ms": 1015.65,
+      "share": 8.28
+    },
+    {
+      "function": "checkGate",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 8111,
+      "ms": 934.8,
+      "share": 7.621
+    },
+    {
+      "function": "principalMenu",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 10980,
+      "ms": 811.0,
+      "share": 6.612
+    },
+    {
+      "function": "canonicalJson",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/canonical.ts",
+      "line": 1,
+      "column": 398,
+      "ms": 770.8,
+      "share": 6.284
+    },
+    {
+      "function": "(garbage collector)",
+      "file": "",
+      "line": 0,
+      "column": -1,
+      "ms": 764.4,
+      "share": 6.232
+    },
+    {
+      "function": "forceOptions",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/force-requests.ts",
+      "line": 1,
+      "column": 2458,
+      "ms": 744.01,
+      "share": 6.065
+    },
+    {
+      "function": "sha256OfText",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/sha256.ts",
+      "line": 1,
+      "column": 2981,
+      "ms": 742.97,
+      "share": 6.057
+    },
+    {
+      "function": "receivedPicture",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/view.ts",
+      "line": 1,
+      "column": 6232,
+      "ms": 646.07,
+      "share": 5.267
+    },
+    {
+      "function": "deliverDue",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/deliver.ts",
+      "line": 1,
+      "column": 1796,
+      "ms": 640.91,
+      "share": 5.225
+    },
+    {
+      "function": "sha256Hex",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/sha256.ts",
+      "line": 1,
+      "column": 1609,
+      "ms": 633.1,
+      "share": 5.161
+    },
+    {
+      "function": "write",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/serialize/canonical.ts",
+      "line": 1,
+      "column": 791,
+      "ms": 604.26,
+      "share": 4.926
+    },
+    {
+      "function": "proximityHit",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 6845,
+      "ms": 586.78,
+      "share": 4.784
+    },
+    {
+      "function": "inputFor",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/force-requests.ts",
+      "line": 1,
+      "column": 1044,
+      "ms": 562.57,
+      "share": 4.586
+    },
+    {
+      "function": "packSituations",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/cli/src/seats-world.ts",
+      "line": 2,
+      "column": 1276,
+      "ms": 555.36,
+      "share": 4.528
+    },
+    {
+      "function": "deepFreeze",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/freeze.ts",
+      "line": 1,
+      "column": 230,
+      "ms": 526.01,
+      "share": 4.288
+    },
+    {
+      "function": "sendReport",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/context.ts",
+      "line": 1,
+      "column": 3154,
+      "ms": 521.96,
+      "share": 4.255
+    },
+    {
+      "function": "tokenMatches",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/gate.ts",
+      "line": 1,
+      "column": 6393,
+      "ms": 505.81,
+      "share": 4.124
+    },
+    {
+      "function": "freezeDeep",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 30168,
+      "ms": 470.78,
+      "share": 3.838
+    },
+    {
+      "function": "readJson",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/generate.ts",
+      "line": 1,
+      "column": 2307,
+      "ms": 467.89,
+      "share": 3.814
+    },
+    {
+      "function": "deriveMap",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/derived.ts",
+      "line": 1,
+      "column": 1395,
+      "ms": 432.5,
+      "share": 3.526
+    },
+    {
+      "function": "operationsPhase",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/operations.ts",
+      "line": 1,
+      "column": 7147,
+      "ms": 431.17,
+      "share": 3.515
+    },
+    {
+      "function": "allCommandedBlocks",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 8016,
+      "ms": 418.9,
+      "share": 3.415
+    },
+    {
+      "function": "sideOfPerson",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 6716,
+      "ms": 418.83,
+      "share": 3.414
+    },
+    {
+      "function": "buildControlIndex",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 628,
+      "ms": 394.73,
+      "share": 3.218
+    },
+    {
+      "function": "indexSeatsWorld",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/world.ts",
+      "line": 2,
+      "column": 152,
+      "ms": 382.33,
+      "share": 3.117
+    },
+    {
+      "function": "establishmentProjection",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/people.ts",
+      "line": 1,
+      "column": 3154,
+      "ms": 381.77,
+      "share": 3.112
+    },
+    {
+      "function": "courierTable",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/world.ts",
+      "line": 2,
+      "column": 8349,
+      "ms": 356.87,
+      "share": 2.909
+    },
+    {
+      "function": "claimedControlView",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/claimed-control.ts",
+      "line": 1,
+      "column": 441,
+      "ms": 356.17,
+      "share": 2.904
+    },
+    {
+      "function": "plannerInputFor",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/planner/input.ts",
+      "line": 1,
+      "column": 4100,
+      "ms": 349.02,
+      "share": 2.845
+    },
+    {
+      "function": "deliverReports",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/knowledge.ts",
+      "line": 1,
+      "column": 11777,
+      "ms": 329.49,
+      "share": 2.686
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/zod/v4/core/parse.js",
+      "line": 41,
+      "column": 36,
+      "ms": 320.57,
+      "share": 2.613
+    },
+    {
+      "function": "safeParse",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/zod/v4/classic/schemas.js",
+      "line": 140,
+      "column": 13,
+      "ms": 320.57,
+      "share": 2.613
+    },
+    {
+      "function": "shapeCheck",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/pack-format/src/generate.ts",
+      "line": 1,
+      "column": 2899,
+      "ms": 320.57,
+      "share": 2.613
+    },
+    {
+      "function": "inst._zod.parse",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/zod/v4/core/schemas.js",
+      "line": 1199,
+      "column": 22,
+      "ms": 314.31,
+      "share": 2.562
+    },
+    {
+      "function": "senderFor",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/sender.ts",
+      "line": 1,
+      "column": 997,
+      "ms": 306.95,
+      "share": 2.502
+    },
+    {
+      "function": "commandedBlocks",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 7593,
+      "ms": 305.41,
+      "share": 2.49
+    },
+    {
+      "function": "(anonymous)",
+      "file": "",
+      "line": 3,
+      "column": 16,
+      "ms": 303.79,
+      "share": 2.477
+    },
+    {
+      "function": "mainBody",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/posts.ts",
+      "line": 1,
+      "column": 2199,
+      "ms": 299.94,
+      "share": 2.445
+    },
+    {
+      "function": "headquartersOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/posts.ts",
+      "line": 1,
+      "column": 2552,
+      "ms": 299.31,
+      "share": 2.44
+    },
+    {
+      "function": "seatIdentity",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/people.ts",
+      "line": 1,
+      "column": 2779,
+      "ms": 296.56,
+      "share": 2.418
+    },
+    {
+      "function": "deriveSupply",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/supply/supply.ts",
+      "line": 1,
+      "column": 5268,
+      "ms": 288.65,
+      "share": 2.353
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/tick.ts",
+      "line": 1,
+      "column": 5048,
+      "ms": 283.19,
+      "share": 2.309
+    },
+    {
+      "function": "morningGround",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 2110,
+      "ms": 267.82,
+      "share": 2.183
+    },
+    {
+      "function": "routeLatency",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/messages/latency.ts",
+      "line": 1,
+      "column": 851,
+      "ms": 263.94,
+      "share": 2.152
+    },
+    {
+      "function": "sidePosts",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/planner/input.ts",
+      "line": 1,
+      "column": 2678,
+      "ms": 263.24,
+      "share": 2.146
+    },
+    {
+      "function": "mapPhase",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/map.ts",
+      "line": 1,
+      "column": 938,
+      "ms": 261.66,
+      "share": 2.133
+    },
+    {
+      "function": "wrapped",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/zod/v4/core/memoizer.js",
+      "line": 231,
+      "column": 28,
+      "ms": 256.56,
+      "share": 2.092
+    },
+    {
+      "function": "pruneKnowledge",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/knowledge.ts",
+      "line": 1,
+      "column": 13868,
+      "ms": 246.5,
+      "share": 2.01
+    },
+    {
+      "function": "plannerViewFor",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/view/view.ts",
+      "line": 1,
+      "column": 8692,
+      "ms": 231.33,
+      "share": 1.886
+    },
+    {
+      "function": "heldPost",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 5388,
+      "ms": 231.26,
+      "share": 1.885
+    },
+    {
+      "function": "inst._zod.parse",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/node_modules/zod/v4/core/schemas.js",
+      "line": 856,
+      "column": 22,
+      "ms": 227.82,
+      "share": 1.857
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/planner/input.ts",
+      "line": 1,
+      "column": 2888,
+      "ms": 222.99,
+      "share": 1.818
+    },
+    {
+      "function": "politicsPhase",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/politics.ts",
+      "line": 1,
+      "column": 3576,
+      "ms": 220.92,
+      "share": 1.801
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/command.ts",
+      "line": 2,
+      "column": 7656,
+      "ms": 219.64,
+      "share": 1.791
+    },
+    {
+      "function": "set filename",
+      "file": "",
+      "line": 0,
+      "column": -1,
+      "ms": 202.23,
+      "share": 1.649
+    },
+    {
+      "function": "controlEvidence",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/knowledge/control-beliefs.ts",
+      "line": 1,
+      "column": 420,
+      "ms": 192.01,
+      "share": 1.565
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 13342,
+      "ms": 182.92,
+      "share": 1.491
+    },
+    {
+      "function": "plansPhase",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/plans.ts",
+      "line": 1,
+      "column": 13211,
+      "ms": 182.12,
+      "share": 1.485
+    },
+    {
+      "function": "commandStrength",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/posts.ts",
+      "line": 1,
+      "column": 1916,
+      "ms": 168.35,
+      "share": 1.372
+    },
+    {
+      "function": "holdingOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 2468,
+      "ms": 166.07,
+      "share": 1.354
+    },
+    {
+      "function": "whereIs",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/context.ts",
+      "line": 1,
+      "column": 534,
+      "ms": 162.73,
+      "share": 1.327
+    },
+    {
+      "function": "search",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/supply/supply.ts",
+      "line": 1,
+      "column": 4093,
+      "ms": 162.63,
+      "share": 1.326
+    },
+    {
+      "function": "whereIsPerson",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/posts.ts",
+      "line": 1,
+      "column": 3476,
+      "ms": 161.13,
+      "share": 1.314
+    },
+    {
+      "function": "planAuthorized",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 4107,
+      "ms": 160.75,
+      "share": 1.311
+    },
+    {
+      "function": "doctrineView",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 5418,
+      "ms": 155.35,
+      "share": 1.266
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/local-actions.ts",
+      "line": 1,
+      "column": 5410,
+      "ms": 154.6,
+      "share": 1.26
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/authority.ts",
+      "line": 1,
+      "column": 6421,
+      "ms": 149.3,
+      "share": 1.217
+    },
+    {
+      "function": "mayCommit",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/authority.ts",
+      "line": 1,
+      "column": 6259,
+      "ms": 149.3,
+      "share": 1.217
+    },
+    {
+      "function": "contactEdgesOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 1499,
+      "ms": 149.22,
+      "share": 1.216
+    },
+    {
+      "function": "passageOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/passage.ts",
+      "line": 1,
+      "column": 290,
+      "ms": 148.13,
+      "share": 1.208
+    },
+    {
+      "function": "reportDecisionPoints",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/deliver.ts",
+      "line": 1,
+      "column": 5224,
+      "ms": 147.29,
+      "share": 1.201
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 14522,
+      "ms": 147.1,
+      "share": 1.199
+    },
+    {
+      "function": "assignmentOptions",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/onward-assignments.ts",
+      "line": 1,
+      "column": 2181,
+      "ms": 140.01,
+      "share": 1.141
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/requests.ts",
+      "line": 1,
+      "column": 8504,
+      "ms": 136.73,
+      "share": 1.115
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/world.ts",
+      "line": 2,
+      "column": 5157,
+      "ms": 136.48,
+      "share": 1.113
+    },
+    {
+      "function": "authorityBlocks",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/command/authority.ts",
+      "line": 1,
+      "column": 981,
+      "ms": 136.27,
+      "share": 1.111
+    },
+    {
+      "function": "hop",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/context.ts",
+      "line": 1,
+      "column": 2568,
+      "ms": 134.54,
+      "share": 1.097
+    },
+    {
+      "function": "legOf",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/supply/supply.ts",
+      "line": 1,
+      "column": 2989,
+      "ms": 133.8,
+      "share": 1.091
+    },
+    {
+      "function": "deliverOne",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/deliver.ts",
+      "line": 1,
+      "column": 3257,
+      "ms": 132.08,
+      "share": 1.077
+    },
+    {
+      "function": "(anonymous)",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/seats/onward-assignments.ts",
+      "line": 1,
+      "column": 2545,
+      "ms": 130.15,
+      "share": 1.061
+    },
+    {
+      "function": "__name",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/control-index/control-index.ts",
+      "line": 1,
+      "column": 47,
+      "ms": 126.86,
+      "share": 1.034
+    },
+    {
+      "function": "runSituations",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/situations.ts",
+      "line": 1,
+      "column": 8779,
+      "ms": 126.2,
+      "share": 1.029
+    },
+    {
+      "function": "peopleWeek",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/people-week.ts",
+      "line": 1,
+      "column": 3348,
+      "ms": 125.76,
+      "share": 1.025
+    },
+    {
+      "function": "combatPhase",
+      "file": "file:///C:/Pyrrhic/sprint-allocate-july/packages/kernel/src/tick/forces.ts",
+      "line": 1,
+      "column": 6274,
+      "ms": 123.56,
+      "share": 1.007
+    }
+  ]
+}

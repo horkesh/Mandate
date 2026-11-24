@@ -1,0 +1,34 @@
+"""Read-only scope analysis of retained V8 samples; this is not a new timing run."""
+import json
+from pathlib import Path
+
+result=[]
+for stage in ['step3','step4','step5','step6','step7']:
+    path=Path(f'runs/s153/{stage}-profile/history-cpu.json')
+    p=json.loads(path.read_text(encoding='utf-8'))
+    nodes={r['id']:r for r in p['nodes']}
+    parents={c:r['id'] for r in p['nodes'] for c in r.get('children',[])}
+    cost={}; total=0; excluded_hash=0; excluded_callback=0
+    for ident,delta in zip(p['samples'],p['timeDeltas']):
+        chain=[]
+        while ident is not None:
+            chain.append(ident);ident=parents.get(ident)
+        frames=[nodes[n]['callFrame'] for n in chain]
+        positions=[i for i,f in enumerate(frames) if f['functionName']=='playDays']
+        if not positions:continue
+        position=positions[0]
+        if position and frames[position-1]['functionName']=='canonicalHash':
+            excluded_hash+=delta;continue
+        if any(f['functionName'] in ['beforeDay','onDay'] and 'phase0-run' in f['url'] for f in frames[:position]):
+            excluded_callback+=delta;continue
+        total+=delta
+        keys={(f['functionName'] or '(anonymous)',f['url']) for f in frames}
+        for k in keys:cost[k]=cost.get(k,0)+delta
+    rows=[dict(function=k[0],file=k[1],ms=round(v/1000,3),share=round(v/total*100,3)) for k,v in sorted(cost.items(),key=lambda r:-r[1])]
+    result.append(dict(stage=stage,source=str(path),includedSampleMs=total/1000,directCheckpointHashMs=excluded_hash/1000,runnerCallbackMs=excluded_callback/1000,inclusive=rows))
+out={'scope':'playDays ancestry excluding direct checkpoint canonicalHash and runner callbacks; approximate budget-path context, not elapsed timing; unparented GC samples unresolved; inclusive shares overlap','profiles':result}
+Path('docs/audit/s153-evidence/round2').mkdir(exist_ok=True)
+Path('docs/audit/s153-evidence/round2/budget-path-shares.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n')
+for stage in [result[0],result[-1]]:
+    print(stage['stage'],'budget-path context, excluding startup/direct checkpoint hashes')
+    for row in [r for r in stage['inclusive'] if '/kernel/' in r['file']][:17]:print(row['function'],row['share'])

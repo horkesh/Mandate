@@ -195,7 +195,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (options !== null && (options.length > 1 || requiresEpisodeChoice(state, post))) menus.set(post, options);
   }
 
-  const localGround = localPlanningGround(world,start,day);
+  const localGround = localPlanningGround(world,start,day,ctx.senderViews?.planningGround);
   const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day,ctx.senderViews,localGround)]));
   const localChosen = new Set<string>();
 

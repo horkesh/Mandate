@@ -1,4 +1,4 @@
-For the lead: 2 items.
+For the lead: 3 items.
 
 # S153: merge July and profile the allocation tick
 
@@ -133,9 +133,101 @@ lane; unavailable5.6 workers were not silently replaced. No new sweep, draft
 campaign, browser, desktop control, push, S152 merge or write outside this
 worktree (apart from the one authorised shared CODEX status) is claimed.
 
+## Round two: hosted 52.9 / 51.0 ms on 541074d2
+
+The lead accepted the first merge and three cuts, then reported hosted Linux
+war/history medians 52.9/51.0 ms (run45412831675), still above40 ms. Round two
+starts exactly at541074d2. Its retained416 hashes and measured runtime inputs
+were verified before editing. No S155/S156 integration is included.
+
+Four further pure cuts from the named families are grouped in one commit:
+
+| Stage | Measured target and change | Separate proof |
+| --- | --- | --- |
+| step4 | Shared planner control/supply: keep the existing complete map signature and World guard in a caller-owned cache across mornings; cache received control indexes by exact received-picture identity and World. Civil rail movement access is rebuilt separately and never mistaken for supply ownership. | step4-proof.json vs step3 |
+| step5 | Avoid unused planner-view inputs: a thin planner picture shares the exact unchanged received-picture body with the full view, leaving roster, own-position and desk projections to their actual consumers. Expiry, perception, hidden/other-seat reports and unknowns remain exact. | step5-proof.json vs step4 |
+| step6 | Make unused planning inputs lazy: local supply, received control indexes and the context's in-supply set compute on demand and memoize. Holding-score paths do not build unused supply. Route consumers get the same complete values; eager callers keep validation, and missing supply still throws rather than becoming zero. | step6-proof.json vs step5 |
+| step7 | Received advice/token witnesses: one pass through the existing received chronology indexes consult stances by author and assessments by person. Future/wrong-kind/unstamped papers and self-assessments retain their existing exclusions; day/hour/id order remains. No persistent index enters State. | step7-proof.json vs step6 |
+
+Each proof covers148 history,148 war and120 testbed days: **1664 independent
+daily comparisons**, all exact for State hashes, every liveness counter,
+daily activity, checkpoint scores, final/initial/World hashes, decisions and
+log counts, with zero rejections. Intermediate runtime source identities and
+replayable patches relative to541074d2 are retained in the round2 evidence.
+Each timed/profiled run also matches its checked reference outputs.
+
+Candidate order followed measured costs as they remained: deriveMap7.353%
+at entry, viewFor12.055% after ground sharing, then remaining unused supply,
+then establishmentProjection4.656%. The stored-paper matching path was below
+0.12% and is not indexed just to tick a box. `tokenMatches` belongs to pack
+validation/startup, not the tick. The useful received-token index is the live
+advice-witness loop inside establishmentProjection. Its failing work-count
+control observed11->13 reads of an unchanged report when one person was
+added; after indexing, reads are independent of roster size.
+
+Cheap controls ran before each expensive proof. step4 first exposed duplicate
+supply/index builds; a test-only branded-seat type correction preceded its
+proof. step5 first exposed unused roster construction, and the moved received
+picture body is byte-identical to541074d2 (picture-extraction.json). step6
+first exposed an unused supply build; the earlier index work-count control was
+updated to actually read its now-lazy index before checking reuse. step7 first
+exposed repeated per-person witness reads. All corrected controls pass,
+including ownership and the unchanged eight protected-reader identities.
+Proof costs were91.10,136.30,73.51,59.34 seconds; no failed hash proof was retried.
+
+Final adjacent **Windows, advisory only**, baseline541074d2 then candidate,
+both reference runs per process, no test workers of our own alongside:
+
+| Run | Baseline median / p95 | Candidate median / p95 |
+| --- | ---: | ---: |
+| History | 54.70 / 86.41 ms | 45.65 / 74.09 ms |
+| War by decision | 50.57 / 81.92 ms | 41.34 / 68.25 ms |
+
+S156 and another project's four-shard AWWV test run were observed during the
+work; process inventories bracket measurements. S155's completion is in the
+shared coordination file. No foreign process was stopped. Per-stage times
+encountered changing contention and are not additive causal savings. The one
+adjacent A/B answers combined direction; it does not establish hosted Linux
+acceptance or predict a platform multiplier.
+
+Final whole-run inclusive shares (overlap): forceOptions6.065%, inputFor4.586%,
+viewFor8.280%, generateReports8.683%, receivedPicture5.267%, deliverDue5.225%.
+At the accepted entry, forceOptions/inputFor were13.352/12.626%.
+`round2/budget-path-shares.json` also scopes existing samples to playDays,
+excluding direct checkpoint hashing and runner callbacks. It is contextual,
+not another elapsed run; unparented GC is unresolved. In that approximation,
+remaining generateReports is13.490%, viewFor12.864%, deliverDue8.117% and
+sendReport6.611%. Startup validation and direct checkpoint hashes are not
+proposed as tick-budget cuts.
+
+**Return to the lead before widening scope.** The named families have these
+bounded implementations, and the lower-share stored-paper path is documented.
+If hosted Linux still exceeds40/160 ms, proposed next questions are: index
+command-subtree strength/holdings once per immutable report phase (under
+`generateReports`, preserving attribution, unknown lots and report cadence);
+avoid constructing unused person views when seatIdentity needs only its own
+post/side, while keeping every received institutional correction; and examine
+shared message routing/holder lookups under complete assignment, location,
+capital, control, network and date dependencies. These are proposals, not
+implemented changes or permission to suppress work or alter behaviour.
+Linux budget and headroom remain **unproved** pending the lead's push and CI.
+
+Final runtime diagnostics and inventories preceded this narrative. All3974
+starting tracked paths remain,1999 protected pack/art/evidence/gate/scanner/
+dependency inputs are exact ignoring checkout line endings; all183 previously
+inventoried raw files verify untouched. All three .fails tests/helper remain
+exact. Round2's raw inventory covers397 pre-closeout files; final hook and
+commit have their own subsequent receipt in runs/s153/round2/final-receipt.json.
+The ordinary commit is made only when its hook succeeds. No scanner, band,
+floor, value, workload, save shape or budget changes; no push, browser/desktop,
+foreign-worktree write, or foreign-process stop. Formal review remains the
+lead-owned lane. The sole outside-worktree write is the authorised final
+UTF-8 Python coordination append, after a fresh read.
+
 ## For the lead
 
-1. Review the inherited S148 hash changes and the three separate optimisation proofs; take the final hook result from its raw receipt.
-2. The lead pushes and reads isolated Linux CI for both runs. The budget and the three July marks remain open merge gates. If Linux still fails, consider the retained hash-neutral candidates before any behaviour change.
+1. Review the four new416-day proofs and final hook receipt, alongside the already accepted merge and first three cuts.
+2. Push and read isolated hosted Linux on both references against unchanged median<40ms/p95<160ms, with headroom. No local number clears that gate or the three July marks.
+3. If still over budget, choose the next bounded question from the retained profile and proposals before any behaviour change or wider campaign.
 
 Findings outside my scope

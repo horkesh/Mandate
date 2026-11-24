@@ -271,3 +271,6 @@ export interface SeatView {
   readonly posts: readonly KnownPostView[];
   readonly people: readonly KnownPersonView[];
 }
+
+/** Received fields the planner consumes, identical to their fields in the full seat view. */
+export type PlannerView = Pick<SeatView, 'reports' | 'enemyBeliefs' | 'worksBeliefs' | 'obstructionBeliefs' | 'controlBeliefs'>;

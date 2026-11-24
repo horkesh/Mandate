@@ -1,0 +1,70 @@
+[
+  {
+    "stage": "step4",
+    "baseline": "step3",
+    "days": 416,
+    "everyRequiredOutputExact": true,
+    "profileMatchesCheckedRun": true
+  },
+  {
+    "stage": "step5",
+    "baseline": "step4",
+    "days": 416,
+    "everyRequiredOutputExact": true,
+    "profileMatchesCheckedRun": true
+  },
+  {
+    "stage": "step6",
+    "baseline": "step5",
+    "days": 416,
+    "everyRequiredOutputExact": true,
+    "profileMatchesCheckedRun": true
+  },
+  {
+    "stage": "step7",
+    "baseline": "step6",
+    "days": 416,
+    "everyRequiredOutputExact": true,
+    "profileMatchesCheckedRun": true
+  },
+  {
+    "reference": "history",
+    "adjacentAB": "541074d2 then candidate",
+    "before": {
+      "unit": "ms",
+      "days": 148,
+      "median": 54.70390000000043,
+      "p95": 86.40830000000005,
+      "max": 119.01649999999972
+    },
+    "after": {
+      "unit": "ms",
+      "days": 148,
+      "median": 45.65010000000075,
+      "p95": 74.09230000000025,
+      "max": 87.1244999999999
+    },
+    "nonClockOutputsEqual": true,
+    "advisoryOnly": true
+  },
+  {
+    "reference": "war",
+    "adjacentAB": "541074d2 then candidate",
+    "before": {
+      "unit": "ms",
+      "days": 148,
+      "median": 50.57350000000224,
+      "p95": 81.92099999999846,
+      "max": 130.06749999999738
+    },
+    "after": {
+      "unit": "ms",
+      "days": 148,
+      "median": 41.34400000000096,
+      "p95": 68.24889999999868,
+      "max": 109.28219999999965
+    },
+    "nonClockOutputsEqual": true,
+    "advisoryOnly": true
+  }
+]

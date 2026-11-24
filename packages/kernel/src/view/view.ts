@@ -37,10 +37,12 @@ import { politicsProjection } from './politics.ts';
 import {attentionBudget, audienceProjection, congressProjection} from './desk.ts';
 import type { Candidate } from '../seats/api.ts';
 import type { LocalOption } from '../seats/local-actions.ts';
+import { createPlanningGroundCache, type PlanningGroundCache } from '../seats/planning-ground.ts';
 import { isProposalBasis } from '../situations/types.ts';
-import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
+import type { BeliefView, ClaimView, GoalView, ObstructionView, PlannerView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
+  readonly planningGround: PlanningGroundCache;
   /** Exact immutable morning inputs; weak keys do not retain prior States. Never saved. */
   readonly localOptions: WeakMap<State, { readonly world: SeatsWorld; readonly day: number; readonly people: Map<PersonId, readonly LocalOption[]> }>;
   readonly desk: Map<SeatId, {world:SeatsWorld; day:number; budget:State['seatAttention'][SeatId]|undefined; chambers:State['chamberStates']; messages:State['messagesInTransit']; reports:readonly ReportView[]; situations:readonly SituationView[]; projection:Pick<SeatView,'attentionBudget'|'congress'|'audiences'|'politics'|'promises'>}>;
@@ -64,7 +66,7 @@ export interface ViewCache {
 }
 
 export function createViewCache(): ViewCache {
-  return { localOptions: new WeakMap(), desk: new Map(), requestFreeze: createFreezeLedger(), candidates: new Map(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
+  return { planningGround: createPlanningGroundCache(), localOptions: new WeakMap(), desk: new Map(), requestFreeze: createFreezeLedger(), candidates: new Map(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {
@@ -169,8 +171,8 @@ function same<T>(a: readonly T[], b: readonly T[]): boolean {
   return a.length === b.length && a.every((x, i) => x === b[i]);
 }
 
-/** What `seat` may see the morning after `state.stateDay`. Pass a cache to get stable references for unchanged data. */
-export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
+/** The shared received picture; roster, own position and desk projections are derived only by the full view. */
+function receivedPicture(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache) {
   const person = world.person(seatOf(state, seat).seatPerson);
   const knowledge = knowledgeOf(state, seat, cache.knowledge, cache.openings);
 
@@ -227,6 +229,19 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     controlOnMap.set(knowledge, control);
   }
 
+  return { person, reports, beliefs, ground, control };
+}
+
+/** Only the same received fields consumed by plannerInputFor; no roster or desk calculation. */
+export function plannerViewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): PlannerView {
+  const { reports, beliefs, ground, control } = receivedPicture(world,state,seat,cache);
+  return freeze({ reports, enemyBeliefs: beliefs.beliefs, worksBeliefs: ground.works,
+    obstructionBeliefs: ground.obstructions, controlBeliefs: control.controlBeliefs });
+}
+
+/** What `seat` may see the morning after `state.stateDay`. Pass a cache to get stable references for unchanged data. */
+export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
+  const { person, reports, beliefs, ground, control } = receivedPicture(world,state,seat,cache);
   const { post, faction } = seatIdentity(world, person.id, reports, state.stateDay, state.calendarStart);
   let goal: GoalView | null = null;
   const record = post === null ? undefined : state.planRecords[post];

@@ -3,6 +3,8 @@ import * as plannerInputs from '../src/planner/input.ts';
 import { forceOptions } from '../src/seats/force-requests.ts';
 import { createViewCache, viewFor } from '../src/view/view.ts';
 import * as beliefs from '../src/knowledge/beliefs.ts';
+import * as peopleViews from '../src/view/people.ts';
+import * as supplyViews from '../src/supply/supply.ts';
 import { fixtureMap, fixtureStart, P, POST, R } from './support/seats-fixture.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
@@ -100,6 +102,24 @@ function ask(g:ReturnType<typeof requesting>,state=g.state) {
  const delivered=deliverReport(next.state,seatIdFor(P('a_sec')),{id:message.id,knownBody:message.msgReport!,knownReceivedDay:2,knownRoute:'courier',knownVia:[]},{truthTerms:[],truthTrimmed:[]});
  return {state:delivered,message,option};
 }
+
+it('S153 round2: a force-need calculation does not build an unused roster',()=>{
+ const g=requesting(), before=canonicalHash(g.state), spy=vi.spyOn(peopleViews,'peopleProjection');
+ try {
+  expect(forceOptions(g.world,g.state,P('a_gen'),POST('a_army'),1).some(o=>o.kind==='force-request')).toBe(true);
+  expect(spy).not.toHaveBeenCalled();
+  expect(canonicalHash(g.state)).toBe(before);
+ } finally {spy.mockRestore();}
+});
+
+it('S153 round2: holding shortfall evaluation leaves unused supply unbuilt',()=>{
+ const g=requesting(), before=canonicalHash(g.state), spy=vi.spyOn(supplyViews,'deriveSupply');
+ try {
+  expect(forceOptions(g.world,g.state,P('a_gen'),POST('a_army'),1).some(o=>o.kind==='force-request')).toBe(true);
+  expect(spy).not.toHaveBeenCalled();
+  expect(canonicalHash(g.state)).toBe(before);
+ } finally {spy.mockRestore();}
+});
 
 it('S153: a matching outstanding request stops before rebuilding its planner input',()=>{
  const g=requesting(), pending=ask(g).state, before=canonicalHash(pending);

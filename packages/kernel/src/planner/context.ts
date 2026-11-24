@@ -90,7 +90,8 @@ export function makeCtx(input: PlannerInput): Ctx {
     if (unknown) threat.set(region,null);
     else { men=men!+Math.trunc(near*input.rules.hopShare/1000);threat.set(region,men); }
   }
-  return { input, threat, inSupply: new Set(input.supply.paths.keys()), searches: 0 };
+  let inSupply: ReadonlySet<RegionId> | undefined;
+  return { input, threat, get inSupply() { return inSupply ??= new Set(input.supply.paths.keys()); }, searches: 0 };
 }
 
 /** The holder of the region, by his side's control index: whether the enemy holds it (lane 0.9 finding 9). */

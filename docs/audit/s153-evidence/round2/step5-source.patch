@@ -1,0 +1,208 @@
+--- a/packages/kernel/src/planner/input.ts
++++ b/packages/kernel/src/planner/input.ts
+@@ -29,7 +29,7 @@
+ import { regardOf, trueOf } from '../people/people.ts';
+ import { traitsOf } from '../people/traits.ts';
+ import { templateFor } from '../knowledge/templates.ts';
+-import type { SeatView } from '../view/types.ts';
++import type { PlannerView, SeatView } from '../view/types.ts';
+ import type { PlannerInput } from './context.ts';
+ import { profileOf } from './profile.ts';
+ import { buildControlIndex } from '../control-index/control-index.ts';
+@@ -38,8 +38,9 @@
+ /** Disposable projections for exact immutable inputs; never State or saved data. */
+ export interface PlannerInputCache {
+   readonly states: WeakMap<State, { readonly world: SeatsWorld; readonly forces: Map<FactionId, readonly PlannerForce[]>; readonly posts: Map<FactionId, readonly Omit<PlannerPost, 'holderWillingness'>[]> }>;
+-}
+-export function createPlannerInputCache(): PlannerInputCache { return { states: new WeakMap() }; }
++  readonly control: WeakMap<SeatView['controlBeliefs'], { readonly world: SeatsWorld; readonly index: ReturnType<typeof buildControlIndex> }>;
++}
++export function createPlannerInputCache(): PlannerInputCache { return { states: new WeakMap(), control: new WeakMap() }; }
+ function projections(world: SeatsWorld, state: State, cache?: PlannerInputCache) {
+   if (cache === undefined) return undefined;
+   let row = cache.states.get(state);
+@@ -129,7 +130,7 @@
+ }
+ 
+ /** What the commander's view says of the enemy and the ground, as the planner reads it. */
+-export function viewGround(view: SeatView): { readonly beliefs: Map<RegionId, number | null>; readonly beliefDetails: Map<RegionId, StrengthEstimate>; readonly works: Map<RegionId, number>; readonly obstructions: Map<EdgeId, RegionId | null> } {
++export function viewGround(view: PlannerView): { readonly beliefs: Map<RegionId, number | null>; readonly beliefDetails: Map<RegionId, StrengthEstimate>; readonly works: Map<RegionId, number>; readonly obstructions: Map<EdgeId, RegionId | null> } {
+   const beliefs = new Map<RegionId, number | null>();
+   const beliefDetails = new Map<RegionId, StrengthEstimate>();
+   for (const r of (Object.keys(view.enemyBeliefs) as RegionId[]).sort(strictCompare)) beliefs.set(r, view.enemyBeliefs[r]!.value);
+@@ -145,7 +146,7 @@
+ }
+ 
+ /** The input for drafting `goal` for `post`, whose holder's view is `view`, on the morning's derived map. */
+-export function plannerInputFor(world: SeatsWorld, state: State, derived: DerivedMap, network: NetworkConditions, month: number, view: SeatView, post: PostId, goal: PlanGoal, day: number, cache?: PlannerInputCache): PlannerInput {
++export function plannerInputFor(world: SeatsWorld, state: State, derived: DerivedMap, network: NetworkConditions, month: number, view: PlannerView, post: PostId, goal: PlanGoal, day: number, cache?: PlannerInputCache): PlannerInput {
+   const faction = postFaction(world, state, post);
+   if (faction === null) throw new RangeError(`post ${post} has no side to plan for`);
+   const supply = derived.supply.factions.get(faction);
+@@ -155,8 +156,13 @@
+   const person = traitsOf(world, state, holder);
+   const people = world.rules.people;
+   const { beliefs, beliefDetails, works, obstructions } = viewGround(view);
++  let control = cache?.control.get(view.controlBeliefs);
++  if (control?.world !== world) {
++    control = { world, index: buildControlIndex(world.map, Object.fromEntries(Object.entries(view.controlBeliefs).map(([region, belief]) => [region, belief.shares]))) };
++    cache?.control.set(view.controlBeliefs,control);
++  }
+   return {
+-    ground: { map: world.map, index: buildControlIndex(world.map, Object.fromEntries(Object.entries(view.controlBeliefs).map(([region, belief]) => [region, belief.shares]))), network: plannerNetwork(network), month },
++    ground: { map: world.map, index: control.index, network: plannerNetwork(network), month },
+     supply,
+     faction,
+     beliefs,
+--- a/packages/kernel/src/seats/force-requests.ts
++++ b/packages/kernel/src/seats/force-requests.ts
+@@ -18,7 +18,7 @@
+ import { callEstablishment } from '../recruitment/rules.ts';
+ import type { State } from '../root-state.ts';
+ import { canonicalHash } from '../serialize/hash.ts';
+-import { viewFor, type ViewCache } from '../view/view.ts';
++import { plannerViewFor, type ViewCache } from '../view/view.ts';
+ import type { AllocationInstrument } from '../world/allocation.ts';
+ import { localPlanningGround, type LocalPlanningGround } from './planning-ground.ts';
+ import { headquartersOf } from './posts.ts';
+@@ -30,7 +30,7 @@
+  {readonly id:string;readonly kind:'force-answer';readonly authority:null;readonly request:MessageId;readonly need:ForceNeed;readonly post:PostId;readonly issuer:PersonId;
+   readonly modeAuthority?:ForceRequestModeAuthority};
+ function inputFor(world:SeatsWorld,state:State,person:PersonId,post:PostId,goal:PlanGoal,day:number,ground:LocalPlanningGround,cache?:ViewCache) {
+- const view=viewFor(world,state,seatIdFor(person),cache);
++ const view=plannerViewFor(world,state,seatIdFor(person),cache);
+  const {derived,network,month,plannerCache}=ground();
+  return plannerInputFor(world,state,derived,network,month,view,post,goal,day,plannerCache);
+ }
+--- a/packages/kernel/src/seats/local-actions.ts
++++ b/packages/kernel/src/seats/local-actions.ts
+@@ -99,7 +99,7 @@
+   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'review'; readonly received: KnownReport } |
+   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'goal'; readonly target: PostId; readonly goal: PlanGoal; readonly candidate: PlanCandidate };
+ 
+-export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, cache: ViewCache = createViewCache(), ground: LocalPlanningGround = localPlanningGround(world,state,day)): readonly LocalOption[] {
++export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, cache: ViewCache = createViewCache(), ground: LocalPlanningGround = localPlanningGround(world,state,day,cache.planningGround)): readonly LocalOption[] {
+   let morning = cache.localOptions.get(state);
+   if (morning?.world !== world || morning.day !== day) {
+     morning = { world, day, people: new Map() };
+--- a/packages/kernel/src/seats/planning-ground.ts
++++ b/packages/kernel/src/seats/planning-ground.ts
+@@ -1,4 +1,4 @@
+-import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
++import { createDerivedMapCache, deriveMap, type DerivedMap, type DerivedMapCache } from '../control-index/derived.ts';
+ import type { State } from '../root-state.ts';
+ import type { NetworkConditions } from '../supply/supply.ts';
+ import { passageOf } from '../tick/passage.ts';
+@@ -8,14 +8,23 @@
+ 
+ export type LocalPlanningGround = () => { readonly month: number; readonly network: NetworkConditions; readonly derived: DerivedMap; readonly plannerCache?: PlannerInputCache };
+ 
++/** Caller lifetime only. The existing map signature covers control bands/holder, month and every supply-network value. */
++export interface PlanningGroundCache {
++  readonly derived: DerivedMapCache;
++  readonly planner: PlannerInputCache;
++}
++export function createPlanningGroundCache(): PlanningGroundCache {
++  return { derived: createDerivedMapCache(), planner: createPlannerInputCache() };
++}
++
+ /** Share the ground for one immutable morning across its local menus. Each seat still plans from its own reports. */
+-export function localPlanningGround(world: SeatsWorld, state: State, day: number): LocalPlanningGround {
++export function localPlanningGround(world: SeatsWorld, state: State, day: number, cache?: PlanningGroundCache): LocalPlanningGround {
+   let ground: ReturnType<LocalPlanningGround> | undefined;
+   return () => {
+     if (ground === undefined) {
+       const month = dateOfDay(world.start.startDate, day).month;
+       const network = passageOf(world.map, state);
+-      ground = { month, network, derived: deriveMap(world.map, { control: state.regionControl, month, network }), plannerCache: createPlannerInputCache() };
++      ground = { month, network, derived: deriveMap(world.map, { control: state.regionControl, month, network }, cache?.derived), plannerCache: cache?.planner ?? createPlannerInputCache() };
+     }
+     return ground;
+   };
+--- a/packages/kernel/src/seats/requests.ts
++++ b/packages/kernel/src/seats/requests.ts
+@@ -587,7 +587,7 @@
+ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCache = createViewCache()): SeatRequest[] {
+   const day = state.stateDay + 1;
+   const ground = morningGround(world, state, day);
+-  const localGround = localPlanningGround(world,state,day);
++  const localGround = localPlanningGround(world,state,day,cache.planningGround);
+   const out: SeatRequest[] = [];
+   for (const faction of world.factionIds) {
+     const seat = seatIdFor(world.faction(faction).principal);
+--- a/packages/kernel/src/tick/tick.ts
++++ b/packages/kernel/src/tick/tick.ts
+@@ -195,7 +195,7 @@
+     if (options !== null && (options.length > 1 || requiresEpisodeChoice(state, post))) menus.set(post, options);
+   }
+ 
+-  const localGround = localPlanningGround(world,start,day);
++  const localGround = localPlanningGround(world,start,day,ctx.senderViews?.planningGround);
+   const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day,ctx.senderViews,localGround)]));
+   const localChosen = new Set<string>();
+ 
+--- a/packages/kernel/src/view/types.ts
++++ b/packages/kernel/src/view/types.ts
+@@ -271,3 +271,6 @@
+   readonly posts: readonly KnownPostView[];
+   readonly people: readonly KnownPersonView[];
+ }
++
++/** Received fields the planner consumes, identical to their fields in the full seat view. */
++export type PlannerView = Pick<SeatView, 'reports' | 'enemyBeliefs' | 'worksBeliefs' | 'obstructionBeliefs' | 'controlBeliefs'>;
+--- a/packages/kernel/src/view/view.ts
++++ b/packages/kernel/src/view/view.ts
+@@ -37,10 +37,12 @@
+ import {attentionBudget, audienceProjection, congressProjection} from './desk.ts';
+ import type { Candidate } from '../seats/api.ts';
+ import type { LocalOption } from '../seats/local-actions.ts';
++import { createPlanningGroundCache, type PlanningGroundCache } from '../seats/planning-ground.ts';
+ import { isProposalBasis } from '../situations/types.ts';
+-import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
++import type { BeliefView, ClaimView, GoalView, ObstructionView, PlannerView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
+ 
+ export interface ViewCache {
++  readonly planningGround: PlanningGroundCache;
+   /** Exact immutable morning inputs; weak keys do not retain prior States. Never saved. */
+   readonly localOptions: WeakMap<State, { readonly world: SeatsWorld; readonly day: number; readonly people: Map<PersonId, readonly LocalOption[]> }>;
+   readonly desk: Map<SeatId, {world:SeatsWorld; day:number; budget:State['seatAttention'][SeatId]|undefined; chambers:State['chamberStates']; messages:State['messagesInTransit']; reports:readonly ReportView[]; situations:readonly SituationView[]; projection:Pick<SeatView,'attentionBudget'|'congress'|'audiences'|'politics'|'promises'>}>;
+@@ -64,7 +66,7 @@
+ }
+ 
+ export function createViewCache(): ViewCache {
+-  return { localOptions: new WeakMap(), desk: new Map(), requestFreeze: createFreezeLedger(), candidates: new Map(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
++  return { planningGround: createPlanningGroundCache(), localOptions: new WeakMap(), desk: new Map(), requestFreeze: createFreezeLedger(), candidates: new Map(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
+ }
+ 
+ function freeze<T extends object>(o: T): T {
+@@ -169,8 +171,8 @@
+   return a.length === b.length && a.every((x, i) => x === b[i]);
+ }
+ 
+-/** What `seat` may see the morning after `state.stateDay`. Pass a cache to get stable references for unchanged data. */
+-export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
++/** The shared received picture; roster, own position and desk projections are derived only by the full view. */
++function receivedPicture(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache) {
+   const person = world.person(seatOf(state, seat).seatPerson);
+   const knowledge = knowledgeOf(state, seat, cache.knowledge, cache.openings);
+ 
+@@ -227,6 +229,19 @@
+     controlOnMap.set(knowledge, control);
+   }
+ 
++  return { person, reports, beliefs, ground, control };
++}
++
++/** Only the same received fields consumed by plannerInputFor; no roster or desk calculation. */
++export function plannerViewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): PlannerView {
++  const { reports, beliefs, ground, control } = receivedPicture(world,state,seat,cache);
++  return freeze({ reports, enemyBeliefs: beliefs.beliefs, worksBeliefs: ground.works,
++    obstructionBeliefs: ground.obstructions, controlBeliefs: control.controlBeliefs });
++}
++
++/** What `seat` may see the morning after `state.stateDay`. Pass a cache to get stable references for unchanged data. */
++export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
++  const { person, reports, beliefs, ground, control } = receivedPicture(world,state,seat,cache);
+   const { post, faction } = seatIdentity(world, person.id, reports, state.stateDay, state.calendarStart);
+   let goal: GoalView | null = null;
+   const record = post === null ? undefined : state.planRecords[post];
