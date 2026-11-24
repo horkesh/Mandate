@@ -1,0 +1,8 @@
+{
+  "runtimeJavaScriptIdentical": true,
+  "sha256": "508124c1b83d92ff286523884a54447b921ab4cf4df876ab560d014000747ba3",
+  "reused": "all step3 paired timing and 416-hash/counter/score captures; correction erases entirely",
+  "failedGate": "banned-apis scanner classified an inline type import as dynamic import",
+  "otherFailedTests": 0,
+  "priorPassedTests": 2451
+}

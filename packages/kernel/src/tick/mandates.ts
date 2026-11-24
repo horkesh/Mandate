@@ -109,7 +109,7 @@ export function validateLocalOrder(ctx: TickContext, state: State, order: OrderB
 }
 export function executeLocal(ctx: TickContext, state: State, person: PersonId, option: LocalOption): { state: State; reason: RejectionReason | null } {
   // Rebuild from execution state, not a caller-supplied candidate or the frozen menu.
-  const fresh = localOptions(ctx.world,state,person,ctx.day).find(o => o.id === option.id);
+  const fresh = localOptions(ctx.world,state,person,ctx.day,ctx.senderViews).find(o => o.id === option.id);
   if (fresh === undefined) return { state, reason: 'bad_selection' };
   if (fresh.kind === 'grant') return { state, reason: issueMandate(ctx,state,seatIdFor(person),{ cmd: 'mandate', paper: fresh.paper.id, route: 'courier' }) };
   if (fresh.kind === 'assignment') {

@@ -15,7 +15,7 @@ import type { State } from '../root-state.ts';
 import { canonicalHash } from '../serialize/hash.ts';
 import { passageOf } from '../tick/passage.ts';
 import { optionView } from '../tick/plans.ts';
-import { viewFor } from '../view/view.ts';
+import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
 import { dateOfDay, daysFromCivil, parseIsoDate } from '../world/calendar.ts';
 import { letterKey } from '../world/letters.ts';
 import type { MandateGrant, MandatePaper } from '../world/mandates.ts';
@@ -35,7 +35,7 @@ import { assignmentOptions } from './onward-assignments.ts';
 export function mandateLetter(paper: MandatePaper) {
   return { namespace: `authority.${paper.grant.mandateIssuer}`, key: paper.grant.mandateKey, revision: paper.grant.mandateRevision };
 }
-export function availableMandatePapers(world: SeatsWorld, state: State, person: PersonId, day: number): MandatePaper[] {
+export function availableMandatePapers(world: SeatsWorld, state: State, person: PersonId, day: number, cache?: ViewCache): MandatePaper[] {
   const declared = (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person);
   if (declared.length === 0) return [];
   const knowledge = knowledgeOf(state,seatIdFor(person));
@@ -46,7 +46,7 @@ export function availableMandatePapers(world: SeatsWorld, state: State, person: 
     !knowledge.knownDoctrineDispatches?.some(d => letterKey(d.dispatchLetter) === letterKey(mandateLetter(p))) &&
     hasRequiredPapers(p.requiresPapers,knowledge,state.stateDay,world.rules.templates));
   if (pending.length === 0) return [];
-  const view = viewFor(world,state,seatIdFor(person));
+  const view = viewFor(world,state,seatIdFor(person),cache);
   const addresses = world.start.factions.some(f => f.principal === person) ? view.posts :
     commandProjection(world,person,view.faction,view.reports,state.stateDay,state.calendarStart,declared.map(p => p.grant.mandatePost)).posts;
   return pending.filter(p =>
@@ -94,24 +94,33 @@ export type LocalOption =
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'review'; readonly received: KnownReport } |
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'goal'; readonly target: PostId; readonly goal: PlanGoal; readonly candidate: PlanCandidate };
 
-export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number): LocalOption[] {
+export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, cache: ViewCache = createViewCache()): readonly LocalOption[] {
   if (world.start.factions.some(f => f.principal === person)) return [];
+  let morning = cache.localOptions.get(state);
+  if (morning?.world !== world || morning.day !== day) {
+    morning = { world, day, people: new Map() };
+    cache.localOptions.set(state, morning);
+  }
+  const previous = morning.people.get(person);
+  if (previous !== undefined) return previous;
   const posts=Object.keys(state.postStates).filter(id=>state.postStates[id as PostId]!.postHolder===person).sort(strictCompare) as PostId[];
-  const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post));
+  const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post,cache));
   const rank={assignment:0,grant:0,review:1,letter:2,goal:3};
-  return [...new Map(options.map(o=>[o.id,o])).values()].sort((a,b)=>rank[a.kind]-rank[b.kind] || (a.kind==='goal' && b.kind==='goal'?b.candidate.candScore-a.candidate.candScore:0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
+  const selected = [...new Map(options.map(o=>[o.id,o])).values()].sort((a,b)=>rank[a.kind]-rank[b.kind] || (a.kind==='goal' && b.kind==='goal'?b.candidate.candScore-a.candidate.candScore:0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
+  morning.people.set(person, selected);
+  return selected;
 }
-function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId): LocalOption[] {
+function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId, cache: ViewCache): LocalOption[] {
   const active = currentMandates(state,post).filter(a => activeMandate(world.map,state,a,day));
-  const out: LocalOption[] = assignmentOptions(world,state,person,day).filter(o=>o.paper.from===post);
-  for (const paper of availableMandatePapers(world,state,person,day)) {
+  const out: LocalOption[] = assignmentOptions(world,state,person,day,cache).filter(o=>o.paper.from===post);
+  for (const paper of availableMandatePapers(world,state,person,day,cache)) {
     if (paper.grant.mandateParent === null && paper.grant.mandateIssuerPost === post &&
       world.map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[post]!.postKind)) {
       out.push({id:`grant:${paper.id}`,authority:null,kind:'grant',paper});
     }
   }
   if (active.length === 0) return out;
-  for (const a of active) for (const paper of availableMandatePapers(world,state,person,day)) {
+  for (const a of active) for (const paper of availableMandatePapers(world,state,person,day,cache)) {
     const parent = paper.grant.mandateParent;
     if (a.authorityGrant.mandateOnward && parent?.parentPost === post && parent.parentKey === a.authorityGrant.mandateKey &&
       a.authorityGrant.mandateRecipients.some(r => inSubtree(state,paper.grant.mandatePost,r))) {
@@ -144,7 +153,7 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
         !hasRequiredPapers(row.requiresPapers, knowledge, state.stateDay, world.rules.templates) ||
         (row.requiresNotice !== undefined && !knowledge.knownReports.some(r => r.knownReceivedDay <= state.stateDay &&
           r.knownBody.reportSubjectKind === 'situation' && r.knownBody.reportSubjectId === row.requiresNotice))) continue;
-      const sender = senderFor(world, state, seatIdFor(person), undefined, undefined, post, row.post);
+      const sender = senderFor(world, state, seatIdFor(person), undefined, cache, post, row.post);
       if (sender?.holder(row.post) == null || sender.side(row.post) !== side) continue;
       const blocks = allCommandedBlocks(world.map, state, row.post);
       for (const authority of active) {
@@ -172,10 +181,10 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
   for (const a of active) for (const target of [...new Set([...(canInitiate ? [post] : []), ...a.authorityGrant.mandateRecipients])].sort(strictCompare)) {
     if (target === post && !canInitiate) continue;
     if (state.planRecords[target]?.planIssuer === person || state.messagesInTransit.some(m => m.msgOrder?.orderIssuer === person && m.msgOrder.orderTarget === target)) continue;
-    if (target !== post && (sender ??= senderFor(world,state,seatIdFor(person),undefined,undefined,post))?.holder(target) == null) continue;
+    if (target !== post && (sender ??= senderFor(world,state,seatIdFor(person),undefined,cache,post))?.holder(target) == null) continue;
     const blocks = allCommandedBlocks(world.map,state,target);
     if (!mayCommit(world.map,state,a,target,blocks)) continue;
-    const picture = view ??= viewFor(world,state,seatIdFor(person));
+    const picture = view ??= viewFor(world,state,seatIdFor(person),cache);
     const defaults = world.map.world.rules.plans.goalDefaults;
     const goals: PlanGoal[] = target !== post ? own === undefined ? [] : [{ ...own.planGoal, goalCommitted: blocks, goalApproveAsDrafted: false }] :
       a.authorityGrant.mandateRegions.filter(region => region === picture.region || picture.enemyBeliefs[region]?.strength?.strengthPresence === true || (picture.enemyBeliefs[region]?.value ?? 0) > 0)
@@ -205,8 +214,8 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
   return out.sort((a,b) => rank[a.kind]-rank[b.kind] || (a.kind === 'goal' && b.kind === 'goal' ?
     b.candidate.candScore-a.candidate.candScore : 0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
 }
-export function localMenu(world: SeatsWorld, state: State, person: PersonId, day: number): LocalActionMenu | null {
-  const options = localOptions(world,state,person,day);
+export function localMenu(world: SeatsWorld, state: State, person: PersonId, day: number, cache?: ViewCache): LocalActionMenu | null {
+  const options = localOptions(world,state,person,day,cache);
   return options.length === 0 ? null : { menuKind: 'local-action', post: heldPost(state,person)!, options: options.map(o => ({
     optionId: o.id, mandate: o.authority?.authorityGrant.mandateKey ?? (o.kind === 'grant' ? o.paper.grant.mandateKey : ''),
     ...(o.kind === 'grant' ? { paper: o.paper.id } : o.kind === 'assignment' ? {paper:o.paper.id,to:o.paper.to}

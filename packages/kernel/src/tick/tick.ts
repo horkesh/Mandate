@@ -193,7 +193,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (options !== null && (options.length > 1 || requiresEpisodeChoice(state, post))) menus.set(post, options);
   }
 
-  const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day)]));
+  const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day,ctx.senderViews)]));
   const localChosen = new Set<string>();
 
   // 0b. Attention refills weekly to its cap, with no carry-over (lane 1.5; 0025, 0040).

@@ -10,6 +10,7 @@ import { letterKey } from '../world/letters.ts';
 import { seatIdFor } from './seats.ts';
 import { senderFor } from './sender.ts';
 import type { SeatsWorld } from './world.ts';
+import type { ViewCache } from '../view/view.ts';
 
 export function assignmentLetter(paper: OnwardAssignment) {
   return {namespace:`assignment.${paper.issuer}`,key:paper.id,revision:1};
@@ -41,14 +42,14 @@ export function assignmentAuthority(world: SeatsWorld, state: State, paper: Onwa
   return authority;
 }
 
-export function assignmentOptions(world: SeatsWorld, state: State, person: PersonId, day: number) {
+export function assignmentOptions(world: SeatsWorld, state: State, person: PersonId, day: number, cache?: ViewCache) {
   const papers = world.map.world.rules.onwardAssignments?.filter(p => p.issuer === person &&
     state.postStates[p.from]?.postHolder === person && p.fromDate <= formatIsoDate(dateOfDay(world.start.startDate,day)));
   if (papers === undefined || papers.length === 0) return [];
   const seat = seatIdFor(person);
   const knowledge = knowledgeOf(state,seat);
   return papers.flatMap(paper => {
-    const sender = senderFor(world,state,seat,undefined,undefined,paper.from);
+    const sender = senderFor(world,state,seat,undefined,cache,paper.from);
     if ((paper.address!=='office' && paper.recipient===undefined && sender?.holder(paper.to) == null) || knowledge.knownDoctrineDispatches?.some(d =>
       letterKey(d.dispatchLetter) === letterKey(assignmentLetter(paper)))) return [];
     const blocks = commandedBlocks(state,paper.from).filter(b => receivedRegiment(state,paper,b,false));

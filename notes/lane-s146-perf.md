@@ -67,6 +67,43 @@ and committed `80d48e86`. Full original pack inputs and 3,412 starting tracked
 paths remain preserved. Proposed [I]: retain lazy pure planning inputs; reject
 skipping any authority check or changing local candidate/selection semantics.
 
+## Step 3: share exact morning derivations
+
+The session's existing disposable view cache now carries weakly keyed local
+options for the exact State object, indexed by world, day and person. Request
+construction and tick validation share these options; execution revalidates
+against its actual State, so a new State cannot reuse the frozen morning's
+authority. Local grant, sender and onward-assignment readers also use the
+existing dependency-checked received-view cache. No cache enters State or saves.
+
+The new work-count control first fails on duplicate drafting, then passes with
+State identity, world, day and holder invalidation. All 37 receipt/mandate tests
+and typecheck pass. Every original daily hash/counter/score is exact again.
+Two alternating pairs against `77565d17` measure candidate war 48.58/48.36 ms
+median (p95 88.58/94.31), history 48.68/49.81 (p95 95.16/92.51). A direct
+additional pair against step 2 measures 55.66 -> 48.11 ms war and
+54.62 -> 49.20 ms history. No Linux acceptance is inferred from these Windows
+numbers. All eight protected-reader identities are unchanged.
+
+The first step-3 hook failed only the banned-API scanner (2,451 other tests
+passed): an inline type-position `import(...)` was classified as a dynamic
+import. A normal `import type` fixes it without changing the scanner. Rolldown's
+emitted JavaScript is byte-identical, so all timing and hash evidence is reused.
+The 52-test correction set, typecheck, boundary, rules, licences and decisions
+all pass before the required hook retry. `step3-type-correction.json` records
+the emitted-code equality; no expensive measurement campaign is repeated.
+
+Step 2's ordinary hook passed in 226.93 s and committed `99955788`. The S85
+snapshot helper initially acquired a mojibake BOM through the Windows default
+decoder. Only the S146 measurement process was interrupted; the helper was
+read as UTF-8 explicitly, its parent snapshot passed a three-day smoke, and
+the already completed baseline sample was reused. No simulation run was tuned
+or source changed for that correction. Evidence: `step3.json`,
+`step3-projection.json`, and retained raw receipts in `runs/s146/`.
+
+Proposed [I]: retain disposable, exact-input sharing. Reject persistent caches,
+partial State keys, reuse of an earlier execution State or relaxed revalidation.
+
 ## Findings outside my scope
 
 Hosted Linux timing acceptance, S141's held data, 0133 implementation, integration

@@ -315,6 +315,28 @@ describe('S123 received authority', () => {
       expect(mapSpy).not.toHaveBeenCalled();
     } finally { viewSpy.mockRestore(); mapSpy.mockRestore(); }
   });
+  it('S146: morning local planning is shared, with exact State, world and day invalidation', () => {
+    const { world, active } = fixture(grant({ mandateHolder: P('a_bold'), mandatePost: POST('a_reserve'),
+      mandateRecipients: [], mandateActions: ['hold'], mandateRegions: [R('a_mid')],
+      mandateCeiling: { ceilingPost: POST('a_reserve'), ceilingMen: null } }));
+    const cache = views.createViewCache();
+    const spy = vi.spyOn(maps, 'deriveMap');
+    try {
+      const first = localOptions(world, active, P('a_bold'), 1, cache);
+      expect(first.some(o => o.kind === 'goal')).toBe(true);
+      expect(localOptions(world, active, P('a_bold'), 1, cache)).toEqual(first);
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(localOptions(world, { ...active }, P('a_bold'), 1, cache)).toEqual(first);
+      expect(spy).toHaveBeenCalledTimes(2);
+      localOptions(world, active, P('a_bold'), 2, cache);
+      expect(spy).toHaveBeenCalledTimes(3);
+      localOptions({ ...world }, active, P('a_bold'), 2, cache);
+      expect(spy).toHaveBeenCalledTimes(4);
+      const vacant: State = { ...active, postStates: { ...active.postStates,
+        [POST('a_reserve')]: { ...active.postStates[POST('a_reserve')]!, postHolder: null } } };
+      expect(localOptions(world, vacant, P('a_bold'), 1, cache)).toEqual([]);
+    } finally { spy.mockRestore(); }
+  });
   it('C1: an unrelated officer without a known public position is not asked for a mandate view', () => {
     const map=fixtureMap(), spec=fixtureStart();
     const world=indexSeatsWorld(indexWorld({...map.world,people:map.world.people.map(p => p.id===P('a_bold')?{...p,faction:null}:p),

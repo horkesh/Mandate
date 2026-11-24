@@ -36,10 +36,13 @@ import { promiseProjection } from './promises.ts';
 import { politicsProjection } from './politics.ts';
 import {attentionBudget, audienceProjection, congressProjection} from './desk.ts';
 import type { Candidate } from '../seats/api.ts';
+import type { LocalOption } from '../seats/local-actions.ts';
 import { isProposalBasis } from '../situations/types.ts';
 import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
+  /** Exact immutable morning inputs; weak keys do not retain prior States. Never saved. */
+  readonly localOptions: WeakMap<State, { readonly world: SeatsWorld; readonly day: number; readonly people: Map<PersonId, readonly LocalOption[]> }>;
   readonly desk: Map<SeatId, {world:SeatsWorld; day:number; budget:State['seatAttention'][SeatId]|undefined; chambers:State['chamberStates']; messages:State['messagesInTransit']; reports:readonly ReportView[]; situations:readonly SituationView[]; projection:Pick<SeatView,'attentionBudget'|'congress'|'audiences'|'politics'|'promises'>}>;
   /** Request graphs already deeply frozen by this caller; shared view children need no second walk. */
   readonly requestFreeze: FreezeLedger;
@@ -61,7 +64,7 @@ export interface ViewCache {
 }
 
 export function createViewCache(): ViewCache {
-  return { desk: new Map(), requestFreeze: createFreezeLedger(), candidates: new Map(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
+  return { localOptions: new WeakMap(), desk: new Map(), requestFreeze: createFreezeLedger(), candidates: new Map(), knowledge: new WeakMap(), openings: new WeakMap(), reports: new WeakMap(), lists: new WeakMap(), beliefs: new Map(), ground: new Map(), control: new WeakMap(), goals: new WeakMap(), views: new Map(), situations: new Map(), people: new Map() };
 }
 
 function freeze<T extends object>(o: T): T {

@@ -596,7 +596,7 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
   }
   for (const assignment of Object.values(state.seatAssignments)) {
     const person = assignment.seatPerson;
-    const menu = localMenu(world,state,person,day);
+    const menu = localMenu(world,state,person,day,cache);
     if (menu === null) continue;
     const seat = seatIdFor(person);
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `local:${menu.post}:${day}`, view: viewFor(world,state,seat,cache), menu },cache));
