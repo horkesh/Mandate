@@ -39,14 +39,18 @@ export function availableMandatePapers(world: SeatsWorld, state: State, person: 
   const declared = (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person);
   if (declared.length === 0) return [];
   const knowledge = knowledgeOf(state,seatIdFor(person));
+  // Dispatched or not-yet-due instruments cannot need a received address.
+  // Keep the full declared address scope below: other papers can supply ancestors.
+  const pending = declared.filter(p =>
+    day >= daysFromCivil(parseIsoDate(p.fromDate)) - daysFromCivil(parseIsoDate(world.start.startDate)) &&
+    !knowledge.knownDoctrineDispatches?.some(d => letterKey(d.dispatchLetter) === letterKey(mandateLetter(p))) &&
+    hasRequiredPapers(p.requiresPapers,knowledge,state.stateDay,world.rules.templates));
+  if (pending.length === 0) return [];
   const view = viewFor(world,state,seatIdFor(person));
   const addresses = world.start.factions.some(f => f.principal === person) ? view.posts :
     commandProjection(world,person,view.faction,view.reports,state.stateDay,state.calendarStart,declared.map(p => p.grant.mandatePost)).posts;
-  return (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person &&
-    (p.assignment !== undefined || addresses.some(a => a.post === p.grant.mandatePost && a.status === 'held' && a.holder === p.grant.mandateHolder)) &&
-    day >= daysFromCivil(parseIsoDate(p.fromDate)) - daysFromCivil(parseIsoDate(world.start.startDate)) &&
-    !knowledge.knownDoctrineDispatches?.some(d => letterKey(d.dispatchLetter) === letterKey(mandateLetter(p))) &&
-    hasRequiredPapers(p.requiresPapers,knowledge,state.stateDay,world.rules.templates))
+  return pending.filter(p =>
+    p.assignment !== undefined || addresses.some(a => a.post === p.grant.mandatePost && a.status === 'held' && a.holder === p.grant.mandateHolder))
     .sort((a,b) => strictCompare(a.fromDate,b.fromDate) || strictCompare(a.id,b.id));
 }
 export function goalWithin(g: MandateGrant, goal: PlanGoal): boolean {

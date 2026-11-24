@@ -1,5 +1,7 @@
 import type { MandatePaper } from '../src/world/mandates.ts';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+import * as views from '../src/view/view.ts';
+import { mandateLetter } from '../src/seats/local-actions.ts';
 import { createState } from '../src/tick/setup.ts';
 import { tick } from '../src/tick/tick.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
@@ -43,6 +45,21 @@ function fixture(g = grant(), nested = false) {
 }
 
 describe('S123 received authority', () => {
+  it('S146: future and already dispatched grants need no received-view construction', () => {
+    const { world, start } = fixture();
+    const paper = world.map.world.rules.mandates![0]!;
+    const seat = seatIdFor(paper.grant.mandateIssuer);
+    const held = knowledgeOf(start, seat);
+    const sent: State = { ...start, knowledgeBySeat: { ...start.knowledgeBySeat, [seat]: { ...held,
+      knownDoctrineDispatches: [{ dispatchLetter: mandateLetter(paper), dispatchOrigin: origin('sent'), dispatchDay: 0 }],
+    } } };
+    const spy = vi.spyOn(views, 'viewFor');
+    try {
+      expect(availableMandatePapers(world, start, paper.grant.mandateIssuer, -1)).toEqual([]);
+      expect(availableMandatePapers(world, sent, paper.grant.mandateIssuer, 1)).toEqual([]);
+      expect(spy).not.toHaveBeenCalled();
+    } finally { spy.mockRestore(); }
+  });
   it('C1: a root instrument travels and is enacted only after its holder answers', () => {
     const map = fixtureMap();
     const paper: MandatePaper = {
