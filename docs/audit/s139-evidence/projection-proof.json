@@ -1,0 +1,22 @@
+{
+  "changedRoots": [
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "battleMenus",
+      "before": "233d1387479103a2f702fc1a2f279eca88d6049a44131be765849205e2044c27",
+      "after": "224aebae11ccc4341d44a51acb01219949169f762a92baaf8086efa143082b61",
+      "readers": "battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/operations/tasks.ts:actualBlock (postStates); packages/kernel/src/operations/tasks.ts:liveOperation (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "pendingRequests",
+      "before": "3271490d0fee055bda14c50195ca1830a81482a419fa44f7ddda989f6e729b00",
+      "after": "d86ac2f11c3d80b60a00f6573589ad7c5dae78a58a19d1db34f402ba525f70b2",
+      "readers": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/operations/tasks.ts:actualBlock (postStates); packages/kernel/src/operations/tasks.ts:liveOperation (postStates); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptionsAt (postStates); packages/kernel/src/seats/onward-assignments.ts:assignmentOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+    }
+  ],
+  "findingBaselineChanged": false,
+  "derivationClassifierChanged": false,
+  "principalCatalogueAndViewRootsChanged": false,
+  "scope": "Own kernel-judged task execution only. Opposing regional presence is never filtered by hidden tasks."
+}

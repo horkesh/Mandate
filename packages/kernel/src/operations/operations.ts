@@ -19,6 +19,7 @@ import type { DemonstrationCourse, Method, PlanPhase, PlanRoute, RequestKind } f
 import type { PlanDetentionPurpose, Posture } from '../plans/goal.ts';
 import type { LetterIdentity } from '../world/letters.ts';
 import type { State } from '../root-state.ts';
+import type { OperationTask } from './tasks.ts';
 
 /** An axis's stages (0073's lifecycle): `works` is digging in at the objective it holds. */
 export const AXIS_STAGES = ['assemble', 'march', 'works', 'assault', 'bombard', 'pause', 'pursue', 'withdraw', 'end'] as const;
@@ -33,6 +34,7 @@ export const STAGE_REASONS = [
   'opened',
   'awaiting_word',
   'awaiting_support',
+  'awaiting_task_release',
   'concentrating',
   'concentrated',
   'support_refused',
@@ -102,6 +104,8 @@ export const REQUEST_ANSWERS = ['pending', 'complied', 'delayed', 'refused', 'va
 export type RequestAnswer = (typeof REQUEST_ANSWERS)[number];
 
 export interface OpRequest {
+  /** Task execution/release uses the ordinary support receipt and response. */
+  readonly oreqTask?: string;
   readonly oreqKind: RequestKind;
   readonly oreqPost: PostId | null;
   readonly oreqHolder: PersonId | null;
@@ -149,6 +153,8 @@ export interface DemonstrationEpisode {
 }
 
 export interface OperationRecord {
+  /** Absent in old saves means no recorded allocation history. */
+  readonly opTasks?: readonly OperationTask[];
   readonly opPost: PostId;
   readonly opCommander: PersonId | null;
   /** The goal's order, and the approved candidate's id: an operation executes one plan for one goal. */

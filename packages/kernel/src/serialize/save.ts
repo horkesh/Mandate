@@ -19,7 +19,7 @@ import { canonicalHash } from './hash.ts';
 export const SAVE_FORMAT = 'mandate-save';
 
 /** Bump this, and add a migration and a fixture, whenever the saved shape changes. */
-export const CURRENT_SAVE_SCHEMA = 6;
+export const CURRENT_SAVE_SCHEMA = 7;
 
 export interface SaveEnvelope {
   readonly format: typeof SAVE_FORMAT;
@@ -76,6 +76,10 @@ export const SAVE_MIGRATIONS: readonly SaveMigration[] = [{
 }, {
   from: 5, to: 6,
   change: 'Optional received assignments, onward journeys, course advice and consultation copies. Existing saves gain no grant, directive, receipt or judgment.',
+  migrate: save => save,
+}, {
+  from: 6, to: 7,
+  change: 'Optional operation tasks and ordinary task support references. Absent tasks retain empty unknown history; never invent an earlier allocation, release or receipt.',
   migrate: save => save,
 }];
 

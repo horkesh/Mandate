@@ -1,0 +1,24 @@
+{
+  "newUnionZeros": [],
+  "newTestbedZeros": [],
+  "allLivenessCriteriaPass": true,
+  "localDoneCheckExit": 1,
+  "localDoneCheckFailsOnlyPhase0Budget": true,
+  "budgetCriterion": {
+    "id": "budget",
+    "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+    "problems": [
+      "union-1861, war by decision, 148 days: median 96.4 ms a day, over the 40 ms budget",
+      "union-1861, war by decision, 148 days: p95 204.0 ms a day, over 4 times the budget",
+      "union-1861 history run, 148 days to 1861-07-31: median 66.5 ms a day, over the 40 ms budget"
+    ],
+    "evidence": [
+      "union-1861, war by decision, 148 days: median 96.40 ms, p95 204.01 ms, max 236.90 ms over 148 days (plans.drafted 12, ladder.moved 9, situations.fired 90)",
+      "testbed, 120 days: median 3.09 ms, p95 4.99 ms, max 6.59 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+      "union-1861 history run, 148 days to 1861-07-31: median 66.49 ms, p95 145.88 ms, max 181.50 ms over 148 days (plans.drafted 12, ladder.moved 9, situations.fired 90)"
+    ],
+    "milestone": "phase0"
+  },
+  "ordinaryHook": "Pending; 0115 keeps the ordinary hook separate from wall-clock checks. No budget assertion or numeric rule changed.",
+  "rejectedEvidence": "runs/s139/rejected-lifecycle-candidate/; two other incomplete attempts were stopped. No rejected result is acceptance evidence."
+}

@@ -55,6 +55,8 @@ export interface SideInput {
   readonly commitTerms: readonly BattleTerm[];
   /** Blocks in id order. */
   readonly blocks: readonly BlockInput[];
+  /** In a mutual attack all local defenders are exposed, but only executing tasks supply offensive commitment. */
+  readonly commitBlocks?: readonly ForceBlockId[];
   /** Where it falls back to, or null when no neighbour passes the retreat rule (0019). */
   readonly retreatTo: RegionId | null;
   /** It broke out of a pocket yesterday: a second failure is a surrender, never another breakout. */
@@ -161,7 +163,8 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
   const basics = input.sides.map(sideBasics);
   // 0110: unknown opposition is present, but cannot support losses or a quantitative defeat.
   const unresolved = input.sides.some(s => s.blocks.length > 0 && s.blocks.every(b => b.men === null));
-  const committed = input.sides.map((s, i) => Math.trunc((basics[i]!.present * rules.commit[s.commit].sharePermille) / 1000));
+  const committed = input.sides.map((s, i) => Math.trunc(((s.commitBlocks === undefined ? basics[i]!.present :
+    s.blocks.filter(b => s.commitBlocks!.includes(b.id)).reduce((n, b) => n + (b.men ?? 0), 0)) * rules.commit[s.commit].sharePermille) / 1000));
   const engaged = committed.map((c) => Math.min(c, input.frontageMen));
   const contact = Math.min(engaged[0]!, engaged[1]!);
   const t = rules.terms;
@@ -348,6 +351,7 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
       bsideCommander: side.commander.person,
       bsideCommit: side.commit,
       bsideBlocks: side.blocks.map((b) => b.id),
+      ...(side.commitBlocks === undefined ? {} : { bsideAttackBlocks: side.commitBlocks }),
       bsideUnknown: me.unknown,
       bsidePresent: me.present,
       bsideCommitted: committed[i]!,
