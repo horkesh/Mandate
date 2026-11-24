@@ -1,0 +1,70 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\historical-unit-crosswalk.csv",
+    "sha256": "2478da3e6625364e4e9ca4dd218954e15f2ef3ad470d5dbc832e6f8455681c2c"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\model-lots-daily.csv",
+    "sha256": "e2539d9e33dee2f921291cbb12c8ef6ed0a309a3807422f19c725de51bb470f5"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\confederate-dispositions.csv",
+    "sha256": "eb65ed3868f5e429b71c48d150bbeefbd2232041618c2277989524ac7598f3ef"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\unit-placement-differences.csv",
+    "sha256": "34a6c4a9db12f51540753613c199a382c0f07b7a407ecd759d098d1e03823525"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\model-lot-differences.csv",
+    "sha256": "611d934d2da66c7059bf8c8b66280fd1cfdc49b6c2b31ee0e0c982d3bee03d3a"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\source-reading.json",
+    "sha256": "e415fe84a24e9a2160370f853d8450f82c332b150f3f49ec4fa4bf511f8b364f"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\model-summary.json",
+    "sha256": "527ccac01fe6457177cb532da4622ba254319c7836d4af5a5f64803096b020e4"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S135\\causes-and-remedies.csv",
+    "sha256": "68cbdd6b47871db785d7fe2c56a3ca24053a1d04e3753b84d90f884236427619"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S136-CONCENTRATION-AND-JUNCTION.md",
+    "sha256": "933d60911d678036d67a51e73c0139d5e206c6477cb2e68b5b04151a70b5cca4"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\2026-11-22-S66-regiments.csv",
+    "sha256": "84698a1d3f85d1865c4531f183325d62993e4953d76a8318b522c4cce678ea54"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "sha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-pages.json",
+    "sha256": "5cdc197761d97412581d5e8c56169d29fff07d046a8b4966cc7cf69050669add"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2_djvu.xml",
+    "sha256": "067be3c0ff567ac369bdc997086fd18489bc12d5e0be217c0eb3b57b4bb1ca8f"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0108-the-july-armies-are-named-brigades-of-regiments.md",
+    "sha256": "6b0e5c1f36c6378f5989bdbc81f54c8966634bc7b63168a9e9ffdb6f2691778e"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0124-standing-authority-comes-from-an-assignment.md",
+    "sha256": "617b81d725c40bd7bab2c99d82a31efd153d9ea12f3a6960febc848d55df8ca8"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0129-an-assignment-to-command-opens-the-post.md",
+    "sha256": "7f859419d6243d2a96604c8ad5bd8956ff55edfcf5ac55c507a80d8e97bad26f"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0131-regiments-go-where-read-orders-send-them.md",
+    "sha256": "69a77ce5b618091bffc792d8ccc4d6fdd09afd84ff974e8a5fc730d962aabd2b"
+  }
+]
