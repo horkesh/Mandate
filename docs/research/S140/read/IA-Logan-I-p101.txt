@@ -1,0 +1,25 @@
+SECOND  INFANTRY  101
+
+
+COMPANY    "A"
+
+Allendorph,  Douglass  G.  Age  18.  Residence  New  York,  nativity  New  York.
+Enlisted  May  4,  1861.  Mustered  May  27,  1861.  Wounded  slightly
+Feb.  15,  1862,  Fort  Donelson,  Tenn.  Missing  and  taken  prisoner  Oct.
+3,  1862.  Mustered  out  May  27,  18  64,  Pulaski,  Tenn.,  expiration  of  term
+of  service.
+
+Allendorph,  John  C.  Age  20.  Residence  New  York,  nativity  New  York.
+Enlisted  May  4,  1861.  Mustered  May  27,  18  61.  Mustered  out  May
+27,  1864,  Pulaski,  Tenn.,  expiration  of  term  of  service.
+
+Anderson,  Samuel.  Age  21.  Residence  Keokuk,  nativity  Ohio.  Enlisted
+May  4,  1861.  Mustered  May  27,  1861.  Discharged  Nov.  13,  1862,
+Keokuk,  Iowa,  for  disability.
+
+Applegate,  Andrew.  Age  19.  Residence  Keokuk,  nativity  Iowa.  Enlisted
+May  4,  1861.  Mustered  May  27,  18  61.  Promoted  Fourth  Corporal  Nov.
+27,  1863.  Mustered  out  May  27,  1864,  Pulaski,  Tenn.,  expiration  of
+term  of  service.
+
+Archer,  Sampson  M.  Age  32.  Residence  Keokuk,  nativity  Ke

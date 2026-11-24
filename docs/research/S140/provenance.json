@@ -1,0 +1,362 @@
+{
+  "scope": "S140 research only. Headless local text/XML reads and HTTP retrievals; static source images opened as local files, never a browser/desktop.",
+  "source_artifacts": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p1-read.txt",
+      "bytes": 1454,
+      "sha256": "2f8a3877d469bb3d5c3519bfe8b5af13f27974d5d634bbc1d2cb79b847679830"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p284-read.txt",
+      "bytes": 1750,
+      "sha256": "1a3ec51f1bcd67ca9ed671bd9cbc07b34cc6e64bb2a2f30f3871b39cadef430d"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p318-read.txt",
+      "bytes": 660,
+      "sha256": "31e44b8112d762108a1c710b778809168b1500d74a2af5562272144b39ca7af7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p570-read.txt",
+      "bytes": 1750,
+      "sha256": "e989cd07958eebee38ceb9d9345997f3a5f7d0772dd9bf1a4eacf59cfa89d32f"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\CT-Catalogue-1864-opening.txt",
+      "bytes": 2592,
+      "sha256": "a47052f2c1471864c92cb5a491ae12a7c03611dad1dd5c7ed690ba1e6ede4c41"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\CT-Catalogue-1864-p4.txt",
+      "bytes": 1679,
+      "sha256": "4bfa2bc05ef8b2b079b396c3583af573431095724dfae6aa855a2fee698508e4"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p11.txt",
+      "bytes": 2468,
+      "sha256": "5180921f2596a06210a3bf88cee6623555f86b8af281f7dedd2d646c211be371"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p13.txt",
+      "bytes": 2108,
+      "sha256": "2c1758b4e456fa0c9dc1b9427a207d297f406eaccac374c4f4aa1c5b22a0856d"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p14.txt",
+      "bytes": 2517,
+      "sha256": "02e592faae5afd231d5f634095e0d8a5f930644619970b8c6696e0287c90575b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p7.txt",
+      "bytes": 2597,
+      "sha256": "0c854bd12e1e4270a4118cb2f20ab9b14d288cb3d48f19b98573aa3fede36ea4"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p8.txt",
+      "bytes": 2625,
+      "sha256": "fe2ba57c1e13d9ccecf8961990d740d47c20e5407d5dc0ed2af78fe9423ef616"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-Record-I-p19.txt",
+      "bytes": 5354,
+      "sha256": "b46c998964d4a0bf1fad18eab4c5a0eb55e8ce5a53c2e03ab686681516c62eae"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\ME-AG-1861-F2-F3.txt",
+      "bytes": 6651,
+      "sha256": "f94f1753990af5865e0ee48782265fa97715616fb8624bd7dc6d3bba6df7edf7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\ME-AG-1861-p6.txt",
+      "bytes": 2636,
+      "sha256": "8ef6c45a5b6f1709cb8af2ed54aef5fe8794b6b9f6c6bda6068be175e6e8a722"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\ME-AG-1861-p7.txt",
+      "bytes": 2078,
+      "sha256": "aa118da9a62065447d7533575bf1e76a11f1d53813d47851245b4d597a7dd102"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MI-Robertson-1882-p165.txt",
+      "bytes": 3328,
+      "sha256": "69108cfa639bacb226bb55512bb7fab56977c7691f9c2e222dabe68a13ebd55a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MI-Robertson-1882-p166.txt",
+      "bytes": 3800,
+      "sha256": "444475cd9e74a6a2323b118ba37645fd93573c9477cd703a590d491ab6f627d3"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MI-Robertson-1882-p173.txt",
+      "bytes": 2659,
+      "sha256": "18d477987c7ed21ac22645b9eeec936cfd29a4c0f5ecccb70b60a3ffd61fbc09"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p15.txt",
+      "bytes": 3467,
+      "sha256": "983811e0fe4fe3c694cadb0dc77a32841b192b6171144a5016ca97c81821e90a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p28.txt",
+      "bytes": 2980,
+      "sha256": "79eed0f2d773652b09fba3b49d600c1dba9b6f7f7d52dd206f41935e029f2d22"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p40.txt",
+      "bytes": 3039,
+      "sha256": "a1bcbebb7ce18e973c3d805fb6efa31364cc45ddb277a6e94f8d14d17fcae58c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p53.txt",
+      "bytes": 2819,
+      "sha256": "6ac2313987e2e1fc8d6c26bf5d2d12c59f0d15f281838a1faf6e3446c10feea5"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p17.txt",
+      "bytes": 4475,
+      "sha256": "136890b0da00a53f5602347b817eb344a54c4e00eca4609e586add96d57c387e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p18.txt",
+      "bytes": 3245,
+      "sha256": "06a485687ab1927d55ca30c9b5cd2ae77e4699f9413ba2d2b62895780e9e12ab"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p19.txt",
+      "bytes": 3167,
+      "sha256": "f0d81e0e21bd361a69102f34d6ac3a63a4377db774b9fd6472b531cdc9bfd5b0"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p556.txt",
+      "bytes": 4292,
+      "sha256": "ae17875230c10b9ef0c3660bf26b0dc4014ab279e31b9c90c3506cbd88c9ab98"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p557.txt",
+      "bytes": 3495,
+      "sha256": "ac2375ba00a33d0cd134c31aadbbfbda4db8a949807bef48e8c90317160447de"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p673.txt",
+      "bytes": 4595,
+      "sha256": "5c2c660ca72dfa47a4f7aeea43c3be2f7aef3f63c52c071b9419ec4809ab4404"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p674.txt",
+      "bytes": 4159,
+      "sha256": "4482d6ee1f45bca9db6a86821bb7bf0eb38655906e7b5b5d4e8eb314b2aac3b0"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p690.txt",
+      "bytes": 4215,
+      "sha256": "d8240d8230eca63e7f453387db8a50c0960b4ff90ded8a233029d3e00e2e4df6"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p691.txt",
+      "bytes": 4016,
+      "sha256": "1179ecdbb99f7f4d25880a788859714c2fc2a7ffebde30080dbb0b82b7515f9b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-III-p1873.txt",
+      "bytes": 3286,
+      "sha256": "ae84b2cbfeb9773b02267ad8ec0ffd2712b02edbc9ecb0c45fc8308f4521c403"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-III-p1887.txt",
+      "bytes": 2042,
+      "sha256": "495adad30b56d8a4a1a0f32d2a7041f0c814d76c19f1b5b7d4a6f738196561d8"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-III-p1888.txt",
+      "bytes": 197,
+      "sha256": "89691fb198aeb4887166dc8fe74ab6f6f049e317fd22bd32e263cd54c8d796a3"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-IV-p2897.txt",
+      "bytes": 1901,
+      "sha256": "7bec73882166de4409361b224553153a16a6379906cc6c51e699cf5feb740163"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-IV-p2929.txt",
+      "bytes": 1901,
+      "sha256": "0f3aabdc25d5c236a2173d2cb255e8f4d8081f04bda32ad5f57b97a4e6f63e6e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-IV-p2930.txt",
+      "bytes": 1901,
+      "sha256": "0f3aabdc25d5c236a2173d2cb255e8f4d8081f04bda32ad5f57b97a4e6f63e6e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-I-II-p325.txt",
+      "bytes": 3718,
+      "sha256": "c334a06d3c1498f467be4bb66255bc3b0fcd93bdd1fe00c2f3d85df337c7009d"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-III-I-p67.txt",
+      "bytes": 3042,
+      "sha256": "e8f5618d4c7ebbc385e20396712dc5f4f294306e186c0a2e343c2756a6957940"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-III-I-p68.txt",
+      "bytes": 3279,
+      "sha256": "fe01c25d0427b5c15f736f4784a70cd596d4f7a5a9f9a087a2a5708d15df02d8"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-III-I-p69.txt",
+      "bytes": 2839,
+      "sha256": "f3688a91c5ccd2c6c53d18c0a4d1e39e58e9ff45da43f6e3fd51c01d85387c08"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p1.txt",
+      "bytes": 2767,
+      "sha256": "a9b065af78c1f654dd699fefecafdf249d35b01ca9ab9ded12ac8469da40efd4"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p3.txt",
+      "bytes": 3732,
+      "sha256": "2cada7d80ff5849d988ae15544ca3203ab0253b118526153d820327ba396cd11"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p4.txt",
+      "bytes": 3587,
+      "sha256": "63606a2d7967e5fd1fae882e581a901db7c8af18a791be2a252d871d6965b174"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p9.txt",
+      "bytes": 2431,
+      "sha256": "84bf7c23a75dd2eb13bfb5318fc60edf483d1a44c2df8ced9546a6b387c54972"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\US-Register-I-p14.txt",
+      "bytes": 364,
+      "sha256": "02af69e440b8104e0e5c82693cf2672daa7446a0dd2e91f7bbe3d1adca722999"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\US-Register-I-p300.txt",
+      "bytes": 228,
+      "sha256": "1151cd00cf5790b93f268e456782e03799600490add44749d7a14df6824bab8b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\US-Register-I-p303.txt",
+      "bytes": 2078,
+      "sha256": "d1a9c4609459d45a47841d77a0f0ee949c2332bd4eb72aa1366429ad58a73acc"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "bytes": 3281558,
+      "sha256": "256fd245012028c7a0ef0cbf94f44659e8e1bf013dc6c0644bc3506759b72459"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "bytes": 2324163,
+      "sha256": "f126326648f405ac3007c20ef99b8556dd8f3bd33e8f6688d23c9418a61f4070"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1b-pages.json",
+      "bytes": 2382252,
+      "sha256": "c7fec62a47b16de0c94ca1d47ca32fc073d47bac7b50522e5bec2b094ad3fb5a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\LI2-pages.json",
+      "bytes": 3818411,
+      "sha256": "30bf9e09297dd1821a8943fec85253ce9a83ce053207a1b1e7fd8338c1aea917"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\CT-catalogue.txt",
+      "bytes": 2675847,
+      "sha256": "23dd7f435dc345b099666525a7d35fe81e7fffd7845de7bbb7fe2c5a09a307fb"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\michiganinwar00mich-pages.json",
+      "bytes": 4486736,
+      "sha256": "39c8e026cc063911a2a592c71f4b3242c1443018c44c80c365c1f5f1c1af5e44"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "bytes": 4735550,
+      "sha256": "23aaf2db51fd88a2d3472bf9bdb156683a68262c2408a6df51d7f5da6188c8d7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\IA.txt",
+      "bytes": 3534775,
+      "sha256": "dd21f0c5fa1bdc10cf8531bb7e8c29965c1571a0cf3a4dd46fb1fdd305935e0f"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\NH.xml",
+      "bytes": 67733236,
+      "sha256": "61d6209023436b2ace3fd6c308f4deaa41f2a39bb405b6d36cb88ca55dcc8545"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\VT.xml",
+      "bytes": 70750368,
+      "sha256": "eaf636733fe7c6d983d913358a961533af82c423a1038eb34e9d8558d9e9551c"
+    }
+  ],
+  "upstream_manifests": [
+    {
+      "path": "docs/research/S137/source-reading.json",
+      "sha256": "a976bd6cc2475e63fd91329fd8a337d42a0a46ee3fc0334a7271cb59c0b238af"
+    },
+    {
+      "path": "docs/research/S121/source-reading.json",
+      "sha256": "330a6eec9e9be4a0bc14d067d1ecd02c24662bce08312e6880b2f12ace26669a"
+    },
+    {
+      "path": "docs/research/S75/source-reading.json",
+      "sha256": "9a05a17575070853b590aa05f782ffd4c044178285749f9ce6498446727a22c0"
+    }
+  ],
+  "images": [
+    {
+      "path": "C:/Pyrrhic/mandate-research-sources/S121/Maine-pdf913.png",
+      "sha256": "a6ef3b0eee19925f032763ac6db06b89a2c05b7783b7e9b5bafebbf26029b80d",
+      "verdict": "accepted",
+      "observation": "Printed Appendix F p2: dates/places, distinction from organization and cumulative men; First May3, Second May28, Thirteenth/Fourteenth Dec31. Fifteenth has no first-muster date."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\NJ-p67.jpg",
+      "sha256": "fffb11e78fffa8495acf7755c1d1079a182061d5f81b6fc838f41ebaaebb36e7",
+      "verdict": "accepted",
+      "observation": "Unnumbered opening preceding printed68, treated as [67]: May17 requisition receipt; May18 readiness for three regiments."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\NJ-p102.jpg",
+      "sha256": "0c22fd1a8adea7c6f83da7ce166683c9be3fad53a1255384e29767520f392e0e",
+      "verdict": "accepted",
+      "observation": "Printed102: Second New Jersey May26, not OCR2Hth; Camp Olden; field/staff later appointments visibly differ."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\MI-p188.jpg",
+      "sha256": "b5813b1d37358d72a850d90173a3a9bfed7146e733024fd17cf455cc3677ffb4",
+      "verdict": "rejected_locator",
+      "observation": "Download n202 returned printed191, not188. No muster inference from this page."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\MI-p206.jpg",
+      "sha256": "b0d4c1e40f9b2d57c6f0a7c26e83e83db8ee09e10ccd9a8aa25d0fcf936b6742",
+      "verdict": "rejected_locator",
+      "observation": "Download n220 returned printed209, not206."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\MI-p188-corrected.jpg",
+      "sha256": "80d6ae76746b568f657ac03063f021479667b02096b8d71e854fdc1c9d821629",
+      "verdict": "accepted",
+      "observation": "Download n199: printed188 confirms Federal muster May25 at Fort Wayne; OCR2oth corrected in interpretation, retained text unchanged."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\MI-p206-corrected.jpg",
+      "sha256": "ee4c33e1196917f9bccce8c5dcf56abdfccb371aff79ae9741a8b1d1c368ab47",
+      "verdict": "accepted",
+      "observation": "Download n217: printed206 confirms State May21, Federal June10 at Grand Rapids in narrative. May15 narrative / May13 order dates not normalized."
+    }
+  ],
+  "source_limitations": [
+    "Selected pages/excerpts, not whole-volume reading or national muster-roll census.",
+    "OCR remains verbatim except whitespace normalization; interpretation records scan-confirmed numerals separately.",
+    "IA discovery metadata rosterrecordofia01iowa returned an empty object; not evidence. Correct volume fetched as aby1249.0001.001.umich.edu.",
+    "OR IV-I printed309/310 are swapped in scan order; retained310 follows printed head, not inferred offset.",
+    "Dyer not used for dates or terms in S140; S137 already limited him to identity/place.",
+    "Source disagreements and unread individual receipt/acceptance contracts remain open."
+  ],
+  "tool_policy": "No Computer Use, desktop control or real browser; no source writes outside this worktree. Formal independent review/signatures deferred under0106/0107; requested5.6 worker models unavailable; no substitute worker."
+}

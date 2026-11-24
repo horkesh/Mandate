@@ -1,0 +1,37 @@
+[
+  {
+    "commit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+    "source_path": "packs/union-1861/calls-1861.json",
+    "read_method": "git show",
+    "sha256": "a28eb70d0e8b97d9c499a43b27b56b6ce5de3cf982e69d94e2ec36c513b874e7",
+    "local_copy": "runs\\s140\\inputs\\packs__union-1861__calls-1861.json"
+  },
+  {
+    "commit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+    "source_path": "packs/union-1861/pack.json",
+    "read_method": "git show",
+    "sha256": "13cd793b6c90b48a19d2352a8285d0a8e38a0792c5dff398c1e4058811640d51",
+    "local_copy": "runs\\s140\\inputs\\packs__union-1861__pack.json"
+  },
+  {
+    "commit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+    "source_path": "packages/kernel/src/recruitment/rules.ts",
+    "read_method": "git show",
+    "sha256": "c33bdb98349dc9d7ea4a201ea75279be18d03da68eb19a02708bc0d1f621d967",
+    "local_copy": "runs\\s140\\inputs\\packages__kernel__src__recruitment__rules.ts"
+  },
+  {
+    "commit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+    "source_path": "packages/kernel/src/tick/recruitment.ts",
+    "read_method": "git show",
+    "sha256": "a371fcf461f82a757c539af3938bd81c1430e28520c57b11772a3e299a79d78f",
+    "local_copy": "runs\\s140\\inputs\\packages__kernel__src__tick__recruitment.ts"
+  },
+  {
+    "commit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+    "source_path": "packages/kernel/src/forces/enlistment.ts",
+    "read_method": "git show",
+    "sha256": "76c06774a4a2e61e444b6cac47cad8b036197f4db3760d7dd7a952c209e4785a",
+    "local_copy": "runs\\s140\\inputs\\packages__kernel__src__forces__enlistment.ts"
+  }
+]

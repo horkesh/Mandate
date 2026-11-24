@@ -1,0 +1,15 @@
+receipt_id,side,state,call_family,receipt_earliest,receipt_latest,receipt_kind,source_keys,qualification
+NJ-Apr-mail,union,NJ,April militia,1861-04-17,1861-04-17,written_requisition,OR-III-I-p83;NJ-Stryker-I-p15,Exact written requisition receipt; QMG already discusses the requisition April16 (OR III-I p73). Not earliest operative notice.
+NJ-Apr-notice,union,NJ,April militia,1861-04-15,1861-04-16,bounded_operative_notice,OR-III-I-p68;OR-III-I-p73,Issue April15; QMG inquiry April16 proves notice by then; exact telegram receipt not read.
+NJ-May,union,NJ,May GO15 volunteers,1861-05-17,1861-05-17,dated_requisition_receipt,NJ-Stryker-I-p67,State official roster expressly gives receipt and identifies First/Second/Third; May18 readiness is not muster.
+IA-May,union,IA,May GO15 volunteers,1861-05-17,1861-05-17,dated_telegram_receipt,OR-III-I-p220;OR-III-I-p221;IA-Logan-I-p91,"Governor dates actual receipt May17, distinguishes GO15 receipt May18 and official written requisition still absent May21."
+ME-Apr,union,ME,April militia,1861-04-15,1861-04-15,same_day_acknowledgement,OR-III-I-p71,Issue and explicit received reply both April15; later First Regiment date disagreement retained.
+CT-Apr,union,CT,April militia,1861-04-15,1861-04-15,same_day_acknowledgement,OR-III-I-p70,Issue and governor response both April15; unit-call family join inferred from service context.
+MA-Apr,union,MA,April militia,1861-04-15,1861-04-15,same_day_acknowledgement,OR-III-I-p71;MA-AG-1861-p8,Telegraphic warning acknowledged April15; formal requisition also attested State report p8; distinguish muster after arrival (OR III-I p74).
+VT-Apr,union,VT,April militia,1861-04-15,1861-04-15,same_day_acknowledgement,OR-III-I-p73;OR-III-I-p84,Governor replies April15; April18 letter says no mailed communication yet.
+NH-Apr,union,NH,April militia,1861-04-15,1861-04-16,bounded_acknowledgement,OR-III-I-p68;OR-III-I-p73,April16 response proves receipt by then; not exact same-day receipt.
+RI-Apr,union,RI,April militia,1861-04-15,1861-04-16,bounded_state_response,RI-Register-1866-p1,"Call April15, State organization order April16; exact federal receipt not stated."
+MI-Apr,union,MI,April militia,1861-04-15,1861-04-16,bounded_state_response,MI-Robertson-1882-p165,"April16 proclamation responds to requisition; receipt no later than response, not necessarily April16."
+NY-Apr,union,NY,April militia,1861-04-15,1861-04-18,bounded_written_acknowledgement,OR-III-I-p68;OR-III-I-p85,April18 written acknowledgement; April15 query p72 shows awareness but does not date receipt of full requisition. Cohort join inferred.
+LA-Apr-program,confederate,LA,April twelve-month volunteer program,1861-04-18,1861-04-21,two_requisitions_not_one_receipt,OR-IV-I-p747;OR-IV-I-p748;OR-IV-I-p749,AG says first requisition received18 though reproduced proclamation dated17; second received21. Not exact receipt-to-unit allocation; April22 absolute call is separate.
+LA-Kelly,confederate,LA,direct war-term acceptance,,,issue_only,OR-I-LI.2-p138,Cooper acceptance dated June12; recipient receipt not read. Kelly-to-Eighth join inferred from AG name (p750).

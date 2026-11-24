@@ -1,0 +1,1155 @@
+{
+  "scope": "S140 selected passages only; facts cited by printed page. No whole-volume reading claimed.",
+  "read": [
+    {
+      "key": "NJ-Stryker-I-p15",
+      "work": "NJ-Stryker-I",
+      "page": "15",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p15.txt",
+      "sha256": "983811e0fe4fe3c694cadb0dc77a32841b192b6171144a5016ca97c81821e90a",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n20/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p15.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NJ-Stryker-I-p28",
+      "work": "NJ-Stryker-I",
+      "page": "28",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p28.txt",
+      "sha256": "79eed0f2d773652b09fba3b49d600c1dba9b6f7f7d52dd206f41935e029f2d22",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n33/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p28.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NJ-Stryker-I-p40",
+      "work": "NJ-Stryker-I",
+      "page": "40",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p40.txt",
+      "sha256": "a1bcbebb7ce18e973c3d805fb6efa31364cc45ddb277a6e94f8d14d17fcae58c",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n45/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p40.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NJ-Stryker-I-p53",
+      "work": "NJ-Stryker-I",
+      "page": "53",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p53.txt",
+      "sha256": "6ac2313987e2e1fc8d6c26bf5d2d12c59f0d15f281838a1faf6e3446c10feea5",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n58/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NJ-Stryker-I-p53.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p17",
+      "work": "NY-Phisterer-I",
+      "page": "17",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p17.txt",
+      "sha256": "136890b0da00a53f5602347b817eb344a54c4e00eca4609e586add96d57c387e",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n28/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p17.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p18",
+      "work": "NY-Phisterer-I",
+      "page": "18",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p18.txt",
+      "sha256": "06a485687ab1927d55ca30c9b5cd2ae77e4699f9413ba2d2b62895780e9e12ab",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n29/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p18.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p19",
+      "work": "NY-Phisterer-I",
+      "page": "19",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p19.txt",
+      "sha256": "f0d81e0e21bd361a69102f34d6ac3a63a4377db774b9fd6472b531cdc9bfd5b0",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n30/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p19.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p556",
+      "work": "NY-Phisterer-I",
+      "page": "556",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p556.txt",
+      "sha256": "ae17875230c10b9ef0c3660bf26b0dc4014ab279e31b9c90c3506cbd88c9ab98",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n573/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p556.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p557",
+      "work": "NY-Phisterer-I",
+      "page": "557",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p557.txt",
+      "sha256": "ac2375ba00a33d0cd134c31aadbbfbda4db8a949807bef48e8c90317160447de",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n574/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p557.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p673",
+      "work": "NY-Phisterer-I",
+      "page": "673",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p673.txt",
+      "sha256": "5c2c660ca72dfa47a4f7aeea43c3be2f7aef3f63c52c071b9419ec4809ab4404",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n690/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p673.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p674",
+      "work": "NY-Phisterer-I",
+      "page": "674",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p674.txt",
+      "sha256": "4482d6ee1f45bca9db6a86821bb7bf0eb38655906e7b5b5d4e8eb314b2aac3b0",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n691/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p674.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p690",
+      "work": "NY-Phisterer-I",
+      "page": "690",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p690.txt",
+      "sha256": "d8240d8230eca63e7f453387db8a50c0960b4ff90ded8a233029d3e00e2e4df6",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n707/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p690.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-I-p691",
+      "work": "NY-Phisterer-I",
+      "page": "691",
+      "path": "docs/research/S140/read/NY-Phisterer-I-p691.txt",
+      "sha256": "1179ecdbb99f7f4d25880a788859714c2fc2a7ffebde30080dbb0b82b7515f9b",
+      "url": "https://archive.org/details/newyorkinwarofre01phisrich/page/n708/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-I-p691.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MA-AG-1861-p7",
+      "work": "MA-AG-1861",
+      "page": "7",
+      "path": "docs/research/S140/read/MA-AG-1861-p7.txt",
+      "sha256": "0c854bd12e1e4270a4118cb2f20ab9b14d288cb3d48f19b98573aa3fede36ea4",
+      "url": "https://archive.org/details/annualreportofa1861mass/page/n13/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p7.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MA-AG-1861-p8",
+      "work": "MA-AG-1861",
+      "page": "8",
+      "path": "docs/research/S140/read/MA-AG-1861-p8.txt",
+      "sha256": "fe2ba57c1e13d9ccecf8961990d740d47c20e5407d5dc0ed2af78fe9423ef616",
+      "url": "https://archive.org/details/annualreportofa1861mass/page/n14/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p8.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MA-AG-1861-p11",
+      "work": "MA-AG-1861",
+      "page": "11",
+      "path": "docs/research/S140/read/MA-AG-1861-p11.txt",
+      "sha256": "5180921f2596a06210a3bf88cee6623555f86b8af281f7dedd2d646c211be371",
+      "url": "https://archive.org/details/annualreportofa1861mass/page/n17/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p11.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MA-AG-1861-p13",
+      "work": "MA-AG-1861",
+      "page": "13",
+      "path": "docs/research/S140/read/MA-AG-1861-p13.txt",
+      "sha256": "2c1758b4e456fa0c9dc1b9427a207d297f406eaccac374c4f4aa1c5b22a0856d",
+      "url": "https://archive.org/details/annualreportofa1861mass/page/n19/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p13.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MA-AG-1861-p14",
+      "work": "MA-AG-1861",
+      "page": "14",
+      "path": "docs/research/S140/read/MA-AG-1861-p14.txt",
+      "sha256": "02e592faae5afd231d5f634095e0d8a5f930644619970b8c6696e0287c90575b",
+      "url": "https://archive.org/details/annualreportofa1861mass/page/n20/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-AG-1861-p14.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "RI-Register-1866-p3",
+      "work": "RI-Register-1866",
+      "page": "3",
+      "path": "docs/research/S140/read/RI-Register-1866-p3.txt",
+      "sha256": "2cada7d80ff5849d988ae15544ca3203ab0253b118526153d820327ba396cd11",
+      "url": "https://archive.org/details/officialregister00rhod/page/n9/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p3.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "RI-Register-1866-p4",
+      "work": "RI-Register-1866",
+      "page": "4",
+      "path": "docs/research/S140/read/RI-Register-1866-p4.txt",
+      "sha256": "63606a2d7967e5fd1fae882e581a901db7c8af18a791be2a252d871d6965b174",
+      "url": "https://archive.org/details/officialregister00rhod/page/n10/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p4.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "RI-Register-1866-p9",
+      "work": "RI-Register-1866",
+      "page": "9",
+      "path": "docs/research/S140/read/RI-Register-1866-p9.txt",
+      "sha256": "84bf7c23a75dd2eb13bfb5318fc60edf483d1a44c2df8ced9546a6b387c54972",
+      "url": "https://archive.org/details/officialregister00rhod/page/n15/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p9.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MI-Robertson-1882-p165",
+      "work": "MI-Robertson-1882",
+      "page": "165",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p165.txt",
+      "sha256": "69108cfa639bacb226bb55512bb7fab56977c7691f9c2e222dabe68a13ebd55a",
+      "url": "https://archive.org/details/michiganinwar00mich/page/n179/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MI-Robertson-1882-p165.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MI-Robertson-1882-p166",
+      "work": "MI-Robertson-1882",
+      "page": "166",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p166.txt",
+      "sha256": "444475cd9e74a6a2323b118ba37645fd93573c9477cd703a590d491ab6f627d3",
+      "url": "https://archive.org/details/michiganinwar00mich/page/n180/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MI-Robertson-1882-p166.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MI-Robertson-1882-p173",
+      "work": "MI-Robertson-1882",
+      "page": "173",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p173.txt",
+      "sha256": "18d477987c7ed21ac22645b9eeec936cfd29a4c0f5ecccb70b60a3ffd61fbc09",
+      "url": "https://archive.org/details/michiganinwar00mich/page/n187/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MI-Robertson-1882-p173.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "RI-Register-1866-p1",
+      "work": "RI-Register-1866",
+      "page": "[1]",
+      "path": "docs/research/S140/read/RI-Register-1866-p1.txt",
+      "sha256": "a9b065af78c1f654dd699fefecafdf249d35b01ca9ab9ded12ac8469da40efd4",
+      "url": "https://archive.org/details/officialregister00rhod/page/n7/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\RI-Register-1866-p1.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "OR-I-II-p325",
+      "work": "OR I-II",
+      "page": "325",
+      "path": "docs/research/S140/read/OR-I-II-p325.txt",
+      "sha256": "c334a06d3c1498f467be4bb66255bc3b0fcd93bdd1fe00c2f3d85df337c7009d",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n344/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-I-II-p325.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "OR-III-I-p67",
+      "work": "OR III-I",
+      "page": "67",
+      "path": "docs/research/S140/read/OR-III-I-p67.txt",
+      "sha256": "e8f5618d4c7ebbc385e20396712dc5f4f294306e186c0a2e343c2756a6957940",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/n83/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-III-I-p67.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "OR-III-I-p68",
+      "work": "OR III-I",
+      "page": "68",
+      "path": "docs/research/S140/read/OR-III-I-p68.txt",
+      "sha256": "fe01c25d0427b5c15f736f4784a70cd596d4f7a5a9f9a087a2a5708d15df02d8",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/n84/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-III-I-p68.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "OR-III-I-p69",
+      "work": "OR III-I",
+      "page": "69",
+      "path": "docs/research/S140/read/OR-III-I-p69.txt",
+      "sha256": "f3688a91c5ccd2c6c53d18c0a4d1e39e58e9ff45da43f6e3fd51c01d85387c08",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/n85/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\OR-III-I-p69.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "ME-AG-1861-p6",
+      "work": "ME-AG-1861",
+      "page": "6",
+      "path": "docs/research/S140/read/ME-AG-1861-p6.txt",
+      "sha256": "8ef6c45a5b6f1709cb8af2ed54aef5fe8794b6b9f6c6bda6068be175e6e8a722",
+      "url": "https://lldc.mainelegislature.org/Open/Rpts/PubDocs/PubDocs1862v1/PD1862v1_00E.pdf",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\ME-AG-1861-p6.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "ME-AG-1861-p7",
+      "work": "ME-AG-1861",
+      "page": "7",
+      "path": "docs/research/S140/read/ME-AG-1861-p7.txt",
+      "sha256": "aa118da9a62065447d7533575bf1e76a11f1d53813d47851245b4d597a7dd102",
+      "url": "https://lldc.mainelegislature.org/Open/Rpts/PubDocs/PubDocs1862v1/PD1862v1_00E.pdf",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\ME-AG-1861-p7.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "ME-AG-1861-F2-F3",
+      "work": "ME-AG-1861",
+      "page": "F2-F3",
+      "path": "docs/research/S140/read/ME-AG-1861-F2-F3.txt",
+      "sha256": "f94f1753990af5865e0ee48782265fa97715616fb8624bd7dc6d3bba6df7edf7",
+      "url": "https://lldc.mainelegislature.org/Open/Rpts/PubDocs/PubDocs1862v1/PD1862v1_00E.pdf",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\ME-AG-1861-F2-F3.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-III-p1873",
+      "work": "NY-Phisterer-III",
+      "page": "1873",
+      "path": "docs/research/S140/read/NY-Phisterer-III-p1873.txt",
+      "sha256": "ae84b2cbfeb9773b02267ad8ec0ffd2712b02edbc9ecb0c45fc8308f4521c403",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-III-p1873.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-III-p1887",
+      "work": "NY-Phisterer-III",
+      "page": "1887",
+      "path": "docs/research/S140/read/NY-Phisterer-III-p1887.txt",
+      "sha256": "495adad30b56d8a4a1a0f32d2a7041f0c814d76c19f1b5b7d4a6f738196561d8",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-III-p1887.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-III-p1888",
+      "work": "NY-Phisterer-III",
+      "page": "1888",
+      "path": "docs/research/S140/read/NY-Phisterer-III-p1888.txt",
+      "sha256": "89691fb198aeb4887166dc8fe74ab6f6f049e317fd22bd32e263cd54c8d796a3",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-III-p1888.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-IV-p2897",
+      "work": "NY-Phisterer-IV",
+      "page": "2897",
+      "path": "docs/research/S140/read/NY-Phisterer-IV-p2897.txt",
+      "sha256": "7bec73882166de4409361b224553153a16a6379906cc6c51e699cf5feb740163",
+      "url": "https://archive.org/details/newyorkinwarofre04phisrich",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-IV-p2897.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-IV-p2929",
+      "work": "NY-Phisterer-IV",
+      "page": "2929",
+      "path": "docs/research/S140/read/NY-Phisterer-IV-p2929.txt",
+      "sha256": "0f3aabdc25d5c236a2173d2cb255e8f4d8081f04bda32ad5f57b97a4e6f63e6e",
+      "url": "https://archive.org/details/newyorkinwarofre04phisrich",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-IV-p2929.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "NY-Phisterer-IV-p2930",
+      "work": "NY-Phisterer-IV",
+      "page": "2930",
+      "path": "docs/research/S140/read/NY-Phisterer-IV-p2930.txt",
+      "sha256": "0f3aabdc25d5c236a2173d2cb255e8f4d8081f04bda32ad5f57b97a4e6f63e6e",
+      "url": "https://archive.org/details/newyorkinwarofre04phisrich",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\NY-Phisterer-IV-p2930.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "CT-Catalogue-1864-opening",
+      "work": "CT-Catalogue-1864",
+      "page": "unnumbered field/staff opening immediately before p.4",
+      "path": "docs/research/S140/read/CT-Catalogue-1864-opening.txt",
+      "sha256": "a47052f2c1471864c92cb5a491ae12a7c03611dad1dd5c7ed690ba1e6ede4c41",
+      "url": "https://archive.org/download/catalogueofconne00conn/page/n14.jpg",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\CT-Catalogue-1864-opening.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "CT-Catalogue-1864-p4",
+      "work": "CT-Catalogue-1864",
+      "page": "4",
+      "path": "docs/research/S140/read/CT-Catalogue-1864-p4.txt",
+      "sha256": "4bfa2bc05ef8b2b079b396c3583af573431095724dfae6aa855a2fee698508e4",
+      "url": "https://archive.org/download/catalogueofconne00conn/page/n15.jpg",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\CT-Catalogue-1864-p4.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "MA-Record-I-p19",
+      "work": "MA-Record-I",
+      "page": "19",
+      "path": "docs/research/S140/read/MA-Record-I-p19.txt",
+      "sha256": "b46c998964d4a0bf1fad18eab4c5a0eb55e8ce5a53c2e03ab686681516c62eae",
+      "url": "https://archive.org/details/recordofmassachu00mass",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\MA-Record-I-p19.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "US-Register-I-p14",
+      "work": "US-Register-I",
+      "page": "14",
+      "path": "docs/research/S140/read/US-Register-I-p14.txt",
+      "sha256": "02af69e440b8104e0e5c82693cf2672daa7446a0dd2e91f7bbe3d1adca722999",
+      "url": "https://archive.org/details/cu31924092890247",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\US-Register-I-p14.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "US-Register-I-p300",
+      "work": "US-Register-I",
+      "page": "300",
+      "path": "docs/research/S140/read/US-Register-I-p300.txt",
+      "sha256": "1151cd00cf5790b93f268e456782e03799600490add44749d7a14df6824bab8b",
+      "url": "https://archive.org/details/cu31924092890247",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\US-Register-I-p300.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "US-Register-I-p303",
+      "work": "US-Register-I",
+      "page": "303",
+      "path": "docs/research/S140/read/US-Register-I-p303.txt",
+      "sha256": "d1a9c4609459d45a47841d77a0f0ee949c2332bd4eb72aa1366429ad58a73acc",
+      "url": "https://archive.org/details/cu31924092890247",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S137\\read\\US-Register-I-p303.txt",
+      "scope": "Reused S137 selected primary-page passage, read again for S140; inherited image checks not claimed as fresh."
+    },
+    {
+      "key": "OR-III-I-p70",
+      "work": "OR III-I",
+      "page": "70",
+      "path": "docs/research/S140/read/OR-III-I-p70.txt",
+      "sha256": "5dab72e91817b37ce5ea78d32f9a4b4201d9514b5de922b130a83b31e29cb988",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/70/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 86; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p71",
+      "work": "OR III-I",
+      "page": "71",
+      "path": "docs/research/S140/read/OR-III-I-p71.txt",
+      "sha256": "fdbba6971896517175c80e6ff12507b22de208deedad3c035e0a46bea01018c7",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/71/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 87; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p72",
+      "work": "OR III-I",
+      "page": "72",
+      "path": "docs/research/S140/read/OR-III-I-p72.txt",
+      "sha256": "d037b015c0e2907cc142a45130bc47e7089f22790e96e762ea446079ee03bb46",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/72/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 88; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p73",
+      "work": "OR III-I",
+      "page": "73",
+      "path": "docs/research/S140/read/OR-III-I-p73.txt",
+      "sha256": "8492e724764c4e072382fc3e7e7be031c23a85a6abf083c37cd8a0b84b7f85be",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/73/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 89; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p74",
+      "work": "OR III-I",
+      "page": "74",
+      "path": "docs/research/S140/read/OR-III-I-p74.txt",
+      "sha256": "14c0b919f2df20259a5f8e4f5a5d99674b08cc731fdce8653c3ca1c74815426a",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/74/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 90; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p76",
+      "work": "OR III-I",
+      "page": "76",
+      "path": "docs/research/S140/read/OR-III-I-p76.txt",
+      "sha256": "f6afdec4816097cf3a3ff99fca85e27a0ac142f0162ca5e8a5cac4491629b2f4",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/76/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 92; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p81",
+      "work": "OR III-I",
+      "page": "81",
+      "path": "docs/research/S140/read/OR-III-I-p81.txt",
+      "sha256": "4697b6f6f805d4b83be7f4c64e117dc8d3469f24487f55d394193eb9f9a0a631",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/81/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 97; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p83",
+      "work": "OR III-I",
+      "page": "83",
+      "path": "docs/research/S140/read/OR-III-I-p83.txt",
+      "sha256": "d7f799866c326a0cccf5e9b6cc1d8068d27062f86d7452ff7fa6025620cba40e",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/83/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 99; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p84",
+      "work": "OR III-I",
+      "page": "84",
+      "path": "docs/research/S140/read/OR-III-I-p84.txt",
+      "sha256": "a8894f8e8c502a1faa0a8abfe5a71c74447c42c8de0b20461bc41a1b4326b9eb",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/84/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 100; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p85",
+      "work": "OR III-I",
+      "page": "85",
+      "path": "docs/research/S140/read/OR-III-I-p85.txt",
+      "sha256": "db210de67380f2e781aa0737866f2677813872fe76200ed75854703ef85fc97b",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/85/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 101; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p150",
+      "work": "OR III-I",
+      "page": "150",
+      "path": "docs/research/S140/read/OR-III-I-p150.txt",
+      "sha256": "81044a98231ba7f5b13b63cb79d670695bccd83b481f11032048e1e49f596956",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/150/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 166; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p151",
+      "work": "OR III-I",
+      "page": "151",
+      "path": "docs/research/S140/read/OR-III-I-p151.txt",
+      "sha256": "20f224029ffb92331a554a62a955135f26776ffc58a127a55cc5acd9234a858d",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/151/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 167; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p203",
+      "work": "OR III-I",
+      "page": "203",
+      "path": "docs/research/S140/read/OR-III-I-p203.txt",
+      "sha256": "37f7b6a908aa6820231b55d5acf71c29de34f98f611cd0f8bb01f7db2119394d",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/203/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 219; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p204",
+      "work": "OR III-I",
+      "page": "204",
+      "path": "docs/research/S140/read/OR-III-I-p204.txt",
+      "sha256": "3a26db4eaa214a835b5455fc6e2c66444fea05f3f8a9ef2dbf7b969e1d90f1d3",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/204/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 220; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p220",
+      "work": "OR III-I",
+      "page": "220",
+      "path": "docs/research/S140/read/OR-III-I-p220.txt",
+      "sha256": "61b4d2acf2b3edb7e740ab4a3e2a8b299d26c2e22dd358cb5027bcc79bc6a935",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/220/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 236; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p221",
+      "work": "OR III-I",
+      "page": "221",
+      "path": "docs/research/S140/read/OR-III-I-p221.txt",
+      "sha256": "cad816cc2d76fe448702418eaaa39e5e9f7f9f7e7d8b40c50e22cc62b3a7ef9d",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/221/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 237; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p332",
+      "work": "OR III-I",
+      "page": "332",
+      "path": "docs/research/S140/read/OR-III-I-p332.txt",
+      "sha256": "612ed6b830e684e659e1afe5b804ecb468c52918e7e48e705520189b38ad81ad",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/332/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 348; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p391",
+      "work": "OR III-I",
+      "page": "391",
+      "path": "docs/research/S140/read/OR-III-I-p391.txt",
+      "sha256": "8123e189ce9da8eb6fb59d1df2d0e550a7340c8b1fad7b8be91121e83c0441c7",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/391/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 407; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-III-I-p403",
+      "work": "OR III-I",
+      "page": "403",
+      "path": "docs/research/S140/read/OR-III-I-p403.txt",
+      "sha256": "3067e5ab1a7baa9b34aa6cf17db17a114b4aec38a1f23a39e9b4e8fe2b959946",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/403/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\III1-pages.json",
+      "scope": "OCR selected printed page; XML object 419; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p117",
+      "work": "OR IV-I",
+      "page": "117",
+      "path": "docs/research/S140/read/OR-IV-I-p117.txt",
+      "sha256": "78877d0694f610629ec3c209a5e52394b3c2d0d84ef6703c561ab198a8bf9178",
+      "url": "https://archive.org/details/cu31924079579524/page/117/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 132; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p126",
+      "work": "OR IV-I",
+      "page": "126",
+      "path": "docs/research/S140/read/OR-IV-I-p126.txt",
+      "sha256": "77111920c2b07bc2af61dd3ef5563afdb92fdc3729577f46c3e9616fee0dfdb4",
+      "url": "https://archive.org/details/cu31924079579524/page/126/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 141; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p134",
+      "work": "OR IV-I",
+      "page": "134",
+      "path": "docs/research/S140/read/OR-IV-I-p134.txt",
+      "sha256": "7663898e32f00774aa13218f06dc13377c79a0f76a9c86459f6c954c5534a95c",
+      "url": "https://archive.org/details/cu31924079579524/page/134/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 149; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p135",
+      "work": "OR IV-I",
+      "page": "135",
+      "path": "docs/research/S140/read/OR-IV-I-p135.txt",
+      "sha256": "7378b9dfaa979caed15c4440e57041762913add09e836619833f0e8e37f01753",
+      "url": "https://archive.org/details/cu31924079579524/page/135/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 150; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p211",
+      "work": "OR IV-I",
+      "page": "211",
+      "path": "docs/research/S140/read/OR-IV-I-p211.txt",
+      "sha256": "a9d756bcc6876ae6fe11ed9f13a7c8636b8361490c5f3a1a9e1c74838e50f550",
+      "url": "https://archive.org/details/cu31924079579524/page/211/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 226; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p224",
+      "work": "OR IV-I",
+      "page": "224",
+      "path": "docs/research/S140/read/OR-IV-I-p224.txt",
+      "sha256": "fef4e18174df1f8d019811f84a94311d53ade16461731955e3a23a4d288fcb47",
+      "url": "https://archive.org/details/cu31924079579524/page/224/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 239; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p225",
+      "work": "OR IV-I",
+      "page": "225",
+      "path": "docs/research/S140/read/OR-IV-I-p225.txt",
+      "sha256": "025c1ed6acd21c8a773abd46d1fb1d100e00cc480aab53be340139e26e3de19b",
+      "url": "https://archive.org/details/cu31924079579524/page/225/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 240; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p231",
+      "work": "OR IV-I",
+      "page": "231",
+      "path": "docs/research/S140/read/OR-IV-I-p231.txt",
+      "sha256": "9857114fa5269013819a9c03372d93d7e056aa8fd5ffd5abd839afbe4c8dd9c0",
+      "url": "https://archive.org/details/cu31924079579524/page/231/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 246; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p232",
+      "work": "OR IV-I",
+      "page": "232",
+      "path": "docs/research/S140/read/OR-IV-I-p232.txt",
+      "sha256": "440148a8134def4f2521037303b455c31766ebf92d2ee0660e8daea351ed7497",
+      "url": "https://archive.org/details/cu31924079579524/page/232/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 247; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p233",
+      "work": "OR IV-I",
+      "page": "233",
+      "path": "docs/research/S140/read/OR-IV-I-p233.txt",
+      "sha256": "c5042068c381fd8ab24e1137f11995088a42f8bc8cefd62d0925671bfc465197",
+      "url": "https://archive.org/details/cu31924079579524/page/233/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 248; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p237",
+      "work": "OR IV-I",
+      "page": "237",
+      "path": "docs/research/S140/read/OR-IV-I-p237.txt",
+      "sha256": "f3a6d7678cd71571b047a35c5a744c6cfd4f5135c6e6f6755e81abd074ccc6cc",
+      "url": "https://archive.org/details/cu31924079579524/page/237/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 252; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p238",
+      "work": "OR IV-I",
+      "page": "238",
+      "path": "docs/research/S140/read/OR-IV-I-p238.txt",
+      "sha256": "161eb6daeeebbb470e29a41ffb36b722826a779b4d62a0449a70f7e8eab7b9e3",
+      "url": "https://archive.org/details/cu31924079579524/page/238/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 253; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p310",
+      "work": "OR IV-I",
+      "page": "310",
+      "path": "docs/research/S140/read/OR-IV-I-p310.txt",
+      "sha256": "e5848b903b3bca8755dae94912c89b36403dcb5e72e7002fc32fc27770e1eabf",
+      "url": "https://archive.org/details/cu31924079579524/page/310/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 324; printed page citation takes precedence over scan index. Pages309/310 occur swapped in this scan; corrected by printed heading."
+    },
+    {
+      "key": "OR-IV-I-p325",
+      "work": "OR IV-I",
+      "page": "325",
+      "path": "docs/research/S140/read/OR-IV-I-p325.txt",
+      "sha256": "5e585811f7beaff378047d4ae6ca11bf3694babd0be9799a260ceb026a37c1d1",
+      "url": "https://archive.org/details/cu31924079579524/page/325/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 340; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p402",
+      "work": "OR IV-I",
+      "page": "402",
+      "path": "docs/research/S140/read/OR-IV-I-p402.txt",
+      "sha256": "4498b0ba7c503c62fec02752e9f30bf7b26562681a36e8d97a2c81dfd0905591",
+      "url": "https://archive.org/details/cu31924079579524/page/402/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 417; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p403",
+      "work": "OR IV-I",
+      "page": "403",
+      "path": "docs/research/S140/read/OR-IV-I-p403.txt",
+      "sha256": "80f6f1727d8afeeb5818820708af8e8b9c101fd6783dd9fd313645fe8cb94ed2",
+      "url": "https://archive.org/details/cu31924079579524/page/403/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 418; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p404",
+      "work": "OR IV-I",
+      "page": "404",
+      "path": "docs/research/S140/read/OR-IV-I-p404.txt",
+      "sha256": "76da95c255ed2a447b2b1e9e461f8e2945fb6f0b6edb9a58731ede8dec5cb308",
+      "url": "https://archive.org/details/cu31924079579524/page/404/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1-pages.json",
+      "scope": "OCR selected printed page; XML object 419; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p747",
+      "work": "OR IV-I",
+      "page": "747",
+      "path": "docs/research/S140/read/OR-IV-I-p747.txt",
+      "sha256": "669364977774469a27b5492b44903d379146a4dabb5a11c2018cd7d12ffd1f63",
+      "url": "https://archive.org/details/cu31924079579532/page/747/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1b-pages.json",
+      "scope": "OCR selected printed page; XML object 140; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p748",
+      "work": "OR IV-I",
+      "page": "748",
+      "path": "docs/research/S140/read/OR-IV-I-p748.txt",
+      "sha256": "44fd9081391f84906c501e7142243315ce3d9a06983983cc2b265210476eaf24",
+      "url": "https://archive.org/details/cu31924079579532/page/748/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1b-pages.json",
+      "scope": "OCR selected printed page; XML object 141; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p749",
+      "work": "OR IV-I",
+      "page": "749",
+      "path": "docs/research/S140/read/OR-IV-I-p749.txt",
+      "sha256": "c14da8f8cfa3af9a1a76b2993432938590f7e3eb365306ac691ee4e60859ad60",
+      "url": "https://archive.org/details/cu31924079579532/page/749/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1b-pages.json",
+      "scope": "OCR selected printed page; XML object 142; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p750",
+      "work": "OR IV-I",
+      "page": "750",
+      "path": "docs/research/S140/read/OR-IV-I-p750.txt",
+      "sha256": "e926fa357fb4af8f8953ea5c38e0838de3537680a9c8f906847cc7a1fb6201cd",
+      "url": "https://archive.org/details/cu31924079579532/page/750/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1b-pages.json",
+      "scope": "OCR selected printed page; XML object 143; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-IV-I-p751",
+      "work": "OR IV-I",
+      "page": "751",
+      "path": "docs/research/S140/read/OR-IV-I-p751.txt",
+      "sha256": "fff85b66eeb48f8a745c98babc34e4b96636a42b21ce23c5624dde97947ecc0f",
+      "url": "https://archive.org/details/cu31924079579532/page/751/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\IV1b-pages.json",
+      "scope": "OCR selected printed page; XML object 144; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "OR-I-LI.2-p138",
+      "work": "OR I-LI.2",
+      "page": "138",
+      "path": "docs/research/S140/read/OR-I-LI.2-p138.txt",
+      "sha256": "35d08914d89ecdcda75b36437b0c38dd6d7fc6368cb6ac93b919b28cfa3ef835",
+      "url": "https://archive.org/details/warofrebellion512unit/page/138/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s121\\LI2-pages.json",
+      "scope": "OCR selected printed page; XML object 146; printed page citation takes precedence over scan index."
+    },
+    {
+      "key": "NJ-Stryker-I-p67",
+      "work": "NJ-Stryker-I",
+      "page": "67",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p67.txt",
+      "sha256": "0cefdac0674d801607dd3975be84e1e8dbf394b3d1ee7bd41c8b88456054586d",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n72/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p68",
+      "work": "NJ-Stryker-I",
+      "page": "68",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p68.txt",
+      "sha256": "139a4bbc276a59f6ae58da7e6cec4f92ec8ca8248a7547c07995019325facc30",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n73/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p102",
+      "work": "NJ-Stryker-I",
+      "page": "102",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p102.txt",
+      "sha256": "af0e82fa3f4e10a4b59c79d088214fa94d7b3dd62b8b50daf04c82dc06841937",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n107/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p150",
+      "work": "NJ-Stryker-I",
+      "page": "150",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p150.txt",
+      "sha256": "7a27af2141987518c8d56212690f5c6bbff489f4ccbef8f328154ecaeb6c267a",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n155/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p182",
+      "work": "NJ-Stryker-I",
+      "page": "182",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p182.txt",
+      "sha256": "1dd7bfb0dd2ae2a1c4e393b4d36beb16eee43531ce9e8920b6d61e12026f4ec3",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n187/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p228",
+      "work": "NJ-Stryker-I",
+      "page": "228",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p228.txt",
+      "sha256": "2e21d43139cfb3d4a161bb82a4b9e3352d24160ddd4f6c1fbd0b654fc9ef18ee",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n233/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p267",
+      "work": "NJ-Stryker-I",
+      "page": "267",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p267.txt",
+      "sha256": "215b29ce28dc70b8307a63f61bd4edc0e9d32fb804af92a55fbfa9876915a740",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n272/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p300",
+      "work": "NJ-Stryker-I",
+      "page": "300",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p300.txt",
+      "sha256": "2d9cd49c5060ca3caa9b765e3cc343b03344f1b3090240e878f4db2b58eec5d1",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n305/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p366",
+      "work": "NJ-Stryker-I",
+      "page": "366",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p366.txt",
+      "sha256": "ca7f7d2a416f097a22225d0233f9c8c9dd9ac53412ba1c080884ec997e69d75d",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n371/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p430",
+      "work": "NJ-Stryker-I",
+      "page": "430",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p430.txt",
+      "sha256": "d641da95439fb6b8f9d28b7ad1a0505b7901c9ba33c9d84aca1814b6c84cf408",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n435/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NJ-Stryker-I-p488",
+      "work": "NJ-Stryker-I",
+      "page": "488",
+      "path": "docs/research/S140/read/NJ-Stryker-I-p488.txt",
+      "sha256": "01cc39cb38915eb8a2aac40189ceeeaff069a02f385bc73dbcd7af0ddeb856b4",
+      "url": "https://archive.org/details/newjerseyincivil01recorich/page/n493/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\newjerseyincivil01recorich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "MI-Robertson-1882-p187",
+      "work": "MI-Robertson-1882",
+      "page": "187",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p187.txt",
+      "sha256": "49a5ca0accbc81ea3759bd0b0c4e14a34ef754ddd9164c7b18b5924b2ee2c97f",
+      "url": "https://archive.org/details/michiganinwar00mich/page/187/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\michiganinwar00mich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "MI-Robertson-1882-p188",
+      "work": "MI-Robertson-1882",
+      "page": "188",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p188.txt",
+      "sha256": "4277d0381a5c024fe8b206c0561b933a9d6d219ccb82712a0002aed57562ab06",
+      "url": "https://archive.org/details/michiganinwar00mich/page/188/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\michiganinwar00mich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "MI-Robertson-1882-p206",
+      "work": "MI-Robertson-1882",
+      "page": "206",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p206.txt",
+      "sha256": "0939e642f6a5db49140875d8329adb9ff2843e29ffcbb33a2bae320853559692",
+      "url": "https://archive.org/details/michiganinwar00mich/page/206/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\michiganinwar00mich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "MI-Robertson-1882-p220",
+      "work": "MI-Robertson-1882",
+      "page": "220",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p220.txt",
+      "sha256": "7c04c2dcd7ccd3d1a0fe40092e3b6d17a9135f06af6359db1aa02e497f49da92",
+      "url": "https://archive.org/details/michiganinwar00mich/page/220/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\michiganinwar00mich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "MI-Robertson-1882-p221",
+      "work": "MI-Robertson-1882",
+      "page": "221",
+      "path": "docs/research/S140/read/MI-Robertson-1882-p221.txt",
+      "sha256": "7db03e2af6db0d2bda4067f72c44c5d36849332329983e917b9a9271be763f20",
+      "url": "https://archive.org/details/michiganinwar00mich/page/221/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\michiganinwar00mich-pages.json",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "VT-Roster-p5",
+      "work": "VT official revised roster",
+      "page": "5",
+      "path": "docs/research/S140/read/VT-Roster-p5.txt",
+      "sha256": "7af9702b47b413cd026e08fd23bbe5dbed684394b2704a716f37233627acb962",
+      "url": "https://archive.org/details/cu31924080774148/page/5/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\VT.xml",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "VT-Roster-p27",
+      "work": "VT official revised roster",
+      "page": "27",
+      "path": "docs/research/S140/read/VT-Roster-p27.txt",
+      "sha256": "ecfbd0db6bcd37bfbba9f1941e59fdb26514750d2e10c8325f4c724d7e5dc212",
+      "url": "https://archive.org/details/cu31924080774148/page/27/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\VT.xml",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NH-Roster-p1",
+      "work": "NH official revised roster",
+      "page": "1",
+      "path": "docs/research/S140/read/NH-Roster-p1.txt",
+      "sha256": "3e23175a823fd1d9ccde9e6a81978dc9448172ef666bdba3ef6ba99ea52a5e56",
+      "url": "https://archive.org/details/cu31924096263128/page/1/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\NH.xml",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "NH-Roster-p25",
+      "work": "NH official revised roster",
+      "page": "25",
+      "path": "docs/research/S140/read/NH-Roster-p25.txt",
+      "sha256": "841c28ff0b23ceff2f03e1b3cadcb00e6aa4cdc1bdf858e7bd47bcb36e36aac1",
+      "url": "https://archive.org/details/cu31924096263128/page/25/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\NH.xml",
+      "scope": "Selected page passage read; OCR, not a diplomatic transcription."
+    },
+    {
+      "key": "SC-Salley-II-p1",
+      "work": "SC Historical Commission, Salley II",
+      "page": "1",
+      "path": "docs/research/S140/read/SC-Salley-II-p1.txt",
+      "sha256": "d7e5d959d8150d017e01b907990c31144add0b25186c39e927f4803771897aca",
+      "url": "https://archive.org/details/southcarolinatr00sallgoog",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p1-read.txt",
+      "scope": "Selected published muster-roll introduction; inherited scan checks not claimed fresh."
+    },
+    {
+      "key": "SC-Salley-II-p284",
+      "work": "SC Historical Commission, Salley II",
+      "page": "284",
+      "path": "docs/research/S140/read/SC-Salley-II-p284.txt",
+      "sha256": "6cf10ed77d0fd095ebeb0537876f94751a22b9c1283bef4fcab601bbe4ffe87f",
+      "url": "https://archive.org/details/southcarolinatr00sallgoog",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p284-read.txt",
+      "scope": "Selected published muster-roll introduction; inherited scan checks not claimed fresh."
+    },
+    {
+      "key": "SC-Salley-II-p570",
+      "work": "SC Historical Commission, Salley II",
+      "page": "570",
+      "path": "docs/research/S140/read/SC-Salley-II-p570.txt",
+      "sha256": "9cd20bfacb3e6bdfeda0110706ca97b895cd367fc0e69dce3e843392070e5224",
+      "url": "https://archive.org/details/southcarolinatr00sallgoog",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p570-read.txt",
+      "scope": "Selected published muster-roll introduction; inherited scan checks not claimed fresh."
+    },
+    {
+      "key": "SC-Salley-II-p318",
+      "work": "SC Historical Commission, Salley II",
+      "page": "318",
+      "path": "docs/research/S140/read/SC-Salley-II-p318.txt",
+      "sha256": "f163238783928395cb328c41c4dca62f5c8fd280ef9949072bc20c714c7d4a75",
+      "url": "https://archive.org/details/southcarolinatr00sallgoog",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\SC-muster-II-p318-read.txt",
+      "scope": "Selected published muster-roll introduction; inherited scan checks not claimed fresh."
+    },
+    {
+      "key": "IA-Logan-I-p91",
+      "work": "Iowa AG, Roster and Record I (1908)",
+      "page": "91",
+      "path": "docs/research/S140/read/IA-Logan-I-p91.txt",
+      "sha256": "96ffed6087369e3121e6936fdf52929123f74c0a3eff815ffecefcf0698b5138",
+      "url": "https://archive.org/details/aby1249.0001.001.umich.edu/page/91/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\IA.txt",
+      "scope": "Selected opening read in full-text OCR; page follows volume contents and printed heading; no fresh scan collation."
+    },
+    {
+      "key": "IA-Logan-I-p98",
+      "work": "Iowa AG, Roster and Record I (1908)",
+      "page": "98",
+      "path": "docs/research/S140/read/IA-Logan-I-p98.txt",
+      "sha256": "049afc2b083c29cc30ad08c10b71ec90796b252816f45db646d90c6799bc42db",
+      "url": "https://archive.org/details/aby1249.0001.001.umich.edu/page/98/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\IA.txt",
+      "scope": "Selected opening read in full-text OCR; page follows volume contents and printed heading; no fresh scan collation."
+    },
+    {
+      "key": "IA-Logan-I-p101",
+      "work": "Iowa AG, Roster and Record I (1908)",
+      "page": "101",
+      "path": "docs/research/S140/read/IA-Logan-I-p101.txt",
+      "sha256": "0fd76acee6a98dde8e2242ffdeb2be6128b3c3256e4449390857ee68b14d5e68",
+      "url": "https://archive.org/details/aby1249.0001.001.umich.edu/page/101/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\IA.txt",
+      "scope": "Selected opening read in full-text OCR; page follows volume contents and printed heading; no fresh scan collation."
+    },
+    {
+      "key": "IA-Logan-I-p283",
+      "work": "Iowa AG, Roster and Record I (1908)",
+      "page": "283",
+      "path": "docs/research/S140/read/IA-Logan-I-p283.txt",
+      "sha256": "71c1d440f6b80a0eb3d944740ac010d71a11ca86c04c5a606a75226f316b2208",
+      "url": "https://archive.org/details/aby1249.0001.001.umich.edu/page/283/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s140\\sources\\IA.txt",
+      "scope": "Selected opening read in full-text OCR; page follows volume contents and printed heading; no fresh scan collation."
+    },
+    {
+      "key": "CT-Catalogue-1864-p12",
+      "work": "CT official catalogue (1864)",
+      "page": "12",
+      "path": "docs/research/S140/read/CT-Catalogue-1864-p12.txt",
+      "sha256": "d36b3f5005d554ea573759584be5d8b62c97732356699dc36e9c95521ef6abd6",
+      "url": "https://archive.org/details/catalogueofconne00conn/page/12/mode/1up",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s137\\sources\\CT-catalogue.txt",
+      "scope": "Company E opening only; printed page12 precedes heading; compare federal register I p303."
+    }
+  ]
+}

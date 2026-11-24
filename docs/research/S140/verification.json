@@ -1,0 +1,29 @@
+{
+  "boundary": {
+    "exit": 0,
+    "log": "runs/s140/boundary.log"
+  },
+  "pack_rules": {
+    "exit": 0,
+    "log": "runs/s140/pack-rules.log"
+  },
+  "data_audit": {
+    "checks": 6452,
+    "failures": [],
+    "baseline_paths": 2241,
+    "observations": 61,
+    "source_passages": 115,
+    "profiles": 100
+  },
+  "runtime": {
+    "node": "v22.23.2",
+    "workspace_aliases": {
+      "cli": "C:\\Pyrrhic\\sprint-research-military\\packages\\cli",
+      "kernel": "C:\\Pyrrhic\\sprint-research-military\\packages\\kernel",
+      "pack-format": "C:\\Pyrrhic\\sprint-research-military\\packages\\pack-format",
+      "rule-seats": "C:\\Pyrrhic\\sprint-research-military\\packages\\rule-seats"
+    }
+  },
+  "campaigns": "none: production and pack unchanged",
+  "reuse": "S137 service cases/S121 retained source artifacts reused. S135 simulation not rerun or represented as current validation."
+}
