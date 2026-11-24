@@ -9,7 +9,7 @@ import { deriveMap } from '../src/control-index/derived.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { passageOf } from '../src/tick/passage.ts';
 import { createState } from '../src/tick/setup.ts';
-import { tick, TICK_MECHANICS } from '../src/tick/tick.ts';
+import { tick as kernelTick, TICK_MECHANICS } from '../src/tick/tick.ts';
 import { deliverDue } from '../src/tick/deliver.ts';
 import { viewFor } from '../src/view/view.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
@@ -20,7 +20,9 @@ import { goalTermsProblems } from '../src/log/log.ts';
 import { localOptions } from '../src/seats/local-actions.ts';
 import { enactMandate } from '../src/command/authority.ts';
 import { sendMessages, type TransitMessage } from '../src/messages/transit.ts';
-import { knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { deliverReport, knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { observeStrength, strengthClaim } from '../src/knowledge/strength.ts';
 import { toId } from '../src/ids.ts';
 import type { MandateGrant } from '../src/world/mandates.ts';
 import type { PrincipalDoctrine } from '../src/world/world.ts';
@@ -56,6 +58,23 @@ const doctrine: PrincipalDoctrine = {
   concentrateSource: null, calls: [], inquireEveryDays: 7, appointKinds: { land: [], naval: [] },
   offensives: [{ post: P('a_army'), issuer: PER('a_gen2'), letter, purpose, fromDate: '1900-06-02', source: 'Fictional letter' }],
 };
+
+// These positive execution controls explicitly declare the searched empty
+// ground clear. The production observer's "nothing seen" is now unknown.
+// The opposing force's number and attribution still come through reconnaissance.
+function tick(...args: Parameters<typeof kernelTick>): ReturnType<typeof kernelTick> {
+  const result=kernelTick(...args);
+  const messagesInTransit=result.state.messagesInTransit.map(m=>{
+    const b=m.msgReport;if(b?.reportType!=='enemy-estimate')return m;
+    const reportClaims=b.reportClaims.map(c=>{
+      if(c.claimKind!=='enemy-estimate-unknown' || c.claimRegion===null || c.claimStrength?.strengthPresence!==false)return c;
+      return strengthClaim(c.claimRegion,observeStrength({observer:b.reportAuthor,region:c.claimRegion,day:b.reportDay,scope:'region',presence:false,
+        coverage:'complete',counts:[],cleared:true,conditions:'Fictional positive-control observer explicitly cleared the searched region'}),c.claimConfidence);
+    });
+    return {...m,msgReport:{...b,reportClaims}};
+  });
+  return {...result,state:{...result.state,messagesInTransit}};
+}
 
 function fixture({ optIn = true, enemyStrength = 200, ownStrength = 1400, storesDays = 20, dayBA = 1, startDate = '1900-06-01',
   authored = false, commander = 'a_gen', resistant = false }: {
@@ -94,7 +113,17 @@ function fixture({ optIn = true, enemyStrength = 200, ownStrength = 1400, stores
     { faction: F('a'), principal: PER('a_lead'), capital: R('camp'), playable: true },
     { faction: F('b'), principal: PER('b_lead'), capital: R('rear'), playable: true },
   ], startDate }));
-  return { world, state: createState(world, { seed: 17, people: 'as-history' }) };
+  let state=createState(world,{seed:17,people:'as-history'});
+  // The positive fixture also supplies affirmative clearance of the remote
+  // empty regions needed by the neighbor/recovery gates. No enemy identity is supplied.
+  for(const p of world.map.world.people) {
+    if(p.faction!=='a' && p.faction!=='b')continue;
+    const enemy=p.faction==='a'?'field':'camp';
+    state=deliverReport(state,seatIdFor(p.id),{id:toId('message',`fixture.remote.clear.${p.id}`),knownReceivedDay:0,knownRoute:'courier',knownVia:[],
+      knownBody:{reportType:'enemy-estimate',reportSubtype:null,reportAuthor:p.id,reportAuthorPost:null,reportSubjectKind:'enemy',reportSubjectId:'fixture_remote',reportDay:0,reportHour:null,
+        reportClaims:[...world.map.regions.keys()].filter(r=>r!==enemy).map(r=>({claimKind:'enemy-strength' as const,claimRegion:r,claimValue:0,claimToken:null,claimConfidence:1000})),reportAdvice:null,reportAnswers:null}},NO_TRUTH);
+  }
+  return {world,state};
 }
 
 function plannerInput(config?: Parameters<typeof fixture>[0], saw = true, goal: GoalTerms = terms) {
@@ -201,7 +230,9 @@ describe('attack or demonstrate', () => {
     const four = choices(undefined, true, { ...terms, purpose: { ...purpose,
       actionArea: [R('camp'), R('field'), R('edge_position'), R('rear')] } });
     expect(four.draftGenerated).toBe(policy.totalCandidates);
-    expect(four.draftRejected.some(r => r.rejGates.some(g => g.gateKind === 'unknown_recovery'))).toBe(true);
+    const known=plannerInput(undefined,true,{...terms,purpose:{...purpose,actionArea:[R('camp'),R('field'),R('edge_position'),R('rear')]}});
+    const unknown=draft({...known,beliefs:new Map([...known.beliefs].map(([r,n])=>[r,r===R('rear')?null:n]))});
+    expect(unknown.draftRejected.some(r => r.rejGates.some(g => g.gateKind === 'unknown_recovery'))).toBe(true);
     expect(four.draftSearches).toBeLessThanOrEqual(plannerInput().rules.maxSearches);
   });
 
@@ -358,14 +389,15 @@ describe('attack or demonstrate', () => {
       knowledgeBySeat: { ...current.knowledgeBySeat, [actingSeat]: knowledgeOf(recovered!, actingSeat) },
       messagesInTransit: current.messagesInTransit.filter(m => m.msgTo !== PER('a_gen')) };
     const noNewObservation = tick(world, replayed, []).state;
-    expect(noNewObservation.planRecords[P('a_army')]!.planStatus).toBe('choosing');
+    // The recovered picture is now stale at this later morning. It cannot
+    // reopen an episode or reuse a formerly numeric recovery certificate.
+    expect(noNewObservation.planRecords[P('a_army')]!.planStatus).toBe('approved');
     expect(Object.values(noNewObservation.operationRecords).filter(o => o.opOrder === operation.opOrder)).toHaveLength(1);
     const oldReportChoiceDay = noNewObservation.stateDay + 1;
-    const oldReportCandidate = noNewObservation.planRecords[P('a_army')]!.planDraft!.draftCandidates[0]!;
     const oldReportChoice = tick(world, noNewObservation, [{ day: oldReportChoiceDay, seat: actingSeat,
-      command: { cmd: 'choose', request: `plan:a_army:${oldReportChoiceDay}`, option: oldReportCandidate.id } }]);
-    expect(oldReportChoice.rejections).toEqual([]);
-    expect(Object.values(oldReportChoice.state.operationRecords).filter(o => o.opOrder === operation.opOrder)).toHaveLength(2);
+      command: { cmd: 'choose', request: `plan:a_army:${oldReportChoiceDay}`, option: operation.opPlan } }]);
+    expect(oldReportChoice.rejections).not.toEqual([]);
+    expect(Object.values(oldReportChoice.state.operationRecords).filter(o => o.opOrder === operation.opOrder)).toHaveLength(1);
     const newDay = current.stateDay + 1;
     const repeat = tick(world, current, [{ day: newDay, seat: seatIdFor(PER('a_gen')),
       command: { cmd: 'choose', request: `plan:a_army:${newDay}`, option: operation.opPlan } }]);

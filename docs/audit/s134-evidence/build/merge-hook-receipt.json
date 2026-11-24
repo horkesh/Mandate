@@ -1,0 +1,11 @@
+{
+  "command": [
+    "git",
+    "commit",
+    "-F",
+    "runs/s134/merge-message.txt"
+  ],
+  "exit": 0,
+  "seconds": 299.385,
+  "log": "runs/s134/merge-retry-hook.log"
+}

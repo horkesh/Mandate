@@ -93,7 +93,13 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
       // CODEX2026-11-24 accepts only this S130 time0..0 record, including
       // its complete cause, evidence and both named live drivers. S133 is separate.
       const s130Quiet = fingerprint(r) === "9fa5be7cd39404a145de49a41a375e34efd5c6bba90be758a4de22e4dfb8ed67";
-      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet && !s119Quiet && !s122Quiet && !s124Quiet && !s130Quiet) {
+      // CODEX 2026-11-24 authorises only the complete S134 goal-fit zero,
+      // bound to its cause, evidence and independent unknown-strength live driver.
+      const s134Quiet = fingerprint(r) === "48a1f2aaed89179a9018f2f5039fcd0676624594b76bbd409bbac272a2bf9d88";
+      // CODEX 2026-11-24 authorises only this complete testbed flank zero,
+      // including its exact cause, evidence and independent low-draw driver.
+      const s134FlankQuiet = fingerprint(r) === "f9b10278f80eec8fd448192c0175c5d80a7eb95cf79db3b4b110dbebe23cfcc0";
+      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet && !s119Quiet && !s122Quiet && !s124Quiet && !s130Quiet && !s134Quiet && !s134FlankQuiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

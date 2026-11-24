@@ -1,0 +1,601 @@
+{
+  "criterion": {
+    "problems": [],
+    "evidence": [
+      "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+      "op:cs_cmd_harpers_ferry:142 (confederate, direct) fought battle battle:harpers_ferry:146",
+      "op:us_dept_northeastern_virginia:135 (union, direct) fought battle battle:manassas:140",
+      "op:us_dept_pennsylvania:141 (union, direct) fought battle battle:harpers_ferry:146"
+    ]
+  },
+  "fights": [
+    {
+      "battle": "battle:fort_sumter:38",
+      "day": 38,
+      "kind": "bombard",
+      "contact": 0,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": "beauregard_pierre_g_t",
+          "post": "cs_cmd_charleston",
+          "present": 416,
+          "committed": 416,
+          "engaged": 416,
+          "unknownBlocks": [],
+          "blocks": [
+            "fb_st_charleston_1st_artillery_battalion",
+            "fb_st_charleston_floating_battery",
+            "fb_st_charleston_fort_johnson"
+          ],
+          "killed": 0,
+          "wounded": 0,
+          "missing": 0,
+          "captured": 0,
+          "result": "held",
+          "retreatTo": null
+        },
+        {
+          "faction": "union",
+          "commander": "anderson_robert",
+          "post": "us_fort_sumter",
+          "present": 85,
+          "committed": 85,
+          "engaged": 85,
+          "unknownBlocks": [],
+          "blocks": [
+            "fb_us_sumter_garrison"
+          ],
+          "killed": 0,
+          "wounded": 0,
+          "missing": 0,
+          "captured": 0,
+          "result": "held",
+          "retreatTo": null
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": false
+    },
+    {
+      "battle": "battle:fort_sumter:38",
+      "day": 39,
+      "kind": "bombard",
+      "contact": 0,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": "beauregard_pierre_g_t",
+          "post": "cs_cmd_charleston",
+          "present": 416,
+          "committed": 416,
+          "engaged": 416,
+          "unknownBlocks": [],
+          "blocks": [
+            "fb_st_charleston_1st_artillery_battalion",
+            "fb_st_charleston_floating_battery",
+            "fb_st_charleston_fort_johnson"
+          ],
+          "killed": 0,
+          "wounded": 0,
+          "missing": 0,
+          "captured": 0,
+          "result": "gained_ground",
+          "retreatTo": null
+        },
+        {
+          "faction": "union",
+          "commander": "anderson_robert",
+          "post": "us_fort_sumter",
+          "present": 85,
+          "committed": 85,
+          "engaged": 85,
+          "unknownBlocks": [],
+          "blocks": [
+            "fb_us_sumter_garrison"
+          ],
+          "killed": 0,
+          "wounded": 0,
+          "missing": 0,
+          "captured": 0,
+          "result": "held",
+          "retreatTo": null
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": false
+    },
+    {
+      "battle": "battle:manassas:140",
+      "day": 140,
+      "kind": "attack_open",
+      "contact": 6490,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": "beauregard_pierre_g_t",
+          "post": "cs_cmd_manassas",
+          "present": 6490,
+          "committed": 6490,
+          "engaged": 6490,
+          "unknownBlocks": [],
+          "blocks": [
+            "raised.st_gov_alabama.d122.2",
+            "raised.st_gov_south_carolina.d125",
+            "state-forces.va_manassas_garland"
+          ],
+          "killed": 168,
+          "wounded": 954,
+          "missing": 550,
+          "captured": 235,
+          "result": "routed",
+          "retreatTo": "loudoun_fauquier"
+        },
+        {
+          "faction": "union",
+          "commander": "mcdowell_irvin",
+          "post": "us_dept_northeastern_virginia",
+          "present": 59754,
+          "committed": 41827,
+          "engaged": 41827,
+          "unknownBlocks": [],
+          "blocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "killed": 131,
+          "wounded": 743,
+          "missing": 69,
+          "captured": 0,
+          "result": "gained_ground",
+          "retreatTo": null
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": false
+    },
+    {
+      "battle": "battle:manassas:141",
+      "day": 141,
+      "kind": "meeting",
+      "contact": 3780,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": null,
+          "post": "cs_cmd_manassas",
+          "present": 3780,
+          "committed": 3780,
+          "engaged": 3780,
+          "unknownBlocks": [
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "blocks": [
+            "raised.st_gov_north_carolina.d125",
+            "raised.st_gov_north_carolina.d93",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "killed": 125,
+          "wounded": 714,
+          "missing": 411,
+          "captured": 175,
+          "result": "routed",
+          "retreatTo": "loudoun_fauquier"
+        },
+        {
+          "faction": "union",
+          "commander": "mcdowell_irvin",
+          "post": "us_dept_northeastern_virginia",
+          "present": 58811,
+          "committed": 41167,
+          "engaged": 41167,
+          "unknownBlocks": [],
+          "blocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "killed": 99,
+          "wounded": 566,
+          "missing": 186,
+          "captured": 0,
+          "result": "gained_ground",
+          "retreatTo": null
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": true
+    },
+    {
+      "battle": "battle:manassas:142",
+      "day": 142,
+      "kind": "meeting",
+      "contact": 3915,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": null,
+          "post": "cs_cmd_manassas",
+          "present": 3915,
+          "committed": 3915,
+          "engaged": 3915,
+          "unknownBlocks": [
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "blocks": [
+            "raised.st_gov_mississippi.d121",
+            "raised.st_gov_north_carolina.d125",
+            "raised.st_gov_north_carolina.d93",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "killed": 142,
+          "wounded": 805,
+          "missing": 464,
+          "captured": 198,
+          "result": "routed",
+          "retreatTo": "loudoun_fauquier"
+        },
+        {
+          "faction": "union",
+          "commander": "mcdowell_irvin",
+          "post": "us_dept_northeastern_virginia",
+          "present": 57960,
+          "committed": 40572,
+          "engaged": 40572,
+          "unknownBlocks": [],
+          "blocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "killed": 104,
+          "wounded": 592,
+          "missing": 55,
+          "captured": 0,
+          "result": "gained_ground",
+          "retreatTo": null
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": true
+    },
+    {
+      "battle": "battle:manassas:143",
+      "day": 143,
+      "kind": "meeting",
+      "contact": 3866,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": null,
+          "post": "cs_cmd_manassas",
+          "present": 3866,
+          "committed": 3866,
+          "engaged": 3866,
+          "unknownBlocks": [
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "blocks": [
+            "raised.st_gov_alabama.d125",
+            "raised.st_gov_mississippi.d121",
+            "raised.st_gov_north_carolina.d125",
+            "raised.st_gov_north_carolina.d93",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "killed": 136,
+          "wounded": 771,
+          "missing": 318,
+          "captured": 135,
+          "result": "routed",
+          "retreatTo": "loudoun_fauquier"
+        },
+        {
+          "faction": "union",
+          "commander": "mcdowell_irvin",
+          "post": "us_dept_northeastern_virginia",
+          "present": 57209,
+          "committed": 40046,
+          "engaged": 40046,
+          "unknownBlocks": [],
+          "blocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "killed": 104,
+          "wounded": 593,
+          "missing": 55,
+          "captured": 0,
+          "result": "gained_ground",
+          "retreatTo": null
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": true
+    },
+    {
+      "battle": "battle:harpers_ferry:146",
+      "day": 146,
+      "kind": "attack_hasty",
+      "contact": 1732,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": "johnston_joseph_e",
+          "post": "cs_cmd_harpers_ferry",
+          "present": 5340,
+          "committed": 3738,
+          "engaged": 3738,
+          "unknownBlocks": [],
+          "blocks": [
+            "organised.s74_johnston_brigade_3.1",
+            "raised.st_gov_georgia.d122.2",
+            "raised.st_gov_georgia.d125"
+          ],
+          "killed": 45,
+          "wounded": 259,
+          "missing": 24,
+          "captured": 0,
+          "result": "gained_ground",
+          "retreatTo": null
+        },
+        {
+          "faction": "union",
+          "commander": "patterson_robert",
+          "post": "us_dept_pennsylvania",
+          "present": 1732,
+          "committed": 1732,
+          "engaged": 1732,
+          "unknownBlocks": [],
+          "blocks": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "killed": 29,
+          "wounded": 165,
+          "missing": 50,
+          "captured": 8,
+          "result": "withdrew",
+          "retreatTo": "lower_valley"
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": false
+    },
+    {
+      "battle": "battle:manassas:146",
+      "day": 146,
+      "kind": "meeting",
+      "contact": 2728,
+      "sides": [
+        {
+          "faction": "confederate",
+          "commander": null,
+          "post": "cs_cmd_manassas",
+          "present": 2728,
+          "committed": 2728,
+          "engaged": 2728,
+          "unknownBlocks": [
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "blocks": [
+            "raised.st_gov_alabama.d125",
+            "raised.st_gov_mississippi.d121",
+            "raised.st_gov_north_carolina.d125",
+            "raised.st_gov_north_carolina.d93",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina"
+          ],
+          "killed": 96,
+          "wounded": 548,
+          "missing": 226,
+          "captured": 96,
+          "result": "routed",
+          "retreatTo": "loudoun_fauquier"
+        },
+        {
+          "faction": "union",
+          "commander": "mcdowell_irvin",
+          "post": "us_dept_northeastern_virginia",
+          "present": 56527,
+          "committed": 39568,
+          "engaged": 39568,
+          "unknownBlocks": [],
+          "blocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "killed": 66,
+          "wounded": 377,
+          "missing": 35,
+          "captured": 0,
+          "result": "gained_ground",
+          "retreatTo": null
+        }
+      ],
+      "unresolved": false,
+      "bothQuantifiedSides": true,
+      "unknownCombatantsRemain": true
+    }
+  ],
+  "unresolvedNeverEstablishesOpposedFighting": true,
+  "unknownStrengthCriterion": {
+    "problems": [
+      "union-1861: battle battle:manassas:141 at manassas, day 141: confederate fought with 3 blocks of unknown strength (state-forces.cs_nc_additional_north_carolina, state-forces.cs_nc_state_transfer_north_carolina, state-forces.cs_nc_volunteers_north_carolina)",
+      "union-1861: battle battle:manassas:142 at manassas, day 142: confederate fought with 3 blocks of unknown strength (state-forces.cs_nc_additional_north_carolina, state-forces.cs_nc_state_transfer_north_carolina, state-forces.cs_nc_volunteers_north_carolina)",
+      "union-1861: battle battle:manassas:143 at manassas, day 143: confederate fought with 3 blocks of unknown strength (state-forces.cs_nc_additional_north_carolina, state-forces.cs_nc_state_transfer_north_carolina, state-forces.cs_nc_volunteers_north_carolina)",
+      "union-1861: battle battle:manassas:146 at manassas, day 146: confederate fought with 3 blocks of unknown strength (state-forces.cs_nc_additional_north_carolina, state-forces.cs_nc_state_transfer_north_carolina, state-forces.cs_nc_volunteers_north_carolina)"
+    ],
+    "evidence": [
+      "union-1861: 7 battles, 8 battle-days read"
+    ]
+  }
+}

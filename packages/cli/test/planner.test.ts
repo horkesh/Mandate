@@ -213,7 +213,7 @@ describe('character shapes the menu', () => {
   });
 
   it('applies his perception once, in belief derivation: the timid man sees more enemy at the same objective', () => {
-    expect(pick(drafted(PINCER, seat('organiser')).set).candPerceived).toBeGreaterThan(pick(drafted(PINCER, seat('fighter')).set).candPerceived);
+    expect(pick(drafted(PINCER, seat('organiser')).set).candPerceived).toBeGreaterThan(pick(drafted(PINCER, seat('fighter')).set).candPerceived!);
   });
 
   it('scores a pincer partner by its holder’s willingness, read through the people rules, not by post id (lane 0.9 finding 7)', () => {

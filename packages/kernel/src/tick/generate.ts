@@ -22,6 +22,7 @@ import type { EdgeId, FactionId, ForceBlockId, PersonId, PostId, RegionId } from
 import { obstructionFor } from '../supply/supply.ts';
 import { passageOf } from './passage.ts';
 import { enemyBeliefs } from '../knowledge/beliefs.ts';
+import { observeStrength, biasStrength, strengthClaim, beliefClaim } from '../knowledge/strength.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import type { ReportBody, ReportClaim, ReportType } from '../knowledge/report.ts';
 import { templateFor } from '../knowledge/templates.ts';
@@ -64,6 +65,7 @@ const claim = (kind: ReportClaim['claimKind'], region: RegionId | null, value: n
 function reconContacts(ctx: TickContext, state: State, side: FactionId, region: RegionId) {
   const commands = new Set<PostId>();
   let unquantified = false;
+  let presence = false;
   const ids = Object.keys(state.forceLocations) as ForceBlockId[];
   for (const block of ids.sort(strictCompare)) {
     const loc = state.forceLocations[block]!;
@@ -72,11 +74,12 @@ function reconContacts(ctx: TickContext, state: State, side: FactionId, region: 
     if (faction === null || faction === side || loc.locRegion !== region || loc.locMarch !== null ||
       loc.locAboard !== null || force.fbSurrenderedDay !== null) continue;
     const strength = forceTotals(force, ctx.world.map.forceTotalsCache).fbStrength;
+    if (strength !== 0) presence = true;
     if (strength === null) unquantified = true;
     const post = state.forceAssignments[block];
     if (post !== undefined && post !== null && force.fbKind !== 'detachment' && strength !== 0) commands.add(post);
   }
-  return { commands: [...commands].sort(strictCompare), unquantified };
+  return { commands: [...commands].sort(strictCompare), unquantified, presence };
 }
 
 function enemyAt(ctx: TickContext, state: State, faction: FactionId): ReadonlyMap<RegionId, number> {
@@ -86,8 +89,11 @@ function enemyAt(ctx: TickContext, state: State, faction: FactionId): ReadonlyMa
   for (const id of ids.sort(strictCompare)) {
     const side = factionOfBlock(map, state, id);
     if (side === null || side === faction) continue;
+    const loc=state.forceLocations[id]!;
+    if(loc.locMarch!==null || loc.locAboard!==null || state.forceBlockStates[id]!.fbSurrenderedDay!==null)continue;
     const region = state.forceLocations[id]!.locRegion;
-    out.set(region, (out.get(region) ?? 0) + (forceTotals(state.forceBlockStates[id]!, ctx.world.map.forceTotalsCache).fbStrength ?? 0));
+    const t=forceTotals(state.forceBlockStates[id]!,ctx.world.map.forceTotalsCache);
+    out.set(region, (out.get(region) ?? 0) + t.fbByKind.return + t.fbByKind.estimate + t.fbByKind.rule);
   }
   return out;
 }
@@ -148,9 +154,11 @@ export function generateReports(ctx: TickContext, state: State): void {
       const edges = new Set<EdgeId>();
       for (const region of world.watched(hq)) {
         const seen = enemy.get(region) ?? 0;
-        const contacts = world.map.world.rules.plans.demonstration === undefined ? undefined : reconContacts(ctx, state, side, region);
-        if (!contacts?.unquantified) claims.push(claim('enemy-strength', region, Math.trunc((seen * bias) / 1000), null, confidence.scoutEnemyStrength));
-        else claims.push(claim('enemy-estimate-unknown', region, 1, null, confidence.scoutEnemyStrength));
+        const contacts = reconContacts(ctx,state,side,region);
+        const observed=observeStrength({observer:author,region,day,scope:'region',presence:contacts.presence || seen>0,
+          coverage:contacts.unquantified ? 'partial' : 'complete', counts:seen>0 ? [{countKind:'men',count:seen}] : [],
+          conditions:'regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact'});
+        claims.push(strengthClaim(region,chief===null ? observed : biasStrength(observed,bias,chief),confidence.scoutEnemyStrength));
         for (const command of contacts?.commands ?? []) claims.push(claim('enemy-command', region, 1, command, confidence.scoutEnemyStrength));
         if (contacts !== undefined) for (const key of Object.keys(state.operationRecords).sort(strictCompare)) {
           const operation = state.operationRecords[key]!;
@@ -192,11 +200,11 @@ export function generateReports(ctx: TickContext, state: State): void {
       const { token: status, region: objective } = goalStatus(state, id);
       const claims: ReportClaim[] = [claim('position', hq, 0, null, 1000), claim('goal-status', objective, 0, status, 1000)];
       const terms: BiasTerm[] = [];
-      const beliefs = enemyBeliefs(state, world.rules.traits, holder, knowledgeOf(state, seatIdFor(holder.id)));
+      const beliefs = enemyBeliefs(state, world.rules.traits, holder, knowledgeOf(state, seatIdFor(holder.id)),b=>tpl(b.reportType,b.reportSubtype).maxAgeDays);
       for (const region of world.watched(hq)) {
         const b = beliefs.get(region);
         if (b === undefined) continue;
-        claims.push(claim('enemy-strength', region, b.value, null, confidence.dispatchEnemyStrength));
+        claims.push(beliefClaim(region,b,holder.id,confidence.dispatchEnemyStrength));
         terms.push(...b.terms);
       }
       if (status === 'awaiting-strength') {

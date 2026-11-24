@@ -1,6 +1,6 @@
 # 0128: The bounds of a limited sortie and a demonstration
 
-Status: accepted (2026-11-23). From S127's proposal (`docs/design/S127-SORTIE-DEMONSTRATION-BOUNDS.md` and `docs/design/S127/` on `sprint/pushback` at `d6e7a27a`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0121 (the sortie's safety rule) and 0123 (the demonstration's limits).
+Status: accepted (2026-11-23). From S127's proposal (`docs/design/S127-SORTIE-DEMONSTRATION-BOUNDS.md` and `docs/design/S127/` on `sprint/pushback` at `d6e7a27a`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0121 (the sortie's safety rule) and 0123 (the demonstration's limits). Clarified by 0130 (a finite interval at a numeric gate).
 
 ## Context
 

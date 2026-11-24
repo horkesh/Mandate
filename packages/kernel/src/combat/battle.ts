@@ -194,7 +194,8 @@ export function retreatTarget(ground: MarchGround, state: State, region: RegionI
 function forewarned(state: State, person: PersonId | null, region: RegionId): boolean {
   if (person === null) return false;
   const knowledge = state.knowledgeBySeat[seatIdFor(person)];
-  return knowledge !== undefined && latestEnemyClaims(knowledge).has(region);
+  const claim=knowledge===undefined?undefined:latestEnemyClaims(knowledge).get(region);
+  return claim !== undefined && (claim.value !== null || claim.strength?.strengthPresence === true);
 }
 
 /** The battle type and the attacker (P2), from the commits, the ground and yesterday's battles. */

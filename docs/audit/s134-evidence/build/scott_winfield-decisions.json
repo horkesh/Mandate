@@ -1,0 +1,210 @@
+[
+  {
+    "day": 2,
+    "key": "seat:scott_winfield|local:us_general_in_chief:2",
+    "seat": "seat:scott_winfield",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "us_general_in_chief",
+      "options": [
+        {
+          "optionId": "goal:5ac7fa6284624f8a445b48eb",
+          "mandate": "scott_army_command",
+          "to": "us_general_in_chief",
+          "plan": {
+            "optionId": "direct:least_cost:washington",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 778,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": 0
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 78
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "us_general_in_chief",
+                "mode": "land",
+                "regions": [
+                  "washington"
+                ],
+                "strength": 0,
+                "phases": [
+                  "concentrate"
+                ],
+                "arrival": 3000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": null,
+            "ratio": null,
+            "unavailableTerms": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "washington"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "optionId": "goal:a7b6ff4205c9241070a6b854",
+          "mandate": "scott_army_command",
+          "to": "us_general_in_chief",
+          "plan": {
+            "optionId": "holding:hold:washington",
+            "method": "holding",
+            "variant": "hold",
+            "score": 4,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 304
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "us_general_in_chief",
+                "mode": "land",
+                "regions": [
+                  "washington"
+                ],
+                "strength": 0,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": null,
+            "ratio": null,
+            "unavailableTerms": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "washington"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "goal:5ac7fa6284624f8a445b48eb"
+    }
+  },
+  {
+    "day": 130,
+    "key": "seat:scott_winfield|local:us_general_in_chief:130",
+    "seat": "seat:scott_winfield",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "us_general_in_chief",
+      "options": [
+        {
+          "optionId": "letter:us_army_orders.scott_patterson_jul13.1:m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "mandate": "scott_army_command",
+          "paper": "us_army_orders.scott_patterson_jul13.1",
+          "to": "us_dept_pennsylvania"
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "letter:us_army_orders.scott_patterson_jul13.1:m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+    }
+  },
+  {
+    "day": 134,
+    "key": "seat:scott_winfield|local:us_general_in_chief:134",
+    "seat": "seat:scott_winfield",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "us_general_in_chief",
+      "options": [
+        {
+          "optionId": "letter:us_army_orders.scott_patterson_jul17.1:m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "mandate": "scott_army_command",
+          "paper": "us_army_orders.scott_patterson_jul17.1",
+          "to": "us_dept_pennsylvania"
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "letter:us_army_orders.scott_patterson_jul17.1:m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+    }
+  },
+  {
+    "day": 135,
+    "key": "seat:scott_winfield|local:us_general_in_chief:135",
+    "seat": "seat:scott_winfield",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "us_general_in_chief",
+      "options": [
+        {
+          "optionId": "letter:us_army_orders.scott_patterson_jul18.1:m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+          "mandate": "scott_army_command",
+          "paper": "us_army_orders.scott_patterson_jul18.1",
+          "to": "us_dept_pennsylvania"
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "letter:us_army_orders.scott_patterson_jul18.1:m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1"
+    }
+  }
+]

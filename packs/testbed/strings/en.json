@@ -378,6 +378,7 @@
   "console.preview.no-waypoint": "waypoint {region} cannot be reached by {mode}",
   "console.preview.too-many-axes": "the plan already has as many axes as he can run, and one more",
   "console.preview.too-few-blocks": "too few blocks to form another axis",
+  "console.preview.unknown-strength": "unknown strength cannot certify a proportional split",
   "console.preview.no-route": "no route to {region}",
   "console.preview.last-axis": "a plan needs one axis",
   "console.claim.appointment-refused": "Appointment refused: {reason}",

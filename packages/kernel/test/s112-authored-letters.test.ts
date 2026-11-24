@@ -191,7 +191,8 @@ describe('S112 authored correspondence', () => {
     const withoutRoutine = { ...issued, messagesInTransit: issued.messagesInTransit.filter(m => m.msgTo !== P('a_bold') || m.msgReport?.reportType !== 'enemy-estimate') };
     const threatened = deliverReport(withoutRoutine, holder, report('m.authored.threat', {
       reportType: 'enemy-estimate', reportSubjectKind: 'region', reportSubjectId: R('a_mid'), reportDay: day,
-      reportClaims: [{ claimKind: 'enemy-strength', claimRegion: R('a_mid'), claimValue: 300, claimToken: null, claimConfidence: 1000 }],
+      // A safer-position proposal needs affirmative clearances, including its route's neighbors.
+      reportClaims: ['a_cap', 'a_mid', 'a_front', 'b_front', 'b_mid', 'b_cap'].map(r => ({ claimKind: 'enemy-strength', claimRegion: R(r), claimValue: r === 'a_mid' ? 300 : 0, claimToken: null, claimConfidence: 1000 })),
     }, day), NO_TRUTH);
     let retried = tick(world, threatened, [entry(day + 1, { ...initial, retryOf: original })]).state;
     expect(retried.planRecords[post]?.planOrder).toBe(original);

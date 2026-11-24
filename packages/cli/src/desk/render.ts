@@ -19,7 +19,7 @@ export function planLines(plan: OptionView, t: DeskStrings): string[] {
   const asks = plan.requests.length === 0 ? '' : t('console.plan.asks', { requests: plan.requests.join(', ') });
   const conditions = plan.conditions.length === 0 ? '' : t('console.plan.conditions', { conditions: plan.conditions.join(', ') });
   return [
-    t('console.plan.summary', { method: plan.method, variant: plan.variant, enemy: String(plan.perceivedEnemy), asks, conditions }),
+    t('console.plan.summary', { method: plan.method, variant: plan.variant, enemy: plan.perceivedEnemy === null ? t('console.claim.unknown-result') : String(plan.perceivedEnemy), asks, conditions }),
     ...plan.axes.map(a => axisLine(a, t)),
   ];
 }

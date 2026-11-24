@@ -46,11 +46,12 @@ describe('console wording from the pack', () => {
       'console.command.order': '{post} | {posture}',
       'console.queue.add': '{index}: [{command}]',
       'console.plan.summary': 'Plan {method} {variant}: enemy {enemy}{asks}{conditions}',
+      'console.claim.unknown-result': 'UNMEASURED',
     });
     expect(desk.start().join('\n')).toMatch(/Map record: \d+/);
     expect(desk.handle('order n_army_east take salient_tip review').lines).toEqual(['1: [n_army_east | take]']);
     desk.handle('end');
-    expect(desk.handle('plans').lines.join('\n')).toMatch(/Plan .+: enemy \d+/);
+    expect(desk.handle('plans').lines.join('\n')).toMatch(/Plan .+: enemy UNMEASURED/);
   });
 
   it('formats field validation and planner failures from the pack', () => {
@@ -58,10 +59,11 @@ describe('console wording from the pack', () => {
       'console.preview.invalid': 'Edit rejected: {reason}',
       'console.preview.needs-region': '{edit} requires a destination',
       'console.preview.holding-axis': 'The {axis} axis is stationary',
+      'console.preview.no-waypoint': 'The {region} waypoint is unavailable for {mode}',
     });
     desk.handle('order n_army_east take salient_tip review');
     desk.handle('end');
     expect(desk.handle('preview n_army_east objective').lines).toEqual(['Edit rejected: objective requires a destination']);
-    expect(desk.handle('preview n_army_east waypoints via=island_fort').lines).toEqual(['Edit rejected: The hold axis is stationary']);
+    expect(desk.handle('preview n_army_east waypoints via=island_fort').lines).toEqual(['Edit rejected: The island_fort waypoint is unavailable for land']);
   });
 });

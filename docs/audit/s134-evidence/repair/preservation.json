@@ -1,0 +1,36 @@
+{
+  "head": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "priorInventories": [
+    {
+      "inventory": "protected.json",
+      "files": 4,
+      "allExact": true
+    },
+    {
+      "inventory": "baseline-preservation.json",
+      "files": 122,
+      "allExact": true
+    },
+    {
+      "inventory": "build-baseline-preservation.json",
+      "files": 52,
+      "allExact": true
+    }
+  ],
+  "heldBuildPacketFilesExact": 39,
+  "bothRawCapturesExact": true,
+  "measuredFilesArchivedExact": 847,
+  "postCaptureMetadataOnlyChanges": [
+    "packages/cli/src/liveness-gate.ts",
+    "tools/rules/liveness-changes.json",
+    "tools/test/s134-liveness-ruling.test.ts"
+  ],
+  "priorCauseRecordsExact": 213,
+  "newGoalFitBinding": 1,
+  "positiveTestbedRecords": 22,
+  "flankZeroApplied": false,
+  "projectionRoots": 8,
+  "readerIdentitiesExact": true,
+  "unionDifference": "countKind field name only; 17 normalized artifacts exact; events, all 33 rows and all counters exact",
+  "hook": "not run: explicit lead-before-hook flank zero condition"
+}

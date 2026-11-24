@@ -75,7 +75,7 @@ export function buildAxis(ctx: Ctx, spec: AxisSpec): PlanAxis {
     const w = works.get(objective) ?? 0;
     if (w > 0) push('reduce', w * rules.reducePerLevel, objective);
   }
-  if ((beliefs.get(objective) ?? 0) > 0 && goal.goalPosture === 'take') push('assault', rules.assaultDays, objective);
+  if (((beliefs.get(objective) ?? 0) > 0 || ctx.input.beliefDetails?.get(objective)?.strengthPresence === true) && goal.goalPosture === 'take') push('assault', rules.assaultDays, objective);
   return {
     axisName: spec.name,
     axisPost: spec.post,
@@ -83,6 +83,7 @@ export function buildAxis(ctx: Ctx, spec: AxisSpec): PlanAxis {
     axisRoute: spec.route,
     axisBlocks: spec.blocks.map((b) => b.id),
     axisStrength: spec.blocks.reduce((s, b) => s + b.strength, 0),
+    ...(spec.blocks.some(b=>b.unknownStrength)?{axisUnknownStrength:true as const}:{}),
     axisPhases: phases,
     axisArrival: t,
     axisOutOfSupply: longest,
@@ -109,6 +110,7 @@ export function holdingAxis(ctx: Ctx, post: PostId, blocks: readonly PlannerForc
     axisRoute: { routeFrom: staging, routeTo: staging, routeLegs: [], routeCost: 0, routeDays: 0 },
     axisBlocks: blocks.map((b) => b.id),
     axisStrength: blocks.reduce((s, b) => s + b.strength, 0),
+    ...(blocks.some(b=>b.unknownStrength)?{axisUnknownStrength:true as const}:{}),
     axisPhases: [{ phaseKind: kind, phaseStart: 0, phaseDays: ctx.input.goal.goalDeadlineDays * 1000, phaseRegion: staging }],
     axisArrival: 0,
     axisOutOfSupply: 0,

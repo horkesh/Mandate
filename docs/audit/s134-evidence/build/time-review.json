@@ -1,0 +1,946 @@
+{
+  "beforeFires": 1,
+  "afterFires": 2,
+  "currentS130QuietRetiredInMerge": true,
+  "historicalS130RecordRetained": true,
+  "record": {
+    "key": "union-1861, war by decision, 148 days/planner.term.time",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S134 merge [I]: time is live again on the retained combined readiness/demonstration path. Retire the current S130 quiet designation, retaining its exact historical record. The saved candidate counterfactual identifies the changed winner; no time weight changes."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluable scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged. S130 current quiet designation was already retired in the merge."
+    },
+    "observed": 2,
+    "cause": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluable scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged. S130 current quiet designation was already retired in the merge.",
+    "evidence": "docs/audit/s134-evidence/build/time-review.json#planner.term.time"
+  },
+  "driverEvidence": [
+    {
+      "post": "us_dept_pennsylvania",
+      "day": 112,
+      "before": {
+        "chosen": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley",
+        "without": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley",
+        "live": false,
+        "candidates": [
+          {
+            "id": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "philadelphia",
+                  "routeTo": "lower_valley",
+                  "routeLegs": [
+                    {
+                      "legEdge": "rail:philadelphia:southeast_pa:pennsylvania",
+                      "legFrom": "philadelphia",
+                      "legTo": "southeast_pa",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": 0,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "rail:harrisburg:southeast_pa:pennsylvania",
+                      "legFrom": "southeast_pa",
+                      "legTo": "harrisburg",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": 0,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "rail:cumberland_valley_pa:harrisburg:cumberland_valley",
+                      "legFrom": "harrisburg",
+                      "legTo": "cumberland_valley_pa",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": 0,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "rail:cumberland_valley_pa:western_maryland:franklin",
+                      "legFrom": "cumberland_valley_pa",
+                      "legTo": "western_maryland",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": 0,
+                      "legSupply": 722,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "road:lower_valley:western_maryland",
+                      "legFrom": "western_maryland",
+                      "legTo": "lower_valley",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 2166,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 9888,
+                  "routeDays": 7000
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "philadelphia"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "southeast_pa"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 4000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "harrisburg"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 5000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "cumberland_valley_pa"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 6000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "western_maryland"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 7000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "lower_valley"
+                  }
+                ],
+                "axisArrival": 10000,
+                "axisOutOfSupply": 4000,
+                "axisStoresDays": 30,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches lower_valley"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1244"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 20000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -288,
+                "contribWhy": "4000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 787,
+            "candPerceived": 0,
+            "candRatio": 10000,
+            "withoutTermScore": 487
+          },
+          {
+            "id": "holding:hold:lower_valley",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "lower_valley",
+                  "routeTo": "lower_valley",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "lower_valley"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 30,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": 11,
+            "candPerceived": 0,
+            "candRatio": 10000,
+            "withoutTermScore": 311
+          }
+        ]
+      },
+      "after": {
+        "chosen": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley",
+        "without": "holding:hold:lower_valley",
+        "live": true,
+        "candidates": [
+          {
+            "id": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "philadelphia",
+                  "routeTo": "lower_valley",
+                  "routeLegs": [
+                    {
+                      "legEdge": "rail:philadelphia:southeast_pa:pennsylvania",
+                      "legFrom": "philadelphia",
+                      "legTo": "southeast_pa",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": null,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "rail:harrisburg:southeast_pa:pennsylvania",
+                      "legFrom": "southeast_pa",
+                      "legTo": "harrisburg",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": null,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "rail:cumberland_valley_pa:harrisburg:cumberland_valley",
+                      "legFrom": "harrisburg",
+                      "legTo": "cumberland_valley_pa",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": null,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "rail:cumberland_valley_pa:western_maryland:franklin",
+                      "legFrom": "cumberland_valley_pa",
+                      "legTo": "western_maryland",
+                      "legType": "rail",
+                      "legDays": 1000,
+                      "legThreat": null,
+                      "legSupply": 722,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "road:lower_valley:western_maryland",
+                      "legFrom": "western_maryland",
+                      "legTo": "lower_valley",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": null,
+                      "legSupply": 2166,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 9888,
+                  "routeDays": 7000,
+                  "routeUnknownThreat": true
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "philadelphia"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "southeast_pa"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 4000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "harrisburg"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 5000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "cumberland_valley_pa"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 6000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "western_maryland"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 7000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "lower_valley"
+                  }
+                ],
+                "axisArrival": 10000,
+                "axisOutOfSupply": 4000,
+                "axisStoresDays": 30,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches lower_valley"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 20000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -288,
+                "contribWhy": "4000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 487,
+            "candPerceived": null,
+            "candRatio": null,
+            "candUnavailableTerms": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "lower_valley"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "cumberland_valley_pa",
+                  "harrisburg",
+                  "southeast_pa",
+                  "western_maryland"
+                ]
+              }
+            ],
+            "withoutTermScore": 187
+          },
+          {
+            "id": "holding:hold:lower_valley",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "lower_valley",
+                  "routeTo": "lower_valley",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "lower_valley"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 30,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": 11,
+            "candPerceived": null,
+            "candRatio": null,
+            "candUnavailableTerms": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "lower_valley"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "cumberland_valley_pa",
+                  "harrisburg",
+                  "southeast_pa",
+                  "western_maryland"
+                ]
+              }
+            ],
+            "withoutTermScore": 311
+          }
+        ]
+      }
+    },
+    {
+      "post": "us_dept_pennsylvania",
+      "day": 140,
+      "before": {
+        "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+        "without": "holding:hold:harpers_ferry",
+        "live": true,
+        "candidates": [
+          {
+            "id": "direct:least_cost:lower_valley>harpers_ferry",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "lower_valley",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:harpers_ferry:lower_valley",
+                      "legFrom": "lower_valley",
+                      "legTo": "harpers_ferry",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 2166,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 5166,
+                  "routeDays": 3000
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "lower_valley"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 6000,
+                "axisOutOfSupply": 3000,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [
+              {
+                "reqKind": "reinforcement",
+                "reqPost": null,
+                "reqHolder": null,
+                "reqMen": 5352,
+                "reqFrom": null,
+                "reqObjective": "harpers_ferry",
+                "reqArriveFrom": 0,
+                "reqArriveTo": 0,
+                "reqCarrier": null,
+                "reqEdges": []
+              }
+            ],
+            "candConditions": [
+              {
+                "gateKind": "move_when_reinforced",
+                "gateHard": false,
+                "gateDetail": "5352 men short of his demand"
+              }
+            ],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": -453,
+                "contribWhy": "ratio 304 under his demand 1244; short 5352 men"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 24000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -216,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 106,
+            "candPerceived": 5695,
+            "candRatio": 304,
+            "withoutTermScore": -194
+          },
+          {
+            "id": "holding:hold:harpers_ferry",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": 11,
+            "candPerceived": 5695,
+            "candRatio": 304,
+            "withoutTermScore": 311
+          }
+        ]
+      },
+      "after": {
+        "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+        "without": "holding:hold:harpers_ferry",
+        "live": true,
+        "candidates": [
+          {
+            "id": "direct:least_cost:lower_valley>harpers_ferry",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "lower_valley",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:harpers_ferry:lower_valley",
+                      "legFrom": "lower_valley",
+                      "legTo": "harpers_ferry",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": null,
+                      "legSupply": 2166,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 5166,
+                  "routeDays": 3000,
+                  "routeUnknownThreat": true
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "lower_valley"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 6000,
+                "axisOutOfSupply": 3000,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 24000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -216,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 559,
+            "candPerceived": null,
+            "candRatio": null,
+            "candUnavailableTerms": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "harpers_ferry"
+                ]
+              }
+            ],
+            "withoutTermScore": 259
+          },
+          {
+            "id": "holding:hold:harpers_ferry",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": 11,
+            "candPerceived": null,
+            "candRatio": null,
+            "candUnavailableTerms": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "harpers_ferry"
+                ]
+              }
+            ],
+            "withoutTermScore": 311
+          }
+        ]
+      }
+    }
+  ]
+}

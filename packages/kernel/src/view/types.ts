@@ -1,3 +1,4 @@
+import type { StrengthEstimate } from '../knowledge/strength.ts';
 /**
  * What a seat sees (FOUNDATION section 8: the player-visible boundary).
  *
@@ -55,6 +56,7 @@ export interface AudienceView {
 }
 
 export interface ClaimView {
+  readonly strength?: StrengthEstimate;
   readonly kind: ClaimKind;
   readonly region: RegionId | null;
   readonly value: number;
@@ -105,7 +107,8 @@ export interface ReportView {
 
 /** What he believes of the enemy in one region, and which report it rests on. */
 export interface BeliefView {
-  readonly value: number;
+  readonly value: number | null;
+  readonly strength?: StrengthEstimate;
   readonly asOfDay: number;
   readonly source: MessageId;
 }

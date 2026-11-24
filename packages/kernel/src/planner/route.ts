@@ -76,7 +76,7 @@ export function legPasses(ctx: Ctx, edge: EdgeRecord, leg: EdgeLeg, mode: Search
 }
 
 /** The obstruction he has been told of on a water edge, priced; null if he knows of none (or his side now holds its works). */
-function obstacleOf(ctx: Ctx, edge: EdgeRecord, weights: Weights): { readonly kind: Obstacle; readonly days: number; readonly threat: number } | null {
+function obstacleOf(ctx: Ctx, edge: EdgeRecord, weights: Weights): { readonly kind: Obstacle; readonly days: number; readonly threat: number | null } | null {
   const { ground, faction, rules, obstructions, works } = ctx.input;
   if (!obstructions.has(edge.id)) return null;
   const by = obstructions.get(edge.id)!;
@@ -86,9 +86,9 @@ function obstacleOf(ctx: Ctx, edge: EdgeRecord, weights: Weights): { readonly ki
   }
   // Works close a water edge to everyone but whoever holds their region (supply's obstruction rule): his own side's do not bar him.
   if (ground.index.holdings.get(by)?.holder === faction) return null;
-  const garrison = ctx.threat.get(by) ?? 0;
+  const garrison = ctx.threat.get(by) ?? null;
   const fort = ground.map.world.installations.find((i) => i.region === by && i.fort !== null)?.fort ?? null;
-  if (fort?.water === 'passage') return { kind: 'run_past', days: 0, threat: garrison + rules.forcingThreat };
+  if (fort?.water === 'passage') return { kind: 'run_past', days: 0, threat: garrison === null ? null : garrison + rules.forcingThreat };
   return { kind: 'reduce', days: (works.get(by) ?? 0) * rules.reducePerLevel, threat: garrison };
 }
 
@@ -96,12 +96,15 @@ function obstacleOf(ctx: Ctx, edge: EdgeRecord, weights: Weights): { readonly ki
 export function heldDays(ctx: Ctx, region: RegionId): number {
   const { ground, faction, rules, works, beliefs } = ctx.input;
   if (!enemyHeld(ground.index, region, faction)) return 0;
-  return (works.get(region) ?? 0) * rules.reducePerLevel + ((beliefs.get(region) ?? 0) > 0 ? rules.assaultDays : 0);
+  return (works.get(region) ?? 0) * rules.reducePerLevel + ((beliefs.get(region) ?? 0) > 0 || ctx.input.beliefDetails?.get(region)?.strengthPresence === true ? rules.assaultDays : 0);
 }
 
 /** The least-cost route from `from` to `to` in this mode with these weights, or null. Counts one search. */
 export function search(ctx: Ctx, from: RegionId, to: RegionId, mode: SearchMode, weights: Weights, penalty: Penalty = new Map()): PlanRoute | null {
   const { ground } = ctx.input;
+  // Every route in this search uses the same evaluable cost domains. Missing
+  // threat never makes a route cheaper than a route with a known threat.
+  const numericThreat = [...ctx.threat].every(([r,n]) => (ctx.regions !== undefined && !ctx.regions.has(r)) || n !== null);
   ctx.searches += 1;
   if (ctx.searches > ctx.input.rules.maxSearches) return null;
   const best = new Map<RegionId, Label>();
@@ -123,7 +126,7 @@ export function search(ctx: Ctx, from: RegionId, to: RegionId, mode: SearchMode,
       const days = Math.trunc((leg.daysPermille * (penalty.get(edge.id) ?? 1000)) / 1000);
       const landed = next === to ? 0 : (ctx.threat.get(next) ?? 0);
       const threatMen = landed + (obstacle?.threat ?? 0);
-      const threat = Math.trunc((Math.trunc((threatMen * 1000) / ctx.input.rules.menPerDay) * weights.riskWeight) / 1000);
+      const threat = numericThreat ? Math.trunc((Math.trunc((threatMen * 1000) / ctx.input.rules.menPerDay) * weights.riskWeight) / 1000) : null;
       // STAND-IN(owner: 1B, ships' stores; labelled by lane 1.4): ships and boats carry their own stores; only marching outside the network costs supply.
       const outside = mode === 'land' && !ctx.inSupply.has(next);
       const supply = outside ? Math.trunc((leg.daysPermille * weights.supplyCare) / 1000) : 0;
@@ -141,7 +144,7 @@ export function search(ctx: Ctx, from: RegionId, to: RegionId, mode: SearchMode,
         legObstacle: obstacle?.kind ?? null,
         legHeld: mode === 'land' && enemyHeld(ground.index, next, ctx.input.faction),
       };
-      const cand: Label = { region: next, cost: label.cost + days + threat + supply + obstacleDays, leg: routeLeg };
+      const cand: Label = { region: next, cost: label.cost + days + (threat ?? 0) + supply + obstacleDays, leg: routeLeg };
       const cur = best.get(next);
       if (cur === undefined || before(cand, cur)) {
         best.set(next, cand);
@@ -154,7 +157,7 @@ export function search(ctx: Ctx, from: RegionId, to: RegionId, mode: SearchMode,
   const legs: PlanLeg[] = [];
   for (let l = end; l.leg !== null; l = best.get(l.leg.legFrom)!) legs.push(l.leg);
   legs.reverse();
-  return { routeFrom: from, routeTo: to, routeLegs: legs, routeCost: end.cost, routeDays: daysOfLegs(legs) };
+  return { routeFrom: from, routeTo: to, routeLegs: legs, routeCost: end.cost, routeDays: daysOfLegs(legs), ...(!numericThreat ? {routeUnknownThreat:true as const} : {}) };
 }
 
 function daysOfLegs(legs: readonly PlanLeg[]): number {
@@ -177,7 +180,7 @@ export function viaRoute(ctx: Ctx, from: RegionId, via: readonly RegionId[], to:
     legs.push(...r.routeLegs);
     cost += r.routeCost;
   }
-  return { route: { routeFrom: from, routeTo: to, routeLegs: legs, routeCost: cost, routeDays: daysOfLegs(legs) }, unreachable: null };
+  return { route: { routeFrom: from, routeTo: to, routeLegs: legs, routeCost: cost, routeDays: daysOfLegs(legs), ...(legs.some(l=>l.legThreat===null)?{routeUnknownThreat:true as const}:{}) }, unreachable: null };
 }
 
 /**

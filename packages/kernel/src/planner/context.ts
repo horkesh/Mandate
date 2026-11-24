@@ -1,3 +1,4 @@
+import type { StrengthEstimate } from '../knowledge/strength.ts';
 /**
  * What one drafting request reads (planner-design D2; 0062's boundary), and the per-request working state.
  *
@@ -37,7 +38,8 @@ export interface PlannerInput {
   readonly supply: { readonly paths: ReadonlyMap<RegionId, unknown> };
   readonly faction: FactionId;
   /** Men he believes the enemy has per region, through his perception (his view's beliefs). Never truth. */
-  readonly beliefs: ReadonlyMap<RegionId, number>;
+  readonly beliefs: ReadonlyMap<RegionId, number | null>;
+  readonly beliefDetails?: ReadonlyMap<RegionId, StrengthEstimate>;
   /** Fortification he has been told of per region, permille (his view). */
   readonly works: ReadonlyMap<RegionId, number>;
   /** Water edges he has been told are closed to his side, with the region of the installation whose works close them (null: a boom). */
@@ -67,7 +69,7 @@ export interface PlannerInput {
 export interface Ctx {
   readonly input: PlannerInput;
   /** Threat per region, men: his belief there plus a share of his beliefs one hop away. */
-  readonly threat: ReadonlyMap<RegionId, number>;
+  readonly threat: ReadonlyMap<RegionId, number | null>;
   readonly inSupply: ReadonlySet<RegionId>;
   readonly regions?: ReadonlySet<RegionId>;
   searches: number;
@@ -75,13 +77,18 @@ export interface Ctx {
 
 export function makeCtx(input: PlannerInput): Ctx {
   const map = input.ground.map;
-  const threat = new Map<RegionId, number>();
+  const threat = new Map<RegionId, number | null>();
   for (const region of [...map.regions.keys()].sort(strictCompare)) {
-    let men = input.beliefs.get(region) ?? 0;
+    let men = input.beliefs.get(region) ?? null;
     let near = 0;
-    for (const e of map.edgesAt.get(region) ?? []) near += input.beliefs.get(otherEnd(e, region)) ?? 0;
-    men += Math.trunc((near * input.rules.hopShare) / 1000);
-    if (men > 0) threat.set(region, men);
+    let unknown = men === null;
+    for (const e of map.edgesAt.get(region) ?? []) {
+      const value=input.beliefs.get(otherEnd(e,region));
+      if (value == null && input.rules.hopShare > 0) unknown=true;
+      else near+=value??0;
+    }
+    if (unknown) threat.set(region,null);
+    else { men=men!+Math.trunc(near*input.rules.hopShare/1000);threat.set(region,men); }
   }
   return { input, threat, inSupply: new Set(input.supply.paths.keys()), searches: 0 };
 }

@@ -1,0 +1,22 @@
+{
+  "record": {
+    "key": "testbed, 120 days/combat.flank_broken",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S134 lead ruling 2026-11-24 /0130: S134 /0130: missing regional and neighboring opposition remains unknown. Common evaluable scoring and route search change the deterministic plan/movement/contact sequence, without changing weights, flank thresholds, RNG streams or force quantities. The old south-capital day23 draw204<threshold206 breaks a flank; the new day30 draw283>threshold207 does not. All eight new side draws exceed their thresholds. Independent live driver: packages/kernel/test/combat.test.ts, \"a flank breaks on a low draw: morale falls by the pack\\'s loss, more go missing, and the break has its phase\"."
+    },
+    "observed": 0,
+    "cause": "S134 lead ruling 2026-11-24 /0130: S134 /0130: missing regional and neighboring opposition remains unknown. Common evaluable scoring and route search change the deterministic plan/movement/contact sequence, without changing weights, flank thresholds, RNG streams or force quantities. The old south-capital day23 draw204<threshold206 breaks a flank; the new day30 draw283>threshold207 does not. All eight new side draws exceed their thresholds. Independent live driver: packages/kernel/test/combat.test.ts, \"a flank breaks on a low draw: morale falls by the pack\\'s loss, more go missing, and the break has its phase\".",
+    "evidence": "docs/audit/s134-evidence/repair/flank-zero.json"
+  },
+  "fingerprint": "f9b10278f80eec8fd448192c0175c5d80a7eb95cf79db3b4b110dbebe23cfcc0",
+  "driver": {
+    "test": "packages/kernel/test/combat.test.ts",
+    "needle": "a flank breaks on a low draw: morale falls by the pack\\'s loss, more go missing, and the break has its phase"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "eightGroups": "packages/kernel/test/s134-estimates.test.ts",
+  "controls": [
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s134-estimates.test.ts",
+        "packages/kernel/test/demonstration.test.ts",
+        "packages/kernel/test/combat.test.ts",
+        "packages/kernel/test/s96-discretion.test.ts",
+        "packages/cli/test/planner.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 7.521,
+      "log": "runs/s134/build-final-groups.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s134-estimates.test.ts",
+        "packages/kernel/test/s96-discretion.test.ts",
+        "packages/kernel/test/demonstration.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 2.018,
+      "log": "runs/s134/build-comparison-guards.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s134-estimates.test.ts",
+        "packages/kernel/test/demonstration.test.ts",
+        "packages/kernel/test/combat.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.643,
+      "log": "runs/s134/build-account-controls.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "prototypes/desk",
+        "test",
+        "--",
+        "test/s134-strength.test.ts",
+        "test/map-model.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 3.76,
+      "log": "runs/s134/build-ui-models.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "prototypes/desk",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.451,
+      "log": "runs/s134/build-ui-types-final.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.491,
+      "log": "runs/s134/build-root-types-final.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 1.982,
+      "log": "runs/s134/build-rules-final.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.573,
+      "log": "runs/s134/build-boundary-final.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s134/capture.ts",
+        "--build",
+        "--smoke"
+      ],
+      "exit": 0,
+      "seconds": 5.264,
+      "log": "runs/s134/build-startup.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "validate",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 1.591,
+      "log": "runs/s134/build-validate.log"
+    }
+  ],
+  "replayAcceptance": "Capture receipt and summary retain exact replay/day60 resume/saved-log replay.",
+  "limitations": [
+    "Limited sortie has no executable action or planner in this baseline; it remains unavailable. No sortie gate was relaxed or new sortie implementation added.",
+    "The generic observed-count conversion is available only for explicitly distinguished compatible formed battalions. No historical formation count or lot quantity is invented.",
+    "Formal independent whole-branch review and gate signatures are deferred under0106/0107; no worker model substitution was made."
+  ],
+  "additionalControls": [
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s134-estimates.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 3.325,
+      "log": "runs/s134/build-pack-position-verified.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.569,
+      "log": "runs/s134/build-final-root-typecheck.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "prototypes/desk",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.451,
+      "log": "runs/s134/build-ui-types-final.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 2.122,
+      "log": "runs/s134/build-last-rules.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.595,
+      "log": "runs/s134/build-last-boundary.log"
+    },
+    {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/s130-liveness-ruling.test.ts",
+        "tools/test/liveness-causes.test.ts",
+        "packages/kernel/test/s134-estimates.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.574,
+      "log": "runs/s134/build-time-history-controls.log"
+    }
+  ]
+}

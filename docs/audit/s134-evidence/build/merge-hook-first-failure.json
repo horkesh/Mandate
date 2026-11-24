@@ -1,0 +1,14 @@
+{
+  "receipt": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s134/merge-message.txt"
+    ],
+    "exit": 1,
+    "seconds": 2.969,
+    "log": "runs/s134/merge-hook.log"
+  },
+  "cause": "Test-only missing non-null assertion for the required current band; fixed and cheaply typechecked before retry. No simulation or measurement changed."
+}

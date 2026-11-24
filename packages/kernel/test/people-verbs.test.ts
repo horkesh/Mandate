@@ -480,7 +480,12 @@ describe('M2’s audience cases on the new State (P3)', () => {
     const take = { cmd: 'order', to: POST('a_army'), goal: goalTerms('take', 'b_mid'), route: 'special-messenger', bypass: true } as Command;
     const approve = { cmd: 'review', to: POST('a_army'), action: 'approve', edit: null, route: 'special-messenger', bypass: true } as Command;
     // a_gen drafts a plan against the 1152 men he believes hold b_mid, and asks for it to be reviewed: it is approved.
-    let run = days(w, createState(w, { seed: 7 }), 2, { 1: [take] });
+    const informed = deliverReport(createState(w, { seed: 7 }), seatIdFor(P('a_gen')), report('m.audience.enemy', {
+      reportType: 'enemy-estimate', reportDay: 0, reportSubjectId: R('b_mid'),
+      // The shortfall control explicitly clears the neighboring hop-threat domains.
+      reportClaims: ['a_cap', 'a_mid', 'a_front', 'b_front', 'b_mid', 'b_cap'].map(r => ({ claimKind: 'enemy-strength', claimRegion: R(r), claimValue: r === 'b_mid' ? 1152 : 0, claimToken: null, claimConfidence: 1000 })),
+    }, 0), NO_TRUTH);
+    let run = days(w, informed, 2, { 1: [take] });
     for (let i = 0; i < 6 && run.state.planRecords[POST('a_army')]?.planStatus !== 'approved'; i++) {
       const day = run.state.stateDay + 1;
       run = days(w, run.state, 1, run.state.planRecords[POST('a_army')]?.planStatus === 'review' ? { [day]: [approve] } : {});

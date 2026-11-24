@@ -6,6 +6,7 @@ import type {Price} from './business.ts';
 import {presenter} from './presentation.ts';
 import {stopEntries} from './table.ts';
 import {S} from './strings.ts';
+import {strengthText} from './strength.ts';
 import './business.css';
 import {deskDate,ownGoalStatus,availableCalls} from './plan-business.ts';
 
@@ -68,7 +69,9 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
    <button disabled={busy} onClick={onPlans}>{S.openPlans}</button>
   </section>}
   {menu.menuKind==='principal'&&advances.length>0&&<section className="advance-agenda" data-testid="advance-agenda"><h3>{S.proposedAdvances}</h3><p>{S.advanceDateNote}</p>
-   {advances.map(o=>{const status=ownGoalStatus(data,o.post,o.objective),post=menu.commandable.find(p=>p.post===o.post);
+   {advances.map(o=>{
+    if(o.purpose!==undefined)return <article key={`${o.post}:${o.day}:detain`}><h4>{name(o.post,'post')}</h4><p>{deskDate(data,o.day)}: Detain {name(o.purpose.target.post,'post')} — {o.purpose.detentionArea.map(r=>name(r,'region')).join(', ')}</p><p>{S.advanceUnavailable}</p></article>;
+    const status=ownGoalStatus(data,o.post,o.objective),post=menu.commandable.find(p=>p.post===o.post);
     return <article key={`${o.post}:${o.day}:${o.objective}`}><h4>{name(o.post,'post')}</h4><p><time>{deskDate(data,o.day)}</time>: {name(o.objective,'region')}</p>
      {status?<p role="status">{status==='queued'?S.goalQueued:S.goalDispatched}</p>:post?<button disabled={busy||!onOrder} onClick={()=>onOrder?.(`order ${o.post} take ${o.objective} review`)}>{S.reviewGoalOrder}</button>:<p>{S.advanceUnavailable}</p>}
     </article>;
@@ -135,7 +138,7 @@ export function OperationsSheet({data,openPaper,dateOf=(day)=>deskDate(data,day)
  </section>;
 }
 const returnTypes=['strength-return','effective-strength','casualty-return','enemy-estimate'];
-const figureKinds=new Set(['present-for-duty','present-and-absent','effective-strength','enemy-strength','own-losses','casualties','missing','captured']);
+const figureKinds=new Set(['present-for-duty','present-and-absent','effective-strength','enemy-strength','enemy-estimate-unknown','own-losses','casualties','missing','captured']);
 export function AccountabilityLedger({data,openPaper,dateOf,tab,setTab}:{data:DeskSnapshot;openPaper:(r:ReportView)=>void;dateOf:(day:number)=>string;tab:string;setTab:(tab:string)=>void}){
  const {name,text}=presenter(data.strings);
  const rows=ledgerRows(data),papers=received(data.morning);
@@ -161,7 +164,7 @@ export function AccountabilityLedger({data,openPaper,dateOf,tab,setTab}:{data:De
   </div>:tab==='congress'?<CongressLeaf data={data} dateOf={dateOf} openPaper={openPaper}/>:<section className="ledger-returns"><h3>{S.ledgerReturns}</h3>
    {!papers.some(r=>returnTypes.includes(r.type))&&<p>{S.ledgerNoReturns}</p>}
    {papers.filter(r=>returnTypes.includes(r.type)).map(r=><article key={r.id} className="return-entry"><header><h4>{S.genres[r.type]}</h4><p>{name(r.author,'person')}, {dateOf(r.day)}<br/>{name(r.subjectId,r.subjectKind)}</p></header>
-    {r.claims.some(c=>figureKinds.has(c.kind))?<table><thead><tr><th>{S.ledgerMeasure}</th><th>{S.ledgerFigure}</th></tr></thead><tbody>{r.claims.filter(c=>figureKinds.has(c.kind)).map((c,i)=><tr key={i}><th scope="row">{S.claims[c.kind]??text(c.kind.replaceAll('-',' '))}{c.token?`, ${text(c.token)}`:''}</th><td>{c.value}</td></tr>)}</tbody></table>:<p>{S.ledgerNoFigures}</p>}
+    {r.claims.some(c=>figureKinds.has(c.kind))?<table><thead><tr><th>{S.ledgerMeasure}</th><th>{S.ledgerFigure}</th></tr></thead><tbody>{r.claims.filter(c=>figureKinds.has(c.kind)).map((c,i)=><tr key={i}><th scope="row">{S.claims[c.kind]??text(c.kind.replaceAll('-',' '))}{c.token?`, ${text(c.token)}`:''}</th><td>{c.kind==='enemy-estimate-unknown'||c.kind==='enemy-strength'?strengthText(c.kind==='enemy-estimate-unknown'?null:c.value,c.strength):c.value}</td></tr>)}</tbody></table>:<p>{S.ledgerNoFigures}</p>}
     <button data-source-paper={r.id} onClick={()=>openPaper(r)}>{S.ledgerTerms}</button>
    </article>)}
   </section>}

@@ -1,0 +1,15 @@
+{
+  "union": [],
+  "testbed": [
+    {
+      "mechanic": "combat.flank_broken",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    }
+  ],
+  "bandProblems": []
+}

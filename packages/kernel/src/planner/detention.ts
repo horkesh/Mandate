@@ -7,7 +7,7 @@ import { buildAxis } from './axes.ts';
 import type { Ctx } from './context.ts';
 import { own, weights } from './methods.ts';
 import { search } from './route.ts';
-import { demandFor, makeCandidate } from './score.ts';
+import { commonTerms, demandFor, makeCandidate } from './score.ts';
 import type { DemonstrationCourse, DetentionCourse, DraftSet, GateKind, PlanCandidate, PlanGate, PlanRejected, PlanRoute } from './types.ts';
 
 export function routeDays(route: PlanRoute): number {
@@ -32,7 +32,7 @@ export function detentionDraft(ctx: Ctx, purpose: DetentionPurpose): DraftSet {
   const staging = blocks[0]?.region;
   for (const problem of detentionProblems(map, purpose)) common.push(gate('detention_policy', problem));
   if (!purpose.detentionArea.some(r => picture?.targetRegions.has(r))) common.push(gate('no_target', 'no fresh received attribution to the opposing command in the detention area'));
-  if (staging === undefined || blocks.some(b => b.strength <= 0 || b.aboard !== null || picture?.unavailable.has(b.id))) {
+  if (staging === undefined || blocks.some(b => b.unknownStrength || b.strength <= 0 || b.aboard !== null || picture?.unavailable.has(b.id))) {
     common.push(gate('no_forces', 'a known, available land allocation is required'));
   }
   if (staging !== undefined && (!purpose.actionArea.includes(staging) || blocks.some(b => b.region !== staging))) {
@@ -67,7 +67,7 @@ export function detentionDraft(ctx: Ctx, purpose: DetentionPurpose): DraftSet {
             phaseDays: course.intervals * 1000, phaseRegion: endpoint }],
         };
         const scored = makeCandidate(local, 'direct', variant, [axis], []);
-        if (course.means === 'attack' && (scored.candRatio < demandFor(local) || scored.candConditions.length > 0)) {
+        if (course.means === 'attack' && (scored.candRatio === null || scored.candRatio < demandFor(local) || scored.candConditions.length > 0)) {
           reject(variant, [gate('insufficient_force', 'the allocation cannot meet the ordinary attack demand')]);
           return;
         }
@@ -77,7 +77,7 @@ export function detentionDraft(ctx: Ctx, purpose: DetentionPurpose): DraftSet {
       const routeGate = approach === null ? [gate('no_route', 'no authorized approach within the search budget')] : [];
       const attackGates = [...routeGate];
       if (picture?.targetRegions.has(endpoint) && detention.has(endpoint)) {
-        if (!picture.freshEstimates.has(endpoint) || !input.beliefs.has(endpoint)) {
+        if (!picture.freshEstimates.has(endpoint) || input.beliefs.get(endpoint) == null) {
           attackGates.push(gate('insufficient_force', 'a current enemy estimate is required for attack'));
         }
       } else {
@@ -99,7 +99,7 @@ export function detentionDraft(ctx: Ctx, purpose: DetentionPurpose): DraftSet {
         if (recovery === null) gates.push(gate('no_route', 'no authorized recovery within the search budget'));
         else {
           const stops = [recovery.routeFrom, ...recovery.routeLegs.map(l => l.legTo)];
-          if (stops.some(r => !picture?.freshEstimates.has(r))) gates.push(gate('unknown_recovery', 'missing fresh recovery estimate'));
+          if (stops.some(r => !picture?.freshEstimates.has(r) || input.beliefs.get(r) == null)) gates.push(gate('unknown_recovery', 'missing fresh complete recovery estimate'));
           if (recovery.routeLegs.some(l => (input.beliefs.get(l.legTo) ?? 0) > 0 && l.legHeld)) {
             gates.push(gate('no_route', 'received picture places a hostile force on the recovery line'));
           }
@@ -114,7 +114,7 @@ export function detentionDraft(ctx: Ctx, purpose: DetentionPurpose): DraftSet {
     }
     ctx.searches = scope.searches;
   }
-  const sorted = candidates.sort((a, b) => b.candScore - a.candScore || strictCompare(a.id, b.id));
+  const sorted = commonTerms(candidates).sort((a, b) => b.candScore - a.candScore || strictCompare(a.id, b.id));
   const selected = sorted.slice(0, input.rules.topN);
   return { draftCommander: input.profile.person, draftPost: input.post, draftFaction: input.faction, draftDay: input.day,
     draftCandidates: selected, draftRejected: rejected, draftSearches: ctx.searches, draftGenerated: candidates.length + rejected.length,

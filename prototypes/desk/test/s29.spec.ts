@@ -101,7 +101,7 @@ test('S29 Union history through 31 July, with weekly desks and received evidence
     await sign(`transfer ${c.post} ${menu.doctrine.concentrateAt} blocks 999`);actions.push(`transfer ${c.post} to ${menu.doctrine.concentrateAt}`);
    }
    for(const o of menu.doctrine.offensives){
-    if(o.day>day||sentGoals.has(o.post)||!menu.commandable.some(c=>c.post===o.post)||!spend('order'))continue;
+    if(o.purpose!==undefined||o.day>day||sentGoals.has(o.post)||!menu.commandable.some(c=>c.post===o.post)||!spend('order'))continue;
     await sign(`order ${o.post} take ${o.objective} review`);sentGoals.add(o.post);goals.set(o.post,o.objective);actions.push(`goal ${o.post} to ${o.objective}, review required`);
    }
    for(const r of menu.reviews){

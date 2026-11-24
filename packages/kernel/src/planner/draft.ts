@@ -12,6 +12,7 @@ import { bombard, byWater, direct, directRoute, flank, holding, pincer, supplyLi
 import { overlap } from './route.ts';
 import type { PlanCandidate, DraftSet, PlanRejected } from './types.ts';
 import { followsNote, noteCandidates } from './notes.ts';
+import { commonTerms } from './score.ts';
 
 function regionsOfCandidate(c: PlanCandidate): RegionId[] {
   return c.candAxes.flatMap((a) => a.axisRoute.routeLegs.map((l) => l.legTo));
@@ -44,7 +45,7 @@ export function draft(input: PlannerInput): DraftSet {
     if ('rejected' in o) rejected.push(o.rejected);
     else kept.push(o.ok);
   }
-  const scored = noteCandidates(ctx, kept);
+  const scored = noteCandidates(ctx, commonTerms(kept));
   if (ctx.searches > input.rules.maxSearches) {
     rejected.push({ rejMethod: 'direct', rejVariant: 'search_cap', rejGates: [{ gateKind: 'no_route', gateHard: true, gateDetail: `search cap ${input.rules.maxSearches} reached (${ctx.searches} asked)` }] });
   }

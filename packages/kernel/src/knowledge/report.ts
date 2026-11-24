@@ -21,6 +21,7 @@ import type { DiscretionCondition, PlanGoal } from '../plans/goal.ts';
 import type { CallInformation, StateCondition } from './evidence-types.ts';
 import type { LetterIdentity } from '../world/letters.ts';
 import type { ConsultationAdvice, CourseEvidence } from '../world/consultations.ts';
+import { strengthProblems, type StrengthEstimate } from './strength.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
 export const REPORT_TYPES = [
@@ -153,6 +154,7 @@ export type AppointmentRefusal = 'post_held' | 'person_holds_post' | 'other_side
 
 /** One typed claim. `claimToken` is a closed word from the claim kind's vocabulary (e.g. `holding`), never prose. */
 export interface ReportClaim {
+  readonly claimStrength?: StrengthEstimate;
   readonly claimKind: ClaimKind;
   readonly claimRegion: RegionId | null;
   readonly claimValue: number;
@@ -296,6 +298,11 @@ export function reportProblems(body: ReportBody): string[] {
   if (body.reportCourseEvidence !== undefined && (body.reportSubjectKind !== 'situation' || body.reportCourseEvidence.length === 0 ||
     body.reportCourseEvidence.some(e => !validCourseEvidence(e)) || new Set(body.reportCourseEvidence.map(e => `${e.evidenceCourse}|${e.evidenceResource}`)).size !== body.reportCourseEvidence.length)) problems.push('course evidence needs a situation and distinct nonnegative resource accounts; unknown is null');
   for (const c of body.reportClaims) {
+    if (c.claimStrength !== undefined) {
+      problems.push(...strengthProblems(c.claimStrength));
+      if (!['enemy-strength','enemy-estimate-unknown'].includes(c.claimKind) || c.claimRegion === null ||
+        (c.claimKind === 'enemy-strength') !== (!c.claimStrength.strengthUnknown && c.claimStrength.strengthCoverage === 'complete')) problems.push('strength claim kind must preserve its unknown remainder');
+    }
     if (!isPermille(c.claimConfidence)) problems.push(`claim ${c.claimKind}: confidence must be a permille`);
     if (!Number.isSafeInteger(c.claimValue)) problems.push(`claim ${c.claimKind}: value must be an integer`);
     if (c.claimKind === 'control' || c.claimKind === 'control-government') {

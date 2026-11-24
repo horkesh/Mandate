@@ -35,7 +35,7 @@ export interface PlanLeg {
   readonly legType: 'rail' | 'river' | 'road' | 'sea';
   readonly legDays: number;
   /** Threat where it lands, as permille days at his risk weight. */
-  readonly legThreat: number;
+  readonly legThreat: number | null;
   /** Days outside his supply network, at his supply care. */
   readonly legSupply: number;
   /** Days spent on works or enemy-held ground on this leg: an obstruction, works to reduce, a garrison to assault. */
@@ -47,6 +47,7 @@ export interface PlanLeg {
 }
 
 export interface PlanRoute {
+  readonly routeUnknownThreat?: true;
   readonly routeFrom: RegionId;
   readonly routeTo: RegionId;
   readonly routeLegs: readonly PlanLeg[];
@@ -57,6 +58,8 @@ export interface PlanRoute {
 }
 
 export interface PlanAxis {
+  /** axisStrength is only the known component when this is present. */
+  readonly axisUnknownStrength?: true;
   /** `main`, `partner`, `fixing`, `afloat`, `hold`, or `added:<region>` for an axis an edit added. */
   readonly axisName: string;
   /** The post whose forces make this axis: the commander's own, or a neighbour's under a support request. */
@@ -168,9 +171,10 @@ export interface PlanCandidate {
   /** Exactly the sum of `candTerms` (a test asserts it). */
   readonly candScore: number;
   /** Enemy he believes stands at the objective (with a share of his neighbours), men, after his perception. */
-  readonly candPerceived: number;
+  readonly candPerceived: number | null;
   /** His strength over that, permille. */
-  readonly candRatio: number;
+  readonly candRatio: number | null;
+  readonly candUnavailableTerms?: readonly { readonly term: TermKind; readonly reason: 'unknown_strength'; readonly regions: readonly RegionId[] }[];
 }
 
 /** Internal breakdown. The principal gets only the commander's stated account by report. */
@@ -217,6 +221,8 @@ export interface PlannerForce {
   readonly arm: string;
   /** Men; an unknown strength counts as none. */
   readonly strength: number;
+  /** Known component only; an unknown remainder cannot certify an allocation. */
+  readonly unknownStrength?: true;
   /** Whole days of stores; unknown counts as none. */
   readonly storesDays: number;
   /** Its stores are a pack norm's (lane 1.4). */

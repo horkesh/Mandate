@@ -35,7 +35,9 @@ const run = (state: State, days: number, letter?: ReturnType<typeof order>) =>
 function enemyReport(state: State, region: string, amount: number, seat = commander): State {
   return deliverReport(state, seat, report(`m.enemy.${region}.${state.stateDay}`, {
     reportType: 'enemy-estimate', reportSubjectKind: 'region', reportSubjectId: region, reportDay: state.stateDay,
-    reportClaims: [{ claimKind: 'enemy-strength', claimRegion: R(region), claimValue: amount, claimToken: null, claimConfidence: 1000 }],
+    // This controlled fictional sighting includes explicit clearance of the
+    // other regions; their old omission may no longer stand for zero.
+    reportClaims: [...world.map.regions.keys()].map(r => ({ claimKind: 'enemy-strength', claimRegion: r, claimValue: r === region ? amount : 0, claimToken: null, claimConfidence: 1000 })),
   }, state.stateDay), NO_TRUTH);
 }
 

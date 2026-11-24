@@ -1,3 +1,4 @@
+import type { StrengthEstimate } from '../knowledge/strength.ts';
 import { forceTotals } from '../forces/lots.ts';
 /**
  * A drafting request's input, built at the request (0062: `draft(world, derived, view, request)`).
@@ -52,6 +53,7 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
     const loc = state.forceLocations[id];
     if (post === null || loc === undefined) continue;
     const fb = state.forceBlockStates[id]!;
+    const totals = forceTotals(fb,world.map.forceTotalsCache);
     out.push({
       id,
       post,
@@ -59,7 +61,8 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
       kind: fb.fbKind === 'detachment' ? 'detachment' : 'block',
       naval: isNaval(world.map, state, id),
       arm: fb.fbArm,
-      strength: forceTotals(fb, world.map.forceTotalsCache).fbStrength ?? 0,
+      strength: totals.fbByKind.return + totals.fbByKind.estimate + totals.fbByKind.rule,
+      ...(totals.fbStrength === null ? {unknownStrength:true as const} : {}),
       storesDays: Math.trunc((fb.fbStoresMilli ?? 0) / 1000),
       storesAssumed: fb.fbStoresAssumed,
       aboard: loc.locAboard,
@@ -102,9 +105,11 @@ export function sidePosts(world: SeatsWorld, state: State, faction: FactionId, d
 }
 
 /** What the commander's view says of the enemy and the ground, as the planner reads it. */
-export function viewGround(view: SeatView): { readonly beliefs: Map<RegionId, number>; readonly works: Map<RegionId, number>; readonly obstructions: Map<EdgeId, RegionId | null> } {
-  const beliefs = new Map<RegionId, number>();
+export function viewGround(view: SeatView): { readonly beliefs: Map<RegionId, number | null>; readonly beliefDetails: Map<RegionId, StrengthEstimate>; readonly works: Map<RegionId, number>; readonly obstructions: Map<EdgeId, RegionId | null> } {
+  const beliefs = new Map<RegionId, number | null>();
+  const beliefDetails = new Map<RegionId, StrengthEstimate>();
   for (const r of (Object.keys(view.enemyBeliefs) as RegionId[]).sort(strictCompare)) beliefs.set(r, view.enemyBeliefs[r]!.value);
+  for (const r of (Object.keys(view.enemyBeliefs) as RegionId[]).sort(strictCompare)) if(view.enemyBeliefs[r]!.strength!==undefined)beliefDetails.set(r,view.enemyBeliefs[r]!.strength!);
   const works = new Map<RegionId, number>();
   for (const r of (Object.keys(view.worksBeliefs) as RegionId[]).sort(strictCompare)) works.set(r, view.worksBeliefs[r]!.value);
   const obstructions = new Map<EdgeId, RegionId | null>();
@@ -112,7 +117,7 @@ export function viewGround(view: SeatView): { readonly beliefs: Map<RegionId, nu
     const b = view.obstructionBeliefs[e]!;
     if (b.closed) obstructions.set(e, b.by);
   }
-  return { beliefs, works, obstructions };
+  return { beliefs, beliefDetails, works, obstructions };
 }
 
 /** The input for drafting `goal` for `post`, whose holder's view is `view`, on the morning's derived map. */
@@ -125,12 +130,13 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
   if (holder === null) throw new RangeError(`post ${post} is vacant: nobody to plan`);
   const person = traitsOf(world, state, holder);
   const people = world.rules.people;
-  const { beliefs, works, obstructions } = viewGround(view);
+  const { beliefs, beliefDetails, works, obstructions } = viewGround(view);
   return {
     ground: { map: world.map, index: buildControlIndex(world.map, Object.fromEntries(Object.entries(view.controlBeliefs).map(([region, belief]) => [region, belief.shares]))), network: plannerNetwork(network), month },
     supply,
     faction,
     beliefs,
+    beliefDetails,
     works,
     obstructions,
     forces: sideForces(world, state, faction),
@@ -150,7 +156,7 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
           if (c.region === null || c.confidence <= 0 || (c.kind !== 'enemy-strength' && c.kind !== 'enemy-estimate-unknown')) continue;
           if (report.day < (latest.get(c.region) ?? -1)) continue;
           latest.set(c.region, report.day);
-          if (c.kind === 'enemy-strength') freshEstimates.add(c.region);
+          if (c.kind === 'enemy-strength' && beliefs.get(c.region) != null && !c.strength?.strengthUnknown) freshEstimates.add(c.region);
           else freshEstimates.delete(c.region);
         }
         for (const report of fresh) for (const c of report.claims) {

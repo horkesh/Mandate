@@ -1,0 +1,1994 @@
+[
+  {
+    "kind": "dispatches",
+    "entries": [
+      {
+        "id": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+        "msgOrigin": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+        "msgFrom": "scott_winfield",
+        "msgTo": "patterson_robert",
+        "msgToPost": "us_dept_pennsylvania",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 130,
+        "msgArriveDay": 135,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "goal",
+          "orderGoal": {
+            "goalPurpose": {
+              "detKind": "attack_or_demonstrate",
+              "detDuty": "detain",
+              "detTargetPost": "cs_cmd_harpers_ferry",
+              "detTargetKind": "opposing_command",
+              "detDetentionArea": [
+                "lower_valley"
+              ],
+              "detActionArea": [
+                "harpers_ferry",
+                "lower_valley"
+              ],
+              "detMeans": [
+                "attack",
+                "demonstrate"
+              ]
+            },
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "orderEdit": null,
+          "orderCall": null,
+          "orderLetter": {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul13",
+            "revision": 1
+          },
+          "orderAuthority": {
+            "basisPost": "us_general_in_chief",
+            "basisKey": "scott_army_command"
+          },
+          "orderIssuer": "scott_winfield",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 130
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+        "msgOrigin": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+        "msgFrom": "scott_winfield",
+        "msgTo": "patterson_robert",
+        "msgToPost": "us_dept_pennsylvania",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 134,
+        "msgArriveDay": 139,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "goal",
+          "orderGoal": {
+            "goalPurpose": {
+              "detKind": "attack_or_demonstrate",
+              "detDuty": "detain",
+              "detTargetPost": "cs_cmd_harpers_ferry",
+              "detTargetKind": "opposing_command",
+              "detDetentionArea": [
+                "lower_valley"
+              ],
+              "detActionArea": [
+                "harpers_ferry",
+                "lower_valley"
+              ],
+              "detMeans": [
+                "attack",
+                "demonstrate"
+              ]
+            },
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "orderEdit": null,
+          "orderCall": null,
+          "orderLetter": {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul17",
+            "revision": 1
+          },
+          "orderAuthority": {
+            "basisPost": "us_general_in_chief",
+            "basisKey": "scott_army_command"
+          },
+          "orderIssuer": "scott_winfield",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 134
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+        "msgOrigin": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+        "msgFrom": "scott_winfield",
+        "msgTo": "patterson_robert",
+        "msgToPost": "us_dept_pennsylvania",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 135,
+        "msgArriveDay": 140,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "goal",
+          "orderGoal": {
+            "goalPurpose": {
+              "detKind": "attack_or_demonstrate",
+              "detDuty": "detain",
+              "detTargetPost": "cs_cmd_harpers_ferry",
+              "detTargetKind": "opposing_command",
+              "detDetentionArea": [
+                "lower_valley"
+              ],
+              "detActionArea": [
+                "harpers_ferry",
+                "lower_valley"
+              ],
+              "detMeans": [
+                "attack",
+                "demonstrate"
+              ]
+            },
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "orderEdit": null,
+          "orderCall": null,
+          "orderLetter": {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul18",
+            "revision": 1
+          },
+          "orderAuthority": {
+            "basisPost": "us_general_in_chief",
+            "basisKey": "scott_army_command"
+          },
+          "orderIssuer": "scott_winfield",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 135
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      }
+    ]
+  },
+  {
+    "kind": "receipts",
+    "entries": [
+      {
+        "id": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+        "msgOrigin": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+        "msgFrom": "scott_winfield",
+        "msgTo": "patterson_robert",
+        "msgToPost": "us_dept_pennsylvania",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 130,
+        "msgArriveDay": 135,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "goal",
+          "orderGoal": {
+            "goalPurpose": {
+              "detKind": "attack_or_demonstrate",
+              "detDuty": "detain",
+              "detTargetPost": "cs_cmd_harpers_ferry",
+              "detTargetKind": "opposing_command",
+              "detDetentionArea": [
+                "lower_valley"
+              ],
+              "detActionArea": [
+                "harpers_ferry",
+                "lower_valley"
+              ],
+              "detMeans": [
+                "attack",
+                "demonstrate"
+              ]
+            },
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "orderEdit": null,
+          "orderCall": null,
+          "orderLetter": {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul13",
+            "revision": 1
+          },
+          "orderAuthority": {
+            "basisPost": "us_general_in_chief",
+            "basisKey": "scott_army_command"
+          },
+          "orderIssuer": "scott_winfield",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 130
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+        "msgOrigin": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+        "msgFrom": "scott_winfield",
+        "msgTo": "patterson_robert",
+        "msgToPost": "us_dept_pennsylvania",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 134,
+        "msgArriveDay": 139,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "goal",
+          "orderGoal": {
+            "goalPurpose": {
+              "detKind": "attack_or_demonstrate",
+              "detDuty": "detain",
+              "detTargetPost": "cs_cmd_harpers_ferry",
+              "detTargetKind": "opposing_command",
+              "detDetentionArea": [
+                "lower_valley"
+              ],
+              "detActionArea": [
+                "harpers_ferry",
+                "lower_valley"
+              ],
+              "detMeans": [
+                "attack",
+                "demonstrate"
+              ]
+            },
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "orderEdit": null,
+          "orderCall": null,
+          "orderLetter": {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul17",
+            "revision": 1
+          },
+          "orderAuthority": {
+            "basisPost": "us_general_in_chief",
+            "basisKey": "scott_army_command"
+          },
+          "orderIssuer": "scott_winfield",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 134
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      },
+      {
+        "id": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+        "msgOrigin": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+        "msgFrom": "scott_winfield",
+        "msgTo": "patterson_robert",
+        "msgToPost": "us_dept_pennsylvania",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 135,
+        "msgArriveDay": 140,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "goal",
+          "orderGoal": {
+            "goalPurpose": {
+              "detKind": "attack_or_demonstrate",
+              "detDuty": "detain",
+              "detTargetPost": "cs_cmd_harpers_ferry",
+              "detTargetKind": "opposing_command",
+              "detDetentionArea": [
+                "lower_valley"
+              ],
+              "detActionArea": [
+                "harpers_ferry",
+                "lower_valley"
+              ],
+              "detMeans": [
+                "attack",
+                "demonstrate"
+              ]
+            },
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "orderEdit": null,
+          "orderCall": null,
+          "orderLetter": {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul18",
+            "revision": 1
+          },
+          "orderAuthority": {
+            "basisPost": "us_general_in_chief",
+            "basisKey": "scott_army_command"
+          },
+          "orderIssuer": "scott_winfield",
+          "orderTarget": "us_dept_pennsylvania",
+          "orderBypass": false,
+          "orderIssuedDay": 135
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      }
+    ]
+  },
+  {
+    "kind": "responses",
+    "entries": [
+      {
+        "key": "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:appoint",
+        "respDay": 53,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 64,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "appointment",
+            "clauseSubject": "appointments"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania",
+          "clauses": [
+            "appointment",
+            "course"
+          ],
+          "undertakingRevision": "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania",
+          "clauses": [
+            "appointment",
+            "course"
+          ],
+          "undertakingRevision": "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 56,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1|patterson_robert",
+        "respOrder": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "mandate",
+        "respDay": 59,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 64,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "hold",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "onward",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "relieve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "take",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+          "clauses": [
+            "approve",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 63,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 70,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 77,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 84,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 91,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 98,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 105,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 112,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 112,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 51,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approval",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "commitment",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "deadline",
+            "clauseSubject": "timing"
+          },
+          {
+            "clauseId": "objective",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "routes",
+            "clauseSubject": "transport"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 119,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 128,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 133,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1|patterson_robert",
+        "respOrder": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 135,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approval",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "commitment",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "deadline",
+            "clauseSubject": "timing"
+          },
+          {
+            "clauseId": "objective",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "routes",
+            "clauseSubject": "transport"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1|patterson_robert",
+        "respOrder": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 139,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approval",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "commitment",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "deadline",
+            "clauseSubject": "timing"
+          },
+          {
+            "clauseId": "objective",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "routes",
+            "clauseSubject": "transport"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1|patterson_robert",
+        "respOrder": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 140,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approval",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "commitment",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "deadline",
+            "clauseSubject": "timing"
+          },
+          {
+            "clauseId": "objective",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "routes",
+            "clauseSubject": "transport"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 140,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 140,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approval",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "commitment",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "deadline",
+            "clauseSubject": "timing"
+          },
+          {
+            "clauseId": "objective",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "routes",
+            "clauseSubject": "transport"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      },
+      {
+        "key": "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania|patterson_robert",
+        "respOrder": "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "verb:inquire",
+        "respDay": 147,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 57,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+          "clauses": [
+            "course"
+          ],
+          "undertakingRevision": "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  }
+]

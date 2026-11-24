@@ -1,0 +1,379 @@
+[
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 4,
+      "magnitude": 86
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 4,
+      "magnitude": 98
+    }
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 8,
+      "magnitude": 1614
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 8,
+      "magnitude": 2152
+    }
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 8,
+      "magnitude": 358
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 8,
+      "magnitude": 422
+    }
+  },
+  {
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 31,
+      "magnitude": 2548
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 47,
+      "magnitude": 3766
+    }
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "before": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 2,
+      "magnitude": 2
+    }
+  },
+  {
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 35,
+      "magnitude": 3348
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 51,
+      "magnitude": 4566
+    }
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 18,
+      "magnitude": 18
+    }
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 187,
+      "magnitude": 187000
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 310,
+      "magnitude": 310000
+    }
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 10,
+      "magnitude": 10
+    }
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 238,
+      "magnitude": 236000
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 240,
+      "magnitude": 239000
+    }
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 108,
+      "magnitude": 230
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 129,
+      "magnitude": 318
+    }
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 43,
+      "magnitude": 83
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 43,
+      "magnitude": 79
+    }
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 118,
+      "magnitude": 1963
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 118,
+      "magnitude": 1982
+    }
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 2,
+      "magnitude": 2
+    }
+  },
+  {
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 20,
+      "magnitude": 20
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 25,
+      "magnitude": 25
+    }
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 47,
+      "magnitude": 47
+    }
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 2158,
+      "magnitude": 2158
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 2175,
+      "magnitude": 2175
+    }
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 2189,
+      "magnitude": 2189
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 2206,
+      "magnitude": 2206
+    }
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 25,
+      "magnitude": 25
+    }
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 16,
+      "magnitude": 16
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 14,
+      "magnitude": 14
+    }
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    }
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 15,
+      "magnitude": 15
+    }
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 16,
+      "magnitude": 24
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 17,
+      "magnitude": 24
+    }
+  },
+  {
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 3,
+      "magnitude": 12
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 3,
+      "magnitude": 14
+    }
+  },
+  {
+    "mechanic": "planner.term.glory",
+    "before": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.glory",
+      "fires": 2,
+      "magnitude": 2
+    }
+  },
+  {
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 2,
+      "magnitude": 2
+    }
+  },
+  {
+    "mechanic": "politics.support",
+    "before": {
+      "mechanic": "politics.support",
+      "fires": 74,
+      "magnitude": 74
+    },
+    "after": {
+      "mechanic": "politics.support",
+      "fires": 69,
+      "magnitude": 69
+    }
+  },
+  {
+    "mechanic": "reports.pocket",
+    "before": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "reports.pocket",
+      "fires": 4,
+      "magnitude": 4
+    }
+  }
+]

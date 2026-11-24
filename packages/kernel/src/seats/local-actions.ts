@@ -173,7 +173,7 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
     if (!mayCommit(world.map,state,a,target,blocks)) continue;
     const defaults = world.map.world.rules.plans.goalDefaults;
     const goals: PlanGoal[] = target !== post ? own === undefined ? [] : [{ ...own.planGoal, goalCommitted: blocks, goalApproveAsDrafted: false }] :
-      a.authorityGrant.mandateRegions.filter(region => region === view.region || (view.enemyBeliefs[region]?.value ?? 0) > 0)
+      a.authorityGrant.mandateRegions.filter(region => region === view.region || view.enemyBeliefs[region]?.strength?.strengthPresence === true || (view.enemyBeliefs[region]?.value ?? 0) > 0)
       .flatMap(region => a.authorityGrant.mandateActions.filter((action): action is Posture => POSTURES.some(p => p === action) && (region !== view.region || action === 'hold')).map(action => ({
         goalObjective:region,goalPosture:action,goalRisk:defaults.risk,goalDeadlineDays:defaults.deadlineDays,
         goalRail:a.authorityGrant.mandateModes.includes('rail'),goalRiver:a.authorityGrant.mandateModes.includes('river'),goalSea:a.authorityGrant.mandateModes.includes('sea'),

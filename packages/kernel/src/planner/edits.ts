@@ -20,7 +20,7 @@ import { buildAxis, searchModeOf, splitBlocks } from './axes.ts';
 import { blocksOf, makeCtx, type Ctx, type PlannerInput } from './context.ts';
 import { weights } from './methods.ts';
 import { overlap, search, viaRoute } from './route.ts';
-import { demandFor, makeCandidate } from './score.ts';
+import { commonTerms, demandFor, makeCandidate } from './score.ts';
 import { scoreNotes } from './notes.ts';
 import type { AxisMode, PlanAxis, PlanCandidate, DraftSet, PlannerForce, TermKind } from './types.ts';
 
@@ -37,6 +37,7 @@ export type EditFailure =
   | { readonly kind: 'no-waypoint'; readonly region: RegionId | null; readonly mode: AxisMode }
   | { readonly kind: 'too-many-axes' }
   | { readonly kind: 'too-few-blocks' }
+  | { readonly kind: 'unknown-strength' }
   | { readonly kind: 'no-route'; readonly region: RegionId | null }
   | { readonly kind: 'last-axis' };
 
@@ -53,6 +54,7 @@ export function editFailureDiagnostic(reason: EditFailure): string {
     case 'no-waypoint': return `waypoint ${reason.region} cannot be reached by ${reason.mode}`;
     case 'too-many-axes': return 'the plan already has as many axes as he can run, and one more';
     case 'too-few-blocks': return 'too few blocks to form another axis';
+    case 'unknown-strength': return 'unknown strength cannot certify a proportional split';
     case 'no-route': return `no route to ${reason.region}`;
     case 'last-axis': return 'a plan needs one axis';
   }
@@ -111,6 +113,7 @@ export function applyEdit(input: PlannerInput, set: DraftSet, chosen: PlanCandid
       if (chosen.candAxes.length >= input.profile.maxAxes + 1) return { ok: false, reason: { kind: 'too-many-axes' } };
       const mine = chosen.candAxes.filter((x) => x.axisPost === input.post);
       const pool = mine.flatMap((x) => blocksOfAxis(ctx, x));
+      if(pool.some(b=>b.unknownStrength))return {ok:false,reason:{kind:'unknown-strength'}};
       if (pool.length < 2) return { ok: false, reason: { kind: 'too-few-blocks' } };
       const from = mine[0]!.axisRoute.routeFrom;
       const r = search(ctx, from, edit.editRegion!, 'land', w);
@@ -133,11 +136,14 @@ export function applyEdit(input: PlannerInput, set: DraftSet, chosen: PlanCandid
   }
   const posts = new Set(axes.map((x) => x.axisPost));
   const requests = chosen.candRequests.filter((r) => r.reqKind !== 'reinforcement').filter((r) => r.reqKind !== 'cooperating_axis' || axes.some((x) => x.axisName === 'partner') || (r.reqPost !== null && posts.has(r.reqPost)));
-  const edited = scoreNotes(ctx, makeCandidate(ctx, chosen.candMethod, `${chosen.candVariant}+${edit.editKind}`, axes, requests), set.draftCandidates);
+  const comparable=commonTerms([...set.draftCandidates,chosen,makeCandidate(ctx,chosen.candMethod,`${chosen.candVariant}+${edit.editKind}`,axes,requests)]);
+  const baseline=comparable.slice(0,-2);
+  const comparableChosen=comparable[comparable.length-2]!;
+  const edited=scoreNotes(ctx,comparable[comparable.length-1]!,baseline);
   // His judgement: the best he drafted for the goal as he understood it.
-  const best = set.draftCandidates[0]?.candScore ?? chosen.candScore;
+  const best = baseline.length ? Math.max(...baseline.map(c=>c.candScore)) : comparableChosen.candScore;
   const distance = clampPermille(best - edited.candScore);
-  const fell = chosen.candTerms
+  const fell = comparableChosen.candTerms
     .map((c) => ({ term: c.contribTerm, drop: c.contribAmount - (edited.candTerms.find((e) => e.contribTerm === c.contribTerm)?.contribAmount ?? 0) }))
     .filter((x) => x.drop > 0)
     .sort((x, y) => y.drop - x.drop || strictCompare(x.term, y.term));
@@ -170,7 +176,7 @@ export function editDirective(input: PlannerInput, set: DraftSet, edited: PlanCa
   const best = set.draftCandidates[0] ?? edited;
   const ctx = makeCtx(input);
   const strength = edited.candAxes.reduce((s, a) => s + a.axisStrength, 0);
-  const needed = Math.trunc((edited.candPerceived * demandFor(ctx)) / 1000);
+  const needed = edited.candPerceived === null ? null : Math.trunc((edited.candPerceived * demandFor(ctx)) / 1000);
   const support = edited.candRequests
     .filter((r) => r.reqKind !== 'reinforcement')
     .map((r) => ({ supportKind: r.reqKind === 'naval_support' ? 'naval' : 'cooperating', supportFrom: r.reqPost }));
@@ -178,7 +184,7 @@ export function editDirective(input: PlannerInput, set: DraftSet, edited: PlanCa
     boldness: clampPermille(base.boldness + riskOf(edited, holdingRisk) - riskOf(best, holdingRisk)),
     honours: base.honours,
     offends: base.offends,
-    required: clampPermille(strength === 0 ? 1000 : Math.trunc((needed * 500) / strength)),
+    required: needed === null ? base.required : clampPermille(strength === 0 ? 1000 : Math.trunc((needed * 500) / strength)),
     ownBest: base.boldness,
     departure: clampPermille(distance),
     ...(support.length === 0 ? {} : { support }),

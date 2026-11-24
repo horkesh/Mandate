@@ -1,0 +1,575 @@
+{
+  "counterfactuals": [
+    {
+      "phase": "before",
+      "post": "n_army_east",
+      "day": 3,
+      "term": "time",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "live": false,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          469
+        ],
+        [
+          "holding:hold:n_east_front",
+          400
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          19
+        ]
+      ]
+    },
+    {
+      "phase": "before",
+      "post": "n_army_east",
+      "day": 3,
+      "term": "glory",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "live": false,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          390
+        ],
+        [
+          "holding:hold:n_east_front",
+          100
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          43
+        ]
+      ]
+    },
+    {
+      "phase": "before",
+      "post": "s_army_salient",
+      "day": 3,
+      "term": "time",
+      "chosen": "direct:least_cost:salient_tip>n_centre_line>n_heartland>n_capital",
+      "without": "direct:least_cost:salient_tip>n_centre_line>n_heartland>n_capital",
+      "live": false,
+      "scores": [
+        [
+          "direct:least_cost:salient_tip>n_centre_line>n_heartland>n_capital",
+          783
+        ],
+        [
+          "flank:penalty:salient_tip>n_centre_line>n_east_plain>n_capital",
+          774
+        ],
+        [
+          "pincer:two_axis:salient_tip>n_centre_line>n_heartland>n_capital|salient_tip>n_centre_line>n_east_plain>n_capital",
+          594
+        ],
+        [
+          "holding:hold:salient_tip",
+          63
+        ]
+      ]
+    },
+    {
+      "phase": "before",
+      "post": "s_army_salient",
+      "day": 3,
+      "term": "glory",
+      "chosen": "direct:least_cost:salient_tip>n_centre_line>n_heartland>n_capital",
+      "without": "direct:least_cost:salient_tip>n_centre_line>n_heartland>n_capital",
+      "live": false,
+      "scores": [
+        [
+          "direct:least_cost:salient_tip>n_centre_line>n_heartland>n_capital",
+          909
+        ],
+        [
+          "flank:penalty:salient_tip>n_centre_line>n_east_plain>n_capital",
+          900
+        ],
+        [
+          "pincer:two_axis:salient_tip>n_centre_line>n_heartland>n_capital|salient_tip>n_centre_line>n_east_plain>n_capital",
+          720
+        ],
+        [
+          "holding:hold:salient_tip",
+          -237
+        ]
+      ]
+    },
+    {
+      "phase": "before",
+      "post": "n_army_east",
+      "day": 8,
+      "term": "time",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "live": false,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          469
+        ],
+        [
+          "holding:hold:n_east_front",
+          400
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          19
+        ],
+        [
+          "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -71
+        ],
+        [
+          "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -888
+        ]
+      ]
+    },
+    {
+      "phase": "before",
+      "post": "n_army_east",
+      "day": 8,
+      "term": "glory",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "live": false,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          390
+        ],
+        [
+          "holding:hold:n_east_front",
+          100
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          43
+        ],
+        [
+          "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -55
+        ],
+        [
+          "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -872
+        ]
+      ]
+    },
+    {
+      "phase": "after",
+      "post": "n_army_east",
+      "day": 3,
+      "term": "time",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "holding:hold:n_east_front",
+      "live": true,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          169
+        ],
+        [
+          "holding:hold:n_east_front",
+          400
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          -281
+        ],
+        [
+          "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -371
+        ],
+        [
+          "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -1234
+        ]
+      ]
+    },
+    {
+      "phase": "after",
+      "post": "n_army_east",
+      "day": 3,
+      "term": "glory",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "holding:hold:n_east_front",
+      "live": true,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          90
+        ],
+        [
+          "holding:hold:n_east_front",
+          100
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          -257
+        ],
+        [
+          "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -363
+        ],
+        [
+          "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -1226
+        ]
+      ]
+    },
+    {
+      "phase": "after",
+      "post": "s_army_salient",
+      "day": 3,
+      "term": "time",
+      "chosen": "direct:least_cost:salient_tip>n_centre_line>n_east_plain>n_capital",
+      "without": "direct:least_cost:salient_tip>n_centre_line>n_east_plain>n_capital",
+      "live": false,
+      "scores": [
+        [
+          "direct:least_cost:salient_tip>n_centre_line>n_east_plain>n_capital",
+          507
+        ],
+        [
+          "flank:penalty:salient_tip>n_centre_line>n_heartland>n_capital",
+          507
+        ],
+        [
+          "pincer:two_axis:salient_tip>n_centre_line>n_east_plain>n_capital|salient_tip>n_centre_line>n_heartland>n_capital",
+          351
+        ],
+        [
+          "holding:hold:salient_tip",
+          63
+        ]
+      ]
+    },
+    {
+      "phase": "after",
+      "post": "s_army_salient",
+      "day": 3,
+      "term": "glory",
+      "chosen": "direct:least_cost:salient_tip>n_centre_line>n_east_plain>n_capital",
+      "without": "direct:least_cost:salient_tip>n_centre_line>n_east_plain>n_capital",
+      "live": false,
+      "scores": [
+        [
+          "direct:least_cost:salient_tip>n_centre_line>n_east_plain>n_capital",
+          633
+        ],
+        [
+          "flank:penalty:salient_tip>n_centre_line>n_heartland>n_capital",
+          633
+        ],
+        [
+          "pincer:two_axis:salient_tip>n_centre_line>n_east_plain>n_capital|salient_tip>n_centre_line>n_heartland>n_capital",
+          477
+        ],
+        [
+          "holding:hold:salient_tip",
+          -237
+        ]
+      ]
+    },
+    {
+      "phase": "after",
+      "post": "n_army_east",
+      "day": 8,
+      "term": "time",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "holding:hold:n_east_front",
+      "live": true,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          169
+        ],
+        [
+          "holding:hold:n_east_front",
+          400
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          -281
+        ],
+        [
+          "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -371
+        ],
+        [
+          "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -1188
+        ]
+      ]
+    },
+    {
+      "phase": "after",
+      "post": "n_army_east",
+      "day": 8,
+      "term": "glory",
+      "chosen": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+      "without": "holding:hold:n_east_front",
+      "live": true,
+      "scores": [
+        [
+          "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          90
+        ],
+        [
+          "holding:hold:n_east_front",
+          100
+        ],
+        [
+          "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+          -257
+        ],
+        [
+          "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -355
+        ],
+        [
+          "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+          -1172
+        ]
+      ]
+    }
+  ],
+  "repulsed": [
+    {
+      "phase": "after",
+      "operation": "op:n_army_east:9",
+      "record": {
+        "opPost": "n_army_east",
+        "opCommander": "n_organiser",
+        "opOrder": "m.5.n_leader.n_secretary.order.n_army_east",
+        "opPlan": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+        "opMethod": "supply_line",
+        "opPosture": "take",
+        "opObjective": "s_capital",
+        "opStartDay": 9,
+        "opEndDay": 34,
+        "opOutcome": "objective_reached",
+        "opAxes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "n_army_east",
+            "oaxBlocks": [
+              "n_east_1",
+              "n_east_2",
+              "raised.n_brenmark_governor.d6",
+              "n_east_horse"
+            ],
+            "oaxRoute": {
+              "routeFrom": "n_east_front",
+              "routeTo": "s_capital",
+              "routeLegs": [
+                {
+                  "legEdge": "road:e_lowlands:n_east_front",
+                  "legFrom": "n_east_front",
+                  "legTo": "e_lowlands",
+                  "legType": "road",
+                  "legDays": 2000,
+                  "legThreat": null,
+                  "legSupply": 2000,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": true
+                },
+                {
+                  "legEdge": "road:e_lowlands:s_coast_east",
+                  "legFrom": "e_lowlands",
+                  "legTo": "s_coast_east",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": null,
+                  "legSupply": 3000,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": true
+                },
+                {
+                  "legEdge": "road:s_coast:s_coast_east",
+                  "legFrom": "s_coast_east",
+                  "legTo": "s_coast",
+                  "legType": "road",
+                  "legDays": 2000,
+                  "legThreat": null,
+                  "legSupply": 2000,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": true
+                },
+                {
+                  "legEdge": "road:s_capital:s_coast",
+                  "legFrom": "s_coast",
+                  "legTo": "s_capital",
+                  "legType": "road",
+                  "legDays": 1000,
+                  "legThreat": null,
+                  "legSupply": 1000,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": true
+                }
+              ],
+              "routeCost": 16000,
+              "routeDays": 8000,
+              "routeUnknownThreat": true
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 4000,
+                "phaseRegion": "n_east_front"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 2000,
+                "phaseRegion": "e_lowlands"
+              },
+              {
+                "phaseKind": "depot_step",
+                "phaseStart": 6000,
+                "phaseDays": 3000,
+                "phaseRegion": "e_lowlands"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 9000,
+                "phaseDays": 3000,
+                "phaseRegion": "s_coast_east"
+              },
+              {
+                "phaseKind": "depot_step",
+                "phaseStart": 12000,
+                "phaseDays": 3000,
+                "phaseRegion": "s_coast_east"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 15000,
+                "phaseDays": 2000,
+                "phaseRegion": "s_coast"
+              },
+              {
+                "phaseKind": "depot_step",
+                "phaseStart": 17000,
+                "phaseDays": 3000,
+                "phaseRegion": "s_coast"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 20000,
+                "phaseDays": 1000,
+                "phaseRegion": "s_capital"
+              }
+            ],
+            "oaxObjective": "s_capital",
+            "oaxStage": "end",
+            "oaxSince": 34,
+            "oaxUntil": null,
+            "oaxRepulses": 1,
+            "oaxPursuit": null,
+            "oaxSteps": [
+              "e_lowlands",
+              "s_coast_east"
+            ],
+            "oaxArrived": 31,
+            "oaxLog": [
+              {
+                "axevDay": 9,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "n_east_front"
+              },
+              {
+                "axevDay": 13,
+                "axevStage": "withdraw",
+                "axevReason": "routed",
+                "axevRegion": "n_east_front"
+              },
+              {
+                "axevDay": 14,
+                "axevStage": "pause",
+                "axevReason": "repulsed",
+                "axevRegion": "n_east_front"
+              },
+              {
+                "axevDay": 17,
+                "axevStage": "march",
+                "axevReason": "pause_over",
+                "axevRegion": "n_east_front"
+              },
+              {
+                "axevDay": 19,
+                "axevStage": "pause",
+                "axevReason": "depot_step",
+                "axevRegion": "e_lowlands"
+              },
+              {
+                "axevDay": 22,
+                "axevStage": "march",
+                "axevReason": "pause_over",
+                "axevRegion": "e_lowlands"
+              },
+              {
+                "axevDay": 25,
+                "axevStage": "pause",
+                "axevReason": "depot_step",
+                "axevRegion": "s_coast_east"
+              },
+              {
+                "axevDay": 28,
+                "axevStage": "march",
+                "axevReason": "pause_over",
+                "axevRegion": "s_coast_east"
+              },
+              {
+                "axevDay": 30,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "s_coast"
+              },
+              {
+                "axevDay": 30,
+                "axevStage": "march",
+                "axevReason": "enemy_gone",
+                "axevRegion": "s_coast"
+              },
+              {
+                "axevDay": 31,
+                "axevStage": "assault",
+                "axevReason": "enemy_ahead",
+                "axevRegion": "s_capital"
+              },
+              {
+                "axevDay": 31,
+                "axevStage": "works",
+                "axevReason": "enemy_gone",
+                "axevRegion": "s_capital"
+              },
+              {
+                "axevDay": 34,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "s_capital"
+              }
+            ]
+          }
+        ],
+        "opRequests": [],
+        "opEncirclement": null,
+        "opEncirclementWhy": null
+      }
+    }
+  ]
+}

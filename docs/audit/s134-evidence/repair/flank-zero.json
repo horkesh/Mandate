@@ -1,0 +1,345 @@
+{
+  "beforeFires": 1,
+  "afterFires": 0,
+  "requiresLeadBeforeHook": true,
+  "cause": "S134 /0130: missing regional and neighboring opposition remains unknown. Common evaluable scoring and route search change the deterministic plan/movement/contact sequence, without changing weights, flank thresholds, RNG streams or force quantities. The old south-capital day23 draw204<threshold206 breaks a flank; the new day30 draw283>threshold207 does not. All eight new side draws exceed their thresholds.",
+  "driver": {
+    "test": "packages/kernel/test/combat.test.ts",
+    "needle": "a flank breaks on a low draw: morale falls by the pack\\'s loss, more go missing, and the break has its phase"
+  },
+  "flankDraws": [
+    {
+      "phase": "before",
+      "battle": "battle:n_capital:8",
+      "day": 8,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 246,
+      "bsideFlankThreshold": 188,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 138,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "withdrew"
+    },
+    {
+      "phase": "before",
+      "battle": "battle:n_capital:8",
+      "day": 8,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 112,
+      "bsideFlankThreshold": 50,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "before",
+      "battle": "battle:e_lowlands:14",
+      "day": 14,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 887,
+      "bsideFlankThreshold": 50,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "before",
+      "battle": "battle:e_lowlands:14",
+      "day": 14,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 950,
+      "bsideFlankThreshold": 231,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 181,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "withdrew"
+    },
+    {
+      "phase": "before",
+      "battle": "battle:s_coast:22",
+      "day": 22,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 302,
+      "bsideFlankThreshold": 57,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_quality",
+          "btermValue": 7,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "before",
+      "battle": "battle:s_coast:22",
+      "day": 22,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 312,
+      "bsideFlankThreshold": 229,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 179,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "withdrew"
+    },
+    {
+      "phase": "before",
+      "battle": "battle:s_capital:23",
+      "day": 23,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 661,
+      "bsideFlankThreshold": 55,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_quality",
+          "btermValue": 5,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "before",
+      "battle": "battle:s_capital:23",
+      "day": 23,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 204,
+      "bsideFlankThreshold": 206,
+      "bsideFlankBroken": true,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 156,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "routed"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:n_capital:8",
+      "day": 8,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 246,
+      "bsideFlankThreshold": 188,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 138,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "withdrew"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:n_capital:8",
+      "day": 8,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 112,
+      "bsideFlankThreshold": 50,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:n_east_plain:12",
+      "day": 12,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 348,
+      "bsideFlankThreshold": 159,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 109,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "routed"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:n_east_plain:12",
+      "day": 12,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 485,
+      "bsideFlankThreshold": 50,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:s_coast:29",
+      "day": 29,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 511,
+      "bsideFlankThreshold": 50,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:s_coast:29",
+      "day": 29,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 558,
+      "bsideFlankThreshold": 229,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 179,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "withdrew"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:s_capital:30",
+      "day": 30,
+      "bsideFaction": "north",
+      "bsideFlankDraw": 715,
+      "bsideFlankThreshold": 50,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "gained_ground"
+    },
+    {
+      "phase": "after",
+      "battle": "battle:s_capital:30",
+      "day": 30,
+      "bsideFaction": "south",
+      "bsideFlankDraw": 283,
+      "bsideFlankThreshold": 207,
+      "bsideFlankBroken": false,
+      "bsideFlankTerms": [
+        {
+          "btermKind": "flank_base",
+          "btermValue": 50,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_numbers",
+          "btermValue": 156,
+          "btermSource": null
+        },
+        {
+          "btermKind": "enemy_quality",
+          "btermValue": 1,
+          "btermSource": null
+        }
+      ],
+      "bsideResult": "withdrew"
+    }
+  ],
+  "quietApplied": false,
+  "currentBandUnchanged": {
+    "minFires": 1,
+    "maxFires": 4
+  },
+  "recommendation": "Accept only this testbed reference zero with the retained independent live driver; do not change a combat or planner number."
+}

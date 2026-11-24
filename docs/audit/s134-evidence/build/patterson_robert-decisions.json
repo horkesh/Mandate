@@ -1,0 +1,531 @@
+[
+  {
+    "day": 86,
+    "key": "seat:patterson_robert|local:us_dept_pennsylvania:86",
+    "seat": "seat:patterson_robert",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "us_dept_pennsylvania",
+      "options": [
+        {
+          "optionId": "goal:b5f6fc486737b9177a5a6fa8",
+          "mandate": "patterson_department_command",
+          "to": "us_dept_pennsylvania",
+          "plan": {
+            "optionId": "holding:hold:philadelphia",
+            "method": "holding",
+            "variant": "hold",
+            "score": 11,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 311
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "us_dept_pennsylvania",
+                "mode": "land",
+                "regions": [
+                  "philadelphia"
+                ],
+                "strength": 1732,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": null,
+            "ratio": null,
+            "unavailableTerms": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "philadelphia"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "harrisburg",
+                  "ohio_north",
+                  "pennsylvania_north",
+                  "pittsburgh",
+                  "southeast_pa"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "goal:b5f6fc486737b9177a5a6fa8"
+    }
+  },
+  {
+    "day": 113,
+    "key": "seat:patterson_robert|plan:us_dept_pennsylvania:113",
+    "seat": "seat:patterson_robert",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "us_dept_pennsylvania",
+      "goal": {
+        "posture": "hold",
+        "objective": "lower_valley",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": true,
+        "setDay": 112,
+        "status": "choosing"
+      },
+      "options": [
+        {
+          "optionId": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 487,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": -288
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 75
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "us_dept_pennsylvania",
+              "mode": "land",
+              "regions": [
+                "philadelphia",
+                "southeast_pa",
+                "harrisburg",
+                "cumberland_valley_pa",
+                "western_maryland",
+                "lower_valley"
+              ],
+              "strength": 1732,
+              "phases": [
+                "concentrate",
+                "march",
+                "march",
+                "march",
+                "march",
+                "march"
+              ],
+              "arrival": 10000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "lower_valley"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "cumberland_valley_pa",
+                "harrisburg",
+                "southeast_pa",
+                "western_maryland"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "holding:hold:lower_valley",
+          "method": "holding",
+          "variant": "hold",
+          "score": 11,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 311
+            }
+          ],
+          "axes": [
+            {
+              "name": "hold",
+              "post": "us_dept_pennsylvania",
+              "mode": "land",
+              "regions": [
+                "lower_valley"
+              ],
+              "strength": 1732,
+              "phases": [
+                "hold"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "lower_valley"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "cumberland_valley_pa",
+                "harrisburg",
+                "southeast_pa",
+                "western_maryland"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley"
+    }
+  },
+  {
+    "day": 141,
+    "key": "seat:patterson_robert|plan:us_dept_pennsylvania:141",
+    "seat": "seat:patterson_robert",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "us_dept_pennsylvania",
+      "goal": {
+        "posture": "hold",
+        "objective": "harpers_ferry",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": true,
+        "setDay": 140,
+        "status": "choosing"
+      },
+      "options": [
+        {
+          "optionId": "direct:least_cost:lower_valley>harpers_ferry",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 559,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": -216
+            },
+            {
+              "term": "exposure",
+              "amount": 0
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 75
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "us_dept_pennsylvania",
+              "mode": "land",
+              "regions": [
+                "lower_valley",
+                "harpers_ferry"
+              ],
+              "strength": 1732,
+              "phases": [
+                "concentrate",
+                "march"
+              ],
+              "arrival": 6000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "harpers_ferry"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "holding:hold:harpers_ferry",
+          "method": "holding",
+          "variant": "hold",
+          "score": 11,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 311
+            }
+          ],
+          "axes": [
+            {
+              "name": "hold",
+              "post": "us_dept_pennsylvania",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "strength": 1732,
+              "phases": [
+                "hold"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "harpers_ferry"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "direct:least_cost:lower_valley>harpers_ferry"
+    }
+  },
+  {
+    "day": 145,
+    "key": "seat:patterson_robert|battle:us_dept_pennsylvania:145",
+    "seat": "seat:patterson_robert",
+    "menu": {
+      "menuKind": "battle",
+      "post": "us_dept_pennsylvania",
+      "region": "harpers_ferry",
+      "battle": null,
+      "believedRatio": 237,
+      "mayAttack": true,
+      "judged": {
+        "commit": "defend",
+        "night": "withdraw",
+        "cutOff": "surrender",
+        "pursue": "none"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_pennsylvania",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  },
+  {
+    "day": 146,
+    "key": "seat:patterson_robert|battle:us_dept_pennsylvania:146",
+    "seat": "seat:patterson_robert",
+    "menu": {
+      "menuKind": "battle",
+      "post": "us_dept_pennsylvania",
+      "region": "harpers_ferry",
+      "battle": null,
+      "believedRatio": 237,
+      "mayAttack": true,
+      "judged": {
+        "commit": "defend",
+        "night": "withdraw",
+        "cutOff": "surrender",
+        "pursue": "none"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_pennsylvania",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  }
+]

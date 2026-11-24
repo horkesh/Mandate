@@ -182,7 +182,7 @@ export const S = {
   docketCount: 'decisions before you', freshCount: 'unread papers', signedCount: 'signed orders',
   claims: {
     'present-for-duty':'Present for duty', 'present-and-absent':'Present and absent', 'effective-strength':'Effective strength reported', missing:'Missing reported',captured:'Captured reported',
-    position: 'Headquarters reported', 'goal-status': 'Goal status', 'enemy-strength': 'Enemy strength reported',
+    position: 'Headquarters reported', 'goal-status': 'Goal status', 'enemy-strength': 'Enemy strength reported', 'enemy-estimate-unknown': 'Enemy strength unknown',
     'order-obeyed': 'Order response', 'order-objected': 'Objects to the order', arrived: 'Arrival reported',
     'plan-submitted': 'Plan submitted', 'plan-answer': 'Answer to your edit', 'verb-answered': 'Reply to your request',
     'appointment-refused': 'Appointment refused',

@@ -23,6 +23,7 @@ export function previewReasonText(reason: phase0.EditPreviewFailure, t: DeskStri
     case 'last-axis':
     case 'too-many-axes':
     case 'too-few-blocks':
+    case 'unknown-strength':
       return t(key);
   }
 }

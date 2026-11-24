@@ -8,7 +8,7 @@ import { blocksOf, makeCtx, type PlannerInput } from './context.ts';
 import { compareCandidates } from './draft.ts';
 import { direct, directRoute, own, weights } from './methods.ts';
 import { search } from './route.ts';
-import { shortfallShare } from './score.ts';
+import { commonTerms, shortfallShare } from './score.ts';
 import type { DraftSet } from './types.ts';
 
 /** Adjacent areas he can engage on land. Water passage requires a separate, authorised mode. */
@@ -20,6 +20,7 @@ export function landNeighbours(input: PlannerInput, region: RegionId): RegionId[
 
 export function discretionThreat(input: PlannerInput, position: RegionId, grant: Discretion<PlanGoal>): { region: RegionId; estimate: number; strength: number; threshold: number } | null {
   const blocks = blocksOf(input, input.post, input.goal.goalCommitted).filter(b => !b.naval);
+  if(blocks.some(b=>b.unknownStrength))return null;
   const strength = blocks.reduce((men, block) => men + (block.region === position ? block.strength : 0), 0);
   if (strength <= 0) return null;
   // A cautious commander tolerates the same relative shortfall here that he tolerates when judging a draft.
@@ -30,7 +31,7 @@ export function discretionThreat(input: PlannerInput, position: RegionId, grant:
   if (grant.condition === 'outmatched') {
     regions = [position, ...landNeighbours(input, position)];
   } else {
-    if (![...input.beliefs.values()].some(estimate => estimate > threshold)) return null;
+    if (![...input.beliefs.values()].some(estimate => estimate !== null && estimate > threshold)) return null;
     const ctx = makeCtx({ ...input, goal: grant.fallback });
     const objective = grant.fallback.goalObjective;
     const route = objective == null ? null : search(ctx, position, objective, 'land', weights(ctx, { supplyCare: 0 }));
@@ -39,11 +40,21 @@ export function discretionThreat(input: PlannerInput, position: RegionId, grant:
     const flank = landNeighbours(input, position).filter(r => line.some(t => landNeighbours(input, t).includes(r)));
     regions = [...new Set([...line, ...flank])].filter(r => r !== position);
   }
-  const threats = regions.map(region => ({ region, estimate: input.beliefs.get(region) ?? 0 }))
+  const threats = regions.filter(region => input.beliefs.get(region) != null).map(region => ({ region, estimate: input.beliefs.get(region)! as number }))
     .filter(r => r.estimate > threshold)
     .sort((a, b) => b.estimate - a.estimate || strictCompare(a.region, b.region));
   const worst = threats[0];
   return worst === undefined ? null : { ...worst, strength, threshold };
+}
+
+/** A missing comparison is undetermined, never a negative finding or permission to execute a fallback. */
+export function discretionAssessment(input: PlannerInput, position: RegionId, grant: Discretion<PlanGoal>) {
+  if(blocksOf(input,input.post,input.goal.goalCommitted).some(b=>b.unknownStrength))return {status:'undetermined' as const,reason:'unknown_strength' as const,regions:[position]};
+  const threat=discretionThreat(input,position,grant);
+  if (threat!==null) return {status:'established' as const,threat};
+  const regions=grant.condition==='outmatched' ? [position,...landNeighbours(input,position)] : [...input.ground.map.regions.keys()];
+  if (regions.some(r=>input.beliefs.get(r)==null)) return {status:'undetermined' as const,reason:'unknown_strength' as const,regions:regions.filter(r=>input.beliefs.get(r)==null)};
+  return {status:'not_established' as const};
 }
 
 /** At most one direct search per safer neighbouring position, within the planner's normal search limit. */
@@ -59,10 +70,11 @@ export function preferableGoal(input: PlannerInput, drafted: DraftSet): { choice
   const ctx = makeCtx(input);
   const position = base.goalObjective ?? own(ctx)[0]?.region;
   if (position === undefined) return { choice: null, searches: 0 };
-  const heldThreat = ctx.threat.get(position) ?? 0;
-  if (heldThreat === 0) return { choice: null, searches: 0 };
+  const heldThreat = ctx.threat.get(position);
+  if (heldThreat == null || heldThreat === 0) return { choice: null, searches: 0 };
   const neighbours = landNeighbours(input, position).filter(r => input.ground.index.holdings.get(r)?.holder === input.faction)
-    .map(region => ({ region, threat: ctx.threat.get(region) ?? 0 }))
+    .filter(region => ctx.threat.get(region) != null)
+    .map(region => ({ region, threat: ctx.threat.get(region)! as number }))
     .filter(r => r.threat < heldThreat)
     .sort((a, b) => a.threat - b.threat || strictCompare(a.region, b.region))
     .slice(0, Math.min(input.rules.topN, Math.max(0, input.rules.maxSearches - drafted.draftSearches)));
@@ -78,6 +90,8 @@ export function preferableGoal(input: PlannerInput, drafted: DraftSet): { choice
   const best = alternatives[0];
   const ordered = drafted.draftCandidates.find(c => c.candMethod !== 'holding');
   // A hold in place has no route to score. A proposed movement must be safer and score at least as well as any ordered route.
-  if (best === undefined || (ordered !== undefined && best.candidate.candScore < ordered.candScore)) return { choice: null, searches };
+  if (best === undefined) return {choice:null,searches};
+  const comparable=ordered===undefined?[best.candidate]:commonTerms([best.candidate,ordered]);
+  if(comparable[1]!==undefined && comparable[0]!.candScore<comparable[1].candScore)return {choice:null,searches};
   return { searches, choice: { goal: best.goal, reason: { kind: 'safer_position', heldThreat, preferredThreat: best.threat } } };
 }

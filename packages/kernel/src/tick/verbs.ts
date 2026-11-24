@@ -23,6 +23,8 @@ import { noteLetter, postObserver, recallObserver } from '../command/observers.t
 import type { ComplianceRung, DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { enemyBeliefs } from '../knowledge/beliefs.ts';
+import { beliefClaim } from '../knowledge/strength.ts';
+import { templateFor } from '../knowledge/templates.ts';
 import { knowledgeOf, rememberLetterReceipt, unansweredAppointments } from '../knowledge/knowledge.ts';
 import { reportQualificationOf, type ReportBody, type ReportClaim, type StatedReason } from '../knowledge/report.ts';
 import { term } from '../knowledge/truth.ts';
@@ -410,8 +412,8 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
         if (myPost !== null && isFieldPost(world, state, myPost)) claims.push({ claimKind: 'position', claimRegion: headquartersOf(world, state, myPost), claimValue: 0, claimToken: null, claimConfidence: 1000 });
         const subject = v.verbSubject as RegionId | null;
         if (subject !== null) {
-          const belief = enemyBeliefs(state, world.rules.traits, traitsOf(world, state, me), knowledgeOf(state, seatIdFor(me))).get(subject);
-          if (belief !== undefined) claims.push({ claimKind: 'enemy-strength', claimRegion: subject, claimValue: belief.value, claimToken: null, claimConfidence: ctx.world.map.world.rules.reportConfidence.inquiryEnemyStrength });
+          const belief = enemyBeliefs(state, world.rules.traits, traitsOf(world, state, me), knowledgeOf(state, seatIdFor(me)),b=>templateFor(world.rules.templates,b.reportType,b.reportSubtype).maxAgeDays).get(subject);
+          if (belief !== undefined) claims.push(beliefClaim(subject,belief,me,ctx.world.map.world.rules.reportConfidence.inquiryEnemyStrength));
         }
         claims.push(answered(true));
         state = applyPeopleChanges(state, changes, ctx.day, rules, vocab);

@@ -84,7 +84,8 @@ export function draftingInputs(pack: string): planner.PlannerInput[] {
             reportAuthorPost: post,
             reportSubjectKind: 'enemy',
             reportSubjectId: post,
-            reportClaims: [...enemy.keys()].sort().map((region) => ({ claimKind: 'enemy-strength' as const, claimRegion: region as ids.RegionId, claimValue: enemy.get(region)!, claimToken: null, claimConfidence: 700 })),
+            // Exhaustive fictional observation fixture, including affirmative clearances.
+            reportClaims: [...world.map.regions.keys()].sort().map((region) => ({ claimKind: 'enemy-strength' as const, claimRegion: region as ids.RegionId, claimValue: enemy.get(region) ?? 0, claimToken: null, claimConfidence: 700 })),
             reportDay: 0,
             reportHour: null,
             reportAdvice: null,

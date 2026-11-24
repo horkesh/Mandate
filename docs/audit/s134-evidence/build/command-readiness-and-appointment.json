@@ -1,0 +1,1868 @@
+{
+  "johnston": [
+    {
+      "day": 1,
+      "post": null
+    },
+    {
+      "day": 2,
+      "post": null
+    },
+    {
+      "day": 3,
+      "post": null
+    },
+    {
+      "day": 4,
+      "post": null
+    },
+    {
+      "day": 5,
+      "post": null
+    },
+    {
+      "day": 6,
+      "post": null
+    },
+    {
+      "day": 7,
+      "post": null
+    },
+    {
+      "day": 8,
+      "post": null
+    },
+    {
+      "day": 9,
+      "post": null
+    },
+    {
+      "day": 10,
+      "post": null
+    },
+    {
+      "day": 11,
+      "post": null
+    },
+    {
+      "day": 12,
+      "post": null
+    },
+    {
+      "day": 13,
+      "post": null
+    },
+    {
+      "day": 14,
+      "post": null
+    },
+    {
+      "day": 15,
+      "post": null
+    },
+    {
+      "day": 16,
+      "post": null
+    },
+    {
+      "day": 17,
+      "post": null
+    },
+    {
+      "day": 18,
+      "post": null
+    },
+    {
+      "day": 19,
+      "post": null
+    },
+    {
+      "day": 20,
+      "post": null
+    },
+    {
+      "day": 21,
+      "post": null
+    },
+    {
+      "day": 22,
+      "post": null
+    },
+    {
+      "day": 23,
+      "post": null
+    },
+    {
+      "day": 24,
+      "post": null
+    },
+    {
+      "day": 25,
+      "post": null
+    },
+    {
+      "day": 26,
+      "post": null
+    },
+    {
+      "day": 27,
+      "post": null
+    },
+    {
+      "day": 28,
+      "post": null
+    },
+    {
+      "day": 29,
+      "post": null
+    },
+    {
+      "day": 30,
+      "post": null
+    },
+    {
+      "day": 31,
+      "post": null
+    },
+    {
+      "day": 32,
+      "post": null
+    },
+    {
+      "day": 33,
+      "post": null
+    },
+    {
+      "day": 34,
+      "post": null
+    },
+    {
+      "day": 35,
+      "post": null
+    },
+    {
+      "day": 36,
+      "post": null
+    },
+    {
+      "day": 37,
+      "post": null
+    },
+    {
+      "day": 38,
+      "post": null
+    },
+    {
+      "day": 39,
+      "post": null
+    },
+    {
+      "day": 40,
+      "post": null
+    },
+    {
+      "day": 41,
+      "post": null
+    },
+    {
+      "day": 42,
+      "post": null
+    },
+    {
+      "day": 43,
+      "post": null
+    },
+    {
+      "day": 44,
+      "post": null
+    },
+    {
+      "day": 45,
+      "post": null
+    },
+    {
+      "day": 46,
+      "post": null
+    },
+    {
+      "day": 47,
+      "post": null
+    },
+    {
+      "day": 48,
+      "post": null
+    },
+    {
+      "day": 49,
+      "post": null
+    },
+    {
+      "day": 50,
+      "post": null
+    },
+    {
+      "day": 51,
+      "post": null
+    },
+    {
+      "day": 52,
+      "post": null
+    },
+    {
+      "day": 53,
+      "post": null
+    },
+    {
+      "day": 54,
+      "post": null
+    },
+    {
+      "day": 55,
+      "post": null
+    },
+    {
+      "day": 56,
+      "post": null
+    },
+    {
+      "day": 57,
+      "post": null
+    },
+    {
+      "day": 58,
+      "post": null
+    },
+    {
+      "day": 59,
+      "post": null
+    },
+    {
+      "day": 60,
+      "post": null
+    },
+    {
+      "day": 61,
+      "post": null
+    },
+    {
+      "day": 62,
+      "post": null
+    },
+    {
+      "day": 63,
+      "post": null
+    },
+    {
+      "day": 64,
+      "post": null
+    },
+    {
+      "day": 65,
+      "post": null
+    },
+    {
+      "day": 66,
+      "post": null
+    },
+    {
+      "day": 67,
+      "post": null
+    },
+    {
+      "day": 68,
+      "post": null
+    },
+    {
+      "day": 69,
+      "post": null
+    },
+    {
+      "day": 70,
+      "post": null
+    },
+    {
+      "day": 71,
+      "post": null
+    },
+    {
+      "day": 72,
+      "post": null
+    },
+    {
+      "day": 73,
+      "post": null
+    },
+    {
+      "day": 74,
+      "post": null
+    },
+    {
+      "day": 75,
+      "post": null
+    },
+    {
+      "day": 76,
+      "post": null
+    },
+    {
+      "day": 77,
+      "post": null
+    },
+    {
+      "day": 78,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": null,
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 79,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 80,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 81,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 82,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 83,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 84,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 85,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 86,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 87,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 88,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 89,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 90,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 91,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 92,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 93,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 94,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 95,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 96,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 97,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 98,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 99,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 100,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 101,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 102,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 103,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 104,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 105,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 106,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 107,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 108,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 109,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 110,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 111,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 112,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 113,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 114,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 115,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 116,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 117,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 118,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 119,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 120,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 121,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 122,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 123,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 124,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 125,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 126,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 127,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 128,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 129,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 130,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 131,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 132,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 133,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 134,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 135,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 136,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 137,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 138,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 139,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 140,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 141,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 142,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 143,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 144,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 145,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 146,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 147,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    },
+    {
+      "day": 148,
+      "post": {
+        "postName": "post.cs_cmd_harpers_ferry.name",
+        "postKind": "army_command",
+        "postDepartment": "cs_war",
+        "postParent": "cs_forces_virginia",
+        "postHolder": "johnston_joseph_e",
+        "postActing": false,
+        "postIntelChief": null,
+        "postSeat": "harpers_ferry",
+        "postOperation": "shenandoah_command",
+        "postInstallation": null,
+        "postLinks": [],
+        "postScheduled": [],
+        "postStandingOrders": []
+      }
+    }
+  ],
+  "assignments": {
+    "fb_cs_charleston": "cs_cmd_charleston",
+    "fb_cs_charleston_castle_pinckney": "cs_cmd_charleston",
+    "fb_cs_charleston_guard_steamers": "cs_navy_charleston_harbour",
+    "fb_st_charleston_17th_scm": "cs_cmd_morris_island",
+    "fb_st_charleston_1st_artillery_battalion": "cs_cmd_charleston",
+    "fb_st_charleston_1st_infantry_regulars": "cs_cmd_charleston",
+    "fb_st_charleston_1st_sc_volunteers": "cs_cmd_morris_island",
+    "fb_st_charleston_2nd_artillery_battalion": "cs_cmd_morris_island",
+    "fb_st_charleston_floating_battery": "cs_cmd_charleston",
+    "fb_st_charleston_fort_johnson": "cs_cmd_charleston",
+    "fb_st_charleston_fort_palmetto_stono": "cs_cmd_charleston",
+    "fb_st_charleston_hagood_regiment": "cs_cmd_morris_island",
+    "fb_st_charleston_kershaw_regiment": "cs_cmd_morris_island",
+    "fb_st_charleston_morris_island": "cs_cmd_morris_island",
+    "fb_st_charleston_moultrie_infantry_recruits": "cs_cmd_charleston",
+    "fb_st_charleston_regiment_of_rifles": "cs_cmd_charleston",
+    "fb_st_charleston_rion_battalion": "cs_cmd_morris_island",
+    "fb_st_charleston_vigilant_rifles": "cs_cmd_charleston",
+    "fb_st_fort_morgan": "cs_fort_morgan",
+    "fb_st_georgetown_coast_guard": "cs_cmd_charleston",
+    "fb_st_la_forts_jackson_st_philip": "st_la_forts_jackson_st_philip",
+    "fb_st_tx_ford_regiment": "st_tx_dept_rio_grande",
+    "fb_st_tx_galveston_batteries": "st_tx_cmd_galveston",
+    "fb_st_tx_northwest_frontier_companies": "st_tx_northwest_frontier",
+    "fb_us_dc_militia": "us_dc_militia",
+    "fb_us_fort_monroe_garrison": "us_fort_monroe",
+    "fb_us_key_west_garrison": "us_fort_taylor",
+    "fb_us_marines_philadelphia_yard": "us_marine_corps",
+    "fb_us_marines_washington_barracks": "us_marine_corps",
+    "fb_us_new_mexico_troops": "us_dept_new_mexico",
+    "fb_us_pacific_troops": "us_dept_pacific",
+    "fb_us_pickens_garrison": "us_fort_pickens",
+    "fb_us_pickens_squadron_marines": "us_navy_home_squadron",
+    "fb_us_pickens_vogdes_co_a": "us_fort_pickens",
+    "fb_us_ship_anacostia": "us_navy_yard_washington",
+    "fb_us_ship_brooklyn": "us_navy_home_squadron",
+    "fb_us_ship_congress": "us_navy_brazil_squadron",
+    "fb_us_ship_constellation": "us_navy_african_squadron",
+    "fb_us_ship_crusader": "us_navy_home_squadron",
+    "fb_us_ship_cumberland": "us_navy_home_squadron",
+    "fb_us_ship_cyane": "us_navy_pacific_squadron",
+    "fb_us_ship_dacotah": "us_navy_east_india_squadron",
+    "fb_us_ship_hartford": "us_navy_east_india_squadron",
+    "fb_us_ship_iroquois": "us_navy_mediterranean_squadron",
+    "fb_us_ship_lancaster": "us_navy_pacific_squadron",
+    "fb_us_ship_macedonian": "us_navy_home_squadron",
+    "fb_us_ship_michigan": "us_secretary_navy",
+    "fb_us_ship_mohawk": "us_navy_home_squadron",
+    "fb_us_ship_mohican": "us_navy_african_squadron",
+    "fb_us_ship_mystic": "us_navy_african_squadron",
+    "fb_us_ship_narragansett": "us_navy_pacific_squadron",
+    "fb_us_ship_niagara": "us_navy_east_india_squadron",
+    "fb_us_ship_pawnee": "us_navy_home_squadron",
+    "fb_us_ship_pocahontas": "us_navy_home_squadron",
+    "fb_us_ship_portsmouth": "us_navy_african_squadron",
+    "fb_us_ship_powhatan": "us_navy_home_squadron",
+    "fb_us_ship_pulaski": "us_navy_brazil_squadron",
+    "fb_us_ship_relief": "us_navy_african_squadron",
+    "fb_us_ship_richmond": "us_navy_mediterranean_squadron",
+    "fb_us_ship_sabine": "us_navy_home_squadron",
+    "fb_us_ship_saginaw": "us_navy_east_india_squadron",
+    "fb_us_ship_san_jacinto": "us_navy_african_squadron",
+    "fb_us_ship_saranac": "us_navy_pacific_squadron",
+    "fb_us_ship_saratoga": "us_navy_african_squadron",
+    "fb_us_ship_seminole": "us_navy_brazil_squadron",
+    "fb_us_ship_st_louis": "us_navy_home_squadron",
+    "fb_us_ship_st_marys": "us_navy_pacific_squadron",
+    "fb_us_ship_sumter": "us_navy_african_squadron",
+    "fb_us_ship_supply": "us_navy_home_squadron",
+    "fb_us_ship_susquehanna": "us_navy_mediterranean_squadron",
+    "fb_us_ship_vandalia": "us_navy_east_india_squadron",
+    "fb_us_ship_water_witch": "us_navy_home_squadron",
+    "fb_us_ship_wyandotte": "us_navy_home_squadron",
+    "fb_us_ship_wyoming": "us_navy_pacific_squadron",
+    "fb_us_st_louis_arsenal_troops": "us_st_louis_arsenal",
+    "fb_us_tortugas_garrison": "us_fort_jefferson",
+    "fb_us_washington_regulars": "us_general_in_chief",
+    "raised.st_gov_georgia.d9": "cs_cmd_charleston",
+    "raised.st_gov_alabama.d9": "cs_cmd_charleston",
+    "raised.st_gov_louisiana.d9": "cs_cmd_charleston",
+    "raised.st_gov_florida.d9": "cs_cmd_charleston",
+    "raised.st_gov_mississippi.d9": "cs_cmd_charleston",
+    "raised.st_gov_south_carolina.d9": "cs_cmd_charleston",
+    "state-forces.va_norfolk": "st_va_norfolk",
+    "raised.st_gov_minnesota.d46": "us_dc_militia",
+    "state-forces.va_richmond": "st_va_richmond",
+    "raised.st_gov_georgia.d53": "cs_cmd_charleston",
+    "raised.st_gov_alabama.d53": "cs_cmd_charleston",
+    "raised.st_gov_louisiana.d53": "cs_cmd_charleston",
+    "raised.st_gov_mississippi.d53": "cs_cmd_charleston",
+    "state-forces.va_harpers_ferry": "cs_cmd_harpers_ferry",
+    "raised.st_gov_arkansas.d56": "cs_forces_virginia",
+    "raised.us_recruiting_service.d65.2": "us_recruiting_service",
+    "raised.us_recruiting_service.d65.3": "us_recruiting_service",
+    "raised.us_recruiting_service.d65": "us_recruiting_service",
+    "raised.us_recruiting_service.d65.bundle.2": "us_recruiting_service",
+    "state-forces.va_manassas_garland": "cs_cmd_manassas",
+    "raised.st_gov_kansas.d76": "st_gov_kansas",
+    "raised.st_gov_iowa.d77": "st_gov_iowa",
+    "raised.st_gov_indiana.d77": "st_gov_indiana",
+    "raised.st_gov_illinois.d77": "st_gov_illinois",
+    "raised.st_gov_illinois.d77.bundle.2": "st_gov_illinois",
+    "state-forces.va_peninsula": "st_va_williamsburg",
+    "raised.st_gov_wisconsin.d83": "us_dept_pennsylvania",
+    "raised.tr_gov_nebraska.d83": "tr_gov_nebraska",
+    "raised.st_gov_tennessee.d55.assignment.s129_so119_bate": "cs_cmd_fredericksburg",
+    "raised.st_gov_tennessee.d55": "cs_forces_virginia",
+    "raised.st_gov_north_carolina.d93": "cs_cmd_manassas",
+    "organised.s74_mcdowell_division_4_reserve.1": "s74_mcdowell_division_4_reserve",
+    "organised.s74_mcdowell_division_1_brigade_2.1": "s74_mcdowell_division_1_brigade_2",
+    "organised.s74_mcdowell_division_1_brigade_3.1": "s74_mcdowell_division_1_brigade_3",
+    "organised.s74_mcdowell_division_2_brigade_1.1": "s74_mcdowell_division_2_brigade_1",
+    "organised.s74_mcdowell_division_3_brigade_2.1": "s74_mcdowell_division_3_brigade_2",
+    "organised.s74_mcdowell_division_5_brigade_1.1": "s74_mcdowell_division_5_brigade_1",
+    "organised.s74_mcdowell_division_5_brigade_1.2": "s74_mcdowell_division_5_brigade_1",
+    "organised.s74_mcdowell_division_5_brigade_2.1": "s74_mcdowell_division_5_brigade_2",
+    "organised.s74_mcdowell_division_1_brigade_4.1": "s74_mcdowell_division_1_brigade_4",
+    "organised.s74_mcdowell_division_2_brigade_2.1": "s74_mcdowell_division_2_brigade_2",
+    "organised.s74_mcdowell_division_2_brigade_2.2": "s74_mcdowell_division_2_brigade_2",
+    "organised.s74_mcdowell_division_3_brigade_3.1": "s74_mcdowell_division_3_brigade_3",
+    "organised.s74_johnston_brigade_3.1": "s74_johnston_brigade_3",
+    "organised.s74_mcdowell_division_1_brigade_4.2": "s74_mcdowell_division_1_brigade_4",
+    "raised.st_gov_connecticut.d77": "us_dept_northeastern_virginia",
+    "raised.st_gov_maine.d77": "us_dept_northeastern_virginia",
+    "raised.st_gov_massachusetts.d76": "us_dept_northeastern_virginia",
+    "raised.st_gov_massachusetts.d76.bundle.2": "us_dept_northeastern_virginia",
+    "raised.st_gov_michigan.d77": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.10": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.2": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.3": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.4": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.5": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.6": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.7": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.8": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d64.bundle.9": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d83": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d83.bundle.2": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d83.bundle.3": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d83.bundle.4": "us_dept_northeastern_virginia",
+    "raised.st_gov_indiana.d103": "st_gov_indiana",
+    "raised.st_gov_indiana.d103.bundle.2": "st_gov_indiana",
+    "state-forces.cs_nc_state_transfer_north_carolina": "cs_cmd_manassas",
+    "state-forces.cs_nc_volunteers_north_carolina": "cs_cmd_manassas",
+    "state-forces.cs_nc_additional_north_carolina": "cs_cmd_manassas",
+    "state-forces.cs_tn_infantry_tennessee": "st_gov_tennessee",
+    "state-forces.cs_tn_cavalry_tennessee": "st_gov_tennessee",
+    "state-forces.cs_tn_river_artillery_tennessee": "st_gov_tennessee",
+    "raised.st_gov_louisiana.d121": "cs_cmd_manassas",
+    "raised.st_gov_mississippi.d121": "cs_cmd_manassas",
+    "raised.st_gov_georgia.d122": "st_gov_georgia",
+    "raised.st_gov_georgia.d122.2": "cs_cmd_harpers_ferry",
+    "raised.st_gov_alabama.d122": "st_gov_alabama",
+    "raised.st_gov_alabama.d122.2": "cs_cmd_manassas",
+    "raised.st_gov_florida.d122": "st_gov_florida",
+    "raised.st_gov_mississippi.d122": "st_gov_mississippi",
+    "raised.st_gov_mississippi.d122.2": "cs_cmd_manassas",
+    "raised.st_gov_arkansas.d122": "st_gov_arkansas",
+    "raised.st_gov_arkansas.d122.2": "st_gov_arkansas",
+    "raised.st_gov_georgia.d125": "cs_cmd_harpers_ferry",
+    "raised.st_gov_texas.d125": "st_gov_texas",
+    "raised.st_gov_north_carolina.d125": "cs_cmd_manassas",
+    "raised.st_gov_virginia.d125": "st_va_general_in_chief",
+    "raised.st_gov_alabama.d125": "cs_cmd_manassas",
+    "raised.st_gov_south_carolina.d125": "cs_cmd_manassas",
+    "raised.st_gov_tennessee.d129": "st_gov_tennessee",
+    "state-forces.cs_ar_infantry_arkansas": "st_gov_arkansas",
+    "state-forces.cs_ar_cavalry_arkansas": "st_gov_arkansas",
+    "state-forces.cs_ar_cavalry_battalion_arkansas": "st_gov_arkansas",
+    "state-forces.cs_ar_artillery_arkansas": "st_gov_arkansas",
+    "raised.st_gov_new_york.d147": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d147.bundle.2": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d147.bundle.3": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d147.bundle.4": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d147.bundle.5": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d147.bundle.6": "us_dept_northeastern_virginia",
+    "raised.st_gov_new_york.d147.bundle.7": "us_dept_northeastern_virginia"
+  },
+  "joins": {
+    "raised.st_gov_louisiana.d121": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 122,
+      "joinBlocked": null
+    },
+    "raised.st_gov_mississippi.d121": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 122,
+      "joinBlocked": null
+    },
+    "raised.st_gov_alabama.d125": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 127,
+      "joinBlocked": null
+    },
+    "raised.st_gov_mississippi.d122.2": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 127,
+      "joinBlocked": null
+    },
+    "raised.st_gov_north_carolina.d125": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 134,
+      "joinBlocked": null
+    },
+    "raised.st_gov_north_carolina.d93": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 134,
+      "joinBlocked": null
+    },
+    "state-forces.cs_nc_additional_north_carolina": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 134,
+      "joinBlocked": null
+    },
+    "state-forces.cs_nc_state_transfer_north_carolina": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 134,
+      "joinBlocked": null
+    },
+    "state-forces.cs_nc_volunteers_north_carolina": {
+      "joinPost": "cs_cmd_manassas",
+      "joinRegion": "manassas",
+      "joinSinceDay": 134,
+      "joinBlocked": null
+    },
+    "raised.st_gov_new_york.d147": {
+      "joinPost": "us_dept_northeastern_virginia",
+      "joinRegion": "northern_virginia",
+      "joinSinceDay": 148,
+      "joinBlocked": null
+    },
+    "raised.st_gov_new_york.d147.bundle.2": {
+      "joinPost": "us_dept_northeastern_virginia",
+      "joinRegion": "northern_virginia",
+      "joinSinceDay": 148,
+      "joinBlocked": null
+    },
+    "raised.st_gov_new_york.d147.bundle.3": {
+      "joinPost": "us_dept_northeastern_virginia",
+      "joinRegion": "northern_virginia",
+      "joinSinceDay": 148,
+      "joinBlocked": null
+    },
+    "raised.st_gov_new_york.d147.bundle.4": {
+      "joinPost": "us_dept_northeastern_virginia",
+      "joinRegion": "northern_virginia",
+      "joinSinceDay": 148,
+      "joinBlocked": null
+    },
+    "raised.st_gov_new_york.d147.bundle.5": {
+      "joinPost": "us_dept_northeastern_virginia",
+      "joinRegion": "northern_virginia",
+      "joinSinceDay": 148,
+      "joinBlocked": null
+    },
+    "raised.st_gov_new_york.d147.bundle.6": {
+      "joinPost": "us_dept_northeastern_virginia",
+      "joinRegion": "northern_virginia",
+      "joinSinceDay": 148,
+      "joinBlocked": null
+    },
+    "raised.st_gov_new_york.d147.bundle.7": {
+      "joinPost": "us_dept_northeastern_virginia",
+      "joinRegion": "northern_virginia",
+      "joinSinceDay": 148,
+      "joinBlocked": null
+    }
+  }
+}

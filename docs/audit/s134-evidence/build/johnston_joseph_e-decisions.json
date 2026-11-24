@@ -1,0 +1,899 @@
+[
+  {
+    "day": 96,
+    "key": "seat:johnston_joseph_e|plan:cs_cmd_harpers_ferry:96",
+    "seat": "seat:johnston_joseph_e",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "cs_cmd_harpers_ferry",
+      "goal": {
+        "posture": "hold",
+        "objective": "harpers_ferry",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "davis_jefferson",
+        "viaChain": true,
+        "setDay": 95,
+        "status": "choosing"
+      },
+      "options": [
+        {
+          "optionId": "direct:least_cost:harpers_ferry",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 838,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": 0
+            },
+            {
+              "term": "exposure",
+              "amount": 0
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 138
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "strength": 0,
+              "phases": [
+                "concentrate"
+              ],
+              "arrival": 2000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "harpers_ferry"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "holding:hold:harpers_ferry",
+          "method": "holding",
+          "variant": "hold",
+          "score": -147,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 153
+            }
+          ],
+          "axes": [
+            {
+              "name": "hold",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "strength": 0,
+              "phases": [
+                "hold"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "harpers_ferry"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "direct:least_cost:harpers_ferry"
+    }
+  },
+  {
+    "day": 105,
+    "key": "seat:johnston_joseph_e|plan:cs_cmd_harpers_ferry:105",
+    "seat": "seat:johnston_joseph_e",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "cs_cmd_harpers_ferry",
+      "goal": {
+        "posture": "hold",
+        "objective": "lynchburg",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": true,
+          "sea": true,
+          "neutral": false
+        },
+        "committed": [
+          "state-forces.va_harpers_ferry"
+        ],
+        "awaitWord": false,
+        "approveAsDrafted": false,
+        "issuer": "lee_robert_e",
+        "viaChain": true,
+        "setDay": 104,
+        "status": "choosing"
+      },
+      "options": [
+        {
+          "optionId": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "supply_line",
+          "variant": "depot_steps",
+          "score": 635,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": -203
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 138
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry",
+                "loudoun_fauquier",
+                "culpeper_orange",
+                "charlottesville",
+                "lynchburg"
+              ],
+              "strength": 0,
+              "phases": [
+                "concentrate",
+                "march",
+                "march",
+                "depot_step",
+                "march",
+                "march"
+              ],
+              "arrival": 10000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "lynchburg"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "charlottesville",
+                "culpeper_orange",
+                "loudoun_fauquier"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 554,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": -284
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 138
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry",
+                "loudoun_fauquier",
+                "culpeper_orange",
+                "charlottesville",
+                "lynchburg"
+              ],
+              "strength": 0,
+              "phases": [
+                "concentrate",
+                "march",
+                "march",
+                "march",
+                "march"
+              ],
+              "arrival": 9000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "lynchburg"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "charlottesville",
+                "culpeper_orange",
+                "loudoun_fauquier"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "holding:hold:lynchburg",
+          "method": "holding",
+          "variant": "hold",
+          "score": -147,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 153
+            }
+          ],
+          "axes": [
+            {
+              "name": "hold",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "lynchburg"
+              ],
+              "strength": 0,
+              "phases": [
+                "hold"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "lynchburg"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "charlottesville",
+                "culpeper_orange",
+                "loudoun_fauquier"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg"
+    }
+  },
+  {
+    "day": 142,
+    "key": "seat:johnston_joseph_e|plan:cs_cmd_harpers_ferry:142",
+    "seat": "seat:johnston_joseph_e",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "cs_cmd_harpers_ferry",
+      "goal": {
+        "posture": "relieve",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "davis_jefferson",
+        "viaChain": true,
+        "setDay": 141,
+        "status": "choosing",
+        "discretion": {
+          "condition": "outmatched",
+          "fallback": {
+            "objective": null,
+            "posture": "hold",
+            "risk": 500,
+            "deadlineDays": 30,
+            "rail": true,
+            "river": false,
+            "sea": false,
+            "neutral": false,
+            "committed": [],
+            "awaitWord": false,
+            "approveAsDrafted": true
+          }
+        }
+      },
+      "options": [
+        {
+          "optionId": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 838,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": 0
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 138
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry",
+                "loudoun_fauquier",
+                "manassas"
+              ],
+              "strength": 5340,
+              "phases": [
+                "concentrate",
+                "march",
+                "march"
+              ],
+              "arrival": 14000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "manassas"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "loudoun_fauquier"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "holding:await:harpers_ferry",
+          "method": "holding",
+          "variant": "await",
+          "score": -147,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 153
+            }
+          ],
+          "axes": [
+            {
+              "name": "await",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "strength": 5340,
+              "phases": [
+                "await"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "manassas"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "loudoun_fauquier"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+    }
+  },
+  {
+    "day": 145,
+    "key": "seat:johnston_joseph_e|battle:cs_cmd_harpers_ferry:145",
+    "seat": "seat:johnston_joseph_e",
+    "menu": {
+      "menuKind": "battle",
+      "post": "cs_cmd_harpers_ferry",
+      "region": "harpers_ferry",
+      "battle": null,
+      "believedRatio": 3083,
+      "mayAttack": true,
+      "judged": {
+        "commit": "main",
+        "night": "stay",
+        "cutOff": "break_out",
+        "pursue": "follow"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "cs_cmd_harpers_ferry",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  },
+  {
+    "day": 146,
+    "key": "seat:johnston_joseph_e|battle:cs_cmd_harpers_ferry:146",
+    "seat": "seat:johnston_joseph_e",
+    "menu": {
+      "menuKind": "battle",
+      "post": "cs_cmd_harpers_ferry",
+      "region": "harpers_ferry",
+      "battle": null,
+      "believedRatio": 3083,
+      "mayAttack": true,
+      "judged": {
+        "commit": "main",
+        "night": "stay",
+        "cutOff": "break_out",
+        "pursue": "follow"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "cs_cmd_harpers_ferry",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  },
+  {
+    "day": 148,
+    "key": "seat:johnston_joseph_e|plan:cs_cmd_harpers_ferry:148",
+    "seat": "seat:johnston_joseph_e",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "cs_cmd_harpers_ferry",
+      "goal": {
+        "posture": "hold",
+        "objective": "lynchburg",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": true,
+          "sea": true,
+          "neutral": false
+        },
+        "committed": [
+          "organised.s74_johnston_brigade_3.1",
+          "raised.st_gov_georgia.d122.2",
+          "raised.st_gov_georgia.d125",
+          "state-forces.va_harpers_ferry"
+        ],
+        "awaitWord": false,
+        "approveAsDrafted": false,
+        "issuer": "lee_robert_e",
+        "viaChain": true,
+        "setDay": 147,
+        "status": "choosing"
+      },
+      "options": [
+        {
+          "optionId": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 838,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": 0
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 138
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "harpers_ferry",
+                "loudoun_fauquier",
+                "culpeper_orange",
+                "charlottesville",
+                "lynchburg"
+              ],
+              "strength": 5012,
+              "phases": [
+                "concentrate",
+                "march",
+                "march",
+                "march",
+                "march"
+              ],
+              "arrival": 14000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "lynchburg"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "charlottesville",
+                "culpeper_orange",
+                "loudoun_fauquier"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "holding:hold:lynchburg",
+          "method": "holding",
+          "variant": "hold",
+          "score": -147,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 153
+            }
+          ],
+          "axes": [
+            {
+              "name": "hold",
+              "post": "cs_cmd_harpers_ferry",
+              "mode": "land",
+              "regions": [
+                "lynchburg"
+              ],
+              "strength": 5012,
+              "phases": [
+                "hold"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "lynchburg"
+              ]
+            },
+            {
+              "term": "exposure",
+              "reason": "unknown_strength",
+              "regions": [
+                "charlottesville",
+                "culpeper_orange",
+                "loudoun_fauquier"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg"
+    }
+  }
+]

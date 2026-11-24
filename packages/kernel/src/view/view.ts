@@ -13,6 +13,8 @@
  */
 import type { EdgeId, FactionId, PersonId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, latestObstructionClaims, latestWorksClaims, perceived } from '../knowledge/beliefs.ts';
+import { biasStrength, completeUpper } from '../knowledge/strength.ts';
+import { templateFor } from '../knowledge/templates.ts';
 import { knowledgeOf, reportsForView, type KnowledgeCache, type OpeningReportCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { PlanRecord } from '../plans/plans.ts';
 import { purposeTerms, termsOfGoal, type PlanGoal } from '../plans/goal.ts';
@@ -29,7 +31,7 @@ import { createFreezeLedger, deepFreeze, type FreezeLedger } from '../tick/freez
 import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import { nextPeopleChange, peopleProjection, seatIdentity, type PeopleProjection } from './people.ts';
-import type { ReportClaim } from '../knowledge/report.ts';
+import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import { promiseProjection } from './promises.ts';
 import { politicsProjection } from './politics.ts';
 import {attentionBudget, audienceProjection, congressProjection} from './desk.ts';
@@ -48,7 +50,7 @@ export interface ViewCache {
   readonly reports: WeakMap<KnownReport, ReportView>;
   readonly lists: WeakMap<SeatKnowledge, readonly ReportView[]>;
   /** Beliefs depend on what he holds and on how he reads it, so both are in the key (review F4). */
-  readonly beliefs: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly perception: number; readonly beliefs: Readonly<Record<RegionId, BeliefView>> }>;
+  readonly beliefs: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly perception: number; readonly expires:number; readonly beliefs: Readonly<Record<RegionId, BeliefView>> }>;
   /** What he has been told of works and obstructions depends only on what he holds. */
   readonly ground: Map<SeatId, { readonly knowledge: SeatKnowledge; readonly works: Readonly<Record<RegionId, WorksView>>; readonly obstructions: Readonly<Record<EdgeId, ObstructionView>> }>;
   readonly control: WeakMap<WorldIndex, WeakMap<SeatKnowledge, ReturnType<typeof claimedControlView>>>;
@@ -76,7 +78,7 @@ function paperGoal(goal: PlanGoal): PlanGoal {
 
 /** Build once, then freeze: absent battle fields need no temporary objects on ordinary claims. */
 function claimView(c: ReportClaim): ClaimView {
-  if (c.claimBattle === undefined && c.claimBattleDays === undefined && c.claimCommander === undefined && c.claimActivity === undefined) return freeze({
+  if (c.claimBattle === undefined && c.claimBattleDays === undefined && c.claimCommander === undefined && c.claimActivity === undefined && c.claimStrength === undefined) return freeze({
     kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence,
   });
   return freeze({
@@ -85,6 +87,7 @@ function claimView(c: ReportClaim): ClaimView {
     ...(c.claimBattleDays === undefined ? {} : { battleDays: freeze([...c.claimBattleDays]) }),
     ...(c.claimActivity === undefined ? {} : { activity: c.claimActivity }),
     ...(c.claimCommander === undefined ? {} : { commander: c.claimCommander }),
+    ...(c.claimStrength === undefined ? {} : { strength: deepFreeze(c.claimStrength) }),
   });
 }
 
@@ -185,12 +188,18 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
 
   let beliefs = cache.beliefs.get(seat);
   const bias = perceptionBias(world.rules.traits, { id: person.id, boldness: trueOf(state, person.id).trueBoldness, values: valuesOf(world.map, person.id) }).permille;
-  if (beliefs === undefined || beliefs.knowledge !== knowledge || beliefs.perception !== bias) {
+  if (beliefs === undefined || beliefs.knowledge !== knowledge || beliefs.perception !== bias || state.stateDay >= beliefs.expires) {
     const out: Record<RegionId, BeliefView> = {};
-    for (const [region, { report, value }] of latestEnemyClaims(knowledge)) {
-      out[region] = freeze({ value: perceived(value, bias), asOfDay: report.knownBody.reportDay, source: report.id });
+    const maxAge=(b:ReportBody)=>templateFor(world.rules.templates,b.reportType,b.reportSubtype).maxAgeDays;
+    let expires=Number.MAX_SAFE_INTEGER;
+    for (const [region, { report, value, strength }] of latestEnemyClaims(knowledge,{day:state.stateDay,maxAge})) {
+      const reading = strength === undefined ? undefined : biasStrength(strength,bias,person.id);
+      const expiry=(strength?.strengthDay??report.knownBody.reportDay)+maxAge(report.knownBody)+1;
+      if(expiry>state.stateDay)expires=Math.min(expires,expiry);
+      out[region] = freeze({ value: reading === undefined ? (value === null ? null : perceived(value,bias)) : completeUpper(reading),
+        ...(reading === undefined ? {} : {strength:deepFreeze(reading)}), asOfDay: strength?.strengthDay??report.knownBody.reportDay, source: report.id });
     }
-    beliefs = { knowledge, perception: bias, beliefs: freeze(out) };
+    beliefs = { knowledge, perception: bias, expires, beliefs: freeze(out) };
     cache.beliefs.set(seat, beliefs);
   }
 

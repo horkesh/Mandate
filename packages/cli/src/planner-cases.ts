@@ -117,6 +117,9 @@ export function caseInput(spec: CaseSpec, seating: Seating, options: CaseOptions
     enemy.set(region, (enemy.get(region) ?? 0) + (forceTotals(state.forceBlockStates[id]!, world.map.forceTotalsCache).fbStrength ?? 0));
   }
   const claims: phase0.ReportClaim[] = [];
+  // These fictional cases declare an exhaustive regional intelligence picture.
+  // Empty entries are affirmative fixture clearances, not missing reports.
+  for (const region of index.regions.keys()) if (!enemy.has(region)) enemy.set(region,0);
   for (const region of [...enemy.keys()].sort()) claims.push({ claimKind: 'enemy-strength', claimRegion: region as ids.RegionId, claimValue: Math.trunc((enemy.get(region)! * bias) / 1000), claimToken: null, claimConfidence: 700 });
   for (const region of Object.keys(state.regionFortification).sort() as ids.RegionId[]) {
     if ((state.regionFortification[region] ?? 0) > 0) claims.push({ claimKind: 'works', claimRegion: region, claimValue: state.regionFortification[region]!, claimToken: null, claimConfidence: 700 });

@@ -1,4 +1,5 @@
 import { presenter } from '../presentation.ts';
+import {strengthText} from '../strength.ts';
 import { placeMarks, placeCaptions, groupHeadquarters } from './placement.ts';
 import { MERIDIAN_LABELS } from './graticule.ts';
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -141,7 +142,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
     button.addEventListener('pointermove',move);button.addEventListener('pointerup',finish,{once:true});button.addEventListener('pointercancel',cancel,{once:true});
   };
   const sourceLabel=(id:string)=>{const report=request.view.reports.find(r=>r.id===id);return report?S.genres[report.type]??S.paper:S.unknown;};
-  const describe=(m:MapMark)=>`${labels[m.kind]}: ${m.kind==='headquarters'?t(m.post??m.region,m.post?'post':'region'):t(m.region,'region')}${m.value!==null?` (${m.value})`:''}. ${t(m.author,'person')}, ${dateOf(m.day)}. ${M.source}: ${sourceLabel(m.source)}.`;
+  const describe=(m:MapMark)=>`${labels[m.kind]}: ${m.kind==='headquarters'?t(m.post??m.region,m.post?'post':'region'):t(m.region,'region')}${m.strengthLabel?` (${m.strengthLabel})`:m.value!==null?` (${m.value})`:''}. ${t(m.author,'person')}, ${dateOf(m.day)}. ${M.source}: ${sourceLabel(m.source)}.`;
   const routes= model?.plans.filter(p=>!reviewPost||p.post===reviewPost)??[];
   const placed=placeMarks(model?.marks??[],screen,host.current?.clientWidth??0,host.current?.clientHeight??0);
   const groups=groupHeadquarters(placed);
@@ -174,7 +175,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
         <svg className="caption-leaders" aria-hidden="true">{groups.filter(g=>(study||g.marks.some(m=>m.id===active))&&!g.marks.some(m=>m.id===selectedHQ)).map(g=>{const b=captions.get(g.mark.id);return b?<line key={g.mark.id} x1={g.anchor[0]} y1={g.anchor[1]} x2={Math.max(b[0],Math.min(b[2],g.anchor[0]))} y2={Math.max(b[1],Math.min(b[3],g.anchor[1]))}/>:null;})}</svg>
         {groups.filter(g=>(study||g.marks.some(m=>m.id===active))&&!g.marks.some(m=>m.id===selectedHQ)).map(g=>{const b=captions.get(g.mark.id);return b?<span key={g.mark.id} className="hq-caption" data-region={g.mark.region} style={{left:b[0],top:b[1],width:b[2]-b[0],height:b[3]-b[1],textAlign:b[2]<g.anchor[0]?'right':'left'}}>{g.marks.map(m=><span key={m.id}>{m.caption}<small>{dateOf(m.day)}</small></span>)}</span>:null;})}
         {placed.map(({mark,point:p})=>{const age=markState(request.requestDay,mark.day);return <button key={mark.id} data-report={mark.source} data-region={mark.region} className={`map-mark ${mark.sources>1?'ink':age.stage} ${mark.kind}`} style={{...position(p),'--mark-opacity':age.opacity,'--side-colour':`#${(mark.corrects?.length?colours.correction:controlColour(mark.kind==='enemy'?null:request.view.faction,request.view.faction,false,palette)).toString(16).padStart(6,'0')}`} as CSSProperties} aria-label={describe(mark)} onClick={()=>{if(mark.kind==='headquarters'&&holderCard)setSelectedHQ(mark.id);}} onPointerDown={e=>e.stopPropagation()} onFocus={()=>setActive(mark.id)} onBlur={()=>setActive(null)} onMouseEnter={()=>setActive(mark.id)} onMouseLeave={()=>setActive(null)}>
-          <span aria-hidden="true" dangerouslySetInnerHTML={{__html:glyphs[mark.kind]}}/>{mark.kind!=='headquarters'&&<span className="mark-caption">{mark.caption}<small>{dateOf(mark.day)}</small></span>}
+          <span aria-hidden="true" dangerouslySetInnerHTML={{__html:glyphs[mark.kind]}}/>{mark.kind!=='headquarters'&&<span className="mark-caption">{mark.caption}{mark.strengthLabel&&<small>{mark.strengthLabel}</small>}<small>{dateOf(mark.day)}</small></span>}
         </button>;})}
         {paperPoint&&<span className="paper-place" data-testid="paper-place" style={position(paperPoint)} aria-hidden="true"/>}
         {arrival&&<div key={arrival.id} data-report={arrival.id} data-testid="arrival-mark" data-region={arrival.region} className={`arrival-mark ${arrivalPoint?'located':'unlocated'}`} style={arrivalPoint?position(arrivalPoint):undefined}>{arrivalPoint&&<span aria-hidden="true">✎</span>}<p>{arrival.text}</p></div>}
@@ -211,7 +212,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
 
 function MapFallback({request,date,strings}:{request:SeatRequest;date:string;strings:Readonly<Record<string,string>>}) {
   const {name:t,text:display}=presenter(strings);
-  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.view.day,date,r.day)}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?M.claimAt.replace('{region}', () => t(c.region!, 'region')):''}${c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
+  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.view.day,date,r.day)}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?M.claimAt.replace('{region}', () => t(c.region!, 'region')):''}${c.kind==='enemy-estimate-unknown'||c.kind==='enemy-strength'?`: ${strengthText(c.kind==='enemy-estimate-unknown'?null:c.value,c.strength)}`:c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
 }
 
 export function MapReview({destination="",data,execute,busy,textEdit,table=false,reviewOpen=true,mapProps={}}:{destination?:string;data:DeskSnapshot;execute:(line:string)=>Promise<DeskReply|undefined>;busy:boolean;textEdit?:(line:string)=>void;table?:boolean;reviewOpen?:boolean;mapProps?:TableMapProps}) {

@@ -1,3 +1,4 @@
+import type { RegionId } from '../ids.ts';
 /**
  * Scoring (planner-design D6; 0062): a signed sum of typed contributions, weighted by his profile and the pack's
  * weights. The score is exactly the sum of its terms (hard rule 6; a test asserts it).
@@ -10,13 +11,14 @@
  * - a support request costs `dependence` less the cooperation he expects of its holder (finding 7: his regard, the holder's standing).
  */
 import type { PlanAxis, PlanCandidate, PlanTerm, PlanGate, Method, PlanRequest, TermKind } from './types.ts';
-import { enemyHeld, willingness, type Ctx, type PlannerInput } from './context.ts';
+import { blocksOf, enemyHeld, willingness, type Ctx, type PlannerInput } from './context.ts';
 
 export interface Scored {
   readonly terms: readonly PlanTerm[];
   readonly score: number;
-  readonly perceived: number;
-  readonly ratio: number;
+  readonly perceived: number | null;
+  readonly ratio: number | null;
+  readonly unavailable: NonNullable<PlanCandidate['candUnavailableTerms']>;
   /** Men short of what he needs. */
   readonly shortfall: number;
   /** Whether the shortfall is past his threshold, so he asks for men and waits. */
@@ -24,9 +26,9 @@ export interface Scored {
 }
 
 /** Defenders he believes stand at the objective, plus a share of those one hop away. */
-export function opposition(ctx: Ctx): number {
-  const objective = ctx.input.goal.goalObjective;
-  return objective == null ? 0 : (ctx.threat.get(objective) ?? 0);
+export function opposition(ctx: Ctx): number | null {
+  const objective = ctx.input.goal.goalObjective ?? blocksOf(ctx.input,ctx.input.post,ctx.input.goal.goalCommitted)[0]?.region;
+  return objective == null ? null : (ctx.threat.get(objective) ?? null);
 }
 
 /** His demand for this goal, permille: his open-field demand, times the assault margin against a garrisoned enemy-held objective. */
@@ -55,22 +57,27 @@ export function scoreAxes(ctx: Ctx, method: Method, axes: readonly PlanAxis[], r
   const enemy = opposition(ctx);
   const demand = demandFor(ctx);
   const strength = axes.reduce((s, a) => s + a.axisStrength, 0);
-  const ratio = enemy === 0 ? 10000 : Math.trunc((strength * 1000) / enemy);
-  const needed = Math.trunc((enemy * demand) / 1000);
-  const shortfall = Math.max(0, needed - strength);
-  const waits = shortfall > 0 && shortfall * 1000 > needed * shortfallShare(ctx.input);
+  const ownUnknown=axes.some(a=>a.axisBlocks.some(id=>ctx.input.forces.find(f=>f.id===id)?.unknownStrength));
+  const ratio = enemy === null || ownUnknown ? null : enemy === 0 ? 10000 : Math.trunc((strength * 1000) / enemy);
+  const needed = enemy === null || ownUnknown ? null : Math.trunc((enemy * demand) / 1000);
+  const shortfall = needed === null ? 0 : Math.max(0, needed - strength);
+  const waits = needed !== null && shortfall > 0 && shortfall * 1000 > needed * shortfallShare(ctx.input);
+  const unavailable: NonNullable<PlanCandidate['candUnavailableTerms']>[number][] = [];
+  if (enemy === null || ownUnknown) unavailable.push({term:'force_ratio',reason:'unknown_strength',regions:goal.goalObjective == null ? [] : [goal.goalObjective]});
 
   if (method === 'holding') {
     term(c, 'goal_fit', 0, 'does not move on the objective');
     term(c, 'time', w.holdingTime, 'the deadline passes with nothing attempted');
     term(c, 'caution', Math.trunc((1000 - profile.boldness) / w.cautionDivisor), 'keeps the force whole');
-    return { terms: c, score: sum(c), perceived: enemy, ratio, shortfall, waits };
+    return { terms: c, score: sum(c), perceived: enemy, ratio, shortfall, waits, unavailable };
   }
 
   // The assault margin, when it applies, is named with its permille and the demand it scales (hard rule 6).
   const margin = demand === profile.demand ? '' : ` (the assault margin, ${ctx.input.assaultMargin}‰, on his open-field demand ${profile.demand})`;
   term(c, 'goal_fit', w.goalFit, `reaches ${goal.goalObjective}`);
-  if (ratio >= demand) {
+  if (ratio === null) {
+    // Unknown comparison is unavailable, not zero opposition or a penalty.
+  } else if (ratio >= demand) {
     term(c, 'force_ratio', Math.min(w.ratioBonusMax, Math.trunc((ratio - demand) / w.ratioBonusDivisor)), `ratio ${ratio} over his demand ${demand}${margin}`);
   } else {
     term(c, 'force_ratio', -Math.min(w.ratioPenaltyMax, Math.trunc(((demand - ratio) * w.ratioPenaltyMax) / demand)), `ratio ${ratio} under his demand ${demand}${margin}; short ${shortfall} men`);
@@ -98,11 +105,16 @@ export function scoreAxes(ctx: Ctx, method: Method, axes: readonly PlanAxis[], r
 
   // Threat along the way, excluding the objective (judged by the ratio) and works (priced in time).
   let threatMen = 0;
-  for (const a of axes) for (const l of a.axisRoute.routeLegs) if (l.legTo !== goal.goalObjective) threatMen += ctx.threat.get(l.legTo) ?? 0;
+  const unknownRegions = new Set<RegionId>();
+  for (const a of axes) for (const l of a.axisRoute.routeLegs) if (l.legTo !== goal.goalObjective) {
+    const men=ctx.threat.get(l.legTo);
+    if (men == null) unknownRegions.add(l.legTo); else threatMen+=men;
+  }
   for (const a of axes) for (const l of a.axisRoute.routeLegs) if (l.legObstacle === 'run_past' || (l.legObstacle === 'clear' && l.legObstacleDays <= rules.forceDays)) threatMen += rules.forcingThreat;
   const tolerated = 1000 - Math.trunc(goal.goalRisk / 2);
   const weighted = Math.trunc((Math.trunc((threatMen * profile.riskWeight) / 1000) * tolerated) / 1000);
-  term(c, 'exposure', -Math.trunc(weighted / w.exposureDivisor), `${threatMen} perceived men along the route`);
+  if (unknownRegions.size) unavailable.push({term:'exposure',reason:'unknown_strength',regions:[...unknownRegions].sort()});
+  else term(c, 'exposure', -Math.trunc(weighted / w.exposureDivisor), `${threatMen} perceived men along the route`);
 
   if (axes.length > 1) {
     const arrivals = axes.map((a) => a.axisArrival);
@@ -123,7 +135,7 @@ export function scoreAxes(ctx: Ctx, method: Method, axes: readonly PlanAxis[], r
   term(c, 'dependence', dependence, `${asked} support request(s) to other holders`);
   term(c, 'glory', Math.trunc(profile.gloryWeight / w.gloryDivisor), 'his name on the objective');
   term(c, 'caution', 0, 'commits the force');
-  return { terms: c, score: sum(c), perceived: enemy, ratio, shortfall, waits };
+  return { terms: c, score: sum(c), perceived: enemy, ratio, shortfall, waits, unavailable };
 }
 
 function sum(c: readonly PlanTerm[]): number {
@@ -155,5 +167,20 @@ export function makeCandidate(ctx: Ctx, method: Method, variant: string, axes: r
     candScore: s.score,
     candPerceived: s.perceived,
     candRatio: s.ratio,
+    ...(s.unavailable.length ? {candUnavailableTerms:s.unavailable} : {}),
   };
+}
+
+/** Compare one candidate set on the union of unavailable numeric domains (0130). */
+export function commonTerms(candidates: readonly PlanCandidate[]): PlanCandidate[] {
+  const omitted = new Map<TermKind, NonNullable<PlanCandidate['candUnavailableTerms']>[number]>();
+  for (const c of candidates) for (const t of c.candUnavailableTerms ?? []) omitted.set(t.term,t);
+  if (!omitted.size) return [...candidates];
+  return candidates.map(c => {
+    const terms=c.candTerms.filter(t=>!omitted.has(t.contribTerm));
+    return {...c,candTerms:terms,candScore:sum(terms),candUnavailableTerms:[...omitted.values()],
+      ...(omitted.has('force_ratio') ? {candRatio:null,candPerceived:null,
+        candRequests:c.candRequests.filter(r=>r.reqKind!=='reinforcement'),
+        candConditions:c.candConditions.filter(g=>g.gateKind!=='move_when_reinforced')} : {})};
+  });
 }

@@ -1,0 +1,444 @@
+[
+  {
+    "day": 135,
+    "key": "seat:mcdowell_irvin|plan:us_dept_northeastern_virginia:135",
+    "seat": "seat:mcdowell_irvin",
+    "menu": {
+      "menuKind": "plan-selection",
+      "post": "us_dept_northeastern_virginia",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "choosing"
+      },
+      "options": [
+        {
+          "optionId": "direct:least_cost:northern_virginia>manassas",
+          "method": "direct",
+          "variant": "least_cost",
+          "score": 591,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 400
+            },
+            {
+              "term": "time",
+              "amount": 300
+            },
+            {
+              "term": "haste",
+              "amount": 0
+            },
+            {
+              "term": "supply",
+              "amount": -197
+            },
+            {
+              "term": "exposure",
+              "amount": 0
+            },
+            {
+              "term": "coordination",
+              "amount": 0
+            },
+            {
+              "term": "dependence",
+              "amount": 0
+            },
+            {
+              "term": "glory",
+              "amount": 88
+            },
+            {
+              "term": "caution",
+              "amount": 0
+            }
+          ],
+          "axes": [
+            {
+              "name": "main",
+              "post": "us_dept_northeastern_virginia",
+              "mode": "land",
+              "regions": [
+                "northern_virginia",
+                "manassas"
+              ],
+              "strength": 59754,
+              "phases": [
+                "concentrate",
+                "march",
+                "assault"
+              ],
+              "arrival": 7000
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "manassas"
+              ]
+            }
+          ]
+        },
+        {
+          "optionId": "holding:hold:northern_virginia",
+          "method": "holding",
+          "variant": "hold",
+          "score": -21,
+          "terms": [
+            {
+              "term": "goal_fit",
+              "amount": 0
+            },
+            {
+              "term": "time",
+              "amount": -300
+            },
+            {
+              "term": "caution",
+              "amount": 279
+            }
+          ],
+          "axes": [
+            {
+              "name": "hold",
+              "post": "us_dept_northeastern_virginia",
+              "mode": "land",
+              "regions": [
+                "northern_virginia"
+              ],
+              "strength": 59754,
+              "phases": [
+                "hold"
+              ],
+              "arrival": 0
+            }
+          ],
+          "requests": [],
+          "conditions": [],
+          "perceivedEnemy": null,
+          "ratio": null,
+          "unavailableTerms": [
+            {
+              "term": "force_ratio",
+              "reason": "unknown_strength",
+              "regions": [
+                "manassas"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "direct:least_cost:northern_virginia>manassas"
+    }
+  },
+  {
+    "day": 139,
+    "key": "seat:mcdowell_irvin|battle:us_dept_northeastern_virginia:139",
+    "seat": "seat:mcdowell_irvin",
+    "menu": {
+      "menuKind": "battle",
+      "post": "us_dept_northeastern_virginia",
+      "region": "manassas",
+      "battle": null,
+      "believedRatio": 14584,
+      "mayAttack": true,
+      "judged": {
+        "commit": "main",
+        "night": "stay",
+        "cutOff": "break_out",
+        "pursue": "none"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  },
+  {
+    "day": 140,
+    "key": "seat:mcdowell_irvin|battle:us_dept_northeastern_virginia:140",
+    "seat": "seat:mcdowell_irvin",
+    "menu": {
+      "menuKind": "battle",
+      "post": "us_dept_northeastern_virginia",
+      "region": "manassas",
+      "battle": null,
+      "believedRatio": 7842,
+      "mayAttack": true,
+      "judged": {
+        "commit": "main",
+        "night": "stay",
+        "cutOff": "break_out",
+        "pursue": "none"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  },
+  {
+    "day": 145,
+    "key": "seat:mcdowell_irvin|battle:us_dept_northeastern_virginia:145",
+    "seat": "seat:mcdowell_irvin",
+    "menu": {
+      "menuKind": "battle",
+      "post": "us_dept_northeastern_virginia",
+      "region": "manassas",
+      "battle": null,
+      "believedRatio": 18348,
+      "mayAttack": true,
+      "judged": {
+        "commit": "main",
+        "night": "stay",
+        "cutOff": "break_out",
+        "pursue": "none"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  },
+  {
+    "day": 146,
+    "key": "seat:mcdowell_irvin|battle:us_dept_northeastern_virginia:146",
+    "seat": "seat:mcdowell_irvin",
+    "menu": {
+      "menuKind": "battle",
+      "post": "us_dept_northeastern_virginia",
+      "region": "manassas",
+      "battle": null,
+      "believedRatio": 17653,
+      "mayAttack": true,
+      "judged": {
+        "commit": "main",
+        "night": "stay",
+        "cutOff": "break_out",
+        "pursue": "none"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  },
+  {
+    "day": 148,
+    "key": "seat:mcdowell_irvin|battle:us_dept_northeastern_virginia:148",
+    "seat": "seat:mcdowell_irvin",
+    "menu": {
+      "menuKind": "battle",
+      "post": "us_dept_northeastern_virginia",
+      "region": "manassas",
+      "battle": null,
+      "believedRatio": 9790,
+      "mayAttack": true,
+      "judged": {
+        "commit": "main",
+        "night": "stay",
+        "cutOff": "break_out",
+        "pursue": "none"
+      },
+      "options": {
+        "commit": [
+          "judge",
+          "all_out",
+          "main",
+          "probe",
+          "defend"
+        ],
+        "night": [
+          "judge",
+          "stay",
+          "withdraw"
+        ],
+        "cutOff": [
+          "judge",
+          "break_out",
+          "surrender"
+        ],
+        "pursue": [
+          "judge",
+          "none",
+          "follow",
+          "press"
+        ]
+      }
+    },
+    "answer": {
+      "answerKind": "commands",
+      "commands": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ]
+    }
+  }
+]

@@ -1,3 +1,4 @@
+import type { StrengthEstimate } from './strength.ts';
 /** Immutable enclosure of a submitted plan. Projection reveals the plan, never its sealed scorer. */
 import type { EdgeId, FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { PlanGoal } from '../plans/goal.ts';
@@ -15,7 +16,9 @@ export interface PlanPaper {
   readonly paperForces: readonly (readonly [ForceBlockId, PostId, RegionId, 'block' | 'detachment', boolean, string, number, number, boolean, ForceBlockId | null])[];
   /** Id, holder, parent, region, seat, expected willingness. */
   readonly paperPosts: readonly (readonly [PostId, PersonId | null, PostId | null, RegionId | null, RegionId | null, number])[];
-  readonly paperBeliefs: readonly (readonly [RegionId, number])[];
+  readonly paperBeliefs: readonly (readonly [RegionId, number | null])[];
+  readonly paperBeliefDetails?: readonly (readonly [RegionId, StrengthEstimate])[];
+  readonly paperUnknownForces?: readonly ForceBlockId[];
   readonly paperWorks: readonly (readonly [RegionId, number])[];
   readonly paperObstructions: readonly (readonly [EdgeId, RegionId | null])[];
   readonly paperControl: Readonly<Record<RegionId, Readonly<Record<FactionId, number>>>>;

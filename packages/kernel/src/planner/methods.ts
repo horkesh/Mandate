@@ -28,7 +28,7 @@ function gate(kind: PlanGate['gateKind'], detail: string, hard = true): PlanGate
 
 /** His land blocks for this goal: the committed ones, or every block (not detachment) of his post. */
 export function own(ctx: Ctx): PlannerForce[] {
-  return blocksOf(ctx.input, ctx.input.post, ctx.input.goal.goalCommitted).filter((b) => !b.naval);
+  return blocksOf(ctx.input, ctx.input.post, ctx.input.goal.goalCommitted).filter((b) => !b.naval && (b.strength > 0 || b.unknownStrength));
 }
 
 function staging(blocks: readonly PlannerForce[]): RegionId | null {
@@ -103,10 +103,10 @@ export function bombard(ctx: Ctx): Outcome {
   if (gates.length > 0) return reject('bombard', 'across_water', gates);
   // G-1.12a: only a fortification the pack lets be bombarded, cited; a town is refused whatever force stands in it.
   if (!input.bombardment.objectives.some((o) => o.region === objective)) return reject('bombard', 'across_water', [gate('no_target', `${objective} is not a fortification the rules let be bombarded (combat.bombardment.objectives)`)]);
-  const target = (input.beliefs.get(objective!) ?? 0) > 0 || (input.works.get(objective!) ?? 0) > 0;
+  const target = (input.beliefs.get(objective!) ?? 0) > 0 || input.beliefDetails?.get(objective!)?.strengthPresence === true || (input.works.get(objective!) ?? 0) > 0;
   if (!target) return reject('bombard', 'across_water', [gate('no_target', `no force he believes in ${objective} and no works he knows of: nothing a bombardment may fire on`)]);
   // His land force, garrison detachments included: a shore's batteries are garrisons, and a bombardment moves nobody.
-  const blocks = input.forces.filter((b) => b.post === input.post && !b.naval && b.aboard === null);
+  const blocks = input.forces.filter((b) => b.post === input.post && !b.naval && !b.unknownStrength && b.strength>0 && b.aboard === null);
   if (blocks.length === 0) return reject('bombard', 'across_water', [gate('no_forces', 'no land blocks under his post')]);
   const guns = (region: RegionId) => blocks.filter((b) => b.region === region && input.bombardment.gunArms.includes(b.arm)).reduce((s, b) => s + b.strength, 0);
   const shores: { readonly region: RegionId; readonly guns: number }[] = [];
@@ -207,7 +207,7 @@ export function pincer(ctx: Ctx, route: PlanRoute | null): Outcome[] {
     out.push(reject('pincer', 'with_partner', gates));
   } else {
     const { post: partner, answer } = partners.beside[0]!;
-    const pBlocks = blocksOf(input, partner.id).filter((b) => !b.naval);
+    const pBlocks = blocksOf(input, partner.id).filter((b) => !b.naval && !b.unknownStrength && b.strength>0);
     const pRoute = search(ctx, partner.region!, objective!, 'land', weights(ctx));
     if (pRoute === null) {
       out.push(reject('pincer', 'with_partner', [gate('no_route', `no route from ${partner.region}`)]));
@@ -261,7 +261,7 @@ export function byWater(ctx: Ctx): Outcome[] {
     const variant = style === 'deliberate' ? 'clear_first' : 'run_in';
     const gates: PlanGate[] = objectiveGate(ctx);
     if (!input.goal.goalSea && !input.goal.goalRiver) gates.push(gate('needs_permission', 'neither river nor sea is permitted'));
-    const troops = blocksOf(input, input.post, input.goal.goalCommitted).filter((b) => !b.naval);
+    const troops = blocksOf(input, input.post, input.goal.goalCommitted).filter((b) => !b.naval && !b.unknownStrength && b.strength>0);
     if (troops.length === 0) gates.push(gate('no_forces', 'no troops under his post'));
     // The carrier: the ship his troops are aboard, else a naval block of his own post.
     const aboard = troops.find((b) => b.aboard !== null)?.aboard ?? null;

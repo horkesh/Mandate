@@ -18,8 +18,13 @@ function claimText(c: ClaimView, t: DeskStrings): string {
       const objective = c.region === null ? '' : t('console.claim.goal-objective', { region: c.region });
       return t('console.claim.goal-status', { status: c.token ?? t('console.claim.unknown-status'), objective });
     }
-    case 'enemy-strength':
-      return t('console.claim.enemy-strength', { value: String(c.value), where });
+    case 'enemy-estimate-unknown':
+    case 'enemy-strength': {
+      const s=c.strength;
+      const range=s?.strengthLower==null?'':s.strengthLower===s.strengthUpper?String(s.strengthLower):`${s.strengthLower}–${s.strengthUpper}`;
+      const value=c.kind==='enemy-estimate-unknown'?(range?`${range} + ${t('console.claim.unknown-status')}`:t('console.claim.unknown-status')):(range||String(c.value));
+      return t('console.claim.enemy-strength', { value, where });
+    }
     case 'control-government':
       return c.value === 1
         ? t('console.claim.neutral-government', { government: c.token ?? t('console.claim.unidentified'), where })
@@ -142,6 +147,9 @@ export function enemyPicture(view: SeatView, t: DeskStrings): string[] {
     .sort()
     .map(region => {
       const b = view.enemyBeliefs[region as keyof typeof view.enemyBeliefs]!;
-      return t('console.enemy.belief', { region, strength: String(b.value), day: String(b.asOfDay) });
+      const component=b.strength;
+      const range=component?.strengthLower == null ? '' : component.strengthLower===component.strengthUpper?String(component.strengthLower):`${component.strengthLower}–${component.strengthUpper}`;
+      const strength=b.value===null?(range?`${range} + unknown`: 'unknown'):(range||String(b.value));
+      return t('console.enemy.belief', { region, strength, day: String(b.asOfDay) });
     });
 }

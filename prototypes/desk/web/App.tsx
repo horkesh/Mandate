@@ -13,6 +13,7 @@ import {InTray,WeeklyPaper} from './InTray.tsx';
 import {clearFilters} from './intray.ts';
 import type {TrayFilters} from './intray.ts';
 import { S, VERBS } from './strings.ts';
+import {strengthText} from './strength.ts';
 import {pressStories} from './press.ts';
 import {AudienceScene, OrgBoard, PostDetails,PersonnelSheet} from './People.tsx';
 import type {CounterDraft} from './people.ts';
@@ -317,11 +318,11 @@ export function Situation({ situation: s, menu, t, execute, order, busy,queue=[]
 }
 
 function Plan({ plan, t, display }: { display: (text: string) => string; plan: OptionView; t: (key: string, kind?: string | number) => string }) {
-  return <div className="plan"><h4>{display(plan.method)} / {display(plan.variant)}</h4><p>{S.expectedEnemy}: {plan.perceivedEnemy}</p>{plan.axes.map(axis => <section key={axis.name}><h4>{S.axis} {display(axis.name)}, {t(axis.post, 'post')}</h4><p>{display(axis.mode)}, {axis.strength} {S.strength}</p><p className="plan-route">{axis.regions.map(id => t(id, 'region')).join(' → ')}</p><p>{S.arrives}: {Math.ceil(axis.arrival / 1000)}, {display(axis.phases.join(', '))}</p></section>)}{plan.requests.length > 0 && <p>{S.requests}: {display(plan.requests.join(', '))}</p>}{plan.conditions.length > 0 && <p>{S.conditions}: {display(plan.conditions.join(', '))}</p>}</div>;
+  return <div className="plan"><h4>{display(plan.method)} / {display(plan.variant)}</h4><p>{S.expectedEnemy}: {strengthText(plan.perceivedEnemy)}</p>{plan.axes.map(axis => <section key={axis.name}><h4>{S.axis} {display(axis.name)}, {t(axis.post, 'post')}</h4><p>{display(axis.mode)}, {axis.strength} {S.strength}</p><p className="plan-route">{axis.regions.map(id => t(id, 'region')).join(' → ')}</p><p>{S.arrives}: {Math.ceil(axis.arrival / 1000)}, {display(axis.phases.join(', '))}</p></section>)}{plan.requests.length > 0 && <p>{S.requests}: {display(plan.requests.join(', '))}</p>}{plan.conditions.length > 0 && <p>{S.conditions}: {display(plan.conditions.join(', '))}</p>}</div>;
 }
 function Enemy({ data, t }: { data: DeskSnapshot; t: (key: string, kind?: string | number) => string }) {
   const beliefs = Object.entries(data.morning.view.enemyBeliefs).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0);
-  return <section className="enemy"><h3>{S.enemy}</h3>{beliefs.length ? <dl>{beliefs.map(([region, b]) => { const source = data.morning.view.reports.find(r => r.id === b.source); return <div key={region}><dt>{t(region, 'region')}</dt><dd>{b.value===0?S.noEnemySeen:b.value}, {S.aboutDay} {b.asOfDay}<small>{source ? `${t(source.author, 'person')}, ${dateForReport(data, source.day)}` : `${S.source}: ${S.unknown}`}</small></dd></div>; })}</dl> : <p>{S.noEnemy}</p>}</section>;
+  return <section className="enemy"><h3>{S.enemy}</h3>{beliefs.length ? <dl>{beliefs.map(([region, b]) => { const source = data.morning.view.reports.find(r => r.id === b.source); return <div key={region}><dt>{t(region, 'region')}</dt><dd>{b.value===0?S.noEnemySeen:strengthText(b.value,b.strength)}, {S.aboutDay} {b.asOfDay}<small>{source ? `${t(source.author, 'person')}, ${dateForReport(data, source.day)}` : `${S.source}: ${S.unknown}`}</small></dd></div>; })}</dl> : <p>{S.noEnemy}</p>}</section>;
 }
 
 export function OrderSheet({ menu, t, line, setLine, help, execute, busy, display, commandDisplay, commandInput,onPersonnel,onCalls }: { commandDisplay: (line: string) => string; commandInput: (value: string, original: string) => string; display: (text: string) => string; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; line: string; setLine: (line: string) => void; help: readonly string[]; execute: (line: string) => Promise<unknown>; busy: boolean;onPersonnel?:()=>void;onCalls?:()=>void }) {

@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { deliverReport } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { report } from './support/s25-fixture.ts';
 import { toId, type PersonId, type SituationId } from '../src/ids.ts';
 import type { Command } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
@@ -17,7 +20,7 @@ import { SITUATION_MECHANICS } from '../src/tick/situations.ts';
 import { createState } from '../src/tick/setup.ts';
 import { SEATS_MECHANICS, tick, type TickResult } from '../src/tick/tick.ts';
 import { indexWorld } from '../src/world/index.ts';
-import { F, indexedFixture, P, POST } from './support/seats-fixture.ts';
+import { F, indexedFixture, P, POST, R } from './support/seats-fixture.ts';
 import { goalTerms } from './support/test-seats.ts';
 import { ctxFor } from './support/tick-context.ts';
 import { oversightOf } from '../src/tick/context.ts';
@@ -268,7 +271,11 @@ describe('an edit read against what the plan holds (lane 1.5b; finding of lane 1
   it('an edit to a plan that needs more men than it commits states the shortfall: lacks_resources can fire on an edit', () => {
     const wd = indexedFixture();
     const take: Command = { cmd: 'order', to: POST('a_army'), goal: goalTerms('take', 'b_mid', { approveAsDrafted: false }), route: 'special-messenger', bypass: true };
-    let state = createState(wd, { seed: 7 });
+    let state = deliverReport(createState(wd, { seed: 7 }), seatIdFor(P('a_gen')), report('m.edit.enemy', {
+      reportType: 'enemy-estimate', reportDay: 0, reportSubjectId: R('b_mid'),
+      // A complete fictional search includes the adjacent regions used by hop threat.
+      reportClaims: ['a_cap', 'a_mid', 'a_front', 'b_front', 'b_mid', 'b_cap'].map(r => ({ claimKind: 'enemy-strength', claimRegion: R(r), claimValue: r === 'b_mid' ? 1152 : 0, claimToken: null, claimConfidence: 1000 })),
+    }, 0), NO_TRUTH);
     let edited: string | null = null;
     let sent = false;
     for (let day = 1; day <= 12 && edited === null; day++) {

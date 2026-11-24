@@ -32,6 +32,7 @@ import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import { term, type BiasTerm } from '../knowledge/truth.ts';
 import { isSelfGoverning } from '../command/command.ts';
 import { perceptionBias, traitsOf } from '../people/traits.ts';
+import { observeStrength, biasStrength, strengthClaim } from '../knowledge/strength.ts';
 import type { State } from '../root-state.ts';
 import { headquartersOf, fieldPosts, postFaction } from '../seats/posts.ts';
 import { fire, sendReport, type TickContext } from './context.ts';
@@ -118,10 +119,13 @@ function dispatches(ctx: TickContext, state: State, battle: string, region: Regi
     const author = authorOf(state, side);
     if (author === null) return;
     if (unresolvedContact(bday)) {
+      const opposition=bday.bdaySides[1-i]!;
+      const unknown=strengthClaim(region,observeStrength({observer:author.person,region,day:ctx.day,scope:'region',presence:opposition.bsideBlocks.length>0,
+        coverage:'unknown',counts:[],conditions:'unresolved contact: opposition is present but unquantified'}),reportConfidence.battleEnemyStrength);
       sendReport(ctx, state, {
         body: body(author.person, author.post, ctx.day, null, 'wire-dispatch', null, region, [{
           ...claim('battle-result', region, 0, 'unresolved contact', 0), claimBattle: battle, claimBattleDays: [bday.bdayDay], claimCommander: side.bsideCommander,
-        }]),
+        },unknown]),
         truth: { truthTerms: [], truthTrimmed: [] },
         to: ctx.world.faction(side.bsideFaction).principal, fromRegion: region, tag: `battle.unresolved.${side.bsideFaction}`,
       });
@@ -130,13 +134,16 @@ function dispatches(ctx: TickContext, state: State, battle: string, region: Regi
     }
     const enemy = bday.bdaySides[1 - i]!;
     const bias = perceptionBias(ctx.world.rules.traits, traitsOf(ctx.world, state, author.person));
-    const seen = Math.trunc((enemy.bsidePresent * bias.permille) / 1000);
+    const observation=observeStrength({observer:author.person,region,day:ctx.day,scope:'region',presence:enemy.bsideBlocks.length>0,
+      coverage:enemy.bsideUnknown.length>0?'partial':'complete',counts:enemy.bsidePresent>0?[{countKind:'men',count:enemy.bsidePresent}]:[],
+      conditions:'battle observation of counted opposing component; unquantified combatants remain unknown'});
+    const estimate=strengthClaim(region,biasStrength(observation,bias.permille,author.person),reportConfidence.battleEnemyStrength);
     for (const phase of shape.phases) {
       const mine = phase.sides[i]!;
       const well = mine.flankBreaks || mine.leaves || mine.surrenders || mine.destroyed ? 0 : 1;
       const field = phase === shape.phases.at(-1) ? control : [];
       sendReport(ctx, state, {
-        body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [{...claim('battle-phase', region, well, phase.phase, reportConfidence.battlePhase), claimBattle: battle, claimBattleDays: [bday.bdayDay], claimCommander: side.bsideCommander}, claim('enemy-strength', region, seen, null, reportConfidence.battleEnemyStrength), ...field]),
+        body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [{...claim('battle-phase', region, well, phase.phase, reportConfidence.battlePhase), claimBattle: battle, claimBattleDays: [bday.bdayDay], claimCommander: side.bsideCommander}, estimate, ...field]),
         truth: { truthTerms: [term('observed', enemy.bsidePresent, { region }), ...bias.terms, term('observed', mine.killedWounded, { region, rule: `${phase.phase}:killed_wounded_unsaid` }), ...observedControl(region, field)], truthTrimmed: [] },
         to: ctx.world.faction(side.bsideFaction).principal,
         tag: `battle.${phase.phase}.${side.bsideFaction}`,

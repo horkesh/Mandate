@@ -1,0 +1,15 @@
+{
+  "beforeBytes": 174124779,
+  "afterBytes": 6392063,
+  "daysPerActor": {
+    "patterson_robert": 148,
+    "mcdowell_irvin": 148,
+    "johnston_joseph_e": 148,
+    "scott_winfield": 148
+  },
+  "receivedPapers": 598,
+  "distinctDrafts": 10,
+  "operationRecords": 6,
+  "raw": "runs/s134/build-capture: all original snapshots, views, knowledge, choices and event streams remain byte-exact; see raw-inventory.json",
+  "method": "Publish every daily estimate and plan/choice identity, with each received paper, draft and operation once. Full request views remain in the hashed raw capture. The committed first capture and its packet are unchanged."
+}

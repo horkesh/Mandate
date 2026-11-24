@@ -1,0 +1,6287 @@
+{
+  "before": {
+    "drafts": [
+      {
+        "day": 3,
+        "post": "n_army_east",
+        "goal": {
+          "goalObjective": "s_capital",
+          "goalPosture": "take",
+          "goalRisk": 500,
+          "goalDeadlineDays": 20,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": true,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "chosen": null,
+        "candidates": [
+          {
+            "id": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": 429,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1602"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -40,
+                "contribWhy": "arrives 1000 permille days late"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -270,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:n_east_front",
+            "score": 100,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 400,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          },
+          {
+            "id": "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": 82,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1602"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 63,
+                "contribWhy": "arrives 8000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -720,
+                "contribWhy": "8000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "post": "s_army_salient",
+        "goal": {
+          "goalObjective": "n_capital",
+          "goalPosture": "take",
+          "goalRisk": 500,
+          "goalDeadlineDays": 20,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": true,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "chosen": null,
+        "candidates": [
+          {
+            "id": "direct:least_cost:salient_tip>n_centre_line>n_heartland>n_capital",
+            "score": 1083,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches n_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1000"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 15000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -67,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": -24,
+                "contribWhy": "2000 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 174,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "flank:penalty:salient_tip>n_centre_line>n_east_plain>n_capital",
+            "score": 1074,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches n_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1000"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 15000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -67,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": -33,
+                "contribWhy": "2725 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 174,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "pincer:two_axis:salient_tip>n_centre_line>n_heartland>n_capital|salient_tip>n_centre_line>n_east_plain>n_capital",
+            "score": 894,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches n_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1000"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 15000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -135,
+                "contribWhy": "6000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": -57,
+                "contribWhy": "4725 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": -88,
+                "contribWhy": "2 axes, arrivals 1000 permille days apart"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 174,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:salient_tip",
+            "score": -237,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 63,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "post": "n_army_east",
+        "goal": {
+          "goalObjective": "s_capital",
+          "goalPosture": "take",
+          "goalRisk": 500,
+          "goalDeadlineDays": 20,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "chosen": null,
+        "candidates": [
+          {
+            "id": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": 429,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1602"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -40,
+                "contribWhy": "arrives 1000 permille days late"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -270,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:n_east_front",
+            "score": 100,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 400,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          },
+          {
+            "id": "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": 82,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1602"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 63,
+                "contribWhy": "arrives 8000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -720,
+                "contribWhy": "8000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+            "score": -16,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1602"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 55,
+                "contribWhy": "arrives 7000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -810,
+                "contribWhy": "9000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+            "score": -833,
+            "enemy": 0,
+            "ratio": 10000,
+            "unavailable": null,
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1602"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 55,
+                "contribWhy": "arrives 7000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -1531,
+                "contribWhy": "17000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": -96,
+                "contribWhy": "2 axes, arrivals 1000 permille days apart"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "battles": {
+      "battle:n_capital:8": {
+        "battleRegion": "n_capital",
+        "battleStartDay": 8,
+        "battleEndDay": 8,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "s_army_salient"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 8,
+            "bdayNumber": 1,
+            "bdayType": "attack_hasty",
+            "bdayAttacker": "south",
+            "bdayFrontage": 30000,
+            "bdayContact": 2200,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_capital_defences",
+                "bsideCommander": null,
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "n_capital_guard"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 2200,
+                "bsideCommitted": 2200,
+                "bsideEngaged": 2200,
+                "bsideBase": 95,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 88,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "enemy_posture",
+                    "btermValue": 200,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 103,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 21,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1312,
+                "bsideKw": 274,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 209,
+                    "btermSource": "attack_hasty"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -21,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 18,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "enemy_posture",
+                    "btermValue": 42,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 22,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 4,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 41,
+                "bsideWounded": 233,
+                "bsideMissing": 70,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_withdrew",
+                    "btermValue": 82,
+                    "btermSource": "withdrew"
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 12,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 246,
+                "bsideFlankThreshold": 188,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 138,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 384,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -186,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 309,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "may_not_attack",
+                    "btermValue": 0,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 284,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": null
+                  }
+                ],
+                "bsideResult": "withdrew",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "n_east_plain",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "n_capital_guard",
+                    "blossKilled": 41,
+                    "blossWounded": 233,
+                    "blossMissing": 70,
+                    "blossCaptured": 12,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 266,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_army_salient",
+                "bsideCommander": "s_cavalier",
+                "bsideCommit": "all_out",
+                "bsideBlocks": [
+                  "s_harrow_1",
+                  "s_lowmarch_militia"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 7100,
+                "bsideCommitted": 7100,
+                "bsideEngaged": 7100,
+                "bsideBase": 190,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -88,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "own_posture",
+                    "btermValue": 200,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -103,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -95,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 814,
+                "bsideKw": 340,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 418,
+                    "btermSource": "attack_hasty"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -42,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -37,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "own_posture",
+                    "btermValue": 84,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -43,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -40,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 51,
+                "bsideWounded": 289,
+                "bsideMissing": 27,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 27,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 112,
+                "bsideFlankThreshold": 50,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 579,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -70,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": 79,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 3227,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 874,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 3509,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 3509,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 874,
+                    "btermSource": "s_cavalier"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "press",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "s_harrow_1",
+                    "blossKilled": 33,
+                    "blossWounded": 187,
+                    "blossMissing": 17,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "s_lowmarch_militia",
+                    "blossKilled": 18,
+                    "blossWounded": 102,
+                    "blossMissing": 10,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 271,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      },
+      "battle:e_lowlands:14": {
+        "battleRegion": "e_lowlands",
+        "battleStartDay": 14,
+        "battleEndDay": 14,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "n_army_east",
+          "s_army_salient"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 14,
+            "bdayNumber": 1,
+            "bdayType": "meeting",
+            "bdayAttacker": "north",
+            "bdayFrontage": 25000,
+            "bdayContact": 1000,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_army_east",
+                "bsideCommander": "n_organiser",
+                "bsideCommit": "main",
+                "bsideBlocks": [
+                  "n_east_1",
+                  "n_east_2",
+                  "n_east_horse"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 10900,
+                "bsideCommitted": 7630,
+                "bsideEngaged": 7630,
+                "bsideBase": 160,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -200,
+                    "btermSource": "swamp"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 32,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -136,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -41,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 655,
+                "bsideKw": 104,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 159,
+                    "btermSource": "meeting"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -32,
+                    "btermSource": "swamp"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 5,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -22,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -6,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 15,
+                "bsideWounded": 89,
+                "bsideMissing": 8,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 8,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 887,
+                "bsideFlankThreshold": 50,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 491,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -13,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -66,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 4535,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1602,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 5661,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 961,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 5661,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "none",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "n_east_1",
+                    "blossKilled": 7,
+                    "blossWounded": 42,
+                    "blossMissing": 4,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_2",
+                    "blossKilled": 7,
+                    "blossWounded": 40,
+                    "blossMissing": 3,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_horse",
+                    "blossKilled": 1,
+                    "blossWounded": 7,
+                    "blossMissing": 1,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 149,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_army_salient",
+                "bsideCommander": "s_cavalier",
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "raised.s_lowmarch_governor.d11"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 1000,
+                "bsideCommitted": 1000,
+                "bsideEngaged": 1000,
+                "bsideBase": 160,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -200,
+                    "btermSource": "swamp"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -32,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "surprise",
+                    "btermValue": 300,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 136,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 87,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1291,
+                "bsideKw": 206,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 159,
+                    "btermSource": "meeting"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -32,
+                    "btermSource": "swamp"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -5,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "surprise",
+                    "btermValue": 48,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 22,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 14,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 30,
+                "bsideWounded": 176,
+                "bsideMissing": 52,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_withdrew",
+                    "btermValue": 61,
+                    "btermSource": "withdrew"
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -9,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 9,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 9,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 950,
+                "bsideFlankThreshold": 231,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 181,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 340,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -309,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": 79,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 91,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "probe_at",
+                    "btermValue": 700,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 73,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": "s_cavalier"
+                  }
+                ],
+                "bsideResult": "withdrew",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "s_coast_east",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "raised.s_lowmarch_governor.d11",
+                    "blossKilled": 30,
+                    "blossWounded": 176,
+                    "blossMissing": 52,
+                    "blossCaptured": 9,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 904,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      },
+      "battle:s_coast:22": {
+        "battleRegion": "s_coast",
+        "battleStartDay": 22,
+        "battleEndDay": 22,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "n_army_east"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 22,
+            "bdayNumber": 1,
+            "bdayType": "attack_open",
+            "bdayAttacker": "north",
+            "bdayFrontage": 40000,
+            "bdayContact": 1100,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_army_east",
+                "bsideCommander": "n_organiser",
+                "bsideCommit": "main",
+                "bsideBlocks": [
+                  "n_east_1",
+                  "n_east_2",
+                  "n_east_horse"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 10796,
+                "bsideCommitted": 7557,
+                "bsideEngaged": 7557,
+                "bsideBase": 170,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -50,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": 15,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -55,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -134,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -57,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 719,
+                "bsideKw": 134,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 186,
+                    "btermSource": "attack_open"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -9,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": 3,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -10,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -25,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -11,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 20,
+                "bsideWounded": 114,
+                "bsideMissing": 10,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 10,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 302,
+                "bsideFlankThreshold": 57,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_quality",
+                    "btermValue": 7,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 491,
+                "bsideMoraleAfter": 386,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -18,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -66,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -21,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 4084,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1602,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 4986,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 961,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 4986,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "none",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "n_east_1",
+                    "blossKilled": 9,
+                    "blossWounded": 54,
+                    "blossMissing": 5,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_2",
+                    "blossKilled": 9,
+                    "blossWounded": 51,
+                    "blossMissing": 4,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_horse",
+                    "blossKilled": 2,
+                    "blossWounded": 9,
+                    "blossMissing": 1,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 454,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_coast_command",
+                "bsideCommander": null,
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "s_gullhaven_gunners"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 1100,
+                "bsideCommitted": 1100,
+                "bsideEngaged": 1100,
+                "bsideBase": 160,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -50,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": -15,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 55,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 134,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 71,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1195,
+                "bsideKw": 210,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 176,
+                    "btermSource": "attack_open"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -9,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": -3,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 10,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 24,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 31,
+                "bsideWounded": 179,
+                "bsideMissing": 54,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_withdrew",
+                    "btermValue": 63,
+                    "btermSource": "withdrew"
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -9,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 9,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 9,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 312,
+                "bsideFlankThreshold": 229,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 179,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 285,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -285,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 101,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "may_not_attack",
+                    "btermValue": 0,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 83,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": null
+                  }
+                ],
+                "bsideResult": "withdrew",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "s_capital",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "s_gullhaven_gunners",
+                    "blossKilled": 31,
+                    "blossWounded": 179,
+                    "blossMissing": 54,
+                    "blossCaptured": 9,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 250,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      },
+      "battle:s_capital:23": {
+        "battleRegion": "s_capital",
+        "battleStartDay": 23,
+        "battleEndDay": 23,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "n_army_east",
+          "s_coast_command"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 23,
+            "bdayNumber": 1,
+            "bdayType": "rearguard",
+            "bdayAttacker": "north",
+            "bdayFrontage": 30000,
+            "bdayContact": 2327,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_army_east",
+                "bsideCommander": "n_organiser",
+                "bsideCommit": "main",
+                "bsideBlocks": [
+                  "n_east_1",
+                  "n_east_2",
+                  "n_east_horse"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 10652,
+                "bsideCommitted": 7456,
+                "bsideEngaged": 7456,
+                "bsideBase": 50,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": 10,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -85,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -117,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -42,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 666,
+                "bsideKw": 77,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 116,
+                    "btermSource": "rearguard"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -12,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": 1,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -10,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -13,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -5,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 11,
+                "bsideWounded": 66,
+                "bsideMissing": 6,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 6,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 661,
+                "bsideFlankThreshold": 55,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_quality",
+                    "btermValue": 5,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 386,
+                "bsideMoraleAfter": 298,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -10,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -66,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 1905,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1602,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 2138,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 961,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 2138,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "none",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "n_east_1",
+                    "blossKilled": 5,
+                    "blossWounded": 31,
+                    "blossMissing": 3,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_2",
+                    "blossKilled": 5,
+                    "blossWounded": 30,
+                    "blossMissing": 3,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_horse",
+                    "blossKilled": 1,
+                    "blossWounded": 5,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 151,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_war_office",
+                "bsideCommander": "s_minister",
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "s_gullhaven_gunners",
+                  "s_merrow_guard"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 2327,
+                "bsideCommitted": 2327,
+                "bsideEngaged": 2327,
+                "bsideBase": 100,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": -10,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 85,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 117,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 67,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1159,
+                "bsideKw": 269,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 232,
+                    "btermSource": "rearguard"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -23,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": -2,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 20,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 27,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 15,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 40,
+                "bsideWounded": 229,
+                "bsideMissing": 131,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_routed",
+                    "btermValue": 134,
+                    "btermSource": "routed"
+                  },
+                  {
+                    "btermKind": "flank_broken",
+                    "btermValue": 53,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -56,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 56,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 56,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 204,
+                "bsideFlankThreshold": 206,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 156,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": true,
+                "bsideMoraleBefore": 488,
+                "bsideMoraleAfter": 125,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -172,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "flank_broken",
+                    "btermValue": -150,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -14,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -27,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 120,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1210,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "probe_at",
+                    "btermValue": 847,
+                    "btermSource": "s_minister"
+                  }
+                ],
+                "bsideResult": "routed",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "s_heartland",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "s_gullhaven_gunners",
+                    "blossKilled": 14,
+                    "blossWounded": 82,
+                    "blossMissing": 46,
+                    "blossCaptured": 20,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "s_merrow_guard",
+                    "blossKilled": 26,
+                    "blossWounded": 147,
+                    "blossMissing": 85,
+                    "blossCaptured": 36,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 283,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "liveness": [
+      {
+        "mechanic": "combat.battle_closed",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "combat.battle_day",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "combat.bombardment",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.breakout",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.captured",
+        "fires": 4,
+        "magnitude": 86
+      },
+      {
+        "mechanic": "combat.cut_off",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.destroyed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.evacuated",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.flank_broken",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "combat.general_hit",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "fires": 8,
+        "magnitude": 1614
+      },
+      {
+        "mechanic": "combat.missing",
+        "fires": 8,
+        "magnitude": 358
+      },
+      {
+        "mechanic": "combat.occupation",
+        "fires": 31,
+        "magnitude": 2548
+      },
+      {
+        "mechanic": "combat.pursuit_chosen",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "combat.records_pruned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.routed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "combat.surrendered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.withdrew",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "combat.works_stormed",
+        "fires": 1,
+        "magnitude": 150
+      },
+      {
+        "mechanic": "command.government_closed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.government_established",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.government_reopened",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.post_succeeded",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.proposal_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.side_changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.temporary_post_opened",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "commands.rejected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "control.changed",
+        "fires": 35,
+        "magnitude": 3348
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "fires": 13,
+        "magnitude": 13
+      },
+      {
+        "mechanic": "forces.landed_by_situation",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "forces.landing_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "fires": 187,
+        "magnitude": 187000
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "fires": 238,
+        "magnitude": 236000
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "fires": 108,
+        "magnitude": 230
+      },
+      {
+        "mechanic": "infrastructure.changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "knowledge.pruned_age",
+        "fires": 43,
+        "magnitude": 83
+      },
+      {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 118,
+        "magnitude": 1963
+      },
+      {
+        "mechanic": "ladder.moved",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "ladder.rival",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "map.pocket_closed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "map.pocket_lost",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "map.pocket_relieved",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "map.recomputed",
+        "fires": 20,
+        "magnitude": 20
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "fires": 50,
+        "magnitude": 50
+      },
+      {
+        "mechanic": "messages.delivered",
+        "fires": 2158,
+        "magnitude": 2158
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "fires": 107,
+        "magnitude": 107
+      },
+      {
+        "mechanic": "messages.sent",
+        "fires": 2189,
+        "magnitude": 2189
+      },
+      {
+        "mechanic": "messages.special_messenger",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "movement.arrived",
+        "fires": 27,
+        "magnitude": 27
+      },
+      {
+        "mechanic": "movement.join_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "movement.joined",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "fires": 16,
+        "magnitude": 16
+      },
+      {
+        "mechanic": "operations.ended",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "operations.landed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.opened",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "operations.repulsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.stage",
+        "fires": 13,
+        "magnitude": 13
+      },
+      {
+        "mechanic": "operations.support_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.support_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.support_sent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.works",
+        "fires": 4,
+        "magnitude": 200
+      },
+      {
+        "mechanic": "orders.bypassed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "orders.conflict",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "orders.relay_held",
+        "fires": 3,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "orders.relay_objected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "orders.relayed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "orders.responses_pruned",
+        "fires": 16,
+        "magnitude": 24
+      },
+      {
+        "mechanic": "orders.returned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.grievances_faded",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.promise_broken",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.promise_kept",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.resigned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.stayed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.candidates",
+        "fires": 3,
+        "magnitude": 12
+      },
+      {
+        "mechanic": "planner.searches",
+        "fires": 3,
+        "magnitude": 26
+      },
+      {
+        "mechanic": "planner.term.caution",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.coordination",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.dependence",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.exposure",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.force_ratio",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.glory",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "planner.term.haste",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.notes",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.supply",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.approved",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.chosen",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "plans.discretion_exercised",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.draft_deferred",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.drafted",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "plans.edit_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_invalid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_objected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_received",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_shirked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.goal_proposed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.goal_reached",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "plans.released",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.sent_back",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.submitted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "politics.act",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.adjourned",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "politics.answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.called",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.framing",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.front_page",
+        "fires": 17,
+        "magnitude": 17
+      },
+      {
+        "mechanic": "politics.met",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.opened",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "politics.press_silent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.support",
+        "fires": 74,
+        "magnitude": 74
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "recruitment.called",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "recruitment.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.men",
+        "fires": 2,
+        "magnitude": 3000
+      },
+      {
+        "mechanic": "recruitment.muster_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.renewed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "fires": 36,
+        "magnitude": 36
+      },
+      {
+        "mechanic": "regions.self_emancipation",
+        "fires": 90,
+        "magnitude": 90
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "fires": 32,
+        "magnitude": 32
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "fires": 16,
+        "magnitude": 16
+      },
+      {
+        "mechanic": "reports.commander_lost",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "reports.filtered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "reports.observer_letter",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "reports.pocket",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "reports.trimmed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "seats.attention_refilled",
+        "fires": 17,
+        "magnitude": 34
+      },
+      {
+        "mechanic": "seats.attention_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "seats.choices",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "seats.defaulted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "seats.initiative",
+        "fires": 15,
+        "magnitude": 15
+      },
+      {
+        "mechanic": "situations.decided",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.delegated",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "situations.fired",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "situations.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.notice_reports",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.noticed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.options_changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.orders",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "situations.policy",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.policy_unpaid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.proposals",
+        "fires": 5,
+        "magnitude": 220
+      },
+      {
+        "mechanic": "situations.resurfaced",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.staff_lines",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.surfaced",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "situations.waiting",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "verbs.answered",
+        "fires": 36,
+        "magnitude": 36
+      },
+      {
+        "mechanic": "verbs.audience",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "verbs.consulted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "verbs.declined",
+        "fires": 17,
+        "magnitude": 17
+      },
+      {
+        "mechanic": "verbs.in_washington",
+        "fires": 0,
+        "magnitude": 0
+      }
+    ]
+  },
+  "after": {
+    "drafts": [
+      {
+        "day": 3,
+        "post": "n_army_east",
+        "goal": {
+          "goalObjective": "s_capital",
+          "goalPosture": "take",
+          "goalRisk": 500,
+          "goalDeadlineDays": 20,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": true,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "chosen": null,
+        "candidates": [
+          {
+            "id": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": 129,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -40,
+                "contribWhy": "arrives 1000 permille days late"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -270,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:n_east_front",
+            "score": 100,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 400,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          },
+          {
+            "id": "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": -218,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 63,
+                "contribWhy": "arrives 8000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -720,
+                "contribWhy": "8000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+            "score": -324,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 47,
+                "contribWhy": "arrives 6000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -810,
+                "contribWhy": "9000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+            "score": -1187,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 47,
+                "contribWhy": "arrives 6000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -1531,
+                "contribWhy": "17000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": -142,
+                "contribWhy": "2 axes, arrivals 2000 permille days apart"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "post": "s_army_salient",
+        "goal": {
+          "goalObjective": "n_capital",
+          "goalPosture": "take",
+          "goalRisk": 500,
+          "goalDeadlineDays": 20,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": true,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "chosen": null,
+        "candidates": [
+          {
+            "id": "direct:least_cost:salient_tip>n_centre_line>n_east_plain>n_capital",
+            "score": 807,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_centre_line",
+                  "n_east_plain",
+                  "n_heartland"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches n_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 15000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -67,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 174,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "flank:penalty:salient_tip>n_centre_line>n_heartland>n_capital",
+            "score": 807,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_centre_line",
+                  "n_east_plain",
+                  "n_heartland"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches n_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 15000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -67,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 174,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "pincer:two_axis:salient_tip>n_centre_line>n_east_plain>n_capital|salient_tip>n_centre_line>n_heartland>n_capital",
+            "score": 651,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_centre_line",
+                  "n_east_plain",
+                  "n_heartland"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches n_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 15000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -135,
+                "contribWhy": "6000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": -88,
+                "contribWhy": "2 axes, arrivals 1000 permille days apart"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 174,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:salient_tip",
+            "score": -237,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "n_centre_line",
+                  "n_east_plain",
+                  "n_heartland"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 63,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "post": "n_army_east",
+        "goal": {
+          "goalObjective": "s_capital",
+          "goalPosture": "take",
+          "goalRisk": 500,
+          "goalDeadlineDays": 20,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "chosen": null,
+        "candidates": [
+          {
+            "id": "supply_line:depot_steps:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": 129,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -40,
+                "contribWhy": "arrives 1000 permille days late"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -270,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "holding:hold:n_east_front",
+            "score": 100,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 400,
+                "contribWhy": "keeps the force whole"
+              }
+            ]
+          },
+          {
+            "id": "direct:least_cost:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital",
+            "score": -218,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 63,
+                "contribWhy": "arrives 8000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -720,
+                "contribWhy": "8000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "flank:penalty:n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+            "score": -316,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 55,
+                "contribWhy": "arrives 7000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -810,
+                "contribWhy": "9000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          },
+          {
+            "id": "pincer:two_axis:n_east_front>e_lowlands>s_coast_east>s_coast>s_capital|n_east_front>salient_tip>salient_base>mere_crossing>s_heartland>s_capital",
+            "score": -1133,
+            "enemy": null,
+            "ratio": null,
+            "unavailable": [
+              {
+                "term": "force_ratio",
+                "reason": "unknown_strength",
+                "regions": [
+                  "s_capital"
+                ]
+              },
+              {
+                "term": "exposure",
+                "reason": "unknown_strength",
+                "regions": [
+                  "e_lowlands",
+                  "mere_crossing",
+                  "s_coast",
+                  "s_coast_east",
+                  "s_heartland",
+                  "salient_base",
+                  "salient_tip"
+                ]
+              }
+            ],
+            "terms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches s_capital"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 55,
+                "contribWhy": "arrives 7000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -1531,
+                "contribWhy": "17000 permille days outside supply"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": -96,
+                "contribWhy": "2 axes, arrivals 1000 permille days apart"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 39,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "battles": {
+      "battle:n_capital:8": {
+        "battleRegion": "n_capital",
+        "battleStartDay": 8,
+        "battleEndDay": 8,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "s_army_salient"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 8,
+            "bdayNumber": 1,
+            "bdayType": "attack_hasty",
+            "bdayAttacker": "south",
+            "bdayFrontage": 30000,
+            "bdayContact": 2200,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_capital_defences",
+                "bsideCommander": null,
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "n_capital_guard"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 2200,
+                "bsideCommitted": 2200,
+                "bsideEngaged": 2200,
+                "bsideBase": 95,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 88,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "enemy_posture",
+                    "btermValue": 200,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 103,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 21,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1312,
+                "bsideKw": 274,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 209,
+                    "btermSource": "attack_hasty"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -21,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 18,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "enemy_posture",
+                    "btermValue": 42,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 22,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 4,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 41,
+                "bsideWounded": 233,
+                "bsideMissing": 70,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_withdrew",
+                    "btermValue": 82,
+                    "btermSource": "withdrew"
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 12,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 246,
+                "bsideFlankThreshold": 188,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 138,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 384,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -186,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 309,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "may_not_attack",
+                    "btermValue": 0,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 284,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": null
+                  }
+                ],
+                "bsideResult": "withdrew",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "n_heartland",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "n_capital_guard",
+                    "blossKilled": 41,
+                    "blossWounded": 233,
+                    "blossMissing": 70,
+                    "blossCaptured": 12,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 266,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_army_salient",
+                "bsideCommander": "s_cavalier",
+                "bsideCommit": "all_out",
+                "bsideBlocks": [
+                  "s_harrow_1",
+                  "s_lowmarch_militia"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 7100,
+                "bsideCommitted": 7100,
+                "bsideEngaged": 7100,
+                "bsideBase": 190,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -88,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "own_posture",
+                    "btermValue": 200,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -103,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -95,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 814,
+                "bsideKw": 340,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 418,
+                    "btermSource": "attack_hasty"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -42,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -37,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "own_posture",
+                    "btermValue": 84,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -43,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -40,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 51,
+                "bsideWounded": 289,
+                "bsideMissing": 27,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 27,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 112,
+                "bsideFlankThreshold": 50,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 579,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -70,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": 79,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 3227,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 874,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 3509,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 3509,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 874,
+                    "btermSource": "s_cavalier"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "press",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "s_harrow_1",
+                    "blossKilled": 33,
+                    "blossWounded": 187,
+                    "blossMissing": 17,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "s_lowmarch_militia",
+                    "blossKilled": 18,
+                    "blossWounded": 102,
+                    "blossMissing": 10,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 271,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      },
+      "battle:n_east_plain:12": {
+        "battleRegion": "n_east_plain",
+        "battleStartDay": 12,
+        "battleEndDay": 12,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "n_army_east",
+          "s_army_salient"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 12,
+            "bdayNumber": 1,
+            "bdayType": "attack_open",
+            "bdayAttacker": "south",
+            "bdayFrontage": 60000,
+            "bdayContact": 2000,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_army_east",
+                "bsideCommander": "n_organiser",
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "raised.n_brenmark_governor.d6"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 2000,
+                "bsideCommitted": 2000,
+                "bsideEngaged": 2000,
+                "bsideBase": 160,
+                "bsideTerms": [
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 32,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "enemy_posture",
+                    "btermValue": 200,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 81,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 57,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1370,
+                "bsideKw": 438,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 320,
+                    "btermSource": "attack_open"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 10,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "enemy_posture",
+                    "btermValue": 64,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 26,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 18,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 65,
+                "bsideWounded": 373,
+                "bsideMissing": 154,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_routed",
+                    "btermValue": 219,
+                    "btermSource": "routed"
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -65,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 65,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 65,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 348,
+                "bsideFlankThreshold": 159,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 109,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 150,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -328,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -66,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "rout_floor",
+                    "btermValue": -26,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 189,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1602,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "probe_at",
+                    "btermValue": 1121,
+                    "btermSource": "n_organiser"
+                  }
+                ],
+                "bsideResult": "routed",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "n_coast",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "raised.n_brenmark_governor.d6",
+                    "blossKilled": 65,
+                    "blossWounded": 373,
+                    "blossMissing": 154,
+                    "blossCaptured": 65,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 660,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_army_salient",
+                "bsideCommander": "s_cavalier",
+                "bsideCommit": "all_out",
+                "bsideBlocks": [
+                  "s_harrow_2"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 4400,
+                "bsideCommitted": 4400,
+                "bsideEngaged": 4400,
+                "bsideBase": 170,
+                "bsideTerms": [
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -32,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "own_posture",
+                    "btermValue": 200,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -81,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 54,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1141,
+                "bsideKw": 387,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 339,
+                    "btermSource": "attack_open"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -11,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "own_posture",
+                    "btermValue": 68,
+                    "btermSource": "all_out"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -27,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 18,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 58,
+                "bsideWounded": 329,
+                "bsideMissing": 30,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 30,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 485,
+                "bsideFlankThreshold": 50,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 519,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -130,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": 79,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 2200,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 874,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 2569,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 2569,
+                    "btermSource": "s_cavalier"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 874,
+                    "btermSource": "s_cavalier"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "press",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "s_harrow_2",
+                    "blossKilled": 58,
+                    "blossWounded": 329,
+                    "blossMissing": 30,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 480,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      },
+      "battle:s_coast:29": {
+        "battleRegion": "s_coast",
+        "battleStartDay": 29,
+        "battleEndDay": 29,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "n_army_east"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 29,
+            "bdayNumber": 1,
+            "bdayType": "attack_open",
+            "bdayAttacker": "north",
+            "bdayFrontage": 40000,
+            "bdayContact": 1100,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_army_east",
+                "bsideCommander": "n_organiser",
+                "bsideCommit": "main",
+                "bsideBlocks": [
+                  "n_east_1",
+                  "n_east_2",
+                  "n_east_horse"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 10900,
+                "bsideCommitted": 7630,
+                "bsideEngaged": 7630,
+                "bsideBase": 170,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -50,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -55,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -134,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 102,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 863,
+                "bsideKw": 161,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 186,
+                    "btermSource": "attack_open"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -9,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -10,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -25,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 19,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 24,
+                "bsideWounded": 137,
+                "bsideMissing": 12,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 12,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 511,
+                "bsideFlankThreshold": 50,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 483,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -21,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -66,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 4124,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1602,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 5022,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 961,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 5022,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "none",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "n_east_1",
+                    "blossKilled": 11,
+                    "blossWounded": 64,
+                    "blossMissing": 6,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_2",
+                    "blossKilled": 11,
+                    "blossWounded": 62,
+                    "blossMissing": 5,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_horse",
+                    "blossKilled": 2,
+                    "blossWounded": 11,
+                    "blossMissing": 1,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 126,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_coast_command",
+                "bsideCommander": null,
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "s_gullhaven_gunners"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 1100,
+                "bsideCommitted": 1100,
+                "bsideEngaged": 1100,
+                "bsideBase": 160,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -50,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 55,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 134,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 55,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1194,
+                "bsideKw": 210,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 176,
+                    "btermSource": "attack_open"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -9,
+                    "btermSource": "tidewater"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 10,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 23,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 10,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 31,
+                "bsideWounded": 179,
+                "bsideMissing": 54,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_withdrew",
+                    "btermValue": 63,
+                    "btermSource": "withdrew"
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -9,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 9,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 9,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 558,
+                "bsideFlankThreshold": 229,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 179,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 285,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -285,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -30,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 100,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1000,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "may_not_attack",
+                    "btermValue": 0,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 82,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 600,
+                    "btermSource": null
+                  }
+                ],
+                "bsideResult": "withdrew",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "s_capital",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "s_gullhaven_gunners",
+                    "blossKilled": 31,
+                    "blossWounded": 179,
+                    "blossMissing": 54,
+                    "blossCaptured": 9,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 40,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      },
+      "battle:s_capital:30": {
+        "battleRegion": "s_capital",
+        "battleStartDay": 30,
+        "battleEndDay": 30,
+        "battleFactions": [
+          "north",
+          "south"
+        ],
+        "battleCauses": [
+          "n_army_east",
+          "s_coast_command"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 30,
+            "bdayNumber": 1,
+            "bdayType": "rearguard",
+            "bdayAttacker": "north",
+            "bdayFrontage": 30000,
+            "bdayContact": 2327,
+            "bdayDraws": 6,
+            "bdaySides": [
+              {
+                "bsideFaction": "north",
+                "bsidePost": "n_army_east",
+                "bsideCommander": "n_organiser",
+                "bsideCommit": "main",
+                "bsideBlocks": [
+                  "n_east_1",
+                  "n_east_2",
+                  "n_east_horse"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 10727,
+                "bsideCommitted": 7508,
+                "bsideEngaged": 7508,
+                "bsideBase": 50,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": -3,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -85,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -117,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -105,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 590,
+                "bsideKw": 68,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 115,
+                    "btermSource": "rearguard"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -12,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": -10,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": -13,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": -12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 10,
+                "bsideWounded": 58,
+                "bsideMissing": 5,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_gained_ground",
+                    "btermValue": 5,
+                    "btermSource": "gained_ground"
+                  }
+                ],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": 715,
+                "bsideFlankThreshold": 50,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 483,
+                "bsideMoraleAfter": 387,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -9,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -66,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -21,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 1918,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1602,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 2160,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 961,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "pursue_believed_ratio",
+                    "btermValue": 2160,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 199,
+                    "btermSource": "n_organiser"
+                  }
+                ],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": "none",
+                "bsideLosses": [
+                  {
+                    "blossBlock": "n_east_1",
+                    "blossKilled": 5,
+                    "blossWounded": 27,
+                    "blossMissing": 2,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_2",
+                    "blossKilled": 4,
+                    "blossWounded": 26,
+                    "blossMissing": 2,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "n_east_horse",
+                    "blossKilled": 1,
+                    "blossWounded": 5,
+                    "blossMissing": 1,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 405,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "south",
+                "bsidePost": "s_war_office",
+                "bsideCommander": "s_minister",
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "s_gullhaven_gunners",
+                  "s_merrow_guard"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 2327,
+                "bsideCommitted": 2327,
+                "bsideEngaged": 2327,
+                "bsideBase": 100,
+                "bsideTerms": [
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -100,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": 3,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 85,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 117,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 73,
+                    "btermSource": null
+                  }
+                ],
+                "bsideMultiplier": 1178,
+                "bsideKw": 274,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "base",
+                    "btermValue": 232,
+                    "btermSource": "rearguard"
+                  },
+                  {
+                    "btermKind": "terrain",
+                    "btermValue": -23,
+                    "btermSource": "urban"
+                  },
+                  {
+                    "btermKind": "quality",
+                    "btermValue": 1,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "competence",
+                    "btermValue": 20,
+                    "btermSource": "n_organiser"
+                  },
+                  {
+                    "btermKind": "numbers",
+                    "btermValue": 27,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "noise",
+                    "btermValue": 17,
+                    "btermSource": null
+                  }
+                ],
+                "bsideKilled": 41,
+                "bsideWounded": 233,
+                "bsideMissing": 70,
+                "bsideMissingParts": [
+                  {
+                    "btermKind": "result_withdrew",
+                    "btermValue": 82,
+                    "btermSource": "withdrew"
+                  },
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": -12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideCaptured": 12,
+                "bsideCapturedParts": [
+                  {
+                    "btermKind": "captured_on_field",
+                    "btermValue": 12,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankDraw": 283,
+                "bsideFlankThreshold": 207,
+                "bsideFlankTerms": [
+                  {
+                    "btermKind": "flank_base",
+                    "btermValue": 50,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_numbers",
+                    "btermValue": 156,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "enemy_quality",
+                    "btermValue": 1,
+                    "btermSource": null
+                  }
+                ],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 488,
+                "bsideMoraleAfter": 272,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "losses",
+                    "btermValue": -175,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "nerve",
+                    "btermValue": -14,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "experience",
+                    "btermValue": -27,
+                    "btermSource": null
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "believed_ratio",
+                    "btermValue": 119,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "demand",
+                    "btermValue": 1210,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "probe_at",
+                    "btermValue": 847,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "night_believed_ratio",
+                    "btermValue": 106,
+                    "btermSource": "s_minister"
+                  },
+                  {
+                    "btermKind": "hold_at",
+                    "btermValue": 726,
+                    "btermSource": "s_minister"
+                  }
+                ],
+                "bsideResult": "withdrew",
+                "bsideCutOff": null,
+                "bsideRetreatTo": "s_heartland",
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "s_gullhaven_gunners",
+                    "blossKilled": 15,
+                    "blossWounded": 82,
+                    "blossMissing": 25,
+                    "blossCaptured": 4,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "s_merrow_guard",
+                    "blossKilled": 26,
+                    "blossWounded": 151,
+                    "blossMissing": 45,
+                    "blossCaptured": 8,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": 93,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "liveness": [
+      {
+        "mechanic": "combat.battle_closed",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "combat.battle_day",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "combat.bombardment",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.breakout",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.captured",
+        "fires": 4,
+        "magnitude": 98
+      },
+      {
+        "mechanic": "combat.cut_off",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.destroyed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.evacuated",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.flank_broken",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.general_hit",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "fires": 8,
+        "magnitude": 2152
+      },
+      {
+        "mechanic": "combat.missing",
+        "fires": 8,
+        "magnitude": 422
+      },
+      {
+        "mechanic": "combat.occupation",
+        "fires": 47,
+        "magnitude": 3766
+      },
+      {
+        "mechanic": "combat.pursuit_chosen",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "combat.records_pruned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.routed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "combat.surrendered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "combat.withdrew",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "combat.works_stormed",
+        "fires": 1,
+        "magnitude": 150
+      },
+      {
+        "mechanic": "command.government_closed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.government_established",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.government_reopened",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.post_succeeded",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.proposal_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.side_changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "command.temporary_post_opened",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "commands.rejected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "control.changed",
+        "fires": 51,
+        "magnitude": 4566
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "fires": 18,
+        "magnitude": 18
+      },
+      {
+        "mechanic": "forces.landed_by_situation",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "forces.landing_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "fires": 310,
+        "magnitude": 310000
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "fires": 10,
+        "magnitude": 10
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "fires": 240,
+        "magnitude": 239000
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "fires": 129,
+        "magnitude": 318
+      },
+      {
+        "mechanic": "infrastructure.changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "knowledge.pruned_age",
+        "fires": 43,
+        "magnitude": 79
+      },
+      {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 118,
+        "magnitude": 1982
+      },
+      {
+        "mechanic": "ladder.moved",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "ladder.rival",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "map.pocket_closed",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "map.pocket_lost",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "map.pocket_relieved",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "map.recomputed",
+        "fires": 25,
+        "magnitude": 25
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "fires": 47,
+        "magnitude": 47
+      },
+      {
+        "mechanic": "messages.delivered",
+        "fires": 2175,
+        "magnitude": 2175
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "fires": 107,
+        "magnitude": 107
+      },
+      {
+        "mechanic": "messages.sent",
+        "fires": 2206,
+        "magnitude": 2206
+      },
+      {
+        "mechanic": "messages.special_messenger",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "movement.arrived",
+        "fires": 25,
+        "magnitude": 25
+      },
+      {
+        "mechanic": "movement.join_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "movement.joined",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "fires": 14,
+        "magnitude": 14
+      },
+      {
+        "mechanic": "operations.ended",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "operations.landed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.opened",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "operations.repulsed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "operations.stage",
+        "fires": 15,
+        "magnitude": 15
+      },
+      {
+        "mechanic": "operations.support_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.support_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.support_sent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "operations.works",
+        "fires": 4,
+        "magnitude": 200
+      },
+      {
+        "mechanic": "orders.bypassed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "orders.conflict",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "orders.relay_held",
+        "fires": 3,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "orders.relay_objected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "orders.relayed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "orders.responses_pruned",
+        "fires": 17,
+        "magnitude": 24
+      },
+      {
+        "mechanic": "orders.returned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.grievances_faded",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.promise_broken",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.promise_kept",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.resigned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "people.stayed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.candidates",
+        "fires": 3,
+        "magnitude": 14
+      },
+      {
+        "mechanic": "planner.searches",
+        "fires": 3,
+        "magnitude": 26
+      },
+      {
+        "mechanic": "planner.term.caution",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.coordination",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.dependence",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.exposure",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.force_ratio",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.glory",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "planner.term.haste",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.notes",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "planner.term.supply",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "planner.term.time",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "plans.approved",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.chosen",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "plans.discretion_exercised",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.draft_deferred",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.drafted",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "plans.edit_answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_invalid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_objected",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_received",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.edit_shirked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.goal_proposed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.goal_reached",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "plans.released",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.sent_back",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.submitted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "politics.act",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.adjourned",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "politics.answered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.called",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.framing",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.front_page",
+        "fires": 17,
+        "magnitude": 17
+      },
+      {
+        "mechanic": "politics.met",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.opened",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "politics.press_silent",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "politics.support",
+        "fires": 69,
+        "magnitude": 69
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "recruitment.called",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "recruitment.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.men",
+        "fires": 2,
+        "magnitude": 3000
+      },
+      {
+        "mechanic": "recruitment.muster_blocked",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "fires": 2,
+        "magnitude": 2
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.renewed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "fires": 36,
+        "magnitude": 36
+      },
+      {
+        "mechanic": "regions.self_emancipation",
+        "fires": 90,
+        "magnitude": 90
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "fires": 32,
+        "magnitude": 32
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "fires": 16,
+        "magnitude": 16
+      },
+      {
+        "mechanic": "reports.commander_lost",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "reports.filtered",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "reports.observer_letter",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "reports.pocket",
+        "fires": 4,
+        "magnitude": 4
+      },
+      {
+        "mechanic": "reports.trimmed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "seats.attention_refilled",
+        "fires": 17,
+        "magnitude": 34
+      },
+      {
+        "mechanic": "seats.attention_refused",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "seats.choices",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "seats.defaulted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "seats.initiative",
+        "fires": 15,
+        "magnitude": 15
+      },
+      {
+        "mechanic": "situations.decided",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.delegated",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "situations.fired",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "situations.lapsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.notice_reports",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.noticed",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.options_changed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.orders",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "situations.policy",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.policy_unpaid",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.proposals",
+        "fires": 5,
+        "magnitude": 220
+      },
+      {
+        "mechanic": "situations.resurfaced",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "situations.staff_lines",
+        "fires": 3,
+        "magnitude": 3
+      },
+      {
+        "mechanic": "situations.surfaced",
+        "fires": 6,
+        "magnitude": 6
+      },
+      {
+        "mechanic": "situations.waiting",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "verbs.answered",
+        "fires": 36,
+        "magnitude": 36
+      },
+      {
+        "mechanic": "verbs.audience",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "verbs.consulted",
+        "fires": 0,
+        "magnitude": 0
+      },
+      {
+        "mechanic": "verbs.declined",
+        "fires": 17,
+        "magnitude": 17
+      },
+      {
+        "mechanic": "verbs.in_washington",
+        "fires": 0,
+        "magnitude": 0
+      }
+    ]
+  }
+}

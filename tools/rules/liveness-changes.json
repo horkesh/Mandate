@@ -3140,5 +3140,384 @@
     "observed": 25,
     "cause": "S134 merge [I]: combined received demonstration letters, advice and command readiness change the recorded path through existing owners. Retained events, candidate terms and daily counter differences are published; no weight, quota or true strength is fitted.",
     "evidence": "docs/audit/s134-evidence/merge/band-review.json#seats.choices"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.time",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S134 merge [I]: time is live again on the retained combined readiness/demonstration path. Retire the current S130 quiet designation, retaining its exact historical record. The saved candidate counterfactual identifies the changed winner; no time weight changes."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluable scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged. S130 current quiet designation was already retired in the merge."
+    },
+    "observed": 2,
+    "cause": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluable scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged. S130 current quiet designation was already retired in the merge.",
+    "evidence": "docs/audit/s134-evidence/build/time-review.json#planner.term.time"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.goal_fit",
+    "before": {
+      "minFires": 0,
+      "why": "dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S134 lead ruling 2026-11-24 /0130: opposition is unquantified, so force_ratio is unavailable to both day-140 candidates. The direct plan still wins without goal_fit; no scoring weight or uncertainty bonus changed. Independent unknown-strength live driver: packages/kernel/test/s134-estimates.test.ts, \"G5: time and goal fit each have an unknown-strength fictional driver with the existing weights\"."
+    },
+    "observed": 0,
+    "cause": "S134 lead ruling 2026-11-24 /0130: opposition is unquantified, so force_ratio is unavailable to both day-140 candidates. The direct plan still wins without goal_fit; no scoring weight or uncertainty bonus changed. Independent unknown-strength live driver: packages/kernel/test/s134-estimates.test.ts, \"G5: time and goal fit each have an unknown-strength fictional driver with the existing weights\".",
+    "evidence": "docs/audit/s134-evidence/build/goal-fit-zero.json"
+  },
+  {
+    "key": "testbed, 120 days/operations.repulsed",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed operation axis is repulsed; neither full reference now fires it, while the fortified-defender control remains live."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S134 /0130 [I]: honest unknown opposition and common evaluable scoring change the testbed reference plan/contact sequence; operations.repulsed now fires1. Retained drafts, term-removal counterfactuals and operation records are in docs/audit/s134-evidence/repair/testbed-counterfactuals.json. No weight, quantity, RNG stream or combat threshold changed."
+    },
+    "observed": 1,
+    "cause": "S134 /0130 [I]: honest unknown opposition and common evaluable scoring change the testbed reference plan/contact sequence; operations.repulsed now fires1. Retained drafts, term-removal counterfactuals and operation records are in docs/audit/s134-evidence/repair/testbed-counterfactuals.json. No weight, quantity, RNG stream or combat threshold changed.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#operations.repulsed"
+  },
+  {
+    "key": "testbed, 120 days/planner.term.glory",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: honest unknown opposition and common evaluable scoring change the testbed reference plan/contact sequence; planner.term.glory now fires2. Retained drafts, term-removal counterfactuals and operation records are in docs/audit/s134-evidence/repair/testbed-counterfactuals.json. No weight, quantity, RNG stream or combat threshold changed."
+    },
+    "observed": 2,
+    "cause": "S134 /0130 [I]: honest unknown opposition and common evaluable scoring change the testbed reference plan/contact sequence; planner.term.glory now fires2. Retained drafts, term-removal counterfactuals and operation records are in docs/audit/s134-evidence/repair/testbed-counterfactuals.json. No weight, quantity, RNG stream or combat threshold changed.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#planner.term.glory"
+  },
+  {
+    "key": "testbed, 120 days/planner.term.time",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: honest unknown opposition and common evaluable scoring change the testbed reference plan/contact sequence; planner.term.time now fires2. Retained drafts, term-removal counterfactuals and operation records are in docs/audit/s134-evidence/repair/testbed-counterfactuals.json. No weight, quantity, RNG stream or combat threshold changed."
+    },
+    "observed": 2,
+    "cause": "S134 /0130 [I]: honest unknown opposition and common evaluable scoring change the testbed reference plan/contact sequence; planner.term.time now fires2. Retained drafts, term-removal counterfactuals and operation records are in docs/audit/s134-evidence/repair/testbed-counterfactuals.json. No weight, quantity, RNG stream or combat threshold changed.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#planner.term.time"
+  },
+  {
+    "key": "testbed, 120 days/combat.occupation",
+    "before": {
+      "minFires": 15,
+      "maxFires": 62
+    },
+    "after": {
+      "minFires": 23,
+      "maxFires": 94,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter combat.occupation firings 31->47 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 47,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter combat.occupation firings 31->47 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#combat.occupation"
+  },
+  {
+    "key": "testbed, 120 days/combat.pursuit_chosen",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter combat.pursuit_chosen firings 1->2 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 2,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter combat.pursuit_chosen firings 1->2 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#combat.pursuit_chosen"
+  },
+  {
+    "key": "testbed, 120 days/control.changed",
+    "before": {
+      "minFires": 17,
+      "maxFires": 70
+    },
+    "after": {
+      "minFires": 25,
+      "maxFires": 102,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter control.changed firings 35->51 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 51,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter control.changed firings 35->51 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#control.changed"
+  },
+  {
+    "key": "testbed, 120 days/control.threshold_crossed",
+    "before": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "after": {
+      "minFires": 9,
+      "maxFires": 36,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter control.threshold_crossed firings 13->18 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 18,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter control.threshold_crossed firings 13->18 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#control.threshold_crossed"
+  },
+  {
+    "key": "testbed, 120 days/forces.stores_fell",
+    "before": {
+      "minFires": 93,
+      "maxFires": 374
+    },
+    "after": {
+      "minFires": 155,
+      "maxFires": 620,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stores_fell firings 187->310 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 310,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stores_fell firings 187->310 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#forces.stores_fell"
+  },
+  {
+    "key": "testbed, 120 days/forces.stores_low",
+    "before": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "after": {
+      "minFires": 5,
+      "maxFires": 20,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stores_low firings 6->10 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 10,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stores_low firings 6->10 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#forces.stores_low"
+  },
+  {
+    "key": "testbed, 120 days/forces.stores_refilled",
+    "before": {
+      "minFires": 119,
+      "maxFires": 476
+    },
+    "after": {
+      "minFires": 120,
+      "maxFires": 480,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stores_refilled firings 238->240 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 240,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stores_refilled firings 238->240 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#forces.stores_refilled"
+  },
+  {
+    "key": "testbed, 120 days/forces.stragglers_returned",
+    "before": {
+      "minFires": 54,
+      "maxFires": 216
+    },
+    "after": {
+      "minFires": 64,
+      "maxFires": 258,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stragglers_returned firings 108->129 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 129,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter forces.stragglers_returned firings 108->129 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#forces.stragglers_returned"
+  },
+  {
+    "key": "testbed, 120 days/map.pocket_closed",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter map.pocket_closed firings 1->2 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 2,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter map.pocket_closed firings 1->2 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#map.pocket_closed"
+  },
+  {
+    "key": "testbed, 120 days/map.recomputed",
+    "before": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "after": {
+      "minFires": 12,
+      "maxFires": 50,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter map.recomputed firings 20->25 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 25,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter map.recomputed firings 20->25 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#map.recomputed"
+  },
+  {
+    "key": "testbed, 120 days/messages.courier_delay",
+    "before": {
+      "minFires": 24,
+      "maxFires": 98
+    },
+    "after": {
+      "minFires": 23,
+      "maxFires": 94,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter messages.courier_delay firings 50->47 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 47,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter messages.courier_delay firings 50->47 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#messages.courier_delay"
+  },
+  {
+    "key": "testbed, 120 days/messages.delivered",
+    "before": {
+      "minFires": 1060,
+      "maxFires": 4240
+    },
+    "after": {
+      "minFires": 1087,
+      "maxFires": 4350,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter messages.delivered firings 2158->2175 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 2175,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter messages.delivered firings 2158->2175 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#messages.delivered"
+  },
+  {
+    "key": "testbed, 120 days/messages.sent",
+    "before": {
+      "minFires": 1075,
+      "maxFires": 4302
+    },
+    "after": {
+      "minFires": 1103,
+      "maxFires": 4412,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter messages.sent firings 2189->2206 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 2206,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter messages.sent firings 2189->2206 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#messages.sent"
+  },
+  {
+    "key": "testbed, 120 days/movement.arrived",
+    "before": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "after": {
+      "minFires": 12,
+      "maxFires": 50,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter movement.arrived firings 27->25 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 25,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter movement.arrived firings 27->25 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#movement.arrived"
+  },
+  {
+    "key": "testbed, 120 days/movement.leg_started",
+    "before": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "after": {
+      "minFires": 7,
+      "maxFires": 28,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter movement.leg_started firings 16->14 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 14,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter movement.leg_started firings 16->14 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#movement.leg_started"
+  },
+  {
+    "key": "testbed, 120 days/operations.stage",
+    "before": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "after": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter operations.stage firings 13->15 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 15,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter operations.stage firings 13->15 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#operations.stage"
+  },
+  {
+    "key": "testbed, 120 days/orders.responses_pruned",
+    "before": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "after": {
+      "minFires": 8,
+      "maxFires": 34,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter orders.responses_pruned firings 16->17 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 17,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter orders.responses_pruned firings 16->17 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#orders.responses_pruned"
+  },
+  {
+    "key": "testbed, 120 days/politics.support",
+    "before": {
+      "minFires": 36,
+      "maxFires": 144
+    },
+    "after": {
+      "minFires": 34,
+      "maxFires": 138,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter politics.support firings 74->69 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 69,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter politics.support firings 74->69 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#politics.support"
+  },
+  {
+    "key": "testbed, 120 days/reports.pocket",
+    "before": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 8,
+      "why": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter reports.pocket firings 3->4 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted."
+    },
+    "observed": 4,
+    "cause": "S134 /0130 [I]: the changed received uncertainty and ordinary plan/contact sequence alter reports.pocket firings 3->4 through its existing owner. Counts and full daily plans, operations, battles, locations and lots are retained in docs/audit/s134-evidence/repair/testbed-trace.json; no weight, quantity, RNG stream or threshold is fitted.",
+    "evidence": "docs/audit/s134-evidence/repair/testbed-band-review.json#reports.pocket"
+  },
+  {
+    "key": "testbed, 120 days/combat.flank_broken",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S134 lead ruling 2026-11-24 /0130: S134 /0130: missing regional and neighboring opposition remains unknown. Common evaluable scoring and route search change the deterministic plan/movement/contact sequence, without changing weights, flank thresholds, RNG streams or force quantities. The old south-capital day23 draw204<threshold206 breaks a flank; the new day30 draw283>threshold207 does not. All eight new side draws exceed their thresholds. Independent live driver: packages/kernel/test/combat.test.ts, \"a flank breaks on a low draw: morale falls by the pack\\'s loss, more go missing, and the break has its phase\"."
+    },
+    "observed": 0,
+    "cause": "S134 lead ruling 2026-11-24 /0130: S134 /0130: missing regional and neighboring opposition remains unknown. Common evaluable scoring and route search change the deterministic plan/movement/contact sequence, without changing weights, flank thresholds, RNG streams or force quantities. The old south-capital day23 draw204<threshold206 breaks a flank; the new day30 draw283>threshold207 does not. All eight new side draws exceed their thresholds. Independent live driver: packages/kernel/test/combat.test.ts, \"a flank breaks on a low draw: morale falls by the pack\\'s loss, more go missing, and the break has its phase\".",
+    "evidence": "docs/audit/s134-evidence/repair/flank-zero.json"
   }
 ]

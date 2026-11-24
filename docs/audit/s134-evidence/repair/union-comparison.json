@@ -1,0 +1,166 @@
+{
+  "baseline": "runs/s134/build-capture",
+  "after": "runs/s134/repair-capture",
+  "baselineFinalHash": "c19569cb40973417440d590db337e8a481a27294953f63c8d2a659fd97cb6217",
+  "afterFinalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+  "stateShapeChange": "ObservedCount.kind -> countKind; immutable-key uniqueness, no estimate or quantity change",
+  "worldHashEqual": true,
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "eventsByteExact": true,
+  "livenessDifferences": [],
+  "coverageRowDifferences": [],
+  "coverageBefore": {
+    "mismatch": 15,
+    "matched": 6,
+    "representation_gap": 10,
+    "not_observed": 2
+  },
+  "coverageAfter": {
+    "mismatch": 15,
+    "matched": 6,
+    "representation_gap": 10,
+    "not_observed": 2
+  },
+  "artifacts": [
+    {
+      "artifact": "union-1861-final-state.json",
+      "byteExact": false,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-pictures.json",
+      "byteExact": false,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-decisions.json",
+      "byteExact": false,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-responses.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-messages.json",
+      "byteExact": false,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-calls.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-dispatches.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-receipts.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-offers.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-authorities.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-junction.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-commands.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-choices.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-rejections.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-observations.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-lot-transitions.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    },
+    {
+      "artifact": "union-1861-requests.json",
+      "byteExact": true,
+      "equalAfterCountKeyRename": true,
+      "remainingDifferences": [],
+      "remainingDifferenceCount": 0
+    }
+  ],
+  "captureReceipt": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s134/repair-capture.ts"
+    ],
+    "exit": 0,
+    "seconds": 129.034,
+    "log": "runs/s134/repair-capture.log"
+  }
+}

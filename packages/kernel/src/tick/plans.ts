@@ -22,7 +22,7 @@ import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { term } from '../knowledge/truth.ts';
 import { clampPermille } from '../permille.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
-import { discretionThreat, preferableGoal } from '../planner/discretion.ts';
+import { discretionAssessment, preferableGoal } from '../planner/discretion.ts';
 import { applyEdit, concretePlan, editDirective, editFailureDiagnostic, PLAN_HOLDS } from '../planner/edits.ts';
 import { plannerInputFor } from '../planner/input.ts';
 import { enclosePlan } from '../planner/paper.ts';
@@ -93,6 +93,7 @@ export function optionView(c: PlanCandidate, privateTerms = true): OptionView {
     conditions: c.candConditions.map((g) => g.gateKind),
     perceivedEnemy: c.candPerceived,
     ratio: c.candRatio,
+    ...(c.candUnavailableTerms === undefined ? {} : {unavailableTerms:c.candUnavailableTerms}),
   };
 }
 
@@ -268,9 +269,9 @@ function draftProposal(ctx: TickContext, state: State, post: PostId, record: Pla
     const joined = { ...input, forces: input.forces.filter(b => state.forceJoins[b.id] === undefined) };
     const position = headquartersOf(ctx.world, state, post);
     for (const condition of ['turned', 'outmatched'] as const) {
-      const threat = discretionThreat(joined, position, { condition, fallback: choice.goal });
-      if (threat !== null) {
-        reading.push({ kind: 'position_threatened', condition, ...threat });
+      const assessment = discretionAssessment(joined, position, { condition, fallback: choice.goal });
+      if (assessment.status === 'established') {
+        reading.push({ kind: 'position_threatened', condition, ...assessment.threat });
         break;
       }
     }
@@ -365,8 +366,9 @@ export function plansPhase(ctx: TickContext, initial: State, cache: ViewCache): 
     if (Object.keys(view.enemyBeliefs).length === 0) continue;
     const input = plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day);
     const joined = input.forces.filter(b => state.forceJoins[b.id] === undefined);
-    const threat = discretionThreat({ ...input, forces: joined }, headquartersOf(world, state, post), grant);
-    if (threat === null) continue;
+    const assessment = discretionAssessment({ ...input, forces: joined }, headquartersOf(world, state, post), grant);
+    if (assessment.status !== 'established') continue;
+    const threat = assessment.threat;
     const report: DiscretionReport = {
       switchCondition: grant.condition, switchGoal: grant.fallback, switchRegion: threat.region, switchEstimate: threat.estimate,
       switchStrength: threat.strength, switchThreshold: threat.threshold, switchEvidence: view.enemyBeliefs[threat.region]!.source,

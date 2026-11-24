@@ -1,0 +1,22 @@
+{
+  "record": {
+    "key": "union-1861, war by decision, 148 days/planner.term.goal_fit",
+    "before": {
+      "minFires": 0,
+      "why": "dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S134 lead ruling 2026-11-24 /0130: opposition is unquantified, so force_ratio is unavailable to both day-140 candidates. The direct plan still wins without goal_fit; no scoring weight or uncertainty bonus changed. Independent unknown-strength live driver: packages/kernel/test/s134-estimates.test.ts, \"G5: time and goal fit each have an unknown-strength fictional driver with the existing weights\"."
+    },
+    "observed": 0,
+    "cause": "S134 lead ruling 2026-11-24 /0130: opposition is unquantified, so force_ratio is unavailable to both day-140 candidates. The direct plan still wins without goal_fit; no scoring weight or uncertainty bonus changed. Independent unknown-strength live driver: packages/kernel/test/s134-estimates.test.ts, \"G5: time and goal fit each have an unknown-strength fictional driver with the existing weights\".",
+    "evidence": "docs/audit/s134-evidence/build/goal-fit-zero.json"
+  },
+  "fingerprint": "48a1f2aaed89179a9018f2f5039fcd0676624594b76bbd409bbac272a2bf9d88",
+  "driver": {
+    "test": "packages/kernel/test/s134-estimates.test.ts",
+    "needle": "G5: time and goal fit each have an unknown-strength fictional driver with the existing weights"
+  }
+}

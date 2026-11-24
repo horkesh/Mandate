@@ -23,6 +23,7 @@ import type { GoalView, SeatView } from '../view/types.ts';
 import type { LetterIdentity } from '../world/letters.ts';
 import type { PaperDecision } from '../world/paper-selectors.ts';
 import type { TurnStopsView } from './turn-stops.ts';
+import type { PlanCandidate } from '../planner/types.ts';
 
 export const SEAT_DRIVERS = ['ai', 'human', 'rules'] as const;
 export type SeatDriver = (typeof SEAT_DRIVERS)[number];
@@ -63,8 +64,9 @@ export interface OptionView {
   /** Conditions he attaches (`move_when_reinforced`, `vacant_post`). */
   readonly conditions: readonly string[];
   /** The enemy he believes stands at the objective, and his strength over it, permille. */
-  readonly perceivedEnemy: number;
-  readonly ratio: number;
+  readonly perceivedEnemy: number | null;
+  readonly ratio: number | null;
+  readonly unavailableTerms?: PlanCandidate['candUnavailableTerms'];
 }
 
 /**

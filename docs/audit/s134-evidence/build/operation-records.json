@@ -1,0 +1,775 @@
+{
+  "op:us_dept_pennsylvania:113": {
+    "opPost": "us_dept_pennsylvania",
+    "opCommander": "patterson_robert",
+    "opOrder": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+    "opPlan": "direct:least_cost:philadelphia>southeast_pa>harrisburg>cumberland_valley_pa>western_maryland>lower_valley",
+    "opMethod": "direct",
+    "opPosture": "hold",
+    "opObjective": "lower_valley",
+    "opStartDay": 113,
+    "opEndDay": 135,
+    "opOutcome": "superseded",
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "us_dept_pennsylvania",
+        "oaxBlocks": [
+          "raised.st_gov_wisconsin.d83"
+        ],
+        "oaxRoute": {
+          "routeFrom": "philadelphia",
+          "routeTo": "lower_valley",
+          "routeLegs": [
+            {
+              "legEdge": "rail:philadelphia:southeast_pa:pennsylvania",
+              "legFrom": "philadelphia",
+              "legTo": "southeast_pa",
+              "legType": "rail",
+              "legDays": 1000,
+              "legThreat": null,
+              "legSupply": 0,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "rail:harrisburg:southeast_pa:pennsylvania",
+              "legFrom": "southeast_pa",
+              "legTo": "harrisburg",
+              "legType": "rail",
+              "legDays": 1000,
+              "legThreat": null,
+              "legSupply": 0,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "rail:cumberland_valley_pa:harrisburg:cumberland_valley",
+              "legFrom": "harrisburg",
+              "legTo": "cumberland_valley_pa",
+              "legType": "rail",
+              "legDays": 1000,
+              "legThreat": null,
+              "legSupply": 0,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "rail:cumberland_valley_pa:western_maryland:franklin",
+              "legFrom": "cumberland_valley_pa",
+              "legTo": "western_maryland",
+              "legType": "rail",
+              "legDays": 1000,
+              "legThreat": null,
+              "legSupply": 722,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "road:lower_valley:western_maryland",
+              "legFrom": "western_maryland",
+              "legTo": "lower_valley",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": null,
+              "legSupply": 2166,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            }
+          ],
+          "routeCost": 9888,
+          "routeDays": 7000,
+          "routeUnknownThreat": true
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 3000,
+            "phaseRegion": "philadelphia"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 3000,
+            "phaseDays": 1000,
+            "phaseRegion": "southeast_pa"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 4000,
+            "phaseDays": 1000,
+            "phaseRegion": "harrisburg"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 5000,
+            "phaseDays": 1000,
+            "phaseRegion": "cumberland_valley_pa"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 6000,
+            "phaseDays": 1000,
+            "phaseRegion": "western_maryland"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 7000,
+            "phaseDays": 3000,
+            "phaseRegion": "lower_valley"
+          }
+        ],
+        "oaxObjective": "lower_valley",
+        "oaxStage": "end",
+        "oaxSince": 135,
+        "oaxUntil": null,
+        "oaxRepulses": 0,
+        "oaxPursuit": null,
+        "oaxSteps": [],
+        "oaxArrived": 123,
+        "oaxLog": [
+          {
+            "axevDay": 113,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "philadelphia"
+          },
+          {
+            "axevDay": 116,
+            "axevStage": "march",
+            "axevReason": "concentrated",
+            "axevRegion": "philadelphia"
+          },
+          {
+            "axevDay": 123,
+            "axevStage": "works",
+            "axevReason": "objective_reached",
+            "axevRegion": "lower_valley"
+          },
+          {
+            "axevDay": 135,
+            "axevStage": "end",
+            "axevReason": "superseded",
+            "axevRegion": "lower_valley"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  },
+  "op:us_dept_pennsylvania:141": {
+    "opPost": "us_dept_pennsylvania",
+    "opCommander": "patterson_robert",
+    "opOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+    "opPlan": "direct:least_cost:lower_valley>harpers_ferry",
+    "opMethod": "direct",
+    "opPosture": "hold",
+    "opObjective": "harpers_ferry",
+    "opStartDay": 141,
+    "opEndDay": null,
+    "opOutcome": null,
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "us_dept_pennsylvania",
+        "oaxBlocks": [
+          "raised.st_gov_wisconsin.d83"
+        ],
+        "oaxRoute": {
+          "routeFrom": "lower_valley",
+          "routeTo": "harpers_ferry",
+          "routeLegs": [
+            {
+              "legEdge": "road:harpers_ferry:lower_valley",
+              "legFrom": "lower_valley",
+              "legTo": "harpers_ferry",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": null,
+              "legSupply": 2166,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            }
+          ],
+          "routeCost": 5166,
+          "routeDays": 3000,
+          "routeUnknownThreat": true
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 3000,
+            "phaseRegion": "lower_valley"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 3000,
+            "phaseDays": 3000,
+            "phaseRegion": "harpers_ferry"
+          }
+        ],
+        "oaxObjective": "harpers_ferry",
+        "oaxStage": "pause",
+        "oaxSince": 148,
+        "oaxUntil": 151,
+        "oaxRepulses": 1,
+        "oaxPursuit": null,
+        "oaxSteps": [],
+        "oaxArrived": null,
+        "oaxLog": [
+          {
+            "axevDay": 141,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "lower_valley"
+          },
+          {
+            "axevDay": 144,
+            "axevStage": "march",
+            "axevReason": "concentrated",
+            "axevRegion": "lower_valley"
+          },
+          {
+            "axevDay": 147,
+            "axevStage": "withdraw",
+            "axevReason": "repulsed",
+            "axevRegion": "lower_valley"
+          },
+          {
+            "axevDay": 148,
+            "axevStage": "pause",
+            "axevReason": "repulsed",
+            "axevRegion": "lower_valley"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  },
+  "op:us_dept_northeastern_virginia:135": {
+    "opPost": "us_dept_northeastern_virginia",
+    "opCommander": "mcdowell_irvin",
+    "opOrder": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+    "opPlan": "direct:least_cost:northern_virginia>manassas",
+    "opMethod": "direct",
+    "opPosture": "take",
+    "opObjective": "manassas",
+    "opStartDay": 135,
+    "opEndDay": 145,
+    "opOutcome": "objective_reached",
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "us_dept_northeastern_virginia",
+        "oaxBlocks": [
+          "organised.s74_mcdowell_division_5_brigade_2.1",
+          "raised.st_gov_new_york.d64.bundle.3",
+          "raised.st_gov_new_york.d64.bundle.7",
+          "raised.st_gov_new_york.d64.bundle.8",
+          "raised.st_gov_new_york.d64.bundle.9",
+          "raised.st_gov_new_york.d83.bundle.3",
+          "organised.s74_mcdowell_division_4_reserve.1",
+          "raised.st_gov_massachusetts.d76",
+          "raised.st_gov_new_york.d64.bundle.2",
+          "raised.st_gov_new_york.d64.bundle.5",
+          "raised.st_gov_new_york.d64.bundle.6",
+          "raised.st_gov_new_york.d83.bundle.2",
+          "organised.s74_mcdowell_division_3_brigade_2.1",
+          "organised.s74_mcdowell_division_5_brigade_1.1",
+          "raised.st_gov_massachusetts.d76.bundle.2",
+          "raised.st_gov_michigan.d77",
+          "raised.st_gov_new_york.d64",
+          "raised.st_gov_new_york.d64.bundle.10",
+          "raised.st_gov_new_york.d83.bundle.4",
+          "organised.s74_mcdowell_division_1_brigade_2.1",
+          "organised.s74_mcdowell_division_1_brigade_3.1",
+          "organised.s74_mcdowell_division_1_brigade_4.1",
+          "organised.s74_mcdowell_division_1_brigade_4.2",
+          "organised.s74_mcdowell_division_2_brigade_1.1",
+          "organised.s74_mcdowell_division_2_brigade_2.1",
+          "organised.s74_mcdowell_division_2_brigade_2.2",
+          "organised.s74_mcdowell_division_3_brigade_3.1",
+          "organised.s74_mcdowell_division_5_brigade_1.2",
+          "raised.st_gov_connecticut.d77",
+          "raised.st_gov_maine.d77",
+          "raised.st_gov_new_york.d64.bundle.4",
+          "raised.st_gov_new_york.d83"
+        ],
+        "oaxRoute": {
+          "routeFrom": "northern_virginia",
+          "routeTo": "manassas",
+          "routeLegs": [
+            {
+              "legEdge": "road:manassas:northern_virginia",
+              "legFrom": "northern_virginia",
+              "legTo": "manassas",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": null,
+              "legSupply": 1974,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            }
+          ],
+          "routeCost": 4974,
+          "routeDays": 3000,
+          "routeUnknownThreat": true
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 3000,
+            "phaseRegion": "northern_virginia"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 3000,
+            "phaseDays": 3000,
+            "phaseRegion": "manassas"
+          },
+          {
+            "phaseKind": "assault",
+            "phaseStart": 6000,
+            "phaseDays": 1000,
+            "phaseRegion": "manassas"
+          }
+        ],
+        "oaxObjective": "manassas",
+        "oaxStage": "end",
+        "oaxSince": 145,
+        "oaxUntil": null,
+        "oaxRepulses": 0,
+        "oaxPursuit": null,
+        "oaxSteps": [],
+        "oaxArrived": 141,
+        "oaxLog": [
+          {
+            "axevDay": 135,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "northern_virginia"
+          },
+          {
+            "axevDay": 138,
+            "axevStage": "march",
+            "axevReason": "concentrated",
+            "axevRegion": "northern_virginia"
+          },
+          {
+            "axevDay": 141,
+            "axevStage": "assault",
+            "axevReason": "enemy_ahead",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 141,
+            "axevStage": "works",
+            "axevReason": "enemy_gone",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 142,
+            "axevStage": "assault",
+            "axevReason": "enemy_ahead",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 142,
+            "axevStage": "works",
+            "axevReason": "enemy_gone",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 143,
+            "axevStage": "assault",
+            "axevReason": "enemy_ahead",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 143,
+            "axevStage": "works",
+            "axevReason": "enemy_gone",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 144,
+            "axevStage": "assault",
+            "axevReason": "enemy_ahead",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 144,
+            "axevStage": "works",
+            "axevReason": "enemy_gone",
+            "axevRegion": "manassas"
+          },
+          {
+            "axevDay": 145,
+            "axevStage": "end",
+            "axevReason": "objective_held",
+            "axevRegion": "manassas"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  },
+  "op:cs_cmd_harpers_ferry:96": {
+    "opPost": "cs_cmd_harpers_ferry",
+    "opCommander": "johnston_joseph_e",
+    "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+    "opPlan": "direct:least_cost:harpers_ferry",
+    "opMethod": "direct",
+    "opPosture": "hold",
+    "opObjective": "harpers_ferry",
+    "opStartDay": 96,
+    "opEndDay": 104,
+    "opOutcome": "superseded",
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "cs_cmd_harpers_ferry",
+        "oaxBlocks": [
+          "state-forces.va_harpers_ferry"
+        ],
+        "oaxRoute": {
+          "routeFrom": "harpers_ferry",
+          "routeTo": "harpers_ferry",
+          "routeLegs": [],
+          "routeCost": 0,
+          "routeDays": 0,
+          "routeUnknownThreat": true
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 2000,
+            "phaseRegion": "harpers_ferry"
+          }
+        ],
+        "oaxObjective": "harpers_ferry",
+        "oaxStage": "end",
+        "oaxSince": 104,
+        "oaxUntil": null,
+        "oaxRepulses": 0,
+        "oaxPursuit": null,
+        "oaxSteps": [],
+        "oaxArrived": 99,
+        "oaxLog": [
+          {
+            "axevDay": 96,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "harpers_ferry"
+          },
+          {
+            "axevDay": 98,
+            "axevStage": "march",
+            "axevReason": "concentrated",
+            "axevRegion": "harpers_ferry"
+          },
+          {
+            "axevDay": 99,
+            "axevStage": "works",
+            "axevReason": "objective_reached",
+            "axevRegion": "harpers_ferry"
+          },
+          {
+            "axevDay": 104,
+            "axevStage": "end",
+            "axevReason": "superseded",
+            "axevRegion": "harpers_ferry"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  },
+  "op:cs_cmd_harpers_ferry:114": {
+    "opPost": "cs_cmd_harpers_ferry",
+    "opCommander": "johnston_joseph_e",
+    "opOrder": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+    "opPlan": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+    "opMethod": "supply_line",
+    "opPosture": "hold",
+    "opObjective": "lynchburg",
+    "opStartDay": 114,
+    "opEndDay": 125,
+    "opOutcome": "objective_reached",
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "cs_cmd_harpers_ferry",
+        "oaxBlocks": [
+          "state-forces.va_harpers_ferry"
+        ],
+        "oaxRoute": {
+          "routeFrom": "harpers_ferry",
+          "routeTo": "lynchburg",
+          "routeLegs": [
+            {
+              "legEdge": "road:harpers_ferry:loudoun_fauquier",
+              "legFrom": "harpers_ferry",
+              "legTo": "loudoun_fauquier",
+              "legType": "road",
+              "legDays": 4000,
+              "legThreat": null,
+              "legSupply": 4000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "rail:culpeper_orange:loudoun_fauquier:orange_and_alexandria",
+              "legFrom": "loudoun_fauquier",
+              "legTo": "culpeper_orange",
+              "legType": "rail",
+              "legDays": 1000,
+              "legThreat": null,
+              "legSupply": 1000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "rail:charlottesville:culpeper_orange:virginia_central",
+              "legFrom": "culpeper_orange",
+              "legTo": "charlottesville",
+              "legType": "rail",
+              "legDays": 1000,
+              "legThreat": null,
+              "legSupply": 1000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "rail:charlottesville:lynchburg:orange_and_alexandria",
+              "legFrom": "charlottesville",
+              "legTo": "lynchburg",
+              "legType": "rail",
+              "legDays": 1000,
+              "legThreat": null,
+              "legSupply": 1000,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            }
+          ],
+          "routeCost": 14000,
+          "routeDays": 7000,
+          "routeUnknownThreat": true
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 2000,
+            "phaseRegion": "harpers_ferry"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 2000,
+            "phaseDays": 4000,
+            "phaseRegion": "loudoun_fauquier"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 6000,
+            "phaseDays": 1000,
+            "phaseRegion": "culpeper_orange"
+          },
+          {
+            "phaseKind": "depot_step",
+            "phaseStart": 7000,
+            "phaseDays": 1000,
+            "phaseRegion": "culpeper_orange"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 8000,
+            "phaseDays": 1000,
+            "phaseRegion": "charlottesville"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 9000,
+            "phaseDays": 1000,
+            "phaseRegion": "lynchburg"
+          }
+        ],
+        "oaxObjective": "lynchburg",
+        "oaxStage": "end",
+        "oaxSince": 125,
+        "oaxUntil": null,
+        "oaxRepulses": 0,
+        "oaxPursuit": null,
+        "oaxSteps": [
+          "culpeper_orange"
+        ],
+        "oaxArrived": 124,
+        "oaxLog": [
+          {
+            "axevDay": 114,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "harpers_ferry"
+          },
+          {
+            "axevDay": 116,
+            "axevStage": "march",
+            "axevReason": "concentrated",
+            "axevRegion": "harpers_ferry"
+          },
+          {
+            "axevDay": 121,
+            "axevStage": "pause",
+            "axevReason": "depot_step",
+            "axevRegion": "culpeper_orange"
+          },
+          {
+            "axevDay": 122,
+            "axevStage": "march",
+            "axevReason": "pause_over",
+            "axevRegion": "culpeper_orange"
+          },
+          {
+            "axevDay": 124,
+            "axevStage": "works",
+            "axevReason": "objective_reached",
+            "axevRegion": "lynchburg"
+          },
+          {
+            "axevDay": 125,
+            "axevStage": "end",
+            "axevReason": "objective_held",
+            "axevRegion": "lynchburg"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  },
+  "op:cs_cmd_harpers_ferry:142": {
+    "opPost": "cs_cmd_harpers_ferry",
+    "opCommander": "johnston_joseph_e",
+    "opOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+    "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+    "opMethod": "direct",
+    "opPosture": "relieve",
+    "opObjective": "manassas",
+    "opStartDay": 142,
+    "opEndDay": 147,
+    "opOutcome": "superseded",
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "cs_cmd_harpers_ferry",
+        "oaxBlocks": [
+          "raised.st_gov_georgia.d122.2",
+          "raised.st_gov_georgia.d125",
+          "organised.s74_johnston_brigade_3.1",
+          "state-forces.va_harpers_ferry"
+        ],
+        "oaxRoute": {
+          "routeFrom": "harpers_ferry",
+          "routeTo": "manassas",
+          "routeLegs": [
+            {
+              "legEdge": "road:harpers_ferry:loudoun_fauquier",
+              "legFrom": "harpers_ferry",
+              "legTo": "loudoun_fauquier",
+              "legType": "road",
+              "legDays": 4000,
+              "legThreat": null,
+              "legSupply": 0,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "road:loudoun_fauquier:manassas",
+              "legFrom": "loudoun_fauquier",
+              "legTo": "manassas",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": null,
+              "legSupply": 0,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            }
+          ],
+          "routeCost": 7000,
+          "routeDays": 7000,
+          "routeUnknownThreat": true
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 7000,
+            "phaseRegion": "harpers_ferry"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 7000,
+            "phaseDays": 4000,
+            "phaseRegion": "loudoun_fauquier"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 11000,
+            "phaseDays": 3000,
+            "phaseRegion": "manassas"
+          }
+        ],
+        "oaxObjective": "manassas",
+        "oaxStage": "end",
+        "oaxSince": 147,
+        "oaxUntil": null,
+        "oaxRepulses": 0,
+        "oaxPursuit": null,
+        "oaxSteps": [],
+        "oaxArrived": null,
+        "oaxLog": [
+          {
+            "axevDay": 142,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "harpers_ferry"
+          },
+          {
+            "axevDay": 147,
+            "axevStage": "end",
+            "axevReason": "superseded",
+            "axevRegion": "manassas"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  }
+}
