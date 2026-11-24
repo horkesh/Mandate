@@ -134,8 +134,9 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0128](0128-the-bounds-of-a-sortie-and-a-demonstration.md) | The bounds of a limited sortie and a demonstration | accepted; clarified by 0130 |
 | [0129](0129-an-assignment-to-command-opens-the-post.md) | A received assignment to command opens the post, and a lot keeps its read identity | accepted |
 | [0130](0130-an-estimate-keeps-its-unknown-remainder.md) | An estimate keeps its unknown remainder | accepted |
-| [0131](0131-regiments-go-where-read-orders-send-them.md) | Regiments go where read orders send them, and a junction is a commander's operation | accepted; clarified by 0133 |
+| [0131](0131-regiments-go-where-read-orders-send-them.md) | Regiments go where read orders send them, and a junction is a commander's operation | accepted; clarified by 0133 and 0136 |
 | [0132](0132-each-regiment-musters-on-its-own-clock.md) | Each regiment musters on its own clock | accepted |
 | [0133](0133-receipt-by-place-and-a-commanders-own-request.md) | A regiment is received where it lawfully arrives, and a commander may ask for what his mission lacks | accepted; clarified by 0134 and 0135 |
 | [0134](0134-a-superior-answers-from-his-subordinates-holdings.md) | A superior may answer a request by ordering a subordinate who holds the troops | accepted; clarified by 0135 |
 | [0135](0135-a-holder-keeps-what-his-mission-needs.md) | A holder keeps what his own mission needs, and an unknown is not a need | accepted |
+| [0136](0136-an-order-is-read-when-its-terms-are-read.md) | An order is read when its terms are read, in the paper or in its issuer's or addressee's report | accepted |
