@@ -1,0 +1,1598 @@
+{
+  "status": "Read-only committed evidence; no new simulation; not the uncommitted 0130 build",
+  "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "concentrations": [
+    {
+      "faction": "union",
+      "concentrateAt": "us_dc_militia",
+      "concentrations": [
+        {
+          "post": "us_dept_pennsylvania",
+          "fromDate": "1861-04-27",
+          "requiresDepartment": "us_war",
+          "fromPosts": [
+            "st_gov_pennsylvania",
+            "st_gov_wisconsin"
+          ],
+          "receiveLevies": false,
+          "source": "OR I-LI.1 pp397-398,406,415-416, sourced brigade regiments. S74 [I]: request identified regiments through the sender, never create a historical roster or move an arrival."
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "fromDate": "1861-05-28",
+          "requiresDepartment": "us_war",
+          "fromPosts": [
+            "st_gov_connecticut",
+            "st_gov_massachusetts",
+            "st_gov_maine",
+            "st_gov_michigan",
+            "st_gov_minnesota",
+            "st_gov_new_hampshire",
+            "st_gov_new_jersey",
+            "st_gov_new_york",
+            "st_gov_ohio",
+            "st_gov_rhode_island",
+            "st_gov_vermont"
+          ],
+          "source": "OR I-2 pp.303-309,314-315,751,754. [I] The dated McDowell department is not the whole Washington garrison or any whole statewide requisition. The model call batches have no named regiment membership, so their July command allocation remains unresolved. Keep them with their current posts; do not apply the 37,321 departmental duty total to these batches or distribute it over divisions. S74/0108: identified lots can now be requested; senders select regiments by compliance, and movement owns arrivals. [I] Shared-state requests prefer the Pennsylvania department for Pennsylvania/Wisconsin, the Washington-facing department for the other supplied states.",
+          "receiveLevies": false
+        }
+      ]
+    },
+    {
+      "faction": "confederate",
+      "concentrateAt": "cs_cmd_charleston",
+      "concentrations": [
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "fromDate": "1861-05-23",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "st_va_harpers_ferry",
+            "st_gov_alabama",
+            "st_gov_georgia",
+            "st_gov_mississippi",
+            "st_gov_virginia"
+          ],
+          "source": "OR I-II p.470, Johnston roster of 30 June: Virginia, Georgia, Alabama and Mississippi regiments, and two separately requested Tennessee regiments. [I] Existing broad requests retain their prior allocation precedence; the local Harpers Ferry contingent remains included.",
+          "receiveLevies": false
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "fromDate": "1861-05-31",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "st_va_potomac",
+            "st_gov_alabama",
+            "st_gov_louisiana",
+            "st_gov_mississippi",
+            "st_gov_south_carolina",
+            "st_gov_virginia"
+          ],
+          "source": "OR I-II pp.943-944, General Orders No.20, 20 June: South Carolina, Alabama, Louisiana, Mississippi and Virginia regiments; p.470 lists unbrigaded Louisiana units. S77 [I]: ask the raising posts for their actual raised lots through the existing sender compliance and movement. A known regiment count is sufficient for a whole aggregate transfer; no identity or regimental strength is invented. Generated lots stay generated. Keep the two local Manassas battalions opaque. Charleston harbour forces are not silently emptied or renamed as this field army.",
+          "receiveLevies": false
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "fromDate": "1861-07-17",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "st_gov_north_carolina"
+          ],
+          "receiveLevies": false,
+          "source": "OR I-II pp.980-981, Cooper/Davis dispatches and SO224, 17-18 July: McRae North Carolina regiment directed to Manassas. S77 [I]: a source-guided request to the raising command through ordinary compliance; no named arrival or headcount is created, and generated lots retain their identities."
+        },
+        {
+          "id": "johnston_tennessee_named",
+          "post": "cs_cmd_harpers_ferry",
+          "fromDate": "1861-06-01",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "st_gov_tennessee"
+          ],
+          "namedRegiments": {
+            "afterCall": "cs_apr22_absolute_tennessee",
+            "ids": [
+              "tn_1_infantry",
+              "tn_3_infantry"
+            ]
+          },
+          "receiveLevies": false,
+          "source": "OR I-II pp.898,470,472. Turney specifically ordered to report to Johnston; the June 30 return and arrival narrative identify the Third in that army. The roster can guide the request; the Third has no proved April-call identity. No State-pool lot is included."
+        },
+        {
+          "id": "fredericksburg_bate_named",
+          "post": "cs_cmd_fredericksburg",
+          "fromDate": "1861-05-25",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "st_gov_tennessee"
+          ],
+          "namedRegiments": {
+            "afterCall": "cs_apr22_absolute_tennessee",
+            "ids": [
+              "tn_2_infantry"
+            ]
+          },
+          "receiveLevies": false,
+          "source": "OR I-LI.2 p.107, SO119, directs Bate to report to Ruggles at Fredericksburg; OR I-II pp.56,907 attest presence and the later Holmes assignment. [I] Address a request for the existing April-call lot to the modeled Fredericksburg command once its appointment and the call answer are received."
+        }
+      ]
+    }
+  ],
+  "relevant_offensives": [
+    {
+      "post": "us_dept_northeastern_virginia",
+      "objective": "manassas",
+      "fromDate": "1861-07-16",
+      "source": "docs/research/2026-11-14-secession-winter-1861.md, 1861-07-16: McDowell marches from Washington [WIKI-Bull]; GO1861 GO26 p.61 and OR I-2 pp.59-60 identify the command. [I] Route the existing dated goal through that command; no tactical weight or battle event changes."
+    },
+    {
+      "id": "johnston_harpers_hold",
+      "post": "cs_cmd_harpers_ferry",
+      "objective": "harpers_ferry",
+      "posture": "hold",
+      "fromDate": "1861-06-03",
+      "source": "OR I-II pp.898,901, Lee to Johnston, June3, preference for retaining Harpers Ferry; pp.907-908, Johnston June6 challenges garrison duty and proposes useful mobile employment; p.910, Lee June7 retains preference while permitting retirement when opposition cannot succeed. [I] The ordinary government principal issues a hold through its existing Cooper channel on the sourced June3 lower bound. This is a bounded mission representation, not a claim that Cooper authored Lee's letter. No authored proposal or June6 action date; his planner and own response must produce his proposal."
+    },
+    {
+      "post": "cs_cmd_harpers_ferry",
+      "objective": "manassas",
+      "fromDate": "1861-07-17",
+      "requiresNotice": "manassas_advance_received",
+      "source": "OR I-II p.478, Cooper telegram, Richmond to Johnston at Winchester, July 17: junction if practicable, with arrangements left to his discretion; p.473 gives Johnston's reported receipt about 1 a.m. July18 and decision to march. Read S94 page extracts OR-I-II-p478.txt and OR-I-II-p473.txt, SHA-256 in docs/audit/s96-evidence/source-reading.json. [I] Relieve Manassas with outmatched discretion to remain represents the conditional junction in 0114; ordinary received enemy knowledge, compliance, planning, routing and arrival decide it. The received advance notice still gates dispatch. No sick or baggage force, location, exact arrival or historical receipt is manufactured.",
+      "posture": "relieve",
+      "id": "johnston_junction",
+      "discretion": {
+        "condition": "outmatched",
+        "fallback": {
+          "objective": null,
+          "posture": "hold"
+        }
+      }
+    }
+  ],
+  "mcdowell_timeline": [
+    {
+      "day": 133,
+      "date": "1861-07-16",
+      "region": "northern_virginia",
+      "goal": null,
+      "operations": []
+    },
+    {
+      "day": 134,
+      "date": "1861-07-17",
+      "region": "northern_virginia",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "choosing"
+      },
+      "operations": []
+    },
+    {
+      "day": 135,
+      "date": "1861-07-18",
+      "region": "northern_virginia",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "approved"
+      },
+      "operations": [
+        {
+          "id": "op:us_dept_northeastern_virginia:135",
+          "axes": [
+            {
+              "oaxStage": "assemble",
+              "oaxSince": 135,
+              "oaxUntil": 138,
+              "oaxArrived": null,
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 3000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                },
+                {
+                  "phaseKind": "assault",
+                  "phaseStart": 6000,
+                  "phaseDays": 1000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxLog": [
+                {
+                  "axevDay": 135,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 136,
+      "date": "1861-07-19",
+      "region": "northern_virginia",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "approved"
+      },
+      "operations": [
+        {
+          "id": "op:us_dept_northeastern_virginia:135",
+          "axes": [
+            {
+              "oaxStage": "assemble",
+              "oaxSince": 135,
+              "oaxUntil": 138,
+              "oaxArrived": null,
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 3000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                },
+                {
+                  "phaseKind": "assault",
+                  "phaseStart": 6000,
+                  "phaseDays": 1000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxLog": [
+                {
+                  "axevDay": 135,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 137,
+      "date": "1861-07-20",
+      "region": "northern_virginia",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "approved"
+      },
+      "operations": [
+        {
+          "id": "op:us_dept_northeastern_virginia:135",
+          "axes": [
+            {
+              "oaxStage": "assemble",
+              "oaxSince": 135,
+              "oaxUntil": 138,
+              "oaxArrived": null,
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 3000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                },
+                {
+                  "phaseKind": "assault",
+                  "phaseStart": 6000,
+                  "phaseDays": 1000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxLog": [
+                {
+                  "axevDay": 135,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 138,
+      "date": "1861-07-21",
+      "region": "northern_virginia",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "approved"
+      },
+      "operations": [
+        {
+          "id": "op:us_dept_northeastern_virginia:135",
+          "axes": [
+            {
+              "oaxStage": "march",
+              "oaxSince": 138,
+              "oaxUntil": null,
+              "oaxArrived": null,
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 3000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                },
+                {
+                  "phaseKind": "assault",
+                  "phaseStart": 6000,
+                  "phaseDays": 1000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxLog": [
+                {
+                  "axevDay": 135,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                },
+                {
+                  "axevDay": 138,
+                  "axevStage": "march",
+                  "axevReason": "concentrated",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 139,
+      "date": "1861-07-22",
+      "region": "northern_virginia",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "approved"
+      },
+      "operations": [
+        {
+          "id": "op:us_dept_northeastern_virginia:135",
+          "axes": [
+            {
+              "oaxStage": "march",
+              "oaxSince": 138,
+              "oaxUntil": null,
+              "oaxArrived": null,
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 3000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                },
+                {
+                  "phaseKind": "assault",
+                  "phaseStart": 6000,
+                  "phaseDays": 1000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxLog": [
+                {
+                  "axevDay": 135,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                },
+                {
+                  "axevDay": 138,
+                  "axevStage": "march",
+                  "axevReason": "concentrated",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 140,
+      "date": "1861-07-23",
+      "region": "manassas",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "approved"
+      },
+      "operations": [
+        {
+          "id": "op:us_dept_northeastern_virginia:135",
+          "axes": [
+            {
+              "oaxStage": "march",
+              "oaxSince": 138,
+              "oaxUntil": null,
+              "oaxArrived": null,
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 3000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                },
+                {
+                  "phaseKind": "assault",
+                  "phaseStart": 6000,
+                  "phaseDays": 1000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxLog": [
+                {
+                  "axevDay": 135,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                },
+                {
+                  "axevDay": 138,
+                  "axevStage": "march",
+                  "axevReason": "concentrated",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 141,
+      "date": "1861-07-24",
+      "region": "manassas",
+      "goal": {
+        "posture": "take",
+        "objective": "manassas",
+        "risk": 500,
+        "deadlineDays": 30,
+        "permissions": {
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false
+        },
+        "committed": [],
+        "awaitWord": false,
+        "approveAsDrafted": true,
+        "issuer": "lincoln_abraham",
+        "viaChain": false,
+        "setDay": 134,
+        "status": "approved"
+      },
+      "operations": [
+        {
+          "id": "op:us_dept_northeastern_virginia:135",
+          "axes": [
+            {
+              "oaxStage": "works",
+              "oaxSince": 141,
+              "oaxUntil": null,
+              "oaxArrived": 141,
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 3000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                },
+                {
+                  "phaseKind": "assault",
+                  "phaseStart": 6000,
+                  "phaseDays": 1000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxLog": [
+                {
+                  "axevDay": 135,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                },
+                {
+                  "axevDay": 138,
+                  "axevStage": "march",
+                  "axevReason": "concentrated",
+                  "axevRegion": "northern_virginia"
+                },
+                {
+                  "axevDay": 141,
+                  "axevStage": "assault",
+                  "axevReason": "enemy_ahead",
+                  "axevRegion": "manassas"
+                },
+                {
+                  "axevDay": 141,
+                  "axevStage": "works",
+                  "axevReason": "enemy_gone",
+                  "axevRegion": "manassas"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "plan_decisions": {
+    "mcdowell_irvin": [
+      {
+        "day": 135,
+        "goal": {
+          "posture": "take",
+          "objective": "manassas",
+          "risk": 500,
+          "deadlineDays": 30,
+          "permissions": {
+            "rail": true,
+            "river": false,
+            "sea": false,
+            "neutral": false
+          },
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "issuer": "lincoln_abraham",
+          "viaChain": false,
+          "setDay": 134,
+          "status": "choosing"
+        },
+        "options": [
+          {
+            "optionId": "direct:least_cost:northern_virginia>manassas",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 891,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": -197
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 88
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "us_dept_northeastern_virginia",
+                "mode": "land",
+                "regions": [
+                  "northern_virginia",
+                  "manassas"
+                ],
+                "strength": 59754,
+                "phases": [
+                  "concentrate",
+                  "march",
+                  "assault"
+                ],
+                "arrival": 7000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 575,
+            "ratio": 103920
+          },
+          {
+            "optionId": "holding:hold:northern_virginia",
+            "method": "holding",
+            "variant": "hold",
+            "score": -21,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 279
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "us_dept_northeastern_virginia",
+                "mode": "land",
+                "regions": [
+                  "northern_virginia"
+                ],
+                "strength": 59754,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 575,
+            "ratio": 103920
+          }
+        ]
+      }
+    ],
+    "johnston_joseph_e": [
+      {
+        "day": 96,
+        "goal": {
+          "posture": "hold",
+          "objective": "harpers_ferry",
+          "risk": 500,
+          "deadlineDays": 30,
+          "permissions": {
+            "rail": true,
+            "river": false,
+            "sea": false,
+            "neutral": false
+          },
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "issuer": "davis_jefferson",
+          "viaChain": true,
+          "setDay": 95,
+          "status": "choosing"
+        },
+        "options": [
+          {
+            "optionId": "direct:least_cost:harpers_ferry",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 1138,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": 0
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 138
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "harpers_ferry"
+                ],
+                "strength": 0,
+                "phases": [
+                  "concentrate"
+                ],
+                "arrival": 2000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          },
+          {
+            "optionId": "holding:hold:harpers_ferry",
+            "method": "holding",
+            "variant": "hold",
+            "score": -147,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 153
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "harpers_ferry"
+                ],
+                "strength": 0,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        ]
+      },
+      {
+        "day": 105,
+        "goal": {
+          "posture": "hold",
+          "objective": "lynchburg",
+          "risk": 500,
+          "deadlineDays": 30,
+          "permissions": {
+            "rail": true,
+            "river": true,
+            "sea": true,
+            "neutral": false
+          },
+          "committed": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "awaitWord": false,
+          "approveAsDrafted": false,
+          "issuer": "lee_robert_e",
+          "viaChain": true,
+          "setDay": 104,
+          "status": "choosing"
+        },
+        "options": [
+          {
+            "optionId": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+            "method": "supply_line",
+            "variant": "depot_steps",
+            "score": 935,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": -203
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 138
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "harpers_ferry",
+                  "loudoun_fauquier",
+                  "culpeper_orange",
+                  "charlottesville",
+                  "lynchburg"
+                ],
+                "strength": 0,
+                "phases": [
+                  "concentrate",
+                  "march",
+                  "march",
+                  "depot_step",
+                  "march",
+                  "march"
+                ],
+                "arrival": 10000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          },
+          {
+            "optionId": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 854,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": -284
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 138
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "harpers_ferry",
+                  "loudoun_fauquier",
+                  "culpeper_orange",
+                  "charlottesville",
+                  "lynchburg"
+                ],
+                "strength": 0,
+                "phases": [
+                  "concentrate",
+                  "march",
+                  "march",
+                  "march",
+                  "march"
+                ],
+                "arrival": 9000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          },
+          {
+            "optionId": "holding:hold:lynchburg",
+            "method": "holding",
+            "variant": "hold",
+            "score": -147,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 153
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "lynchburg"
+                ],
+                "strength": 0,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        ]
+      },
+      {
+        "day": 142,
+        "goal": {
+          "posture": "relieve",
+          "objective": "manassas",
+          "risk": 500,
+          "deadlineDays": 30,
+          "permissions": {
+            "rail": true,
+            "river": false,
+            "sea": false,
+            "neutral": false
+          },
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "issuer": "davis_jefferson",
+          "viaChain": true,
+          "setDay": 141,
+          "status": "choosing",
+          "discretion": {
+            "condition": "outmatched",
+            "fallback": {
+              "objective": null,
+              "posture": "hold",
+              "risk": 500,
+              "deadlineDays": 30,
+              "rail": true,
+              "river": false,
+              "sea": false,
+              "neutral": false,
+              "committed": [],
+              "awaitWord": false,
+              "approveAsDrafted": true
+            }
+          }
+        },
+        "options": [
+          {
+            "optionId": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 1130,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": 0
+              },
+              {
+                "term": "exposure",
+                "amount": -8
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 138
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "harpers_ferry",
+                  "loudoun_fauquier",
+                  "manassas"
+                ],
+                "strength": 5340,
+                "phases": [
+                  "concentrate",
+                  "march",
+                  "march"
+                ],
+                "arrival": 14000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          },
+          {
+            "optionId": "holding:await:harpers_ferry",
+            "method": "holding",
+            "variant": "await",
+            "score": -147,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 153
+              }
+            ],
+            "axes": [
+              {
+                "name": "await",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "harpers_ferry"
+                ],
+                "strength": 5340,
+                "phases": [
+                  "await"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        ]
+      },
+      {
+        "day": 148,
+        "goal": {
+          "posture": "hold",
+          "objective": "lynchburg",
+          "risk": 500,
+          "deadlineDays": 30,
+          "permissions": {
+            "rail": true,
+            "river": true,
+            "sea": true,
+            "neutral": false
+          },
+          "committed": [
+            "organised.s74_johnston_brigade_3.1",
+            "raised.st_gov_georgia.d122.2",
+            "raised.st_gov_georgia.d125",
+            "state-forces.va_harpers_ferry"
+          ],
+          "awaitWord": false,
+          "approveAsDrafted": false,
+          "issuer": "lee_robert_e",
+          "viaChain": true,
+          "setDay": 147,
+          "status": "choosing"
+        },
+        "options": [
+          {
+            "optionId": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 1131,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": 0
+              },
+              {
+                "term": "exposure",
+                "amount": -7
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 138
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "harpers_ferry",
+                  "loudoun_fauquier",
+                  "culpeper_orange",
+                  "charlottesville",
+                  "lynchburg"
+                ],
+                "strength": 5012,
+                "phases": [
+                  "concentrate",
+                  "march",
+                  "march",
+                  "march",
+                  "march"
+                ],
+                "arrival": 14000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          },
+          {
+            "optionId": "holding:hold:lynchburg",
+            "method": "holding",
+            "variant": "hold",
+            "score": -147,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 153
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "cs_cmd_harpers_ferry",
+                "mode": "land",
+                "regions": [
+                  "lynchburg"
+                ],
+                "strength": 5012,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "scope": "S136 selected primary readings; OCR errors retained; reports and telegrams kept distinct; no unread historical claims",
+  "receipts": [
+    {
+      "work": "OR-I-II",
+      "page": "166",
+      "path": "docs/research/S136/read/OR-I-II-p166.txt",
+      "sha256": "fc8cc23cc6406a20bc23aeb1d3be58afcf34cf5c715c07b186bccdaa278da462",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n185/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "167",
+      "path": "docs/research/S136/read/OR-I-II-p167.txt",
+      "sha256": "2c31b6f8cb9dc3c9c17a2ea01d5383cceb5cf2515671013fffa43bd191981534",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n186/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "168",
+      "path": "docs/research/S136/read/OR-I-II-p168.txt",
+      "sha256": "8eed335f69da7e8d003bb14061401ef02bda7886161fd6be08b97db9ad3419a6",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n187/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "169",
+      "path": "docs/research/S136/read/OR-I-II-p169.txt",
+      "sha256": "9d6badb86f4f84c3ca74edaaee45d0c3623dc226806110d688151d687e0f4c11",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n188/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "315",
+      "path": "docs/research/S136/read/OR-I-II-p315.txt",
+      "sha256": "478322a68e7a7d88c48c7b65c4ca22ad7187303102e859f0d3f9087f76a68109",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n334/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "316",
+      "path": "docs/research/S136/read/OR-I-II-p316.txt",
+      "sha256": "6dcc68e766ca8803824931ff59423b429916168f0e9a79e15092dd2e5245d066",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n335/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "317",
+      "path": "docs/research/S136/read/OR-I-II-p317.txt",
+      "sha256": "972e9477d8bdfedc94406ca0e87d7062a090bc71e7219ab42b1b60b639285c22",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n336/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "321",
+      "path": "docs/research/S136/read/OR-I-II-p321.txt",
+      "sha256": "fda34a26ba923f7184314b30ba49dd903b24251bbeed765320cb63f62786577e",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n340/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "324",
+      "path": "docs/research/S136/read/OR-I-II-p324.txt",
+      "sha256": "a5ae720e553127c75d70b57c6686440c3f18e6f858d2e92d9105c7b5a16503c0",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n343/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "326",
+      "path": "docs/research/S136/read/OR-I-II-p326.txt",
+      "sha256": "ee9976cc900c90cadba8321973012cfbc49747c1758e2043e8d67104d75a2fc3",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n345/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "327",
+      "path": "docs/research/S136/read/OR-I-II-p327.txt",
+      "sha256": "0d1afd357ab3df6961ea6c61ffc5a3103663ed0b42a0bdbb31a6c71d407b3167",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n346/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "328",
+      "path": "docs/research/S136/read/OR-I-II-p328.txt",
+      "sha256": "af451cf8b2a11e2a59151f6b8b5bb0d5105873101d5b368df32f83440abd6abe",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n347/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "473",
+      "path": "docs/research/S136/read/OR-I-II-p473.txt",
+      "sha256": "8ba7bf473b81ce0b3e722887faa9e201c8d80293bac528eea03998e6375c1734",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n492/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "476",
+      "path": "docs/research/S136/read/OR-I-II-p476.txt",
+      "sha256": "221437e2b6f9d4af4adda120391b3a3a1b26318987dea16e51cdf40ecd2ab5f1",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n495/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "478",
+      "path": "docs/research/S136/read/OR-I-II-p478.txt",
+      "sha256": "837b11cc5d51872ee147cff48e53fe50901f3429a257535679f25151f2c721c4",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n497/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "479",
+      "path": "docs/research/S136/read/OR-I-II-p479.txt",
+      "sha256": "d08dd6e887a1f2fac86bfcef5cced872115503a1e069e2d1d99fb0d0499e8b42",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n498/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "751",
+      "path": "docs/research/S136/read/OR-I-II-p751.txt",
+      "sha256": "b04971d1f93ade0a08e6616480410a8cbcb90b7e83e6aabaf281596cde75ac25",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n770/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "754",
+      "path": "docs/research/S136/read/OR-I-II-p754.txt",
+      "sha256": "b7910eb1d5ee06ea1bebb9b1096d54666d12bfdd306f945dcc606e4fe81a8874",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n773/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "980",
+      "path": "docs/research/S136/read/OR-I-II-p980.txt",
+      "sha256": "1c02c88f2a5cde0d28364999d663085e941c7b68387845bc9bac0d9f30c243e8",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n999/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "981",
+      "path": "docs/research/S136/read/OR-I-II-p981.txt",
+      "sha256": "00edec9d5088c73d7fbd5a77b7900caf6acfb25ac51c3605386e01f0fa986a33",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n1000/mode/1up",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-LI.1",
+      "page": "413",
+      "path": "docs/research/S136/read/OR-I-LI.1-p413.txt",
+      "sha256": "4ca6c98e418bf66fd4e78741414eff2133d88435dccf81595ce5ded08f8adb0e",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p413.txt",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-LI.1",
+      "page": "414",
+      "path": "docs/research/S136/read/OR-I-LI.1-p414.txt",
+      "sha256": "d482b0387bbe97e76cb9e78e7eb74151c0dfd302cc2be6d36b44f1bcc6d52e8b",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p414.txt",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-IV-I",
+      "page": "272",
+      "path": "docs/research/S136/read/OR-IV-I-p272.txt",
+      "sha256": "f41abacd89ce5cdd62a3a5bda64532821161f982fdad5f847a529aec828ce078",
+      "url": "Original locator: S118/source-reading.json",
+      "read_from": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\IV1-p272.txt",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-IV-I",
+      "page": "275",
+      "path": "docs/research/S136/read/OR-IV-I-p275.txt",
+      "sha256": "66aa992a7c81bb22797b0e6cdb4eec3f61e8c2939fe9c344ec015b3fab0b633d",
+      "url": "Original locator: S118/source-reading.json",
+      "read_from": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\IV1-p275.txt",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-LI.2",
+      "page": "107",
+      "path": "docs/research/S136/read/OR-I-LI.2-p107.txt",
+      "sha256": "0d0085d75c1a47839241483ec3f3d44c3375e22fc2a695514e4981ff050307b3",
+      "url": "Original locator: S118/source-reading.json",
+      "read_from": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\LI2-p107.txt",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "897",
+      "path": "docs/research/S136/read/OR-I-II-p897.txt",
+      "sha256": "59fcb9555eaff2b9a05d0ba5c80d8e587b2d951bcbca10e73149113f7927c1e5",
+      "url": "https://archive.org/details/cu31924077730186/page/n916/mode/1up",
+      "read_from": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\II-p897.txt",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    },
+    {
+      "work": "OR-I-II",
+      "page": "898",
+      "path": "docs/research/S136/read/OR-I-II-p898.txt",
+      "sha256": "f44bcfaa90fc5dde4cd6b3b44f38b74fd30d00beecf944369aa5dff80a22c311",
+      "url": "Original locator: S118/source-reading.json",
+      "read_from": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\II-p898.txt",
+      "limit": "Retained selected-page OCR read; no new scan collation or whole-volume reading."
+    }
+  ]
+}

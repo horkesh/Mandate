@@ -1,0 +1,72 @@
+{
+  "s135_commit": "6cd1e3dc648735832f91eb96497950c0af369372",
+  "research_root": "C:\\Pyrrhic\\sprint-research-military",
+  "s135_readings": [
+    {
+      "path": "docs/research/2026-11-24-S135-first-manassas-audit.md",
+      "sha256": "2584bae9ab5e1072dfa2d8566a982c8542edcbddc1ca1cf996b5830024c74ef2",
+      "bytes": 21156
+    },
+    {
+      "path": "docs/research/S135/model-summary.json",
+      "sha256": "527ccac01fe6457177cb532da4622ba254319c7836d4af5a5f64803096b020e4",
+      "bytes": 4010
+    },
+    {
+      "path": "docs/research/S135/causes-and-remedies.csv",
+      "sha256": "68cbdd6b47871db785d7fe2c56a3ca24053a1d04e3753b84d90f884236427619",
+      "bytes": 5442
+    },
+    {
+      "path": "docs/research/S135/johnston-trajectory.json",
+      "sha256": "409bba9e5a32093ed5d9f30959ff9f5bef970aa22b0831629048028968be67a9",
+      "bytes": 175268
+    },
+    {
+      "path": "docs/research/S135/reconstruction-proof.json",
+      "sha256": "f19d9363ea434ad30ea7c457c9fba2ea993c7f353bb19e769eb474485d43f3b7",
+      "bytes": 1939
+    }
+  ],
+  "decision_root": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions",
+  "decisions": [
+    {
+      "path": "0108-the-july-armies-are-named-brigades-of-regiments.md",
+      "sha256": "8d083b1ef43fe6ae547f2c83fccdeedcba2b20bae952be600262fcbefa82e934"
+    },
+    {
+      "path": "0121-letters-receipts-and-authority-a-commander-receives.md",
+      "sha256": "b24d8f74fab9ad58765a44e0b814670c5e89a254195241d38ad8ca217299e15b"
+    },
+    {
+      "path": "0124-standing-authority-comes-from-an-assignment.md",
+      "sha256": "617b81d725c40bd7bab2c99d82a31efd153d9ea12f3a6960febc848d55df8ca8"
+    },
+    {
+      "path": "0126-a-call-addressed-to-an-office-reaches-its-holder.md",
+      "sha256": "cd4d0508d1c4286f70fef2f99a6240894a681e2f41775f6285c4b3e895407eb9"
+    },
+    {
+      "path": "0129-an-assignment-to-command-opens-the-post.md",
+      "sha256": "7f859419d6243d2a96604c8ad5bd8956ff55edfcf5ac55c507a80d8e97bad26f"
+    },
+    {
+      "path": "0130-an-estimate-keeps-its-unknown-remainder.md",
+      "sha256": "e490107e438729d13b781f9f26b80c85b5ee92102e430b419146d8451a29d3fd"
+    },
+    {
+      "path": "0114-commanders-propose-and-orders-carry-discretion.md",
+      "sha256": "0ff9ac4eb64eca6d945b703378117a5441d000c98cae0eb5062ed77f27dd31ca"
+    },
+    {
+      "path": "0123-attack-or-demonstrate-is-a-duty-to-detain.md",
+      "sha256": "b58bb3d6f455afd8e553e91132ba171f602d907ba2a51362cf5e46fcbfc2e734"
+    },
+    {
+      "path": "0128-the-bounds-of-a-sortie-and-a-demonstration.md",
+      "sha256": "ad497d975dab1881ae9658cd41caec08c01b419fd93afdba9ffe7dfa4e2d1ed1"
+    }
+  ],
+  "july_head_when_read": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "limits": "Sibling research read only; July files obtained only with git show. No sibling working sources used for July model evidence."
+}

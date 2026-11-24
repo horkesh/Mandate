@@ -1,0 +1,111 @@
+{
+  "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "method": "git show; no July working files or index",
+  "files": [
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "bytes": 42576,
+      "sha256": "ac4dc399a101ed19610228e11c5876e951b27aa928704292ff19a99a6a1991a2"
+    },
+    {
+      "path": "packages/kernel/src/movement/join.ts",
+      "bytes": 3894,
+      "sha256": "6cbdb59975443f3b400e9041294536f4c4bf7a3c760a07d638d8ea909b499c96"
+    },
+    {
+      "path": "packages/kernel/src/movement/march.ts",
+      "bytes": 13001,
+      "sha256": "ddd4c79a5cc6b72027d3d135eda49bc3b9c095d059b83e0644682253e0532ebf"
+    },
+    {
+      "path": "packs/union-1861/pack.json",
+      "bytes": 744087,
+      "sha256": "13cd793b6c90b48a19d2352a8285d0a8e38a0792c5dff398c1e4058811640d51"
+    },
+    {
+      "path": "docs/audit/s134-evidence/merge/mcdowell_irvin-daily.json",
+      "bytes": 38389609,
+      "sha256": "7c0b7849463da5ceebc13641921a20c1872b43022c5b6fa57bda5811cba56600"
+    },
+    {
+      "path": "docs/audit/s134-evidence/merge/mcdowell_irvin-decisions.json",
+      "bytes": 1567620,
+      "sha256": "27541c8969741df4bc1d01d4ffeaf3310f78f660ca2a058a9e92a40dae11c202"
+    },
+    {
+      "path": "docs/audit/s134-evidence/merge/johnston_joseph_e-decisions.json",
+      "bytes": 1531449,
+      "sha256": "cfcee75818abd3e1cf602773c8cfb6c7db6df821bb0cba3771495818f5cd26e8"
+    },
+    {
+      "path": "docs/audit/s134-evidence/merge/operation-actual-sides.json",
+      "bytes": 146025,
+      "sha256": "77b63d518bae17d25efa8edf92ffd07705d9fcc966b6850c7d7494f94b310aba"
+    },
+    {
+      "path": "docs/audit/s134-evidence/merge/capture-summary.json",
+      "bytes": 686,
+      "sha256": "d66bb8f8119e12eb35da0386c10eeffaa0f7b1106784af2db77d0e48568e4355"
+    },
+    {
+      "path": "packages/kernel/src/seats/seats.ts",
+      "sha256": "ab887b5a4d506f1e7403845dc3b9d4e5749b499227159699c0b350ce005cbb8a",
+      "bytes": 2103
+    },
+    {
+      "path": "packages/kernel/src/seats/local-actions.ts",
+      "sha256": "e60f4e41910943feaec1de9be8c0a207b97d061dfd2956b1d541ec8d1fc8d11b",
+      "bytes": 15318
+    },
+    {
+      "path": "packages/kernel/src/seats/onward-assignments.ts",
+      "sha256": "a601ba8238626dcbb2bd42255e24284578f26bd57166b52d1b26ede6b472ce35",
+      "bytes": 3926
+    },
+    {
+      "path": "packages/kernel/src/combat/battle.ts",
+      "sha256": "67fcdf5ad3bec8f8b29ed7554ef0b8d7e39f39d7a5a7acc2aaf7f4cf89eba692",
+      "bytes": 24874
+    },
+    {
+      "path": "packs/union-1861/source/world/edges.csv",
+      "sha256": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28",
+      "bytes": 189624
+    },
+    {
+      "path": "packs/union-1861/source/world/regions.csv",
+      "sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+      "bytes": 100708
+    },
+    {
+      "path": "packs/union-1861/source/world/rail_lines.csv",
+      "sha256": "70c3119450e804b2cc25c649a50b11877e142bca3005a31e2493e8152b06f60f",
+      "bytes": 7627
+    },
+    {
+      "path": "packages/kernel/src/operations/operations.ts",
+      "bytes": 10426,
+      "sha256": "cc6e65b112a6f3e7dea8bc1fc85f8301327b454abe2936f9ee1e696dfdf13da4"
+    },
+    {
+      "path": "packages/kernel/src/planner/axes.ts",
+      "bytes": 6755,
+      "sha256": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90"
+    },
+    {
+      "path": "packages/kernel/src/planner/methods.ts",
+      "bytes": 18789,
+      "sha256": "63ee97caf533d1eef0b61d9a32bd796c17e553693aec2a58387b84f7c05e0690"
+    },
+    {
+      "path": "packages/kernel/src/tick/operations.ts",
+      "bytes": 46482,
+      "sha256": "ff9b65227c2383960b3d09303a2d0a7f4c18bca8aaf15b0b4d0acdcfdede08f3"
+    },
+    {
+      "path": "packages/rule-seats/src/index.ts",
+      "bytes": 20312,
+      "sha256": "38b29cf3b74877591bec4f928349f24f3f5c80e409f04c7bf9a32f084c46cb19"
+    }
+  ]
+}
