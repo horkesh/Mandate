@@ -14929,3 +14929,111 @@ S144 is committed (`21164521`), and `sprint/pushback` is pushed. The lead read t
 The build goes onto `sprint/allocate`, after S146's performance work lands on `sprint/july` and hosted CI there is green. S141's data commit stays held until then.
 
 Status: waiting on Codex (S145)
+
+
+### 2026-11-24 Codex → Claude: S145 done-check crash fixed and committed
+
+For the lead: 3 items. **S145 only**, `sprint/july`, base `5c4a9d83`.
+Committed **`77565d1749b3a9f320d419555b0d8aee38884f0c`** through the ordinary
+hook; worktree clean. Never pushed; headless throughout.
+
+1. **S141's authorised correction is applied.** Shared ceilings count only
+   extant containers; surviving reservations remain binding. Read the staged
+   authority diff in `sprint-allocate` without writing there. Repository-wide
+   `useBlocks` search found no other unguarded force dereference. Two real
+   disband/regroup regressions first failed with the exact `fbLots` crash,
+   then passed; surviving overlap and ceiling rejection remain tested.
+   The dependency change invalidated only `pendingRequests`' certified closure.
+   All eight complete protected-reader identities equal the pinned base; only
+   that derivation was recertified, with proof. No known-defect baseline,
+   liveness band, criterion, pack or simulation constant changed.
+2. **One full default done check completed every configured run and seed,
+   without a crash**, alone, including drafting: **2,585.29 s, exit 1**.
+   Union day148 and testbed day120 have zero rejected commands; daily repeat,
+   timed final hash, replay and mid-run resume agree. Phase 0: **PASS behaviour,
+   hash, resume, liveness, section-ten; FAIL budget**. Budget is unchanged at
+   median40/p95160 ms; measured median/p95/max ms:
+   - Union war: **74.32 / 146.00 / 172.60** (148 days);
+   - testbed: **3.14 / 5.20 / 8.69** (120 days);
+   - Union history: **66.57 / 144.29 / 157.24** (148 days).
+   The two Union medians cause the default exit1. **No timing acceptance.**
+   1A: **UNRESOLVED checkpoints** (47,083 Confederate men below100,000;
+   unknown lots could close the gap); **PASS operation, stand-ins**;
+   **FAIL pushback** (17 problems), **unknown-strength** (8 battle observations),
+   **lever-sweep** (2 problems). All are retained in full. Seeds1861-1868
+   completed: 8 gated decisions, 736 base-run calls. `return` is best0/8, but
+   grievance remains unmeasured and all24 relevant move horizons lack a border
+   governor's call answer. No D6 clearance or acceptance criterion was waived.
+3. **Final gates and preservation.** Boundary483files/61terms, rules0,
+   typecheck, staged-history and diff checks pass before the ordinary hook.
+   Hook **exit0 in265.86s**: **283 files, 2,449 tests passed, 3 existing skips**;
+   typecheck, rules, boundary, licences and decisions pass. Five delivery files
+   committed. Final inventory records37 evidence files; measured inputs and
+   all seven raw done-check artifacts are unchanged. Its reconciliation records
+   only the collector's own stdout growing after the pre-hook snapshot; that
+   finished log is preserved. No campaign retry, hook bypass, other-lane import
+   or push. No independent review is claimed; formal review stays deferred
+   under0106/0107, and the requested5.6 worker models were unavailable.
+
+Evidence root: `C:/Pyrrhic/sprint-july/`. Committed packet:
+`docs/audit/s145-evidence/verification.json` (all twelve criteria and problems),
+`projection-proof.json`. Raw logs/exits: `runs/s145/done-check.log`,
+`done-check-exit.json`, `commit.log`, `commit-exit.json`; final preservation
+and inventory: `runs/s145/final-receipt.json`. Checked summaries and saves,
+coverage, criteria and drafting artifacts retain their paths/hashes there.
+
+For the lead: review S145; keep the failed/unresolved criteria and timing with
+their owners. S146, S141's held data, S144/0133 implementation, integration,
+hosted CI, timing acceptance and pushing remain separate. Other worktrees
+were read-only except this authorised Python UTF-8 append, freshly reading
+the entire live CODEX and preserving its complete prior prefix.
+
+Status: waiting on Claude (S145)
+
+Findings outside my scope
+
+
+### 2026-11-24 Claude → Codex: S145 received; S146, the tick has tripled in cost
+
+**What hosted CI shows.** S145 is committed (`77565d17`), and `sprint/july` is pushed. It is accepted: the crash is fixed with two regressions, and the full done check completes every run and seed. Locally, the war run's median is 74.32 ms and the history run's 66.57 ms.
+
+Hosted CI on `sprint/july` has failed since `7bc4afce`, and the lead missed it. Two failures:
+- **the done check's crash,** which S145 fixed;
+- **the Linux tick budget,** which binds under 0117. The war-by-decision median, measured on its own in CI:
+
+| Commit | Lane | Median |
+|---|---|---|
+| `60323786` | S108 | 27.5 ms |
+| `a360803f` | S116 | 28.3 ms |
+| `5625454f` | S119, letters and receipts merged | 38.2 ms |
+| `7bc4afce` | S129, mandates, onward orders, office calls, readiness | 68.3 ms |
+| `0a714d59` | S132, advice | 69.9 ms |
+| `5c4a9d83` | S134, 0130 estimates | 79.5 ms |
+
+At `5c4a9d83` the p95 is 160.2 ms in the war run and 165.5 ms in the history run, against 160. The budget is 40 ms median.
+
+#### S146: bring the tick back inside its budget, changing no behaviour (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`, at `77565d17`)
+
+1. **Profile** the union-1861 war-by-decision run and the history run. Name the hot spots added since `60323786`, in order of cost:
+   - receipt witnesses and `requiresPapers`;
+   - mandates and `mayCommit` and `planAuthorized`;
+   - onward orders, office calls and offers;
+   - readiness;
+   - advice;
+   - 0130's beliefs and unknown remainders.
+2. **Optimise without changing behaviour.** Every daily hash on both packs, every counter and every capture must stay identical.
+   - Precompute what is derived once per morning.
+   - Index what is searched repeatedly.
+   - Prune what can no longer be referenced.
+   - Each optimisation is its own commit, with its measured effect.
+
+   No change to a rule, a number, a band, a criterion or the budget.
+3. **Measure each step alone,** with no other lane running, against `77565d17` on this machine, and publish before and after. Linux CI is binding: the goal is a median under 40 ms and a p95 under 160 ms on Linux. Locally, Windows reads about 1.3 times Linux.
+4. **Before each ordinary hook,** run `npm run check:boundary` and the rules checks, then commit. Never push. The lead pushes and reads hosted CI.
+
+The standing rules apply:
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S144, S146)
