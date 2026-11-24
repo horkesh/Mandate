@@ -1,0 +1,1858 @@
+{
+  "lane": "S154 design only",
+  "base": "211645212ace35456bd0df87498fbad976161ef4",
+  "method": "Local UTF-8 reads of specified decisions, notes, CSVs, S152 readings and selected retained primary OCR; no network/browser, no new facsimile verification. Facts in the CSV retain their research row/page provenance, not new dispatch authority.",
+  "inputs": [
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\CODEX.md",
+      "sha256": "43147cf2a951ba6069c811e848bd0307ba43877c53c084bde45541b30a07052c",
+      "bytes": 1839358
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0124-standing-authority-comes-from-an-assignment.md",
+      "sha256": "f6a68765713cf4cacae0b6d008ff615baa8771a27ed090fee8ce8b5e216aa3c6",
+      "bytes": 7425
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0126-a-call-addressed-to-an-office-reaches-its-holder.md",
+      "sha256": "cd4d0508d1c4286f70fef2f99a6240894a681e2f41775f6285c4b3e895407eb9",
+      "bytes": 3935
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0129-an-assignment-to-command-opens-the-post.md",
+      "sha256": "7f859419d6243d2a96604c8ad5bd8956ff55edfcf5ac55c507a80d8e97bad26f",
+      "bytes": 3714
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0131-regiments-go-where-read-orders-send-them.md",
+      "sha256": "f1d2cc5800288cc9d974ff80c993eed7b08fd5d7add0d639e7ccf8ff3cf972df",
+      "bytes": 6443
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0133-receipt-by-place-and-a-commanders-own-request.md",
+      "sha256": "462db215f48b7090681e9589e77e1a85ac4288bf7cb4d6206f4f2ccb1b67dde2",
+      "bytes": 5787
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0134-a-superior-answers-from-his-subordinates-holdings.md",
+      "sha256": "3764485a6580e78f0f71d6893b75479d60c3f5b177982292dbca3bcf0830a2d1",
+      "bytes": 3159
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0135-a-holder-keeps-what-his-mission-needs.md",
+      "sha256": "1b068ca9c4253d6c26c985e1e754132b8f9664981ccdff5baa90c0c2a0c361f7",
+      "bytes": 3883
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0136-an-order-is-read-when-its-terms-are-read.md",
+      "sha256": "a7f46a47ef99db2ebaa62b313b93d44d0c6e37789fb2940e405ec39a262957fe",
+      "bytes": 4268
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0137-the-root-holds-what-it-grants.md",
+      "sha256": "6c1e03f8f5a88d78e3eaf9ce8c62e2b07d450d0ccdf73d79d26dfdd4d205c563",
+      "bytes": 2992
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\2026-11-24-S149-sending-orders.md",
+      "sha256": "d6683514f4ea22a1006903895210750914410ea6780d75ea97134acc519cd8c5",
+      "bytes": 24127
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\2026-11-24-S151-july-army-orders.md",
+      "sha256": "c34ca7288ebf8f7379f769517fa5f7c9ddd68c83b2311e235e05c959cf536094",
+      "bytes": 22371
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\catalogue-coverage.csv",
+      "sha256": "575d5b9948608e25eba6db4c1256bd03b9818991d79028517bd9c4ddc8323ce0",
+      "bytes": 107985
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\sending-instruments.csv",
+      "sha256": "58ea15c7a8ede7f25676d5b723a5c6cb5c095f47c132de47b491c66b747da8a4",
+      "bytes": 124550
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\image-inspections.json",
+      "sha256": "bb1c8174ea5644cb1bb5ad8c00d9645257d6ae05610724477d45519cd262bb0c",
+      "bytes": 2518
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\inputs.json",
+      "sha256": "38de437a39c10d8c25bb3daa88412797c84b663f7bff90517257adc94ded9641",
+      "bytes": 3051
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\source-reading.json",
+      "sha256": "6da0574cc74872d5ad811dd022dc052396b3d066d52131550b8a2c1b02fd7915",
+      "bytes": 99286
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\verification.json",
+      "sha256": "e3316e56c1e361d0101e96da375bed1bf54126b8457e35c4543e0001746eb0a5",
+      "bytes": 747
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\identity-links.csv",
+      "sha256": "8ce7a4545268b207fef6d576094c2a1f5030f1895409298cfdb524981459ae53",
+      "bytes": 20863
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\instruments.csv",
+      "sha256": "125ce0b7c35c3f8ad04f3a4af2f8c40e3b1755c7c56606af2eb6efef276973bd",
+      "bytes": 79447
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\inputs.json",
+      "sha256": "1984e724e7281c0ab6aaa6f5b99ec94afdd64b7794d7e9c93df317450e5b7a07",
+      "bytes": 2159
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\retrieval-and-image-checks.json",
+      "sha256": "d23ce5fffb2875ec86bb7e05e4d70d9a06273fd4d2eef3094580bb45cb6ddaa1",
+      "bytes": 6594
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\source-reading.json",
+      "sha256": "b094b54149219b484f86c4402c90e3f979f4fe0d6fff58cb8bdb23086bc929e6",
+      "bytes": 68275
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\verification.json",
+      "sha256": "c621d116710c5901dde4d58905ccf9d9f02bda3e3e2bb3bdb4736a674722f455",
+      "bytes": 514
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\guard-projection.json",
+      "sha256": "d6a2580261669c32e1a305fae1c594465d43beda68adedd5c55b2b932dba6b9e",
+      "bytes": 5020
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\input-receipts.json",
+      "sha256": "724c9df7465dba3b516173f4da09aa198dc121726cd8729b44fccd0621ccf126",
+      "bytes": 1359
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\instrument-disposition.json",
+      "sha256": "aabc86bf576926f97870fdd1707772ca3e449995a46c60baee08908d28c87f46",
+      "bytes": 552703
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\one-writer-registration.json",
+      "sha256": "d241280ba233bcf82159bed8f12bb30bf07b8ede425f64a0afecf80e04d233e1",
+      "bytes": 919
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\preservation.json",
+      "sha256": "6cf580c44be90933141297bd144c0ecf796701a21acd73d0c97de470302015c6",
+      "bytes": 914
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\source-reading.json",
+      "sha256": "f17a92df4570ff6beb23758a37544f4baefe0bf375326299089b90441f2e67d5",
+      "bytes": 12079
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\unopened-command-fix.json",
+      "sha256": "95aa0dfdb70cbd753be960bd2aea7fd72752e95be3b5258f5d74a16ca3741d2c",
+      "bytes": 1787
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\validation-plan.json",
+      "sha256": "3344106874c6319e08c5f2f61f99f45bad787b0b0721990e5c6178084654718f",
+      "bytes": 1268
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\validation.json",
+      "sha256": "389f7273e3121fef156859481d3c45b36e29db04cd4e46ce7d51ff5b584c5106",
+      "bytes": 4427
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\README.md",
+      "sha256": "426144992a08fbc95b52f5431c2038b36f204eb7b25ce00e9f811dcd7d53d3f7",
+      "bytes": 8950
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s152-evidence\\profile\\comparison.json",
+      "sha256": "0e56810e3dfc082ea5b200576d1c181103ec604837800e92d3259707e9d6b855",
+      "bytes": 17428
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\world\\allocation.ts",
+      "sha256": "0889f66430761dce0fb6ca81061ede1f82ab1c1a3fac9c520aaa353b6b4c098b",
+      "bytes": 5309
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\world\\allocation-scope.ts",
+      "sha256": "23cb37dba11ae2c9ea6d0496673b329a7a351ac36c381d6eb46a3a2d2231eff7",
+      "bytes": 344
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\world\\assignments.ts",
+      "sha256": "f9043cf0586e1c27756dab591cdd5625eb996b4908696846cf84c53920fb7831",
+      "bytes": 2212
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\seats\\allocation.ts",
+      "sha256": "6ed3d5cb83453e61a2c16f35965c06502610259187a000a55ec2b048570c13a1",
+      "bytes": 1809
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\seats\\onward-assignments.ts",
+      "sha256": "a601ba8238626dcbb2bd42255e24284578f26bd57166b52d1b26ede6b472ce35",
+      "bytes": 3926
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\command\\allocation.ts",
+      "sha256": "6833990d6f8ead7fe6931992f720856fb798d068bf3ae7813639ed216aa9e278",
+      "bytes": 16780
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\tick\\allocation.ts",
+      "sha256": "079b10a5d4af8cf7de2bab3e41ef3ab74167be89d26b7c26f38e9a11847f98bd",
+      "bytes": 31092
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\plans\\goal.ts",
+      "sha256": "900c7b802e15d17faa8827c5e61c2addb69b198ad7ab2eb9b39c4be4ba164044",
+      "bytes": 12505
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\command\\service-receipt.ts",
+      "sha256": "b61a3a816276dd139894aa09c91e8930f3cbca218035a16084bfda8d67c7e642",
+      "bytes": 5729
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\command\\organisation.ts",
+      "sha256": "83b4f44569438603d094e4d75c9a9dfd007ca49e5a174539a09b51a1668b44ec",
+      "bytes": 2890
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\forces\\lots.ts",
+      "sha256": "f7d14cd04b86a62d5f2d986db4454b121fd547bf24994562a6332221e5b79b8a",
+      "bytes": 6705
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\forces\\detachments.ts",
+      "sha256": "6b5a16c1bfa908963cbea9f0af3328db41fc0d5f1ccb00b2a369ea5d69c35dd1",
+      "bytes": 6919
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\world\\doctrine.ts",
+      "sha256": "f77d3e80d8ec0414e8d850b845a230d3eabb600bd2fb9e0b655540d433242390",
+      "bytes": 13932
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\tick\\mandates.ts",
+      "sha256": "13f8f6d025d658fb99f7102ac85ef8efbe89f9ebe218194382a6010542af9caa",
+      "bytes": 14626
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\world\\mandates.ts",
+      "sha256": "15c69c177eaf9ab0331aecbe5e14ba06da63cafd1ae03323a77f1d2ecb6e544f",
+      "bytes": 7013
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\forces\\offers.ts",
+      "sha256": "dc4e4d8164a15c2f28c50c88bbc0935c8d10b93e28003ea3c34e2010c76f54db",
+      "bytes": 486
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S144-RECEIPT-AND-FORCE-REQUESTS.md",
+      "sha256": "993181448878e6ea8764c88b240d21fd6f149759e545de980ac0bbccdd67f790",
+      "bytes": 28759
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\CLAUDE.md",
+      "sha256": "8444009f244f310ceb2c59a616f97cc2d294bfe5e4e616d6acbd01d672ed4a7d",
+      "bytes": 6627
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\LANES.md",
+      "sha256": "a80e6a8b1ef9e828fd41047972b9308ba95b76fb5becb30b81e41f0e755fae0e",
+      "bytes": 14090
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\.githooks\\pre-commit",
+      "sha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70",
+      "bytes": 659
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\package.json",
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729",
+      "bytes": 1464
+    }
+  ],
+  "csv_page_locators": [
+    {
+      "research": "S149",
+      "key": "OR-III-I:p68",
+      "printed_page": "68",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p68.txt",
+      "sha256": "801bdb106be3100d4a22bcd0b142386988c9bd5fec80e8b86680323eeea091a1",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p69",
+      "printed_page": "69",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p69.txt",
+      "sha256": "c2421cf7ddb8312c23d0cadec025db4ea367212e90a2cff55165802be8915392",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p71",
+      "printed_page": "71",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p71.txt",
+      "sha256": "f05b8fecf99f506fa0835dcd6fe7c3e682990f844b5d067d36fb04f78ccda752",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p74",
+      "printed_page": "74",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p74.txt",
+      "sha256": "270a8edad93ada55912f5d1e888b11037079de9b53e0bb82e4ad8d88471e92db",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p77",
+      "printed_page": "77",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p77.txt",
+      "sha256": "28c039c96efc35680e1fc417e32067db41819cbf5db5e71e0ecfdd5e4e603161",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p93",
+      "printed_page": "93",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p93.txt",
+      "sha256": "f39223075565ccafbba65a3a24d731297290dbc1de0bb9c2a54f64b492b7492d",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p119",
+      "printed_page": "119",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p119.txt",
+      "sha256": "a3098ae2bd534936a3a989283e8d573ca36107bbd54dd646388188e9105994b4",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p623",
+      "printed_page": "623",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p623.txt",
+      "sha256": "b527cd59579841f6c1ab006488e6e6ee9aa73ccb58508830315bec7c30d1e872",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p624",
+      "printed_page": "624",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p624.txt",
+      "sha256": "9679eb39ca00bf0f57ce06fab159060dcead45300593b4b7e926debb7497b5ee",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p166",
+      "printed_page": "166",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p166.txt",
+      "sha256": "13be40164876cafb1b37577e8d7d40ac61afe2e11970008d6e0caea7e5cb8924",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p191",
+      "printed_page": "191",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p191.txt",
+      "sha256": "214dc419fb3b4c5f953e8dd1d8b28852d066ecd2c585935caf0f14b34abc4b53",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p201",
+      "printed_page": "201",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p201.txt",
+      "sha256": "4ff9cfcb579b18549560466aa6340df899ee0214a71a82d9450b0841c0ac4d81",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p188",
+      "printed_page": "188",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p188.txt",
+      "sha256": "261729257a91f21acf315ac5c49f56e0e4a5f3db874cb479bd760b312338351e",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p189",
+      "printed_page": "189",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p189.txt",
+      "sha256": "5e5d79e17da58261682ed5497b6fd90da6385e12ffb179704744aa3ae3ef5b08",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p204",
+      "printed_page": "204",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p204.txt",
+      "sha256": "bb76bd78a3724bb3ebd9aab6d1ef4b77216c8a413cee4c60e74801ca999779cd",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p206",
+      "printed_page": "206",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p206.txt",
+      "sha256": "83fa228059c4e3bccffe0941d1b50523c9899d007abfd65cc977062541f4db7e",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p652",
+      "printed_page": "652",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p652.txt",
+      "sha256": "f96ec6b9da93282b74e4b3370be13b9ecfd27214f60cd9c2f1a9c255c1f92112",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p248",
+      "printed_page": "248",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p248.txt",
+      "sha256": "29e663dc06e04a7523960689072a548d06f114a657acd68f06689bc7b17b4491",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p249",
+      "printed_page": "249",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p249.txt",
+      "sha256": "562e25045f3cc3af74331aef1cf6c30b46ac01bffdd1611dcae42a2490a3ac21",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p255",
+      "printed_page": "255",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p255.txt",
+      "sha256": "91d0cca9d0f1526df829b1baa4977f1f24d4535914c31c1ce6b21a2adf640a2e",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p266",
+      "printed_page": "266",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p266.txt",
+      "sha256": "f60fdeee5fce1866b2fc03df7c05197ff848916baffa6b40ea3287cd5ddc4b7e",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-III-I:p267",
+      "printed_page": "267",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p267.txt",
+      "sha256": "b20952e4db40ab5a11d5df0aa0a71f367989ad040df2fc9d43e38d2bf4573a92",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p388",
+      "printed_page": "388",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p388.txt",
+      "sha256": "24d400873d8e879b7bdcd55bf37383519edd90456e2f8bbb0ddb2b7a972e96bf",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p389",
+      "printed_page": "389",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p389.txt",
+      "sha256": "f955a0be375acfcfff77b16450c74219403b08b6efca667edce13f1c11e5dedb",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p390",
+      "printed_page": "390",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p390.txt",
+      "sha256": "20f645aea76b65af09b2ef6b0c1db3564103e22a2bfcc26017ead6ad6c50f843",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p397",
+      "printed_page": "397",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p397.txt",
+      "sha256": "88a08cd71a8214564dcf81b9d25078dcf3758bc6b902ef36890dfa2801c032d6",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p398",
+      "printed_page": "398",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p398.txt",
+      "sha256": "b902f2c6ce9f5179660c4b24767479c6175076417195d00bafca2777e017cab1",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p399",
+      "printed_page": "399",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p399.txt",
+      "sha256": "649cbc29b197750d96ca01d401fef2fddcee2c983085eed6a98e9e7d1fcc43c1",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p691",
+      "printed_page": "691",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p691.txt",
+      "sha256": "2a32b76aef5d29b1ad93e09754622639aaf2601dd9796415e0f0f749009c13b4",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p694",
+      "printed_page": "694",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p694.txt",
+      "sha256": "0b9009480acb00345ccefbaa40e93730112c9950ec8b7f3de281e88ab6b039c3",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p695",
+      "printed_page": "695",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p695.txt",
+      "sha256": "6858b913b580d7364f3af6b2184b0a37a4a2453ddf5598336398b6fed39eb7b4",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p696",
+      "printed_page": "696",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p696.txt",
+      "sha256": "e0c499a4670e50ffc9fa2fcb6e1258a64cec30683d1c8ce06df623c9ba03c3a5",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p406",
+      "printed_page": "406",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p406.txt",
+      "sha256": "145539fea084db0dcda9b5637be8a0521f429073a8352e098d4c3adbc4aa6e05",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.1:p407",
+      "printed_page": "407",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p407.txt",
+      "sha256": "a0c724e2efbc55cead0e5deed723762e72a954da5546752b4d6a6fae1aa4f5f5",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p17",
+      "printed_page": "17",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p17.txt",
+      "sha256": "100c7d3e19ab271c08c66d950783a9d5d53be1fb55053658d5a8f54a758692ad",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-IV-I:p232",
+      "printed_page": "232",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p232.txt",
+      "sha256": "56de124e28aca419fee2cb5c745b4aacb72404bc629f2f4c04fafee2c1820147",
+      "url": "https://archive.org/details/cu31924079579524",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-IV-I:p233",
+      "printed_page": "233",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p233.txt",
+      "sha256": "a39022bc2039c5ffc56b3c2b4691c7d3342825147a0f72eea1cb7d6759eebb20",
+      "url": "https://archive.org/details/cu31924079579524",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-IV-I:p272",
+      "printed_page": "272",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p272.txt",
+      "sha256": "54406cc6901e9f1245497e6deb3cb74da406c0b41ba9ebb8213387c96a4af71c",
+      "url": "https://archive.org/details/cu31924079579524",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p793",
+      "printed_page": "793",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p793.txt",
+      "sha256": "3f7b9b5b8e4cd785736917c8c52dcc09c57bb89c1026ffdbae1b0b70c1d9f21d",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p794",
+      "printed_page": "794",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p794.txt",
+      "sha256": "2804b4d570ad08a49dab71f662471af57f5ea6776a88f81ed2f588ec0fc7f7d9",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p824",
+      "printed_page": "824",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p824.txt",
+      "sha256": "18e4855d906525a174c556fc8de61b69199645b323305f82126bbff4cdf57351",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p826",
+      "printed_page": "826",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p826.txt",
+      "sha256": "e723cef37953d12af952ec971b06d24a7de31e208b82ec095c3bd661ede940eb",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p123",
+      "printed_page": "123",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p123.txt",
+      "sha256": "d8d38ab77fc9485bd44bb43cfd3af64efb9854ca40eb660d1ee7aa1d2b032051",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p825",
+      "printed_page": "825",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p825.txt",
+      "sha256": "21487392a607996246ea992c17677eceec1f19c824e96d5d9738dec513c53a5b",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p79",
+      "printed_page": "79",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p79.txt",
+      "sha256": "d1190e191f2787832f5a976798707ee1318451b1cb099afb8df8fdd6c55e28b6",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p82",
+      "printed_page": "82",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p82.txt",
+      "sha256": "4573d9880c9b857f0327d51cfec635e8e9e917ef47fe4c2a695e5a680737a3cc",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p840",
+      "printed_page": "840",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p840.txt",
+      "sha256": "0a59bd226c19a5a7d2fb68e1ae9179bda3e35a70f2eb6ea5cb27d3f701853451",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p860",
+      "printed_page": "860",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p860.txt",
+      "sha256": "d20fa7874799454057b0179fc4977f311b8a79776915d58251f0d292499eb1c2",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p107",
+      "printed_page": "107",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p107.txt",
+      "sha256": "3fcb4155fea5dc408e08ef300a0a99b279d012d27b4d6b9eb631f66c944a12f2",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p108",
+      "printed_page": "108",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p108.txt",
+      "sha256": "11e877eae081c73d583533e95a3a8187243155b2ae532f64833cadc9aef2c854",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p885",
+      "printed_page": "885",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p885.txt",
+      "sha256": "ac3a53f2f5347669f3ac71e7eccf21c56a4328ad55ba1422e0d86eb6424f8037",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p119",
+      "printed_page": "119",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p119.txt",
+      "sha256": "24744d72b059c8307c2d988c9537e0639b2fa1604edc0efddb537439979cd97a",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p120",
+      "printed_page": "120",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p120.txt",
+      "sha256": "5c83cd332afdabf76fb356b21015a40f84853fc9a515f2cd35c6c07926d62150",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p127",
+      "printed_page": "127",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p127.txt",
+      "sha256": "1341aa4c1670f152c8b7d2b2723895d7a0fd305576c1f91027acca3347cc523b",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p128",
+      "printed_page": "128",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p128.txt",
+      "sha256": "d8c4d7c07c655dcf6563ce8df08d63032c1da10f857e3eca37aa73dc785528d5",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p999",
+      "printed_page": "999",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p999.txt",
+      "sha256": "47c1a3eca260348926d0f935bdcf8bea693c5354b7c468794e1e3ad8e676aaee",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p1000",
+      "printed_page": "1000",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p1000.txt",
+      "sha256": "7f4ecbb4e5936f18d23c5504b71e715b5abe328a61bce7634c6062bd15d6e913",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p906",
+      "printed_page": "906",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p906.txt",
+      "sha256": "8ffd7c64fc1b7d2a8073db6fc4bc42facd1f3d86af1cbc0f94b549bcee855aeb",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p138",
+      "printed_page": "138",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p138.txt",
+      "sha256": "6e54b6fe2fefb5bf4b8a5050ed4606148b3a3cd948eea2a6d87416e24d074a28",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-IV-I-p750",
+      "printed_page": "750",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p750.txt",
+      "sha256": "e926fa357fb4af8f8953ea5c38e0838de3537680a9c8f906847cc7a1fb6201cd",
+      "url": "https://archive.org/details/cu31924079579532/page/750/mode/1up",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p140",
+      "printed_page": "140",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p140.txt",
+      "sha256": "ac4843bbce90a683291ef490df38f020a78c18661859100208aea3fcbc75d110",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p139",
+      "printed_page": "139",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p139.txt",
+      "sha256": "30534a324d7daa94054d76e1e19d2bf474bc7b657cbaf458b483139fc12ebd6c",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p137",
+      "printed_page": "137",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p137.txt",
+      "sha256": "f8138bce54d0a1ec05521a5b85ba27e0ec01cf12ee81764a107b4bc80715eb8f",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p926",
+      "printed_page": "926",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p926.txt",
+      "sha256": "e9df61709b61a1245772815830a36c27ae679b4c8c86d6bd08fe9dd9e86aa612",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-LI.2:p151",
+      "printed_page": "151",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p151.txt",
+      "sha256": "17df09e2dc437cbbf68fda79a0d23f495b055812edeaa3ca907745624b256f54",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p943",
+      "printed_page": "943",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p943.txt",
+      "sha256": "8f25776a46d9a97fe1cea58e0568149d2d7e3734a715875f8c67a06861e66214",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-I-II:p944",
+      "printed_page": "944",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p944.txt",
+      "sha256": "9298afb2e690e51f1ce6a694c3b7152058ecbbbbd0f10326e7097a695c5137cd",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S149",
+      "key": "OR-IV-I:p363",
+      "printed_page": "363",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p363.txt",
+      "sha256": "18a42be5bca1da1c8bfee5e74883c1c20928a94aab8c2f4dcce6b02274a2bedd",
+      "url": "https://archive.org/details/cu31924079579524",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p85",
+      "printed_page": "85",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p85.txt",
+      "sha256": "bf7ad5bc9501344b6feceef0f5935ec5649f64581f84177cda78a78ff9a0cc2f",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p95",
+      "printed_page": "95",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p95.txt",
+      "sha256": "841976dcfb6419a214b1266e35fa72ac94cd518869e86bf3a9b516233f8ade22",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "NY-register-III-1861",
+      "printed_page": "1861",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-register-III-1861.txt",
+      "sha256": "6508112d8aa644c749e86e38b391b98b0121410cac035359eaa41c0e6d13da85",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p100",
+      "printed_page": "100",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p100.txt",
+      "sha256": "4a5d2bd1663f5e446c2a7a06d2628c733a83ccd91e8100179d740e5aae96e016",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p108",
+      "printed_page": "108",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p108.txt",
+      "sha256": "ec40bba1f91c40a6661c96b74c9edf45595e4f1b8967d139a450976c1714a6b5",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p109",
+      "printed_page": "109",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p109.txt",
+      "sha256": "0c592cf26f838e05e7e5155c6531f84155dcddea190cc93e7db633be5917fe2f",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p130",
+      "printed_page": "130",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p130.txt",
+      "sha256": "0f30e55ad07f15cb896d248505109b87c736e94dabf637d7322abbae219a12c0",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p131",
+      "printed_page": "131",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p131.txt",
+      "sha256": "4db39094fe9cb5a594f036b837b625087c819a1c81cf98aaa77c3b48c74bf9f2",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p165",
+      "printed_page": "165",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p165.txt",
+      "sha256": "afd93e04cb200aecb5307c99ec807166eb15c145b82bcac9cc17739bbf42e335",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p166",
+      "printed_page": "166",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p166.txt",
+      "sha256": "13be40164876cafb1b37577e8d7d40ac61afe2e11970008d6e0caea7e5cb8924",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "NY-AG-1861:p109",
+      "printed_page": "109",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-AG-1861-p109.txt",
+      "sha256": "a37b3fbb2443ddfa24940306e32864516893864b2d2f0f6880a46f8d327ca6fa",
+      "url": "",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "NY-AG-1861:p7",
+      "printed_page": "7",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-AG-1861-p7.txt",
+      "sha256": "1ff396be2951e5f1178f3c9fbcb16219cedd7d5460536352c6343874ca650753",
+      "url": "",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "NY-AG-1861:p8",
+      "printed_page": "8",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-AG-1861-p8.txt",
+      "sha256": "6d58f81166492bcb425ab02070f8f37067898671c6b5bdf86b131e86fb598051",
+      "url": "",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p188",
+      "printed_page": "188",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p188.txt",
+      "sha256": "261729257a91f21acf315ac5c49f56e0e4a5f3db874cb479bd760b312338351e",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p189",
+      "printed_page": "189",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p189.txt",
+      "sha256": "5e5d79e17da58261682ed5497b6fd90da6385e12ffb179704744aa3ae3ef5b08",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p191",
+      "printed_page": "191",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p191.txt",
+      "sha256": "214dc419fb3b4c5f953e8dd1d8b28852d066ecd2c585935caf0f14b34abc4b53",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p201",
+      "printed_page": "201",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p201.txt",
+      "sha256": "4ff9cfcb579b18549560466aa6340df899ee0214a71a82d9450b0841c0ac4d81",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p204",
+      "printed_page": "204",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p204.txt",
+      "sha256": "bb76bd78a3724bb3ebd9aab6d1ef4b77216c8a413cee4c60e74801ca999779cd",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p206",
+      "printed_page": "206",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p206.txt",
+      "sha256": "83fa228059c4e3bccffe0941d1b50523c9899d007abfd65cc977062541f4db7e",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p239",
+      "printed_page": "239",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p239.txt",
+      "sha256": "c04102111b7b5c372cb387aafe2dcdf7739421657801a92e11461ceb8cf4c0b5",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "NY-Phisterer-III-p1873",
+      "printed_page": "1873",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-Phisterer-III-p1873.txt",
+      "sha256": "ae84b2cbfeb9773b02267ad8ec0ffd2712b02edbc9ecb0c45fc8308f4521c403",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "NY-Phisterer-III-p1887",
+      "printed_page": "1887",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-Phisterer-III-p1887.txt",
+      "sha256": "495adad30b56d8a4a1a0f32d2a7041f0c814d76c19f1b5b7d4a6f738196561d8",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p388",
+      "printed_page": "388",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p388.txt",
+      "sha256": "24d400873d8e879b7bdcd55bf37383519edd90456e2f8bbb0ddb2b7a972e96bf",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p389",
+      "printed_page": "389",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p389.txt",
+      "sha256": "f955a0be375acfcfff77b16450c74219403b08b6efca667edce13f1c11e5dedb",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p37",
+      "printed_page": "37",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p37.txt",
+      "sha256": "e5ee980a97f029160a3451f51aaa56f7e145e032bccd165229c46425da46a43e",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p38",
+      "printed_page": "38",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p38.txt",
+      "sha256": "4b4f2e1080dd464787e63675d578929faa609471e397d561eb15a80725561dc0",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p39",
+      "printed_page": "39",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p39.txt",
+      "sha256": "40f24ab06fe3ea506c6ec62a213cb683af3f3a2b7573351d5a0ef876fffbb696",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p40",
+      "printed_page": "40",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p40.txt",
+      "sha256": "682d9ea37a4c37900989413e3e900f085bf3672b91739721af8c3c50adae8905",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p41",
+      "printed_page": "41",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p41.txt",
+      "sha256": "b588d66eec48da8f4ac26ac9902596060a0aed92c79ae2df7ed29590ca988f59",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p390",
+      "printed_page": "390",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p390.txt",
+      "sha256": "20f645aea76b65af09b2ef6b0c1db3564103e22a2bfcc26017ead6ad6c50f843",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p137",
+      "printed_page": "137",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p137.txt",
+      "sha256": "f8138bce54d0a1ec05521a5b85ba27e0ec01cf12ee81764a107b4bc80715eb8f",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p140",
+      "printed_page": "140",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p140.txt",
+      "sha256": "ac4843bbce90a683291ef490df38f020a78c18661859100208aea3fcbc75d110",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p151",
+      "printed_page": "151",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p151.txt",
+      "sha256": "17df09e2dc437cbbf68fda79a0d23f495b055812edeaa3ca907745624b256f54",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p157",
+      "printed_page": "157",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p157.txt",
+      "sha256": "fc333d01ee0f591e0668609e625ddb68459e5350ae90c7b60d211c00c857449c",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p160",
+      "printed_page": "160",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p160.txt",
+      "sha256": "4398f709a275a016daeef7be50ecbc2f3989eca21dce1bf465b294825594a0d7",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p922",
+      "printed_page": "922",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p922.txt",
+      "sha256": "fe54898e7f182540c2e4390c5edd00870823b63b117c575e54aae6df94bcee48",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p945",
+      "printed_page": "945",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p945.txt",
+      "sha256": "9dbda63b5d8607a8b99e0dfb710ae5911c77e5b549bcf6d22d989cf54e39a268",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p976",
+      "printed_page": "976",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p976.txt",
+      "sha256": "8d2128f6c2263a2789f9cc2c18da5f302bd170cddfeaa3cda7023852ebdef350",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p977",
+      "printed_page": "977",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p977.txt",
+      "sha256": "7e6afd4f57fae186d8f3801caae32af2e589b4e7907b515446c62b1c293c5f14",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p162",
+      "printed_page": "162",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p162.txt",
+      "sha256": "801e8a467829a5beebbf5f38f7d8cbfb9dde3df49aac886c8bdb226d62e7cf7d",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p168",
+      "printed_page": "168",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p168.txt",
+      "sha256": "8f42d60b55a446c65f6891bbaaf3107095a379c7a9c333349c0f58731e358495",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p169",
+      "printed_page": "169",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p169.txt",
+      "sha256": "eaff7d89d46485f6f8ed81bb4ca8bc6901e9039480292bdffc0196b8af195abd",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.2:p163",
+      "printed_page": "163",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p163.txt",
+      "sha256": "f0a884323286d3d61a83ed014d112fa129e77be613456563947db96a521e74d9",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p980",
+      "printed_page": "980",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p980.txt",
+      "sha256": "1c02c88f2a5cde0d28364999d663085e941c7b68387845bc9bac0d9f30c243e8",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p981",
+      "printed_page": "981",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p981.txt",
+      "sha256": "00edec9d5088c73d7fbd5a77b7900caf6acfb25ac51c3605386e01f0fa986a33",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p982",
+      "printed_page": "982",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p982.txt",
+      "sha256": "73f2c51b00921e23af8d64d6ffc62accba2974298300abb97767a97b58d5f7a0",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p396",
+      "printed_page": "396",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p396.txt",
+      "sha256": "07af67460f5f08482ed0a24e481f54f3857a594f9fbe16071be027881626db33",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p399",
+      "printed_page": "399",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p399.txt",
+      "sha256": "649cbc29b197750d96ca01d401fef2fddcee2c983085eed6a98e9e7d1fcc43c1",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p403",
+      "printed_page": "403",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p403.txt",
+      "sha256": "4bc1e9a704a30d1370f801e25c500b44b2d40b1208ddaf5d72ece1f644b0f0e0",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p408",
+      "printed_page": "408",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p408.txt",
+      "sha256": "e8ae616c8115d8eed45312d9156ded546fad430fdbe75f2f72bdb19db3ad672c",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p409",
+      "printed_page": "409",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p409.txt",
+      "sha256": "3266bebc0be7966df18704fe688213739e7f5740d3e969e1049a5a529b24c9b0",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p410",
+      "printed_page": "410",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p410.txt",
+      "sha256": "48dacdf7e5ecde26a237ee7e5945916f6e6caf99a2f5e6ed6cbd2f658e2339af",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "NY-register-III-2188",
+      "printed_page": "2188",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-register-III-2188.txt",
+      "sha256": "8d78600791be0a4f6988c9a88bd62ddb3e2926461d6ae148054ac9c592a8e761",
+      "url": "https://archive.org/details/newyorkinwarofre03phisrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p411",
+      "printed_page": "411",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p411.txt",
+      "sha256": "2c68a1e44610f446985323c2a14b3f77c4cea620e1396f122b8485d714549668",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p413",
+      "printed_page": "413",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p413.txt",
+      "sha256": "4ca6c98e418bf66fd4e78741414eff2133d88435dccf81595ce5ded08f8adb0e",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p414",
+      "printed_page": "414",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p414.txt",
+      "sha256": "d482b0387bbe97e76cb9e78e7eb74151c0dfd302cc2be6d36b44f1bcc6d52e8b",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p739",
+      "printed_page": "739",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p739.txt",
+      "sha256": "8b8cb7a682e6b5ba47877568da578ae295da65ccd60527e21b8e65757ce01043",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p419",
+      "printed_page": "419",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p419.txt",
+      "sha256": "d16862595ee840068ca89c8042e489061f2e333f2218679d50bb7c976afb6fec",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p724",
+      "printed_page": "724",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p724.txt",
+      "sha256": "c9a2b0c19a1f790053d5863e4f1cfbef77961bca07562d04c174cf826b598c17",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-II:p725",
+      "printed_page": "725",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p725.txt",
+      "sha256": "f26efd1b1669007f6dedf8c9abb3a1f7038b45d9d4d9708420040cc45b14c4df",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p415",
+      "printed_page": "415",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p415.txt",
+      "sha256": "78efdf2a028b6b3942a47cd9d5eb4174fdc445b507ca1436e4f56be42ccb94d9",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p416",
+      "printed_page": "416",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p416.txt",
+      "sha256": "d2d6d16b884ad6f0ccbd743afa9fa334e03c4e7381ce3bc375770ec9bc07eeac",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-I-LI.1:p418",
+      "printed_page": "418",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p418.txt",
+      "sha256": "2d4737b2defe8905cde7bbfd3fec23990e2229f54b8357e8d9a5e95040212c05",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p325",
+      "printed_page": "325",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p325.txt",
+      "sha256": "35561b1077a334ff84910ef8b118bd9c5c8c24416859071705b95828efd47b70",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p327",
+      "printed_page": "327",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p327.txt",
+      "sha256": "c96396134d7f5c94c3759885fc2058f142896084b26d6cba51c649fd2cab1b9a",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    },
+    {
+      "research": "S151",
+      "key": "OR-III-I:p337",
+      "printed_page": "337",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p337.txt",
+      "sha256": "a3f1807096def4f3e7838b98642573275bff5d76d3d2a0d7c4309756836448ce",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "role": "Inherited S149/S151 page locator for the CSV record; not a new complete-instrument or receipt certification."
+    }
+  ],
+  "limits": "Input inventory is a byte receipt, not a claim of whole-volume reading. Concurrent S155 edits are not preservation failures of this read-only lane. Formal review is lead-owned; no code/pack or simulation run.",
+  "selected_primary_readings": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-AG-1861-p109.txt",
+      "sha256": "a37b3fbb2443ddfa24940306e32864516893864b2d2f0f6880a46f8d327ca6fa",
+      "printed_page": "109",
+      "key": "NY-AG-1861:p109",
+      "url": "",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\NY-AG-1861-p110.txt",
+      "sha256": "5fbedef3f05147b3aa01810e6bcab158794319acf4787a9f274b698ea6f223e2",
+      "printed_page": "110",
+      "key": "NY-AG-1861:p110",
+      "url": "",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p388.txt",
+      "sha256": "24d400873d8e879b7bdcd55bf37383519edd90456e2f8bbb0ddb2b7a972e96bf",
+      "printed_page": "388",
+      "key": "OR-I-LI.1:p388",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p389.txt",
+      "sha256": "f955a0be375acfcfff77b16450c74219403b08b6efca667edce13f1c11e5dedb",
+      "printed_page": "389",
+      "key": "OR-I-LI.1:p389",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p390.txt",
+      "sha256": "20f645aea76b65af09b2ef6b0c1db3564103e22a2bfcc26017ead6ad6c50f843",
+      "printed_page": "390",
+      "key": "OR-I-LI.1:p390",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p37.txt",
+      "sha256": "e5ee980a97f029160a3451f51aaa56f7e145e032bccd165229c46425da46a43e",
+      "printed_page": "37",
+      "key": "OR-I-II:p37",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p38.txt",
+      "sha256": "4b4f2e1080dd464787e63675d578929faa609471e397d561eb15a80725561dc0",
+      "printed_page": "38",
+      "key": "OR-I-II:p38",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p39.txt",
+      "sha256": "40f24ab06fe3ea506c6ec62a213cb683af3f3a2b7573351d5a0ef876fffbb696",
+      "printed_page": "39",
+      "key": "OR-I-II:p39",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p40.txt",
+      "sha256": "682d9ea37a4c37900989413e3e900f085bf3672b91739721af8c3c50adae8905",
+      "printed_page": "40",
+      "key": "OR-I-II:p40",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p41.txt",
+      "sha256": "b588d66eec48da8f4ac26ac9902596060a0aed92c79ae2df7ed29590ca988f59",
+      "printed_page": "41",
+      "key": "OR-I-II:p41",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p653.txt",
+      "sha256": "ac1468e6be69560dbfc8d656264047a267df657320a33c502b1a19450abe05f6",
+      "printed_page": "653",
+      "key": "OR-I-II:p653",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p654.txt",
+      "sha256": "8978f4e9aaa83ebfa6a4b155c9b5fba0ebd61492d178fc56b8056d71301e865b",
+      "printed_page": "654",
+      "key": "OR-I-II:p654",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p655.txt",
+      "sha256": "16b1498ff9095665d24dac46525fc08be646e1620992fd1c3022d37e12a604ed",
+      "printed_page": "655",
+      "key": "OR-I-II:p655",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p396.txt",
+      "sha256": "07af67460f5f08482ed0a24e481f54f3857a594f9fbe16071be027881626db33",
+      "printed_page": "396",
+      "key": "OR-I-LI.1:p396",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p403.txt",
+      "sha256": "4bc1e9a704a30d1370f801e25c500b44b2d40b1208ddaf5d72ece1f644b0f0e0",
+      "printed_page": "403",
+      "key": "OR-I-LI.1:p403",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p408.txt",
+      "sha256": "e8ae616c8115d8eed45312d9156ded546fad430fdbe75f2f72bdb19db3ad672c",
+      "printed_page": "408",
+      "key": "OR-I-LI.1:p408",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p409.txt",
+      "sha256": "3266bebc0be7966df18704fe688213739e7f5740d3e969e1049a5a529b24c9b0",
+      "printed_page": "409",
+      "key": "OR-I-LI.1:p409",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p410.txt",
+      "sha256": "48dacdf7e5ecde26a237ee7e5945916f6e6caf99a2f5e6ed6cbd2f658e2339af",
+      "printed_page": "410",
+      "key": "OR-I-LI.1:p410",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p411.txt",
+      "sha256": "2c68a1e44610f446985323c2a14b3f77c4cea620e1396f122b8485d714549668",
+      "printed_page": "411",
+      "key": "OR-I-LI.1:p411",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p413.txt",
+      "sha256": "4ca6c98e418bf66fd4e78741414eff2133d88435dccf81595ce5ded08f8adb0e",
+      "printed_page": "413",
+      "key": "OR-I-LI.1:p413",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p414.txt",
+      "sha256": "d482b0387bbe97e76cb9e78e7eb74151c0dfd302cc2be6d36b44f1bcc6d52e8b",
+      "printed_page": "414",
+      "key": "OR-I-LI.1:p414",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p415.txt",
+      "sha256": "78efdf2a028b6b3942a47cd9d5eb4174fdc445b507ca1436e4f56be42ccb94d9",
+      "printed_page": "415",
+      "key": "OR-I-LI.1:p415",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p416.txt",
+      "sha256": "d2d6d16b884ad6f0ccbd743afa9fa334e03c4e7381ce3bc375770ec9bc07eeac",
+      "printed_page": "416",
+      "key": "OR-I-LI.1:p416",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p418.txt",
+      "sha256": "2d4737b2defe8905cde7bbfd3fec23990e2229f54b8357e8d9a5e95040212c05",
+      "printed_page": "418",
+      "key": "OR-I-LI.1:p418",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p137.txt",
+      "sha256": "f8138bce54d0a1ec05521a5b85ba27e0ec01cf12ee81764a107b4bc80715eb8f",
+      "printed_page": "137",
+      "key": "OR-I-LI.2:p137",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p140.txt",
+      "sha256": "ac4843bbce90a683291ef490df38f020a78c18661859100208aea3fcbc75d110",
+      "printed_page": "140",
+      "key": "OR-I-LI.2:p140",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p151.txt",
+      "sha256": "17df09e2dc437cbbf68fda79a0d23f495b055812edeaa3ca907745624b256f54",
+      "printed_page": "151",
+      "key": "OR-I-LI.2:p151",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p157.txt",
+      "sha256": "fc333d01ee0f591e0668609e625ddb68459e5350ae90c7b60d211c00c857449c",
+      "printed_page": "157",
+      "key": "OR-I-LI.2:p157",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p160.txt",
+      "sha256": "4398f709a275a016daeef7be50ecbc2f3989eca21dce1bf465b294825594a0d7",
+      "printed_page": "160",
+      "key": "OR-I-LI.2:p160",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p95.txt",
+      "sha256": "841976dcfb6419a214b1266e35fa72ac94cd518869e86bf3a9b516233f8ade22",
+      "printed_page": "95",
+      "key": "OR-III-I:p95",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p100.txt",
+      "sha256": "4a5d2bd1663f5e446c2a7a06d2628c733a83ccd91e8100179d740e5aae96e016",
+      "printed_page": "100",
+      "key": "OR-III-I:p100",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p166.txt",
+      "sha256": "13be40164876cafb1b37577e8d7d40ac61afe2e11970008d6e0caea7e5cb8924",
+      "printed_page": "166",
+      "key": "OR-III-I:p166",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p239.txt",
+      "sha256": "c04102111b7b5c372cb387aafe2dcdf7739421657801a92e11461ceb8cf4c0b5",
+      "printed_page": "239",
+      "key": "OR-III-I:p239",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-III-I-p329.txt",
+      "sha256": "12709da3eaa9992ee1cb327a939696a6a156257477b2266e65ca8f4b609bc1f6",
+      "printed_page": "329",
+      "key": "OR-III-I:p329",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p399.txt",
+      "sha256": "649cbc29b197750d96ca01d401fef2fddcee2c983085eed6a98e9e7d1fcc43c1",
+      "printed_page": "399",
+      "key": "OR-I-LI.1:p399",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\Regs-1857-p2-3.txt",
+      "sha256": "7351b34d8c0baa74ddbab890325908936d7689ada5b868004321876cb8757a45",
+      "printed_page": "2-3",
+      "key": "Regs-1857:2-3",
+      "url": "See S117/source-reading.json original locator",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\Regs-1857-p57-60.txt",
+      "sha256": "2a77917eb449b544928b703e2b14baeed296adf5692d88c59b9b9d0071af0c24",
+      "printed_page": "57-60",
+      "key": "Regs-1857:57-60",
+      "url": "See S117/source-reading.json original locator",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p922.txt",
+      "sha256": "fe54898e7f182540c2e4390c5edd00870823b63b117c575e54aae6df94bcee48",
+      "printed_page": "922",
+      "key": "OR-I-II:p922",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p945.txt",
+      "sha256": "9dbda63b5d8607a8b99e0dfb710ae5911c77e5b549bcf6d22d989cf54e39a268",
+      "printed_page": "945",
+      "key": "OR-I-II:p945",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p976.txt",
+      "sha256": "8d2128f6c2263a2789f9cc2c18da5f302bd170cddfeaa3cda7023852ebdef350",
+      "printed_page": "976",
+      "key": "OR-I-II:p976",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-II-p977.txt",
+      "sha256": "7e6afd4f57fae186d8f3801caae32af2e589b4e7907b515446c62b1c293c5f14",
+      "printed_page": "977",
+      "key": "OR-I-II:p977",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p943.txt",
+      "sha256": "8f25776a46d9a97fe1cea58e0568149d2d7e3734a715875f8c67a06861e66214",
+      "printed_page": "943",
+      "key": "OR-I-II:p943",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p944.txt",
+      "sha256": "9298afb2e690e51f1ce6a694c3b7152058ecbbbbd0f10326e7097a695c5137cd",
+      "printed_page": "944",
+      "key": "OR-I-II:p944",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p897.txt",
+      "sha256": "f4d41b8818845fa6ebd8c87f6e077e436e9479912f845dba51096acf899d92d8",
+      "printed_page": "897",
+      "key": "OR-I-II:p897",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p898.txt",
+      "sha256": "fa075af8064d8ecd39d97ed50da94b0bde001fe8e072154aa01119c9c3b2ae4f",
+      "printed_page": "898",
+      "key": "OR-I-II:p898",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "reading": "Selected retained page text read; unrelated adjacent papers not adopted."
+    }
+  ]
+}
