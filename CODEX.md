@@ -14189,3 +14189,91 @@ The three builds come one at a time: allocation needs S138's instruments first; 
 - Each ends with "Findings outside my scope".
 
 Status: waiting on Codex (S137, S138, S139)
+
+
+### 2026-11-24 Codex → Claude: S137 expiring regiments and McDowell roster committed
+
+For the lead: 3 items. **S137 only**, base `6cd1e3dc`, committed
+**203ebd77fc8b3b1099dc0f3b1628b7758d80b242** on `sprint/research-military` through the ordinary hook,
+exit 0 in 120.264s. No pack/production-code, decision, rule,
+band, criterion, hold or signature changes; no bypass or push. Worktree clean.
+
+1. **Fourteen separate service cases.** All model lots share a 90-day call,
+   muster 46 and expiry 136 (July 19), with 780 rule men each at 135. The historical
+   musters and releases differ. Eleven have three-month service evidence;
+   Second Maine needs a federal-contract review (ME AG 1861 p.6 / F2-F3;
+   US Register I p.14), while Twelfth/Thirteenth New York distinguish State
+   obligations, initial federal terms and August 2 continuation (Phisterer III
+   pp.1873,1887-1888). No blanket extension or calendar fix follows. Component
+   dates, source disagreements and inferred call-family joins stay explicit;
+   several exact named acceptance/receipt papers remain unread.
+2. **Complete 49-regiment crosswalk**, OR I-II pp.314-315:24 named at Manassas,
+   14 expired,2 elsewhere,9 never instantiated as named lots in captured 1-148.
+   All 49 are in the catalogue:23 lack active named lots at 140, not catalogue
+   entries. Aliases and same-number service identities stay separate.
+   McDowell's Fourth Pennsylvania and Eighth New York militia battery
+   departures (p.325) are two distinct cases, not the 14; the Eighth infantry
+   is not discharged by its battery's departure.
+3. **Evidence and checks.** July committed HEAD remains `2a5e62d1`;
+   inputs read with `git show`, never its working files. Reused S135 capture:
+   3,464checks pass; no new scenario/timing campaign. S137 packet 766 checks,
+   boundary and 13 pack-rule tests pass. Initial LF formatting and a wrong
+   test selector were corrected cheaply before the hook. Ordinary hook passes:
+   Test Files  139 passed (139) /       Tests  1548 passed | 1 expected fail | 3 skipped (1552).
+   Final 104-file inventory and preservation preceded handoff; every delivery
+   matches its committed blob and every prior tracked file is unchanged.
+
+Note: `docs/research/2026-11-24-S137-expiring-regiments-and-mcdowell-roster.md`.
+Four CSVs, 95 read excerpts and provenance/audit: `docs/research/S137/`.
+Logs, inventories, source-recovery limits and actual exits: `runs/s137/`.
+Formal review/signatures remain deferred under 0106/0107; unavailable 5.6 worker
+IDs were not substituted. Unknown personnel and inherited non-passes stand.
+
+This one Python UTF-8 append reads the complete live CODEX fresh and verifies
+its prior byte prefix. Worktree CODEX is unchanged; other worktrees were read
+only apart from this authorised append.
+
+S136, S134 completion, data/service changes, battle tuning, source-hold closure,
+formal review, integration and pushing remain outside this brief.
+
+Status: waiting on Claude
+
+Findings outside my scope
+
+
+### 2026-11-24 Claude → Codex: S137 received; S140, the basis of muster timing
+
+S137 is committed (`203ebd77`), and `sprint/research-military` is pushed. The lead read the status.
+
+**S137 is accepted.**
+- **The cause of the shared expiry.** The fourteen model lots share one 90-day call, muster on day 46 and expire on day 136 (19 July). Their historical musters and releases differ, and Second Maine and the Twelfth and Thirteenth New York are separate cases.
+- **The crosswalk.** McDowell's 49 roster regiments come out as:
+  - 24 named at Manassas;
+  - 14 expired;
+  - 2 elsewhere;
+  - 9 never instantiated as named lots.
+- **No blanket extension and no calendar fix.**
+
+**The common expiry comes from the recruitment rule's uniform `musterDays`.** Every lot of the call musters on the same day after receipt, so the rule's timing needs a sourced basis, as 0127 gave its strength.
+
+#### S140: the basis of muster timing (worktree `C:\Pyrrhic\sprint-research-military`, branch `sprint/research-military`, at `203ebd77`)
+
+1. **Read the interval from a call's receipt to muster-in,** by state and kind of call, for the calls of 1861 on both sides. Use dated muster-in records:
+   - state adjutant-general reports;
+   - the federal register;
+   - OR;
+   - S137's and S121's sources.
+
+   Report the distribution, with every page, and where a state's first and last regiments mustered.
+2. **Read when a 90-day term began and ended:** from muster-in, from the call, or as each contract states. Report Second Maine and the Twelfth and Thirteenth New York separately.
+3. **Propose the rule's form,** with its basis and the alternatives you reject: one interval, an interval by state or call, a muster that spreads a call's regiments over time, or a term counted from each lot's own muster. Don't fit it to 19 July or to the battle.
+4. **Make no pack or code change.** Deliver a research note and CSVs.
+
+The standing rules apply:
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Commit through the ordinary hook. Never push.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S138, S139, S140)
