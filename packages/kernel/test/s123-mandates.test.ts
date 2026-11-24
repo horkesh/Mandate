@@ -1,6 +1,7 @@
 import type { MandatePaper } from '../src/world/mandates.ts';
 import { describe, expect, it, vi } from 'vitest';
 import * as views from '../src/view/view.ts';
+import * as maps from '../src/control-index/derived.ts';
 import { mandateLetter } from '../src/seats/local-actions.ts';
 import { createState } from '../src/tick/setup.ts';
 import { tick } from '../src/tick/tick.ts';
@@ -292,7 +293,27 @@ describe('S123 received authority', () => {
   it('C3: a broad standing scope alone does not invent distant offensive objectives', () => {
     const {world,active}=fixture(grant({mandateHolder:P('a_bold'),mandatePost:POST('a_reserve'),mandateRecipients:[],
       mandateActions:['take'],mandateRegions:[R('a_mid'),R('a_front')],mandateCeiling:{ceilingPost:POST('a_reserve'),ceilingMen:null}}));
-    expect(localOptions(world,active,P('a_bold'),1)).toEqual([]);
+    const spy = vi.spyOn(maps, 'deriveMap');
+    try {
+      expect(localOptions(world,active,P('a_bold'),1)).toEqual([]);
+      expect(spy).not.toHaveBeenCalled();
+    } finally { spy.mockRestore(); }
+  });
+  it('S146: already ordered local recipients need neither views nor planner maps', () => {
+    const { world, active } = fixture();
+    let state = active;
+    for (const post of [POST('a_office'), POST('a_army'), POST('a_reserve')]) {
+      state = setGoal(state, post, { id: origin(`existing.${post}`), issuer: P('a_sec'),
+        goal: goalOf(goalTerms('hold', 'a_mid', world.map.world.rules.plans.goalDefaults)),
+        viaChain: false, issuedDay: 0, response: 'fixture' }, 0);
+    }
+    const viewSpy = vi.spyOn(views, 'viewFor');
+    const mapSpy = vi.spyOn(maps, 'deriveMap');
+    try {
+      expect(localOptions(world,state,P('a_sec'),1)).toEqual([]);
+      expect(viewSpy).not.toHaveBeenCalled();
+      expect(mapSpy).not.toHaveBeenCalled();
+    } finally { viewSpy.mockRestore(); mapSpy.mockRestore(); }
   });
   it('C1: an unrelated officer without a known public position is not asked for a mandate view', () => {
     const map=fixtureMap(), spec=fixtureStart();

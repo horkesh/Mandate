@@ -164,26 +164,33 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
   const own = state.planRecords[post];
   const canInitiate = commandedBlocks(state,post).length > 0 && own === undefined;
   if (!canInitiate && (own === undefined || own.planGoal.goalObjective === null)) return out;
-  const view = viewFor(world,state,seatIdFor(person));
-  const sender = senderFor(world,state,seatIdFor(person),undefined,undefined,post);
-  const month = dateOfDay(world.start.startDate,day).month;
-  const network = passageOf(world.map,state);
-  const derived = deriveMap(world.map,{ control: state.regionControl, month, network });
+  // Many standing authorities have nothing left to plan. Derive the picture
+  // and supply map only after the unchanged target/commitment guards need them.
+  let view: ReturnType<typeof viewFor> | undefined;
+  let sender: ReturnType<typeof senderFor> | undefined;
+  let planning: { month: number; network: ReturnType<typeof passageOf>; derived: ReturnType<typeof deriveMap> } | undefined;
   for (const a of active) for (const target of [...new Set([...(canInitiate ? [post] : []), ...a.authorityGrant.mandateRecipients])].sort(strictCompare)) {
     if (target === post && !canInitiate) continue;
-    if (target !== post && sender?.holder(target) == null) continue;
     if (state.planRecords[target]?.planIssuer === person || state.messagesInTransit.some(m => m.msgOrder?.orderIssuer === person && m.msgOrder.orderTarget === target)) continue;
+    if (target !== post && (sender ??= senderFor(world,state,seatIdFor(person),undefined,undefined,post))?.holder(target) == null) continue;
     const blocks = allCommandedBlocks(world.map,state,target);
     if (!mayCommit(world.map,state,a,target,blocks)) continue;
+    const picture = view ??= viewFor(world,state,seatIdFor(person));
     const defaults = world.map.world.rules.plans.goalDefaults;
     const goals: PlanGoal[] = target !== post ? own === undefined ? [] : [{ ...own.planGoal, goalCommitted: blocks, goalApproveAsDrafted: false }] :
-      a.authorityGrant.mandateRegions.filter(region => region === view.region || view.enemyBeliefs[region]?.strength?.strengthPresence === true || (view.enemyBeliefs[region]?.value ?? 0) > 0)
-      .flatMap(region => a.authorityGrant.mandateActions.filter((action): action is Posture => POSTURES.some(p => p === action) && (region !== view.region || action === 'hold')).map(action => ({
+      a.authorityGrant.mandateRegions.filter(region => region === picture.region || picture.enemyBeliefs[region]?.strength?.strengthPresence === true || (picture.enemyBeliefs[region]?.value ?? 0) > 0)
+      .flatMap(region => a.authorityGrant.mandateActions.filter((action): action is Posture => POSTURES.some(p => p === action) && (region !== picture.region || action === 'hold')).map(action => ({
         goalObjective:region,goalPosture:action,goalRisk:defaults.risk,goalDeadlineDays:defaults.deadlineDays,
         goalRail:a.authorityGrant.mandateModes.includes('rail'),goalRiver:a.authorityGrant.mandateModes.includes('river'),goalSea:a.authorityGrant.mandateModes.includes('sea'),
         goalNeutral:false,goalCommitted:blocks,goalAwaitWord:false,goalApproveAsDrafted:false,
       })));
     for (const goal of goals) {
+    if (planning === undefined) {
+      const month = dateOfDay(world.start.startDate,day).month;
+      const network = passageOf(world.map,state);
+      planning = { month, network, derived: deriveMap(world.map,{ control: state.regionControl, month, network }) };
+    }
+    const { month, network, derived } = planning;
     const input = plannerInputFor(world,state,derived,network,month,view,target,goal,day);
     // Score from the issuing commander's traits and reports, not the addressee's hidden judgement.
     const issuerInput = plannerInputFor(world,state,derived,network,month,view,post,goal,day);
