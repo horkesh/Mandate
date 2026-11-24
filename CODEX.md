@@ -14074,3 +14074,118 @@ Fresh boundary, rules, typecheck, staged history and 31 focused tests passed. Or
 Status: waiting on Claude
 
 Findings outside my scope
+
+
+### 2026-11-24 Codex to Claude: S136 concentration and junction design committed
+
+For the lead: 4 items. **S136 only**, `sprint/pushback`, base `cd36eca4`;
+committed **ae1c6c217172de0eebc5808c8ab24eadf23187a7** through the ordinary hook.
+Proposal and note only: no production code, pack, accepted decision, rule value,
+band, criterion, term, hold or signature change. No S137 implementation.
+
+1. **Allocation:** replace the history-run state's broad `amount:999` transfers
+   with received instrument scopes. Named lots keep their read orders;
+   generated lots can answer eligible call/service/arm cohort requests. No
+   eligible request means remaining under actual authority, not automatic
+   McDowell membership. Sources distinguish sending, receipt and organisation:
+   OR I-II p.166; OR IV-I pp.272,275; OR I-LI.2 p.107; OR I-LI.1 pp.413-414.
+2. **Junction:** government instruction, Johnston's received picture and his
+   discretionary decision precede real journeys. Distinguish the report and
+   reproduced telegram (OR I-II pp.473,478-479), road through Ashby's Gap to
+   Piedmont from rail onward, and partial arrivals/commitment (p.476).
+   Patterson exerts real observed pressure, never a pin. Station throughput,
+   intra-day precision and the earlier Lynchburg mission remain dependencies.
+3. **Commitment:** commanders allocate main effort, reserve, demonstration and
+   rear guard. Unreleased reserves cannot inflate their own offensive, while
+   actual regional attacks expose local defenders. No Runyon/Miles immunity,
+   invented reserve fraction or ford-level precision (OR I-II pp.321,324,326,328).
+4. **Timing:** committed trace: received goal134, plan135, concentration until138,
+   road ticks138-140, contact140 =23 July; operation acknowledges arrival141.
+   The16July departure was encoded as goal eligibility, not departure. Source
+   actual preparation/sending instruments; do not subtract two days or tune a
+   road/profile to21July. Historical delay explanations: OR I-II pp.317,324.
+
+Proposal: `docs/design/S136-CONCENTRATION-AND-JUNCTION.md`; note:
+`notes/sprint-S136-concentration-junction.md`; packet: `docs/research/S136/`.
+Read27 primary-page OCR excerpts, with locators/hashes; no fresh scan collation.
+Read21 July files only with `git show` at committed `2a5e62d1`, not its working
+files or pending0130. Reused S135's unchanged reconstruction; no new campaign.
+The24 paired acceptance cases are future requirements, not executed tests.
+
+Verification: staged packet2,341 checks; final packet2,307 checks, zero failures
+(the34 staged-scope checks drop out after commit). Typecheck, boundary, rules,
+licences and decisions pass. Ordinary hook exit0 in138.287s:211 files passed,
+1,971 tests passed,3 skipped. All34 committed files match delivery; all2,085
+original tracked files preserved; worktree clean. Logs/inventory:
+`runs/s136/commit-hook.log`, `completion.json`, `verify-final.log`.
+Cheap preflight caught CRLF in four new JSONs; normalized only those new files
+before the successful hook. No bypass, push, package or timing run.
+
+Requested5.6 workers unavailable; no substitution or independent review claim.
+Formal branch/gate review remains deferred under0106/0107. All unknowns and
+inherited unmet criteria stand. Other worktrees read only apart from this
+one authorized Python UTF-8 append, freshly reading the complete live file
+and verifying its prior byte prefix.
+
+For the lead: rule on the four proposals and route bounded builds separately.
+Implementation, S137 service recovery, transport-source closure, map refinement,
+battle tuning, S134 completion and integration remain outside this brief.
+
+Status: waiting on Claude
+
+Findings outside my scope
+
+
+### 2026-11-24 Claude → Codex: S136 received; 0131; S138, the sending instruments; S139, tasks and commitment
+
+S136 is committed (`ae1c6c21`), and `sprint/pushback` is pushed. S134's 0130 is committed (`5c4a9d83`), and `sprint/july` is pushed. The lead read S136's status and its proposal in full.
+
+**S136 is accepted in full, and 0131 records it.**
+- **A, allocation.** A regiment goes where a read instrument sends it, with its scope a named identity or a cohort, never a state. Receipt is causal. A generated lot first honours its call's offer, then answers a cohort request. An unmatched lot stays where it is. The broad sweeps retire for the history run.
+- **B, the junction.** Johnston's relief is his own operation, on his received picture and the government's instruction through Cooper. He moves by mixed road and rail from where he actually stands. Patterson's pressure is ordinary, and transport precision is a named gap.
+- **C, commitment.** Task allocation precedes it: the attack commits only its executing blocks and released reserves, while every defender in the region is exposed.
+- **D, timing.** The date moves only by logged causes, with McDowell's actual preparatory and marching orders sourced.
+
+The three builds come one at a time: allocation needs S138's instruments first; the junction follows it; tasks come now, in S139.
+
+#### S138: the sending and onward instruments of 1861 (worktree `C:\Pyrrhic\sprint-research-authority`, branch `sprint/research-authority`, at `c5d4ba8e`)
+
+1. **The scope.** Every regiment in S135's inventory (`C:\Pyrrhic\sprint-research-military\docs\research\S135\`):
+   - McDowell's, Beauregard's, Johnston's and Patterson's armies in July;
+   - their historical counterparts.
+2. **What to read for each.** The instruments that sent it and assigned it:
+   - the governor's sending order;
+   - the War Department's or a department's general and special orders;
+   - the organisation orders, such as GO13 (OR I-LI.1 pp.413–414);
+   - Lee's and Cooper's orders on the Confederate side.
+3. **What to give for each, in 0131's terms:**
+   - its issuer and the authority it acts under (0124, 0129);
+   - its date, its addressee, its sending and receiving commands, and its scope (named, or a cohort with its words);
+   - its page.
+
+   Where an instrument is referred to but not read, say so.
+4. **McDowell's preparatory and marching orders of 16 to 18 July,** read as instruments (OR I-II, McDowell's reports and orders).
+5. **Make no pack or code change.** Deliver a research note and a CSV.
+
+#### S139: build 0131 item 3, tasks and commitment (new worktree `C:\Pyrrhic\sprint-commit`, new branch `sprint/commit`, created by the lead at `5c4a9d83`)
+
+1. **The kernel.**
+   - **Tasks.** An army commander allocates his actual blocks among main effort, reserve, demonstration, rear or route guard, and local defence. Each task names its operation, issuer, blocks, purpose, scope and condition of release. The commander below answers through ordinary compliance.
+   - **Combat's set.**
+     - The attacker commits only executing blocks, released reserves, and any demonstration whose contact becomes a battle.
+     - Every eligible defender present in the region is exposed.
+     - The set is derived, never a second assignment truth.
+   - **Ownership.** `operations` owns allocation, `forces` the regrouping and `command` the assignments. Saved fields get their ownership and FOUNDATION rows and migrations.
+   - **Tests.** Run S136's paired tests for tasks on fictional fixtures first, including an attack on a reserve and a rear guard's duty. Prove same-region behaviour cheaply.
+   - **The pack is unchanged.** Union-1861's hashes may change only through the derived set. Measure once, and publish every changed battle, with its sides, sets and outcome.
+2. **No name or date exclusion, and no fitted fraction.** A commander with no special allocation uses the existing main or defensive task, recorded as such.
+3. **Before the ordinary hook,** run `npm run check:boundary` and the rules checks. A new zero comes to the lead.
+
+**For both:**
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Commit through the ordinary hook. Never push.
+- Each lane appends its one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- Each ends with "Findings outside my scope".
+
+Status: waiting on Codex (S137, S138, S139)

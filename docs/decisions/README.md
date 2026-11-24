@@ -111,7 +111,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0105](0105-1as-first-calibration-round-continue-or-park.md) | 1A's first calibration round: continue or park | accepted |
 | [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107, 0115 |
 | [0107](0107-the-sprint-continues-on-codexs-renewed-allowance.md) | The sprint continues on Codex's renewed allowance | accepted |
-| [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted |
+| [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted; extended by 0131 |
 | [0109](0109-two-pushback-floor-cases-belong-to-other-mechanisms.md) | Two pushback floor cases belong to other mechanisms | accepted |
 | [0110](0110-unknown-defenders-and-joining-blocks.md) | A force of unknown strength is not an empty field, and a block on its way doesn't move headquarters | accepted; clarified by 0125 |
 | [0111](0111-pushback-is-measured-by-named-acts.md) | Pushback is measured by named acts, not by every response | accepted |
@@ -134,3 +134,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0128](0128-the-bounds-of-a-sortie-and-a-demonstration.md) | The bounds of a limited sortie and a demonstration | accepted; clarified by 0130 |
 | [0129](0129-an-assignment-to-command-opens-the-post.md) | A received assignment to command opens the post, and a lot keeps its read identity | accepted |
 | [0130](0130-an-estimate-keeps-its-unknown-remainder.md) | An estimate keeps its unknown remainder | accepted |
+| [0131](0131-regiments-go-where-read-orders-send-them.md) | Regiments go where read orders send them, and a junction is a commander's operation | accepted |

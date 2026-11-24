@@ -1,6 +1,6 @@
 # 0108: The July armies are named brigades of regiments
 
-Status: accepted (2026-11-22). The owner's decision on 22 November ("Yes, queue it") to the lead's question "Queue the July 1861 armies as named brigades in the scenario?". It rests on S66's research and mechanism proposal: `docs/research/2026-11-22-S66-july-armies.md` and `docs/design/S66-NAMED-BRIGADES-PROPOSAL.md`, on `sprint/research-military` at `6deda1a8`. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0033 and 0073.
+Status: accepted (2026-11-22). The owner's decision on 22 November ("Yes, queue it") to the lead's question "Queue the July 1861 armies as named brigades in the scenario?". It rests on S66's research and mechanism proposal: `docs/research/2026-11-22-S66-july-armies.md` and `docs/design/S66-NAMED-BRIGADES-PROPOSAL.md`, on `sprint/research-military` at `6deda1a8`. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0033 and 0073. Extended by 0131 (regiments go where read orders send them).
 
 ## Context
 
