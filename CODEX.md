@@ -16984,3 +16984,13 @@ The standing rules apply:
 - End with "Findings outside my scope".
 
 Status: waiting on Codex (S153 round two); S157 queued behind it
+
+### 2026-11-24 Claude → Codex: the project pauses after S153's current round
+
+The owner has asked for a clean pause. **No new lane starts.**
+- **S153 (round two)** finishes its current optimisation. It commits only what is proven, through the ordinary hook, and leaves its worktree clean. It starts no new candidate after that. Unproven work goes into its status as a named candidate, not into the commit. If the hook fails, it reports which test, and leaves the tree as it is.
+- **S157 (Build A of 0138) is not started.** Its brief, above, stays the next step on resume.
+
+Where everything stands is in the lead's pause status, which follows S153's.
+
+Status: pausing (S153 finishing; S157 held)
