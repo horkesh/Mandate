@@ -1,0 +1,13 @@
+import { writeFileSync } from 'node:fs';
+import { phase0Run } from './packages/cli/src/phase0-run.ts';
+const smoke = process.argv.includes('--smoke');
+const summary = phase0Run({pack:'union-1861',days:smoke?2:148,atWar:false,checks:false,replay:false,hash:'checkpoints',checkpointEvery:smoke?2:148,onTick:(_world,r)=>{
+  const state=(r as any).state;
+  if (!state) throw Error('no state in TickResult');
+  const day=(r as any).day;
+  if (!state.forceBlockStates || !state.forceLocations || !state.postStates || !state.forceAssignments || !state.battleRecords) throw Error('missing audit selectors: '+Object.keys(state));
+  writeFileSync(`../daily-${day}.json`,JSON.stringify({day,forces:state.forceBlockStates,locations:state.forceLocations,posts:state.postStates,assignments:state.forceAssignments,factions:state.departmentFactions,battles:state.battleRecords,operations:state.operationRecords,joins:state.forceJoins}));
+  if(day===148) writeFileSync('../reconstructed-final-state.json',JSON.stringify(state));
+}});
+writeFileSync(smoke?'../smoke-summary.json':'../reconstruction-summary.json',JSON.stringify(summary,null,2)+'\n');
+console.log(JSON.stringify({smoke,finalHash:summary.finalHash,rejections:summary.rejections,days:summary.finalDay}));

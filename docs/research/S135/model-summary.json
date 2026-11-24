@@ -1,0 +1,136 @@
+{
+  "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "final_hash": "b3054fd0f6beabf08792de5213a92320678c0beeb750cbc00fbd1d4ee447886e",
+  "world_hash": "b28330db4467c2cbbc6dd24e3e34de1784d0446127f193ff8dbb6b693ce2b86d",
+  "exact_battles": true,
+  "rejections": 0,
+  "days": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "rows": 576,
+  "blocks": 42,
+  "day140_categories": [
+    {
+      "side": "union",
+      "category": "named_on_McDowell_roster",
+      "lots": 24,
+      "men": 20784,
+      "ids": [
+        "ny_2_militia_infantry",
+        "ny_79_infantry",
+        "ma_1_infantry",
+        "mi_2_infantry",
+        "ny_14_militia_infantry",
+        "nh_2_infantry",
+        "ri_2_infantry",
+        "ny_11_infantry",
+        "ny_38_infantry",
+        "vt_2_infantry",
+        "nj_1_3y_infantry",
+        "nj_2_3y_infantry",
+        "nj_3_3y_infantry",
+        "ny_29_infantry",
+        "ny_8_infantry",
+        "ny_39_infantry",
+        "ny_16_infantry",
+        "ny_18_infantry",
+        "ny_31_infantry",
+        "ny_32_infantry",
+        "me_3_infantry",
+        "ma_11_infantry",
+        "ny_27_infantry",
+        "ny_41_infantry"
+      ]
+    },
+    {
+      "side": "confederate",
+      "category": "generated_no_named_counterpart",
+      "lots": 6,
+      "men": 6000,
+      "ids": [
+        "generated.raised.st_gov_alabama.d122.2.1",
+        "generated.raised.st_gov_alabama.d122.2.2",
+        "generated.raised.st_gov_alabama.d122.2.3",
+        "generated.raised.st_gov_south_carolina.d125.1",
+        "generated.raised.st_gov_south_carolina.d125.2",
+        "generated.raised.st_gov_south_carolina.d125.3"
+      ]
+    },
+    {
+      "side": "union",
+      "category": "named_outside_McDowell_roster",
+      "lots": 18,
+      "men": 15588,
+      "ids": [
+        "ct_4_infantry",
+        "ma_2_infantry",
+        "ma_9_infantry",
+        "ny_15_infantry",
+        "ny_17_infantry",
+        "ny_19_infantry",
+        "ny_22_infantry",
+        "ny_23_infantry",
+        "ny_24_infantry",
+        "ny_25_infantry",
+        "ny_28_infantry",
+        "ny_30_infantry",
+        "ny_33_infantry",
+        "ny_35_infantry",
+        "ny_37_infantry",
+        "ny_40_infantry",
+        "ny_42_infantry",
+        "ny_9_militia_infantry"
+      ]
+    },
+    {
+      "side": "union",
+      "category": "generated_no_named_counterpart",
+      "lots": 27,
+      "men": 23382,
+      "ids": [
+        "generated.raised.st_gov_massachusetts.d76.5",
+        "generated.raised.st_gov_massachusetts.d76.6",
+        "generated.raised.st_gov_michigan.d77.2",
+        "generated.raised.st_gov_michigan.d77.3",
+        "generated.raised.st_gov_new_york.d64.37",
+        "generated.raised.st_gov_new_york.d64.38",
+        "generated.raised.st_gov_new_york.d64.22",
+        "generated.raised.st_gov_new_york.d64.23",
+        "generated.raised.st_gov_new_york.d64.24",
+        "generated.raised.st_gov_new_york.d64.25",
+        "generated.raised.st_gov_new_york.d64.26",
+        "generated.raised.st_gov_new_york.d64.27",
+        "generated.raised.st_gov_new_york.d64.28",
+        "generated.raised.st_gov_new_york.d64.29",
+        "generated.raised.st_gov_new_york.d64.30",
+        "generated.raised.st_gov_new_york.d64.31",
+        "generated.raised.st_gov_new_york.d64.32",
+        "generated.raised.st_gov_new_york.d64.33",
+        "generated.raised.st_gov_new_york.d64.34",
+        "generated.raised.st_gov_new_york.d64.35",
+        "generated.raised.st_gov_new_york.d64.36",
+        "generated.raised.st_gov_new_york.d83.9",
+        "generated.raised.st_gov_new_york.d83.10",
+        "generated.raised.st_gov_new_york.d83.11",
+        "generated.raised.st_gov_new_york.d83.12",
+        "generated.raised.st_gov_new_york.d83.13",
+        "generated.raised.st_gov_new_york.d83.14"
+      ]
+    },
+    {
+      "side": "confederate",
+      "category": "Garland_return",
+      "lots": 1,
+      "men": 490,
+      "ids": [
+        "unidentified.state-forces.va_manassas_garland"
+      ]
+    }
+  ]
+}

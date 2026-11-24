@@ -1,0 +1,348 @@
+{
+  "passed": 3464,
+  "failed": 0,
+  "source_commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "tracked_baseline": "c1e535983c84c455ee19e551d035b504dd1bffca",
+  "source_files": 503,
+  "packet_files": 67,
+  "inventory": [
+    {
+      "path": "docs/research/S135/audit-observer.txt",
+      "bytes": 1250,
+      "sha256": "ba9319aa0b100fa24e3d77e5138f8fabc281dc233d5bc39b5d24cdf587e63eef"
+    },
+    {
+      "path": "docs/research/S135/battle-days.csv",
+      "bytes": 8483,
+      "sha256": "9532946212b93cb4b5d8bbd32f58d3f9fd060d1fe8b7d079b67543ccd79631aa"
+    },
+    {
+      "path": "docs/research/S135/causes-and-remedies.csv",
+      "bytes": 5442,
+      "sha256": "68cbdd6b47871db785d7fe2c56a3ca24053a1d04e3753b84d90f884236427619"
+    },
+    {
+      "path": "docs/research/S135/confederate-dispositions.csv",
+      "bytes": 32836,
+      "sha256": "eb65ed3868f5e429b71c48d150bbeefbd2232041618c2277989524ac7598f3ef"
+    },
+    {
+      "path": "docs/research/S135/historical-strengths.csv",
+      "bytes": 14169,
+      "sha256": "0a3e2679dc071cc895d514520440d99f173117f5f6b2829fbb82402ad5111667"
+    },
+    {
+      "path": "docs/research/S135/historical-unit-crosswalk.csv",
+      "bytes": 110379,
+      "sha256": "2478da3e6625364e4e9ca4dd218954e15f2ef3ad470d5dbc832e6f8455681c2c"
+    },
+    {
+      "path": "docs/research/S135/input-receipts.json",
+      "bytes": 89902,
+      "sha256": "efcd7e5beb539effd74d92b68b57116a97477f874265fd9c7a58b4d4fa739783"
+    },
+    {
+      "path": "docs/research/S135/johnston-historical-arrivals.csv",
+      "bytes": 4805,
+      "sha256": "8f97fc3d7aa47c5e6ef25c6c3bab6b93fd3d6cfd3ebfde9b43f2c2f9a94614a0"
+    },
+    {
+      "path": "docs/research/S135/johnston-trajectory.json",
+      "bytes": 175268,
+      "sha256": "409bba9e5a32093ed5d9f30959ff9f5bef970aa22b0831629048028968be67a9"
+    },
+    {
+      "path": "docs/research/S135/model-blocks.csv",
+      "bytes": 8299,
+      "sha256": "e83e619dc70c4c80feb922909c762633e8ffd08cd4c8e938e34cc43356772897"
+    },
+    {
+      "path": "docs/research/S135/model-lot-differences.csv",
+      "bytes": 55529,
+      "sha256": "611d934d2da66c7059bf8c8b66280fd1cfdc49b6c2b31ee0e0c982d3bee03d3a"
+    },
+    {
+      "path": "docs/research/S135/model-lots-daily.csv",
+      "bytes": 314842,
+      "sha256": "e2539d9e33dee2f921291cbb12c8ef6ed0a309a3807422f19c725de51bb470f5"
+    },
+    {
+      "path": "docs/research/S135/model-summary.json",
+      "bytes": 4010,
+      "sha256": "527ccac01fe6457177cb532da4622ba254319c7836d4af5a5f64803096b020e4"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ma_2_infantry.txt",
+      "bytes": 425,
+      "sha256": "fd6f5e8d9915cec3216ae3e056fc4fbb610951899d5ede88fbef88863a0ae551"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ma_9_infantry.txt",
+      "bytes": 259,
+      "sha256": "65948aabfae7d243fad392603063a2d9c6ff663816ee231562a19ed5d1cea829"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_15_infantry.txt",
+      "bytes": 484,
+      "sha256": "24f1f9791171f7fbb00e3bee9887cd5bdc9f1ae14a63bde0cd99b229d054b566"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_17_infantry.txt",
+      "bytes": 409,
+      "sha256": "58e2489e9614e4480db3e37c8a7ccf7c98ddf960acd00447ac97161de5c65dd0"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_22_infantry.txt",
+      "bytes": 314,
+      "sha256": "0c662cbc4f2f31b4f36c8bfd76252cd56e6610f5bb34be2891e8dd76a93a40fe"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_23_infantry.txt",
+      "bytes": 326,
+      "sha256": "22ff44c738a06fc62406139e954ae4b54345301f42098d244febc47520a96ea4"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_24_infantry.txt",
+      "bytes": 343,
+      "sha256": "4dd7667bdddb1a7f037e17c9c4d83b09997fe1c7487cabac9b5eae52bca3ba22"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_25_infantry.txt",
+      "bytes": 455,
+      "sha256": "49fa95ca229339dacd7b43ff9af4dcc365d59dc1cea5ba9dc7620de9d7d28467"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_30_infantry.txt",
+      "bytes": 323,
+      "sha256": "201ce38f97869dee890ebc3a667bc5689a5525b4c77529754a567535c6129400"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_33_infantry.txt",
+      "bytes": 325,
+      "sha256": "a2c94d4729060b9a71d67f5e711775aa2921172de59d1b30c39201cbfce82a7f"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_35_infantry.txt",
+      "bytes": 306,
+      "sha256": "e2af7811a8b30a095caacdd9e7f5221adb0b2812e5f32e2dfd2d81169977ca60"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_37_infantry.txt",
+      "bytes": 314,
+      "sha256": "c39cb102a20534182d0cbf1445b82d193e341d1a8fb640a24bcba25eeafe8a12"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_40_infantry.txt",
+      "bytes": 358,
+      "sha256": "02b6669407fb073051c54e021767c6a7826ff8cda7473f151554d4c7f2de8c17"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_42_infantry.txt",
+      "bytes": 316,
+      "sha256": "39c02b75fa21e743a6a4a26cac3dba80a1fbed2ecebadb34ee933ce36a91428d"
+    },
+    {
+      "path": "docs/research/S135/read/Dyer-entry-ny_9_militia_infantry.txt",
+      "bytes": 401,
+      "sha256": "98836193fccb0e6a48b74be7c215db3811519f969af997d6d08dfd695c83892b"
+    },
+    {
+      "path": "docs/research/S135/read/III1-p151.txt",
+      "bytes": 2898,
+      "sha256": "20f224029ffb92331a554a62a955135f26776ffc58a127a55cc5acd9234a858d"
+    },
+    {
+      "path": "docs/research/S135/read/III1-p152.txt",
+      "bytes": 3768,
+      "sha256": "b267c6faa9c94ab74b52b5ae855a3ad044182014c2212b08ea488ceb1efb8cb4"
+    },
+    {
+      "path": "docs/research/S135/read/IV1-p402.txt",
+      "bytes": 3277,
+      "sha256": "4498b0ba7c503c62fec02752e9f30bf7b26562681a36e8d97a2c81dfd0905591"
+    },
+    {
+      "path": "docs/research/S135/read/IV1-p403.txt",
+      "bytes": 4124,
+      "sha256": "80f6f1727d8afeeb5818820708af8e8b9c101fd6783dd9fd313645fe8cb94ed2"
+    },
+    {
+      "path": "docs/research/S135/read/IV1-p404.txt",
+      "bytes": 3156,
+      "sha256": "76da95c255ed2a447b2b1e9e461f8e2945fb6f0b6edb9a58731ede8dec5cb308"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-51.1-p406.txt",
+      "bytes": 2400,
+      "sha256": "145539fea084db0dcda9b5637be8a0521f429073a8352e098d4c3adbc4aa6e05"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-51.1-p416.txt",
+      "bytes": 2478,
+      "sha256": "d2d6d16b884ad6f0ccbd743afa9fa334e03c4e7381ce3bc375770ec9bc07eeac"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p187.txt",
+      "bytes": 1452,
+      "sha256": "c27324dd9819ab658fac3356fb3909b3e3e5e96868ed5e11b18afb03b7fccb47"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p309.txt",
+      "bytes": 2824,
+      "sha256": "8b460871e7a09e62119e6636eea9858a899ba772cd3b1f585a37b947aebe1165"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p314.txt",
+      "bytes": 2194,
+      "sha256": "9e72ffb926883d15eb52bcaa3649b7f35e6613643e7c8e7f533c3b1838da95a4"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p315.txt",
+      "bytes": 2466,
+      "sha256": "478322a68e7a7d88c48c7b65c4ca22ad7187303102e859f0d3f9087f76a68109"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p316.txt",
+      "bytes": 2870,
+      "sha256": "6dcc68e766ca8803824931ff59423b429916168f0e9a79e15092dd2e5245d066"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p317.txt",
+      "bytes": 3603,
+      "sha256": "972e9477d8bdfedc94406ca0e87d7062a090bc71e7219ab42b1b60b639285c22"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p321.txt",
+      "bytes": 4327,
+      "sha256": "fda34a26ba923f7184314b30ba49dd903b24251bbeed765320cb63f62786577e"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p324.txt",
+      "bytes": 4378,
+      "sha256": "a5ae720e553127c75d70b57c6686440c3f18e6f858d2e92d9105c7b5a16503c0"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p325.txt",
+      "bytes": 3718,
+      "sha256": "c334a06d3c1498f467be4bb66255bc3b0fcd93bdd1fe00c2f3d85df337c7009d"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p353.txt",
+      "bytes": 4082,
+      "sha256": "e299ba357b82add2191c61e37b7a97a8dfb2aeabb2649d15943f8ddcd665baeb"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p355.txt",
+      "bytes": 4070,
+      "sha256": "cc3a735051252031180208bf0bd9758044738efb3b99c08bfb639e9e27baa929"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p383.txt",
+      "bytes": 3567,
+      "sha256": "4708b871877dfbbd77ebd664a967f7961b7621a42e9400df77ec0608cf454890"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p42.txt",
+      "bytes": 2796,
+      "sha256": "dd87dd0dddaf736716ced95e9e782fd5850846f36ea4eb9051b086c0579ea8aa"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p469.txt",
+      "bytes": 2565,
+      "sha256": "0ea015f91c8f4682836dc334f8a597a9742bff9a50bebe12d77fccd2d0af1659"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p470.txt",
+      "bytes": 2114,
+      "sha256": "05648a43d9ccf79ec1617464db8d07410d1bbc9b4fd4430211f9aa65968b9146"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p472.txt",
+      "bytes": 4318,
+      "sha256": "bd4360bc7a4c4d38a2472b676ec9637fc98ebbcdbd335298b186d96a9bffbf8c"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p473.txt",
+      "bytes": 4333,
+      "sha256": "8ba7bf473b81ce0b3e722887faa9e201c8d80293bac528eea03998e6375c1734"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p476.txt",
+      "bytes": 4373,
+      "sha256": "221437e2b6f9d4af4adda120391b3a3a1b26318987dea16e51cdf40ecd2ab5f1"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p478.txt",
+      "bytes": 3981,
+      "sha256": "837b11cc5d51872ee147cff48e53fe50901f3429a257535679f25151f2c721c4"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p481.txt",
+      "bytes": 3900,
+      "sha256": "5892004a3d489e483b125548bfd222065c00aab62a3ee5b228b5eb8484a20915"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p482.txt",
+      "bytes": 3628,
+      "sha256": "40823696ddb95518515d841810d2561e5592afab72e0ade1ee2aa29b8aa40cfe"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p484.txt",
+      "bytes": 2907,
+      "sha256": "34757afad88e7defac5dfde6a706c22b19db59ea11f5d1024e2377727e16589d"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p486.txt",
+      "bytes": 4372,
+      "sha256": "d6c0687d9d255ca2b8e9a55df3834b662172383d9f21f5daf4ae136367925e80"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p487.txt",
+      "bytes": 4098,
+      "sha256": "8846f4fe71c66fd533784bd55c78c724677803fcb6693def71c8f52dc5181326"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p565.txt",
+      "bytes": 3935,
+      "sha256": "255a6d16407875c284fd75da68d1d08e5fc36aed7528755d887680717584a6bb"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p566.txt",
+      "bytes": 3749,
+      "sha256": "a7ecdeed7619fb8c18c9600fe866c6c0e94798a091427783afb35b984754ee38"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p568.txt",
+      "bytes": 2279,
+      "sha256": "fb6ce02797916f7984fdbd2d88e7b44c254e8c6f7c342e29ed1c29afccdb414f"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p569.txt",
+      "bytes": 2451,
+      "sha256": "319101bb3d26a93c86b2eb5736339d01971babc9a9e9be843e791d08f7752555"
+    },
+    {
+      "path": "docs/research/S135/read/OR-I-II-p841.txt",
+      "bytes": 4169,
+      "sha256": "fc0da8cd448da07ffd8feb9a5c71e016a755207560e13e8b655ba556dca9cb0c"
+    },
+    {
+      "path": "docs/research/S135/reconstruction-proof.json",
+      "bytes": 1939,
+      "sha256": "f19d9363ea434ad30ea7c457c9fba2ea993c7f353bb19e769eb474485d43f3b7"
+    },
+    {
+      "path": "docs/research/S135/source-reading.json",
+      "bytes": 28065,
+      "sha256": "e415fe84a24e9a2160370f853d8450f82c332b150f3f49ec4fa4bf511f8b364f"
+    },
+    {
+      "path": "docs/research/S135/unit-placement-differences.csv",
+      "bytes": 8414,
+      "sha256": "34a6c4a9db12f51540753613c199a382c0f07b7a407ecd759d098d1e03823525"
+    }
+  ],
+  "raw_evidence": "runs/s135",
+  "formal_review": "deferred under0106/0107; requested5.6 worker models unavailable, no substitution",
+  "limitations": "No current 0130 working file read; permitted committed merge fallback. Unknown personnel and unmapped identities stay open. No criterion waived."
+}
