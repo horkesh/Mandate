@@ -1,0 +1,11 @@
+{
+  "entry": "7d3c1bcd",
+  "merged": "070accce",
+  "entryTrackedPathsRetained": 3899,
+  "protectedInputsExactIgnoringCheckoutLineEndings": 638,
+  "allPacksAllS150PublishedEvidenceArtGatesAndScannerProtected": true,
+  "failsMarksUnchanged": true,
+  "behaviourBandFloorValueChanges": false,
+  "profileAndTimingRunsMatchCheckedProofs": true,
+  "scannersUnchanged": true
+}

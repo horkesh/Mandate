@@ -109,7 +109,7 @@ export function localOptions(world: SeatsWorld, state: State, person: PersonId, 
   if (previous !== undefined) return previous;
   if (world.start.factions.some(f => f.principal === person)) {
     const post=heldPost(state,person);
-    const selected = post===null?[]:forceOptions(world,state,person,post,day,ground).filter(o=>o.kind==='force-answer');
+    const selected = post===null?[]:forceOptions(world,state,person,post,day,ground,cache).filter(o=>o.kind==='force-answer');
     morning.people.set(person,selected);
     return selected;
   }
@@ -123,7 +123,7 @@ export function localOptions(world: SeatsWorld, state: State, person: PersonId, 
 function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId, cache: ViewCache, ground: LocalPlanningGround): LocalOption[] {
   const active = currentMandates(state,post).filter(a => activeMandate(world.map,state,a,day));
   const out: LocalOption[] = assignmentOptions(world,state,person,day,cache).filter(o=>o.paper.from===post);
-  out.push(...forceOptions(world,state,person,post,day,ground));
+  out.push(...forceOptions(world,state,person,post,day,ground,cache));
   out.push(...allocationFulfilments(world,state,person,day).filter(o=>o.paper.from===post).map(o=>({id:`fulfil:${o.row.allocOrder}`,kind:'allocation-fulfil' as const,authority:null,order:o.row.allocOrder,paper:o.paper})));
   out.push(...availableAllocations(world,state,person,day).filter(p=>p.issuerPost===post && active.some(a=>a.authorityGrant.mandateKey===p.mandate && a.authorityGrant.mandateActions.includes('assign'))).map(p=>({id:`allocation:${p.id}`,kind:'allocation' as const,authority:null,paper:p})));
   for (const paper of availableMandatePapers(world,state,person,day,cache)) {
@@ -210,10 +210,10 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
     if (planning === undefined) {
       planning = ground();
     }
-    const { month, network, derived } = planning;
-    const input = plannerInputFor(world,state,derived,network,month,view,target,goal,day);
+    const { month, network, derived, plannerCache } = planning;
+    const input = plannerInputFor(world,state,derived,network,month,view,target,goal,day,plannerCache);
     // Score from the issuing commander's traits and reports, not the addressee's hidden judgement.
-    const issuerInput = plannerInputFor(world,state,derived,network,month,view,post,goal,day);
+    const issuerInput = plannerInputFor(world,state,derived,network,month,view,post,goal,day,plannerCache);
     const set = draft({ ...input, profile: issuerInput.profile });
     for (const candidate of set.draftCandidates) if (candidateWithin(state,a,target,goal,candidate)) {
       out.push({ id: `goal:${canonicalHash({ origin: a.authorityOrigin, target, goal, candidate }).slice(0,24)}`,

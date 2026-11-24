@@ -1,0 +1,54 @@
+[
+  {
+    "stage": "merge",
+    "profileMatchesProof": true
+  },
+  {
+    "stage": "step2",
+    "profileMatchesProof": true
+  },
+  {
+    "stage": "step3",
+    "profileMatchesProof": true
+  },
+  {
+    "reference": "history",
+    "adjacentBaseline": "070accce (pinned snapshot, private workspace links)",
+    "before": {
+      "unit": "ms",
+      "days": 148,
+      "median": 68.15880000000016,
+      "p95": 103.14880000000085,
+      "max": 134.5519000000004
+    },
+    "after": {
+      "unit": "ms",
+      "days": 148,
+      "median": 61.20639999999912,
+      "p95": 93.00879999999961,
+      "max": 117.63479999999981
+    },
+    "finalHashesAndActivityEqual": true,
+    "advisoryOnly": true
+  },
+  {
+    "reference": "war",
+    "adjacentBaseline": "070accce (pinned snapshot, private workspace links)",
+    "before": {
+      "unit": "ms",
+      "days": 148,
+      "median": 52.611799999998766,
+      "p95": 95.37289999999848,
+      "max": 146.0724999999984
+    },
+    "after": {
+      "unit": "ms",
+      "days": 148,
+      "median": 48.85359999999855,
+      "p95": 79.92929999999978,
+      "max": 126.5047999999988
+    },
+    "finalHashesAndActivityEqual": true,
+    "advisoryOnly": true
+  }
+]

@@ -1,4 +1,8 @@
-import { expect, it } from 'vitest';
+import { expect, it, vi } from 'vitest';
+import * as plannerInputs from '../src/planner/input.ts';
+import { forceOptions } from '../src/seats/force-requests.ts';
+import { createViewCache, viewFor } from '../src/view/view.ts';
+import * as beliefs from '../src/knowledge/beliefs.ts';
 import { fixtureMap, fixtureStart, P, POST, R } from './support/seats-fixture.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
@@ -96,6 +100,40 @@ function ask(g:ReturnType<typeof requesting>,state=g.state) {
  const delivered=deliverReport(next.state,seatIdFor(P('a_sec')),{id:message.id,knownBody:message.msgReport!,knownReceivedDay:2,knownRoute:'courier',knownVia:[]},{truthTerms:[],truthTrimmed:[]});
  return {state:delivered,message,option};
 }
+
+it('S153: a matching outstanding request stops before rebuilding its planner input',()=>{
+ const g=requesting(), pending=ask(g).state, before=canonicalHash(pending);
+ const spy=vi.spyOn(plannerInputs,'plannerInputFor');
+ try {
+  expect(forceOptions(g.world,pending,P('a_gen'),POST('a_army'),3).some(o=>o.kind==='force-request')).toBe(false);
+  expect(spy).not.toHaveBeenCalled();
+  expect(canonicalHash(pending)).toBe(before);
+ } finally {spy.mockRestore();}
+});
+
+it.each(['mission','task','scope'] as const)('S153: an outstanding request for another %s still evaluates the current mission',kind=>{
+ const g=requesting(), pending=ask(g).state, row=Object.values(pending.forceRequests!)[0]!;
+ const need={...row.freqNeed,...(kind==='mission'?{needMission:toId('message','different-mission')}:kind==='task'?{needTask:'hold'}:{needScope:{...row.freqNeed.needScope,minTermDays:2}})};
+ const state={...pending,forceRequests:{[row.freqId]:{...row,freqNeed:need}}};
+ const spy=vi.spyOn(plannerInputs,'plannerInputFor');
+ try {
+  expect(forceOptions(g.world,state,P('a_gen'),POST('a_army'),3).some(o=>o.kind==='force-request')).toBe(true);
+  expect(spy).toHaveBeenCalled();
+ } finally {spy.mockRestore();}
+});
+
+it('S153: force planning reuses the caller received picture without changing its options',()=>{
+ const g=requesting(), cache=createViewCache(), seat=seatIdFor(P('a_gen'));
+ const expected=forceOptions(g.world,g.state,P('a_gen'),POST('a_army'),1);
+ const picture=viewFor(g.world,g.state,seat,cache);
+ const before=canonicalHash(g.state), spy=vi.spyOn(beliefs,'latestEnemyClaims');
+ try {
+  expect(forceOptions(g.world,g.state,P('a_gen'),POST('a_army'),1,undefined,cache)).toEqual(expected);
+  expect(spy).not.toHaveBeenCalled();
+  expect(viewFor(g.world,g.state,seat,cache)).toBe(picture);
+  expect(canonicalHash(g.state)).toBe(before);
+ } finally {spy.mockRestore();}
+});
 
 it('S150 capture observes batched force request and answer receipts once without changing delivered State',()=>{
  const g=requesting(), a=ask(g), id=toId('message','capture-answer');

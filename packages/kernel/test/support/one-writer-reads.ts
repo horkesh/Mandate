@@ -82,7 +82,7 @@ export const REVIEWED_READS: readonly SourceReadClassifications[] = [
   },
   {
     path: 'packages/kernel/src/seats/force-requests.ts',
-    hash: 'ca7a978cfc5af23774aa5ed7157e45679c0929c16e95dc502267c4426e9699d6',
+    hash: '85b42c186b63222a9a1e6742d6fbcc465d36538cce79d93fb199c03f293091a1',
     sites: [{
       line: 71, keys: ['knownBody', 'knownReports', 'reportForceModeAuthority'], form: 'write through a local alias',
       reason: 'The local stamp from the received report is compared with null before its identity is checked.',

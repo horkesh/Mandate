@@ -35,6 +35,18 @@ import { profileOf } from './profile.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
 import type { PlannerForce, PlannerPost } from './types.ts';
 
+/** Disposable projections for exact immutable inputs; never State or saved data. */
+export interface PlannerInputCache {
+  readonly states: WeakMap<State, { readonly world: SeatsWorld; readonly forces: Map<FactionId, readonly PlannerForce[]>; readonly posts: Map<FactionId, readonly Omit<PlannerPost, 'holderWillingness'>[]> }>;
+}
+export function createPlannerInputCache(): PlannerInputCache { return { states: new WeakMap() }; }
+function projections(world: SeatsWorld, state: State, cache?: PlannerInputCache) {
+  if (cache === undefined) return undefined;
+  let row = cache.states.get(state);
+  if (row?.world !== world) { row = { world, forces: new Map(), posts: new Map() }; cache.states.set(state, row); }
+  return row;
+}
+
 /**
  * The network as the planner may read it: the derived map's, with no obstructions (those come from his view). A second
  * line of defence only: the route never reads `network.obstructions` (it uses `passageBar` and the view's obstructions),
@@ -45,7 +57,10 @@ export function plannerNetwork(network: NetworkConditions): NetworkConditions {
 }
 
 /** His side's force blocks, in id order. An unknown strength counts as none, unknown stores as no days. */
-export function sideForces(world: SeatsWorld, state: State, faction: FactionId): PlannerForce[] {
+export function sideForces(world: SeatsWorld, state: State, faction: FactionId, cache?: PlannerInputCache): readonly PlannerForce[] {
+  const cached = projections(world,state,cache);
+  const previous = cached?.forces.get(faction);
+  if (previous !== undefined) return previous;
   const out: PlannerForce[] = [];
   for (const id of blockIds(state)) {
     if (factionOfBlock(world.map, state, id) !== faction) continue;
@@ -68,6 +83,11 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
       aboard: loc.locAboard,
     });
   }
+  if (cached !== undefined) {
+    const result = Object.freeze(out.map(f => Object.freeze(f)));
+    cached.forces.set(faction, result);
+    return result;
+  }
   return out;
 }
 
@@ -86,22 +106,26 @@ export function expectedCooperation(world: SeatsWorld, state: State, drafter: Pe
 }
 
 /** His side's posts, in id order, with the cooperation `drafter` expects of each holder (0 for a vacant post or his own). */
-export function sidePosts(world: SeatsWorld, state: State, faction: FactionId, drafter: PersonId): PlannerPost[] {
-  return postIdsOf(state)
+export function sidePosts(world: SeatsWorld, state: State, faction: FactionId, drafter: PersonId, cache?: PlannerInputCache): PlannerPost[] {
+  const cached = projections(world,state,cache);
+  let rows = cached?.posts.get(faction);
+  if (rows === undefined) {
+    rows = postIdsOf(state)
     .filter((id) => postFaction(world, state, id) === faction)
     .map((id) => {
       const p = state.postStates[id]!;
       const holder = p.postHolder;
-      const willing = holder === null || holder === drafter ? 0 : expectedCooperation(world, state, drafter, holder);
       return {
         id,
         holder,
         parent: p.postParent,
         region: allCommandedBlocks(world.map, state, id).length > 0 ? headquartersOf(world, state, id) : null,
         seat: p.postSeat,
-        holderWillingness: willing + 0,
       };
     });
+    if (cached !== undefined) cached.posts.set(faction, Object.freeze(rows.map(p => Object.freeze(p))));
+  }
+  return rows.map(p => ({...p,holderWillingness:(p.holder === null || p.holder === drafter ? 0 : expectedCooperation(world,state,drafter,p.holder)) + 0}));
 }
 
 /** What the commander's view says of the enemy and the ground, as the planner reads it. */
@@ -121,7 +145,7 @@ export function viewGround(view: SeatView): { readonly beliefs: Map<RegionId, nu
 }
 
 /** The input for drafting `goal` for `post`, whose holder's view is `view`, on the morning's derived map. */
-export function plannerInputFor(world: SeatsWorld, state: State, derived: DerivedMap, network: NetworkConditions, month: number, view: SeatView, post: PostId, goal: PlanGoal, day: number): PlannerInput {
+export function plannerInputFor(world: SeatsWorld, state: State, derived: DerivedMap, network: NetworkConditions, month: number, view: SeatView, post: PostId, goal: PlanGoal, day: number, cache?: PlannerInputCache): PlannerInput {
   const faction = postFaction(world, state, post);
   if (faction === null) throw new RangeError(`post ${post} has no side to plan for`);
   const supply = derived.supply.factions.get(faction);
@@ -139,8 +163,8 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
     beliefDetails,
     works,
     obstructions,
-    forces: sideForces(world, state, faction),
-    posts: sidePosts(world, state, faction, holder),
+    forces: sideForces(world, state, faction, cache),
+    posts: sidePosts(world, state, faction, holder, cache),
     post,
     profile: profileOf({ ...person, competence: trueOf(state, holder).trueCompetence }, people.traits, world.map.world.rules.planner.weights),
     goal,

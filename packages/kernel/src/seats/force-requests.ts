@@ -18,7 +18,7 @@ import type { PlanGoal } from '../plans/goal.ts';
 import { callEstablishment } from '../recruitment/rules.ts';
 import type { State } from '../root-state.ts';
 import { canonicalHash } from '../serialize/hash.ts';
-import { viewFor } from '../view/view.ts';
+import { viewFor, type ViewCache } from '../view/view.ts';
 import type { AllocationInstrument } from '../world/allocation.ts';
 import { localPlanningGround, type LocalPlanningGround } from './planning-ground.ts';
 import { headquartersOf } from './posts.ts';
@@ -29,10 +29,10 @@ export type ForceOption =
  {readonly id:string;readonly kind:'force-request';readonly authority:null;readonly to:PostId;readonly need:ForceNeed} |
  {readonly id:string;readonly kind:'force-answer';readonly authority:null;readonly request:MessageId;readonly need:ForceNeed;readonly post:PostId;readonly issuer:PersonId;
   readonly modeAuthority?:ForceRequestModeAuthority};
-function inputFor(world:SeatsWorld,state:State,person:PersonId,post:PostId,goal:PlanGoal,day:number,ground:LocalPlanningGround) {
- const view=viewFor(world,state,seatIdFor(person));
- const {derived,network,month}=ground();
- return plannerInputFor(world,state,derived,network,month,view,post,goal,day);
+function inputFor(world:SeatsWorld,state:State,person:PersonId,post:PostId,goal:PlanGoal,day:number,ground:LocalPlanningGround,cache?:ViewCache) {
+ const view=viewFor(world,state,seatIdFor(person),cache);
+ const {derived,network,month,plannerCache}=ground();
+ return plannerInputFor(world,state,derived,network,month,view,post,goal,day,plannerCache);
 }
 function joinedMissionBlocks(world:SeatsWorld,state:State,post:PostId):ForceBlockId[] {
  return allCommandedBlocks(world.map,state,post).filter(b=>{
@@ -54,7 +54,7 @@ function missionForces(input:PlannerInput,blocks:readonly ForceBlockId[]):Planne
 function missionForceScore(ctx:Ctx,post:PostId,own:readonly PlannerForce[]) {
  return scoreAxes(ctx,'holding',[holdingAxis(ctx,post,own,'hold')],[]);
 }
-export function forceOptions(world:SeatsWorld,state:State,person:PersonId,post:PostId,day:number,ground:LocalPlanningGround=localPlanningGround(world,state,day)):ForceOption[] {
+export function forceOptions(world:SeatsWorld,state:State,person:PersonId,post:PostId,day:number,ground:LocalPlanningGround=localPlanningGround(world,state,day),cache?:ViewCache):ForceOption[] {
  const out:ForceOption[]=[];
  const knowledge=knowledgeOf(state,seatIdFor(person));
  for(const report of knowledge.knownReports) {
@@ -76,28 +76,32 @@ export function forceOptions(world:SeatsWorld,state:State,person:PersonId,post:P
  if(parent==null||state.postStates[parent]?.postHolder==null)return out;
  const mission=receivedMissionOf(state,person,post);
  if(mission===undefined)return out;
+ const arm=world.map.world.rules.recruitment.arm;
+ const scope={kind:'cohort' as const,arm,minTermDays:1};
+ const task=mission.planGoal.goalPurpose?.detKind??mission.planGoal.goalPosture??'hold';
+ const prior=Object.values(state.forceRequests??{}).filter(r=>r.freqNeed.needMission===mission.planOrder&&r.freqNeed.needTask===task&&canonicalHash(r.freqNeed.needScope)===canonicalHash(scope));
+ // An outstanding matching request prevents another choice regardless of the newly derived shortfall.
+ if(prior.some(r=>requestOutstanding(state,knowledge,r)))return out;
  const blocks=joinedMissionBlocks(world,state,post);
  const goal={...mission.planGoal,goalCommitted:blocks};
- const input=inputFor(world,state,person,post,goal,day,ground), ctx=makeCtx(input);
+ const input=inputFor(world,state,person,post,goal,day,ground,cache), ctx=makeCtx(input);
  const own=missionForces(input,blocks);
  if(own.some(f=>f.unknownStrength))return out;
  const score=missionForceScore(ctx,post,own);
  const undetermined=score.perceived===null;
  // An unknown enemy permits the empty-command bootstrap only, never a target-force feedback loop.
  if(undetermined?own.length>0:score.shortfall===0)return out;
- const arm=world.map.world.rules.recruitment.arm;
  if(!world.map.world.vocabularies.arms.some(a=>a.id===arm&&!a.naval))return out;
  const establishment=callEstablishment(world.map.world.rules.recruitment,undefined,factionOfPost(world.map,state,post),arm)?.men??world.map.world.rules.recruitment.menPerRegiment??null;
  if(!undetermined && establishment===null)return out;
  const need:ForceNeed={needOrigin:'commander_choice',needMission:mission.planOrder,needPost:post,needPerson:person,
-  needTask:goal.goalPurpose?.detKind??goal.goalPosture??'hold',needScope:{kind:'cohort',arm,minTermDays:1},
+  needTask:task,needScope:scope,
   needQuantity:undetermined?1:Math.max(1,Math.trunc((score.shortfall+establishment!-1)/establishment!)),
   needShortfall:undetermined?null:score.shortfall,needEstablishment:establishment,needReason:undetermined?'unknown_enemy_bootstrap':'lacks_resources',
   needDestination:headquartersOf(world,state,post),needGoal:goal,
   needEvidence:canonicalHash({mission:mission.planOrder,shortfall:undetermined?null:score.shortfall,blocks:blocks.map(b=>state.forceBlockStates[b]?.fbLots.map(l=>l.lotId)),enemy:score.perceived})};
- const prior=Object.values(state.forceRequests??{}).filter(r=>r.freqNeed.needMission===need.needMission&&r.freqNeed.needTask===need.needTask&&canonicalHash(r.freqNeed.needScope)===canonicalHash(need.needScope));
  // A pending grant stays outstanding until physical receipt or typed cancellation; answers alone are not troops.
- if(prior.some(r=>r.freqNeed.needEvidence===need.needEvidence||requestOutstanding(state,knowledge,r)))return out;
+ if(prior.some(r=>r.freqNeed.needEvidence===need.needEvidence))return out;
  out.push({id:`force-request:${canonicalHash(need).slice(0,24)}`,kind:'force-request',authority:null,to:parent,need});
  return out.sort((a,b)=>strictCompare(a.id,b.id));
 }

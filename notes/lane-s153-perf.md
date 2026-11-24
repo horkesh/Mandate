@@ -49,9 +49,93 @@ The three .fails tests and their helper are byte-identical to S150. No band,
 floor, value, criterion, pack input or budget changes. Formal independent review
 is not claimed: requested 5.6 models unavailable, no substituted worker.
 
+## Three independently proved pure optimisations
+
+The following three small changes are grouped in one optimisation commit after
+merge 070accce. Each has its own intermediate source identity and full proof,
+not only a final combined comparison:
+
+1. **Outstanding requests before planning:** keep the original matching
+   mission/task/cohort-scope and received-outcome checks, and stop before input
+   construction when a matching request is already outstanding. Four controls
+   first exposed the redundant planner call and preserve the mismatched cases.
+   No overall wall-clock speedup is established for this step alone.
+2. **Reuse the caller's received picture:** pass the existing ViewCache into
+   forceOptions/inputFor. The test first observed an extra latestEnemyClaims
+   call, then proves equal options and a shared, unchanged picture. The cache's
+   existing invalidation rules and local execution revalidation remain intact.
+3. **Share force projections and post geometry:** the disposable planning
+   ground holds an exact-State/world/faction weak cache. Every commander still
+   gets his own freshly calculated cooperation values and received picture.
+   New States/worlds/factions miss; cached forces/geometry are frozen and never
+   enter State. A work-count test first found 12 scans instead of 6; controls
+   cover equal values and invalidation. A cheap first correction fixed returning
+   the original array instead of its frozen cached counterpart; no expensive
+   proof had run before the correction.
+
+Each step compares **all 416 daily hashes** (148 history, 148 war by decision,
+120 testbed), World/initial hashes, daily activity, liveness, checkpoint scores,
+final hashes, log counts and decision points, with zero differences/rejections.
+Proofs: step1-proof.json, step2-proof.json, step3-proof.json under
+`docs/audit/s153-evidence/`. Intermediate step1 force source was reconstructed
+by reversing only the cache-argument patch and verified against its measured
+SHA-256; the two step2 source files were copied before step3. Thus the grouped
+commit does not obscure the separate measured code. Full raw summaries and
+logs are in runs/s153/, with command/exits. Proof costs: 75.83,107.70,64.70 s.
+
+The final adjacent Windows pair (same workload; candidate then pinned merged
+070accce baseline, with the final profile/setup between them) is advisory:
+
+| Run | Merged median / p95 | Final median / p95 |
+| --- | ---: | ---: |
+| History | 68.16 / 103.15 ms | 61.21 / 93.01 ms |
+| War by decision | 52.61 / 95.37 ms | 48.85 / 79.93 ms |
+
+This is direction, not an isolated or binding acceptance. S152's concurrent
+processes were inventoried at startup and during measurement; its completion
+status appeared in the shared CODEX before the final baseline. Contention and
+order prevent an additive or Linux speedup claim. No foreign process stopped.
+
+Final inclusive whole-run shares: forceOptions 13.352%, inputFor 12.626%,
+viewFor 10.956%, plannerInputFor 5.622%, sidePosts 2.199%, sideForces 0.288%,
+generateReports 8.061%, deriveMap 7.353%. They overlap; playDays is77.330%.
+AllocationSelection 0.537%, forceRetention 0.255%, forceAnswer 0.151%,
+receiveAllocations 0.046%; shared deliverDue 4.913% and deliverReports2.553%
+include other messages. Live-order readiness is not separately resolved at this
+sampling resolution, not claimed free. Final profiles and exact per-function
+shares are retained beside the baseline; startup courierTable and checkpoint
+hash work are not claimed to be tick-budget savings. Timed/profiled outputs
+match the checked proof's final hashes, every retained checkpoint hash and
+non-clock activity (runtime-verification.json).
+
+**Budget remains unproved.** Only the lead's isolated hosted Linux readings can
+clear median<40ms and p95<160ms on both runs. If they remain over budget, next
+hash-neutral candidates for the lead are: share planner control/supply inputs
+only under complete dependency identities; index repeatedly searched received
+paper/token witnesses without changing order, freshness or missing knowledge;
+and avoid rebuilding unused planning inputs with work-count/unknown controls.
+These are candidates, not implemented or accepted behaviour changes. No rule,
+value, band, floor, threshold, workload or budget is changed to reach a target.
+
+## Validation, inventory and limits
+
+Merge hook: exit0,293 files,2586 passed,3 expected failures,3 existing skips.
+Final focused controls:162 passed in7 files; typecheck/rules/projection and
+ownership checks pass. Raw command receipts identify failures and corrections.
+All3899 starting tracked paths remain;638 protected pack/evidence/art/gate/scanner
+inputs are exact ignoring checkout line endings. All three .fails tests and
+their helper remain exact. `preservation.json` and `raw-inventory.json` were
+written after runtime diagnostics, before this final narrative. Inventory183
+raw files predates the final commit hook; its separate log/exit receipt is
+`runs/s153/optimisations-commit-exit.json`. The commit is made only if that
+ordinary hook succeeds. Formal independent review remains the lead's separate
+lane; unavailable5.6 workers were not silently replaced. No new sweep, draft
+campaign, browser, desktop control, push, S152 merge or write outside this
+worktree (apart from the one authorised shared CODEX status) is claimed.
+
 ## For the lead
 
-1. Review the merge's inherited S148 hash changes and subsequent independent optimisation proofs.
-2. Push only from the lead and read isolated hosted Linux for both reference runs. Neither local timing nor the three marks clears the merge gate into sprint/july.
+1. Review the inherited S148 hash changes and the three separate optimisation proofs; take the final hook result from its raw receipt.
+2. The lead pushes and reads isolated Linux CI for both runs. The budget and the three July marks remain open merge gates. If Linux still fails, consider the retained hash-neutral candidates before any behaviour change.
 
 Findings outside my scope
