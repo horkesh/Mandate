@@ -268,9 +268,10 @@ export interface MandateCommand {
   readonly paper: string;
   readonly route: RouteKind;
 }
+export interface AllocationCommand { readonly cmd: 'allocation'; readonly paper: string; readonly route: RouteKind; }
 
-export type SeatCommand = MandateCommand | OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand | CallCommand | RecallOfferCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
+export type SeatCommand = AllocationCommand | MandateCommand | OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand | CallCommand | RecallOfferCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
 
 export type Command = SeatCommand | ChooseCommand;
 
-export const COMMAND_KINDS = ['address', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'mandate', 'observer', 'order', 'pressure', 'promise', 'recall_offer', 'relieve', 'review', 'transfer'] as const;
+export const COMMAND_KINDS = ['address', 'allocation', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'mandate', 'observer', 'order', 'pressure', 'promise', 'recall_offer', 'relieve', 'review', 'transfer'] as const;

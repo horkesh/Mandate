@@ -1,4 +1,5 @@
 import { executeLocal, issueMandate } from './mandates.ts';
+import { issueAllocation } from './allocation.ts';
 import { localOptions } from '../seats/local-actions.ts';
 import { advanceCommissions } from '../people/commissions.ts';
 import { dateOfDay,formatIsoDate } from '../world/calendar.ts';
@@ -235,6 +236,11 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (c.cmd === 'mandate') {
       const reason = issueMandate(ctx,state,entry.seat,c);
       if (reason !== null) reject(reason); else pay();
+      return;
+    }
+    if (c.cmd === 'allocation') {
+      const reason=issueAllocation(ctx,state,entry.seat,c);
+      if(reason!==null)reject(reason);else pay();
       return;
     }
     if (c.cmd === 'choose' && c.request.startsWith('local:')) {

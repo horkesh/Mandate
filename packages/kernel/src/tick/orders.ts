@@ -1,6 +1,7 @@
 import { detentionProblems } from '../plans/detention.ts';
 import { arriveMandate, validateLocalOrder } from './mandates.ts';
 import { arriveAssignment } from './onward-assignments.ts';
+import { arriveAllocation } from './allocation.ts';
 /**
  * Orders through chains (decision 0040): issuing an order, relaying it link by link, and its arrival.
  *
@@ -88,7 +89,7 @@ function objectiveOf(state: State, order: OrderBody): ReportClaim['claimRegion']
  * Only a principal sends orders (review F3): a seat may make a principal's choices or choose among options the kernel
  * judged consistent, never issue commands of its own (decision 0015, FOUNDATION section 8).
  */
-type OrderEnclosure = Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes' | 'orderProposal' | 'orderDoctrine' | 'orderPlan' | 'orderLetter' | 'orderSupersedes' | 'orderPriorDispatch' | 'orderMandate' | 'orderAuthority' | 'orderAssignment'>;
+type OrderEnclosure = Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes' | 'orderProposal' | 'orderDoctrine' | 'orderPlan' | 'orderLetter' | 'orderSupersedes' | 'orderPriorDispatch' | 'orderMandate' | 'orderAuthority' | 'orderAssignment' | 'orderAllocation'>;
 
 export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand): RejectionReason | null {
   const { world } = ctx;
@@ -220,7 +221,8 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
   // The whole chain of posts between the principal's own post and the target relays his order.
-  const local = body.orderAuthority === undefined && body.orderMandate === undefined ? undefined : heldPost(state, issuerId) ?? undefined;
+  const allocation=world.map.world.rules.allocationInstruments?.find(p=>p.id===body.orderAllocation);
+  const local = allocation?.issuerPost ?? (body.orderAuthority === undefined && body.orderMandate === undefined ? undefined : heldPost(state, issuerId) ?? undefined);
   const detentionAddress = body.orderAuthority === undefined || body.orderLetter === undefined || body.orderGoal?.goalPurpose === undefined ? undefined : to;
   const sender = senderFor(world, state, seat, requisition, ctx.senderViews, local, detentionAddress)!;
   const officeAddress = requisition !== undefined && (resolveOffice || sender.holder(cmd.to) === null);
@@ -231,7 +233,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
   // whose loss has not been reported to him.
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
-    hopPerson: i === all.length - 1 ? (officeAddress ? issuer.id : body.orderMandate?.mandateHolder ?? namedAssignment ?? sender.holder(p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : sender.holder(p)!,
+    hopPerson: i === all.length - 1 ? (officeAddress ? issuer.id : allocation?.recipient ?? body.orderMandate?.mandateHolder ?? namedAssignment ?? sender.holder(p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : sender.holder(p)!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
@@ -382,7 +384,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   // A call is read on the pack's call terms (lane 1.7); a goal, an answer to a plan and the word to go on its goal's. He reads it
   // watched from where he stands (lane 1.4's oversight).
   const terms = order.orderKind === 'call' ? callDirective(world.map.world.rules.recruitment, order.orderCall!)
-    : order.orderKind === 'assignment' ? verbDirective(rules,'transfer')
+    : order.orderKind === 'assignment' || order.orderKind === 'allocation' ? verbDirective(rules,'transfer')
     : order.orderGoal !== null ? goalDirective(rules, order.orderGoal) : goalTerms(rules, relayKindOf(start, order));
   const answer = answerOrder(world, start, relayer.id, order.orderIssuer, terms, { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer).value });
   const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day, kind: order.orderKind, ...(order.orderCall?.callId === undefined ? {} : { callId: order.orderCall.callId }) }));
@@ -510,6 +512,7 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   if (order.orderKind === 'support') return arriveSupport(ctx, state, msg);
   if (order.orderKind === 'mandate') return arriveMandate(ctx, state, msg);
   if (order.orderKind === 'assignment') return arriveAssignment(ctx,state,msg);
+  if (order.orderKind === 'allocation') return arriveAllocation(ctx,state,msg);
   if (order.orderAuthority !== undefined && !validateLocalOrder(ctx, state, order)) {
     acknowledge(ctx, state, msg, 'authority_unavailable', false);
     return state;

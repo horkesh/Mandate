@@ -57,6 +57,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
   const FIELDS: Readonly<Record<string, readonly string[]>> = {
     recall_offer: ['cmd', 'offer'],
     mandate: ['cmd', 'paper', 'route'],
+    allocation: ['cmd', 'paper', 'route'],
     order: ['bypass', 'cmd', 'goal', 'route', 'to'],
     answer_proposal: ['action', 'bypass', 'cmd', 'proposal', 'route', 'to'],
     review: ['action', 'bypass', 'cmd', 'edit', 'route', 'to'],
@@ -100,7 +101,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
   if (Object.hasOwn(c, 'doctrine') && !id(c.doctrine)) problems.push(`${at}: doctrine must name a doctrine row`);
   if (c.cmd === 'recall_offer') {
     if (!id(c.offer)) problems.push(`${at}: recall_offer.offer must be a message id`);
-  } else if (c.cmd === 'mandate') {
+  } else if (c.cmd === 'mandate' || c.cmd === 'allocation') {
     if (!id(c.paper) || !(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`${at}: invalid mandate paper or route`);
   } else if (c.cmd === 'order') {
     routed();

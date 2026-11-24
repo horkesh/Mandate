@@ -83,6 +83,7 @@ const field = (f: string, writer: string, proposedBy: readonly string[], code: r
 const at = (record: string, key: string): FieldLocation => ({ record, key });
 
 export const OWNED_FIELDS: readonly OwnedField[] = [
+  field('received allocation undertakings and lot reservations', 'command', ['instrument receipt and actual arrival'], [at('State', 'allocationRecords')]),
   field('received mandates and shared authority commitments', 'command', ['order receipt and compliance', 'logged local choices'], [at('State', 'authorityByPost')]),
   field('each faction\'s current capital', 'command', ['scenario start', 'situations'], [at('State', 'factionCapitals')]),
   // Lane 0.4: control, set from the scenario start (0050) and changed only through `applyControl`.
@@ -194,6 +195,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
  * as decision 0044 asks. Rename a local rather than reuse such a key.
  */
 export const IMMUTABLE_RECORDS: readonly string[] = [
+  'AllocationRecord',
   'ConsultationAdvice',
   'ConsultationAdvice.consultationAnswers',
   'CourseAssessment.assessmentRequirements',

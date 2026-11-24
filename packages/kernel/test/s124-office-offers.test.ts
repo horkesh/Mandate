@@ -119,7 +119,7 @@ it('rejects altered terms on the sourced office instrument',()=>{
 
 it('saves offers, their original reservations and pending journeys; migration from schema4 invents none',()=>{
  const g=offered();const encoded=encodeSave({worldHash:canonicalHash('fixture'),state:g.state,log:[{day:1,seat:'seat:b_gen',command:{cmd:'recall_offer',offer:g.id}}]});
- const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(6);
+ const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(7);
  expect(decoded.state).toEqual(g.state);
  const old=JSON.parse(encodeSave({worldHash:canonicalHash('fixture'),state:fixture().state,log:[]}));old.schemaVersion=4;
  const migrated=decodeSave(JSON.stringify(old));expect(migrated.state).toEqual(old.state);expect(migrated.logHash).toBe(old.logHash);

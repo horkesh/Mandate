@@ -253,7 +253,7 @@ Module map, adapted from the AWWV-architecture note:
 
 | Proposed State field | Only writer | Proposed by |
 |---|---|---|
-| a block's joining order (`forceJoins`), including an accepted onward assignment awaiting the receiving commander (0098, 0126) | `movement` | transfer verbs and ordinary assignment receipt; operations resolve the day's legs and request clearing |
+| a block's joining order (`forceJoins`), including accepted onward assignments and scoped allocation journeys awaiting the receiving commander (0098, 0126, 0131) | `movement` | transfer verbs and ordinary assignment receipt; operations resolve the day's legs and request clearing |
 
 These three changes reconcile the prose with the implemented writers and `ownership.ts`; they propose no code-owner change or deferred capability.
 
@@ -323,6 +323,7 @@ These three changes reconcile the prose with the implemented writers and `owners
 | people in posts; temporary posts (`postStates`) | `command` | appoint, relieve, promotion lists, an operation's end, combat vacating a hit commander's post (0076); a notice's `post_succession` proposal replaces its named incumbent with a serving successor on the post's side, preserving both statuses and reporting the typed institutional-succession reason |
 | observers in post (`observerPostings`): the observer, the post he watches, who sent him and the day he arrived | `command` | the observer verb and his recall (0040, 0073) |
 | neutral governor offers with original response, troop identities, recall and receiving receipts (`neutralOffers`, absent in older saves) | `command` | recruitment, governor recall, movement arrival (0126) |
+| received allocation undertakings, selected lot reservations, typed shortfalls and actual receipts (`allocationRecords`, absent in older saves) | `command` | received and answered allocation instruments, superseding receipts and actual receiving possession (0131); force partitioning remains `forces`, joining orders and roads remain `movement` |
 | received mandates, holder-bound enactment history and shared force commitments (`authorityByPost`) | `command` | actual order receipt and compliance; logged local choices (0121/0124) |
 | standing agreements and prior orders on a post, including a governor's answered call not yet mustered (`postLevies`), its optional arm, unknown strength and war-service term | `command` | verbs, situations, orders from the holder's own department, an absolute call a governor answered (0073); readiness requests record responses without creating levies |
 | a person's stats, traits, standing, grievances, regard | `people` | combat results, the press, verbs, ladder, a chosen policy's pushback (typed grievances, and the floor's cost to the principal's standing) (0082) |

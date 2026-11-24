@@ -44,7 +44,7 @@ export interface Hop {
  * section 5: a support request is a directive to that holder, who answers with his own compliance). It carries the goal
  * the axis serves.
  */
-export const ORDER_KINDS = ['approve', 'assignment', 'mandate', 'call', 'decline_proposal', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
+export const ORDER_KINDS = ['allocation', 'approve', 'assignment', 'mandate', 'call', 'decline_proposal', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
 export type OrderKind = (typeof ORDER_KINDS)[number];
 
 /** A call for regiments, as an order carries it (lane 1.7). */
@@ -60,6 +60,7 @@ export interface CallSpec {
 }
 
 export interface OrderBody {
+  readonly orderAllocation?: string;
   readonly orderAssignment?: { readonly paper: string; readonly block: ForceBlockId; readonly destination: RegionId };
   readonly orderMandate?: MandateGrant;
   readonly orderAuthority?: AuthorityBasis;

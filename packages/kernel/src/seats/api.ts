@@ -200,6 +200,7 @@ export interface SituationChoice {
 
 /** A principal deciding what to order today, and which open situations to decide or hand on. */
 export interface PrincipalMenu {
+  readonly allocations?: readonly { readonly paper: string; readonly route: RouteKind }[];
   readonly mandates?: readonly { readonly paper: string; readonly route: RouteKind }[];
   /** Authored questions the principal may ask; dates guide the history rule seat, never send events. */
   readonly consultations?: readonly {

@@ -111,6 +111,8 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
   switch (c.cmd) {
     case 'mandate':
       return t('console.command.mandate',{paper:c.paper,route:c.route});
+    case 'allocation':
+      return t('console.command.allocation',{paper:c.paper,route:c.route});
     case 'order':
       return t('console.command.order', {
         post: c.to, posture: c.goal.purpose?.kind ?? c.goal.posture ?? '', objective: c.goal.objective == null ? '' : ' ' + c.goal.objective,

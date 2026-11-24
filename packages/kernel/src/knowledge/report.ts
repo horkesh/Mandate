@@ -96,6 +96,7 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  * - `control-government`: the named department governs the region, with value 1 for neutral and 0 for aligned.
  */
 export const CLAIM_KINDS = [
+  'allocation-selected', 'allocation-shortfall',
   // An explicit received request to see the principal; never inferred from an objection.
   'organisation-post',
   'organisation-absence',

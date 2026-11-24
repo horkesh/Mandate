@@ -38,6 +38,7 @@ import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
 import type { RegimentRecord } from './regiments.ts';
 import type { OnwardAssignment } from './assignments.ts';
+import type { AllocationInstrument } from './allocation.ts';
 import type { LetterIdentity } from './letters.ts';
 import type { ConsultationRound } from './consultations.ts';
 export type { ConsultationRound } from './consultations.ts';
@@ -355,6 +356,7 @@ export interface PlansRules {
 
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
 export interface WorldRules {
+  readonly allocationInstruments?: readonly AllocationInstrument[];
   readonly mandates?: readonly MandatePaper[];
   readonly onwardAssignments?: readonly OnwardAssignment[];
   /** The top of the pack's capacity scale for edges and depots. */

@@ -44,14 +44,14 @@ import { detentionProblems, validDemonstrationPolicy } from '../plans/detention.
 import { conditionalDoctrineProblems } from '../world/doctrine.ts';
 import { letterKey, type LetterIdentity } from '../world/letters.ts';
 import { seatIdFor } from './seats.ts';
+import type { PaperDoctrine } from '../knowledge/papers.ts';
 
 /** Keep report witnesses only for each issuing seat's own explicit prerequisites. */
-export function paperDoctrines(world: SeatsWorld): ReadonlyMap<SeatId, PrincipalDoctrine> | undefined {
+export function paperDoctrines(world: SeatsWorld): ReadonlyMap<SeatId, PaperDoctrine> | undefined {
   const rows = world.map.world.rules.ruleSeats.principals.filter(r =>
     r.offensives.some(o => o.requiresPapers !== undefined) || r.calls.some(c => c.requiresPapers !== undefined) ||
     r.concentrations?.some(c => c.requiresPapers !== undefined) === true || r.proposalAnswers?.some(a => a.requiresPapers !== undefined) === true);
-  if (rows.length === 0) return undefined;
-  const byIssuer = new Map<SeatId, PrincipalDoctrine>();
+  const byIssuer = new Map<SeatId, PaperDoctrine>();
   for (const row of rows) {
     const principal = world.faction(row.faction).principal;
     byIssuer.set(seatIdFor(principal), { ...row, offensives: row.offensives.filter(o => o.issuer === undefined) });
@@ -59,7 +59,15 @@ export function paperDoctrines(world: SeatsWorld): ReadonlyMap<SeatId, Principal
     for (const author of authors) byIssuer.set(seatIdFor(author), { ...row, offensives: row.offensives.filter(o => o.issuer === author),
       calls: [], concentrations: [], proposalAnswers: [] });
   }
-  return byIssuer;
+  for(const paper of world.map.world.rules.allocationInstruments??[]) {
+    if(paper.requiresPapers===undefined)continue;
+    const seat=seatIdFor(paper.issuer), prior=byIssuer.get(seat);
+    const template=world.map.world.rules.ruleSeats.principals[0];
+    if(template===undefined)continue;
+    const basis=prior??{...template,offensives:[],calls:[],concentrations:[],proposalAnswers:[]};
+    byIssuer.set(seat,{...basis,allocationPapers:[...(prior?.allocationPapers??[]),paper]});
+  }
+  return byIssuer.size?byIssuer:undefined;
 }
 
 /**

@@ -3,6 +3,8 @@ import { strictCompare } from '../compare.ts';
 import type { MessageId, PersonId, PostId } from '../ids.ts';
 import { letterKey, type LetterIdentity } from '../world/letters.ts';
 import type { PrincipalDoctrine } from '../world/world.ts';
+import type { AllocationInstrument } from '../world/allocation.ts';
+export type PaperDoctrine = PrincipalDoctrine & { readonly allocationPapers?: readonly AllocationInstrument[] };
 import type { PaperClaimSelector, PaperDecision, PaperSelector, ReceivedPaperClaim, ReportPaperSelector } from '../world/paper-selectors.ts';
 import type { KnownPaperReceipt, SeatKnowledge } from './knowledge.ts';
 import type { ReportBody, ReportClaim, ReportType, SubjectKind } from './report.ts';
@@ -74,13 +76,14 @@ export function hasRequiredPapers(selectors: readonly PaperSelector[] | undefine
 }
 
 /** Authored field goals release their report references after the first dispatch. */
-function liveReportSelectors(doctrine: PrincipalDoctrine, held: SeatKnowledge): ReportPaperSelector[] {
+function liveReportSelectors(doctrine: PaperDoctrine, held: SeatKnowledge): ReportPaperSelector[] {
   return [...doctrine.offensives.filter(o => o.letter === undefined || ownOrigin(held, o.letter) === undefined),
-    ...(doctrine.concentrations ?? []), ...doctrine.calls, ...(doctrine.proposalAnswers ?? [])]
+    ...(doctrine.concentrations ?? []), ...doctrine.calls, ...(doctrine.proposalAnswers ?? []),
+    ...(doctrine.allocationPapers??[]).filter(p=>ownOrigin(held,p.letter)===undefined)]
     .flatMap(o => o.requiresPapers ?? []).filter(s => s.kind === 'report');
 }
 
-function matchingSelectors(paper: ReceivedPaperReport, doctrine: PrincipalDoctrine, held: SeatKnowledge): ReportPaperSelector[] {
+function matchingSelectors(paper: ReceivedPaperReport, doctrine: PaperDoctrine, held: SeatKnowledge): ReportPaperSelector[] {
   return liveReportSelectors(doctrine, held).filter(s => receivedMatches(s, paper, originFor(s, held)));
 }
 
@@ -89,7 +92,7 @@ function claimMatches(c: ReportClaim, pick: PaperClaimSelector): boolean {
 }
 
 /** Only exact selector details and delivered claim values enter a witness. `msgTruth` is unavailable here. */
-export function reportWitness(doctrine: PrincipalDoctrine, held: SeatKnowledge, body: ReportBody): ReceivedPaperReport | undefined {
+export function reportWitness(doctrine: PaperDoctrine, held: SeatKnowledge, body: ReportBody): ReceivedPaperReport | undefined {
   const paper: ReceivedPaperReport = { receiptAuthor: body.reportAuthor, receiptAuthorPost: body.reportAuthorPost, receiptSubjectKind: body.reportSubjectKind,
     receiptSubjectId: body.reportSubjectId, receiptType: body.reportType, receiptSubtype: body.reportSubtype,
     receiptAnswers: body.reportAnswers, receiptWrittenDay: body.reportDay, receiptClaims: [] };
@@ -112,7 +115,7 @@ function sameReportGroup(a: ReceivedPaperReport, b: ReceivedPaperReport): boolea
     a.receiptSubjectKind === b.receiptSubjectKind && a.receiptSubjectId === b.receiptSubjectId && a.receiptType === b.receiptType && a.receiptSubtype === b.receiptSubtype;
 }
 
-export function stillReferenced(receipt: KnownPaperReceipt, doctrine: PrincipalDoctrine | undefined, held: SeatKnowledge): boolean {
+export function stillReferenced(receipt: KnownPaperReceipt, doctrine: PaperDoctrine | undefined, held: SeatKnowledge): boolean {
   if (receipt.receiptReport === undefined) return true;
   return doctrine !== undefined && matchingSelectors(receipt.receiptReport, doctrine, held).length > 0;
 }

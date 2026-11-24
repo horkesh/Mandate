@@ -21,6 +21,7 @@ import type { AuthorityTable } from './command/authority.ts';
  * The command log sits beside State, not in it (`log/log.ts`).
  */
 import type { NeutralOffer } from './command/offers.ts';
+import type { AllocationRecord } from './command/allocation.ts';
 import type { AssignmentTable, DepartmentSides, PostTable } from './command/command.ts';
 import type { RegionControlTable } from './control/control.ts';
 import type { ForceTable } from './forces/forces.ts';
@@ -50,6 +51,8 @@ import type { BattleTable } from './combat/records.ts';
 import type { JoinTable } from './movement/join.ts';
 
 export interface State {
+  /** Received instrument undertakings; absent in older saves means none. Writer: command. */
+  readonly allocationRecords?: Readonly<Record<MessageId, AllocationRecord>>;
   /** Governor-owned offers; absent in older saves means none. Writer: command. */
   readonly neutralOffers?: Readonly<Record<MessageId, NeutralOffer>>;
   /** Absent is canonical empty for older saves; writer: command. */

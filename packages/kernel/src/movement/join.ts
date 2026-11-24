@@ -24,6 +24,7 @@ export interface AssignmentJourney {
 }
 
 export interface ForceJoin {
+  readonly joinAllocation?: MessageId;
   readonly joinOffer?: MessageId;
   readonly joinAssignment?: AssignmentJourney;
   readonly joinPost: PostId;
@@ -51,6 +52,12 @@ export function endJoins(state: State, blocks: readonly ForceBlockId[]): State {
   const next: Record<ForceBlockId, ForceJoin> = { ...state.forceJoins };
   for (const b of drop) delete next[b];
   return { ...state, forceJoins: next };
+}
+
+export function orderAllocationJoins(state: State, blocks: readonly ForceBlockId[], post: PostId, region: RegionId, day: number, order: MessageId): State {
+  const next=orderJoins(state,blocks,post,region,day), joins={...next.forceJoins};
+  for(const b of blocks) joins[b]={...joins[b]!,joinAllocation:order};
+  return {...next,forceJoins:joins};
 }
 
 /** Record why each of `blocks` waits today (or that it marches again, with null). */

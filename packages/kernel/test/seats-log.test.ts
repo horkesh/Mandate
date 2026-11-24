@@ -343,6 +343,7 @@ describe('ownership of the new State (0044)', () => {
   it('registers every root field with one writer, and the stand-ins are labelled', () => {
     const roots = OWNED_FIELDS.flatMap((f) => f.code.filter((c) => c.record === 'State').map((c) => `${c.key}:${f.writer}`)).sort();
     expect(roots).toEqual([
+      'allocationRecords:command',
       'audienceHeld:audience',
       'authorityByPost:command',
       'battleRecords:combat',

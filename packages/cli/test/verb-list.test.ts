@@ -40,7 +40,7 @@ export function verbListMismatch(commands: Readonly<Record<string, string>>, ver
 
 describe('the console commands are the kernel verb list (lane 1.13: the new kernel)', () => {
   it('maps commands onto the kernel’s verbs exactly, one command per verb', () => {
-    expect(kernelVerbs()).toEqual(['address', 'answer_proposal', 'appoint', 'audience', 'call', 'consult', 'decide', 'delegate', 'go', 'inquire', 'mandate', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review:approve', 'review:edit', 'review:send_back', 'transfer']);
+    expect(kernelVerbs()).toEqual(['address', 'allocation', 'answer_proposal', 'appoint', 'audience', 'call', 'consult', 'decide', 'delegate', 'go', 'inquire', 'mandate', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review:approve', 'review:edit', 'review:send_back', 'transfer']);
     expect(verbListMismatch(VERB_COMMANDS, kernelVerbs())).toEqual([]);
   });
 

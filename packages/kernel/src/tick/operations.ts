@@ -2,6 +2,7 @@ import { planAuthorized } from '../seats/local-actions.ts';
 import { withinCommand } from '../command/command.ts';
 import { receiveOffers } from './offers.ts';
 import { assignmentPassage, receiveAssignments } from './onward-assignments.ts';
+import { allocationPassage, receiveAllocations } from './allocation.ts';
 import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * Day-tick phase 3 (FOUNDATION section 10; lane 1.4): operations, then movement. It replaces Phase 0's standing-goal
@@ -289,7 +290,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   const marched = advanceMarches(state, day);
   state = marched.state;
   for (const a of marched.arrivals) fire(ctx, 'movement.arrived', 1 + a.carried.length);
-  return receiveAssignments(ctx,receiveOffers(ctx,state));
+  return receiveAllocations(ctx,receiveAssignments(ctx,receiveOffers(ctx,state)));
 }
 
 function demonstrationEvent(op: OperationRecord, stage: DemonstrationStage, reason: DemonstrationReason, day: number, region: RegionId | null): OperationRecord {
@@ -471,11 +472,11 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
       continue;
     }
     const assignment = j.joinAssignment;
-    const allows = assignment === undefined ? undefined : assignmentPassage(ctx,state,b,assignment);
+    const allows = j.joinAllocation !== undefined ? allocationPassage(ctx,state,b,j.joinAllocation) : assignment === undefined ? undefined : assignmentPassage(ctx,state,b,assignment);
     if (allows === null) { ended.push(b); continue; }
     if (loc.locMarch !== null || loc.locAboard !== null) continue;
     if (loc.locRegion === j.joinRegion) {
-      if (assignment === undefined) {
+      if (assignment === undefined && j.joinAllocation === undefined) {
         ended.push(b);
         fire(ctx, 'movement.joined');
       }
@@ -486,7 +487,7 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
     // Voluntary transit uses the recipient's access policy; service and assignment stay the governor's.
     const side = offer === undefined ? factionOfBlock(ctx.world.map,state,b) : postFaction(ctx.world,state,offer.offerReceiver);
     const baseKey = `${loc.locRegion}|${j.joinRegion}|${naval ? 'n' : 'l'}|${side}`;
-    const key = assignment === undefined ? baseKey : `${baseKey}|${assignment.assignmentOrder}`;
+    const key = j.joinAllocation !== undefined ? `${baseKey}|${j.joinAllocation}` : assignment === undefined ? baseKey : `${baseKey}|${assignment.assignmentOrder}`;
     const g = groups.get(key) ?? { from: loc.locRegion, to: j.joinRegion, naval, side, blocks: [], ...(allows === undefined ? {} : {allows}) };
     g.blocks.push(b);
     groups.set(key, g);

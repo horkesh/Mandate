@@ -11,6 +11,7 @@ import { answerOrder, goalTerms } from '../reading/orders.ts';
 import type { State } from '../root-state.ts';
 import { availableMandatePapers, goalWithin, localOptions, mandateLetter, type LocalOption } from '../seats/local-actions.ts';
 import { assignmentLetter } from '../seats/onward-assignments.ts';
+import { issueAllocation, fulfilAllocation } from './allocation.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import { senderFor } from '../seats/sender.ts';
 import type { SeatsWorld } from '../seats/world.ts';
@@ -112,6 +113,8 @@ export function executeLocal(ctx: TickContext, state: State, person: PersonId, o
   const fresh = localOptions(ctx.world,state,person,ctx.day).find(o => o.id === option.id);
   if (fresh === undefined) return { state, reason: 'bad_selection' };
   if (fresh.kind === 'grant') return { state, reason: issueMandate(ctx,state,seatIdFor(person),{ cmd: 'mandate', paper: fresh.paper.id, route: 'courier' }) };
+  if (fresh.kind === 'allocation') return {state,reason:issueAllocation(ctx,state,seatIdFor(person),{cmd:'allocation',paper:fresh.paper.id,route:'courier'})};
+  if (fresh.kind === 'allocation-fulfil') return {state:fulfilAllocation(ctx,state,fresh.order),reason:null};
   if (fresh.kind === 'assignment') {
     const {paper} = fresh;
     let block=fresh.block;

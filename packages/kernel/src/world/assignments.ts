@@ -2,6 +2,7 @@ import type { PersonId, PostId, RegionId } from '../ids.ts';
 import { parseIsoDate } from './calendar.ts';
 import type { ScenarioStart } from './scenario.ts';
 import type { World } from './world.ts';
+import { allocationProblems } from './allocation.ts';
 
 /** A read onward order for one identified regiment already received at a rendezvous. */
 export interface OnwardAssignment {
@@ -23,7 +24,7 @@ export interface OnwardAssignment {
 export function assignmentProblems(world: World, start: ScenarioStart): string[] {
   const ids = new Set<string>();
   const posts = new Set([...start.posts, ...start.temporaryPosts].map(p => p.id));
-  const problems: string[] = [];
+  const problems: string[] = allocationProblems(world,start);
   for (const paper of world.rules.onwardAssignments ?? []) {
     const at = `onwardAssignments.${paper.id}`;
     if (!paper.id || ids.has(paper.id) || !paper.source.trim()) problems.push(`${at}: a unique sourced instrument is required`);

@@ -193,6 +193,17 @@ export const PersonSchema = z.strictObject({
 const term = z.strictObject({ id: termId, name: stringKey });
 
 export const RulesSchema = z.strictObject({
+  allocationInstruments: z.array(z.strictObject({
+    id: termId, source:z.string().min(1),fromDate:isoDate,kind:z.enum(['request','assignment']),
+    issuer:idOf('person'),issuerPost:idOf('post').nullable(),mandate:termId.nullable(),
+    from:idOf('post'),to:idOf('post'),destination:idOf('region'),recipient:idOf('person').optional(),
+    letter:letterIdentity,words:z.string().min(1),quantity:z.union([positive,z.literal('all')]),continuing:z.boolean().optional(),
+    scope:z.discriminatedUnion('kind',[
+      z.strictObject({kind:z.literal('named'),regiments:z.array(termId).min(1),calls:z.array(termId).min(1).optional()}),
+      z.strictObject({kind:z.literal('cohort'),calls:z.array(termId).min(1).optional(),arm:termId.optional(),minTermDays:positive}),
+    ]),atRegion:idOf('region').optional(),requiresPapers:z.array(paperSelector).max(16).optional(),
+    modes:z.array(z.enum(['land','rail','river','sea'])).min(1).optional(),
+  })).optional(),
   onwardAssignments: z.array(z.strictObject({
     address: z.literal('office').optional(), recipient: idOf('person').optional(), modes: z.array(z.enum(['land','rail','river','sea'])).min(1).optional(),
     id: termId, source: z.string().min(1), fromDate: historicalDate,

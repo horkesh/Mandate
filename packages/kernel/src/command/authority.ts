@@ -127,7 +127,7 @@ function put(state: State, post: PostId, row: EnactedMandate): State {
 }
 function liveUse(state: State, u: AuthorityUse): boolean {
   return state.messagesInTransit.some(m => m.msgOrigin === u.useOrder && m.msgOrder !== null) ||
-    (u.useAssignment === true && u.useBlocks.some(b => state.forceJoins[b]?.joinAssignment?.assignmentOrder === u.useOrder)) ||
+    (u.useAssignment === true && u.useBlocks.some(b => state.forceJoins[b]?.joinAssignment?.assignmentOrder === u.useOrder || state.forceJoins[b]?.joinAllocation===u.useOrder)) ||
     Object.values(state.planRecords).some(p => {
       if(p.planOrder!==u.useOrder)return false;
       const operations=Object.values(state.operationRecords).filter(op=>op.opOrder===u.useOrder);

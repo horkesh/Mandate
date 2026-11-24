@@ -3,7 +3,7 @@ import { activeMandate, currentMandates, inSubtree, mandateAt, mayCommit, type E
 import { allCommandedBlocks, commandedBlocks, factionOfPost, heldPost } from '../command/command.ts';
 import { strictCompare } from '../compare.ts';
 import { deriveMap } from '../control-index/derived.ts';
-import type { PersonId, PostId } from '../ids.ts';
+import type { MessageId, PersonId, PostId } from '../ids.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { hasRequiredPapers } from '../knowledge/papers.ts';
 import { draft } from '../planner/draft.ts';
@@ -31,6 +31,8 @@ import { receivedPlanPapers } from './received.ts';
 import type { KnownReport } from '../knowledge/knowledge.ts';
 import { commandProjection } from '../view/people.ts';
 import { assignmentOptions } from './onward-assignments.ts';
+import { availableAllocations, allocationFulfilments } from './allocation.ts';
+import type { AllocationInstrument } from '../world/allocation.ts';
 
 export function mandateLetter(paper: MandatePaper) {
   return { namespace: `authority.${paper.grant.mandateIssuer}`, key: paper.grant.mandateKey, revision: paper.grant.mandateRevision };
@@ -84,6 +86,8 @@ export function planAuthorized(world: SeatsWorld, state: State, post: PostId, re
     (candidate === undefined || candidateWithin(state,a,post,record.planGoal,candidate));
 }
 export type LocalOption =
+  { readonly id: string; readonly authority: EnactedMandate | null; readonly kind: 'allocation-fulfil'; readonly order: MessageId; readonly paper: AllocationInstrument } |
+  { readonly id: string; readonly authority: EnactedMandate | null; readonly kind: 'allocation'; readonly paper: AllocationInstrument } |
   ReturnType<typeof assignmentOptions>[number] |
   { readonly id: string; readonly authority: EnactedMandate | null; readonly kind: 'grant'; readonly paper: MandatePaper } |
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'letter'; readonly row: DoctrineOffensive; readonly goal: PlanGoal } |
@@ -94,12 +98,14 @@ export function localOptions(world: SeatsWorld, state: State, person: PersonId, 
   if (world.start.factions.some(f => f.principal === person)) return [];
   const posts=Object.keys(state.postStates).filter(id=>state.postStates[id as PostId]!.postHolder===person).sort(strictCompare) as PostId[];
   const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post));
-  const rank={assignment:0,grant:0,review:1,letter:2,goal:3};
+  const rank={'allocation-fulfil':0,allocation:0,assignment:0,grant:0,review:1,letter:2,goal:3};
   return [...new Map(options.map(o=>[o.id,o])).values()].sort((a,b)=>rank[a.kind]-rank[b.kind] || (a.kind==='goal' && b.kind==='goal'?b.candidate.candScore-a.candidate.candScore:0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
 }
 function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId): LocalOption[] {
   const active = currentMandates(state,post).filter(a => activeMandate(world.map,state,a,day));
   const out: LocalOption[] = assignmentOptions(world,state,person,day).filter(o=>o.paper.from===post);
+  out.push(...allocationFulfilments(world,state,person,day).filter(o=>o.paper.from===post).map(o=>({id:`fulfil:${o.row.allocOrder}`,kind:'allocation-fulfil' as const,authority:null,order:o.row.allocOrder,paper:o.paper})));
+  out.push(...availableAllocations(world,state,person,day).filter(p=>p.issuerPost===post && active.some(a=>a.authorityGrant.mandateKey===p.mandate && a.authorityGrant.mandateActions.includes('assign'))).map(p=>({id:`allocation:${p.id}`,kind:'allocation' as const,authority:null,paper:p})));
   for (const paper of availableMandatePapers(world,state,person,day)) {
     if (paper.grant.mandateParent === null && paper.grant.mandateIssuerPost === post &&
       world.map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[post]!.postKind)) {
@@ -190,7 +196,7 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
     }
     }
   }
-  const rank = { assignment:0,grant:0,review:1,letter:1,goal:2 };
+  const rank = { 'allocation-fulfil':0,allocation:0,assignment:0,grant:0,review:1,letter:1,goal:2 };
   return out.sort((a,b) => rank[a.kind]-rank[b.kind] || (a.kind === 'goal' && b.kind === 'goal' ?
     b.candidate.candScore-a.candidate.candScore : 0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
 }
@@ -198,7 +204,7 @@ export function localMenu(world: SeatsWorld, state: State, person: PersonId, day
   const options = localOptions(world,state,person,day);
   return options.length === 0 ? null : { menuKind: 'local-action', post: heldPost(state,person)!, options: options.map(o => ({
     optionId: o.id, mandate: o.authority?.authorityGrant.mandateKey ?? (o.kind === 'grant' ? o.paper.grant.mandateKey : ''),
-    ...(o.kind === 'grant' ? { paper: o.paper.id } : o.kind === 'assignment' ? {paper:o.paper.id,to:o.paper.to}
+    ...(o.kind === 'grant' ? { paper: o.paper.id } : o.kind === 'assignment' || o.kind === 'allocation' || o.kind === 'allocation-fulfil' ? {paper:o.paper.id,to:o.paper.to}
       : o.kind === 'review' ? { paper:o.received.id } : o.kind === 'letter' ? { paper: letterKey(o.row.letter!), to: o.row.post } : { to: o.target, plan: optionView(o.candidate) }),
   })) };
 }

@@ -1,4 +1,5 @@
 import { availableMandatePapers, localMenu } from './local-actions.ts';
+import { availableAllocations } from './allocation.ts';
 import { forceTotals } from '../forces/lots.ts';
 /**
  * Which seats must answer, and the kernel's menu for each (Derived).
@@ -449,6 +450,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   }));
   return {
     menuKind: 'principal',
+    ...(world.map.world.rules.allocationInstruments===undefined?{}:{allocations:availableAllocations(world,state,f.principal,state.stateDay+1).map(p=>({paper:p.id,route:'courier' as const}))}),
     ...(world.map.world.rules.mandates === undefined ? {} : { mandates: availableMandatePapers(world,state,f.principal,state.stateDay+1).filter(p => p.grant.mandateParent === null).map(p => ({ paper: p.id, route: 'courier' as const })) }),
     ...(world.map.world.rules.ruleSeats.principals.find(p => p.faction === faction)?.consultations === undefined ? {} : {
       consultations: world.map.world.rules.ruleSeats.principals.find(p => p.faction === faction)!.consultations!
