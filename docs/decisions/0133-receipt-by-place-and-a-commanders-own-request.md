@@ -1,6 +1,6 @@
 # 0133: A regiment is received where it lawfully arrives, and a commander may ask for what his mission lacks
 
-Status: accepted (2026-11-24). From S144's design (`docs/design/S144-RECEIPT-AND-FORCE-REQUESTS.md` and `docs/research/S144/` on `sprint/pushback` at `21164521`), on S141's corrected capture (`sprint/allocate`, held). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0131 (who holds an unassigned regiment, and how a commander obtains forces).
+Status: accepted (2026-11-24). From S144's design (`docs/design/S144-RECEIPT-AND-FORCE-REQUESTS.md` and `docs/research/S144/` on `sprint/pushback` at `21164521`), on S141's corrected capture (`sprint/allocate`, held). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0131 (who holds an unassigned regiment, and how a commander obtains forces). Clarified by 0134 (a superior may answer by ordering a subordinate who holds the troops).
 
 ## Context
 
