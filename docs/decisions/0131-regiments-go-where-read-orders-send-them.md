@@ -1,6 +1,6 @@
 # 0131: Regiments go where read orders send them, and a junction is a commander's operation
 
-Status: accepted (2026-11-24). From S136's design (`docs/design/S136-CONCENTRATION-AND-JUNCTION.md` and `docs/research/S136/` on `sprint/pushback` at `ae1c6c21`), on S135's audit of First Manassas (`sprint/research-military` at `6cd1e3dc`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0108 (how a raised lot is allocated to a command). Clarified by 0133 (receipt by place, and a commander's own request) and 0136 (what a read instrument is).
+Status: accepted (2026-11-24). From S136's design (`docs/design/S136-CONCENTRATION-AND-JUNCTION.md` and `docs/research/S136/` on `sprint/pushback` at `ae1c6c21`), on S135's audit of First Manassas (`sprint/research-military` at `6cd1e3dc`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0108 (how a raised lot is allocated to a command). Clarified by 0133 (receipt by place, and a commander's own request) and 0136 (what a read instrument is). Extended by 0138 (the kinds of read instrument the July orders need).
 
 ## Context
 
