@@ -1,0 +1,9 @@
+{
+  "correction": "hoist the fresh Object.keys array into a local before sorting, matching enemyAt",
+  "exactSourceEqualityAfterInlining": true,
+  "beforeSHA256": "68a1b9961afcae2b9ba5ff038d059a2cafdf219c6eb0f52e83d9aaeaac6c4d57",
+  "afterSHA256": "7c709aa42ae81f9653b86f196432c7613c8dc288ee95ecac9faf72670d3f5e69",
+  "semantics": "same single Object.keys evaluation, same newly allocated array, same pure comparator, same iteration order; no State mutation",
+  "failedHook": "step4-commit.exit.json: one-writer scanner only; 2457 tests passed",
+  "reused": "all four steps paired timings and 416 hash/counter/score captures; no simulation or performance logic changed; required ordinary hook rerun"
+}

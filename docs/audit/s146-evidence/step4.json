@@ -1,0 +1,184 @@
+{
+  "base": "77565d1749b3a9f320d419555b0d8aee38884f0c",
+  "step": "step4",
+  "timing": "serial Windows Node22.23.2, unprofiled; Linux CI is binding and not claimed",
+  "rows": [
+    {
+      "slot": "war",
+      "pair": 0,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 88.39790000000085,
+        "p95": 156.83510000000024,
+        "max": 215.51510000000053
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 44.10519999999997,
+        "p95": 85.83809999999994,
+        "max": 120.1281999999992
+      }
+    },
+    {
+      "slot": "war",
+      "pair": 1,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 86.29639999999927,
+        "p95": 159.15750000000116,
+        "max": 223.17929999999978
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 41.46990000000005,
+        "p95": 87.27059999999983,
+        "max": 112.20240000000013
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 0,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 88.21489999999994,
+        "p95": 155.86679999999978,
+        "max": 231.11049999999886
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 41.743900000000394,
+        "p95": 79.47990000000027,
+        "max": 112.42360000000008
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 1,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 88.36499999999978,
+        "p95": 156.6266999999989,
+        "max": 227.4933000000001
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 45.13869999999952,
+        "p95": 84.63679999999931,
+        "max": 109.87700000000041
+      }
+    }
+  ],
+  "medianPairedSavingMs": {
+    "war": 44.559600000000046,
+    "history": 44.84864999999991
+  },
+  "equality": {
+    "war": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-war.json",
+      "candidateCapture": "runs/s146/step4-daily-war.json",
+      "captureSHA256": "fc32bf8750d9a17aeee7a7be83434e57aaa7f44cd0bf7a8bcbac0de0a5a87a98"
+    },
+    "history": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-history.json",
+      "candidateCapture": "runs/s146/step4-daily-history.json",
+      "captureSHA256": "be82f0718286549499d9e0b7b115de79856d8e383f221fd5d7763881b16fbac6"
+    },
+    "testbed": {
+      "dailyHashes": 120,
+      "initialHash": "5b9021057cfe396c806ac818666d72794b947be6d9d1b32e2fc91ecacd24c94c",
+      "finalHash": "109ded3c1d4532b7907b1698d4f109b97297fa7ee8978129b5f1aceec9b17c63",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-testbed.json",
+      "candidateCapture": "runs/s146/step4-daily-testbed.json",
+      "captureSHA256": "f4388848962bb50928f672c87745da348f8f4ff11700fa83c06c220fd08129c5"
+    }
+  },
+  "preservation": {
+    "originalTrackedPaths": 3412,
+    "missing": [],
+    "modifiedStartingPaths": [
+      "packages/kernel/src/seats/local-actions.ts",
+      "packages/kernel/src/seats/onward-assignments.ts",
+      "packages/kernel/src/seats/requests.ts",
+      "packages/kernel/src/tick/generate.ts",
+      "packages/kernel/src/tick/mandates.ts",
+      "packages/kernel/src/tick/tick.ts",
+      "packages/kernel/src/view/view.ts",
+      "packages/kernel/test/s123-mandates.test.ts",
+      "tools/rules/projection-derivations.json"
+    ],
+    "allPackInputsIdentical": true
+  },
+  "rawEvidence": "runs/s146/step4-*.log and *.exit.json",
+  "validationPlan": "runs/s146/validation-plan.json",
+  "incrementalAgainstd44e77fd": [
+    {
+      "slot": "war",
+      "parent": {
+        "unit": "ms",
+        "days": 148,
+        "median": 49.137399999999616,
+        "p95": 88.22869999999966,
+        "max": 130.11499999999978
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 41.98380000000088,
+        "p95": 81.16120000000001,
+        "max": 119.57769999999982
+      },
+      "savingMs": 7.1535999999987325
+    },
+    {
+      "slot": "history",
+      "parent": {
+        "unit": "ms",
+        "days": 148,
+        "median": 48.890699999999924,
+        "p95": 88.82699999999932,
+        "max": 129.14490000000114
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 42.35319999999956,
+        "p95": 81.25959999999941,
+        "max": 125.64499999999862
+      },
+      "savingMs": 6.537500000000364
+    }
+  ]
+}
