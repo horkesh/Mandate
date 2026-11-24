@@ -1,0 +1,29 @@
+{
+  "reason": "Cold stores import exposed an upward dependency from pure task queries into tick map initialization. Move dispatch unchanged and inject the identical authority predicate from the tick. No reference-run mechanism changes.",
+  "byteIdenticalQueryFunctions": [
+    "liveOperation",
+    "answered",
+    "actualBlock",
+    "taskForBlock",
+    "executesAttack",
+    "recordDefaultTasks"
+  ],
+  "dispatchWorkflowByteIdenticalAfterMove": true,
+  "cleanupDifference": "Only replace the upward authority call with the same predicate supplied by tick/operations.ts.",
+  "testCorrections": [
+    "S124 schema assertion uses CURRENT_SAVE_SCHEMA, preserving old-save/no-offer assertions.",
+    "S51 retains exact equality for all prior operation fields and asserts only new task termination metadata."
+  ],
+  "reusedEvidence": [
+    "battle-comparison.json",
+    "operation-history.json",
+    "validation.json"
+  ],
+  "measuredSourceSha256": "e8c84458b4cd2dd4daf082d56f8575a8cc7ef6de012f470f704141bd46898238",
+  "pureDeliveredSourceSha256": "2c28e91b46e4cf702600e7a771beba0115accbf4cd86f2be7e560c08b568d240",
+  "dispatchFunctionBodiesByteIdenticalAfterMove": [
+    "allocateTask",
+    "taskRequest",
+    "releaseTask"
+  ]
+}

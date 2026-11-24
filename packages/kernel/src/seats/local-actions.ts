@@ -15,7 +15,7 @@ import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { canonicalHash } from '../serialize/hash.ts';
 import { optionView } from '../tick/plans.ts';
-import { viewFor } from '../view/view.ts';
+import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
 import { daysFromCivil, parseIsoDate } from '../world/calendar.ts';
 import { letterKey } from '../world/letters.ts';
 import type { MandateGrant, MandatePaper } from '../world/mandates.ts';
@@ -38,18 +38,22 @@ import { localPlanningGround, type LocalPlanningGround } from './planning-ground
 export function mandateLetter(paper: MandatePaper) {
   return { namespace: `authority.${paper.grant.mandateIssuer}`, key: paper.grant.mandateKey, revision: paper.grant.mandateRevision };
 }
-export function availableMandatePapers(world: SeatsWorld, state: State, person: PersonId, day: number): MandatePaper[] {
+export function availableMandatePapers(world: SeatsWorld, state: State, person: PersonId, day: number, cache?: ViewCache): MandatePaper[] {
   const declared = (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person);
   if (declared.length === 0) return [];
   const knowledge = knowledgeOf(state,seatIdFor(person));
-  const view = viewFor(world,state,seatIdFor(person));
-  const addresses = world.start.factions.some(f => f.principal === person) ? view.posts :
-    commandProjection(world,person,view.faction,view.reports,state.stateDay,state.calendarStart,declared.map(p => p.grant.mandatePost)).posts;
-  return (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person &&
-    (p.assignment !== undefined || addresses.some(a => a.post === p.grant.mandatePost && a.status === 'held' && a.holder === p.grant.mandateHolder)) &&
+  // Dispatched or not-yet-due instruments cannot need a received address.
+  // Keep the full declared address scope below: other papers can supply ancestors.
+  const pending = declared.filter(p =>
     day >= daysFromCivil(parseIsoDate(p.fromDate)) - daysFromCivil(parseIsoDate(world.start.startDate)) &&
     !knowledge.knownDoctrineDispatches?.some(d => letterKey(d.dispatchLetter) === letterKey(mandateLetter(p))) &&
-    hasRequiredPapers(p.requiresPapers,knowledge,state.stateDay,world.rules.templates))
+    hasRequiredPapers(p.requiresPapers,knowledge,state.stateDay,world.rules.templates));
+  if (pending.length === 0) return [];
+  const view = viewFor(world,state,seatIdFor(person),cache);
+  const addresses = world.start.factions.some(f => f.principal === person) ? view.posts :
+    commandProjection(world,person,view.faction,view.reports,state.stateDay,state.calendarStart,declared.map(p => p.grant.mandatePost)).posts;
+  return pending.filter(p =>
+    p.assignment !== undefined || addresses.some(a => a.post === p.grant.mandatePost && a.status === 'held' && a.holder === p.grant.mandateHolder))
     .sort((a,b) => strictCompare(a.fromDate,b.fromDate) || strictCompare(a.id,b.id));
 }
 export function goalWithin(g: MandateGrant, goal: PlanGoal): boolean {
@@ -95,30 +99,41 @@ export type LocalOption = ForceOption |
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'review'; readonly received: KnownReport } |
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'goal'; readonly target: PostId; readonly goal: PlanGoal; readonly candidate: PlanCandidate };
 
-export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, ground: LocalPlanningGround = localPlanningGround(world,state,day)): LocalOption[] {
+export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, cache: ViewCache = createViewCache(), ground: LocalPlanningGround = localPlanningGround(world,state,day)): readonly LocalOption[] {
+  let morning = cache.localOptions.get(state);
+  if (morning?.world !== world || morning.day !== day) {
+    morning = { world, day, people: new Map() };
+    cache.localOptions.set(state, morning);
+  }
+  const previous = morning.people.get(person);
+  if (previous !== undefined) return previous;
   if (world.start.factions.some(f => f.principal === person)) {
     const post=heldPost(state,person);
-    return post===null?[]:forceOptions(world,state,person,post,day,ground).filter(o=>o.kind==='force-answer');
+    const selected = post===null?[]:forceOptions(world,state,person,post,day,ground).filter(o=>o.kind==='force-answer');
+    morning.people.set(person,selected);
+    return selected;
   }
   const posts=Object.keys(state.postStates).filter(id=>state.postStates[id as PostId]!.postHolder===person).sort(strictCompare) as PostId[];
-  const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post,ground));
+  const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post,cache,ground));
   const rank={'force-request':0,'force-answer':0,'allocation-fulfil':0,allocation:0,assignment:0,grant:0,review:1,letter:2,goal:3};
-  return [...new Map(options.map(o=>[o.id,o])).values()].sort((a,b)=>rank[a.kind]-rank[b.kind] || (a.kind==='goal' && b.kind==='goal'?b.candidate.candScore-a.candidate.candScore:0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
+  const selected = [...new Map(options.map(o=>[o.id,o])).values()].sort((a,b)=>rank[a.kind]-rank[b.kind] || (a.kind==='goal' && b.kind==='goal'?b.candidate.candScore-a.candidate.candScore:0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
+  morning.people.set(person, selected);
+  return selected;
 }
-function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId, ground: LocalPlanningGround): LocalOption[] {
+function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId, cache: ViewCache, ground: LocalPlanningGround): LocalOption[] {
   const active = currentMandates(state,post).filter(a => activeMandate(world.map,state,a,day));
-  const out: LocalOption[] = assignmentOptions(world,state,person,day).filter(o=>o.paper.from===post);
+  const out: LocalOption[] = assignmentOptions(world,state,person,day,cache).filter(o=>o.paper.from===post);
   out.push(...forceOptions(world,state,person,post,day,ground));
   out.push(...allocationFulfilments(world,state,person,day).filter(o=>o.paper.from===post).map(o=>({id:`fulfil:${o.row.allocOrder}`,kind:'allocation-fulfil' as const,authority:null,order:o.row.allocOrder,paper:o.paper})));
   out.push(...availableAllocations(world,state,person,day).filter(p=>p.issuerPost===post && active.some(a=>a.authorityGrant.mandateKey===p.mandate && a.authorityGrant.mandateActions.includes('assign'))).map(p=>({id:`allocation:${p.id}`,kind:'allocation' as const,authority:null,paper:p})));
-  for (const paper of availableMandatePapers(world,state,person,day)) {
+  for (const paper of availableMandatePapers(world,state,person,day,cache)) {
     if (paper.grant.mandateParent === null && paper.grant.mandateIssuerPost === post &&
       world.map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[post]!.postKind)) {
       out.push({id:`grant:${paper.id}`,authority:null,kind:'grant',paper});
     }
   }
   if (active.length === 0) return out;
-  for (const a of active) for (const paper of availableMandatePapers(world,state,person,day)) {
+  for (const a of active) for (const paper of availableMandatePapers(world,state,person,day,cache)) {
     const parent = paper.grant.mandateParent;
     if (a.authorityGrant.mandateOnward && parent?.parentPost === post && parent.parentKey === a.authorityGrant.mandateKey &&
       a.authorityGrant.mandateRecipients.some(r => inSubtree(state,paper.grant.mandatePost,r))) {
@@ -151,7 +166,7 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
         !hasRequiredPapers(row.requiresPapers, knowledge, state.stateDay, world.rules.templates) ||
         (row.requiresNotice !== undefined && !knowledge.knownReports.some(r => r.knownReceivedDay <= state.stateDay &&
           r.knownBody.reportSubjectKind === 'situation' && r.knownBody.reportSubjectId === row.requiresNotice))) continue;
-      const sender = senderFor(world, state, seatIdFor(person), undefined, undefined, post, row.post);
+      const sender = senderFor(world, state, seatIdFor(person), undefined, cache, post, row.post);
       if (sender?.holder(row.post) == null || sender.side(row.post) !== side) continue;
       const blocks = allCommandedBlocks(world.map, state, row.post);
       for (const authority of active) {
@@ -171,24 +186,31 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
   const own = state.planRecords[post];
   const canInitiate = commandedBlocks(state,post).length > 0 && own === undefined;
   if (!canInitiate && (own === undefined || own.planGoal.goalObjective === null)) return out;
-  const view = viewFor(world,state,seatIdFor(person));
-  const sender = senderFor(world,state,seatIdFor(person),undefined,undefined,post);
-  const { derived, network, month } = ground();
+  // Many standing authorities have nothing left to plan. Derive the picture
+  // and supply map only after the unchanged target/commitment guards need them.
+  let view: ReturnType<typeof viewFor> | undefined;
+  let sender: ReturnType<typeof senderFor> | undefined;
+  let planning: ReturnType<LocalPlanningGround> | undefined;
   for (const a of active) for (const target of [...new Set([...(canInitiate ? [post] : []), ...a.authorityGrant.mandateRecipients])].sort(strictCompare)) {
     if (target === post && !canInitiate) continue;
-    if (target !== post && sender?.holder(target) == null) continue;
     if (state.planRecords[target]?.planIssuer === person || state.messagesInTransit.some(m => m.msgOrder?.orderIssuer === person && m.msgOrder.orderTarget === target)) continue;
+    if (target !== post && (sender ??= senderFor(world,state,seatIdFor(person),undefined,cache,post))?.holder(target) == null) continue;
     const blocks = allCommandedBlocks(world.map,state,target);
     if (!mayCommit(world.map,state,a,target,blocks)) continue;
+    const picture = view ??= viewFor(world,state,seatIdFor(person),cache);
     const defaults = world.map.world.rules.plans.goalDefaults;
     const goals: PlanGoal[] = target !== post ? own === undefined ? [] : [{ ...own.planGoal, goalCommitted: blocks, goalApproveAsDrafted: false }] :
-      a.authorityGrant.mandateRegions.filter(region => region === view.region || view.enemyBeliefs[region]?.strength?.strengthPresence === true || (view.enemyBeliefs[region]?.value ?? 0) > 0)
-      .flatMap(region => a.authorityGrant.mandateActions.filter((action): action is Posture => POSTURES.some(p => p === action) && (region !== view.region || action === 'hold')).map(action => ({
+      a.authorityGrant.mandateRegions.filter(region => region === picture.region || picture.enemyBeliefs[region]?.strength?.strengthPresence === true || (picture.enemyBeliefs[region]?.value ?? 0) > 0)
+      .flatMap(region => a.authorityGrant.mandateActions.filter((action): action is Posture => POSTURES.some(p => p === action) && (region !== picture.region || action === 'hold')).map(action => ({
         goalObjective:region,goalPosture:action,goalRisk:defaults.risk,goalDeadlineDays:defaults.deadlineDays,
         goalRail:a.authorityGrant.mandateModes.includes('rail'),goalRiver:a.authorityGrant.mandateModes.includes('river'),goalSea:a.authorityGrant.mandateModes.includes('sea'),
         goalNeutral:false,goalCommitted:blocks,goalAwaitWord:false,goalApproveAsDrafted:false,
       })));
     for (const goal of goals) {
+    if (planning === undefined) {
+      planning = ground();
+    }
+    const { month, network, derived } = planning;
     const input = plannerInputFor(world,state,derived,network,month,view,target,goal,day);
     // Score from the issuing commander's traits and reports, not the addressee's hidden judgement.
     const issuerInput = plannerInputFor(world,state,derived,network,month,view,post,goal,day);
@@ -203,8 +225,8 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
   return out.sort((a,b) => rank[a.kind]-rank[b.kind] || (a.kind === 'goal' && b.kind === 'goal' ?
     b.candidate.candScore-a.candidate.candScore : 0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
 }
-export function localMenu(world: SeatsWorld, state: State, person: PersonId, day: number, ground?: LocalPlanningGround): LocalActionMenu | null {
-  const options = localOptions(world,state,person,day,ground);
+export function localMenu(world: SeatsWorld, state: State, person: PersonId, day: number, cache?: ViewCache, ground?: LocalPlanningGround): LocalActionMenu | null {
+  const options = localOptions(world,state,person,day,cache,ground);
   return options.length === 0 ? null : { menuKind: 'local-action', post: heldPost(state,person)!, options: options.map(o => ({
     optionId: o.id, mandate: o.authority?.authorityGrant.mandateKey ?? (o.kind === 'grant' ? o.paper.grant.mandateKey : ''),
     ...(o.kind === 'force-request' ? {to:o.to} : o.kind === 'force-answer' ? {paper:o.request,to:o.need.needPost} : o.kind === 'grant' ? { paper: o.paper.id } : o.kind === 'assignment' || o.kind === 'allocation' || o.kind === 'allocation-fulfil' ? {paper:o.paper.id,to:o.paper.to}

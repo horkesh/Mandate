@@ -1,4 +1,5 @@
 import { forceTotals, knownStragglers, type ForceTotalsCache } from '../forces/lots.ts';
+import { executesAttack, taskForBlock } from '../operations/tasks.ts';
 /**
  * The battle model in the day tick (lane 1.3; FOUNDATION section 12's row 1.3; the combat note's P1–P9). It replaces
  * Phase 0's simple contest (0064). Pure: it reads State and returns proposals for each owner, and its own battle-record
@@ -142,9 +143,18 @@ export function presenceByRegion(ground: Pick<MarchGround, 'map'>, state: State)
 /** Whether a side may attack today: a block of it marched in and presses (0064), and is not recovering from a rout. */
 export function mayAttackToday(rules: CombatRules, state: State, side: Presence, day: number): boolean {
   return side.pressing.some((b) => {
+    if (!executesAttack(state, b, day)) return false;
     const routed = state.forceBlockStates[b]!.fbRoutedDay;
     return routed === null || day - routed >= rules.morale.recoveryDays;
   });
+}
+
+/** Offensive participation is derived from task execution and actual regional presence, never saved as assignments. */
+export function attackingPresence(state: State, side: Presence, day: number, cache?: ForceTotalsCache): Presence {
+  const blocks = side.blocks.filter(b => executesAttack(state, b, day));
+  return { faction: side.faction, blocks, pressing: side.pressing.filter(b => blocks.includes(b)),
+    men: blocks.reduce((n, b) => n + (forceTotals(state.forceBlockStates[b]!, cache).fbStrength ?? 0), 0),
+    unknown: side.unknown.filter(b => blocks.includes(b)) };
 }
 
 /** A commander as his decisions read him: a man's own traits and stats, or the pack's unknown man for a vacant post. */
@@ -255,7 +265,9 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
       if (all.length === 1 && !neutral) occupy(ground, state, region, all[0]!, out.occupations, out.control);
       continue;
     }
-    const sides = [all[0]!, all[1]!].sort((a, b) => strictCompare(a.faction, b.faction));
+    const defenders = [all[0]!, all[1]!].sort((a, b) => strictCompare(a.faction, b.faction));
+    const attacking = defenders.map(s => attackingPresence(state, s, day, ground.map.forceTotalsCache));
+    let sides = defenders;
     let record = open === null ? null : state.battleRecords[open]!;
     if (record !== null && (record.battleFactions[0] !== sides[0]!.faction || record.battleFactions[1] !== sides[1]!.faction)) {
       closeQuiet(open!);
@@ -263,14 +275,16 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
     }
     const last = record === null ? null : lastDay(record);
     const breaking = sides.map((s) => last !== null && last.bdayDay === day - 1 && last.bdaySides.find((x) => x.bsideFaction === s.faction)?.bsideCutOff === 'break_out');
-    const command = sides.map((s) => sideCommand(state, s.blocks, ground.map.forceTotalsCache));
-    const views = command.map((c) => commanderView(world, state, c.person));
+    // An escape from encirclement is self-defence, including locally exposed guards and reserves.
+    breaking.forEach((breaks, i) => { if (breaks) attacking[i] = defenders[i]!; });
+    let command = sides.map((s, i) => sideCommand(state, attacking[i]!.blocks.length > 0 ? attacking[i]!.blocks : s.blocks, ground.map.forceTotalsCache));
+    let views = command.map((c) => commanderView(world, state, c.person));
     // His seat's orders for today (lane 1.12): a vacant post's side, or a post with no orders, is left to judgement.
-    const given = command.map((c) => (c.post === null || c.person === null ? ALL_JUDGE : (orders.get(c.post) ?? ALL_JUDGE)));
+    let given = command.map((c) => (c.post === null || c.person === null ? ALL_JUDGE : (orders.get(c.post) ?? ALL_JUDGE)));
     const commits = sides.map((s, i) => {
       if (breaking[i]) return { choice: 'all_out' as Commit, terms: [{ btermKind: 'breaking_out', btermValue: 0, btermSource: command[i]!.person } as BattleTerm] };
-      const mayAttack = mayAttackToday(rules, state, s, day);
-      const rule = commitAtDawn(rules, views[i]!, mayAttack, s.men, sides[1 - i]!.men);
+      const mayAttack = mayAttackToday(rules, state, attacking[i]!, day);
+      const rule = commitAtDawn(rules, views[i]!, mayAttack, mayAttack ? attacking[i]!.men : s.men, defenders[1 - i]!.men);
       const order = given[i]!.commit;
       // A side that may not attack defends whatever it was ordered: the order is recorded as not carried out.
       if (!mayAttack && order !== JUDGE && order !== 'defend') return { choice: rule.choice, terms: [...rule.terms, notPossible(command[i]!.person)] };
@@ -280,6 +294,12 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
       if (record !== null) closeQuiet(open!);
       continue;
     }
+    // A defensive side exposes every eligible block. An attacking side supplies only executing tasks.
+    const mutualAttack = commits.every(c => c.choice !== 'defend');
+    sides = defenders.map((s, i) => commits[i]!.choice === 'defend' || mutualAttack ? s : attacking[i]!);
+    command = sides.map((s, i) => commits[i]!.choice === 'defend' ? sideCommand(state, s.blocks, ground.map.forceTotalsCache) : command[i]!);
+    views = command.map(c => commanderView(world, state, c.person));
+    given = command.map(c => c.post === null || c.person === null ? ALL_JUDGE : (orders.get(c.post) ?? ALL_JUDGE));
     // Today's battle: the open one if it has days left, else a new one.
     let id: BattleId;
     let dayNumber: number;
@@ -309,11 +329,14 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
         post: command[i]!.post,
         commander: views[i]!,
         commit: commits[i]!.choice,
-        commitTerms: commits[i]!.terms,
+        commitTerms: [...commits[i]!.terms, ...[...new Set(s.blocks.map(b => taskForBlock(state, b, day)?.otaskKind ??
+          (commits[i]!.choice === 'defend' ? 'local_defence' : 'main_effort')))].sort(strictCompare).map(kind =>
+          ({ btermKind: `task_${kind}`, btermValue: 0, btermSource: command[i]!.person }))],
         blocks: s.blocks.map((b): BlockInput => {
           const f = state.forceBlockStates[b]!;
           return { id: b, men: forceTotals(f, ground.map.forceTotalsCache).fbStrength, stragglers: knownStragglers(f, ground.map.forceTotalsCache), morale: f.fbMorale, experience: f.fbExperience, equipment: f.fbEquipment };
         }),
+        ...(commits[i]!.choice === 'defend' ? {} : { commitBlocks: attacking[i]!.blocks }),
         retreatTo: retreatTarget(ground, state, region, s.faction)?.to ?? null,
         breakingOut: breaking[i]!,
         surprised: !forewarned(state, command[i]!.person, region),

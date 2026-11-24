@@ -1,0 +1,140 @@
+{
+  "base": "77565d1749b3a9f320d419555b0d8aee38884f0c",
+  "step": "step1",
+  "timing": "serial Windows Node22.23.2, unprofiled; Linux CI is binding and not claimed",
+  "rows": [
+    {
+      "slot": "war",
+      "pair": 0,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 86.85289999999986,
+        "p95": 153.59189999999944,
+        "max": 232.83999999999833
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 80.21560000000045,
+        "p95": 162.04739999999947,
+        "max": 204.60009999999966
+      }
+    },
+    {
+      "slot": "war",
+      "pair": 1,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 88.07090000000062,
+        "p95": 164.71999999999935,
+        "max": 244.5576999999994
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 80.07360000000062,
+        "p95": 156.7569999999996,
+        "max": 215.27300000000105
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 0,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 88.6362999999983,
+        "p95": 156.09279999999853,
+        "max": 274.0005000000001
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 80.3081000000002,
+        "p95": 153.16930000000139,
+        "max": 207.6922999999988
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 1,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 89.4960000000001,
+        "p95": 151.4883000000009,
+        "max": 229.17519999999968
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 82.73160000000098,
+        "p95": 145.8796999999995,
+        "max": 219.22390000000087
+      }
+    }
+  ],
+  "medianPairedSavingMs": {
+    "war": 7.317299999999705,
+    "history": 7.54629999999861
+  },
+  "equality": {
+    "war": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-war.json",
+      "candidateCapture": "runs/s146/step1-daily-war.json",
+      "captureSHA256": "ab9c6f7c2e6627526409d9eefb63798a39afbf7c11040bdde07915aedac81b61"
+    },
+    "history": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-history.json",
+      "candidateCapture": "runs/s146/step1-daily-history.json",
+      "captureSHA256": "233c906af286568edc7ed5ddb6299cf1438e43fb247d9a9d8cd0b1cf0bb129a3"
+    },
+    "testbed": {
+      "dailyHashes": 120,
+      "initialHash": "5b9021057cfe396c806ac818666d72794b947be6d9d1b32e2fc91ecacd24c94c",
+      "finalHash": "109ded3c1d4532b7907b1698d4f109b97297fa7ee8978129b5f1aceec9b17c63",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-testbed.json",
+      "candidateCapture": "runs/s146/step1-daily-testbed.json",
+      "captureSHA256": "d884e25c68cabba7497dc78008afb78be2716974638581844a145bc158359fbc"
+    }
+  },
+  "preservation": {
+    "originalTrackedPaths": 3412,
+    "missing": [],
+    "modifiedStartingPaths": [
+      "packages/kernel/src/seats/local-actions.ts",
+      "packages/kernel/test/s123-mandates.test.ts",
+      "tools/rules/projection-derivations.json"
+    ],
+    "allPackInputsIdentical": true
+  },
+  "rawEvidence": "runs/s146/step1-*.log and *.exit.json",
+  "validationPlan": "runs/s146/validation-plan.json"
+}

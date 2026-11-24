@@ -19,6 +19,8 @@ export * from './messages/transit.ts';
 export * from './plans/goal.ts';
 export * from './plans/plans.ts';
 export * from './operations/operations.ts';
+export * from './operations/tasks.ts';
+export * from './tick/tasks.ts';
 export * from './operations/rules.ts';
 export * from './tick/operations.ts';
 export * from './tick/support.ts';

@@ -1,5 +1,6 @@
 import { sideOfPerson } from '../command/command.ts';
 import { planAuthorized } from '../seats/local-actions.ts';
+import { cleanTasks, recordDefaultTasks, taskForBlock } from '../operations/tasks.ts';
 import { withinCommand } from '../command/command.ts';
 import { receiveOffers } from './offers.ts';
 import { assignmentPassage, receiveAssignments } from './onward-assignments.ts';
@@ -72,10 +73,12 @@ export const OPERATIONS_MECHANICS = [
 ] as const;
 
 /** Blocks of an axis still in it: they exist, its post commands them, and they have not surrendered. */
-export function liveBlocks(state: State, axis: OpAxis): ForceBlockId[] {
+export function liveBlocks(state: State, axis: OpAxis, day = state.stateDay + 1): ForceBlockId[] {
   return axis.oaxBlocks.filter((b) => {
     const f = state.forceBlockStates[b];
-    return f !== undefined && f.fbSurrenderedDay === null && withinCommand(state,state.forceAssignments[b]??null,axis.oaxPost) && state.forceLocations[b] !== undefined;
+    const task = taskForBlock(state, b, day);
+    const executing = task === undefined || task.otaskDefault || task.otaskKind === 'main_effort' || task.otaskKind === 'demonstration';
+    return executing && f !== undefined && f.fbSurrenderedDay === null && withinCommand(state,state.forceAssignments[b]??null,axis.oaxPost) && state.forceLocations[b] !== undefined;
   });
 }
 
@@ -189,7 +192,7 @@ function encirclement(op: OperationRecord, plan: PlanCandidate): Pick<OperationR
 
 /** Phase 3: operations follow their plans, each axis takes its day's stage, then every march gains a day. */
 export function operationsPhase(ctx: TickContext, start: State): State {
-  let state = start;
+  let state = cleanOperationTasks(ctx, start);
   const { world, day } = ctx;
   const ground = morningGround(world, state, day).march;
 
@@ -229,7 +232,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
         return { ...base, oreqMessage: message, oreqHolder: target };
       });
       op = { ...op, opRequests: requests };
-      state = putOperations(state, [{ id: operationId(post, day), record: op }]);
+      state = putOperations(state, [{ id: operationId(post, day), record: recordDefaultTasks(op, operationId(post, day)) }]);
       fire(ctx, 'operations.opened');
     }
   }
@@ -237,7 +240,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   // 2. Each open operation's axes take the day's stage.
   const works: FortificationDelta[] = [];
   for (const id of openOperations(state)) {
-    let op = state.operationRecords[id]!;
+    let op = recordDefaultTasks(state.operationRecords[id]!, id);
     const record = state.planRecords[op.opPost];
     const plan = record?.planApproved ?? null;
     const matches = record !== undefined && record.planOrder === op.opOrder && plan?.id === op.opPlan;
@@ -285,13 +288,21 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   }
 
   // 2b. Blocks under orders to join their post march toward its seat (lane 1.12: a transfer concentrates).
-  state = joinStep(ctx, state, ground);
+  state = joinStep(ctx, cleanOperationTasks(ctx, state), ground);
 
   // 3. Every march gains a day.
   const marched = advanceMarches(state, day);
   state = marched.state;
   for (const a of marched.arrivals) fire(ctx, 'movement.arrived', 1 + a.carried.length);
   return receiveAllocations(ctx,receiveAssignments(ctx,receiveOffers(ctx,state)));
+}
+
+/** The tick supplies its existing authority check; operations' pure task readers have no upward import. */
+function cleanOperationTasks(ctx: TickContext, state: State): State {
+  return cleanTasks(state, ctx.day, op => {
+    const plan = state.planRecords[op.opPost];
+    return plan === undefined || planAuthorized(ctx.world, state, op.opPost, plan, ctx.day, plan.planApproved ?? undefined);
+  });
 }
 
 function demonstrationEvent(op: OperationRecord, stage: DemonstrationStage, reason: DemonstrationReason, day: number, region: RegionId | null): OperationRecord {
@@ -524,6 +535,11 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
     return enter(a, stage, reason, day, region, until);
   };
   if (group === null || side === null) {
+    // A guarded force is still allocated, not gone. Wait for the commander's release rather than ending its duty.
+    if (side !== null && axis.oaxBlocks.some(b => taskForBlock(state, b, day) !== undefined &&
+      state.forceBlockStates[b]?.fbSurrenderedDay === null && withinCommand(state, state.forceAssignments[b] ?? null, axis.oaxPost))) {
+      return { state, axis: axis.oaxLog.at(-1)?.axevReason === 'awaiting_task_release' ? axis : move(axis, 'pause', 'awaiting_task_release', axis.oaxRoute.routeFrom) };
+    }
     const taken = axis.oaxBlocks.some((b) => state.forceBlockStates[b]?.fbSurrenderedDay !== null && state.forceBlockStates[b] !== undefined);
     return { state, axis: move(axis, 'end', taken ? 'force_taken' : 'no_forces', axis.oaxObjective) };
   }

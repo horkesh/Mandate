@@ -116,9 +116,9 @@ export const REVIEWED_READS: readonly SourceReadClassifications[] = [
   },
   {
     path: 'packages/kernel/src/tick/generate.ts',
-    hash: 'c815455b7e64fd3fdf86a671235eaab9a22107194d2d4fc2f61e8a373c905385',
+    hash: '35ff564c672257590afca0788e6731051a3493a410f83998c5cdb993176eb4a3',
     sites: [{
-      line: 228, keys: ['postStates'], form: 'write through a parenthesised target',
+      line: 247, keys: ['postStates'], form: 'write through a parenthesised target',
       reason: 'The sort operates on a fresh array of post ids returned by Object.keys.',
     }],
   },

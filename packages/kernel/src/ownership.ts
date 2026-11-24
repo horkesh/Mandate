@@ -151,6 +151,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('goals, plans, approvals, edits, pending proposals and received discretion', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets and alternatives, on request)', 'commander knowledge (conditional fallback judgment)'], [at('State', 'planRecords')]),
   // Lane 1.4: approved plans in execution, each axis's stage, its support requests and its outcome.
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes', 'a support request answered'], [at('State', 'operationRecords')]),
+  field('operation task allocation, release conditions and task support references (opTasks, oreqTask)', 'operations', ['commander allocation', 'ordinary support compliance', 'operation closure and allocation loss']),
   field('knowledge (reports and own sent-letter correlations per seat)', 'knowledge', ['opening bulletins', 'message delivery', 'own issued papers', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'openingControlReports'), at('State', 'openingControlClaims'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('authored consultation dispatch copies and received course advice', 'knowledge', ['own issued questions', 'message delivery'], []),
@@ -267,6 +268,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PlanRejected',
   // Lane 1.4: operations (each replaced whole by `operations`)
   'OperationRecord',
+  'OperationTask',
   'DemonstrationEpisode',
   'DemonstrationEvent',
   'DemonstrationAction',

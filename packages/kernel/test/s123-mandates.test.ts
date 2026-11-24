@@ -1,5 +1,10 @@
+import { placeAndRemove } from '../src/movement/movement.ts';
+import { repartition } from '../src/tick/organisation.ts';
 import type { MandatePaper } from '../src/world/mandates.ts';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+import * as views from '../src/view/view.ts';
+import * as maps from '../src/control-index/derived.ts';
+import { mandateLetter } from '../src/seats/local-actions.ts';
 import { createState } from '../src/tick/setup.ts';
 import { tick } from '../src/tick/tick.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
@@ -41,6 +46,21 @@ function fixture(g = grant(), nested = false) {
 }
 
 describe('S123 received authority', () => {
+  it('S146: future and already dispatched grants need no received-view construction', () => {
+    const { world, start } = fixture();
+    const paper = world.map.world.rules.mandates![0]!;
+    const seat = seatIdFor(paper.grant.mandateIssuer);
+    const held = knowledgeOf(start, seat);
+    const sent: State = { ...start, knowledgeBySeat: { ...start.knowledgeBySeat, [seat]: { ...held,
+      knownDoctrineDispatches: [{ dispatchLetter: mandateLetter(paper), dispatchOrigin: origin('sent'), dispatchDay: 0 }],
+    } } };
+    const spy = vi.spyOn(views, 'viewFor');
+    try {
+      expect(availableMandatePapers(world, start, paper.grant.mandateIssuer, -1)).toEqual([]);
+      expect(availableMandatePapers(world, sent, paper.grant.mandateIssuer, 1)).toEqual([]);
+      expect(spy).not.toHaveBeenCalled();
+    } finally { spy.mockRestore(); }
+  });
   it('C1: a root instrument travels and is enacted only after its holder answers', () => {
     const map = fixtureMap();
     const paper: MandatePaper = {
@@ -135,6 +155,35 @@ describe('S123 received authority', () => {
       id:origin('use'),issuer:P('a_sec'),goal:goalOf(goalTerms('hold','a_mid')),viaChain:true,issuedDay:1,response:'answer' },1).planRecords[POST('a_reserve')]! } } };
     expect(mayCommit(world.map,live,mandateAt(live,g.mandatePost,g.mandateKey)!,POST('a_army'),[army])).toBe(false);
     expect(mayCommit(world.map,live,mandateAt(live,g.mandatePost,g.mandateKey)!,POST('a_office'),[reserve])).toBe(false);
+  });
+  it.each(['disbanded', 'regrouped'] as const)('S145: a live use with a %s container permits a new local commitment', (change) => {
+    const { world,active,g } = fixture();
+    const reserve = toId('forceBlock','a_reserve_1');
+    const army = toId('forceBlock','a_army_1');
+    const order = origin('old.live.use');
+    let state = commitAuthority(active,mandateAt(active,g.mandatePost,g.mandateKey)!,order,POST('a_reserve'),[reserve]);
+    state = setGoal(state,POST('a_reserve'),{ id:order,issuer:P('a_sec'),
+      goal:goalOf(goalTerms('hold','a_mid',{committed:[reserve]})),viaChain:true,issuedDay:1,response:'answer' },1);
+    if (change === 'disbanded') {
+      const gone = applyMusters(world.map,state,[{change:'disband',block:reserve,cause:'recruitment'}]);
+      state = musterAssignments(placeAndRemove(world.map,gone.state,[],gone.disbanded),[],[],gone.disbanded);
+    } else {
+      state = repartition(state,[reserve],[{block:toId('forceBlock','regrouped.reserve'),
+        lots:state.forceBlockStates[reserve]!.fbLots.map(l => l.lotId),name:'regrouped reserve'}],[POST('a_reserve')]);
+    }
+    const row = mandateAt(state,g.mandatePost,g.mandateKey)!;
+    expect(state.forceBlockStates[reserve]).toBeUndefined();
+    expect(state.planRecords[POST('a_reserve')]!.planOrder).toBe(order);
+    expect(row.authorityUses).toEqual([{useOrder:order,useTarget:POST('a_reserve'),useBlocks:[reserve]}]);
+    expect(mayCommit(world.map,state,row,POST('a_army'),[army])).toBe(true);
+    // Surviving reservations still consume the ceiling and cannot be spent twice.
+    state = commitAuthority(state,row,origin('new.live.use'),POST('a_army'),[army]);
+    state = setGoal(state,POST('a_army'),{id:origin('new.live.use'),issuer:P('a_sec'),
+      goal:goalOf(goalTerms('hold','a_front',{committed:[army]})),viaChain:true,issuedDay:2,response:'answer'},2);
+    expect(mayCommit(world.map,state,mandateAt(state,g.mandatePost,g.mandateKey)!,POST('a_office'),[army])).toBe(false);
+    if (change === 'regrouped') {
+      expect(mayCommit(world.map,state,mandateAt(state,g.mandatePost,g.mandateKey)!,POST('a_reserve'),[toId('forceBlock','regrouped.reserve')])).toBe(false);
+    }
   });
   it('C2: independently enacted sibling grants draw from one parent commitment balance', () => {
     const {world,active}=fixture();
@@ -255,7 +304,49 @@ describe('S123 received authority', () => {
   it('C3: a broad standing scope alone does not invent distant offensive objectives', () => {
     const {world,active}=fixture(grant({mandateHolder:P('a_bold'),mandatePost:POST('a_reserve'),mandateRecipients:[],
       mandateActions:['take'],mandateRegions:[R('a_mid'),R('a_front')],mandateCeiling:{ceilingPost:POST('a_reserve'),ceilingMen:null}}));
-    expect(localOptions(world,active,P('a_bold'),1)).toEqual([]);
+    const spy = vi.spyOn(maps, 'deriveMap');
+    try {
+      expect(localOptions(world,active,P('a_bold'),1)).toEqual([]);
+      expect(spy).not.toHaveBeenCalled();
+    } finally { spy.mockRestore(); }
+  });
+  it('S146: already ordered local recipients need neither views nor planner maps', () => {
+    const { world, active } = fixture();
+    let state = active;
+    for (const post of [POST('a_office'), POST('a_army'), POST('a_reserve')]) {
+      state = setGoal(state, post, { id: origin(`existing.${post}`), issuer: P('a_sec'),
+        goal: goalOf(goalTerms('hold', 'a_mid', world.map.world.rules.plans.goalDefaults)),
+        viaChain: false, issuedDay: 0, response: 'fixture' }, 0);
+    }
+    const viewSpy = vi.spyOn(views, 'viewFor');
+    const mapSpy = vi.spyOn(maps, 'deriveMap');
+    try {
+      expect(localOptions(world,state,P('a_sec'),1)).toEqual([]);
+      expect(viewSpy).not.toHaveBeenCalled();
+      expect(mapSpy).not.toHaveBeenCalled();
+    } finally { viewSpy.mockRestore(); mapSpy.mockRestore(); }
+  });
+  it('S146: morning local planning is shared, with exact State, world and day invalidation', () => {
+    const { world, active } = fixture(grant({ mandateHolder: P('a_bold'), mandatePost: POST('a_reserve'),
+      mandateRecipients: [], mandateActions: ['hold'], mandateRegions: [R('a_mid')],
+      mandateCeiling: { ceilingPost: POST('a_reserve'), ceilingMen: null } }));
+    const cache = views.createViewCache();
+    const spy = vi.spyOn(maps, 'deriveMap');
+    try {
+      const first = localOptions(world, active, P('a_bold'), 1, cache);
+      expect(first.some(o => o.kind === 'goal')).toBe(true);
+      expect(localOptions(world, active, P('a_bold'), 1, cache)).toEqual(first);
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(localOptions(world, { ...active }, P('a_bold'), 1, cache)).toEqual(first);
+      expect(spy).toHaveBeenCalledTimes(2);
+      localOptions(world, active, P('a_bold'), 2, cache);
+      expect(spy).toHaveBeenCalledTimes(3);
+      localOptions({ ...world }, active, P('a_bold'), 2, cache);
+      expect(spy).toHaveBeenCalledTimes(4);
+      const vacant: State = { ...active, postStates: { ...active.postStates,
+        [POST('a_reserve')]: { ...active.postStates[POST('a_reserve')]!, postHolder: null } } };
+      expect(localOptions(world, vacant, P('a_bold'), 1, cache)).toEqual([]);
+    } finally { spy.mockRestore(); }
   });
   it('C1: an unrelated officer without a known public position is not asked for a mandate view', () => {
     const map=fixtureMap(), spec=fixtureStart();

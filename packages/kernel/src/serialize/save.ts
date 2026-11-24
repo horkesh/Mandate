@@ -79,7 +79,7 @@ export const SAVE_MIGRATIONS: readonly SaveMigration[] = [{
   migrate: save => save,
 }, {
   from: 6, to: 7,
-  change: 'Optional received allocation undertakings, lot reservations and instrument joins. Absent records stay empty; no historical instruction or receipt is inferred.',
+  change: 'Optional received allocation undertakings, lot reservations, instrument joins, operation tasks and ordinary task support references. Absent records retain empty unknown history; no historical instruction, allocation, release or receipt is inferred.',
   migrate: save => save,
 }, {
   from: 7, to: 8,

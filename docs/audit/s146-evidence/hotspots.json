@@ -1,0 +1,288 @@
+{
+  "method": "Node CPU profiles in serial processes; only samples under playDays. Setup and unparented GC excluded. Inclusive rows overlap; family buckets use nearest matching stack frame. Sample absence and inlining are not measured zero. These ranks describe the current workload, not an additive causal decomposition of historical CI differences.",
+  "baselineFamilyOrder": [
+    "mandates, local menus and received address/planner setup",
+    "0130 beliefs and unknown remainders, including regional reconnaissance",
+    "onward assignments, office calls and offers",
+    "receipt witnesses / requiresPapers, small sampled frames",
+    "advice, small sampled frames",
+    "readiness, no separately resolved named frame"
+  ],
+  "readiness": "call readiness is copied/validated inside existing request/recruitment paths, with no separate named sampled frame; no claim that its cost is zero",
+  "namedInclusive": {
+    "base-timed-war": [
+      {
+        "function": "localOptions",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 5949.17
+      },
+      {
+        "function": "availableMandatePapers",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 1136.87
+      },
+      {
+        "function": "reconContacts",
+        "source": "tick/generate.ts",
+        "inclusiveSampleMs": 843.96
+      },
+      {
+        "function": "assignmentOptions",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 592.4
+      },
+      {
+        "function": "latestEnemyClaims",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 98.39
+      },
+      {
+        "function": "mayCommit",
+        "source": "command/authority.ts",
+        "inclusiveSampleMs": 76.18
+      },
+      {
+        "function": "planAuthorized",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 67.22
+      },
+      {
+        "function": "enemyBeliefs",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 54.32
+      },
+      {
+        "function": "biasStrength",
+        "source": "knowledge/strength.ts",
+        "inclusiveSampleMs": 21.32
+      },
+      {
+        "function": "receiveOffers",
+        "source": "tick/offers.ts",
+        "inclusiveSampleMs": 18.73
+      },
+      {
+        "function": "assignmentAuthority",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 12.55
+      },
+      {
+        "function": "observeStrength",
+        "source": "knowledge/strength.ts",
+        "inclusiveSampleMs": 3.13
+      },
+      {
+        "function": "generateCourseAdvice",
+        "source": "people/advice.ts",
+        "inclusiveSampleMs": 1.56
+      }
+    ],
+    "base-timed-history": [
+      {
+        "function": "localOptions",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 6053.47
+      },
+      {
+        "function": "availableMandatePapers",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 1124.72
+      },
+      {
+        "function": "reconContacts",
+        "source": "tick/generate.ts",
+        "inclusiveSampleMs": 893.92
+      },
+      {
+        "function": "assignmentOptions",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 604.82
+      },
+      {
+        "function": "latestEnemyClaims",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 102.8
+      },
+      {
+        "function": "planAuthorized",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 58.94
+      },
+      {
+        "function": "mayCommit",
+        "source": "command/authority.ts",
+        "inclusiveSampleMs": 56.85
+      },
+      {
+        "function": "enemyBeliefs",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 41.72
+      },
+      {
+        "function": "receiveOffers",
+        "source": "tick/offers.ts",
+        "inclusiveSampleMs": 23.43
+      },
+      {
+        "function": "biasStrength",
+        "source": "knowledge/strength.ts",
+        "inclusiveSampleMs": 23.11
+      },
+      {
+        "function": "assignmentAuthority",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 4.67
+      },
+      {
+        "function": "paperDoctrines",
+        "source": "seats/world.ts",
+        "inclusiveSampleMs": 4.67
+      }
+    ],
+    "final-profile-war": [
+      {
+        "function": "localOptions",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 506.11
+      },
+      {
+        "function": "assignmentOptions",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 151.18
+      },
+      {
+        "function": "enemyBeliefs",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 80.48
+      },
+      {
+        "function": "latestEnemyClaims",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 63.66
+      },
+      {
+        "function": "availableMandatePapers",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 62.04
+      },
+      {
+        "function": "planAuthorized",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 59.32
+      },
+      {
+        "function": "mayCommit",
+        "source": "command/authority.ts",
+        "inclusiveSampleMs": 46.46
+      },
+      {
+        "function": "biasStrength",
+        "source": "knowledge/strength.ts",
+        "inclusiveSampleMs": 19.71
+      },
+      {
+        "function": "reconnaissanceIndex",
+        "source": "tick/generate.ts",
+        "inclusiveSampleMs": 14.09
+      },
+      {
+        "function": "receiveOffers",
+        "source": "tick/offers.ts",
+        "inclusiveSampleMs": 13.53
+      },
+      {
+        "function": "paperDoctrines",
+        "source": "seats/world.ts",
+        "inclusiveSampleMs": 4.68
+      },
+      {
+        "function": "reconContacts",
+        "source": "tick/generate.ts",
+        "inclusiveSampleMs": 4.63
+      },
+      {
+        "function": "observeStrength",
+        "source": "knowledge/strength.ts",
+        "inclusiveSampleMs": 1.56
+      },
+      {
+        "function": "assignmentAuthority",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 1.52
+      }
+    ],
+    "final-profile-history": [
+      {
+        "function": "localOptions",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 494.52
+      },
+      {
+        "function": "assignmentOptions",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 149.21
+      },
+      {
+        "function": "enemyBeliefs",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 71.64
+      },
+      {
+        "function": "availableMandatePapers",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 65.69
+      },
+      {
+        "function": "latestEnemyClaims",
+        "source": "knowledge/beliefs.ts",
+        "inclusiveSampleMs": 58.37
+      },
+      {
+        "function": "planAuthorized",
+        "source": "seats/local-actions.ts",
+        "inclusiveSampleMs": 50.02
+      },
+      {
+        "function": "mayCommit",
+        "source": "command/authority.ts",
+        "inclusiveSampleMs": 46.36
+      },
+      {
+        "function": "receiveOffers",
+        "source": "tick/offers.ts",
+        "inclusiveSampleMs": 14.05
+      },
+      {
+        "function": "biasStrength",
+        "source": "knowledge/strength.ts",
+        "inclusiveSampleMs": 13.08
+      },
+      {
+        "function": "reconnaissanceIndex",
+        "source": "tick/generate.ts",
+        "inclusiveSampleMs": 9.43
+      },
+      {
+        "function": "assignmentAuthority",
+        "source": "seats/onward-assignments.ts",
+        "inclusiveSampleMs": 6.24
+      },
+      {
+        "function": "reconContacts",
+        "source": "tick/generate.ts",
+        "inclusiveSampleMs": 3.13
+      },
+      {
+        "function": "generateCourseAdvice",
+        "source": "people/advice.ts",
+        "inclusiveSampleMs": 1.56
+      },
+      {
+        "function": "paperDoctrines",
+        "source": "seats/world.ts",
+        "inclusiveSampleMs": 1.56
+      }
+    ]
+  },
+  "familyProfiles": "profiles.json"
+}

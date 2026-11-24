@@ -73,6 +73,18 @@ describe('the migrations registry', () => {
     expect(readFileSync(fixture(CURRENT_SAVE_SCHEMA), 'utf8').trimEnd()).toBe(encodeSave(content));
   });
 
+  it('loads pre-task and task-era saves without inventing allocations, releases or receipts', () => {
+    const state = { operationRecords: { mission: { opPost: 'field', opStartDay: 4, opEndDay: null,
+      opAxes: [{ oaxBlocks: ['block'], oaxStage: 'march' }], opRequests: [] } },
+      dispatches: {}, receipts: {}, forceAssignments: { block: 'field' } };
+    for (const schemaVersion of [6, 7]) {
+      const old = { ...makeSave({ worldHash: WORLD, state, log: content.log }), schemaVersion };
+      const loaded = decodeSave(JSON.stringify(old));
+      expect(loaded).toEqual({ ...old, schemaVersion: CURRENT_SAVE_SCHEMA });
+      expect(loaded.state).toEqual(state);
+    }
+  });
+
   it('preserves older hashes and round-trips unknown stragglers in schema 3', () => {
     const original = JSON.parse(readFileSync(fixture(2), 'utf8'));
     expect(decodeSave(JSON.stringify(original))).toMatchObject({ schemaVersion: CURRENT_SAVE_SCHEMA, stateHash: original.stateHash, logHash: original.logHash });

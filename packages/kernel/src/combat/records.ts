@@ -60,6 +60,8 @@ export interface BattleSide {
   readonly bsideCommit: Commit;
   /** Every block of the side standing here, in id order. */
   readonly bsideBlocks: readonly ForceBlockId[];
+  /** Executing attack blocks, when this side attacks. Other blocks may be exposed as defenders in a meeting. */
+  readonly bsideAttackBlocks?: readonly ForceBlockId[];
   /** Blocks whose strength no source gives: listed in every record, counted as none (0064; 1A's done check). */
   readonly bsideUnknown: readonly ForceBlockId[];
   /** Men present (known), committed (the commit's share), engaged (committed, capped by frontage). */

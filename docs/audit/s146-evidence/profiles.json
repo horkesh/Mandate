@@ -1,0 +1,2188 @@
+{
+  "base-timed-history": {
+    "scopedMs": 14072.337,
+    "groupsMs": {
+      "mandates/local actions": 6337.21,
+      "other": 6066.37,
+      "beliefs/unknown remainders": 1063.89,
+      "onward/office/offers": 600.2,
+      "receipts/requiresPapers": 4.67
+    },
+    "inclusive": [
+      {
+        "name": "playDays",
+        "file": "log/session.ts",
+        "ms": 14072.34
+      },
+      {
+        "name": "run",
+        "file": "node:internal/modules/esm/module_job",
+        "ms": 14072.34
+      },
+      {
+        "name": "",
+        "file": "file:///C:/Pyrrhic/sprint-july/runs/s146/base/runs/s146/capture.ts",
+        "ms": 14072.34
+      },
+      {
+        "name": "evaluate",
+        "file": "",
+        "ms": 14072.34
+      },
+      {
+        "name": "phase0Run",
+        "file": "phase0-run.ts",
+        "ms": 14072.34
+      },
+      {
+        "name": "(root)",
+        "file": "",
+        "ms": 14072.34
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 8046.21
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 6053.47
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 5981.07
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 5819.03
+      },
+      {
+        "name": "localOptionsAt",
+        "file": "seats/local-actions.ts",
+        "ms": 5708.59
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 4165.15
+      },
+      {
+        "name": "",
+        "file": "tick/tick.ts",
+        "ms": 3364.26
+      },
+      {
+        "name": "localMenu",
+        "file": "seats/local-actions.ts",
+        "ms": 3004.42
+      },
+      {
+        "name": "deriveMap",
+        "file": "control-index/derived.ts",
+        "ms": 2969.64
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 2190.22
+      },
+      {
+        "name": "senderFor",
+        "file": "seats/sender.ts",
+        "ms": 1854.03
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 1853.11
+      },
+      {
+        "name": "principalMenu",
+        "file": "seats/requests.ts",
+        "ms": 1572.54
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 1273.37
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 1263.88
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 1209.49
+      },
+      {
+        "name": "",
+        "file": "view/view.ts",
+        "ms": 1125.19
+      },
+      {
+        "name": "availableMandatePapers",
+        "file": "seats/local-actions.ts",
+        "ms": 1124.72
+      },
+      {
+        "name": "reportView",
+        "file": "view/view.ts",
+        "ms": 1068.97
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 985.73
+      },
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 940.67
+      },
+      {
+        "name": "seatIdentity",
+        "file": "view/people.ts",
+        "ms": 906.74
+      },
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 893.92
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 864.96
+      },
+      {
+        "name": "",
+        "file": "supply/supply.ts",
+        "ms": 780.61
+      },
+      {
+        "name": "cutInto",
+        "file": "supply/supply.ts",
+        "ms": 724.27
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 669.6
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 609.04
+      },
+      {
+        "name": "assignmentOptions",
+        "file": "seats/onward-assignments.ts",
+        "ms": 604.82
+      }
+    ],
+    "self": [
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 889.42
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 815.34
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 651.39
+      },
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 618.75
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 602.82
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 516.73
+      },
+      {
+        "name": "contactEdgesOf",
+        "file": "control-index/control-index.ts",
+        "ms": 440.48
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 439.69
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 401.78
+      },
+      {
+        "name": "reportView",
+        "file": "view/view.ts",
+        "ms": 301.74
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 283.17
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 282.88
+      },
+      {
+        "name": "cutInto",
+        "file": "supply/supply.ts",
+        "ms": 282.31
+      },
+      {
+        "name": "set TextDecoder",
+        "file": "",
+        "ms": 281.7
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 268.01
+      },
+      {
+        "name": "edgeLeg",
+        "file": "supply/supply.ts",
+        "ms": 222.07
+      },
+      {
+        "name": "",
+        "file": "control-index/control-index.ts",
+        "ms": 217.67
+      },
+      {
+        "name": "heldPost",
+        "file": "command/command.ts",
+        "ms": 208.13
+      },
+      {
+        "name": "",
+        "file": "command/command.ts",
+        "ms": 202.16
+      },
+      {
+        "name": "",
+        "file": "seats/world.ts",
+        "ms": 188.37
+      },
+      {
+        "name": "__name",
+        "file": "control-index/control-index.ts",
+        "ms": 167.34
+      },
+      {
+        "name": "factionOfBlock",
+        "file": "forces/forces.ts",
+        "ms": 165.9
+      },
+      {
+        "name": "pruneKnowledge",
+        "file": "knowledge/knowledge.ts",
+        "ms": 165.82
+      },
+      {
+        "name": "freeze",
+        "file": "view/view.ts",
+        "ms": 140.16
+      },
+      {
+        "name": "strictCompare",
+        "file": "compare.ts",
+        "ms": 137.83
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 124.64
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 122.7
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 122.07
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 120.81
+      },
+      {
+        "name": "write",
+        "file": "serialize/canonical.ts",
+        "ms": 118.29
+      },
+      {
+        "name": "mapSignature",
+        "file": "control-index/derived.ts",
+        "ms": 111.68
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 111.53
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 101.86
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 99.2
+      },
+      {
+        "name": "regionBar",
+        "file": "supply/supply.ts",
+        "ms": 95.48
+      }
+    ]
+  },
+  "base-timed-war": {
+    "scopedMs": 13821.858,
+    "groupsMs": {
+      "mandates/local actions": 6248.27,
+      "other": 5972.6,
+      "beliefs/unknown remainders": 1007.03,
+      "onward/office/offers": 592.4,
+      "advice": 1.56
+    },
+    "inclusive": [
+      {
+        "name": "playDays",
+        "file": "log/session.ts",
+        "ms": 13821.86
+      },
+      {
+        "name": "run",
+        "file": "node:internal/modules/esm/module_job",
+        "ms": 13821.86
+      },
+      {
+        "name": "",
+        "file": "file:///C:/Pyrrhic/sprint-july/runs/s146/base/runs/s146/capture.ts",
+        "ms": 13821.86
+      },
+      {
+        "name": "evaluate",
+        "file": "",
+        "ms": 13821.86
+      },
+      {
+        "name": "phase0Run",
+        "file": "phase0-run.ts",
+        "ms": 13821.86
+      },
+      {
+        "name": "(root)",
+        "file": "",
+        "ms": 13821.86
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 7906.06
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 5949.17
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 5882.9
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 5723.34
+      },
+      {
+        "name": "localOptionsAt",
+        "file": "seats/local-actions.ts",
+        "ms": 5623.5
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 4080.74
+      },
+      {
+        "name": "",
+        "file": "tick/tick.ts",
+        "ms": 3312.31
+      },
+      {
+        "name": "deriveMap",
+        "file": "control-index/derived.ts",
+        "ms": 2969.39
+      },
+      {
+        "name": "localMenu",
+        "file": "seats/local-actions.ts",
+        "ms": 2944.75
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 2212.87
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 1810.7
+      },
+      {
+        "name": "senderFor",
+        "file": "seats/sender.ts",
+        "ms": 1803.01
+      },
+      {
+        "name": "principalMenu",
+        "file": "seats/requests.ts",
+        "ms": 1543.66
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 1335.04
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 1265.3
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 1215.01
+      },
+      {
+        "name": "availableMandatePapers",
+        "file": "seats/local-actions.ts",
+        "ms": 1136.87
+      },
+      {
+        "name": "",
+        "file": "view/view.ts",
+        "ms": 1098.06
+      },
+      {
+        "name": "reportView",
+        "file": "view/view.ts",
+        "ms": 1050.5
+      },
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 963.23
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 942.96
+      },
+      {
+        "name": "seatIdentity",
+        "file": "view/people.ts",
+        "ms": 933.78
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 849.46
+      },
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 843.96
+      },
+      {
+        "name": "",
+        "file": "supply/supply.ts",
+        "ms": 728.97
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 698.63
+      },
+      {
+        "name": "cutInto",
+        "file": "supply/supply.ts",
+        "ms": 673.0
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 616.18
+      },
+      {
+        "name": "assignmentOptions",
+        "file": "seats/onward-assignments.ts",
+        "ms": 592.4
+      }
+    ],
+    "self": [
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 924.44
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 773.35
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 685.66
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 614.62
+      },
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 572.28
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 549.31
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 491.71
+      },
+      {
+        "name": "contactEdgesOf",
+        "file": "control-index/control-index.ts",
+        "ms": 394.74
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 392.88
+      },
+      {
+        "name": "reportView",
+        "file": "view/view.ts",
+        "ms": 305.0
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 289.7
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 269.06
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 268.0
+      },
+      {
+        "name": "cutInto",
+        "file": "supply/supply.ts",
+        "ms": 266.35
+      },
+      {
+        "name": "set TextDecoder",
+        "file": "",
+        "ms": 252.27
+      },
+      {
+        "name": "heldPost",
+        "file": "command/command.ts",
+        "ms": 220.98
+      },
+      {
+        "name": "edgeLeg",
+        "file": "supply/supply.ts",
+        "ms": 215.61
+      },
+      {
+        "name": "",
+        "file": "command/command.ts",
+        "ms": 193.09
+      },
+      {
+        "name": "__name",
+        "file": "control-index/control-index.ts",
+        "ms": 189.24
+      },
+      {
+        "name": "factionOfBlock",
+        "file": "forces/forces.ts",
+        "ms": 165.32
+      },
+      {
+        "name": "",
+        "file": "seats/world.ts",
+        "ms": 163.57
+      },
+      {
+        "name": "",
+        "file": "control-index/control-index.ts",
+        "ms": 159.47
+      },
+      {
+        "name": "pruneKnowledge",
+        "file": "knowledge/knowledge.ts",
+        "ms": 150.4
+      },
+      {
+        "name": "freeze",
+        "file": "view/view.ts",
+        "ms": 142.09
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 129.11
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 124.36
+      },
+      {
+        "name": "regionBar",
+        "file": "supply/supply.ts",
+        "ms": 122.33
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 121.81
+      },
+      {
+        "name": "write",
+        "file": "serialize/canonical.ts",
+        "ms": 120.54
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 118.92
+      },
+      {
+        "name": "strictCompare",
+        "file": "compare.ts",
+        "ms": 115.48
+      },
+      {
+        "name": "mapSignature",
+        "file": "control-index/derived.ts",
+        "ms": 108.11
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 106.38
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 106.02
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 103.47
+      }
+    ]
+  },
+  "final-profile-history": {
+    "scopedMs": 6963.734,
+    "groupsMs": {
+      "other": 6164.78,
+      "mandates/local actions": 510.71,
+      "onward/office/offers": 150.32,
+      "beliefs/unknown remainders": 134.8,
+      "advice": 1.56,
+      "receipts/requiresPapers": 1.56
+    },
+    "inclusive": [
+      {
+        "name": "run",
+        "file": "node:internal/modules/esm/module_job",
+        "ms": 6963.73
+      },
+      {
+        "name": "",
+        "file": "file:///C:/Pyrrhic/sprint-july/runs/s146/capture.ts",
+        "ms": 6963.73
+      },
+      {
+        "name": "evaluate",
+        "file": "",
+        "ms": 6963.73
+      },
+      {
+        "name": "(root)",
+        "file": "",
+        "ms": 6963.73
+      },
+      {
+        "name": "phase0Run",
+        "file": "phase0-run.ts",
+        "ms": 6963.73
+      },
+      {
+        "name": "playDays",
+        "file": "log/session.ts",
+        "ms": 6963.73
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 4149.44
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 2609.89
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 1113.39
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 967.85
+      },
+      {
+        "name": "principalMenu",
+        "file": "seats/requests.ts",
+        "ms": 794.8
+      },
+      {
+        "name": "deliverDue",
+        "file": "tick/deliver.ts",
+        "ms": 572.46
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 523.36
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 515.22
+      },
+      {
+        "name": "sendReport",
+        "file": "tick/context.ts",
+        "ms": 497.02
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 494.52
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 492.03
+      },
+      {
+        "name": "localMenu",
+        "file": "seats/local-actions.ts",
+        "ms": 490.3
+      },
+      {
+        "name": "deriveMap",
+        "file": "control-index/derived.ts",
+        "ms": 463.31
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 461.31
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 457.99
+      },
+      {
+        "name": "freezeDeep",
+        "file": "seats/requests.ts",
+        "ms": 449.47
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 396.19
+      },
+      {
+        "name": "seatIdentity",
+        "file": "view/people.ts",
+        "ms": 391.18
+      },
+      {
+        "name": "senderFor",
+        "file": "seats/sender.ts",
+        "ms": 389.59
+      },
+      {
+        "name": "operationsPhase",
+        "file": "tick/operations.ts",
+        "ms": 382.61
+      },
+      {
+        "name": "localOptionsAt",
+        "file": "seats/local-actions.ts",
+        "ms": 325.25
+      },
+      {
+        "name": "",
+        "file": "tick/tick.ts",
+        "ms": 305.37
+      },
+      {
+        "name": "mapPhase",
+        "file": "tick/map.ts",
+        "ms": 301.98
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 301.02
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 284.04
+      },
+      {
+        "name": "morningGround",
+        "file": "seats/requests.ts",
+        "ms": 274.76
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 272.2
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 270.75
+      },
+      {
+        "name": "mainBody",
+        "file": "seats/posts.ts",
+        "ms": 258.34
+      }
+    ],
+    "self": [
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 490.53
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 277.35
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 265.66
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 262.94
+      },
+      {
+        "name": "heldPost",
+        "file": "command/command.ts",
+        "ms": 234.73
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 231.65
+      },
+      {
+        "name": "",
+        "file": "command/command.ts",
+        "ms": 154.55
+      },
+      {
+        "name": "pruneKnowledge",
+        "file": "knowledge/knowledge.ts",
+        "ms": 149.67
+      },
+      {
+        "name": "set TextDecoder",
+        "file": "",
+        "ms": 149.46
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 142.01
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 136.36
+      },
+      {
+        "name": "",
+        "file": "seats/world.ts",
+        "ms": 134.52
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 120.39
+      },
+      {
+        "name": "contactEdgesOf",
+        "file": "control-index/control-index.ts",
+        "ms": 117.87
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 106.09
+      },
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 86.4
+      },
+      {
+        "name": "__name",
+        "file": "control-index/control-index.ts",
+        "ms": 86.29
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 85.58
+      },
+      {
+        "name": "edgeLeg",
+        "file": "supply/supply.ts",
+        "ms": 85.26
+      },
+      {
+        "name": "",
+        "file": "control-index/control-index.ts",
+        "ms": 81.15
+      },
+      {
+        "name": "receivedCandidates",
+        "file": "seats/received.ts",
+        "ms": 80.51
+      },
+      {
+        "name": "write",
+        "file": "serialize/canonical.ts",
+        "ms": 78.39
+      },
+      {
+        "name": "postIdsOf",
+        "file": "command/command.ts",
+        "ms": 78.32
+      },
+      {
+        "name": "daysToGoal",
+        "file": "movement/march.ts",
+        "ms": 76.54
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 76.49
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 76.03
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 71.8
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 66.23
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 66.01
+      },
+      {
+        "name": "strictCompare",
+        "file": "compare.ts",
+        "ms": 65.53
+      },
+      {
+        "name": "sha256Hex",
+        "file": "serialize/sha256.ts",
+        "ms": 63.21
+      },
+      {
+        "name": "commandedBlocks",
+        "file": "command/command.ts",
+        "ms": 61.01
+      },
+      {
+        "name": "postStateOf",
+        "file": "command/command.ts",
+        "ms": 59.91
+      },
+      {
+        "name": "governmentRailOf",
+        "file": "command/command.ts",
+        "ms": 58.24
+      },
+      {
+        "name": "",
+        "file": "knowledge/knowledge.ts",
+        "ms": 56.86
+      }
+    ]
+  },
+  "final-profile-war": {
+    "scopedMs": 6964.888,
+    "groupsMs": {
+      "other": 6169.37,
+      "mandates/local actions": 496.08,
+      "onward/office/offers": 153.68,
+      "beliefs/unknown remainders": 141.07,
+      "receipts/requiresPapers": 4.68
+    },
+    "inclusive": [
+      {
+        "name": "run",
+        "file": "node:internal/modules/esm/module_job",
+        "ms": 6964.89
+      },
+      {
+        "name": "",
+        "file": "file:///C:/Pyrrhic/sprint-july/runs/s146/capture.ts",
+        "ms": 6964.89
+      },
+      {
+        "name": "evaluate",
+        "file": "",
+        "ms": 6964.89
+      },
+      {
+        "name": "(root)",
+        "file": "",
+        "ms": 6964.89
+      },
+      {
+        "name": "phase0Run",
+        "file": "phase0-run.ts",
+        "ms": 6964.89
+      },
+      {
+        "name": "playDays",
+        "file": "log/session.ts",
+        "ms": 6964.89
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 4136.08
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 2607.97
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 1078.92
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 955.89
+      },
+      {
+        "name": "principalMenu",
+        "file": "seats/requests.ts",
+        "ms": 815.65
+      },
+      {
+        "name": "deliverDue",
+        "file": "tick/deliver.ts",
+        "ms": 584.26
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 533.17
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 521.19
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 517.55
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 506.11
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 488.96
+      },
+      {
+        "name": "freezeDeep",
+        "file": "seats/requests.ts",
+        "ms": 480.85
+      },
+      {
+        "name": "localMenu",
+        "file": "seats/local-actions.ts",
+        "ms": 477.15
+      },
+      {
+        "name": "sendReport",
+        "file": "tick/context.ts",
+        "ms": 471.8
+      },
+      {
+        "name": "deriveMap",
+        "file": "control-index/derived.ts",
+        "ms": 469.43
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 463.69
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 411.82
+      },
+      {
+        "name": "operationsPhase",
+        "file": "tick/operations.ts",
+        "ms": 386.97
+      },
+      {
+        "name": "senderFor",
+        "file": "seats/sender.ts",
+        "ms": 386.54
+      },
+      {
+        "name": "seatIdentity",
+        "file": "view/people.ts",
+        "ms": 368.13
+      },
+      {
+        "name": "localOptionsAt",
+        "file": "seats/local-actions.ts",
+        "ms": 338.22
+      },
+      {
+        "name": "mapPhase",
+        "file": "tick/map.ts",
+        "ms": 326.8
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 303.47
+      },
+      {
+        "name": "",
+        "file": "tick/tick.ts",
+        "ms": 302.81
+      },
+      {
+        "name": "morningGround",
+        "file": "seats/requests.ts",
+        "ms": 298.93
+      },
+      {
+        "name": "headquartersOf",
+        "file": "seats/posts.ts",
+        "ms": 284.61
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 283.45
+      },
+      {
+        "name": "mainBody",
+        "file": "seats/posts.ts",
+        "ms": 269.25
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 267.96
+      }
+    ],
+    "self": [
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 519.67
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 280.31
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 254.4
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 247.1
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 246.31
+      },
+      {
+        "name": "heldPost",
+        "file": "command/command.ts",
+        "ms": 221.69
+      },
+      {
+        "name": "pruneKnowledge",
+        "file": "knowledge/knowledge.ts",
+        "ms": 172.25
+      },
+      {
+        "name": "",
+        "file": "command/command.ts",
+        "ms": 165.31
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 153.6
+      },
+      {
+        "name": "",
+        "file": "seats/world.ts",
+        "ms": 150.13
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 141.4
+      },
+      {
+        "name": "set TextDecoder",
+        "file": "",
+        "ms": 137.07
+      },
+      {
+        "name": "edgeLeg",
+        "file": "supply/supply.ts",
+        "ms": 113.75
+      },
+      {
+        "name": "contactEdgesOf",
+        "file": "control-index/control-index.ts",
+        "ms": 112.08
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 109.86
+      },
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 107.69
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 106.16
+      },
+      {
+        "name": "__name",
+        "file": "control-index/control-index.ts",
+        "ms": 104.41
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 88.7
+      },
+      {
+        "name": "postIdsOf",
+        "file": "command/command.ts",
+        "ms": 79.26
+      },
+      {
+        "name": "receivedCandidates",
+        "file": "seats/received.ts",
+        "ms": 78.72
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 78.02
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 76.45
+      },
+      {
+        "name": "write",
+        "file": "serialize/canonical.ts",
+        "ms": 75.5
+      },
+      {
+        "name": "",
+        "file": "control-index/control-index.ts",
+        "ms": 72.36
+      },
+      {
+        "name": "principalMenu",
+        "file": "seats/requests.ts",
+        "ms": 69.89
+      },
+      {
+        "name": "commandedBlocks",
+        "file": "command/command.ts",
+        "ms": 67.23
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 66.7
+      },
+      {
+        "name": "postStateOf",
+        "file": "command/command.ts",
+        "ms": 66.13
+      },
+      {
+        "name": "daysToGoal",
+        "file": "movement/march.ts",
+        "ms": 65.27
+      },
+      {
+        "name": "sha256Hex",
+        "file": "serialize/sha256.ts",
+        "ms": 63.27
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 62.34
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 57.18
+      },
+      {
+        "name": "governmentRailOf",
+        "file": "command/command.ts",
+        "ms": 56.81
+      },
+      {
+        "name": "",
+        "file": "seats/received.ts",
+        "ms": 55.48
+      }
+    ]
+  },
+  "step2-profile-history": {
+    "scopedMs": 8806.916,
+    "groupsMs": {
+      "other": 6271.1,
+      "beliefs/unknown remainders": 984.55,
+      "mandates/local actions": 911.48,
+      "onward/office/offers": 635.09,
+      "advice": 3.14,
+      "receipts/requiresPapers": 1.56
+    },
+    "inclusive": [
+      {
+        "name": "run",
+        "file": "node:internal/modules/esm/module_job",
+        "ms": 8806.92
+      },
+      {
+        "name": "",
+        "file": "file:///C:/Pyrrhic/sprint-july/runs/s146/capture.ts",
+        "ms": 8806.92
+      },
+      {
+        "name": "evaluate",
+        "file": "",
+        "ms": 8806.92
+      },
+      {
+        "name": "(root)",
+        "file": "",
+        "ms": 8806.92
+      },
+      {
+        "name": "phase0Run",
+        "file": "phase0-run.ts",
+        "ms": 8806.92
+      },
+      {
+        "name": "playDays",
+        "file": "log/session.ts",
+        "ms": 8806.92
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 5825.82
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 2770.99
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 1859.4
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 1644.1
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 1381.49
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 1293.24
+      },
+      {
+        "name": "localOptionsAt",
+        "file": "seats/local-actions.ts",
+        "ms": 1050.24
+      },
+      {
+        "name": "",
+        "file": "tick/tick.ts",
+        "ms": 1025.64
+      },
+      {
+        "name": "senderFor",
+        "file": "seats/sender.ts",
+        "ms": 965.96
+      },
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 878.89
+      },
+      {
+        "name": "principalMenu",
+        "file": "seats/requests.ts",
+        "ms": 763.59
+      },
+      {
+        "name": "localMenu",
+        "file": "seats/local-actions.ts",
+        "ms": 701.33
+      },
+      {
+        "name": "assignmentOptions",
+        "file": "seats/onward-assignments.ts",
+        "ms": 650.14
+      },
+      {
+        "name": "",
+        "file": "seats/onward-assignments.ts",
+        "ms": 647.13
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 634.49
+      },
+      {
+        "name": "deliverDue",
+        "file": "tick/deliver.ts",
+        "ms": 581.82
+      },
+      {
+        "name": "sendReport",
+        "file": "tick/context.ts",
+        "ms": 517.04
+      },
+      {
+        "name": "deriveMap",
+        "file": "control-index/derived.ts",
+        "ms": 512.11
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 507.98
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 502.95
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 493.46
+      },
+      {
+        "name": "seatIdentity",
+        "file": "view/people.ts",
+        "ms": 486.67
+      },
+      {
+        "name": "freezeDeep",
+        "file": "seats/requests.ts",
+        "ms": 448.19
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 424.24
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 393.9
+      },
+      {
+        "name": "operationsPhase",
+        "file": "tick/operations.ts",
+        "ms": 384.28
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 339.08
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 329.8
+      },
+      {
+        "name": "mapPhase",
+        "file": "tick/map.ts",
+        "ms": 323.66
+      }
+    ],
+    "self": [
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 578.93
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 502.95
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 334.32
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 287.85
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 283.83
+      },
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 283.4
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 256.04
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 252.66
+      },
+      {
+        "name": "heldPost",
+        "file": "command/command.ts",
+        "ms": 227.03
+      },
+      {
+        "name": "",
+        "file": "command/command.ts",
+        "ms": 216.76
+      },
+      {
+        "name": "contactEdgesOf",
+        "file": "control-index/control-index.ts",
+        "ms": 163.77
+      },
+      {
+        "name": "factionOfBlock",
+        "file": "forces/forces.ts",
+        "ms": 162.5
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 156.33
+      },
+      {
+        "name": "",
+        "file": "seats/world.ts",
+        "ms": 154.19
+      },
+      {
+        "name": "pruneKnowledge",
+        "file": "knowledge/knowledge.ts",
+        "ms": 152.21
+      },
+      {
+        "name": "set TextDecoder",
+        "file": "",
+        "ms": 151.52
+      },
+      {
+        "name": "strictCompare",
+        "file": "compare.ts",
+        "ms": 146.42
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 130.74
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 122.75
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 118.06
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 115.31
+      },
+      {
+        "name": "__name",
+        "file": "control-index/control-index.ts",
+        "ms": 103.03
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 99.22
+      },
+      {
+        "name": "edgeLeg",
+        "file": "supply/supply.ts",
+        "ms": 94.28
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 92.93
+      },
+      {
+        "name": "",
+        "file": "control-index/control-index.ts",
+        "ms": 90.14
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 89.49
+      },
+      {
+        "name": "postIdsOf",
+        "file": "command/command.ts",
+        "ms": 88.82
+      },
+      {
+        "name": "reportView",
+        "file": "view/view.ts",
+        "ms": 87.6
+      },
+      {
+        "name": "daysToGoal",
+        "file": "movement/march.ts",
+        "ms": 85.03
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 82.54
+      },
+      {
+        "name": "write",
+        "file": "serialize/canonical.ts",
+        "ms": 82.46
+      },
+      {
+        "name": "blockOf",
+        "file": "forces/forces.ts",
+        "ms": 74.47
+      },
+      {
+        "name": "receivedCandidates",
+        "file": "seats/received.ts",
+        "ms": 68.69
+      },
+      {
+        "name": "postStateOf",
+        "file": "command/command.ts",
+        "ms": 63.79
+      }
+    ]
+  },
+  "step2-profile-war": {
+    "scopedMs": 8652.183,
+    "groupsMs": {
+      "other": 6144.45,
+      "beliefs/unknown remainders": 963.68,
+      "mandates/local actions": 883.42,
+      "onward/office/offers": 659.08,
+      "receipts/requiresPapers": 1.56
+    },
+    "inclusive": [
+      {
+        "name": "run",
+        "file": "node:internal/modules/esm/module_job",
+        "ms": 8652.18
+      },
+      {
+        "name": "",
+        "file": "file:///C:/Pyrrhic/sprint-july/runs/s146/capture.ts",
+        "ms": 8652.18
+      },
+      {
+        "name": "evaluate",
+        "file": "",
+        "ms": 8652.18
+      },
+      {
+        "name": "(root)",
+        "file": "",
+        "ms": 8652.18
+      },
+      {
+        "name": "phase0Run",
+        "file": "phase0-run.ts",
+        "ms": 8652.18
+      },
+      {
+        "name": "playDays",
+        "file": "log/session.ts",
+        "ms": 8652.18
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 5705.68
+      },
+      {
+        "name": "pendingRequests",
+        "file": "seats/requests.ts",
+        "ms": 2735.78
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 1841.25
+      },
+      {
+        "name": "viewFor",
+        "file": "view/view.ts",
+        "ms": 1640.15
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 1377.85
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 1306.47
+      },
+      {
+        "name": "localOptionsAt",
+        "file": "seats/local-actions.ts",
+        "ms": 1035.94
+      },
+      {
+        "name": "",
+        "file": "tick/tick.ts",
+        "ms": 1013.6
+      },
+      {
+        "name": "senderFor",
+        "file": "seats/sender.ts",
+        "ms": 947.87
+      },
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 852.7
+      },
+      {
+        "name": "principalMenu",
+        "file": "seats/requests.ts",
+        "ms": 786.42
+      },
+      {
+        "name": "localMenu",
+        "file": "seats/local-actions.ts",
+        "ms": 700.84
+      },
+      {
+        "name": "assignmentOptions",
+        "file": "seats/onward-assignments.ts",
+        "ms": 665.61
+      },
+      {
+        "name": "",
+        "file": "seats/onward-assignments.ts",
+        "ms": 662.99
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 606.01
+      },
+      {
+        "name": "deliverDue",
+        "file": "tick/deliver.ts",
+        "ms": 571.16
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 537.3
+      },
+      {
+        "name": "sendReport",
+        "file": "tick/context.ts",
+        "ms": 528.25
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 503.49
+      },
+      {
+        "name": "deriveMap",
+        "file": "control-index/derived.ts",
+        "ms": 490.91
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 484.11
+      },
+      {
+        "name": "seatIdentity",
+        "file": "view/people.ts",
+        "ms": 459.95
+      },
+      {
+        "name": "freezeDeep",
+        "file": "seats/requests.ts",
+        "ms": 424.66
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 406.73
+      },
+      {
+        "name": "operationsPhase",
+        "file": "tick/operations.ts",
+        "ms": 396.69
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 391.18
+      },
+      {
+        "name": "deriveSupply",
+        "file": "supply/supply.ts",
+        "ms": 322.63
+      },
+      {
+        "name": "",
+        "file": "view/view.ts",
+        "ms": 313.15
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 313.08
+      }
+    ],
+    "self": [
+      {
+        "name": "reconContacts",
+        "file": "tick/generate.ts",
+        "ms": 528.06
+      },
+      {
+        "name": "deepFreeze",
+        "file": "tick/freeze.ts",
+        "ms": 482.55
+      },
+      {
+        "name": "",
+        "file": "view/people.ts",
+        "ms": 305.2
+      },
+      {
+        "name": "establishmentProjection",
+        "file": "view/people.ts",
+        "ms": 291.45
+      },
+      {
+        "name": "",
+        "file": "seats/requests.ts",
+        "ms": 288.45
+      },
+      {
+        "name": "",
+        "file": "seats/local-actions.ts",
+        "ms": 279.62
+      },
+      {
+        "name": "controlEvidence",
+        "file": "knowledge/control-beliefs.ts",
+        "ms": 275.77
+      },
+      {
+        "name": "deliverReports",
+        "file": "knowledge/knowledge.ts",
+        "ms": 270.93
+      },
+      {
+        "name": "heldPost",
+        "file": "command/command.ts",
+        "ms": 229.95
+      },
+      {
+        "name": "",
+        "file": "command/command.ts",
+        "ms": 205.66
+      },
+      {
+        "name": "factionOfBlock",
+        "file": "forces/forces.ts",
+        "ms": 184.94
+      },
+      {
+        "name": "contactEdgesOf",
+        "file": "control-index/control-index.ts",
+        "ms": 168.44
+      },
+      {
+        "name": "",
+        "file": "seats/world.ts",
+        "ms": 168.06
+      },
+      {
+        "name": "pruneKnowledge",
+        "file": "knowledge/knowledge.ts",
+        "ms": 158.76
+      },
+      {
+        "name": "set TextDecoder",
+        "file": "",
+        "ms": 147.99
+      },
+      {
+        "name": "generateReports",
+        "file": "tick/generate.ts",
+        "ms": 131.99
+      },
+      {
+        "name": "sideOfPerson",
+        "file": "command/command.ts",
+        "ms": 130.8
+      },
+      {
+        "name": "claimedControlView",
+        "file": "view/claimed-control.ts",
+        "ms": 129.91
+      },
+      {
+        "name": "tick",
+        "file": "tick/tick.ts",
+        "ms": 108.58
+      },
+      {
+        "name": "legOf",
+        "file": "supply/supply.ts",
+        "ms": 105.14
+      },
+      {
+        "name": "strictCompare",
+        "file": "compare.ts",
+        "ms": 104.05
+      },
+      {
+        "name": "__name",
+        "file": "control-index/control-index.ts",
+        "ms": 103.7
+      },
+      {
+        "name": "allCommandedBlocks",
+        "file": "command/command.ts",
+        "ms": 93.95
+      },
+      {
+        "name": "postIdsOf",
+        "file": "command/command.ts",
+        "ms": 92.1
+      },
+      {
+        "name": "",
+        "file": "control-index/control-index.ts",
+        "ms": 89.34
+      },
+      {
+        "name": "edgeLeg",
+        "file": "supply/supply.ts",
+        "ms": 85.24
+      },
+      {
+        "name": "buildControlIndex",
+        "file": "control-index/control-index.ts",
+        "ms": 83.25
+      },
+      {
+        "name": "postStateOf",
+        "file": "command/command.ts",
+        "ms": 82.92
+      },
+      {
+        "name": "blockOf",
+        "file": "forces/forces.ts",
+        "ms": 74.71
+      },
+      {
+        "name": "search",
+        "file": "supply/supply.ts",
+        "ms": 74.26
+      },
+      {
+        "name": "receivedCandidates",
+        "file": "seats/received.ts",
+        "ms": 73.5
+      },
+      {
+        "name": "write",
+        "file": "serialize/canonical.ts",
+        "ms": 73.03
+      },
+      {
+        "name": "daysToGoal",
+        "file": "movement/march.ts",
+        "ms": 73.01
+      },
+      {
+        "name": "localOptions",
+        "file": "seats/local-actions.ts",
+        "ms": 72.94
+      },
+      {
+        "name": "sha256Hex",
+        "file": "serialize/sha256.ts",
+        "ms": 66.2
+      }
+    ]
+  }
+}

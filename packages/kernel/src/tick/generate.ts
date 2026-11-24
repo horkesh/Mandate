@@ -64,23 +64,41 @@ const claim = (kind: ReportClaim['claimKind'], region: RegionId | null, value: n
   claimConfidence: confidence,
 });
 
-/** The enemy's known men standing in each region: other sides' force blocks, ships and troops aboard included. */
-function reconContacts(ctx: TickContext, state: State, side: FactionId, region: RegionId) {
-  const commands = new Set<PostId>();
-  let unquantified = false;
-  let presence = false;
+interface ReconContact {
+  readonly side: FactionId | null;
+  readonly strength: number | null;
+  readonly command: PostId | null;
+}
+
+/** A report phase observes one immutable State. Index its stationary contacts once. */
+function reconnaissanceIndex(ctx: TickContext, state: State): ReadonlyMap<RegionId, readonly ReconContact[]> {
+  const regions = new Map<RegionId, ReconContact[]>();
   const ids = Object.keys(state.forceLocations) as ForceBlockId[];
   for (const block of ids.sort(strictCompare)) {
     const loc = state.forceLocations[block]!;
     const force = state.forceBlockStates[block]!;
-    const faction = factionOfBlock(ctx.world.map, state, block);
-    if (faction === null || faction === side || loc.locRegion !== region || loc.locMarch !== null ||
-      loc.locAboard !== null || force.fbSurrenderedDay !== null) continue;
-    const strength = forceTotals(force, ctx.world.map.forceTotalsCache).fbStrength;
+    const side = factionOfBlock(ctx.world.map, state, block);
+    if (side === null || loc.locMarch !== null || loc.locAboard !== null || force.fbSurrenderedDay !== null) continue;
+    const contact: ReconContact = { side, strength: forceTotals(force, ctx.world.map.forceTotalsCache).fbStrength,
+      command: force.fbKind === 'detachment' ? null : state.forceAssignments[block] ?? null };
+    const list = regions.get(loc.locRegion);
+    if (list === undefined) regions.set(loc.locRegion, [contact]);
+    else list.push(contact);
+  }
+  return regions;
+}
+
+/** The same contact rules for each observer's side, without a full-table scan per region. */
+function reconContacts(index: ReadonlyMap<RegionId, readonly ReconContact[]>, side: FactionId, region: RegionId) {
+  const commands = new Set<PostId>();
+  let unquantified = false;
+  let presence = false;
+  for (const contact of index.get(region) ?? []) {
+    if (contact.side === side) continue;
+    const strength = contact.strength;
     if (strength !== 0) presence = true;
     if (strength === null) unquantified = true;
-    const post = state.forceAssignments[block];
-    if (post !== undefined && post !== null && force.fbKind !== 'detachment' && strength !== 0) commands.add(post);
+    if (contact.command !== null && strength !== 0) commands.add(contact.command);
   }
   return { commands: [...commands].sort(strictCompare), unquantified, presence };
 }
@@ -137,6 +155,7 @@ export function generateReports(ctx: TickContext, state: State): void {
 
   if (onCycle(day, tpl('enemy-estimate').cadenceDays)) {
     const enemies = new Map<FactionId, ReadonlyMap<RegionId, number>>();
+    const contactsByRegion = reconnaissanceIndex(ctx, state);
     // What scouts see of the ground (lane 1.2): works standing in a region, and works or a boom closing a water edge
     // to his side, so a commander plans on what he has been told (0062), never on truth.
     const index = buildControlIndex(world.map, state.regionControl);
@@ -157,7 +176,7 @@ export function generateReports(ctx: TickContext, state: State): void {
       const edges = new Set<EdgeId>();
       for (const region of world.watched(hq)) {
         const seen = enemy.get(region) ?? 0;
-        const contacts = reconContacts(ctx,state,side,region);
+        const contacts = reconContacts(contactsByRegion,side,region);
         const observed=observeStrength({observer:author,region,day,scope:'region',presence:contacts.presence || seen>0,
           coverage:contacts.unquantified ? 'partial' : 'complete', counts:seen>0 ? [{countKind:'men',count:seen}] : [],
           conditions:'regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact'});

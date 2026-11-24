@@ -1,0 +1,21 @@
+{
+  "ref": "46ab45edc2e2a7a06e939ecdb25b00318e4722c6",
+  "exactS146Summary": true,
+  "receipts": [
+    {
+      "path": "runs\\s148\\baseline-observed.json",
+      "sha256": "ae6c0d8ed7a37cc6d390e8000c8449c690f2e1b2059ac0328fe385a915b4d957",
+      "bytes": 1150029
+    },
+    {
+      "path": "runs\\s146\\step4-daily-history.json",
+      "sha256": "be82f0718286549499d9e0b7b115de79856d8e383f221fd5d7763881b16fbac6",
+      "bytes": 194506
+    },
+    {
+      "path": "runs\\s146\\step4-measurements.json",
+      "sha256": "7c3e624576ddaba7389bbc0c0e06430f18f34a3cdfe63e3d10a2ea5db373d6f0",
+      "bytes": 1745
+    }
+  ]
+}

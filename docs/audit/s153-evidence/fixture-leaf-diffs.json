@@ -1,0 +1,681 @@
+[
+  {
+    "path": "battleRecords.battle:n_capital:8.battleDays[0].bdaySides[0].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": null,
+        "btermValue": 309
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": null,
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "may_not_attack",
+        "btermSource": null,
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": null,
+        "btermValue": 284
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": null,
+        "btermValue": 600
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": null,
+        "btermValue": 309
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": null,
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "may_not_attack",
+        "btermSource": null,
+        "btermValue": 0
+      },
+      {
+        "btermKind": "task_local_defence",
+        "btermSource": null,
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": null,
+        "btermValue": 284
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": null,
+        "btermValue": 600
+      }
+    ]
+  },
+  {
+    "path": "battleRecords.battle:n_capital:8.battleDays[0].bdaySides[1].bsideAttackBlocks",
+    "before": null,
+    "after": [
+      "s_harrow_1",
+      "s_lowmarch_militia"
+    ]
+  },
+  {
+    "path": "battleRecords.battle:n_capital:8.battleDays[0].bdaySides[1].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 3227
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "s_cavalier",
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 3509
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "s_cavalier",
+        "btermValue": 600
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 3509
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 3227
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "s_cavalier",
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      },
+      {
+        "btermKind": "task_main_effort",
+        "btermSource": "s_cavalier",
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 3509
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "s_cavalier",
+        "btermValue": 600
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 3509
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      }
+    ]
+  },
+  {
+    "path": "battleRecords.battle:n_east_plain:12.battleDays[0].bdaySides[0].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 189
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "n_organiser",
+        "btermValue": 1602
+      },
+      {
+        "btermKind": "probe_at",
+        "btermSource": "n_organiser",
+        "btermValue": 1121
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 189
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "n_organiser",
+        "btermValue": 1602
+      },
+      {
+        "btermKind": "may_not_attack",
+        "btermSource": "n_organiser",
+        "btermValue": 0
+      },
+      {
+        "btermKind": "task_main_effort",
+        "btermSource": "n_organiser",
+        "btermValue": 0
+      }
+    ]
+  },
+  {
+    "path": "battleRecords.battle:n_east_plain:12.battleDays[0].bdaySides[1].bsideAttackBlocks",
+    "before": null,
+    "after": [
+      "s_harrow_2"
+    ]
+  },
+  {
+    "path": "battleRecords.battle:n_east_plain:12.battleDays[0].bdaySides[1].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 2200
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "s_cavalier",
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 2569
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "s_cavalier",
+        "btermValue": 600
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 2569
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 2200
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "s_cavalier",
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      },
+      {
+        "btermKind": "task_main_effort",
+        "btermSource": "s_cavalier",
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 2569
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "s_cavalier",
+        "btermValue": 600
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "s_cavalier",
+        "btermValue": 2569
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "s_cavalier",
+        "btermValue": 874
+      }
+    ]
+  },
+  {
+    "path": "battleRecords.battle:s_capital:30.battleDays[0].bdaySides[0].bsideAttackBlocks",
+    "before": null,
+    "after": [
+      "n_east_1",
+      "n_east_2",
+      "n_east_horse"
+    ]
+  },
+  {
+    "path": "battleRecords.battle:s_capital:30.battleDays[0].bdaySides[0].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 1918
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "n_organiser",
+        "btermValue": 1602
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 2160
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "n_organiser",
+        "btermValue": 961
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 2160
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 1918
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "n_organiser",
+        "btermValue": 1602
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      },
+      {
+        "btermKind": "task_main_effort",
+        "btermSource": "n_organiser",
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 2160
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "n_organiser",
+        "btermValue": 961
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 2160
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      }
+    ]
+  },
+  {
+    "path": "battleRecords.battle:s_capital:30.battleDays[0].bdaySides[1].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "s_minister",
+        "btermValue": 119
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "s_minister",
+        "btermValue": 1210
+      },
+      {
+        "btermKind": "probe_at",
+        "btermSource": "s_minister",
+        "btermValue": 847
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "s_minister",
+        "btermValue": 106
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "s_minister",
+        "btermValue": 726
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "s_minister",
+        "btermValue": 119
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "s_minister",
+        "btermValue": 1210
+      },
+      {
+        "btermKind": "probe_at",
+        "btermSource": "s_minister",
+        "btermValue": 847
+      },
+      {
+        "btermKind": "task_local_defence",
+        "btermSource": "s_minister",
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "s_minister",
+        "btermValue": 106
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "s_minister",
+        "btermValue": 726
+      }
+    ]
+  },
+  {
+    "path": "battleRecords.battle:s_coast:29.battleDays[0].bdaySides[0].bsideAttackBlocks",
+    "before": null,
+    "after": [
+      "n_east_1",
+      "n_east_2",
+      "n_east_horse"
+    ]
+  },
+  {
+    "path": "battleRecords.battle:s_coast:29.battleDays[0].bdaySides[0].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 4124
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "n_organiser",
+        "btermValue": 1602
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 5022
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "n_organiser",
+        "btermValue": 961
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 5022
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 4124
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": "n_organiser",
+        "btermValue": 1602
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      },
+      {
+        "btermKind": "task_main_effort",
+        "btermSource": "n_organiser",
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 5022
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": "n_organiser",
+        "btermValue": 961
+      },
+      {
+        "btermKind": "pursue_believed_ratio",
+        "btermSource": "n_organiser",
+        "btermValue": 5022
+      },
+      {
+        "btermKind": "boldness",
+        "btermSource": "n_organiser",
+        "btermValue": 199
+      }
+    ]
+  },
+  {
+    "path": "battleRecords.battle:s_coast:29.battleDays[0].bdaySides[1].bsideDecisions",
+    "before": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": null,
+        "btermValue": 100
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": null,
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "may_not_attack",
+        "btermSource": null,
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": null,
+        "btermValue": 82
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": null,
+        "btermValue": 600
+      }
+    ],
+    "after": [
+      {
+        "btermKind": "believed_ratio",
+        "btermSource": null,
+        "btermValue": 100
+      },
+      {
+        "btermKind": "demand",
+        "btermSource": null,
+        "btermValue": 1000
+      },
+      {
+        "btermKind": "may_not_attack",
+        "btermSource": null,
+        "btermValue": 0
+      },
+      {
+        "btermKind": "task_local_defence",
+        "btermSource": null,
+        "btermValue": 0
+      },
+      {
+        "btermKind": "night_believed_ratio",
+        "btermSource": null,
+        "btermValue": 82
+      },
+      {
+        "btermKind": "hold_at",
+        "btermSource": null,
+        "btermValue": 600
+      }
+    ]
+  },
+  {
+    "path": "operationRecords.op:n_army_east:4.opTasks",
+    "before": null,
+    "after": [
+      {
+        "otaskBlocks": [
+          "n_east_1",
+          "n_east_2",
+          "n_east_horse"
+        ],
+        "otaskDefault": true,
+        "otaskEndReason": "operation_ended",
+        "otaskEndedDay": 8,
+        "otaskId": "default:main",
+        "otaskIssuer": "n_organiser",
+        "otaskKind": "main_effort",
+        "otaskOperation": "op:n_army_east:4",
+        "otaskPost": "n_army_east",
+        "otaskPurpose": "Execute the approved axis.",
+        "otaskRelease": "operation_end",
+        "otaskScope": [
+          "e_lowlands",
+          "n_east_front",
+          "s_capital",
+          "s_coast",
+          "s_coast_east"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "operationRecords.op:n_army_east:9.opTasks",
+    "before": null,
+    "after": [
+      {
+        "otaskBlocks": [
+          "n_east_1",
+          "n_east_2",
+          "raised.n_brenmark_governor.d6",
+          "n_east_horse"
+        ],
+        "otaskDefault": true,
+        "otaskEndReason": "operation_ended",
+        "otaskEndedDay": 34,
+        "otaskId": "default:main",
+        "otaskIssuer": "n_organiser",
+        "otaskKind": "main_effort",
+        "otaskOperation": "op:n_army_east:9",
+        "otaskPost": "n_army_east",
+        "otaskPurpose": "Execute the approved axis.",
+        "otaskRelease": "operation_end",
+        "otaskScope": [
+          "e_lowlands",
+          "n_east_front",
+          "s_capital",
+          "s_coast",
+          "s_coast_east"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "operationRecords.op:s_army_salient:4.opTasks",
+    "before": null,
+    "after": [
+      {
+        "otaskBlocks": [
+          "s_harrow_1",
+          "s_harrow_2",
+          "s_lowmarch_militia"
+        ],
+        "otaskDefault": true,
+        "otaskEndReason": "operation_ended",
+        "otaskEndedDay": 14,
+        "otaskId": "default:main",
+        "otaskIssuer": "s_cavalier",
+        "otaskKind": "main_effort",
+        "otaskOperation": "op:s_army_salient:4",
+        "otaskPost": "s_army_salient",
+        "otaskPurpose": "Execute the approved axis.",
+        "otaskRelease": "operation_end",
+        "otaskScope": [
+          "n_capital",
+          "n_centre_line",
+          "n_east_plain",
+          "salient_tip"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,5686 @@
+{
+  "pack": "union-1861",
+  "kernel": "phase0",
+  "atWar": true,
+  "hashScheme": "sha256/canonical-json/v1",
+  "worldHash": "4aa14586987e5c988ff4520abf5b30ed5f7851d01a4dcfa4da54132735066f07",
+  "initialHash": "f58bee4ad7dc0256cdfe20a32a3c84ed56e99b18f323963ccf0b33b2d775d83b",
+  "unit": "day",
+  "hashMode": "daily",
+  "checkpointEvery": 15,
+  "turns": [
+    {
+      "turn": 1,
+      "hash": "41d92984f3810d2d3bb01212518bce88f728d75c8a5ea85f23bfb7e3f8146357"
+    },
+    {
+      "turn": 2,
+      "hash": "4e4c3357582f11a32bf93cbb5d970a59b5898d064ae2ae921d215ff0cbc3f8a9"
+    },
+    {
+      "turn": 3,
+      "hash": "6a595df55b11bec5cae6d5cbd7c45c1ded8937f58fdec4845e29b1333e15ea27"
+    },
+    {
+      "turn": 4,
+      "hash": "4258d62921f8156d5c4ec4accf8842c38232828f7e79f4500e05ce0a05349299"
+    },
+    {
+      "turn": 5,
+      "hash": "65878561a340ffdc624c3df262fc7891d3dbf80dff1031a0f98ea2f3bd8babfd"
+    },
+    {
+      "turn": 6,
+      "hash": "7ffaa458738040efc19eea33bbd13ffca2d751868f53acd087dafd85a06b47fe"
+    },
+    {
+      "turn": 7,
+      "hash": "392db63e6e4a4700e866f9cd7791c632114d36202a64e3689f70dd75b942ae4c"
+    },
+    {
+      "turn": 8,
+      "hash": "d136d725033fdddafe593b8670d9917260b311df6a4d36e7db31da11883ce4ac"
+    },
+    {
+      "turn": 9,
+      "hash": "b6c920e312342cd256a36c68d9b1adec3192b399ab1fe57a0f3994c406940811"
+    },
+    {
+      "turn": 10,
+      "hash": "d99f4591d9903edf63cf00b41b45ddad742f788dfd0395e4b5760c816ed1ba7e"
+    },
+    {
+      "turn": 11,
+      "hash": "ea715aa6e1f6068d3419b09275477f0991e31cf922900e044ec15f1fe4ba3a2d"
+    },
+    {
+      "turn": 12,
+      "hash": "b7352f927337a6983ced345fb329f734a70944b6dd3fb5ae802b36e4c00b7be2"
+    },
+    {
+      "turn": 13,
+      "hash": "46de3723d934cccad24b5d669289a08270b9322d7952ae544e807664f064f36a"
+    },
+    {
+      "turn": 14,
+      "hash": "69f1f3106ce7bf145dda478d1416a2755e6bef34fa64eaf426c28c4fac75751a"
+    },
+    {
+      "turn": 15,
+      "hash": "6dca4f541c75201bc434638343a1d247eb9c9bb701996501d9a33dc071c33c76"
+    },
+    {
+      "turn": 16,
+      "hash": "4738fbe5827efc5bd53c0e3090e420e99a2d5c27555f849a9d22cdfdf99ecf5f"
+    },
+    {
+      "turn": 17,
+      "hash": "287021ac0543ce024e7a014843385d4ea51d12c75a0936a242807de454f9390f"
+    },
+    {
+      "turn": 18,
+      "hash": "7d62af02822ba2830df05565e8d4c56e4dc403d448dfd42d85eb6afa0f6709bf"
+    },
+    {
+      "turn": 19,
+      "hash": "38c0eb59f2f53923c137bf8329c707aaa8e41b40303c067a4134a50bcdc90953"
+    },
+    {
+      "turn": 20,
+      "hash": "e2ca8d3ce2d20b7f251ed66ade43e5d1ce146c7a2753c7d8c3ef3ce37bdbc2cb"
+    },
+    {
+      "turn": 21,
+      "hash": "d41b9fdc0e3cd9d390c9af649e848dce190a95b47143a1cbdae17e2ea3bbbb4a"
+    },
+    {
+      "turn": 22,
+      "hash": "deeec77e51544bf14b2ad78d78537b461cec1ab60335426f230e3a10dde94660"
+    },
+    {
+      "turn": 23,
+      "hash": "81520de9e661704040349b8dbd377bbd8820777c17019ffab664449e7a2522a0"
+    },
+    {
+      "turn": 24,
+      "hash": "e79c72b6b85bbec172ade8c19a26006b99838e069b61a784453729237087c266"
+    },
+    {
+      "turn": 25,
+      "hash": "d0d3717b4f6b3e1b328ebab00dceed1adfaa0d1faf5b1e25d7575d4dfedca6ca"
+    },
+    {
+      "turn": 26,
+      "hash": "0c0c221e3eb5604f63e875d9c5bb504bc2e37dbbe604c582811274e9aa16387d"
+    },
+    {
+      "turn": 27,
+      "hash": "ba81b9ffc3f2b42842d268f2ee9dd73977157746461a455d25ea88e3bf077d7c"
+    },
+    {
+      "turn": 28,
+      "hash": "accc48bae76bd58032cc03a7a5be23fe198d9079ff04a96636fe0e0fc31ae594"
+    },
+    {
+      "turn": 29,
+      "hash": "e082b4aafb185398e01bec3ed9240da51eaf6f0136754c6bb7d355158ff886a7"
+    },
+    {
+      "turn": 30,
+      "hash": "60ba97ea258d3bb74cf31e6827ce52af8ce8f496004f3b574f61f413ba416195"
+    },
+    {
+      "turn": 31,
+      "hash": "d14c7309df52c1e6f6309c5bf07691969c9b0de80a577ab3400f6776d44d0446"
+    },
+    {
+      "turn": 32,
+      "hash": "6745ae3bbaf3e439fc518447d9f8d5eef68ff7a61f6693a4642d3666108f298f"
+    },
+    {
+      "turn": 33,
+      "hash": "25570cf40d6a48f8a1e8a8aaaa70c6f62ad9b50fed48bf1b83d922729e8df135"
+    },
+    {
+      "turn": 34,
+      "hash": "4b426d388f04b4fd6ade559c550f405d7ce9fe1302dd56324d8bce243145c324"
+    },
+    {
+      "turn": 35,
+      "hash": "c70b837b4ebd3e8aed964f730a1b78b05e6cc455b0fb0b2eda35a1c0bca1680e"
+    },
+    {
+      "turn": 36,
+      "hash": "7251530569772bcf104f4aa44e28470e607ca6a52ffa74793de75355317eb719"
+    },
+    {
+      "turn": 37,
+      "hash": "9c06e9855a7851746e3db082eb605f22c24b54b1372292a01062cd1d61b16bb4"
+    },
+    {
+      "turn": 38,
+      "hash": "dfbeefe9447d946c3a36d9c4f0fa2f464f856da70a63f77c09225c9a71e53aac"
+    },
+    {
+      "turn": 39,
+      "hash": "85f5214906e341551129b51ae7093d422d25ed53f4f55d9b7d6cc5cadbe37b4e"
+    },
+    {
+      "turn": 40,
+      "hash": "227c1b0ef14d37c01de46f239744c63566b4a480747fdb66de64a75b17138ba5"
+    },
+    {
+      "turn": 41,
+      "hash": "c2650492f767de90c8d1b7b777f40ef3b4526ffdbae476bb510f7e626dab687b"
+    },
+    {
+      "turn": 42,
+      "hash": "0cf43922e9a9ad6395af4d41ddce8d3f7b6ea38587e3cacab1244fc862c650ff"
+    },
+    {
+      "turn": 43,
+      "hash": "d97a143c9e76a3740dfc73a6dc2ad2f4218418141fa34a188182ca0556db83f2"
+    },
+    {
+      "turn": 44,
+      "hash": "55460f47b84ecb92f15f7adad653d1e82a6dfa771e4572bc020be58c531ee6f4"
+    },
+    {
+      "turn": 45,
+      "hash": "acdfc3bdd8dbb8e757fe166c91e6f0aa6a32b4213b2bda805eb6cd80b1c2d682"
+    },
+    {
+      "turn": 46,
+      "hash": "a9f99c53bafaaadc866aa61a48127a498a6c49d0824190b9fa02ea14b1f8b69d"
+    },
+    {
+      "turn": 47,
+      "hash": "f42693f1c4a467446fd39b66bcb0bbd2899210d832fb2aea8ea93506fc7fe342"
+    },
+    {
+      "turn": 48,
+      "hash": "69cc15d60e94c8a869fd8a1ffddde0bd50977770bfefa4d6fe243e8239514d6a"
+    },
+    {
+      "turn": 49,
+      "hash": "cc4deb6524c1dd2361b299a711137258bf4477512d6d54f960a19392e8939db9"
+    },
+    {
+      "turn": 50,
+      "hash": "64fe9dbbfcd6c7b0b4a93c4507376abfbb0ca3214ecce6778e05c84f3f0e7a7f"
+    },
+    {
+      "turn": 51,
+      "hash": "e291c06b9f1445995c8b07bee1e5db3ab15bae6ea02180f55d8018d6714eeefe"
+    },
+    {
+      "turn": 52,
+      "hash": "b3989fb4f9d63ce7cedae5b169fe7347b30d491b65c00c3fcfbd571f819c0676"
+    },
+    {
+      "turn": 53,
+      "hash": "a01b8349c6b487ddb9a87f55e53761682c3e750a86806a03259f4fadc1028d35"
+    },
+    {
+      "turn": 54,
+      "hash": "6c0c5177aa186b75b2076602d79eeb3d365c5a9197dc25f69316558026376933"
+    },
+    {
+      "turn": 55,
+      "hash": "776b6214d0eeaff0b7752d6a2499e030b236393c8ba6dcf95e5f838c4962335a"
+    },
+    {
+      "turn": 56,
+      "hash": "ec25efa1b15c1f392dfc6b8d704a5e8cbbc36c913a95ddfa5b4bebbcbaa60450"
+    },
+    {
+      "turn": 57,
+      "hash": "e631952b6e5013442c02b47541687bd2007e34fbc604e8578b3d63d8fca7462e"
+    },
+    {
+      "turn": 58,
+      "hash": "b7920ccccc8b76e5de9df3d8c13c07e976f1637d0714f1d21ee64894fe4074eb"
+    },
+    {
+      "turn": 59,
+      "hash": "923535da213887f5613daf2ee8f54509af866cec39eac24aa8543a2b5f6eea2d"
+    },
+    {
+      "turn": 60,
+      "hash": "98250e69256cb6c63adb279b3d3e00da2dbb171fc6971e81d8d0ba8d77e38f33"
+    },
+    {
+      "turn": 61,
+      "hash": "81af8e9f019306da3cb254f36134a4df60f00b57622605928038f51df23860c9"
+    },
+    {
+      "turn": 62,
+      "hash": "7992348d2beef308cc8d538701de2d75410343a221ce14deb7b71bb7050c93ec"
+    },
+    {
+      "turn": 63,
+      "hash": "c885221cc220f5236a42b5154ffe411cce6feac1adfb32c2ba7a5b5b7e9b8d59"
+    },
+    {
+      "turn": 64,
+      "hash": "f36c5d5e1711c276e5b95548deae7d9382190ec450c79c923df1396062b2e39a"
+    },
+    {
+      "turn": 65,
+      "hash": "b4d2c8c18ad4eb7cfe71e1f6503c28660eb5ae15e811085d668e466a7e124845"
+    },
+    {
+      "turn": 66,
+      "hash": "b07dcacc1176cd039256acf0a3c4a2da2cca75fb246f75dcc3335cbeab880add"
+    },
+    {
+      "turn": 67,
+      "hash": "a74dd8113f743a194f973535a18995e1f1d660e907cee3d5a0149abfef882494"
+    },
+    {
+      "turn": 68,
+      "hash": "57f81468eca6979b2bacb672079b9ae19af54a5de8b7faa150c24893be267be5"
+    },
+    {
+      "turn": 69,
+      "hash": "2fe0f0e434248331a45a4c84074e776dc5d74126b15bac5e93028a4bf4724895"
+    },
+    {
+      "turn": 70,
+      "hash": "85363c30f3ba922f69b588f2ba47d07c7a293677bd5b3f1313053b1eef4260b6"
+    },
+    {
+      "turn": 71,
+      "hash": "481090bc63f3c04a36d450e80e275be1d919bb9aeb0143f6221ccd5ffa0e4b50"
+    },
+    {
+      "turn": 72,
+      "hash": "407739aae0d29f02898052e4f58112798ee8bc754ce46a47a6f820b9292cf7cd"
+    },
+    {
+      "turn": 73,
+      "hash": "b0ad39b5e785f52a24331406b3fe890980d97d618c6f68fb18dfdcad08cbe0cf"
+    },
+    {
+      "turn": 74,
+      "hash": "3367a1f6df53ab95767e1438a376817e5bf6b8c471c4b97d690e22ba0c51afc9"
+    },
+    {
+      "turn": 75,
+      "hash": "9d3dd4a4ae1f971014e5dab14c534a8341329ca404506aca6b3285bff22a57e8"
+    },
+    {
+      "turn": 76,
+      "hash": "c5d0bc470392d1f1e6cf360619ce1bca18ff2dce35d6b0ff371a650893b7a635"
+    },
+    {
+      "turn": 77,
+      "hash": "f6b1a7f0d7dc05f64d2dfcf0e74930f6676e22badeead03e6434242ef5893dc0"
+    },
+    {
+      "turn": 78,
+      "hash": "79b4a4637f369efd412f53c7da02f2994734c8bd82a0d3c216a6a400ad3be4aa"
+    },
+    {
+      "turn": 79,
+      "hash": "d654a84765e2ba25efda0d155eaa854a2db8057c46caa7d5fd50ad962978beaa"
+    },
+    {
+      "turn": 80,
+      "hash": "65a402d77f3980955af3a1eee1a2464523e880fb5be494a3783299b31d88fbed"
+    },
+    {
+      "turn": 81,
+      "hash": "1e7cb35dacb76526977da5d5233b42be59b6bca4a912199ac7d8286c5e77bae1"
+    },
+    {
+      "turn": 82,
+      "hash": "5a06d59930d6f77635cc8a253fec41c760dee5ee80b1f92869d9eb72408889ee"
+    },
+    {
+      "turn": 83,
+      "hash": "7bace77580334f8b4fb0ef4a606278629e5e4342ea638ad545b856cad6eb3898"
+    },
+    {
+      "turn": 84,
+      "hash": "011da30a7c49fb50887d5a7ff3ed4ebcf5c69ff6a202ca65a93cbb88eda55ca1"
+    },
+    {
+      "turn": 85,
+      "hash": "6786d8df13c2aaff6ff75160ed54fcb9407f3b9a6ea2783582bb0a53c9511f04"
+    },
+    {
+      "turn": 86,
+      "hash": "51b79b2555302b1d2a367a25fcff061662248d882d07712a1a3a4a2b6ef8edc1"
+    },
+    {
+      "turn": 87,
+      "hash": "b0c7639ec180d9217e13f3df1beebf0caf40055d42ba29f4d5abfcc841653808"
+    },
+    {
+      "turn": 88,
+      "hash": "b8aedbffa0b517770010a85ea194ed84e866d66b2ccf7e2711d3d18c45adb9ba"
+    },
+    {
+      "turn": 89,
+      "hash": "eb39f29c500a9c82e61c667f7bbafce6d93eca43b037be68f33c67b205ce8bd4"
+    },
+    {
+      "turn": 90,
+      "hash": "b9f6070b7ae515af174ab54e69fc9aa14e43bd27b00146c456562106cdf7b66f"
+    },
+    {
+      "turn": 91,
+      "hash": "d1040609ea81c80bf2b29f62cd9424d81fef02a355f790bc2f4df1ce30f023b4"
+    },
+    {
+      "turn": 92,
+      "hash": "3c16299cff8fa1fdbaa3b0b0b7e971bc9fe90adca5cae8cdabbde934771f0f84"
+    },
+    {
+      "turn": 93,
+      "hash": "add3035489f9c669e24fb2afff892d80ef9ce13c1263a11c8fe210dacb76f569"
+    },
+    {
+      "turn": 94,
+      "hash": "49a44adf7d2e44edfe0662b09ced1ae5aaf5e0993d7bf8cfeb73ec7db352b8a0"
+    },
+    {
+      "turn": 95,
+      "hash": "94bf9ad8703e4e1994cc5f34c4a900b98433e511499154dc18aaef9abb8e13e6"
+    },
+    {
+      "turn": 96,
+      "hash": "095db6e96108e93c4cd6c2788a23a23309a3df2a42d719d2ef6129b242b71ef4"
+    },
+    {
+      "turn": 97,
+      "hash": "ab58eca07c015f505ab9f484d6818fdbb16acdea58c0f88cfd2a2a7e40d933cb"
+    },
+    {
+      "turn": 98,
+      "hash": "f63eeb4a607d5ab42528215fc7fcfff9f8b87a6eea40acf07dc83ac1bf1255e3"
+    },
+    {
+      "turn": 99,
+      "hash": "c183ccde3684305ec2045f2e501779ee7148c6420a1bd327c14e77bfdd6a3f5b"
+    },
+    {
+      "turn": 100,
+      "hash": "d9975fcb012d5b8073f01b356baa6a1ba7c7ed4a37a74edae17a8c4461124e1f"
+    },
+    {
+      "turn": 101,
+      "hash": "e0b2d3afddac56fc969372e5d324cc4911cdc0d70590a59dd1cac5108a7ce6c4"
+    },
+    {
+      "turn": 102,
+      "hash": "e3c7fa6e81ccc600f45bb58de84e42e63cfa18ace5fd74e9137517ad5cf488ab"
+    },
+    {
+      "turn": 103,
+      "hash": "5c1120eddf5cb7d4e105cb8687e197818a11df4d4520e8dafadf7923c2fbab0e"
+    },
+    {
+      "turn": 104,
+      "hash": "1dd31a1d8fc7d9e340fbb23b113d5ec4921763b5c9f5f700c3eb4bd6d54d43b2"
+    },
+    {
+      "turn": 105,
+      "hash": "7368fc4e48efde094bb69bbeca73a004c434cd1d213f6aa6e889f17664b93137"
+    },
+    {
+      "turn": 106,
+      "hash": "825cd242d3a67c2167d58780d532e5919cf87dc721cd9db0092fbf8b44ebf9be"
+    },
+    {
+      "turn": 107,
+      "hash": "39dd75fd97c83b8dafddb2bcf7272cfad5f88893b47dd53a149515007871459d"
+    },
+    {
+      "turn": 108,
+      "hash": "109da26c091324c3e6095241537b845cdb6bc7c732f18163a5733e642918e6d6"
+    },
+    {
+      "turn": 109,
+      "hash": "d74cf282354928ac057d29393b246b06ed40b92a7fce22aa74ea9b9dd803341d"
+    },
+    {
+      "turn": 110,
+      "hash": "1cff3d9e182a86b3998818f30367a069f51e1ca0c0fed583add9eaa7fe970d03"
+    },
+    {
+      "turn": 111,
+      "hash": "40737fcaa8a18f2ae6d8669010a639d1d3829121ca4dc2258a813a53f3404159"
+    },
+    {
+      "turn": 112,
+      "hash": "b2b546e7bae1037b8cebfb983f7f662d3d810107d457adf34e1b8f9291d7ebcd"
+    },
+    {
+      "turn": 113,
+      "hash": "78bbfdd98da188c5fc427ac26467c0425fbba4a604db5974abe7263534dd47b8"
+    },
+    {
+      "turn": 114,
+      "hash": "74a95c4e6c0577784e03fbff924f4303c56e9b494b3b8f464a541b1d0606e3bb"
+    },
+    {
+      "turn": 115,
+      "hash": "52ff49e8cbce99fc5dae4cc90f258476a30c90cdeddcb1e6b853a2a038f93960"
+    },
+    {
+      "turn": 116,
+      "hash": "81eefc53f5b210c57bb388e4d138b6d119aa2f7e492a65d8ef8939e88a513273"
+    },
+    {
+      "turn": 117,
+      "hash": "d7943a0937020d3ab47c1828ce34c1ad7c6d7715745d4fae41f42e987261cace"
+    },
+    {
+      "turn": 118,
+      "hash": "04fa022a52e7389d85650bae1dfc4f96baea45acaa99af515275a850e975a914"
+    },
+    {
+      "turn": 119,
+      "hash": "dadbbe04203daa12272de870fdffe285f90b289049b0a8264e1f046c06744b3c"
+    },
+    {
+      "turn": 120,
+      "hash": "10df598a54e03520e9e62fc7223a72b2356e097069a91194dc0717ada0cdd3bc"
+    },
+    {
+      "turn": 121,
+      "hash": "fb76181c3b6625dbf0bbb8c457cca80eb7ac2aa959b0b1f064d6ea952bced16d"
+    },
+    {
+      "turn": 122,
+      "hash": "595872dd00002e203e3642f18884081fc8ead53ba445cdeaad7f6d6b806f959c"
+    },
+    {
+      "turn": 123,
+      "hash": "8a7f8e78163967723fd243d5ab1ffb6e58b4d0feae408905e4d36fbe15bbe2c3"
+    },
+    {
+      "turn": 124,
+      "hash": "37d1e544a3e70f3d6d8dfd79a2c2ae387652dee3e2c55d9352d72f1413915248"
+    },
+    {
+      "turn": 125,
+      "hash": "afa0f5739dc69fc1e89eb96e55b0a861d019c6db4ecac344cfa36818141fe673"
+    },
+    {
+      "turn": 126,
+      "hash": "7f192105093cd3311a27c6665a7435251f5c3cf79d8e284a5df4db83955027af"
+    },
+    {
+      "turn": 127,
+      "hash": "57a950de5660461f92acaf4dd47a08f7c4f160628ad1d4f64ff17f190d79750a"
+    },
+    {
+      "turn": 128,
+      "hash": "bb92363f314152becc46059a1110ca684c2c7deeed826411e2ca002c4dae7e51"
+    },
+    {
+      "turn": 129,
+      "hash": "7949fb917ed9c79c07db93a8fa8c8e2bf061bc9ed73373ace182251812ba0b30"
+    },
+    {
+      "turn": 130,
+      "hash": "29e150bb812f6f9c46b3d60d9929232ff77685f9bb7b8907d4820ea9c52cfff6"
+    },
+    {
+      "turn": 131,
+      "hash": "199c5c27c34e7006a4577392cc4867a8d21460a1de10ad025c1632b6cc3b70ad"
+    },
+    {
+      "turn": 132,
+      "hash": "3883c8a0869ca0c467cd3457550b9e0a051c19c2c9ca71db441a96ffc4f5c184"
+    },
+    {
+      "turn": 133,
+      "hash": "72e4cf0ebe8942fe93dc7360540109993595663ccf42a38fbd61a680a17d4dbc"
+    },
+    {
+      "turn": 134,
+      "hash": "7d77fb47e3c4660ac749aa7f7ec70ff6e231f7e90ec3e8dd0b02f53fd6ac5f04"
+    },
+    {
+      "turn": 135,
+      "hash": "7f56ab56bb0880927293c897ca8f3db0c64d2817f267e337d9ad59299394c3b9"
+    },
+    {
+      "turn": 136,
+      "hash": "0b08ab94737df42b671869c1296a4b73551cac5fbd40f3187f46bd8082e2cd23"
+    },
+    {
+      "turn": 137,
+      "hash": "5666b3671b5885674bcd1a7c971deb65244ef1b4cfa4f14e0e9165f33a618be0"
+    },
+    {
+      "turn": 138,
+      "hash": "07c4d3f335d28b4726d355e7747d316d9aaf66d7f6faa8324b70d04934e5f65f"
+    },
+    {
+      "turn": 139,
+      "hash": "85521e379f4196a519528383808f788e59502bf02e7d5eeb7762cdfdfa337456"
+    },
+    {
+      "turn": 140,
+      "hash": "5d32b8318cab961d151b0ab966f18fda5dc63a5c48a99c694330df3ac54e3424"
+    },
+    {
+      "turn": 141,
+      "hash": "6c2d5ce852e203aeb18be8d4e20e442f4947ff44cb22ab79499026baf5d6f2ec"
+    },
+    {
+      "turn": 142,
+      "hash": "129a403fbc3f03235afd023c22166fbd0e20372916534021ef51a33d665e9997"
+    },
+    {
+      "turn": 143,
+      "hash": "e38c09b0a26aef852c51d9d967e95c3400ac4a75c3a5b7a1389f0c55a929e436"
+    },
+    {
+      "turn": 144,
+      "hash": "2ce9cb6623b94e64cd7528eb1700aa5b32263ca5e1f3ddc5d439f95c5fd1bb89"
+    },
+    {
+      "turn": 145,
+      "hash": "39969d92bbdfd2d3a47a62d0b9a0b33a5b2c9ebd135df7ea60072df0f3ca3832"
+    },
+    {
+      "turn": 146,
+      "hash": "57aadbd6c20edb1a8f5652dec14943600d3452456b7fde3920f177ed30e8ae43"
+    },
+    {
+      "turn": 147,
+      "hash": "8edf2d5f4931fcd96aab5d03eb225be360b7d49f5aa4e5b379b69d26c933f987"
+    },
+    {
+      "turn": 148,
+      "hash": "85fb100ede8acbc0ce17063843b8b1d457adf88adbda8e25af486b8288893148"
+    }
+  ],
+  "checkpoints": [
+    {
+      "day": 15,
+      "hash": "6dca4f541c75201bc434638343a1d247eb9c9bb701996501d9a33dc071c33c76",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 72,
+            "traced": 72,
+            "controlPermille": 72000,
+            "supplied": 72,
+            "frontLines": 3,
+            "frontSegments": 3,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 13833,
+            "menByKind": {
+              "return": 3133,
+              "estimate": 0,
+              "rule": 10700,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies"
+            ],
+            "blocksUnknownStrength": 13
+          },
+          {
+            "faction": "union",
+            "held": 36,
+            "traced": 36,
+            "controlPermille": 36000,
+            "supplied": 35,
+            "frontLines": 3,
+            "frontSegments": 3,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 9391,
+            "menByKind": {
+              "return": 8901,
+              "estimate": 490,
+              "rule": 0,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 0,
+        "blocksTotal": 89
+      }
+    },
+    {
+      "day": 30,
+      "hash": "60ba97ea258d3bb74cf31e6827ce52af8ce8f496004f3b574f61f413ba416195",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 72,
+            "traced": 72,
+            "controlPermille": 72000,
+            "supplied": 72,
+            "frontLines": 3,
+            "frontSegments": 3,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 13833,
+            "menByKind": {
+              "return": 3133,
+              "estimate": 0,
+              "rule": 10700,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies"
+            ],
+            "blocksUnknownStrength": 13
+          },
+          {
+            "faction": "union",
+            "held": 36,
+            "traced": 36,
+            "controlPermille": 36000,
+            "supplied": 35,
+            "frontLines": 3,
+            "frontSegments": 3,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 9391,
+            "menByKind": {
+              "return": 8901,
+              "estimate": 490,
+              "rule": 0,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 0,
+        "blocksTotal": 89
+      }
+    },
+    {
+      "day": 45,
+      "hash": "acdfc3bdd8dbb8e757fe166c91e6f0aa6a32b4213b2bda805eb6cd80b1c2d682",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 73,
+            "traced": 73,
+            "controlPermille": 73000,
+            "supplied": 73,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 13833,
+            "menByKind": {
+              "return": 3133,
+              "estimate": 0,
+              "rule": 10700,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk"
+            ],
+            "blocksUnknownStrength": 14
+          },
+          {
+            "faction": "union",
+            "held": 35,
+            "traced": 35,
+            "controlPermille": 35000,
+            "supplied": 35,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 9306,
+            "menByKind": {
+              "return": 8816,
+              "estimate": 490,
+              "rule": 0,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 0,
+        "blocksTotal": 89
+      }
+    },
+    {
+      "day": 60,
+      "hash": "98250e69256cb6c63adb279b3d3e00da2dbb171fc6971e81d8d0ba8d77e38f33",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 74,
+            "traced": 74,
+            "controlPermille": 73690,
+            "supplied": 74,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 21633,
+            "menByKind": {
+              "return": 3133,
+              "estimate": 0,
+              "rule": 18500,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk",
+              "unidentified.state-forces.va_richmond",
+              "unidentified.state-forces.va_harpers_ferry"
+            ],
+            "blocksUnknownStrength": 16
+          },
+          {
+            "faction": "union",
+            "held": 35,
+            "traced": 35,
+            "controlPermille": 35186,
+            "supplied": 35,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 57666,
+            "menByKind": {
+              "return": 8816,
+              "estimate": 490,
+              "rule": 48360,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 3,
+        "blocksTotal": 127
+      }
+    },
+    {
+      "day": 75,
+      "hash": "9d3dd4a4ae1f971014e5dab14c534a8341329ca404506aca6b3285bff22a57e8",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 75,
+            "traced": 75,
+            "controlPermille": 75166,
+            "supplied": 74,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 26803,
+            "menByKind": {
+              "return": 3623,
+              "estimate": 0,
+              "rule": 23180,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk",
+              "unidentified.state-forces.va_richmond",
+              "unidentified.state-forces.va_harpers_ferry"
+            ],
+            "blocksUnknownStrength": 16
+          },
+          {
+            "faction": "union",
+            "held": 36,
+            "traced": 36,
+            "controlPermille": 36000,
+            "supplied": 36,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 106283,
+            "menByKind": {
+              "return": 6371,
+              "estimate": 490,
+              "rule": 99422,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 1,
+        "blocksTotal": 137
+      }
+    },
+    {
+      "day": 90,
+      "hash": "b9f6070b7ae515af174ab54e69fc9aa14e43bd27b00146c456562106cdf7b66f",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 77,
+            "traced": 77,
+            "controlPermille": 76018,
+            "supplied": 74,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 3,
+            "pocketRegions": 3,
+            "menKnown": 29143,
+            "menByKind": {
+              "return": 3623,
+              "estimate": 0,
+              "rule": 25520,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk",
+              "unidentified.state-forces.va_richmond",
+              "unidentified.state-forces.va_harpers_ferry",
+              "unidentified.state-forces.va_peninsula"
+            ],
+            "blocksUnknownStrength": 17
+          },
+          {
+            "faction": "union",
+            "held": 36,
+            "traced": 36,
+            "controlPermille": 36000,
+            "supplied": 36,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 146985,
+            "menByKind": {
+              "return": 6371,
+              "estimate": 490,
+              "rule": 140124,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 1,
+        "blocksTotal": 160
+      }
+    },
+    {
+      "day": 105,
+      "hash": "7368fc4e48efde094bb69bbeca73a004c434cd1d213f6aa6e889f17664b93137",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 79,
+            "traced": 79,
+            "controlPermille": 77466,
+            "supplied": 75,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 4,
+            "pocketRegions": 4,
+            "menKnown": 29143,
+            "menByKind": {
+              "return": 3623,
+              "estimate": 0,
+              "rule": 25520,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk",
+              "unidentified.state-forces.va_richmond",
+              "unidentified.state-forces.va_harpers_ferry",
+              "unidentified.state-forces.va_peninsula"
+            ],
+            "blocksUnknownStrength": 17
+          },
+          {
+            "faction": "union",
+            "held": 36,
+            "traced": 36,
+            "controlPermille": 36135,
+            "supplied": 36,
+            "frontLines": 2,
+            "frontSegments": 2,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 152181,
+            "menByKind": {
+              "return": 6371,
+              "estimate": 490,
+              "rule": 145320,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 1,
+        "blocksTotal": 163
+      }
+    },
+    {
+      "day": 120,
+      "hash": "10df598a54e03520e9e62fc7223a72b2356e097069a91194dc0717ada0cdd3bc",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 79,
+            "traced": 79,
+            "controlPermille": 78684,
+            "supplied": 75,
+            "frontLines": 3,
+            "frontSegments": 4,
+            "pockets": 4,
+            "pocketRegions": 4,
+            "menKnown": 29143,
+            "menByKind": {
+              "return": 3623,
+              "estimate": 0,
+              "rule": 25520,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk",
+              "unidentified.state-forces.va_richmond",
+              "unidentified.state-forces.va_harpers_ferry",
+              "unidentified.state-forces.va_peninsula",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.3",
+              "generated.state-forces.cs_nc_additional_north_carolina.1",
+              "generated.state-forces.cs_nc_additional_north_carolina.2",
+              "unidentified.state-forces.cs_tn_infantry_tennessee",
+              "unidentified.state-forces.cs_tn_cavalry_tennessee",
+              "unidentified.state-forces.cs_tn_river_artillery_tennessee"
+            ],
+            "blocksUnknownStrength": 23
+          },
+          {
+            "faction": "union",
+            "held": 37,
+            "traced": 37,
+            "controlPermille": 36377,
+            "supplied": 37,
+            "frontLines": 3,
+            "frontSegments": 4,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 152181,
+            "menByKind": {
+              "return": 6371,
+              "estimate": 490,
+              "rule": 145320,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 0,
+        "blocksTotal": 169
+      }
+    },
+    {
+      "day": 135,
+      "hash": "7f56ab56bb0880927293c897ca8f3db0c64d2817f267e337d9ad59299394c3b9",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 79,
+            "traced": 79,
+            "controlPermille": 79099,
+            "supplied": 75,
+            "frontLines": 3,
+            "frontSegments": 4,
+            "pockets": 4,
+            "pocketRegions": 4,
+            "menKnown": 59383,
+            "menByKind": {
+              "return": 3623,
+              "estimate": 0,
+              "rule": 55760,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk",
+              "unidentified.state-forces.va_richmond",
+              "unidentified.state-forces.va_harpers_ferry",
+              "unidentified.state-forces.va_peninsula",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.3",
+              "generated.state-forces.cs_nc_additional_north_carolina.1",
+              "generated.state-forces.cs_nc_additional_north_carolina.2",
+              "unidentified.state-forces.cs_tn_infantry_tennessee",
+              "unidentified.state-forces.cs_tn_cavalry_tennessee",
+              "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+              "unidentified.raised.st_gov_georgia.d122",
+              "unidentified.raised.st_gov_alabama.d122",
+              "unidentified.raised.st_gov_mississippi.d122",
+              "unidentified.raised.st_gov_arkansas.d122",
+              "unidentified.raised.st_gov_tennessee.d129",
+              "generated.state-forces.cs_ar_infantry_arkansas.1",
+              "generated.state-forces.cs_ar_infantry_arkansas.2",
+              "generated.state-forces.cs_ar_infantry_arkansas.3",
+              "generated.state-forces.cs_ar_infantry_arkansas.4",
+              "generated.state-forces.cs_ar_infantry_arkansas.5",
+              "generated.state-forces.cs_ar_infantry_arkansas.6",
+              "generated.state-forces.cs_ar_infantry_arkansas.7",
+              "generated.state-forces.cs_ar_cavalry_arkansas.1",
+              "unidentified.state-forces.cs_ar_cavalry_battalion_arkansas",
+              "unidentified.state-forces.cs_ar_artillery_arkansas"
+            ],
+            "blocksUnknownStrength": 32
+          },
+          {
+            "faction": "union",
+            "held": 37,
+            "traced": 37,
+            "controlPermille": 36721,
+            "supplied": 37,
+            "frontLines": 3,
+            "frontSegments": 4,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 152181,
+            "menByKind": {
+              "return": 6371,
+              "estimate": 490,
+              "rule": 145320,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 0,
+        "blocksTotal": 191
+      }
+    },
+    {
+      "day": 148,
+      "hash": "85fb100ede8acbc0ce17063843b8b1d457adf88adbda8e25af486b8288893148",
+      "scores": {
+        "factions": [
+          {
+            "faction": "confederate",
+            "held": 79,
+            "traced": 79,
+            "controlPermille": 79216,
+            "supplied": 75,
+            "frontLines": 4,
+            "frontSegments": 6,
+            "pockets": 4,
+            "pocketRegions": 4,
+            "menKnown": 54530,
+            "menByKind": {
+              "return": 3623,
+              "estimate": 0,
+              "rule": 50907,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_cs_charleston",
+              "initial.fb_cs_charleston_guard_steamers",
+              "initial.fb_st_charleston_1st_infantry_regulars",
+              "initial.fb_st_charleston_2nd_artillery_battalion",
+              "initial.fb_st_charleston_hagood_regiment",
+              "initial.fb_st_charleston_kershaw_regiment",
+              "initial.fb_st_charleston_morris_island",
+              "initial.fb_st_charleston_rion_battalion",
+              "initial.fb_st_fort_morgan",
+              "initial.fb_st_la_forts_jackson_st_philip",
+              "initial.fb_st_tx_ford_regiment",
+              "initial.fb_st_tx_galveston_batteries",
+              "initial.fb_st_tx_northwest_frontier_companies",
+              "unidentified.state-forces.va_norfolk",
+              "unidentified.state-forces.va_richmond",
+              "unidentified.state-forces.va_harpers_ferry",
+              "unidentified.state-forces.va_peninsula",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+              "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+              "generated.state-forces.cs_nc_volunteers_north_carolina.3",
+              "generated.state-forces.cs_nc_additional_north_carolina.1",
+              "generated.state-forces.cs_nc_additional_north_carolina.2",
+              "unidentified.state-forces.cs_tn_infantry_tennessee",
+              "unidentified.state-forces.cs_tn_cavalry_tennessee",
+              "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+              "unidentified.raised.st_gov_georgia.d122",
+              "unidentified.raised.st_gov_alabama.d122",
+              "unidentified.raised.st_gov_mississippi.d122",
+              "unidentified.raised.st_gov_arkansas.d122",
+              "unidentified.raised.st_gov_tennessee.d129",
+              "generated.state-forces.cs_ar_infantry_arkansas.1",
+              "generated.state-forces.cs_ar_infantry_arkansas.2",
+              "generated.state-forces.cs_ar_infantry_arkansas.3",
+              "generated.state-forces.cs_ar_infantry_arkansas.4",
+              "generated.state-forces.cs_ar_infantry_arkansas.5",
+              "generated.state-forces.cs_ar_infantry_arkansas.6",
+              "generated.state-forces.cs_ar_infantry_arkansas.7",
+              "generated.state-forces.cs_ar_cavalry_arkansas.1",
+              "unidentified.state-forces.cs_ar_cavalry_battalion_arkansas",
+              "unidentified.state-forces.cs_ar_artillery_arkansas"
+            ],
+            "blocksUnknownStrength": 32
+          },
+          {
+            "faction": "union",
+            "held": 38,
+            "traced": 38,
+            "controlPermille": 36891,
+            "supplied": 37,
+            "frontLines": 4,
+            "frontSegments": 6,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 129399,
+            "menByKind": {
+              "return": 6371,
+              "estimate": 490,
+              "rule": 122538,
+              "unknown": null
+            },
+            "unknownLots": [
+              "initial.fb_us_dc_militia",
+              "initial.fb_us_fort_monroe_garrison",
+              "initial.fb_us_marines_philadelphia_yard",
+              "initial.fb_us_marines_washington_barracks",
+              "initial.fb_us_new_mexico_troops",
+              "initial.fb_us_pacific_troops",
+              "initial.fb_us_pickens_garrison",
+              "initial.fb_us_pickens_vogdes_co_a",
+              "initial.fb_us_ship_anacostia",
+              "initial.fb_us_ship_michigan",
+              "initial.fb_us_ship_water_witch",
+              "initial.fb_us_washington_regulars"
+            ],
+            "blocksUnknownStrength": 12
+          }
+        ],
+        "contestedRegions": 0,
+        "blocksMarching": 0,
+        "blocksTotal": 172
+      }
+    }
+  ],
+  "daily": [
+    {
+      "day": 1,
+      "fires": {
+        "messages.mail_delay": 12,
+        "messages.delivered": 5,
+        "messages.sent": 74,
+        "orders.relayed": 1,
+        "seats.attention_spent": 2,
+        "verbs.answered": 1,
+        "verbs.consulted": 1,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 12,
+        "situations.decided": 1,
+        "situations.fired": 3,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.staff_lines": 2,
+        "situations.surfaced": 2,
+        "map.recomputed": 1,
+        "forces.stores_fell": 1,
+        "forces.stores_low": 1
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 2,
+      "fires": {
+        "messages.delivered": 43,
+        "messages.sent": 24,
+        "seats.choices": 1,
+        "people.resigned": 1,
+        "situations.surfaced": 1,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 3,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 24,
+        "messages.sent": 46,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 4,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 54,
+        "messages.sent": 39,
+        "orders.relayed": 1,
+        "seats.attention_spent": 7,
+        "operations.opened": 1,
+        "plans.approved": 1,
+        "recruitment.called": 7,
+        "recruitment.answered": 6,
+        "recruitment.refused": 1,
+        "situations.surfaced": 1,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 5,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 23,
+        "messages.sent": 44,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 6,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 37,
+        "messages.sent": 22,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 7,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 113,
+        "messages.delivered": 26,
+        "messages.sent": 305,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "verbs.answered": 1,
+        "verbs.consulted": 1,
+        "ladder.moved": 1,
+        "seats.initiative": 4,
+        "operations.stage": 1,
+        "politics.front_page": 3,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 8,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 58,
+        "messages.sent": 28,
+        "operations.stage": 1,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 12,
+        "situations.decided": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 9,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 47,
+        "messages.sent": 62,
+        "operations.ended": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "plans.goal_reached": 1,
+        "recruitment.mustered": 6,
+        "recruitment.men": 6,
+        "situations.surfaced": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 10,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 86,
+        "messages.sent": 43,
+        "seats.attention_spent": 1,
+        "verbs.answered": 7,
+        "verbs.consulted": 7,
+        "situations.decided": 1,
+        "situations.fired": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 11,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 16,
+        "messages.delivered": 41,
+        "messages.sent": 91,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "command.post_succeeded": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 12,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 61,
+        "messages.sent": 28,
+        "situations.surfaced": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 13,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 41,
+        "messages.sent": 56,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 14,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 110,
+        "messages.delivered": 56,
+        "messages.sent": 285,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "verbs.answered": 1,
+        "ladder.moved": 1,
+        "politics.front_page": 3,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 15,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 52,
+        "messages.sent": 61,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 12,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 16,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 73,
+        "messages.sent": 28,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 17,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 101,
+        "messages.sent": 56,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 18,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 100,
+        "messages.sent": 28,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 19,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 53,
+        "messages.sent": 56,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 20,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 64,
+        "messages.sent": 28,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 21,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 136,
+        "messages.delivered": 57,
+        "messages.sent": 345,
+        "seats.attention_refilled": 1,
+        "ladder.moved": 1,
+        "politics.front_page": 3,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 22,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 87,
+        "messages.sent": 38,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 12,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 23,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 69,
+        "messages.sent": 56,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 24,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 148,
+        "messages.sent": 42,
+        "seats.attention_spent": 1,
+        "verbs.answered": 7,
+        "verbs.consulted": 7,
+        "politics.adjourned": 1,
+        "situations.options_changed": 1,
+        "situations.resurfaced": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 25,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 85,
+        "messages.sent": 57,
+        "situations.decided": 1,
+        "situations.fired": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 26,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 73,
+        "messages.sent": 28,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 27,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 46,
+        "messages.sent": 56,
+        "map.recomputed": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 28,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 121,
+        "messages.delivered": 79,
+        "messages.sent": 283,
+        "seats.attention_refilled": 1,
+        "politics.front_page": 3,
+        "situations.resurfaced": 1,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 29,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 61,
+        "messages.sent": 72,
+        "people.resigned": 1,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 12
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 30,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 93,
+        "messages.sent": 29,
+        "situations.decided": 1,
+        "situations.fired": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 31,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 17,
+        "messages.delivered": 119,
+        "messages.sent": 90
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 32,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 109,
+        "messages.sent": 31,
+        "people.resigned": 1,
+        "situations.decided": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.options_changed": 1,
+        "situations.proposals": 1,
+        "command.temporary_post_opened": 1
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 33,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 55,
+        "messages.sent": 58,
+        "situations.decided": 1,
+        "situations.fired": 1,
+        "situations.proposals": 1,
+        "situations.staff_lines": 2,
+        "situations.surfaced": 3,
+        "forces.landed_by_situation": 1
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 34,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 82,
+        "messages.sent": 42,
+        "seats.attention_spent": 7,
+        "recruitment.called": 7,
+        "recruitment.answered": 7
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 35,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 105,
+        "messages.delivered": 63,
+        "messages.sent": 314,
+        "seats.attention_refilled": 1,
+        "politics.front_page": 3
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 36,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 93,
+        "messages.sent": 44,
+        "orders.relay_objected": 1,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 12,
+        "situations.decided": 1,
+        "situations.options_changed": 1,
+        "situations.orders": 1
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 37,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 73,
+        "messages.sent": 58,
+        "orders.bypassed": 1,
+        "orders.obeyed": 1,
+        "seats.attention_spent": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 38,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 131,
+        "messages.sent": 33,
+        "seats.choices": 1,
+        "operations.opened": 1,
+        "operations.stage": 1,
+        "combat.bombardment": 1,
+        "reports.battle_dispatch": 1,
+        "reports.casualty_return": 2,
+        "reports.governor_wire": 1,
+        "plans.chosen": 1,
+        "plans.went_ahead": 1,
+        "politics.framing": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "situations.surfaced": 1,
+        "combat.battle_day": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 39,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 98,
+        "messages.sent": 65,
+        "operations.stage": 1,
+        "combat.bombardment": 1,
+        "combat.evacuated": 1,
+        "reports.battle_dispatch": 1,
+        "reports.casualty_return": 2,
+        "reports.governor_wire": 1,
+        "situations.decided": 1,
+        "situations.fired": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1,
+        "control.changed": 2,
+        "control.threshold_crossed": 4,
+        "map.pocket_lost": 1,
+        "map.recomputed": 1,
+        "combat.battle_day": 1,
+        "combat.surrendered": 1
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 40,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 74,
+        "messages.sent": 29,
+        "operations.ended": 1,
+        "operations.stage": 1,
+        "plans.goal_reached": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 41,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 12,
+        "messages.delivered": 94,
+        "messages.sent": 129,
+        "recruitment.called": 24,
+        "recruitment.answered": 16,
+        "recruitment.refused": 2,
+        "politics.act": 1,
+        "politics.called": 1,
+        "situations.decided": 1,
+        "situations.options_changed": 1,
+        "situations.orders": 24,
+        "situations.proposals": 2,
+        "situations.surfaced": 1
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 42,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 126,
+        "messages.delivered": 99,
+        "messages.sent": 296,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 7,
+        "people.grievances_faded": 1,
+        "recruitment.called": 7,
+        "recruitment.answered": 7,
+        "politics.front_page": 3,
+        "politics.support": 18
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 43,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 5,
+        "messages.delivered": 72,
+        "messages.sent": 71,
+        "recruitment.answered": 1,
+        "recruitment.refused": 1,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 11,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "command.side_changed": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 44,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 97,
+        "messages.sent": 32,
+        "recruitment.refused": 2,
+        "situations.decided": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 2,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 2,
+        "map.recomputed": 1,
+        "command.temporary_post_opened": 1
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 45,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 123,
+        "messages.sent": 62,
+        "reports.casualty_return": 2,
+        "recruitment.answered": 2,
+        "situations.fired": 3,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.surfaced": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 46,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 105,
+        "messages.sent": 66,
+        "people.resigned": 1,
+        "reports.casualty_return": 2,
+        "recruitment.mustered": 16,
+        "recruitment.men": 16,
+        "situations.decided": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 3,
+        "control.changed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 1,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 24
+      },
+      "decisionPoints": 3,
+      "rejections": 0
+    },
+    {
+      "day": 47,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 98,
+        "messages.sent": 90,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 1,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 1,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 24
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 48,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 95,
+        "messages.sent": 57,
+        "seats.attention_spent": 5,
+        "people.resigned": 1,
+        "recruitment.called": 5,
+        "recruitment.answered": 3,
+        "recruitment.mustered": 1,
+        "recruitment.men": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 2,
+        "situations.surfaced": 1,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "command.temporary_post_opened": 1,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 24
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 49,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 110,
+        "messages.delivered": 89,
+        "messages.sent": 346,
+        "seats.choices": 1,
+        "seats.attention_refilled": 1,
+        "people.grievances_faded": 1,
+        "people.stayed": 1,
+        "politics.front_page": 3,
+        "politics.support": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.surfaced": 1,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "forces.stores_fell": 1,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 24
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 50,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 127,
+        "messages.sent": 67,
+        "seats.attention_spent": 3,
+        "recruitment.called": 3,
+        "recruitment.answered": 2,
+        "recruitment.mustered": 2,
+        "recruitment.men": 2,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 11,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "situations.surfaced": 2,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "command.temporary_post_opened": 1,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 24
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 51,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 31,
+        "messages.delivered": 104,
+        "messages.sent": 165,
+        "people.resigned": 2,
+        "recruitment.answered": 1,
+        "situations.decided": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 2,
+        "control.changed": 1,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 52,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 168,
+        "messages.sent": 49,
+        "situations.fired": 3,
+        "situations.notice_reports": 3,
+        "situations.noticed": 3,
+        "situations.proposals": 4,
+        "situations.surfaced": 1,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "command.post_succeeded": 1,
+        "command.temporary_post_opened": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 53,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 120,
+        "messages.sent": 104,
+        "seats.attention_spent": 3,
+        "verbs.answered": 2,
+        "movement.arrived": 1,
+        "movement.leg_started": 3,
+        "recruitment.answered": 2,
+        "recruitment.mustered": 3,
+        "recruitment.men": 3,
+        "politics.act": 1,
+        "politics.support": 3,
+        "situations.decided": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.proposals": 4,
+        "situations.surfaced": 4,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "command.temporary_post_opened": 2,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 54,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 120,
+        "messages.sent": 51,
+        "orders.relayed": 2,
+        "seats.attention_spent": 1,
+        "movement.arrived": 2,
+        "movement.leg_started": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 3,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "command.post_succeeded": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 55,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 74,
+        "messages.sent": 96,
+        "seats.choices": 1,
+        "people.resigned": 1,
+        "movement.arrived": 5,
+        "movement.leg_started": 4,
+        "recruitment.mustered": 2,
+        "recruitment.men": 2,
+        "situations.surfaced": 1,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 56,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 122,
+        "messages.delivered": 113,
+        "messages.sent": 309,
+        "seats.attention_refilled": 1,
+        "people.grievances_faded": 1,
+        "movement.arrived": 4,
+        "movement.leg_started": 6,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "recruitment.mustered": 1,
+        "recruitment.men": 1,
+        "politics.front_page": 3,
+        "politics.support": 3,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 57,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 3,
+        "messages.delivered": 110,
+        "messages.sent": 112,
+        "verbs.answered": 1,
+        "movement.arrived": 5,
+        "movement.leg_started": 4,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 11,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "control.changed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 1,
+        "command.side_changed": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 58,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 136,
+        "messages.sent": 50,
+        "movement.arrived": 6,
+        "movement.leg_started": 7,
+        "recruitment.mustered": 2,
+        "recruitment.men": 2,
+        "situations.surfaced": 1,
+        "control.changed": 2,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 59,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 139,
+        "messages.sent": 98,
+        "seats.attention_spent": 1,
+        "people.resigned": 1,
+        "movement.arrived": 5,
+        "movement.leg_started": 5,
+        "recruitment.called": 1,
+        "recruitment.answered": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 60,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 148,
+        "messages.sent": 56,
+        "orders.relayed": 3,
+        "seats.choices": 1,
+        "seats.attention_spent": 3,
+        "movement.arrived": 5,
+        "movement.leg_started": 4,
+        "recruitment.called": 3,
+        "recruitment.answered": 3,
+        "situations.surfaced": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 61,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 28,
+        "messages.delivered": 87,
+        "messages.sent": 161,
+        "seats.attention_spent": 1,
+        "movement.arrived": 7,
+        "movement.leg_started": 4,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 62,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 117,
+        "messages.sent": 48,
+        "orders.responses_pruned": 1,
+        "movement.arrived": 7,
+        "movement.leg_started": 6,
+        "control.changed": 2,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 2,
+        "forces.stores_refilled": 27
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 63,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 108,
+        "messages.delivered": 85,
+        "messages.sent": 356,
+        "seats.attention_refilled": 1,
+        "people.grievances_faded": 1,
+        "people.resigned": 1,
+        "movement.arrived": 6,
+        "movement.leg_started": 5,
+        "politics.front_page": 3,
+        "politics.support": 3,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_refilled": 28
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 64,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 3,
+        "messages.delivered": 142,
+        "messages.sent": 69,
+        "verbs.answered": 1,
+        "movement.arrived": 3,
+        "movement.leg_started": 4,
+        "recruitment.mustered": 1,
+        "recruitment.men": 1,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 11,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "command.post_succeeded": 1,
+        "forces.stores_refilled": 38
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 65,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 103,
+        "messages.sent": 104,
+        "orders.responses_pruned": 1,
+        "movement.arrived": 5,
+        "movement.leg_started": 3,
+        "recruitment.mustered": 3,
+        "recruitment.men": 3,
+        "situations.fired": 6,
+        "situations.notice_reports": 6,
+        "situations.noticed": 6,
+        "situations.proposals": 6,
+        "situations.surfaced": 2,
+        "control.changed": 3,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 3,
+        "command.side_changed": 1,
+        "forces.stores_fell": 10,
+        "forces.stores_refilled": 37
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 66,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 175,
+        "messages.sent": 52,
+        "seats.attention_spent": 1,
+        "movement.arrived": 3,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 2,
+        "situations.surfaced": 6,
+        "control.changed": 2,
+        "map.recomputed": 1,
+        "combat.occupation": 2,
+        "command.side_changed": 1,
+        "forces.stores_fell": 10,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 67,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 117,
+        "messages.sent": 96,
+        "movement.arrived": 3,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "recruitment.renewed": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 1,
+        "situations.surfaced": 2,
+        "control.changed": 3,
+        "map.recomputed": 1,
+        "combat.occupation": 3,
+        "forces.stores_fell": 11,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 68,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 114,
+        "messages.sent": 50,
+        "orders.responses_pruned": 1,
+        "movement.arrived": 3,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "situations.surfaced": 2,
+        "control.changed": 3,
+        "control.threshold_crossed": 1,
+        "map.pocket_closed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 3,
+        "forces.stores_fell": 11,
+        "forces.stores_low": 2,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 69,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 73,
+        "messages.sent": 99,
+        "people.resigned": 1,
+        "movement.arrived": 3,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "situations.fired": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 2,
+        "control.changed": 4,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 12,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 70,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 110,
+        "messages.delivered": 122,
+        "messages.sent": 317,
+        "seats.choices": 1,
+        "seats.attention_refilled": 1,
+        "people.grievances_faded": 1,
+        "seats.initiative": 4,
+        "people.resigned": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "politics.front_page": 3,
+        "politics.support": 3,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 12,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 71,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 4,
+        "messages.mail_delay": 29,
+        "messages.delivered": 126,
+        "messages.sent": 199,
+        "orders.responses_pruned": 1,
+        "seats.attention_spent": 4,
+        "verbs.answered": 2,
+        "movement.arrived": 3,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "recruitment.called": 3,
+        "recruitment.answered": 3,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 13,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 72,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 165,
+        "messages.sent": 64,
+        "seats.attention_spent": 8,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "recruitment.called": 8,
+        "recruitment.answered": 8,
+        "situations.surfaced": 2,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 13,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 73,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 146,
+        "messages.sent": 97,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "command.government_closed": 1,
+        "forces.stores_fell": 14,
+        "forces.stores_refilled": 17
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 74,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 153,
+        "messages.sent": 49,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 13,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 75,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 78,
+        "messages.sent": 96,
+        "orders.responses_pruned": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 7,
+        "forces.stores_refilled": 22
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 76,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 113,
+        "messages.sent": 54,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "recruitment.mustered": 3,
+        "recruitment.men": 3,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 7,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 77,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 123,
+        "messages.delivered": 84,
+        "messages.sent": 374,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "verbs.answered": 1,
+        "people.grievances_faded": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "recruitment.mustered": 8,
+        "recruitment.men": 8,
+        "politics.front_page": 3,
+        "politics.support": 3,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 2,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "command.temporary_post_opened": 2,
+        "forces.stores_fell": 9,
+        "forces.stores_refilled": 31
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 78,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 5,
+        "messages.delivered": 175,
+        "messages.sent": 87,
+        "seats.attention_spent": 7,
+        "verbs.answered": 3,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "recruitment.called": 5,
+        "recruitment.answered": 4,
+        "recruitment.refused": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.surfaced": 2,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "command.temporary_post_opened": 1,
+        "forces.stores_fell": 6,
+        "forces.stores_refilled": 35
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 79,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 113,
+        "messages.sent": 107,
+        "seats.choices": 1,
+        "seats.attention_spent": 1,
+        "verbs.answered": 1,
+        "movement.join_blocked": 1,
+        "situations.fired": 3,
+        "situations.notice_reports": 3,
+        "situations.noticed": 3,
+        "situations.proposals": 2,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "command.government_closed": 1,
+        "command.post_succeeded": 1,
+        "forces.stores_fell": 6,
+        "forces.stores_refilled": 34
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 80,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 176,
+        "messages.sent": 58,
+        "people.resigned": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "politics.support": 1,
+        "situations.decided": 2,
+        "situations.fired": 3,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.policy": 1,
+        "situations.proposals": 2,
+        "situations.staff_lines": 2,
+        "situations.surfaced": 5,
+        "control.changed": 2,
+        "map.recomputed": 1,
+        "combat.occupation": 2,
+        "command.side_changed": 1,
+        "forces.stores_fell": 5,
+        "forces.stores_refilled": 35
+      },
+      "decisionPoints": 3,
+      "rejections": 0
+    },
+    {
+      "day": 81,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 31,
+        "messages.delivered": 123,
+        "messages.sent": 186,
+        "orders.relayed": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.opened": 1,
+        "plans.approved": 1,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 7,
+        "forces.stores_refilled": 34
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 82,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 134,
+        "messages.sent": 54,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 8,
+        "forces.stores_refilled": 32
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 83,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 88,
+        "messages.sent": 113,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "reports.pocket": 1,
+        "recruitment.mustered": 4,
+        "recruitment.men": 4,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.pocket_closed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "command.post_succeeded": 1,
+        "forces.stores_fell": 9,
+        "forces.stores_refilled": 37
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 84,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 120,
+        "messages.delivered": 133,
+        "messages.sent": 329,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "verbs.answered": 1,
+        "ladder.moved": 1,
+        "people.grievances_faded": 2,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "operations.stage": 1,
+        "politics.front_page": 3,
+        "politics.support": 2,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "command.temporary_post_opened": 1,
+        "forces.stores_fell": 14,
+        "forces.stores_low": 2,
+        "forces.stores_refilled": 32
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 85,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 4,
+        "messages.delivered": 111,
+        "messages.sent": 133,
+        "orders.responses_pruned": 1,
+        "orders.relayed": 1,
+        "seats.attention_spent": 1,
+        "verbs.answered": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.stage": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 10,
+        "forces.stores_refilled": 36
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 86,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 162,
+        "messages.sent": 53,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.ended": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "plans.goal_reached": 1,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 8,
+        "forces.stores_refilled": 37
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 87,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 5,
+        "messages.delivered": 136,
+        "messages.sent": 115,
+        "orders.relayed": 4,
+        "seats.choices": 1,
+        "seats.attention_spent": 3,
+        "verbs.answered": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "command.temporary_post_opened": 1,
+        "forces.stores_fell": 13,
+        "forces.stores_refilled": 32
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 88,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 163,
+        "messages.sent": 57,
+        "seats.choices": 1,
+        "people.resigned": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "control.changed": 4,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 9,
+        "forces.stores_refilled": 36
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 89,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 4,
+        "messages.delivered": 96,
+        "messages.sent": 112,
+        "orders.obeyed": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "reports.pocket": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.pocket_closed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 14,
+        "forces.stores_refilled": 31
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 90,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 4,
+        "messages.delivered": 123,
+        "messages.sent": 66,
+        "orders.relayed": 1,
+        "seats.choices": 2,
+        "seats.attention_spent": 8,
+        "verbs.answered": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 10,
+        "forces.stores_refilled": 35
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 91,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.mail_delay": 172,
+        "messages.delivered": 99,
+        "messages.sent": 464,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "people.grievances_faded": 2,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "politics.front_page": 3,
+        "politics.support": 2,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 7,
+        "forces.stores_refilled": 36
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 92,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 6,
+        "messages.delivered": 172,
+        "messages.sent": 84,
+        "orders.relayed": 2,
+        "seats.attention_spent": 1,
+        "verbs.answered": 2,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.opened": 1,
+        "plans.approved": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 11,
+        "forces.stores_refilled": 32
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 93,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 5,
+        "messages.delivered": 123,
+        "messages.sent": 118,
+        "orders.relayed": 1,
+        "seats.choices": 1,
+        "seats.attention_spent": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 5,
+        "control.changed": 5,
+        "map.recomputed": 1,
+        "combat.occupation": 5,
+        "forces.stores_fell": 7,
+        "forces.stores_refilled": 36
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 94,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 194,
+        "messages.sent": 55,
+        "verbs.answered": 1,
+        "movement.arrived": 3,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "operations.stage": 1,
+        "situations.surfaced": 1,
+        "control.changed": 6,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 13,
+        "forces.stores_refilled": 30
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 95,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 3,
+        "messages.delivered": 134,
+        "messages.sent": 119,
+        "orders.obeyed": 1,
+        "movement.arrived": 4,
+        "movement.join_blocked": 1,
+        "movement.joined": 1,
+        "movement.leg_started": 6,
+        "operations.stage": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "control.changed": 6,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 7,
+        "forces.stores_refilled": 33
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 96,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 137,
+        "messages.sent": 68,
+        "orders.relayed": 1,
+        "seats.choices": 2,
+        "seats.attention_spent": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 7,
+        "operations.ended": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "plans.goal_reached": 1,
+        "control.changed": 5,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 5,
+        "forces.stores_fell": 11,
+        "forces.stores_refilled": 23
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 97,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 5,
+        "messages.delivered": 90,
+        "messages.sent": 120,
+        "orders.responses_pruned": 1,
+        "seats.choices": 1,
+        "verbs.answered": 1,
+        "people.resigned": 1,
+        "movement.arrived": 5,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "reports.pocket": 1,
+        "control.changed": 6,
+        "control.threshold_crossed": 1,
+        "map.pocket_closed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 8,
+        "forces.stores_refilled": 23
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 98,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 126,
+        "messages.delivered": 144,
+        "messages.sent": 334,
+        "orders.obeyed": 1,
+        "seats.choices": 1,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "ladder.moved": 1,
+        "people.grievances_faded": 2,
+        "movement.arrived": 5,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 4,
+        "planner.candidates": 2,
+        "planner.searches": 2,
+        "plans.drafted": 2,
+        "plans.goal_set": 1,
+        "recruitment.called": 1,
+        "recruitment.answered": 1,
+        "politics.front_page": 3,
+        "politics.support": 2,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 6,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 9,
+        "forces.stores_refilled": 21
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 99,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 9,
+        "messages.delivered": 126,
+        "messages.sent": 146,
+        "orders.obeyed": 1,
+        "seats.choices": 3,
+        "verbs.answered": 3,
+        "movement.arrived": 3,
+        "movement.join_blocked": 1,
+        "movement.joined": 1,
+        "movement.leg_started": 4,
+        "operations.opened": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.chosen": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "plans.went_ahead": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.surfaced": 1,
+        "control.changed": 6,
+        "combat.occupation": 6,
+        "forces.stores_fell": 12,
+        "forces.stores_refilled": 18
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 100,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 176,
+        "messages.sent": 65,
+        "orders.obeyed": 1,
+        "seats.choices": 4,
+        "movement.arrived": 6,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "planner.term.supply": 1,
+        "plans.chosen": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "plans.went_ahead": 1,
+        "control.changed": 6,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 8,
+        "forces.stores_refilled": 22
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 101,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 5,
+        "messages.mail_delay": 34,
+        "messages.delivered": 163,
+        "messages.sent": 206,
+        "seats.choices": 3,
+        "verbs.answered": 2,
+        "movement.arrived": 7,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 6,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "control.changed": 6,
+        "combat.occupation": 6,
+        "forces.stores_fell": 10,
+        "forces.stores_refilled": 21
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 102,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 183,
+        "messages.sent": 64,
+        "seats.choices": 3,
+        "movement.arrived": 9,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 6,
+        "operations.stage": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "control.changed": 7,
+        "combat.occupation": 7,
+        "forces.stores_fell": 12,
+        "forces.stores_refilled": 19
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 103,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 3,
+        "messages.delivered": 108,
+        "messages.sent": 119,
+        "seats.choices": 1,
+        "movement.arrived": 7,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 8,
+        "operations.stage": 1,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "recruitment.mustered": 1,
+        "recruitment.men": 1,
+        "control.changed": 7,
+        "combat.occupation": 7,
+        "forces.stores_fell": 8,
+        "forces.stores_refilled": 22
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 104,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 139,
+        "messages.sent": 63,
+        "orders.relayed": 2,
+        "seats.choices": 1,
+        "movement.arrived": 8,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 6,
+        "operations.works": 1,
+        "plans.approved": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 7,
+        "combat.occupation": 7,
+        "forces.stores_fell": 10,
+        "forces.stores_refilled": 20
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 105,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.mail_delay": 124,
+        "messages.delivered": 92,
+        "messages.sent": 392,
+        "orders.relayed": 1,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "people.grievances_faded": 2,
+        "movement.arrived": 8,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 7,
+        "operations.works": 1,
+        "politics.front_page": 3,
+        "politics.support": 2,
+        "situations.surfaced": 1,
+        "control.changed": 6,
+        "combat.occupation": 6,
+        "forces.stores_fell": 12,
+        "forces.stores_refilled": 21
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 106,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 4,
+        "messages.delivered": 164,
+        "messages.sent": 91,
+        "verbs.answered": 3,
+        "movement.arrived": 5,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 4,
+        "operations.opened": 1,
+        "operations.works": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.approved": 1,
+        "plans.drafted": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "control.changed": 6,
+        "combat.occupation": 6,
+        "command.government_established": 1,
+        "forces.stores_fell": 9,
+        "forces.stores_refilled": 25
+      },
+      "decisionPoints": 3,
+      "rejections": 0
+    },
+    {
+      "day": 107,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 121,
+        "messages.sent": 117,
+        "seats.choices": 1,
+        "seats.attention_spent": 1,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "operations.works": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.surfaced": 1,
+        "control.changed": 6,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 14,
+        "forces.stores_refilled": 17
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 108,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 197,
+        "messages.sent": 62,
+        "seats.choices": 1,
+        "verbs.answered": 2,
+        "movement.arrived": 4,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 3,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.surfaced": 1,
+        "control.changed": 6,
+        "combat.occupation": 6,
+        "forces.stores_fell": 11,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 20
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 109,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 138,
+        "messages.sent": 118,
+        "orders.relayed": 2,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.approved": 1,
+        "plans.drafted": 1,
+        "situations.surfaced": 1,
+        "control.changed": 6,
+        "combat.occupation": 6,
+        "forces.stores_fell": 4,
+        "forces.stores_refilled": 14
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 110,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 143,
+        "messages.sent": 60,
+        "seats.choices": 2,
+        "movement.join_blocked": 1,
+        "operations.opened": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.chosen": 1,
+        "plans.drafted": 1,
+        "plans.went_ahead": 1,
+        "control.changed": 6,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 2,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 111,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 35,
+        "messages.delivered": 93,
+        "messages.sent": 197,
+        "seats.choices": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.stage": 1,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "control.changed": 6,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "forces.stores_fell": 2,
+        "forces.stores_refilled": 4
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 112,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 121,
+        "messages.delivered": 162,
+        "messages.sent": 339,
+        "orders.obeyed": 1,
+        "orders.relayed": 4,
+        "seats.choices": 1,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "people.grievances_faded": 2,
+        "movement.join_blocked": 1,
+        "operations.stage": 2,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.approved": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "politics.front_page": 3,
+        "politics.support": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 6,
+        "combat.occupation": 6,
+        "forces.stores_fell": 2,
+        "forces.stores_refilled": 4
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 113,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 7,
+        "messages.delivered": 125,
+        "messages.sent": 146,
+        "orders.obeyed": 1,
+        "seats.choices": 1,
+        "verbs.answered": 3,
+        "movement.join_blocked": 1,
+        "operations.ended": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "planner.term.supply": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.decided": 1,
+        "situations.options_changed": 1,
+        "situations.proposals": 1,
+        "situations.surfaced": 1,
+        "control.changed": 6,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 6,
+        "command.side_changed": 1,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 5
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 114,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 166,
+        "messages.sent": 64,
+        "seats.choices": 2,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "operations.stage": 1,
+        "plans.chosen": 1,
+        "plans.submitted": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 4,
+        "control.changed": 4,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 5
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 115,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 3,
+        "messages.delivered": 158,
+        "messages.sent": 115,
+        "orders.responses_pruned": 1,
+        "seats.choices": 1,
+        "verbs.answered": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.stage": 1,
+        "situations.surfaced": 2,
+        "control.changed": 5,
+        "map.recomputed": 1,
+        "combat.occupation": 5,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 5
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 116,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 176,
+        "messages.sent": 63,
+        "seats.attention_spent": 2,
+        "verbs.answered": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.ended": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "plans.goal_reached": 1,
+        "recruitment.called": 2,
+        "recruitment.answered": 2,
+        "situations.decided": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_refilled": 5
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 117,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 108,
+        "messages.sent": 134,
+        "seats.attention_spent": 10,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "recruitment.called": 10,
+        "recruitment.answered": 9,
+        "recruitment.refused": 1,
+        "situations.surfaced": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_refilled": 4
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 118,
+      "fires": {
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 132,
+        "messages.sent": 57,
+        "orders.responses_pruned": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 3,
+        "map.recomputed": 1,
+        "combat.occupation": 3,
+        "forces.stores_refilled": 4
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 119,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 123,
+        "messages.delivered": 99,
+        "messages.sent": 392,
+        "seats.attention_refilled": 1,
+        "people.grievances_faded": 2,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "politics.front_page": 3,
+        "politics.support": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 3,
+        "situations.surfaced": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_refilled": 4
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 120,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 179,
+        "messages.sent": 100,
+        "orders.responses_pruned": 1,
+        "seats.attention_spent": 6,
+        "verbs.answered": 4,
+        "movement.join_blocked": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "planner.term.time": 1,
+        "plans.drafted": 1,
+        "recruitment.called": 6,
+        "recruitment.answered": 6,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.surfaced": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_refilled": 4
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 121,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 50,
+        "messages.delivered": 128,
+        "messages.sent": 203,
+        "seats.choices": 1,
+        "movement.join_blocked": 1,
+        "operations.opened": 1,
+        "plans.chosen": 1,
+        "plans.went_ahead": 1,
+        "recruitment.mustered": 2,
+        "recruitment.men": 2,
+        "politics.met": 2,
+        "politics.opened": 2,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_refilled": 6
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 122,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 204,
+        "messages.sent": 68,
+        "seats.attention_spent": 2,
+        "movement.join_blocked": 1,
+        "operations.opened": 1,
+        "plans.approved": 1,
+        "recruitment.called": 2,
+        "recruitment.mustered": 9,
+        "recruitment.men": 5,
+        "politics.answered": 2,
+        "situations.decided": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "situations.staff_lines": 1,
+        "situations.surfaced": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 10
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 123,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 147,
+        "messages.sent": 116,
+        "movement.join_blocked": 1,
+        "situations.surfaced": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 8
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 124,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 137,
+        "messages.sent": 61,
+        "verbs.answered": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 2,
+        "operations.stage": 2,
+        "recruitment.answered": 1,
+        "recruitment.refused": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 8
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 125,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 86,
+        "messages.sent": 124,
+        "orders.responses_pruned": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "recruitment.mustered": 6,
+        "recruitment.men": 6,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 2,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 13
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 126,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 139,
+        "messages.delivered": 147,
+        "messages.sent": 332,
+        "seats.attention_refilled": 1,
+        "people.grievances_faded": 2,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "politics.front_page": 3,
+        "politics.support": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 2,
+        "forces.stores_refilled": 12
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 127,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 126,
+        "messages.sent": 146,
+        "verbs.answered": 4,
+        "movement.arrived": 2,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 1,
+        "control.changed": 4,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "command.side_changed": 1,
+        "forces.stores_fell": 3,
+        "forces.stores_refilled": 12
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 128,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 166,
+        "messages.sent": 60,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.stage": 1,
+        "situations.surfaced": 1,
+        "control.changed": 3,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 3,
+        "forces.stores_fell": 3,
+        "forces.stores_low": 1,
+        "forces.stores_refilled": 12
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 129,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 152,
+        "messages.sent": 121,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.stage": 1,
+        "recruitment.mustered": 1,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 2,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "command.side_changed": 2,
+        "forces.stores_fell": 3,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 130,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 181,
+        "messages.sent": 61,
+        "seats.attention_spent": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "operations.stage": 1,
+        "situations.surfaced": 2,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 3,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 131,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 39,
+        "messages.delivered": 98,
+        "messages.sent": 207,
+        "verbs.answered": 1,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.ended": 1,
+        "operations.stage": 3,
+        "plans.goal_reached": 1,
+        "control.changed": 4,
+        "combat.occupation": 4,
+        "forces.stores_fell": 3,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 132,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 145,
+        "messages.sent": 61,
+        "orders.responses_pruned": 1,
+        "movement.join_blocked": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.proposals": 4,
+        "control.changed": 4,
+        "control.threshold_crossed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 4,
+        "forces.stores_fell": 2,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 133,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 120,
+        "messages.delivered": 111,
+        "messages.sent": 400,
+        "orders.relay_objected": 1,
+        "orders.relayed": 1,
+        "seats.choices": 1,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "people.grievances_faded": 2,
+        "seats.initiative": 4,
+        "movement.arrived": 1,
+        "movement.join_blocked": 1,
+        "movement.leg_started": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "politics.front_page": 3,
+        "politics.support": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "situations.surfaced": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 2,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 2,
+      "rejections": 0
+    },
+    {
+      "day": 134,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 3,
+        "messages.delivered": 177,
+        "messages.sent": 93,
+        "orders.bypassed": 2,
+        "orders.obeyed": 1,
+        "seats.choices": 1,
+        "seats.attention_spent": 1,
+        "verbs.answered": 3,
+        "movement.join_blocked": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.surfaced": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 2,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 135,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 3,
+        "messages.delivered": 141,
+        "messages.sent": 125,
+        "seats.choices": 2,
+        "movement.join_blocked": 1,
+        "operations.ended": 1,
+        "operations.opened": 1,
+        "operations.stage": 1,
+        "operations.works": 2,
+        "plans.goal_reached": 1,
+        "plans.chosen": 1,
+        "plans.went_ahead": 1,
+        "control.changed": 3,
+        "combat.occupation": 3,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 136,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 183,
+        "messages.sent": 52,
+        "verbs.answered": 1,
+        "operations.ended": 1,
+        "operations.stage": 1,
+        "operations.works": 1,
+        "recruitment.disbanded": 24,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 137,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.delivered": 131,
+        "messages.sent": 104,
+        "orders.responses_pruned": 1,
+        "orders.obeyed": 1,
+        "seats.choices": 1,
+        "operations.ended": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 138,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 122,
+        "messages.sent": 52,
+        "seats.choices": 1,
+        "verbs.answered": 1,
+        "recruitment.disbanded": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 139,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 82,
+        "messages.sent": 101,
+        "orders.responses_pruned": 1,
+        "orders.obeyed": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 140,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.mail_delay": 136,
+        "messages.delivered": 136,
+        "messages.sent": 334,
+        "orders.obeyed": 1,
+        "orders.relayed": 2,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 1,
+        "ladder.moved": 2,
+        "people.grievances_faded": 4,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "recruitment.disbanded": 2,
+        "politics.front_page": 3,
+        "politics.support": 1,
+        "situations.fired": 1,
+        "situations.notice_reports": 1,
+        "situations.noticed": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 141,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 4,
+        "messages.mail_delay": 33,
+        "messages.delivered": 112,
+        "messages.sent": 195,
+        "orders.responses_pruned": 1,
+        "verbs.answered": 3,
+        "regions.self_emancipation": 139,
+        "regions.reached_lines": 12,
+        "situations.surfaced": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 9
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 142,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 166,
+        "messages.sent": 53,
+        "orders.responses_pruned": 1,
+        "orders.obeyed": 1,
+        "seats.attention_spent": 1,
+        "planner.candidates": 1,
+        "planner.searches": 1,
+        "planner.term.time": 1,
+        "plans.drafted": 1,
+        "plans.goal_set": 1,
+        "recruitment.called": 1,
+        "recruitment.answered": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 5
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 143,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 143,
+        "messages.sent": 101,
+        "seats.choices": 1,
+        "verbs.answered": 1,
+        "operations.opened": 1,
+        "plans.chosen": 1,
+        "plans.went_ahead": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 5
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 144,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 161,
+        "messages.sent": 52,
+        "reports.pocket": 1,
+        "control.changed": 2,
+        "control.threshold_crossed": 1,
+        "map.pocket_closed": 1,
+        "map.recomputed": 1,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1,
+        "forces.stores_refilled": 5
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 145,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 84,
+        "messages.sent": 101,
+        "verbs.answered": 1,
+        "control.changed": 2,
+        "combat.occupation": 2,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 146,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.delivered": 116,
+        "messages.sent": 50,
+        "orders.responses_pruned": 1,
+        "movement.leg_started": 1,
+        "operations.stage": 1,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "forces.stores_fell": 1
+      },
+      "decisionPoints": 1,
+      "rejections": 0
+    },
+    {
+      "day": 147,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 1,
+        "messages.mail_delay": 147,
+        "messages.delivered": 95,
+        "messages.sent": 385,
+        "seats.choices": 1,
+        "seats.battle_orders": 2,
+        "seats.attention_refilled": 1,
+        "seats.attention_spent": 2,
+        "ladder.moved": 2,
+        "people.grievances_faded": 4,
+        "recruitment.called": 2,
+        "recruitment.answered": 2,
+        "recruitment.mustered": 1,
+        "recruitment.men": 1,
+        "politics.front_page": 3,
+        "politics.support": 1,
+        "control.changed": 1,
+        "combat.occupation": 1,
+        "forces.stores_fell": 5,
+        "forces.stores_refilled": 7
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    },
+    {
+      "day": 148,
+      "fires": {
+        "knowledge.pruned_age": 1,
+        "knowledge.pruned_superseded": 1,
+        "messages.courier_delay": 2,
+        "messages.delivered": 154,
+        "messages.sent": 96,
+        "orders.responses_pruned": 1,
+        "seats.choices": 1,
+        "seats.battle_orders": 2,
+        "verbs.answered": 4,
+        "movement.arrived": 2,
+        "movement.leg_started": 1,
+        "reports.battle_dispatch": 8,
+        "reports.casualty_return": 2,
+        "regions.self_emancipation": 140,
+        "regions.reached_lines": 12,
+        "situations.fired": 2,
+        "situations.notice_reports": 2,
+        "situations.noticed": 2,
+        "situations.proposals": 1,
+        "control.changed": 1,
+        "combat.battle_closed": 1,
+        "combat.battle_day": 1,
+        "combat.battle_opened": 1,
+        "combat.captured": 1,
+        "combat.killed_wounded": 2,
+        "combat.missing": 2,
+        "combat.occupation": 1,
+        "combat.pursuit_chosen": 1,
+        "combat.withdrew": 1,
+        "command.side_changed": 1,
+        "forces.stores_fell": 11,
+        "forces.stores_refilled": 11
+      },
+      "decisionPoints": 0,
+      "rejections": 0
+    }
+  ],
+  "finalHash": "85fb100ede8acbc0ce17063843b8b1d457adf88adbda8e25af486b8288893148",
+  "finalDay": 148,
+  "logEntries": 225,
+  "rejections": 0,
+  "decisionPoints": 72,
+  "liveness": [
+    {
+      "mechanic": "combat.battle_closed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.battle_day",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "combat.battle_opened",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.captured",
+      "fires": 1,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.flank_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.general_hit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.killed_wounded",
+      "fires": 2,
+      "magnitude": 317
+    },
+    {
+      "mechanic": "combat.missing",
+      "fires": 2,
+      "magnitude": 52
+    },
+    {
+      "mechanic": "combat.occupation",
+      "fires": 346,
+      "magnitude": 8107
+    },
+    {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.routed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 12,
+      "magnitude": 12
+    },
+    {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "control.changed",
+      "fires": 348,
+      "magnitude": 10107
+    },
+    {
+      "mechanic": "control.threshold_crossed",
+      "fires": 27,
+      "magnitude": 27
+    },
+    {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "forces.stores_fell",
+      "fires": 525,
+      "magnitude": 516119
+    },
+    {
+      "mechanic": "forces.stores_low",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2088,
+      "magnitude": 2061575
+    },
+    {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 104,
+      "magnitude": 1479
+    },
+    {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 14431
+    },
+    {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "map.pocket_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "map.pocket_relieved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "map.recomputed",
+      "fires": 43,
+      "magnitude": 49
+    },
+    {
+      "mechanic": "messages.courier_delay",
+      "fires": 151,
+      "magnitude": 151
+    },
+    {
+      "mechanic": "messages.delivered",
+      "fires": 16776,
+      "magnitude": 16776
+    },
+    {
+      "mechanic": "messages.mail_delay",
+      "fires": 2979,
+      "magnitude": 2979
+    },
+    {
+      "mechanic": "messages.sent",
+      "fires": 17561,
+      "magnitude": 17561
+    },
+    {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "movement.arrived",
+      "fires": 206,
+      "magnitude": 206
+    },
+    {
+      "mechanic": "movement.join_blocked",
+      "fires": 70,
+      "magnitude": 70
+    },
+    {
+      "mechanic": "movement.joined",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "movement.leg_started",
+      "fires": 193,
+      "magnitude": 193
+    },
+    {
+      "mechanic": "operations.ended",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.opened",
+      "fires": 11,
+      "magnitude": 11
+    },
+    {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.stage",
+      "fires": 36,
+      "magnitude": 36
+    },
+    {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.works",
+      "fires": 16,
+      "magnitude": 800
+    },
+    {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.obeyed",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "orders.relayed",
+      "fires": 30,
+      "magnitude": 30
+    },
+    {
+      "mechanic": "orders.responses_pruned",
+      "fires": 18,
+      "magnitude": 38
+    },
+    {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.candidates",
+      "fires": 20,
+      "magnitude": 28
+    },
+    {
+      "mechanic": "planner.searches",
+      "fires": 20,
+      "magnitude": 74
+    },
+    {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "planner.term.time",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "plans.approved",
+      "fires": 8,
+      "magnitude": 8
+    },
+    {
+      "mechanic": "plans.chosen",
+      "fires": 16,
+      "magnitude": 16
+    },
+    {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.drafted",
+      "fires": 20,
+      "magnitude": 20
+    },
+    {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "fires": 7,
+      "magnitude": 7
+    },
+    {
+      "mechanic": "plans.goal_set",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.submitted",
+      "fires": 9,
+      "magnitude": 9
+    },
+    {
+      "mechanic": "plans.went_ahead",
+      "fires": 7,
+      "magnitude": 7
+    },
+    {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.support",
+      "fires": 49,
+      "magnitude": 49
+    },
+    {
+      "mechanic": "recruitment.answered",
+      "fires": 88,
+      "magnitude": 88
+    },
+    {
+      "mechanic": "recruitment.called",
+      "fires": 97,
+      "magnitude": 97
+    },
+    {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.men",
+      "fires": 67,
+      "magnitude": 226080
+    },
+    {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.mustered",
+      "fires": 72,
+      "magnitude": 72
+    },
+    {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "regions.reached_lines",
+      "fires": 260,
+      "magnitude": 260
+    },
+    {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3069,
+      "magnitude": 3069
+    },
+    {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "reports.casualty_return",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "reports.commander_lost",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.governor_wire",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.pocket",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_spent",
+      "fires": 115,
+      "magnitude": 115
+    },
+    {
+      "mechanic": "seats.battle_orders",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "seats.choices",
+      "fires": 51,
+      "magnitude": 51
+    },
+    {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.initiative",
+      "fires": 12,
+      "magnitude": 12
+    },
+    {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.fired",
+      "fires": 89,
+      "magnitude": 89
+    },
+    {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.notice_reports",
+      "fires": 71,
+      "magnitude": 71
+    },
+    {
+      "mechanic": "situations.noticed",
+      "fires": 70,
+      "magnitude": 70
+    },
+    {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.answered",
+      "fires": 75,
+      "magnitude": 75
+    },
+    {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.consulted",
+      "fires": 16,
+      "magnitude": 16
+    },
+    {
+      "mechanic": "verbs.declined",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    }
+  ],
+  "replay": null,
+  "resume": null,
+  "timing": null
+}

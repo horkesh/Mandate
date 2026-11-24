@@ -1,0 +1,28 @@
+{
+  "day": 4,
+  "diffs": [
+    {
+      "path": "State.operationRecords.op:us_general_in_chief:4.opTasks",
+      "before": null,
+      "after": [
+        {
+          "otaskId": "default:main",
+          "otaskOperation": "op:us_general_in_chief:4",
+          "otaskIssuer": "scott_winfield",
+          "otaskPost": "us_general_in_chief",
+          "otaskBlocks": [
+            "fb_us_washington_regulars"
+          ],
+          "otaskDefault": true,
+          "otaskKind": "local_defence",
+          "otaskPurpose": "Execute the approved axis.",
+          "otaskScope": [
+            "washington"
+          ],
+          "otaskRelease": "operation_end"
+        }
+      ]
+    }
+  ],
+  "cause": "S148/S139 recordDefaultTasks: accepted task metadata absent from S150 ancestry. No S153 behavior change."
+}

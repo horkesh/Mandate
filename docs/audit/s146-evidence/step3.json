@@ -1,0 +1,190 @@
+{
+  "base": "77565d1749b3a9f320d419555b0d8aee38884f0c",
+  "step": "step3",
+  "timing": "serial Windows Node22.23.2, unprofiled; Linux CI is binding and not claimed",
+  "rows": [
+    {
+      "slot": "war",
+      "pair": 0,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 87.27640000000065,
+        "p95": 154.7608999999993,
+        "max": 220.6818000000003
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 48.57510000000002,
+        "p95": 88.58220000000074,
+        "max": 127.42989999999918
+      }
+    },
+    {
+      "slot": "war",
+      "pair": 1,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 85.33799999999974,
+        "p95": 154.90709999999854,
+        "max": 223.60270000000128
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 48.36149999999907,
+        "p95": 94.3135000000002,
+        "max": 130.70349999999962
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 0,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 88.86089999999967,
+        "p95": 153.76209999999992,
+        "max": 257.0648999999994
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 48.67629999999963,
+        "p95": 95.15899999999965,
+        "max": 119.20389999999861
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 1,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 92.11110000000008,
+        "p95": 152.82560000000012,
+        "max": 237.91439999999966
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 49.810199999999895,
+        "p95": 92.51419999999962,
+        "max": 131.04860000000008
+      }
+    }
+  ],
+  "medianPairedSavingMs": {
+    "war": 37.83890000000065,
+    "history": 41.242750000000115
+  },
+  "equality": {
+    "war": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-war.json",
+      "candidateCapture": "runs/s146/step3-daily-war.json",
+      "captureSHA256": "60122e47f1e449eebe7a0582fdc0cfd60d835d01404a4252d0edcc0e4cdd635b"
+    },
+    "history": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-history.json",
+      "candidateCapture": "runs/s146/step3-daily-history.json",
+      "captureSHA256": "70ac56aee52991653b93c3cb4403238aba999eaf72969b5dcc87e557e393f159"
+    },
+    "testbed": {
+      "dailyHashes": 120,
+      "initialHash": "5b9021057cfe396c806ac818666d72794b947be6d9d1b32e2fc91ecacd24c94c",
+      "finalHash": "109ded3c1d4532b7907b1698d4f109b97297fa7ee8978129b5f1aceec9b17c63",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-testbed.json",
+      "candidateCapture": "runs/s146/step3-daily-testbed.json",
+      "captureSHA256": "8ca4424c6c8a0fb536d5749d3bc6507ae3914f74b37c0428c3001ffd86e6c5a9"
+    }
+  },
+  "preservation": {
+    "originalTrackedPaths": 3412,
+    "missing": [],
+    "modifiedStartingPaths": [
+      "packages/kernel/src/seats/local-actions.ts",
+      "packages/kernel/src/seats/onward-assignments.ts",
+      "packages/kernel/src/seats/requests.ts",
+      "packages/kernel/src/tick/mandates.ts",
+      "packages/kernel/src/tick/tick.ts",
+      "packages/kernel/src/view/view.ts",
+      "packages/kernel/test/s123-mandates.test.ts",
+      "tools/rules/projection-derivations.json"
+    ],
+    "allPackInputsIdentical": true
+  },
+  "rawEvidence": "runs/s146/step3-*.log and *.exit.json",
+  "validationPlan": "runs/s146/validation-plan.json",
+  "incrementalAgainst99955788": [
+    {
+      "slot": "war",
+      "parent": {
+        "unit": "ms",
+        "days": 148,
+        "median": 55.65700000000015,
+        "p95": 101.90340000000015,
+        "max": 172.21359999999913
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 48.10870000000068,
+        "p95": 87.90210000000025,
+        "max": 122.9932000000008
+      },
+      "savingMs": 7.548299999999472
+    },
+    {
+      "slot": "history",
+      "parent": {
+        "unit": "ms",
+        "days": 148,
+        "median": 54.61579999999958,
+        "p95": 101.60239999999976,
+        "max": 168.11279999999897
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 49.20310000000063,
+        "p95": 94.63349999999991,
+        "max": 132.2587999999996
+      },
+      "savingMs": 5.412699999998949
+    }
+  ],
+  "harnessCorrection": {
+    "failure": "S85 helper was decoded with the Windows default encoding, leaving a mojibake UTF-8 BOM in copied Python source",
+    "correction": "read source helper explicitly as utf-8-sig; snapshot and three-day parent smoke now pass",
+    "response": "interrupted only the newly started S146 measurement process; no other process stopped",
+    "reuse": "completed step3-timed-war-0-base sample and its exit0 receipt retained and reused; unfinished candidate will run once after corrected prerequisites",
+    "simulationSourceChanged": false
+  }
+}

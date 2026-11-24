@@ -1,0 +1,10 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import { checkpointScore, type Observations } from '../../packages/cli/src/history-run.ts';
+const candidate=JSON.parse(readFileSync('runs/s148/candidate.json','utf8'));
+const baseline=JSON.parse(readFileSync('runs/s148/baseline-observed.json','utf8'));
+const h=candidate.history[0];
+const restore=(raw:any):Observations=>({...raw,battles:new Map(raw.battles),operations:new Map(raw.operations),snapshots:new Map(raw.snapshots),notHeld:new Map(raw.notHeld)});
+const before=restore(baseline.observations),after=restore(h.observations);
+const rows=h.checkpoints.checkpoints.map((band:any)=>({band,before:checkpointScore(band,before,h.startDate),after:checkpointScore(band,after,h.startDate)}));
+writeFileSync('docs/audit/s148-evidence/checkpoint-bands.json',JSON.stringify(rows,null,2)+'\n');
+console.log(JSON.stringify({rows:rows.length,verdicts:rows.reduce((a:any,r:any)=>(a[r.after.verdict]=(a[r.after.verdict]??0)+1,a),{})}));

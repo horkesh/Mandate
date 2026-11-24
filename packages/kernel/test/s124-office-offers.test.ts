@@ -1,4 +1,4 @@
-import { decodeSave, encodeSave } from '../src/serialize/save.ts';
+import { CURRENT_SAVE_SCHEMA, decodeSave, encodeSave } from '../src/serialize/save.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
 import { expect, it } from 'vitest';
 import { fresh } from './support/s25-fixture.ts';
@@ -194,7 +194,7 @@ it('rejects altered terms on the sourced office instrument',()=>{
 
 it('saves offers, their original reservations and pending journeys; migration from schema4 invents none',()=>{
  const g=offered();const encoded=encodeSave({worldHash:canonicalHash('fixture'),state:g.state,log:[{day:1,seat:'seat:b_gen',command:{cmd:'recall_offer',offer:g.id}}]});
- const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(8);
+ const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(CURRENT_SAVE_SCHEMA);
  expect(decoded.state).toEqual(g.state);
  const old=JSON.parse(encodeSave({worldHash:canonicalHash('fixture'),state:fixture().state,log:[]}));old.schemaVersion=4;
  const migrated=decodeSave(JSON.stringify(old));expect(migrated.state).toEqual(old.state);expect(migrated.logHash).toBe(old.logHash);

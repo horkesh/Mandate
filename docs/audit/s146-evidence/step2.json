@@ -1,0 +1,140 @@
+{
+  "base": "77565d1749b3a9f320d419555b0d8aee38884f0c",
+  "step": "step2",
+  "timing": "serial Windows Node22.23.2, unprofiled; Linux CI is binding and not claimed",
+  "rows": [
+    {
+      "slot": "war",
+      "pair": 0,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 84.02219999999943,
+        "p95": 151.14869999999974,
+        "max": 222.15990000000056
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 54.641999999999825,
+        "p95": 100.37139999999908,
+        "max": 163.7579999999998
+      }
+    },
+    {
+      "slot": "war",
+      "pair": 1,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 86.10239999999976,
+        "p95": 159.96819999999934,
+        "max": 231.74319999999898
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 55.88769999999931,
+        "p95": 103.13409999999931,
+        "max": 166.634399999999
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 0,
+      "order": [
+        ".",
+        "base"
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 90.58349999999973,
+        "p95": 155.80719999999928,
+        "max": 253.95830000000024
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 55.231800000000476,
+        "p95": 106.52659999999923,
+        "max": 158.28759999999966
+      }
+    },
+    {
+      "slot": "history",
+      "pair": 1,
+      "order": [
+        "base",
+        "."
+      ],
+      "base": {
+        "unit": "ms",
+        "days": 148,
+        "median": 88.23469999999998,
+        "p95": 155.20379999999932,
+        "max": 225.26609999999891
+      },
+      "candidate": {
+        "unit": "ms",
+        "days": 148,
+        "median": 55.34130000000005,
+        "p95": 105.85719999999947,
+        "max": 167.05379999999968
+      }
+    }
+  ],
+  "medianPairedSavingMs": {
+    "war": 29.797450000000026,
+    "history": 34.12254999999959
+  },
+  "equality": {
+    "war": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-war.json",
+      "candidateCapture": "runs/s146/step2-daily-war.json",
+      "captureSHA256": "d76d7076549a1f5a2ae052d32ace3698d0b9423aa936509ed533c0eeea49c6c8"
+    },
+    "history": {
+      "dailyHashes": 148,
+      "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+      "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-history.json",
+      "candidateCapture": "runs/s146/step2-daily-history.json",
+      "captureSHA256": "dea2936c30213bb93682641c6d96a4e432d7f0885a600c017d864b7e388ac011"
+    },
+    "testbed": {
+      "dailyHashes": 120,
+      "initialHash": "5b9021057cfe396c806ac818666d72794b947be6d9d1b32e2fc91ecacd24c94c",
+      "finalHash": "109ded3c1d4532b7907b1698d4f109b97297fa7ee8978129b5f1aceec9b17c63",
+      "summaryCountersScoresExact": true,
+      "baseCapture": "runs/s146/base-daily-testbed.json",
+      "candidateCapture": "runs/s146/step2-daily-testbed.json",
+      "captureSHA256": "e8b9fdbb1245c093637d605a832b3ee58aa4c8bd659b28e45a54954fe29a5ef5"
+    }
+  },
+  "preservation": {
+    "originalTrackedPaths": 3412,
+    "missing": [],
+    "modifiedStartingPaths": [
+      "packages/kernel/src/seats/local-actions.ts",
+      "packages/kernel/test/s123-mandates.test.ts",
+      "tools/rules/projection-derivations.json"
+    ],
+    "allPackInputsIdentical": true
+  },
+  "rawEvidence": "runs/s146/step2-*.log and *.exit.json",
+  "validationPlan": "runs/s146/validation-plan.json"
+}
