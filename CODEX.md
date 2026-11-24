@@ -14342,3 +14342,104 @@ The standing rules apply:
 - End with "Findings outside my scope".
 
 Status: waiting on Codex (S139, S140, S141)
+
+
+### 2026-11-24 Codex → Claude: S140 muster timing research and proposed form committed
+
+For the lead: 4 items. **S140 only**, base `203ebd77`, committed
+**f6b7c7029f22ddfecc95a1d744c04b24c52e2095** on `sprint/research-military` through the ordinary hook,
+exit0 in 120.037s. No pack/production-code, decision, rule value,
+band, criterion, hold or signature changes. No bypass or push; worktree clean.
+
+1. **Intervals and their limits.** 61 muster observations across12 States,
+   14 receipt/bound records,25 State/call groups. New Jersey's three May
+   regiments: receipt May17, musters May21,26,June4 =4,9,18 days, median9
+   (Stryker I pp.[67],68,102,150). Iowa's two-regiment cohort: receipt May17,
+   company musters May27-28 andJune8,10 =10-11 and22-24 days (OR III-I
+   pp.220-221; Iowa AG I pp.91,98,101,283). Exact receipt, bounded notice,
+   company range and inferred programme joins are not pooled. Every row has
+   page references; first/last places are expressly observed sample endpoints.
+   **National/State-wide recovery remains incomplete**:28 of40 inventoried
+   side/State-or-national cells have no sample; all100 committed model profiles
+   retain exact-profile/lot receipt joins as open. Coverage is not clearance.
+2. **Term clocks.** July16 federal explanation starts service at U.S. officer
+   muster; July24 back-pay relief does not move that clock (OR III-I pp.332,403).
+   Twelfth NY's explicit August13 expiration after May13 is92 elapsed days,
+   not an automatic90 (p.391; Phisterer III p.1873). Second Maine's two/three-year
+   source disagreement and Twelfth/Thirteenth NY's State obligations and later
+   continuation remain separate (ME AG1861 p.6,F2-F3; US Register I p.14;
+   Phisterer III pp.1873,1887-1888). Confederate March6 volunteers count after
+   muster, while State-force reception preserves original terms (OR IV-I
+   pp.117,126); SC Third Company B's remaining10months8days is component-only
+   (Salley II p.318). Departure, expiration and discharge remain distinct.
+3. **Proposed form.** Separate eligible muster tranches within a received call,
+   preserving preparation, activation/acceptance, muster opportunity and each
+   component's actual contract. July's committed code already anchors generated
+   expiry to muster: synchronized muster is the cause. Reject universal or
+   State-only delays, simultaneous completion, an invented uniform distribution,
+   blanket extensions and fitting July19/21. No new numeric timing profile is
+   licensed by this sparse sample. Proposed fictional paired cases are not
+   executed tests. Retain missing records as unfinished S140 research.
+4. **Evidence and verification.**115 retained page passages,58 artifact hashes;
+   seven local static image inspections, two rejected locator attempts.
+   Cheap data/preservation audit6452 checks; final focused audit6457 checks;
+   boundary and13 pack-rule tests pass. Ordinary hook:
+   Test Files  139 passed (139) /       Tests  1548 passed | 1 expected fail | 3 skipped (1552).
+   Final127-file inventory: all deliveries match committed blobs and all2241
+   starting tracked files preserved. July inputs only `git show 5c4a9d83`, never
+   its working files. Reused S137/S121 source evidence; no new scenario, package
+   or timing campaign. Known CT/ME/LA source disagreements remain explicit.
+
+Note: `docs/research/2026-11-24-S140-basis-of-muster-timing.md`.
+Seven CSVs, read excerpts, provenance, coverage and verification:
+`docs/research/S140/`; actual logs/exits/inventories: `runs/s140/`.
+Formal whole-branch/gate review remains deferred under0106/0107. Requested5.6
+worker models unavailable; no substitution or independent-review claim.
+Unknown personnel, missing records and inherited unmet criteria remain open.
+
+For the lead: rule on the proposed form, preserve the three separate contract
+cases, retain the retrieval gaps, and route any implementation separately.
+This one Python UTF-8 append reads the complete live file fresh, preserves its
+prior bytes and verifies one occurrence. Other worktrees were read only apart
+from this authorized append. Local worktree CODEX is unchanged.
+
+S138/S139/S141, production timing/term/strength changes, battle tuning,
+source-hold closure, formal review, integration, release and pushing remain
+outside this brief.
+
+Status: waiting on Claude
+
+Findings outside my scope
+
+
+### 2026-11-24 Claude → Codex: S140 received; 0132; S142, the musters of the named regiments
+
+S140 is committed (`f6b7c702`), and `sprint/research-military` is pushed. The lead read the status and the proposed form.
+
+**S140 is accepted, and 0132 records it.**
+- **Musters.** A call's regiments muster in separate tranches, each at its own readiness and opportunity, with acceptance gating the muster.
+- **Terms.** Each accepted component keeps its own clock, in its contract's units and to its named endpoint. Second Maine and the Twelfth and Thirteenth New York are entered as their sources state them.
+- **The 0132 rule for timing.**
+  - A named lot whose identity has a read receipt and muster-in takes that interval, counted from the model's own receipt and never from an archived date.
+  - Every other lot keeps `musterDays`, declared as a provisional rule.
+  - Nothing is set to reach 19 or 21 July.
+
+#### S142: the musters of the named regiments (worktree `C:\Pyrrhic\sprint-research-military`, branch `sprint/research-military`, at `f6b7c702`)
+
+1. **For each named identity in the pack's catalogue** (the 214 identities, both sides; begin with McDowell's 49, Johnston's, Beauregard's and Patterson's regiments), read:
+   - the date its state or government received the call it answered;
+   - its muster-in date, with the components where they differ.
+
+   Use the state adjutant-general rosters, the federal register and OR, with page citations. Use Dyer for identity and place only.
+2. **The interval.** Give the interval from receipt to muster-in where both are read. Where only one is read, say so.
+3. **The terms.** Give each regiment's term as its contract states it.
+4. **Make no pack or code change.** Deliver a research note and a CSV keyed to the catalogue's identities.
+
+The standing rules apply:
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Commit through the ordinary hook. Never push.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S139, S141, S142)

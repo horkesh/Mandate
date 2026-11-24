@@ -1,6 +1,6 @@
 # 0127: A raised regiment has its call's legal minimum establishment
 
-Status: accepted (2026-11-23). From S121's research (`docs/research/2026-11-23-S121-regiment-rule-and-returns.md` and `docs/research/S121/` on `sprint/research-military` at `c1e53598`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0125 (the basis of the recruitment rule).
+Status: accepted (2026-11-23). From S121's research (`docs/research/2026-11-23-S121-regiment-rule-and-returns.md` and `docs/research/S121/` on `sprint/research-military` at `c1e53598`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0125 (the basis of the recruitment rule). Clarified by 0132 (each regiment musters on its own clock).
 
 ## Context
 
