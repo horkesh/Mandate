@@ -1,0 +1,526 @@
+{
+  "passed": 766,
+  "failed": 0,
+  "base": "6cd1e3dc648735832f91eb96497950c0af369372",
+  "july_commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "roster_regiments": 49,
+  "service_cases": 14,
+  "readings": 95,
+  "packet_files": 102,
+  "inventory": [
+    {
+      "path": "docs/research/S137/capture-reuse.json",
+      "sha256": "8c1f6cebdc2037321a5b48d35a5fad681e0dbefd46410d0fc8d078245d3a0243",
+      "bytes": 22964
+    },
+    {
+      "path": "docs/research/S137/committed-inputs.json",
+      "sha256": "b2683f8ba42d01f3fee0e7e20875b862f83c394ca2a0acbf13efc0d343431e2c",
+      "bytes": 3415
+    },
+    {
+      "path": "docs/research/S137/expiring-regiments.csv",
+      "sha256": "0cf8b6234d83f17fc8454360d3af2ae69fbe9a3b00d999014d3ebb89f6fcbce0",
+      "bytes": 10239
+    },
+    {
+      "path": "docs/research/S137/mcdowell-departures.csv",
+      "sha256": "0de810d57122e1d9e07718b7e71c452543bb4f4fc11e31ae0e8be5f102bf4488",
+      "bytes": 1015
+    },
+    {
+      "path": "docs/research/S137/mcdowell-roster.csv",
+      "sha256": "b3c02c71ad92384b6726e5e91cc1035ffaa7694ad064ea301d6a5cf41bb491ea",
+      "bytes": 24672
+    },
+    {
+      "path": "docs/research/S137/model-call-chain.csv",
+      "sha256": "8ce008e6584bab08bab50ef04330587f8237d48a710795934724028d81aecc16",
+      "bytes": 7510
+    },
+    {
+      "path": "docs/research/S137/read/CT-Catalogue-1864-opening.txt",
+      "sha256": "a47052f2c1471864c92cb5a491ae12a7c03611dad1dd5c7ed690ba1e6ede4c41",
+      "bytes": 2592
+    },
+    {
+      "path": "docs/research/S137/read/CT-Catalogue-1864-p4.txt",
+      "sha256": "4bfa2bc05ef8b2b079b396c3583af573431095724dfae6aa855a2fee698508e4",
+      "bytes": 1679
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ct_1_infantry.txt",
+      "sha256": "a8bc3f8ed6ebbfeb9fbc5a98b8a00f6c047bd9e420646c2da5a777f1f210244b",
+      "bytes": 581
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ct_2_infantry.txt",
+      "sha256": "fe85a9e7d265321abcbd6dab8fdb19e516b0194e9d897693a3a94bb9c2307488",
+      "bytes": 567
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ct_3_infantry.txt",
+      "sha256": "c802e24a0899456dbf7190a9b94e07150cbe744955445dc166dbbca18d4009b5",
+      "bytes": 607
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ma_11_infantry.txt",
+      "sha256": "06fdcc28ed6996a1e827ae06d83b17be3603ee10f37a49d82c0df66dcc2b7371",
+      "bytes": 372
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ma_1_infantry.txt",
+      "sha256": "ddd5cff20d5453c2c82fdbfbdb7998d3d17664e674e0bdbca43e2f1a3f72b2ba",
+      "bytes": 497
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ma_5_militia_infantry.txt",
+      "sha256": "b781c899682df9764069223cef41aadf124620bdd0faf0b24b25d9487f40f9d2",
+      "bytes": 597
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-me_2_infantry.txt",
+      "sha256": "97412f19fac6d1006977ca87feb22b6e4efaeafa4be3693e387e7a47540dfd1b",
+      "bytes": 550
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-me_3_infantry.txt",
+      "sha256": "c8075cf1c4730563fa45664c21527d1eb25fcd1ed5c212f5e0c091d981682099",
+      "bytes": 380
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-me_4_infantry.txt",
+      "sha256": "1fac46453b8ee6c533c13285f775c524186ebad1568874476f2810acb989da29",
+      "bytes": 388
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-me_5_infantry.txt",
+      "sha256": "54205dc877eb6080f38bf5f3a27eb8ba568ee52b65330267bb89661218cceb89",
+      "bytes": 307
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-mi_1_3m_infantry.txt",
+      "sha256": "e00d8cc84b4bb1d5966b7cae90988ff2ff92767d16d8fbefff7ac0558db88857",
+      "bytes": 567
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-mi_2_infantry.txt",
+      "sha256": "6e86d00fecbebe361b67e5769772f5063e98ff89c3b85d68683304d2e4dedd9d",
+      "bytes": 421
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-mi_3_infantry.txt",
+      "sha256": "b7df0502928f3eb040a442c2c11017e0e7db33852dcb5ce97781eabf3105b42d",
+      "bytes": 465
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-mi_4_infantry.txt",
+      "sha256": "6b0d070d464b69c492c17f70ccdeb38bddee35362ba14303ff50a2a105d8c3e4",
+      "bytes": 386
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-mn_1_infantry.txt",
+      "sha256": "53c44c35bcb334bef31137d2a5c2e167c61b2f9136f6f5eea1462839d850bfcb",
+      "bytes": 873
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nh_2_infantry.txt",
+      "sha256": "8a43b15d84614082ebf39f4575129bf00d68f80d6ae8faeacc5fa232dda8a8e0",
+      "bytes": 389
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nj_1_3m_infantry.txt",
+      "sha256": "2b53e124314bfdd588d8b66649895980ec04802ed7c3511a2b9a39073677a863",
+      "bytes": 660
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nj_1_3y_infantry.txt",
+      "sha256": "d044b5d160fd61565d65c1c98a79715f1f57e7122cda06e72542719c9ee753d2",
+      "bytes": 413
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nj_2_3m_infantry.txt",
+      "sha256": "8abb94bd7b700462690afa06bbf7507f62670c65a4d68252bdac93fcafc40e51",
+      "bytes": 752
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nj_2_3y_infantry.txt",
+      "sha256": "56b31c53b9fdfd2d5e8f1f449288e2f33815d39752e98ed51e5d427d79969cc7",
+      "bytes": 418
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nj_3_3m_infantry.txt",
+      "sha256": "f18cd4a18ac673c0827033ef2229abbc5a42c87c5483cccf734893332ea1d3a5",
+      "bytes": 666
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nj_3_3y_infantry.txt",
+      "sha256": "93f44900e4506366a43a455d6abc17ff373f93c59199199cc83357e7b200fd4a",
+      "bytes": 413
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-nj_4_3m_infantry.txt",
+      "sha256": "9f33396568623437ba15aeaa53457e84c4edd1977dc55cc2727718b345631889",
+      "bytes": 708
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_11_infantry.txt",
+      "sha256": "a378a147f140332c537c6ecefda4f4efe6b1ed330d435476f98b439a382c722e",
+      "bytes": 686
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_12_infantry.txt",
+      "sha256": "058fe3448cb944abd85b126a34169f82cb61c6490636c24c159dcba1a9679828",
+      "bytes": 590
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_13_infantry.txt",
+      "sha256": "b610bf7641ebe0541a5bd95956b6d4f40f7f94cbff33da86d7b6d396f1919634",
+      "bytes": 528
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_14_militia_infantry.txt",
+      "sha256": "70d207add93750c5daa316189d3a34fc1188e11fe68757eccb7db3cfb35f82b7",
+      "bytes": 527
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_16_infantry.txt",
+      "sha256": "43af0554df683e4f52f99020ce0505f499c59aef301d355e11154a76966a0846",
+      "bytes": 392
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_18_infantry.txt",
+      "sha256": "576fe88dc2e1fbcf0b1f39b87fe6ddfaa36314662fc6a39a5c94b2a845263d11",
+      "bytes": 380
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_27_infantry.txt",
+      "sha256": "8925e45826232cee2c4534280c3d33550056a0ccf3bc818bc829e6898dcd8459",
+      "bytes": 415
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_29_infantry.txt",
+      "sha256": "0a84259749b8bbddb84ed3d7cce67d505b001715e66ad1b498702f8017869124",
+      "bytes": 422
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_2_militia_infantry.txt",
+      "sha256": "1ae6d38a0786134564c8651d8f9a147e1f8d0778bb3f704fec1ee2fdc065d919",
+      "bytes": 422
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_31_infantry.txt",
+      "sha256": "c2f61e8d26a0ec9901570c262feb4c11e1cf630c44011eb56fb2f45ee212cd7e",
+      "bytes": 427
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_32_infantry.txt",
+      "sha256": "55d3d2b8adb66e51d52e753c65f029687f8b3c73c2a5a23ee70ab76def002485",
+      "bytes": 416
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_38_infantry.txt",
+      "sha256": "f985530b92907ec644007427c681a6172399c9d373749953c3259f435f4add81",
+      "bytes": 420
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_39_infantry.txt",
+      "sha256": "3a3c5910ac2274ecfd8b1c4eaa3869e4cbc3f1bf5e547393a62993401d4ece79",
+      "bytes": 416
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_41_infantry.txt",
+      "sha256": "8147fbf8529021335bc18c3be1b1e4603e185c8a6d12fcca2135db5864d22812",
+      "bytes": 512
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_69_militia_infantry.txt",
+      "sha256": "2081cafbbd90aed983d3d4482e1d5cb30539858de283921be911b971f253bc88",
+      "bytes": 669
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_71_militia_infantry.txt",
+      "sha256": "cd07207c1d0a7f3c2bd6fb25884fc85be0ae377ca9b0082b1493e8ddb0eb51df",
+      "bytes": 1018
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_79_infantry.txt",
+      "sha256": "4784c3ad551531e52d9af99457e02558467ad0ae3dd34ae2858435ce4f23f440",
+      "bytes": 538
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_8_infantry.txt",
+      "sha256": "58f09264dfb3215c27ac807a96b4f2f879de1992b7277ed508a174fc069513b5",
+      "bytes": 407
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ny_8_militia_infantry.txt",
+      "sha256": "d2b117498b2750015fceca1bcfbb53372d9c6823dbfb1eb051c35e2620cc0c8b",
+      "bytes": 478
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-oh_1_3m_infantry.txt",
+      "sha256": "1438881e84a8df7bc53fa8e9e7ef97a5041ddc28913d9321f8f7b1e1848ac037",
+      "bytes": 572
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-oh_2_3m_infantry.txt",
+      "sha256": "541ffaf9401ed7f9fba760f587116f623066eedc15418bca43bba7f5ca4395d0",
+      "bytes": 433
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-pa_27_infantry.txt",
+      "sha256": "f9d6dc4544f476e02ce5d330994a710ed2f417f71ada3dc4b141babdb91a0060",
+      "bytes": 561
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ri_1_infantry.txt",
+      "sha256": "f8d8926fd5379b234ab44dcbd5812bdff90b2c75a86533e9e2191666c7d36c4d",
+      "bytes": 542
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-ri_2_infantry.txt",
+      "sha256": "b7d99baa678ae2024ac2f7db278656e473857ca104f6e9322bc11c17af8aeeb8",
+      "bytes": 343
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-vt_2_infantry.txt",
+      "sha256": "513967d6ea9cefe039a625c7a95bbc1a6da616d534e5965ac426c63adef2624e",
+      "bytes": 378
+    },
+    {
+      "path": "docs/research/S137/read/Dyer-wi_2_infantry.txt",
+      "sha256": "62b85e4b611c260c07937cbf38fed692ff2a8183ff0360c4c8e0936e625ab56f",
+      "bytes": 368
+    },
+    {
+      "path": "docs/research/S137/read/MA-AG-1861-p11.txt",
+      "sha256": "5180921f2596a06210a3bf88cee6623555f86b8af281f7dedd2d646c211be371",
+      "bytes": 2468
+    },
+    {
+      "path": "docs/research/S137/read/MA-AG-1861-p13.txt",
+      "sha256": "2c1758b4e456fa0c9dc1b9427a207d297f406eaccac374c4f4aa1c5b22a0856d",
+      "bytes": 2108
+    },
+    {
+      "path": "docs/research/S137/read/MA-AG-1861-p14.txt",
+      "sha256": "02e592faae5afd231d5f634095e0d8a5f930644619970b8c6696e0287c90575b",
+      "bytes": 2517
+    },
+    {
+      "path": "docs/research/S137/read/MA-AG-1861-p7.txt",
+      "sha256": "0c854bd12e1e4270a4118cb2f20ab9b14d288cb3d48f19b98573aa3fede36ea4",
+      "bytes": 2597
+    },
+    {
+      "path": "docs/research/S137/read/MA-AG-1861-p8.txt",
+      "sha256": "fe2ba57c1e13d9ccecf8961990d740d47c20e5407d5dc0ed2af78fe9423ef616",
+      "bytes": 2625
+    },
+    {
+      "path": "docs/research/S137/read/MA-Record-I-p19.txt",
+      "sha256": "b46c998964d4a0bf1fad18eab4c5a0eb55e8ce5a53c2e03ab686681516c62eae",
+      "bytes": 5354
+    },
+    {
+      "path": "docs/research/S137/read/ME-AG-1861-F2-F3.txt",
+      "sha256": "f94f1753990af5865e0ee48782265fa97715616fb8624bd7dc6d3bba6df7edf7",
+      "bytes": 6651
+    },
+    {
+      "path": "docs/research/S137/read/ME-AG-1861-p6.txt",
+      "sha256": "8ef6c45a5b6f1709cb8af2ed54aef5fe8794b6b9f6c6bda6068be175e6e8a722",
+      "bytes": 2636
+    },
+    {
+      "path": "docs/research/S137/read/ME-AG-1861-p7.txt",
+      "sha256": "aa118da9a62065447d7533575bf1e76a11f1d53813d47851245b4d597a7dd102",
+      "bytes": 2078
+    },
+    {
+      "path": "docs/research/S137/read/MI-Robertson-1882-p165.txt",
+      "sha256": "69108cfa639bacb226bb55512bb7fab56977c7691f9c2e222dabe68a13ebd55a",
+      "bytes": 3328
+    },
+    {
+      "path": "docs/research/S137/read/MI-Robertson-1882-p166.txt",
+      "sha256": "444475cd9e74a6a2323b118ba37645fd93573c9477cd703a590d491ab6f627d3",
+      "bytes": 3800
+    },
+    {
+      "path": "docs/research/S137/read/MI-Robertson-1882-p173.txt",
+      "sha256": "18d477987c7ed21ac22645b9eeec936cfd29a4c0f5ecccb70b60a3ffd61fbc09",
+      "bytes": 2659
+    },
+    {
+      "path": "docs/research/S137/read/NJ-Stryker-I-p15.txt",
+      "sha256": "983811e0fe4fe3c694cadb0dc77a32841b192b6171144a5016ca97c81821e90a",
+      "bytes": 3467
+    },
+    {
+      "path": "docs/research/S137/read/NJ-Stryker-I-p28.txt",
+      "sha256": "79eed0f2d773652b09fba3b49d600c1dba9b6f7f7d52dd206f41935e029f2d22",
+      "bytes": 2980
+    },
+    {
+      "path": "docs/research/S137/read/NJ-Stryker-I-p40.txt",
+      "sha256": "a1bcbebb7ce18e973c3d805fb6efa31364cc45ddb277a6e94f8d14d17fcae58c",
+      "bytes": 3039
+    },
+    {
+      "path": "docs/research/S137/read/NJ-Stryker-I-p53.txt",
+      "sha256": "6ac2313987e2e1fc8d6c26bf5d2d12c59f0d15f281838a1faf6e3446c10feea5",
+      "bytes": 2819
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p17.txt",
+      "sha256": "136890b0da00a53f5602347b817eb344a54c4e00eca4609e586add96d57c387e",
+      "bytes": 4475
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p18.txt",
+      "sha256": "06a485687ab1927d55ca30c9b5cd2ae77e4699f9413ba2d2b62895780e9e12ab",
+      "bytes": 3245
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p19.txt",
+      "sha256": "f0d81e0e21bd361a69102f34d6ac3a63a4377db774b9fd6472b531cdc9bfd5b0",
+      "bytes": 3167
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p556.txt",
+      "sha256": "ae17875230c10b9ef0c3660bf26b0dc4014ab279e31b9c90c3506cbd88c9ab98",
+      "bytes": 4292
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p557.txt",
+      "sha256": "ac2375ba00a33d0cd134c31aadbbfbda4db8a949807bef48e8c90317160447de",
+      "bytes": 3495
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p673.txt",
+      "sha256": "5c2c660ca72dfa47a4f7aeea43c3be2f7aef3f63c52c071b9419ec4809ab4404",
+      "bytes": 4595
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p674.txt",
+      "sha256": "4482d6ee1f45bca9db6a86821bb7bf0eb38655906e7b5b5d4e8eb314b2aac3b0",
+      "bytes": 4159
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p690.txt",
+      "sha256": "d8240d8230eca63e7f453387db8a50c0960b4ff90ded8a233029d3e00e2e4df6",
+      "bytes": 4215
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-I-p691.txt",
+      "sha256": "1179ecdbb99f7f4d25880a788859714c2fc2a7ffebde30080dbb0b82b7515f9b",
+      "bytes": 4016
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-III-p1873.txt",
+      "sha256": "ae84b2cbfeb9773b02267ad8ec0ffd2712b02edbc9ecb0c45fc8308f4521c403",
+      "bytes": 3286
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-III-p1887.txt",
+      "sha256": "495adad30b56d8a4a1a0f32d2a7041f0c814d76c19f1b5b7d4a6f738196561d8",
+      "bytes": 2042
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-III-p1888.txt",
+      "sha256": "89691fb198aeb4887166dc8fe74ab6f6f049e317fd22bd32e263cd54c8d796a3",
+      "bytes": 197
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-IV-p2897.txt",
+      "sha256": "7bec73882166de4409361b224553153a16a6379906cc6c51e699cf5feb740163",
+      "bytes": 1901
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-IV-p2929.txt",
+      "sha256": "0f3aabdc25d5c236a2173d2cb255e8f4d8081f04bda32ad5f57b97a4e6f63e6e",
+      "bytes": 1901
+    },
+    {
+      "path": "docs/research/S137/read/NY-Phisterer-IV-p2930.txt",
+      "sha256": "0f3aabdc25d5c236a2173d2cb255e8f4d8081f04bda32ad5f57b97a4e6f63e6e",
+      "bytes": 1901
+    },
+    {
+      "path": "docs/research/S137/read/OR-I-II-p314.txt",
+      "sha256": "9e72ffb926883d15eb52bcaa3649b7f35e6613643e7c8e7f533c3b1838da95a4",
+      "bytes": 2194
+    },
+    {
+      "path": "docs/research/S137/read/OR-I-II-p315.txt",
+      "sha256": "478322a68e7a7d88c48c7b65c4ca22ad7187303102e859f0d3f9087f76a68109",
+      "bytes": 2466
+    },
+    {
+      "path": "docs/research/S137/read/OR-I-II-p325.txt",
+      "sha256": "c334a06d3c1498f467be4bb66255bc3b0fcd93bdd1fe00c2f3d85df337c7009d",
+      "bytes": 3718
+    },
+    {
+      "path": "docs/research/S137/read/OR-III-I-p67.txt",
+      "sha256": "e8f5618d4c7ebbc385e20396712dc5f4f294306e186c0a2e343c2756a6957940",
+      "bytes": 3042
+    },
+    {
+      "path": "docs/research/S137/read/OR-III-I-p68.txt",
+      "sha256": "fe01c25d0427b5c15f736f4784a70cd596d4f7a5a9f9a087a2a5708d15df02d8",
+      "bytes": 3279
+    },
+    {
+      "path": "docs/research/S137/read/OR-III-I-p69.txt",
+      "sha256": "f3688a91c5ccd2c6c53d18c0a4d1e39e58e9ff45da43f6e3fd51c01d85387c08",
+      "bytes": 2839
+    },
+    {
+      "path": "docs/research/S137/read/RI-Register-1866-p1.txt",
+      "sha256": "a9b065af78c1f654dd699fefecafdf249d35b01ca9ab9ded12ac8469da40efd4",
+      "bytes": 2767
+    },
+    {
+      "path": "docs/research/S137/read/RI-Register-1866-p3.txt",
+      "sha256": "2cada7d80ff5849d988ae15544ca3203ab0253b118526153d820327ba396cd11",
+      "bytes": 3732
+    },
+    {
+      "path": "docs/research/S137/read/RI-Register-1866-p4.txt",
+      "sha256": "63606a2d7967e5fd1fae882e581a901db7c8af18a791be2a252d871d6965b174",
+      "bytes": 3587
+    },
+    {
+      "path": "docs/research/S137/read/RI-Register-1866-p9.txt",
+      "sha256": "84bf7c23a75dd2eb13bfb5318fc60edf483d1a44c2df8ced9546a6b387c54972",
+      "bytes": 2431
+    },
+    {
+      "path": "docs/research/S137/read/US-Register-I-p14.txt",
+      "sha256": "02af69e440b8104e0e5c82693cf2672daa7446a0dd2e91f7bbe3d1adca722999",
+      "bytes": 364
+    },
+    {
+      "path": "docs/research/S137/read/US-Register-I-p300.txt",
+      "sha256": "1151cd00cf5790b93f268e456782e03799600490add44749d7a14df6824bab8b",
+      "bytes": 228
+    },
+    {
+      "path": "docs/research/S137/read/US-Register-I-p303.txt",
+      "sha256": "d1a9c4609459d45a47841d77a0f0ee949c2332bd4eb72aa1366429ad58a73acc",
+      "bytes": 2078
+    },
+    {
+      "path": "docs/research/S137/source-reading.json",
+      "sha256": "a976bd6cc2475e63fd91329fd8a337d42a0a46ee3fc0334a7271cb59c0b238af",
+      "bytes": 67420
+    }
+  ],
+  "s135_reuse_audit": 3464,
+  "runtime": "headless source extraction and integrity checks only; no new simulation, browser or desktop control",
+  "formal_review": "Deferred to lead under sprint rules0106/0107; no unavailable worker model substituted",
+  "limits": "Integrity audit does not resolve component conflicts, unread named acceptance papers or unknown personnel. No acceptance criterion changed."
+}

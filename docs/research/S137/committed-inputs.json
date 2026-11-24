@@ -1,0 +1,81 @@
+{
+  "july_commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+  "method": "git show only; no July working-tree read",
+  "files": [
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "docs/decisions/0101-an-officers-resignation-service-side-and-reported-choice.md",
+      "sha256": "c08b9033bd14499ae6695147f20076bef160255731395b22784ab8f449b474e9"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "docs/decisions/0108-the-july-armies-are-named-brigades-of-regiments.md",
+      "sha256": "8d083b1ef43fe6ae547f2c83fccdeedcba2b20bae952be600262fcbefa82e934"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "docs/decisions/0127-a-raised-regiment-has-its-calls-legal-minimum.md",
+      "sha256": "c3bfeb6f5e51fa7ddb3b2abab8f0d3f2d14649df20d8fb607cbb4bbe4638c9da"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packages/kernel/src/forces/enlistment.ts",
+      "sha256": "76c06774a4a2e61e444b6cac47cad8b036197f4db3760d7dd7a952c209e4785a"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packages/kernel/src/forces/forces.ts",
+      "sha256": "627b08ff8bdb296313c04e6212d14a027ee2e9bd76a3cb8c912ded87455ad6bf"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packages/kernel/src/forces/lots.ts",
+      "sha256": "f7d14cd04b86a62d5f2d986db4454b121fd547bf24994562a6332221e5b79b8a"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packages/kernel/src/recruitment/renewal.ts",
+      "sha256": "dc1650441717b4476d9ae32c000bd9b3e18c46647c9be745eee1111cb2d803d1"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packages/kernel/src/recruitment/rules.ts",
+      "sha256": "c33bdb98349dc9d7ea4a201ea75279be18d03da68eb19a02708bc0d1f621d967"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packages/kernel/src/tick/recruitment.ts",
+      "sha256": "a371fcf461f82a757c539af3938bd81c1430e28520c57b11772a3e299a79d78f"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packages/kernel/src/world/regiments.ts",
+      "sha256": "8754590cab276382c47a0494a4f9be418be62a39c8e987ccea9baa7ce5040c49"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packs/union-1861/calls-1861.json",
+      "sha256": "a28eb70d0e8b97d9c499a43b27b56b6ce5de3cf982e69d94e2ec36c513b874e7"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packs/union-1861/data/world.json",
+      "sha256": "86a4d30b52d318dbfe32cd65b1d2bf4ef9e48b4db02a48c5cc9805c91e00621e"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packs/union-1861/pack.json",
+      "sha256": "13cd793b6c90b48a19d2352a8285d0a8e38a0792c5dff398c1e4058811640d51"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packs/union-1861/situations/call_for_troops.json",
+      "sha256": "87343ac2c352ed2d2d021e46089dac3c57bf8c072081f6c20df9406edf1cf1b8"
+    },
+    {
+      "commit": "2a5e62d1aa30e30723ad3654aee134318898aa63",
+      "path": "packs/union-1861/source/world/regiments.json",
+      "sha256": "57f61b4d4b6fffac2b9e09c8d3631185f9e28a34783f080be16d673a17307e5d"
+    }
+  ]
+}
