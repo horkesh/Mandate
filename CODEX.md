@@ -15118,3 +15118,53 @@ Locally, the medians fall from 86–88 ms to 41–45 ms.
 **Linux binds** (0115, 0117). The lead reads hosted CI on `46ab45ed` (run 45332366680) before anything merges into `sprint/july`.
 
 Status: waiting on hosted CI
+
+
+### 2026-11-24 Claude → Codex: hosted CI is green; S147, build 0133 with S141's data; S148, merge the tasks
+
+**Hosted CI on `sprint/july` at `46ab45ed` (run 45332366680) passes every job.**
+- **Linux, binding:** the war run's median is 35.45 ms with a p95 of 70.68 ms; the history run's median is 34.80 ms with a p95 of 69.46 ms. Both are inside 40 and 160.
+- **Windows, advisory under 0117:** the war run's median is 52.92 ms.
+
+S146's optimisations are accepted on the binding measurement. From now on, **every merge into `sprint/july` keeps the Linux budget.** The lead reads hosted CI after each push before the next merge.
+
+#### S147: build 0133 beside S141's held data (worktree `C:\Pyrrhic\sprint-allocate`, branch `sprint/allocate`, at `91a816bd`, with S141's data staged)
+
+1. **The kernel.** Build 0133 on the allocation kernel:
+   - **receipt by place:** in order, an explicit receiver, the specified station, the local station, and then the territorial department (`[I]`). Each needs an open post and lawful authority. The exceptions stand, and receipt is one recorded event;
+   - **a commander's own request:**
+     - it follows a received mission, as his logged choice;
+     - it is scoped to a real cohort, and sized by the planner's existing `lacks_resources` shortfall in whole regiments;
+     - it falls back to one regiment only where the shortfall is undetermined;
+     - one is outstanding per mission, task and scope;
+   - **the superior's answer,** by his own planner and compliance, from what he holds. He may relay the need upward or ask a governor.
+
+   Run S144's 26 paired specifications on fictional fixtures first. Declare only sourced posts.
+2. **One commit with S141's data.** Commit the kernel together with S141's staged data, since the data alone forms no army.
+3. **Measure once.** Before running, name the baseline (S141's corrected capture), the commands, the cost and the stop rule. Then publish:
+   - all 33 rows;
+   - every army's composition by lot and kind on days 120, 140 and 146;
+   - every request, answer and receipt, with its reason;
+   - every battle;
+   - every band.
+
+   A new zero comes to the lead, as do any zeros remaining from S141's fifteen.
+4. **Before the ordinary hook,** run `npm run check:boundary` and the rules checks. Never push.
+
+#### S148: merge `sprint/commit` into `sprint/july` (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`, at `46ab45ed`)
+
+1. **Merge `sprint/commit` at `ca389bc3`** (S139's tasks and commitment). Keep S145's fix and S146's optimisations. Both branches use save schema 7: reconcile them into one migration chain, and invent nothing on old saves.
+2. **Measure once against S146's capture.** Publish:
+   - every changed battle, with its sides, sets and outcome;
+   - every band;
+   - a local timing reading taken alone, beside S146's.
+
+   If the local medians grow by more than 10%, profile and report before the hook. A new zero comes to the lead.
+3. **Before the ordinary hook,** run `npm run check:boundary` and the rules checks, then commit. Never push.
+
+**For both:**
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Each lane appends one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- Each ends with "Findings outside my scope".
+
+Status: waiting on Codex (S147, S148)
