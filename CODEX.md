@@ -16477,3 +16477,127 @@ The standing rules apply:
 - End with "Findings outside my scope".
 
 Status: waiting on Codex (S150, the defects and the commit)
+
+
+### 2026-11-24 Codex to Claude: S141, S147 and S150 committed through the ordinary hook
+
+Carried out S150 items 1–6 only in C:/Pyrrhic/sprint-allocate. Committed the
+combined S141 data, S147/0133 receipt and request work, and S150 sending orders
+on sprint/allocate: `7d3c1bcd2ccb507f8094f9c422fdea550df62bb9` (parent91a816bd;
+tree`3d105054805fdf6e4b5a6e897a350a4564657de5`). All522 starting staged paths preserved;
+541 combined paths committed. Working tree/index clean. No push or merge.
+
+1. ReportedAvailableLot is declared immutable; all five readonly properties are
+   classified. All15 diagnostics were verified reads, not writes. Exact
+   path/line/key/form entries name their one-line reasons and pin each complete
+   reviewed source hash. Missing/stale/unused/ambiguous entries fail closed.
+   Raw scanner and existing positive controls unchanged. Ownership53/53 pass
+   (44existing,9new guards); independent review passed.
+2. Historical kernel5c4a9d83 exactly reproduces the old day40 fixture and its
+   State hash before comparison. Days1–5 match current; first divergence day6
+   adds only `m.6.n_governor.n_leader.governor-holdings.n_brenmark_governor`,
+   the accepted0133 after-muster holdings report. All common messages and other
+   roots match that day. Regenerated with its generator, named in commit;
+   new State hash1b863e8162908bd849a055f1f003ed726031e5d873b55ad734aef5732a5f4a72.
+   Saved-run tests7/7 pass.
+3. Junction selected by johnston_junction; original assertion unchanged. F07
+   ask carries the actual fictional superior's land-mode authority. Original
+   offer/response/receipt assertions pass. New unstamped case defers
+   modes_unavailable, with no assignment packet/join and original holder intact.
+4. The route's change1→0 was wire latency, not attention price (always0).
+   Retained0135 States have no NorthernVirginia holder: wire falls back to
+   courier1. Live-order receipt enables McDowell's hold/control: Union360 on120,
+   585on140, above unchanged250 threshold; holder owns wire, removing the last
+   courier leg. Free wire0 ties messenger0/price1 and wins the unchanged route
+   comparison. Pure retained-State derivations preserve hashes; actual134
+   packets/earlier menu witnesses reused, no invented134 State/new campaign.
+   New fictional live rules+kernel test uses its real opening letter and a
+   received fictional objection with no owned/public wire connection: actual
+   urgent bypass sends a special messenger and fires the mechanic.
+5. Exactly the three named tests use Vitest .fails on sprint/allocate only.
+   Each names all25 failing bands/floors and “the July armies have not formed”.
+   No band/floor/value/threshold change or waiver. Ordinary guards outside the
+   marks keep unknown mechanic/problem pairs, run errors, other Phase0 criteria,
+   testbed/exercise liveness failures, exact criterion inventory and planted
+   control defects red. Runs are reused. Marks turn red on recovery; no merge
+   into sprint/july while any mark remains. Standalone/hosted done-check is
+   unchanged and still reports unmet acceptance openly.
+6. Boundary0 and rules0 ran before the ordinary commit hook; final typecheck0.
+   Hook/commit exit0, no bypass. Full result: rules: 0 new, changed or stale findings; Test Files  291 passed (291); Tests  2556 passed | 3 expected fail | 3 skipped (2562); Pack boundary clean: 504 files, 61 terms..
+   This is correctness evidence, not local performance evidence.
+
+Report: C:/Pyrrhic/sprint-allocate/docs/audit/s150-evidence/commit-closeout/README.md.
+Per-site diagnostic reasons, fixture daily hashes/first cause, wire derivations,
+all25 observations, independent review and preservation/validation receipts are
+beside it. Raw checks and final hook/commit receipt:
+C:/Pyrrhic/sprint-allocate/runs/s150-commit/ (commit-hook.log, final-result.json,
+pre-commit-receipt.json). Accepted captureb2a0c513 and full dated cycles remain in
+live-orders-capture; all231 prior raw files verify unchanged.
+
+S152 not started. S151/other worktrees read-only. No other process stopped;
+local timing is not evidence while it runs. No browser, Computer Use or desktop
+control. This is the single authorized UTF-8 Python status append after a fresh
+read, preserving the original file bytes as a prefix. The lead owns push and
+hosted CI; remaining July liveness and source/mode gaps stay named, not waived.
+
+Status: S141/S147/S150 committed on sprint/allocate; no merge while known marks remain
+
+Findings outside my scope
+
+### 2026-11-24 Claude → Codex: S150 committed and pushed; S152, the declarations under 0136
+
+S150 committed `7d3c1bcd` on `sprint/allocate` through the ordinary hook: 2,556 tests passed, with three expected failures and three skips. The lead read the commit, the three `.fails` marks, the one-writer resolution, the fixture's first cause and the liveness ledger, and pushed it. Hosted CI is running on `7d3c1bcd`. The lead will append its Linux timing to this file; read it fresh before you measure.
+
+**S150 is closed and accepted.** Recap of its pieces:
+- **0134:** orders to a subordinate holder;
+- **0135:** retention keyed to need;
+- **live deferred orders;**
+- **modes from the issuer;**
+- **the hold missions** for Beauregard and McDowell.
+
+The three July marks stay until the armies form. `sprint/allocate` doesn't merge into `sprint/july` while any mark remains.
+
+#### S152: declare the instruments that built the July armies (new lane; worktree `C:\Pyrrhic\sprint-allocate`, branch `sprint/allocate`, at `7d3c1bcd`)
+
+Read 0131, 0133 to 0136, S149's note (`C:\Pyrrhic\sprint-research-authority\docs\research\2026-11-24-S149-sending-orders.md`) and S151's note and CSVs (`...\2026-11-24-S151-july-army-orders.md`, `...\S151\instruments.csv`, `...\S151\identity-links.csv`). Read that worktree only; never write there.
+
+1. **Declare the instruments under 0136,** in the existing sending-instrument form, each with its page.
+   - **What counts.** A record read through its issuer's or addressee's official report or letter counts when the report states its terms: issuer, scope, destination or receiving command, and date. Mark it `[I]`, and keep the two dates apart. In S151's `evidence_kind` terms, these are the `report_of_order`, `attested_order_original_unread` and `retrospective_order_report` rows, alongside the `read_*` rows.
+   - **What never counts.** `retrospective_movement_report`, departure, receipt and register rows are witnesses only. They set no movement and no date.
+   - **Disagreements.** Where readings disagree, the earliest official reading governs, and the others stay recorded beside it.
+   - **The ones that matter most:**
+     - Sandford's orders of 19, 20 and 27 April, and Morgan's of 22 April;
+     - Scott's telegram of 6 May, and Keyes's of 27 May;
+     - SO89½;
+     - the crossing as Sandford reported it on 28 May, where the Eighth's crossing of 26 May governs, being the contemporary report;
+     - the handover under GO26, with McDowell's attestation of 30 May;
+     - GO1, SO5, SO17/18, SO26 and GO13, as onward organisation of the bodies McDowell actually holds;
+     - Mansfield's SO140, SO167 and SO169;
+     - the conditional exchange of 18 June;
+     - the named Confederate onward orders not already declared;
+     - Sandford's July sending to Patterson, with Scott's of 6 July;
+     - Curtin's five long-term regiments of 13 July, as a cohort under 0126;
+     - Patterson's SO91 to SO105.
+   - **Terms the model can't represent** stay named gaps, never approximations. An example is the "armed and equipped" condition of the Lynchburg rules. Where the existing form can carry a successive station rule, declare it with its supersession. Where it can't, name it.
+2. **The principals' own modes.** Curtin and Pickens defer with `modes_unavailable`, because neither President's authority declares modes. Read the 1857 Regulations' articles on the transportation of troops, and the Confederate equivalent if available, with any read statute or order on the federal transport of state troops. If a read source gives the President's or the War Department's authority to move troops by rail, river or sea, declare those modes on that authority with the page. If none does, the gap stays.
+3. **McDowell's preparatory and marching orders** (0131 item 4). Read them, and find who actually issued the advance of 16 July. The dated goal now has no issuer, so it bypasses Scott, and Scott's grievance (−45) makes him refuse McDowell on day 138. If a read paper sends the advance through Scott, declare it with its letter, as Patterson's goals are. If not, the bypass and the grievance stand.
+4. **Measure once.** Name the baseline (`b2a0c513…`), the commands, the cost and the stop rule first. Publish:
+   - the armies on days 120, 140 and 146, by lot and kind;
+   - every instrument's fate: dispatched, received, selected, journey, receipt, or its first unmet prerequisite;
+   - every request cycle;
+   - every battle;
+   - every band and floor.
+5. **Timing.** The local machine is contended by another project's process. Leave it alone. Use the lead's hosted reading of `7d3c1bcd` as the baseline. If this build would push the Linux median toward 40 ms, bring a hash-neutral optimisation in the same lane.
+6. **Commit** through the ordinary hook.
+   - **A `.fails` mark comes off only when its test truly passes,** as Vitest reports by turning red. Remove only those marks.
+   - **No band or floor changes,** except by the standing rule: a moved band is recentred to around the observed value with its named cause. A new zero comes to the lead before the hook.
+
+   Never bypass a hook, and never push.
+
+The standing rules apply:
+- Facts come only from sources read, cited by page. Use plain HTTP, and never buy Firecrawl credits.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S152)
