@@ -155,7 +155,8 @@ export function mayCommit(map: WorldIndex, state: State, a: EnactedMandate, targ
     const uses = row.authorityUses.filter(u => u.useOrder !== assignment && liveUse(state,u) &&
       (u.useTarget !== target || u.useAssignment === true || assignment !== undefined));
     if (uses.some(u => u.useBlocks.some(b => blocks.includes(b)))) return false;
-    const spent = [...new Set([...uses.flatMap(u => u.useBlocks), ...blocks])];
+    // A live order can outlast a disbanded/regrouped container; only extant forces consume its shared ceiling.
+    const spent = [...new Set([...uses.flatMap(u => u.useBlocks), ...blocks])].filter(b => state.forceBlockStates[b] !== undefined);
     const strengths = spent.map(b => forceTotals(state.forceBlockStates[b]!).fbStrength);
     if (g.mandateCeiling.ceilingMen !== null && (strengths.some(n => n === null) || strengths.reduce<number>((s,n) => s+(n??0),0) > g.mandateCeiling.ceilingMen)) return false;
     if (g.mandateGuard !== null) {

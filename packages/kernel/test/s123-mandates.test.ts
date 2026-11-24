@@ -18,6 +18,10 @@ import { playDays, replay } from '../src/log/session.ts';
 import { mandateProblems, type MandateGrant } from '../src/world/mandates.ts';
 import type { State } from '../src/root-state.ts';
 import { knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { applyMusters } from '../src/forces/enlistment.ts';
+import { musterAssignments } from '../src/command/levies.ts';
+import { placeAndRemove } from '../src/movement/movement.ts';
+import { repartition } from '../src/tick/organisation.ts';
 
 const origin = (s: string) => toId('message',s);
 const grant = (more: Partial<MandateGrant> = {}): MandateGrant => ({
@@ -133,6 +137,35 @@ describe('S123 received authority', () => {
       id:origin('use'),issuer:P('a_sec'),goal:goalOf(goalTerms('hold','a_mid')),viaChain:true,issuedDay:1,response:'answer' },1).planRecords[POST('a_reserve')]! } } };
     expect(mayCommit(world.map,live,mandateAt(live,g.mandatePost,g.mandateKey)!,POST('a_army'),[army])).toBe(false);
     expect(mayCommit(world.map,live,mandateAt(live,g.mandatePost,g.mandateKey)!,POST('a_office'),[reserve])).toBe(false);
+  });
+  it.each(['disbanded', 'regrouped'] as const)('S145: a live use with a %s container permits a new local commitment', (change) => {
+    const { world,active,g } = fixture();
+    const reserve = toId('forceBlock','a_reserve_1');
+    const army = toId('forceBlock','a_army_1');
+    const order = origin('old.live.use');
+    let state = commitAuthority(active,mandateAt(active,g.mandatePost,g.mandateKey)!,order,POST('a_reserve'),[reserve]);
+    state = setGoal(state,POST('a_reserve'),{ id:order,issuer:P('a_sec'),
+      goal:goalOf(goalTerms('hold','a_mid',{committed:[reserve]})),viaChain:true,issuedDay:1,response:'answer' },1);
+    if (change === 'disbanded') {
+      const gone = applyMusters(world.map,state,[{change:'disband',block:reserve,cause:'recruitment'}]);
+      state = musterAssignments(placeAndRemove(world.map,gone.state,[],gone.disbanded),[],[],gone.disbanded);
+    } else {
+      state = repartition(state,[reserve],[{block:toId('forceBlock','regrouped.reserve'),
+        lots:state.forceBlockStates[reserve]!.fbLots.map(l => l.lotId),name:'regrouped reserve'}],[POST('a_reserve')]);
+    }
+    const row = mandateAt(state,g.mandatePost,g.mandateKey)!;
+    expect(state.forceBlockStates[reserve]).toBeUndefined();
+    expect(state.planRecords[POST('a_reserve')]!.planOrder).toBe(order);
+    expect(row.authorityUses).toEqual([{useOrder:order,useTarget:POST('a_reserve'),useBlocks:[reserve]}]);
+    expect(mayCommit(world.map,state,row,POST('a_army'),[army])).toBe(true);
+    // Surviving reservations still consume the ceiling and cannot be spent twice.
+    state = commitAuthority(state,row,origin('new.live.use'),POST('a_army'),[army]);
+    state = setGoal(state,POST('a_army'),{id:origin('new.live.use'),issuer:P('a_sec'),
+      goal:goalOf(goalTerms('hold','a_front',{committed:[army]})),viaChain:true,issuedDay:2,response:'answer'},2);
+    expect(mayCommit(world.map,state,mandateAt(state,g.mandatePost,g.mandateKey)!,POST('a_office'),[army])).toBe(false);
+    if (change === 'regrouped') {
+      expect(mayCommit(world.map,state,mandateAt(state,g.mandatePost,g.mandateKey)!,POST('a_reserve'),[toId('forceBlock','regrouped.reserve')])).toBe(false);
+    }
   });
   it('C2: independently enacted sibling grants draw from one parent commitment balance', () => {
     const {world,active}=fixture();
