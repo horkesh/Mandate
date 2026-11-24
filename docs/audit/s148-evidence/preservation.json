@@ -1,0 +1,39 @@
+{
+  "allStartingPathsPreserved": 3427,
+  "captureInputsUnchanged": 868,
+  "metadataOnlyChanges": [
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "before": "db8109f301c3f8a2c6d62914dd9a9508e21e84fb8bf93064e9bbe79ed0f7777b",
+      "after": "d23410d83e5eef4ba47084130705450ca30b57c273fa27f124f94ddc1cc3135c",
+      "reason": "Correct certificate prose to name the two S139 task readers explicitly; no runtime source changed."
+    }
+  ],
+  "proof": [
+    {
+      "path": "packages/kernel/src/command/authority.ts",
+      "exactS145S146Source": true,
+      "sha256": "d339ec5d3a79363d53fcb279b8261b431fd0aa15233358602685ef9d05125c5a"
+    },
+    {
+      "path": "packages/kernel/src/seats/local-actions.ts",
+      "exactS145S146Source": true,
+      "sha256": "c1a44b08fb771aec85383d3f25feaf16fdb3ba52af7a7c2d509954a6d157de82"
+    },
+    {
+      "path": "packages/kernel/src/view/view.ts",
+      "exactS145S146Source": true,
+      "sha256": "fece8135a8745dba1b59bfa442c96224e57c8c7611e919d037918484affbdb86"
+    },
+    {
+      "path": "packages/kernel/src/tick/generate.ts",
+      "exactS145S146Source": true,
+      "sha256": "7c709aa42ae81f9653b86f196432c7613c8dc288ee95ecac9faf72670d3f5e69"
+    },
+    {
+      "allIncomingS139FilesExceptMergedRequestsAndManifestExact": true,
+      "count": 28
+    }
+  ],
+  "schemaObservation": "Pinned sprint/july is schema 6; incoming S139 is schema 7. The merged registry retains its single no-op 6->7 step. Old task/receipt history remains absent."
+}

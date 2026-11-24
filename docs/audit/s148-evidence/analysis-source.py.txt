@@ -1,0 +1,50 @@
+from pathlib import Path
+import json, hashlib, statistics, subprocess
+root=Path.cwd(); out=root/'runs/s148'; evidence=root/'docs/audit/s148-evidence'; evidence.mkdir(exist_ok=True)
+load=lambda p:json.loads(p.read_text(encoding='utf8'))
+def write(name,value): (evidence/name).write_text(json.dumps(value,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
+baseline=load(out/'baseline-observed.json')
+s146=load(root/'runs/s146/step4-daily-history.json')
+assert baseline['summary']==s146['summary'],'pinned S146 observed recapture must exactly equal retained S146 summary'
+write('baseline-receipts.json',{'ref':'46ab45edc2e2a7a06e939ecdb25b00318e4722c6','exactS146Summary':True,'receipts':[{'path':str(p.relative_to(root)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in [out/'baseline-observed.json',root/'runs/s146/step4-daily-history.json',root/'runs/s146/step4-measurements.json']]})
+if not (out/'candidate.json').exists():
+ print('Pinned baseline exactly reproduces retained S146 summary, daily hashes and counters.');raise SystemExit(0)
+candidate=load(out/'candidate.json'); union=candidate['runs'][0]; history=candidate['history'][0]
+assert history['summary']['finalHash']==union['checked']['finalHash']
+old=dict(baseline['observations']['battles']); new=dict(union['battles'])
+def no_audit(b):
+ if b is None:return None
+ b=json.loads(json.dumps(b))
+ for d in b['battleDays']:
+  for s in d['bdaySides']:
+   s.pop('bsideAttackBlocks',None);s['bsideDecisions']=[t for t in s['bsideDecisions'] if not t['btermKind'].startswith('task_')]
+ return b
+changed=[{'id':i,'resolutionChanged':no_audit(old.get(i))!=no_audit(new.get(i)),'before':old.get(i),'after':new.get(i)} for i in sorted(old.keys()|new.keys()) if old.get(i)!=new.get(i)]
+write('battle-comparison.json',{'beforeCount':len(old),'afterCount':len(new),'changedCount':len(changed),'changedResolutions':sum(c['resolutionChanged'] for c in changed),'worldHash':union['checked']['worldHash'],'beforeFinalHash':baseline['summary']['finalHash'],'afterFinalHash':union['checked']['finalHash'],'changed':changed})
+lines=['# S148: every changed battle','','Both complete records are in battle-comparison.json. Counts are model observations; unknown strength remains unknown.','']
+for c in changed:
+ lines += ['## '+c['id'],'','Resolution changed.' if c['resolutionChanged'] else 'Audit fields only.','','| Version | Day | Type | Attacker | Sides, exposed blocks, attacking blocks, strength and outcome |','| --- | --- | --- | --- | --- |']
+ for label,b in [('S146',c['before']),('S148',c['after'])]:
+  if b is None:lines.append(f'| {label} | absent | | | |');continue
+  for d in b['battleDays']:
+   sides=[]
+   for s in d['bdaySides']:
+    sides.append(f"{s['bsideFaction']}: exposed [{', '.join(s['bsideBlocks'])}]; attack [{', '.join(s.get('bsideAttackBlocks',[]))}]; {s['bsidePresent']} known; unknown [{', '.join(s['bsideUnknown'])}]; {s['bsideCommit']}; {s['bsideResult']}; killed/wounded/missing/captured {s['bsideKilled']}/{s['bsideWounded']}/{s['bsideMissing']}/{s['bsideCaptured']}")
+   lines.append(f"| {label} | {d['bdayDay']} | {d['bdayType']} | {d.get('bdayAttacker') or 'mutual'} | {'<br>'.join(sides)} |")
+ lines.append('')
+(evidence/'battles.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
+references=load(out/'references.json'); bands=[];new_zeros=[]
+for r in candidate['runs']:
+ pack=r['checked']['pack']; previous=baseline['summary'] if pack=='union-1861' else load(root/'runs/s146/step4-daily-testbed.json')['summary'];before={v['mechanic']:v['fires'] for v in previous['liveness']}
+ reference=next(f for f in references if f['kind']=='full' and f['pack']==pack)
+ for v in r['checked']['liveness']:
+  row={'run':r['name'],**v,'before':before.get(v['mechanic']),'band':reference['bands'].get(v['mechanic'])};bands.append(row)
+  if v['fires']==0 and before.get(v['mechanic'],0)>0:new_zeros.append(row)
+write('bands.json',{'liveness':bands,'allReferencesIncludingExercises':references,'exerciseGateResult':next(c for c in candidate['criteria'] if c['id']=='liveness'),'historicalCheckpointBands':history['checkpoints'],'criteria':candidate['criteria']})
+old_times=load(root/'runs/s146/step4-measurements.json'); timings=[]
+for slot,timing in [('war',union['timed']['timing']),('history',history['timed']['timing'])]:
+ readings=[r['candidate'] for r in old_times if r['slot']==slot];median=statistics.median(r['median'] for r in readings);increase=(timing['median']/median-1)*100
+ timings.append({'slot':slot,'s146':readings,'s146MedianOfTwoMedians':median,'s148':timing,'increasePercent':increase,'profileRequired':increase>10})
+write('validation.json',{'passedPhase0':candidate['passed'],'passed1A':candidate['passed1A'],'criteria':candidate['criteria'],'sweepSeeds':0,'newZeros':new_zeros,'timings':timings,'runs':[{'name':r['name'],'checkedHash':r['checked']['finalHash'],'repeatHash':r['repeat']['finalHash'],'timedHash':r['timed']['finalHash'],'rejections':r['checked']['rejections'],'replay':r['checked']['replay'],'resume':r['checked']['resume']} for r in candidate['runs']]})
+write('operation-history.json',history['observations']['operations'])
+print(json.dumps({'beforeBattles':len(old),'afterBattles':len(new),'changed':len(changed),'resolutionChanges':sum(c['resolutionChanged'] for c in changed),'newZeros':[r['mechanic'] for r in new_zeros],'timings':timings,'phase0':candidate['passed'],'phase1A':candidate['passed1A']}))

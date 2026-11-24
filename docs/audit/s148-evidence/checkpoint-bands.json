@@ -1,0 +1,580 @@
+[
+  {
+    "band": {
+      "id": "seceded",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Which states have seceded' (an exact band: eleven) and Appendix A; Missouri, Kentucky, Maryland and Delaware had not seceded on 31 July",
+      "kind": "side-set",
+      "faction": "confederate",
+      "departmentKinds": [
+        "state_government"
+      ],
+      "exactly": [
+        "st_alabama",
+        "st_arkansas",
+        "st_florida",
+        "st_georgia",
+        "st_louisiana",
+        "st_mississippi",
+        "st_north_carolina",
+        "st_south_carolina",
+        "st_tennessee",
+        "st_texas",
+        "st_virginia"
+      ]
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "seceded (1861-07-31, day 148): 11 of 11 on the confederate side"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "seceded (1861-07-31, day 148): 11 of 11 on the confederate side"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_maryland",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, not seceded, Hicks governor, Federal troops at Baltimore from 13 May (MSA exhibit; OR I-2 p. 29)",
+      "kind": "government-side",
+      "name": "Maryland",
+      "departments": [
+        "st_maryland"
+      ],
+      "side": "union"
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_maryland (1861-07-31, day 148): Maryland is union (band union)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_maryland (1861-07-31, day 148): Maryland is union (band union)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_delaware",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, not seceded, Burton governor (AAC)",
+      "kind": "government-side",
+      "name": "Delaware",
+      "departments": [
+        "st_delaware"
+      ],
+      "side": "union"
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_delaware (1861-07-31, day 148): Delaware is union (band union)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_delaware (1861-07-31, day 148): Delaware is union (band union)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_kentucky",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: neutral by the Governor's proclamation of 20 May, government not seceded (AAC; Kentucky archives)",
+      "kind": "government-side",
+      "name": "Kentucky",
+      "departments": [
+        "st_kentucky"
+      ],
+      "side": null
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_missouri",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union by 31 July, the convention installed Gamble's provisional government (Missouri convention journal; MoSA); Jackson's rival government continues in the field",
+      "kind": "government-side",
+      "name": "Missouri",
+      "departments": [
+        "st_missouri"
+      ],
+      "side": "union"
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_missouri (1861-07-31, day 148): Missouri is union (band union)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_missouri (1861-07-31, day 148): Missouri is union (band union)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_western_virginia",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, the Restored Government of Virginia at Wheeling, Pierpont governor from 20 June, senators seated 13 July (WV Archives). Department reference: source/world/departments.csv, st_virginia_restored; OR I-2 p. 723, Cameron to Governor Francis H. Peirpoint, 25 June 1861 (https://ehistory.osu.edu/books/official-records/002/0723), read for R85. The existing western_virginia recognition option sets this department to Union; the expected side and checkpoint date are unchanged",
+      "kind": "government-side",
+      "name": "western Virginia (the Restored Government at Wheeling)",
+      "departments": [
+        "st_virginia_restored"
+      ],
+      "side": "union"
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_muscogee",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (10 July; CSAL)",
+      "kind": "government-side",
+      "name": "the Creek (Muscogee) Nation",
+      "departments": [
+        "nation_muscogee"
+      ],
+      "side": "confederate"
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_choctaw",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (12 July; CSAL)",
+      "kind": "government-side",
+      "name": "the Choctaw Nation",
+      "departments": [
+        "nation_choctaw"
+      ],
+      "side": "confederate"
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_chickasaw",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (12 July; CSAL)",
+      "kind": "government-side",
+      "name": "the Chickasaw Nation",
+      "departments": [
+        "nation_chickasaw"
+      ],
+      "side": "confederate"
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_cherokee",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: neutral (Ross's proclamation, 17 May; OR I-13 p. 490); the treaty of 7 October is after the window",
+      "kind": "government-side",
+      "name": "the Cherokee Nation",
+      "departments": [
+        "nation_cherokee"
+      ],
+      "side": null
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "side_seminole",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: not yet allied; treaties from 1 August are after the window (CSAL)",
+      "kind": "government-side",
+      "name": "the Seminole Nation",
+      "departments": [
+        "nation_seminole"
+      ],
+      "side": null
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "washington_held",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Whether Washington is held': yes, throughout; isolated 19 to 25 April, never attacked (OR I-2 pp. 29 to 30, 38 to 40, 314 to 316)",
+      "kind": "held",
+      "region": "washington",
+      "faction": "union",
+      "throughout": true
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "men_union",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Each side's men under arms': a block's strength is men present, which lies between present for duty (inferred about 100,000 to 165,000) and the rolls (inferred about 145,000 to 245,000); the edges rounded outward per the review nit (95,000; 250,000). No dated 31 July return exists: the note's rule is that a run is not failed below the lower edge. Cross-check on the upper edge (lane 1.11r3): Cameron's speech of 22 June 1861 claims 250,000 men in the field, a public claim and not a return, consistent with the edge; the 1 July report (OR III-1 pp. 303-305) remains the anchor",
+      "kind": "men",
+      "faction": "union",
+      "min": 95000,
+      "max": 250000,
+      "floorBinding": false
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "men_union (1861-07-31, day 148): union 125714 men of known strength, 12 blocks of unknown strength (band 95000..250000)",
+        "men_union (1861-07-31, day 148): totals by kind: return 6371, estimate 490, rule 118853, unknown men unknown (12 lots)"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "men_union (1861-07-31, day 148): union 127376 men of known strength, 12 blocks of unknown strength (band 95000..250000)",
+        "men_union (1861-07-31, day 148): totals by kind: return 6371, estimate 490, rule 120515, unknown men unknown (12 lots)"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "men_confederate",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). Ceiling 200,000 [I]: docs/research/_leads/T2-strengths.md, section 1, corrected reasoning (R44), Walker to Davis, 24 July 1861, OR IV-1 pp. 496-497. His 190 regiments and 34 battalions give a rough paper estimate of about 200,000 to 210,000 for those units [I], not a count of men present or under arms. The independent companies, twelve recently called regiments and reserve corps of 30,000 are outside that count. The 200,000 ceiling is an inferred, revisable calibration band [I], not an upper bound the sources prove; Davis's 20 July message gives no troop count",
+      "kind": "men",
+      "faction": "confederate",
+      "min": 100000,
+      "max": 200000,
+      "floorBinding": true,
+      "diagnostics": [
+        {
+          "date": "1861-06-17",
+          "kind": "estimate",
+          "description": "Virginia upward of 40000 raised/equipped; S121 R02 cannot reconcile membership with model lots. Not moved to July31.",
+          "cite": "OR IV-I pp.388,390-393; S121 returns.csv R02"
+        },
+        {
+          "date": "1861-07-23",
+          "kind": "estimate",
+          "description": "Tennessee whole army about22000, not 22000 infantry plus2000 cavalry; S121 R08 lacks exact membership. Not moved to July31.",
+          "cite": "OR I-IV pp.372-373; S121 returns.csv R08"
+        },
+        {
+          "date": "1861-03-04",
+          "kind": "estimate",
+          "description": "Charleston probable command3000. Opening aggregate overlaps independently represented constituents; no lot allocation or sum.",
+          "cite": "OR I-I pp.261-262"
+        },
+        {
+          "date": "1861-04-11",
+          "kind": "estimate",
+          "description": "Morris Island infantry2000 exclusive of artillery includes Gregg1100, Cunningham418 and Kershaw300-500. No exact disjoint lot group.",
+          "cite": "OR I-I p.302"
+        }
+      ]
+    },
+    "before": {
+      "problems": [
+        "men_confederate (1861-07-31, day 148): confederate has 47083 men, below 100000; unresolved: unknown lots could close the gap"
+      ],
+      "evidence": [
+        "men_confederate (1861-07-31, day 148): confederate 47083 men of known strength, 32 blocks of unknown strength (band 100000..200000)",
+        "men_confederate (1861-07-31, day 148): totals by kind: return 3500, estimate 0, rule 43583, unknown men unknown (50 lots)",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-06-17: Virginia upward of 40000 raised/equipped; S121 R02 cannot reconcile membership with model lots. Not moved to July31.; OR IV-I pp.388,390-393; S121 returns.csv R02",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-07-23: Tennessee whole army about22000, not 22000 infantry plus2000 cavalry; S121 R08 lacks exact membership. Not moved to July31.; OR I-IV pp.372-373; S121 returns.csv R08",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-03-04: Charleston probable command3000. Opening aggregate overlaps independently represented constituents; no lot allocation or sum.; OR I-I pp.261-262",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-04-11: Morris Island infantry2000 exclusive of artillery includes Gregg1100, Cunningham418 and Kershaw300-500. No exact disjoint lot group.; OR I-I p.302",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_cs_charleston: dated return or estimate with exact membership; OR I-I pp.261-262, March4: probable whole-command 3000; constituent membership/date not reconciled",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_cs_charleston_guard_steamers: dated return or estimate with exact membership; ORN I-4 pp.260-262; OR I-1 p.295; OR I-1 p.299",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_1st_infantry_regulars: dated return or estimate with exact membership; OR I-1 p.36",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_2nd_artillery_battalion: dated return or estimate with exact membership; OR I-1 pp.33-34; OR I-1 pp.43-45; OR I-1 p.38; OR I-1 pp.277-278; OR I-1 p.302; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_hagood_regiment: dated return or estimate with exact membership; OR I-1 pp.306-307; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_kershaw_regiment: dated return or estimate with exact membership; OR I-1 p.302; OR I-1 pp.306-307; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_morris_island: dated return or estimate with exact membership; OR I-I p.302, April11: whole Morris Island infantry2000 includes Gregg and Cunningham; constituent membership/date not reconciled",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_rion_battalion: dated return or estimate with exact membership; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_fort_morgan: dated return or estimate with exact membership; OR IV-1 pp.192-193; OR IV-1 p.209; OR IV-1 p.135; OR I-1 p.454",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_la_forts_jackson_st_philip: dated return or estimate with exact membership; OR IV-1 p.178; OR IV-1 p.135; OR IV-1 p.135; OR IV-1 p.178; no dated strength at this lot scope; recover a dated unit return or estimate",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_tx_ford_regiment: dated return or estimate with exact membership; OR I-1 pp.617-618; OR I-1 pp.621-622",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_tx_galveston_batteries: dated return or estimate with exact membership; OR I-1 pp.610-611",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_tx_northwest_frontier_companies: dated return or estimate with exact membership; OR I-1 pp.617-618",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_norfolk: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_richmond: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_harpers_ferry: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_peninsula: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.1: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.10: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.2: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.3: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.4: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.5: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.6: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.7: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.8: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.9: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_volunteers_north_carolina.1: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_volunteers_north_carolina.2: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_volunteers_north_carolina.3: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_additional_north_carolina.1: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_additional_north_carolina.2: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_tn_infantry_tennessee: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_tn_cavalry_tennessee: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_tn_river_artillery_tennessee: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_georgia.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_georgia; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_alabama.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_alabama; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_mississippi.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_mississippi; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_arkansas.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_arkansas; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_tennessee.d129: dated return or estimate with exact membership; call:cs_jun30_cavalry_tennessee; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.1: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.2: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.3: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.4: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.5: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.6: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.7: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_cavalry_arkansas.1: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_ar_cavalry_battalion_arkansas: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_ar_artillery_arkansas: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered"
+      ],
+      "verdict": "unresolved"
+    },
+    "after": {
+      "problems": [
+        "men_confederate (1861-07-31, day 148): confederate has 49832 men, below 100000; unresolved: unknown lots could close the gap"
+      ],
+      "evidence": [
+        "men_confederate (1861-07-31, day 148): confederate 49832 men of known strength, 32 blocks of unknown strength (band 100000..200000)",
+        "men_confederate (1861-07-31, day 148): totals by kind: return 3500, estimate 0, rule 46332, unknown men unknown (50 lots)",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-06-17: Virginia upward of 40000 raised/equipped; S121 R02 cannot reconcile membership with model lots. Not moved to July31.; OR IV-I pp.388,390-393; S121 returns.csv R02",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-07-23: Tennessee whole army about22000, not 22000 infantry plus2000 cavalry; S121 R08 lacks exact membership. Not moved to July31.; OR I-IV pp.372-373; S121 returns.csv R08",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-03-04: Charleston probable command3000. Opening aggregate overlaps independently represented constituents; no lot allocation or sum.; OR I-I pp.261-262",
+        "men_confederate (1861-07-31, day 148): diagnostic only, unreconciled scope, estimate 1861-04-11: Morris Island infantry2000 exclusive of artillery includes Gregg1100, Cunningham418 and Kershaw300-500. No exact disjoint lot group.; OR I-I p.302",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_cs_charleston: dated return or estimate with exact membership; OR I-I pp.261-262, March4: probable whole-command 3000; constituent membership/date not reconciled",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_cs_charleston_guard_steamers: dated return or estimate with exact membership; ORN I-4 pp.260-262; OR I-1 p.295; OR I-1 p.299",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_1st_infantry_regulars: dated return or estimate with exact membership; OR I-1 p.36",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_2nd_artillery_battalion: dated return or estimate with exact membership; OR I-1 pp.33-34; OR I-1 pp.43-45; OR I-1 p.38; OR I-1 pp.277-278; OR I-1 p.302; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_hagood_regiment: dated return or estimate with exact membership; OR I-1 pp.306-307; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_kershaw_regiment: dated return or estimate with exact membership; OR I-1 p.302; OR I-1 pp.306-307; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_morris_island: dated return or estimate with exact membership; OR I-I p.302, April11: whole Morris Island infantry2000 includes Gregg and Cunningham; constituent membership/date not reconciled",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_charleston_rion_battalion: dated return or estimate with exact membership; OR I-1 p.317",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_fort_morgan: dated return or estimate with exact membership; OR IV-1 pp.192-193; OR IV-1 p.209; OR IV-1 p.135; OR I-1 p.454",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_la_forts_jackson_st_philip: dated return or estimate with exact membership; OR IV-1 p.178; OR IV-1 p.135; OR IV-1 p.135; OR IV-1 p.178; no dated strength at this lot scope; recover a dated unit return or estimate",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_tx_ford_regiment: dated return or estimate with exact membership; OR I-1 pp.617-618; OR I-1 pp.621-622",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_tx_galveston_batteries: dated return or estimate with exact membership; OR I-1 pp.610-611",
+        "men_confederate (1861-07-31, day 148): recover initial.fb_st_tx_northwest_frontier_companies: dated return or estimate with exact membership; OR I-1 pp.617-618",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_norfolk: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_richmond: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_harpers_ferry: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.va_peninsula: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.1: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.10: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.2: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.3: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.4: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.5: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.6: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.7: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.8: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_state_transfer_north_carolina.9: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_volunteers_north_carolina.1: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_volunteers_north_carolina.2: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_volunteers_north_carolina.3: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_additional_north_carolina.1: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_nc_additional_north_carolina.2: dated return or estimate with exact membership; OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_tn_infantry_tennessee: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_tn_cavalry_tennessee: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_tn_river_artillery_tennessee: dated return or estimate with exact membership; source not yet recovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_georgia.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_georgia; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_alabama.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_alabama; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_mississippi.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_mississippi; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_arkansas.d122: dated return or estimate with exact membership; call:cs_jun30_cavalry_arkansas; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover unidentified.raised.st_gov_tennessee.d129: dated return or estimate with exact membership; call:cs_jun30_cavalry_tennessee; OR-IV-I p.412",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.1: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.2: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.3: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.4: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.5: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.6: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_infantry_arkansas.7: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover generated.state-forces.cs_ar_cavalry_arkansas.1: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_ar_cavalry_battalion_arkansas: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+        "men_confederate (1861-07-31, day 148): recover unidentified.state-forces.cs_ar_artillery_arkansas: dated return or estimate with exact membership; OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered"
+      ],
+      "verdict": "unresolved"
+    }
+  },
+  {
+    "band": {
+      "id": "operations_union",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Planned operations fought' and Appendix B B2: at least the one Livermore-scale case (McDowell's offensive, First Bull Run); at most the 26 cases of B1, every battle and planned skirmish read. A count of the record's cases, never a required event",
+      "kind": "operations-fought",
+      "faction": "union",
+      "min": 1,
+      "max": 26
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "operations_union (1861-07-31, day 148): union fought 2 planned operations (band 1..26): op:us_dept_northeastern_virginia:135 at manassas, op:us_dept_pennsylvania:141 at harpers_ferry"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "operations_union (1861-07-31, day 148): union fought 2 planned operations (band 1..26): op:us_dept_northeastern_virginia:135 at manassas, op:us_dept_pennsylvania:141 at harpers_ferry"
+      ],
+      "verdict": "pass"
+    }
+  },
+  {
+    "band": {
+      "id": "operations_confederate",
+      "date": "1861-07-31",
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B B1-B2: at least one, the Sumter bombardment planned on Davis's government's order (Walker to Beauregard 10 April, OR I-1 p. 297), which lane 1.12's bombardment stage makes fightable; at most four (Sumter, Cole Camp inferred, Mesilla; Carthage disputed). The lead's ruling: FOUNDATION's 'a planned operation fought by each side' stands",
+      "kind": "operations-fought",
+      "faction": "confederate",
+      "min": 1,
+      "max": 4
+    },
+    "before": {
+      "problems": [],
+      "evidence": [
+        "operations_confederate (1861-07-31, day 148): confederate fought 2 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter, op:cs_cmd_harpers_ferry:142 at manassas"
+      ],
+      "verdict": "pass"
+    },
+    "after": {
+      "problems": [],
+      "evidence": [
+        "operations_confederate (1861-07-31, day 148): confederate fought 2 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter, op:cs_cmd_harpers_ferry:142 at manassas"
+      ],
+      "verdict": "pass"
+    }
+  }
+]

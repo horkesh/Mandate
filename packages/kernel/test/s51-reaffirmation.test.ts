@@ -96,7 +96,11 @@ it('does not reopen a finished operation after reaffirmation', () => {
   const [id, op] = Object.entries(opened.operationRecords)[0]!;
   const finished = { ...opened, operationRecords: { [id]: { ...op, opEndDay: 130, opOutcome: 'objective_reached' as const } } };
   const received = arriveOrder(context(finished, 136), finished, letter(true));
-  expect(operationsPhase(context(received, 136), received).operationRecords).toEqual(finished.operationRecords);
+  expect(operationsPhase(context(received, 136), received).operationRecords).toEqual({
+    ...finished.operationRecords,
+    [id]: { ...finished.operationRecords[id]!, opTasks: op.opTasks!.map(t => ({ ...t,
+      otaskEndReason: 'operation_ended', otaskEndedDay: 136 })) },
+  });
 });
 
 it.each([false, true])('reaffirms through actual routing, save/load and logged replay (bypass=%s)', bypass => {

@@ -1,0 +1,24 @@
+import { writeFileSync, mkdirSync } from 'node:fs';
+import { phase0Run } from '../../packages/cli/src/phase0-run.ts';
+import { historyPack, DONE_CHECK_RUNS, runDoneCheck } from '../../packages/cli/src/done-check.ts';
+import { observeRun, historyDays } from '../../packages/cli/src/history-run.ts';
+import { REFERENCE_RUNS } from '../../packages/cli/src/liveness-gate.ts';
+const mode=process.argv[2];
+const write=(name:string,value:unknown)=>writeFileSync(`runs/s148/${name}.json`,JSON.stringify(value,(_,v)=>v instanceof Map?[...v]:v instanceof Set?[...v]:v,2)+'\n');
+mkdirSync('runs/s148',{recursive:true});
+if(mode==='smoke'){
+ for(const pack of ['testbed','union-1861']){const s=phase0Run({pack,days:3,replay:false});if(s.rejections||s.finalDay!==3)throw Error('startup '+pack);}
+ console.log('Two-pack three-day startup passed');
+}else if(mode==='baseline'){
+ const h=historyPack('union-1861')!;const observer=observeRun(h.checkpoints,h.startDate);const days=historyDays(h.checkpoints,h.startDate);
+ const summary=phase0Run({pack:'union-1861',days,atWar:false,checks:false,replay:false,hash:'daily',onTick:observer.onTick});
+ write('baseline-observed',{summary,observations:observer.observations()});
+ console.log('baseline observed',summary.finalHash);
+}else if(mode==='candidate'){
+ const result=runDoneCheck({sweepSeeds:0,onChecked(summary,saves){write(`${summary.pack}-checked`,summary);for(const [day,text]of saves)writeFileSync(`runs/s148/${summary.pack}-save-${day}.json`,text+'\n');console.log('checked',summary.pack,summary.finalHash);}});
+ write('candidate',result);write('references',REFERENCE_RUNS);
+ console.log(JSON.stringify({passed:result.passed,passed1A:result.passed1A,criteria:result.criteria.map(c=>({id:c.id,verdict:c.verdict,problems:c.problems})),timing:result.runs.map(r=>({name:r.name,timing:r.timed.timing})),historyTiming:result.history.map(h=>h.timed.timing)}));
+ process.exitCode=result.passed?0:1;
+}else if(mode==='profile'){
+ const s=DONE_CHECK_RUNS[0]!;const summary=phase0Run({pack:s.pack,days:s.days,atWar:s.atWar,timings:true,checks:false,hash:'checkpoints',checkpointEvery:s.days,replay:false});write('profile-summary',summary);console.log(summary.timing);
+}else throw Error('unknown mode');

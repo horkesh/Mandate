@@ -1,0 +1,20 @@
+{
+  "baselineCommit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+  "receipts": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\runs\\s134\\repair-capture\\union-1861-summary.json",
+      "bytes": 167019,
+      "sha256": "a1cffe7a0d69f30020bccdcbe4b1a9b761c63a2b5650af16aff8afab08b30081",
+      "boundBy": "docs/audit/s134-evidence/repair/raw-inventory.json"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\runs\\s134\\repair-capture\\union-1861-observations.json",
+      "bytes": 921981,
+      "sha256": "e86fc224d5d31bc1ea923dcb8906783e65c607ae560ddb79074e9494ddee506b",
+      "boundBy": "docs/audit/s134-evidence/repair/raw-inventory.json"
+    }
+  ],
+  "finalHash": "22199b6c923ae2800cf670435094317852a921b6cc14d4ebb290e812f07c5b7b",
+  "worldHash": "b28330db4467c2cbbc6dd24e3e34de1784d0446127f193ff8dbb6b693ce2b86d",
+  "days": 148
+}
