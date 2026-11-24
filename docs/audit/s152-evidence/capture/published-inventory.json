@@ -1,0 +1,200 @@
+[
+  {
+    "path": "runs/s152/measurement/all-bands.json",
+    "bytes": 87677,
+    "sha256": "f542ebdfc205f6660eccab8a77aecd380d5b72189294059c22161e981c34ac97",
+    "published": "docs/audit/s152-evidence/capture/all-bands.json"
+  },
+  {
+    "path": "runs/s152/measurement/allocations.json",
+    "bytes": 17914,
+    "sha256": "4b6ee3b03568a6f39793acf7523f96c143e18478229141fa2255234e0735a51d",
+    "published": "docs/audit/s152-evidence/capture/allocations.json"
+  },
+  {
+    "path": "runs/s152/measurement/answers.json",
+    "bytes": 117742,
+    "sha256": "4c9abfbbc2682c3951adf0da78ad6209cd60c53d155b5c24746682a2cca668f3",
+    "published": "docs/audit/s152-evidence/capture/answers.json"
+  },
+  {
+    "path": "runs/s152/measurement/army-focus.json",
+    "bytes": 3879,
+    "sha256": "5c95522f13c98de23999653fdfa14f5a304661550a65b3f2e4dca0caf5cb0208",
+    "published": "docs/audit/s152-evidence/capture/army-focus.json"
+  },
+  {
+    "path": "runs/s152/measurement/army-lots.csv",
+    "bytes": 533257,
+    "sha256": "c0a770a684cf5fefa0866eb90d2da542f64075edc802c90422e125722f5eff2a",
+    "published": "docs/audit/s152-evidence/capture/army-lots.csv"
+  },
+  {
+    "path": "runs/s152/measurement/army-totals.csv",
+    "bytes": 60965,
+    "sha256": "dde10a1d31d80986bd1bfc419f2a0bdcc686998c17dfcf27cc742462de690a8c",
+    "published": "docs/audit/s152-evidence/capture/army-totals.csv"
+  },
+  {
+    "path": "runs/s152/measurement/army-totals.json",
+    "bytes": 141671,
+    "sha256": "3ccffa1b14a2ccc5aec78906aa6effce54221bb01a2e4eede8cdcf8d66aa2668",
+    "published": "docs/audit/s152-evidence/capture/army-totals.json"
+  },
+  {
+    "path": "runs/s152/measurement/band-count-changes.json",
+    "bytes": 8033,
+    "sha256": "e9a02a6c8fdf523db874d4086366db632b9d2f890eebd61bcf606b7a5aa46182",
+    "published": "docs/audit/s152-evidence/capture/band-count-changes.json"
+  },
+  {
+    "path": "runs/s152/measurement/battles.json",
+    "bytes": 25263,
+    "sha256": "d02d242da7617c2057959e1f3a122482a0476288f282d6853f04f8e2e7168505",
+    "published": "docs/audit/s152-evidence/capture/battles.json"
+  },
+  {
+    "path": "runs/s152/measurement/causal-events.jsonl",
+    "bytes": 2938929,
+    "sha256": "8444a66d63f20763dbd664f61ae0cdd56aecbda839aecdfba09e37071c529018",
+    "published": "docs/audit/s152-evidence/capture/causal-events.jsonl"
+  },
+  {
+    "path": "runs/s152/measurement/changed-battles.json",
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "published": "docs/audit/s152-evidence/capture/changed-battles.json"
+  },
+  {
+    "path": "runs/s152/measurement/coverage.json",
+    "bytes": 828121,
+    "sha256": "d822138b1847b4aefce6e67ffe76eeefeaea36b4d2e397949e09a3e26895c0a7",
+    "published": "docs/audit/s152-evidence/capture/coverage.json"
+  },
+  {
+    "path": "runs/s152/measurement/force-request-records.json",
+    "bytes": 17146,
+    "sha256": "f9c66aba1d8f5b57d0f11e5ba6b9c2932452d5d77736bee2adc718ba352cb606",
+    "published": "docs/audit/s152-evidence/capture/force-request-records.json"
+  },
+  {
+    "path": "runs/s152/measurement/gate-failures.json",
+    "bytes": 9757,
+    "sha256": "86d9dd16acc9c05ef505368f4908608be82329a22dfb9cf6db6c40287ff7783c",
+    "published": "docs/audit/s152-evidence/capture/gate-failures.json"
+  },
+  {
+    "path": "runs/s152/measurement/input-receipts.json",
+    "bytes": 346,
+    "sha256": "814a020c86a4d2bbcd45ecd654949f18c55eaa2041dc2cc32368ee232842a5d5",
+    "published": "docs/audit/s152-evidence/capture/input-receipts.json"
+  },
+  {
+    "path": "runs/s152/measurement/instrument-fates.json",
+    "bytes": 1339629,
+    "sha256": "427857bf1f76ba9c67fa2d288ec49879ce1c807874d82ce9ab52f08bfbeaf4e2",
+    "published": "docs/audit/s152-evidence/capture/instrument-fates.json"
+  },
+  {
+    "path": "runs/s152/measurement/instrument-requests.json",
+    "bytes": 29582,
+    "sha256": "c4eca705ea096188b8fbffb5ff16052454f99beebec3e9de9593fd3330a9b5c1",
+    "published": "docs/audit/s152-evidence/capture/instrument-requests.json"
+  },
+  {
+    "path": "runs/s152/measurement/measurement-status.json",
+    "bytes": 999,
+    "sha256": "a147fa065ed07871f30260942291f2bf4008394695f97d5c89daa2503f0210b6",
+    "published": "docs/audit/s152-evidence/capture/measurement-status.json"
+  },
+  {
+    "path": "runs/s152/measurement/new-zeros.json",
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "published": "docs/audit/s152-evidence/capture/new-zeros.json"
+  },
+  {
+    "path": "runs/s152/measurement/observations.json",
+    "bytes": 741764,
+    "sha256": "1c37d1a310f056c99c0a92d0dfa9dc6431258b12961d17a6e99b617352cfb555",
+    "published": "docs/audit/s152-evidence/capture/observations.json"
+  },
+  {
+    "path": "runs/s152/measurement/offers.json",
+    "bytes": 128000,
+    "sha256": "ef843af521f73ef6381845c55643631be35aecf7fb49cad14999f8de0789f283",
+    "published": "docs/audit/s152-evidence/capture/offers.json"
+  },
+  {
+    "path": "runs/s152/measurement/onward-fates.json",
+    "bytes": 8742,
+    "sha256": "f16d31911c5c59804118eb48e991b171e5ef36397285e2c6a145b2600d45d90c",
+    "published": "docs/audit/s152-evidence/capture/onward-fates.json"
+  },
+  {
+    "path": "runs/s152/measurement/receipts.json",
+    "bytes": 1344988,
+    "sha256": "f520683480372c55e245d0e1ad925af90760f4f0cd965fb2d7ac12d093245872",
+    "published": "docs/audit/s152-evidence/capture/receipts.json"
+  },
+  {
+    "path": "runs/s152/measurement/request-cycles.json",
+    "bytes": 241377,
+    "sha256": "bacb544f165b4833c0790ed82869aaa5fad2e7935b48e0fac75ca5d057d4a8e5",
+    "published": "docs/audit/s152-evidence/capture/request-cycles.json"
+  },
+  {
+    "path": "runs/s152/measurement/requests.json",
+    "bytes": 8953,
+    "sha256": "59565f51d6ccabbd26eb97957965762ce2bab4553d54462ad2c76aedeb419b6c",
+    "published": "docs/audit/s152-evidence/capture/requests.json"
+  },
+  {
+    "path": "runs/s152/measurement/rows.csv",
+    "bytes": 21703,
+    "sha256": "e4f4a8a759d4fa7af0acfbba76f5d35686be5f2136adf6aa390a7ea63c4d4acd",
+    "published": "docs/audit/s152-evidence/capture/rows.csv"
+  },
+  {
+    "path": "runs/s152/measurement/s141-zero-disposition.json",
+    "bytes": 5332,
+    "sha256": "012411e1ae7eb7553aa0262d5dd36bc2c3e67cf34a9ea32c4a660ac5a6d7fd91",
+    "published": "docs/audit/s152-evidence/capture/s141-zero-disposition.json"
+  },
+  {
+    "path": "runs/s152/measurement/scores.json",
+    "bytes": 14512,
+    "sha256": "fe012d66145166137458044ce982aba8a5b39832599e0ef320728e839ba58fec",
+    "published": "docs/audit/s152-evidence/capture/scores.json"
+  },
+  {
+    "path": "runs/s152/measurement/service-receipts.json",
+    "bytes": 3,
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "published": "docs/audit/s152-evidence/capture/service-receipts.json"
+  },
+  {
+    "path": "runs/s152/measurement/started.json",
+    "bytes": 237,
+    "sha256": "7a2a66419a4ebb952440e8190286a83d34c17640877b78fc0893d3dbcc3598f9",
+    "published": "docs/audit/s152-evidence/capture/started.json"
+  },
+  {
+    "path": "runs/s152/measurement/summary.json",
+    "bytes": 162308,
+    "sha256": "bf3571e0c1f72d1abc0272f1154c14245e24f9e0f752ecdbed171545e4910ff7",
+    "published": "docs/audit/s152-evidence/capture/summary.json"
+  },
+  {
+    "path": "runs/s152/measurement/unmatched.csv",
+    "bytes": 200870,
+    "sha256": "371a076200451201e04c32d82b6c77b1137f58df9d59720804960499940696fb",
+    "published": "docs/audit/s152-evidence/capture/unmatched.csv"
+  },
+  {
+    "path": "runs/s152/measurement/unmatched.json",
+    "bytes": 329495,
+    "sha256": "94f25cb636d6ed5859018f0617e985ecb7244c6786e1785578ccc16d7798084f",
+    "published": "docs/audit/s152-evidence/capture/unmatched.json"
+  }
+]

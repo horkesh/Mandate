@@ -1,0 +1,30 @@
+{
+  "baseline": "b2a0c513512bf54397c0deafac50cfa5b919d16150c5a9c9c5c733fb93eb2eb4",
+  "referenceCaptures": 1,
+  "finalHash": "d4c187e2a6eeabe19e9aa8f6c625654d37a9c4ebf62ca8557f5c614e12f2b164",
+  "days": 148,
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "d4c187e2a6eeabe19e9aa8f6c625654d37a9c4ebf62ca8557f5c614e12f2b164",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "armyRows": 422,
+  "lotKindRows": 1368,
+  "instruments": 25,
+  "onward": 2,
+  "requestCycles": 7,
+  "requestAnswers": 12,
+  "battles": 2,
+  "changedBattles": 0,
+  "newZeros": [],
+  "bands": 164,
+  "gateFailures": 25,
+  "timing": "not measured locally; lead hosted baseline absent at fresh pre-capture read",
+  "method": "read-only after-tick observations in the one forward run; same-day substeps may be net effects. Gates are labelled for the following day, never historical receipt assertions."
+}

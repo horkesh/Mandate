@@ -1,0 +1,198 @@
+[
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-III-I-p254.txt",
+    "sha256": "035f521afe1a62dff63026c2e002c6d9e4ff2eacec9a139287ca8c47fa323dcf",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p254.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-III-I-p255.txt",
+    "sha256": "91d0cca9d0f1526df829b1baa4977f1f24d4535914c31c1ce6b21a2adf640a2e",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p255.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-III-I-p272.txt",
+    "sha256": "d99a67c16d96ba53de908a7ca17e1472d02f90f601d737e9523f0bd5e0f9c313",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p272.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-II-p690.txt",
+    "sha256": "d5d9881e358c5191f576d77225dbfa8513c24e8a8183024a0e29e746cb13a0aa",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p690.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.2-p128.txt",
+    "sha256": "d8c4d7c07c655dcf6563ce8df08d63032c1da10f857e3eca37aa73dc785528d5",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p128.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-II-p559.txt",
+    "sha256": "d1ccc06da27b717efb2d0e8bd4ba4f5796fa20590c23ec55dcc50f565bdb290d",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p559.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.2-p151.txt",
+    "sha256": "17df09e2dc437cbbf68fda79a0d23f495b055812edeaa3ca907745624b256f54",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p151.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.2-p135.txt",
+    "sha256": "453612d6a2e1c5c601535d7dc79d3f928af91e806e67a9802d8025fbbdffa11a",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p135.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.2-p136.txt",
+    "sha256": "2d4c969fb3b0d0771e64dd1939e0c6fdf6511eeafc9b5281327220337d294461",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p136.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.2-p140.txt",
+    "sha256": "ac4843bbce90a683291ef490df38f020a78c18661859100208aea3fcbc75d110",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p140.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.2-p141.txt",
+    "sha256": "7941692cd38520310d050140c497f645caa090868de5bc4784f062de3ab3dc8d",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.2-p141.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.1-p412.txt",
+    "sha256": "1a26d53cc2b13fe3475088c3a896e25bc0149953993c731d767de846200dfcc3",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p412.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.1-p418.txt",
+    "sha256": "2d4737b2defe8905cde7bbfd3fec23990e2229f54b8357e8d9a5e95040212c05",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\read\\OR-I-LI.1-p418.txt",
+    "role": "sending instrument, or expressly separated identity witness"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/Regs1857-pp123-124.txt",
+    "sha256": "386fae82a42679d6e96a81be92088b4390e1956d2e6fad17c6b5d21dc23c2db7",
+    "readFrom": "C:/Pyrrhic/sprint-research-authority/runs/s117/0255005.nlm.nih.gov-full.txt",
+    "pages": "123-124, paragraphs959 onward",
+    "url": "https://archive.org/details/0255005.nlm.nih.gov",
+    "method": "Selected OCR text read afresh; no transport modes inferred from silence",
+    "retainedBeforeWhitespaceNormalizationSHA256": "60af59849d193828bab3169f781f563924a456a6a3116382f6428455f67d2da8",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/Regs1857-pp127-129.txt",
+    "sha256": "07bb442190cd4b567f714b1b4c5f57b01c8b07b0c0fbd01f987b60c0a5c5e1f2",
+    "readFrom": "C:/Pyrrhic/sprint-research-authority/runs/s117/0255005.nlm.nih.gov-full.txt",
+    "pages": "127-129, paragraphs987-1009",
+    "url": "https://archive.org/details/0255005.nlm.nih.gov",
+    "method": "Selected OCR text read afresh; no transport modes inferred from silence",
+    "retainedBeforeWhitespaceNormalizationSHA256": "b78ee0574c4d421601ec7fff049228314340942ff0d4f1b1338a7273a8b8d1d4",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/Regs1857-pp107-110.txt",
+    "sha256": "7804e4962d54e69e61825acb0912590d6a276cb0d10200b4058119cb76ade8a9",
+    "readFrom": "C:/Pyrrhic/sprint-research-authority/runs/s117/0255005.nlm.nih.gov-full.txt",
+    "pages": "107-110, paragraphs832 onward",
+    "url": "https://archive.org/details/0255005.nlm.nih.gov",
+    "method": "Selected OCR text read afresh; no transport modes inferred from silence",
+    "retainedBeforeWhitespaceNormalizationSHA256": "f30e6cb28626c6493d2da392ebe6169a157a25102bfa34790c51077393621f65",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/CS-Regulations1862-pp102-104.txt",
+    "sha256": "7290e7781465e777c932c779f4e6b131a2ca21d448a676dc4ca96b051d0a7a20",
+    "readFrom": "runs/s152/cs-regs-1862-full.txt",
+    "pages": "102-104, paragraphs985-1003",
+    "url": "https://archive.org/details/regulationsforar00conf",
+    "method": "Direct HTTP OCR; 1862 edition is later than campaign, no retroactive authority declared",
+    "retainedBeforeWhitespaceNormalizationSHA256": "ecbc43572659273cc6c69d49a608a5d10852939c6d2bdfb5d3f224801cb17a8e",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/US-Statutes-I-p50.txt",
+    "sha256": "d10ee069af5a192952309c9de9936a9f5653c452f5736cad4910b2c2905dcbad",
+    "readFrom": "runs/s152/us-war-department-1789-p50.pdf",
+    "pages": "50, act7August1789 section1",
+    "url": "https://www.govinfo.gov/content/pkg/STATUTE-1/pdf/STATUTE-1-Pg50.pdf",
+    "method": "Direct HTTP official PDF text, Navy repeal footnote retained; not a specific mode assignment",
+    "retainedBeforeWhitespaceNormalizationSHA256": "fc460f546f2696508dd5815497f1109ff9274b9ea4fa0d47bb243b078f547dd7",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/CS-Statutes-p32.txt",
+    "sha256": "4e48329a1895d962537d3950bbe38c75e3d1b206444f9547578b1c8a110caf72",
+    "readFrom": "docs/research/S129/sources/Statutes-p32.txt",
+    "pages": "32, act21February1861 sections1-2",
+    "url": "https://archive.org/details/statutesatlargeo00conf",
+    "method": "Existing read source; general Presidential control of War Department, not enumerated movement modes",
+    "retainedBeforeWhitespaceNormalizationSHA256": "7f3abe9844f9d87b993241579b4621118d105d20851fb5a40fcde8a394aa45bf",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/JCCW-II-pp35-38.txt",
+    "sha256": "840590c9cdaaef3abab8b95653f206389503c5f94a5f994e8cdf9ae771efb0d6",
+    "readFrom": "runs/s152/jccw-part2-candidate.txt",
+    "pages": "35-38",
+    "url": "https://archive.org/details/reportjointcomm01wargoog",
+    "method": "Direct HTTP official testimony OCR; McDowell original-order/date gaps and Scott limits retained",
+    "retainedBeforeWhitespaceNormalizationSHA256": "80d7aaae05b520e1d5bdf1428637f2a463d84781dccf6a15c9979f66c7bc1bc6",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/JCCW-II-pp241-242.txt",
+    "sha256": "5933d717078aa2bae5c5247c6ca7622d14ebf3e1af19ad7a62b81549b9d251bf",
+    "readFrom": "runs/s152/jccw-part2-candidate.txt",
+    "pages": "241-242",
+    "url": "https://archive.org/details/reportjointcomm01wargoog",
+    "method": "Direct HTTP official testimony OCR; McDowell original-order/date gaps and Scott limits retained",
+    "retainedBeforeWhitespaceNormalizationSHA256": "12a6344986606d217c67f4f4f24ffd905937f422ed04a0ce3e88866ef48a0219",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-II-p303.txt",
+    "sha256": "9f044d1697efd49cf146e4f2b059fde2436a780148f394d7a0d09601046c1264",
+    "readFrom": "C:/Pyrrhic/mandate-research-sources/S4/warofrebellion02secrrich/warofrebellion02secrrich.pdf",
+    "pages": "303",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected official PDF text; printed p303 static render confirms July16, OCR10 not used",
+    "retainedBeforeWhitespaceNormalizationSHA256": "eb781ffd6156ad9579619a4c072103b69c5ac1a5d9b1183fbf25d2400abe2250",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-II-p304.txt",
+    "sha256": "b71fbe0ee39ad4374af325bc5fb807b0fe9a3fde1d6e1c71fcf15482e0eaa9d4",
+    "readFrom": "C:/Pyrrhic/mandate-research-sources/S4/warofrebellion02secrrich/warofrebellion02secrrich.pdf",
+    "pages": "304",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected official PDF text; printed p303 static render confirms July16, OCR10 not used",
+    "retainedBeforeWhitespaceNormalizationSHA256": "43a6037b25e41b9787c0817c9b807c2f1a2b9a4be6a4e3d5d374241f5ca4b59e",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-II-p305.txt",
+    "sha256": "3179cecd1df02732a0b875a7b84bf2055906befe4cfc093a327e71434b6dd435",
+    "readFrom": "C:/Pyrrhic/mandate-research-sources/S4/warofrebellion02secrrich/warofrebellion02secrrich.pdf",
+    "pages": "305",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected official PDF text; printed p303 static render confirms July16, OCR10 not used",
+    "retainedBeforeWhitespaceNormalizationSHA256": "9a69b6620de754f8fe27ba9a2ceb23c3ebd7bd0c7bcb753023e8dae60ec3d4b5",
+    "normalization": "LF and trailing whitespace only; wording unchanged"
+  },
+  {
+    "path": "docs/audit/s152-evidence/sources/OR-I-LI.1-p419.txt",
+    "sha256": "d16862595ee840068ca89c8042e489061f2e333f2218679d50bb7c976afb6fec",
+    "readFrom": "C:/Pyrrhic/sprint-research-authority/docs/research/S151/read/OR-I-LI.1-p419.txt",
+    "pages": "419",
+    "url": "https://archive.org/details/warofrebellion511unit",
+    "method": "Selected official printing;15July Miles restraint read, no unsupported executable restraint added"
+  }
+]

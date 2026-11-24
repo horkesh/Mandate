@@ -1,0 +1,27 @@
+{
+  "ownerInstruction": "fresh For S152 section in hosted CI / S153 CODEX message",
+  "codexSHA256": "51f10736498b7b34ec796cb3b6bcb3defdcf94c2d259c516a17014bc5b2a4744",
+  "hostedBaseline": {
+    "revision": "7d3c1bcd",
+    "run": 45400868529,
+    "warByDecision": {
+      "medianMs": 97.7,
+      "p95Ms": 204.9
+    },
+    "history": {
+      "medianMs": 96.8,
+      "p95Ms": 207.0
+    }
+  },
+  "commands": [
+    "node --import tsx runs/s152/profile/profile-run.ts baseline",
+    "node --import tsx runs/s152/profile/profile-run.ts s152"
+  ],
+  "cost": "two sequential148day non-freezing profile observations, final hash only; a few minutes expected; no wallclock claim",
+  "pass": "both initial/world/final hashes match the corresponding retained captures;zero rejections",
+  "stop": "first load/rejection/hash error;retain profiles and no retry;no optimisation in S152",
+  "contention": "S153 alongside per lead; failed first S152 hook has finished",
+  "baselineRuntime": "exact7d3c1bcd package archive, isolated @mandate links to snapshot packages",
+  "guardCorrection": "menu and execution missing-command checks; runtime is no longer identical, so baseline packages are snapshotted",
+  "dailyProof": "canonicalHash on every after-tick State versus corresponding retained148 hashes; diagnostic verifyRetainedDay subtree excluded from sampled cost shares"
+}

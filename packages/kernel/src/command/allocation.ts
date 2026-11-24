@@ -73,6 +73,7 @@ export function governorUndertaking(world:SeatsWorld, paper:AllocationInstrument
 }
 
 export function allocationAuthority(world: SeatsWorld, state: State, paper: AllocationInstrument, day: number, blocks: readonly ForceBlockId[] = [], ownOrder?: MessageId, selectedLots?:ReadonlySet<string>): boolean {
+  if(state.postStates[paper.from]===undefined || state.postStates[paper.to]===undefined)return false;
   const ownRequest=forceAssignmentFor(state,paper.id)?.request;
   if(ownRequest && (state.planRecords[ownRequest.freqNeed.needPost]?.planOrder!==ownRequest.freqNeed.needMission || state.postStates[ownRequest.freqNeed.needPost]?.postHolder!==ownRequest.freqNeed.needPerson))return false;
   if(paper.subordinateOrder===true && (paper.issuerPost===null || paper.issuerPost===paper.from || paper.from===paper.to || paper.scope.kind!=='cohort' ||

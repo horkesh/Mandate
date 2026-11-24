@@ -1,0 +1,31 @@
+{
+  "startingTrackedPaths": 3899,
+  "changedStartingPaths": [
+    "packages/kernel/src/command/allocation.ts",
+    "packages/kernel/src/seats/allocation.ts",
+    "packages/kernel/test/s141-allocation.test.ts",
+    "packages/kernel/test/support/one-writer-reads.ts",
+    "packs/union-1861/data/world.json",
+    "packs/union-1861/pack.json",
+    "tools/rules/projection-derivations.json"
+  ],
+  "allOtherStartingFilesUnchanged": 3892,
+  "researchInputReceipts": 7,
+  "researchReadOnly": true,
+  "newReferenceCaptures": 1,
+  "localTimingEvidence": false,
+  "browserOrDesktopUsed": false,
+  "stoppedOtherProcess": false,
+  "push": false,
+  "s150LiveOrdersRawPreserved": 41,
+  "profileReadings": 2,
+  "detailedReferenceCaptures": 1,
+  "verifiedFinalManifests": {
+    "research": 7,
+    "sources": 25,
+    "s150Raw": 41,
+    "s152Raw": 38,
+    "s152Published": 33,
+    "profiles": 2
+  }
+}

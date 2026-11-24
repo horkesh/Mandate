@@ -1,0 +1,584 @@
+{
+  "baseline": {
+    "label": "baseline",
+    "profileSHA256": "986ca17211ace9748c34cc93e81eb72e3625f105951d52dc1777f6fc6ed5ef69",
+    "allSamples": 47831,
+    "playDaysSamples": 25949,
+    "self": [
+      {
+        "function": "controlEvidence packages/kernel/src/knowledge/control-beliefs.ts:1",
+        "samples": 1737,
+        "sharePct": 6.694
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/view/people.ts:1",
+        "samples": 1108,
+        "sharePct": 4.27
+      },
+      {
+        "function": "establishmentProjection packages/kernel/src/view/people.ts:1",
+        "samples": 1020,
+        "sharePct": 3.931
+      },
+      {
+        "function": "deepFreeze packages/kernel/src/tick/freeze.ts:1",
+        "samples": 953,
+        "sharePct": 3.673
+      },
+      {
+        "function": "reconContacts packages/kernel/src/tick/generate.ts:1",
+        "samples": 915,
+        "sharePct": 3.526
+      },
+      {
+        "function": "claimedControlView packages/kernel/src/view/claimed-control.ts:1",
+        "samples": 887,
+        "sharePct": 3.418
+      },
+      {
+        "function": "contactEdgesOf packages/kernel/src/control-index/control-index.ts:1",
+        "samples": 743,
+        "sharePct": 2.863
+      },
+      {
+        "function": "legOf packages/kernel/src/supply/supply.ts:1",
+        "samples": 734,
+        "sharePct": 2.829
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/command/command.ts:2",
+        "samples": 704,
+        "sharePct": 2.713
+      },
+      {
+        "function": "allCommandedBlocks packages/kernel/src/command/command.ts:2",
+        "samples": 558,
+        "sharePct": 2.15
+      },
+      {
+        "function": "search packages/kernel/src/supply/supply.ts:1",
+        "samples": 555,
+        "sharePct": 2.139
+      },
+      {
+        "function": "reportView packages/kernel/src/view/view.ts:1",
+        "samples": 531,
+        "sharePct": 2.046
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 466,
+        "sharePct": 1.796
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/control-index/control-index.ts:1",
+        "samples": 450,
+        "sharePct": 1.734
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/requests.ts:1",
+        "samples": 420,
+        "sharePct": 1.619
+      },
+      {
+        "function": "edgeLeg packages/kernel/src/supply/supply.ts:1",
+        "samples": 400,
+        "sharePct": 1.541
+      },
+      {
+        "function": "set filename :0",
+        "samples": 394,
+        "sharePct": 1.518
+      },
+      {
+        "function": "heldPost packages/kernel/src/command/command.ts:2",
+        "samples": 376,
+        "sharePct": 1.449
+      },
+      {
+        "function": "factionOfBlock packages/kernel/src/forces/forces.ts:2",
+        "samples": 352,
+        "sharePct": 1.357
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/world.ts:2",
+        "samples": 346,
+        "sharePct": 1.333
+      },
+      {
+        "function": "viewFor packages/kernel/src/view/view.ts:1",
+        "samples": 332,
+        "sharePct": 1.279
+      },
+      {
+        "function": "deliverReports packages/kernel/src/knowledge/knowledge.ts:1",
+        "samples": 306,
+        "sharePct": 1.179
+      },
+      {
+        "function": "generateReports packages/kernel/src/tick/generate.ts:1",
+        "samples": 302,
+        "sharePct": 1.164
+      },
+      {
+        "function": "buildControlIndex packages/kernel/src/control-index/control-index.ts:1",
+        "samples": 296,
+        "sharePct": 1.141
+      },
+      {
+        "function": "tick packages/kernel/src/tick/tick.ts:1",
+        "samples": 289,
+        "sharePct": 1.114
+      }
+    ],
+    "inclusive": [
+      {
+        "function": "playDays packages/kernel/src/log/session.ts:1",
+        "samples": 25949,
+        "sharePct": 100.0
+      },
+      {
+        "function": "tick packages/kernel/src/tick/tick.ts:1",
+        "samples": 14972,
+        "sharePct": 57.698
+      },
+      {
+        "function": "localOptions packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 11988,
+        "sharePct": 46.198
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 11816,
+        "sharePct": 45.535
+      },
+      {
+        "function": "localOptionsAt packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 11372,
+        "sharePct": 43.824
+      },
+      {
+        "function": "pendingRequests packages/kernel/src/seats/requests.ts:1",
+        "samples": 10819,
+        "sharePct": 41.693
+      },
+      {
+        "function": "viewFor packages/kernel/src/view/view.ts:1",
+        "samples": 7992,
+        "sharePct": 30.799
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/tick/tick.ts:1",
+        "samples": 6781,
+        "sharePct": 26.132
+      },
+      {
+        "function": "forceOptions packages/kernel/src/seats/force-requests.ts:1",
+        "samples": 6621,
+        "sharePct": 25.515
+      },
+      {
+        "function": "inputFor packages/kernel/src/seats/force-requests.ts:1",
+        "samples": 6205,
+        "sharePct": 23.912
+      },
+      {
+        "function": "localMenu packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 5753,
+        "sharePct": 22.17
+      },
+      {
+        "function": "generateReports packages/kernel/src/tick/generate.ts:1",
+        "samples": 3402,
+        "sharePct": 13.11
+      },
+      {
+        "function": "deriveMap packages/kernel/src/control-index/derived.ts:1",
+        "samples": 2951,
+        "sharePct": 11.372
+      },
+      {
+        "function": "principalMenu packages/kernel/src/seats/requests.ts:1",
+        "samples": 2825,
+        "sharePct": 10.887
+      },
+      {
+        "function": "senderFor packages/kernel/src/seats/sender.ts:1",
+        "samples": 2466,
+        "sharePct": 9.503
+      },
+      {
+        "function": "plannerInputFor packages/kernel/src/planner/input.ts:1",
+        "samples": 2454,
+        "sharePct": 9.457
+      },
+      {
+        "function": "claimedControlView packages/kernel/src/view/claimed-control.ts:1",
+        "samples": 2450,
+        "sharePct": 9.442
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/planning-ground.ts:1",
+        "samples": 2418,
+        "sharePct": 9.318
+      },
+      {
+        "function": "deriveSupply packages/kernel/src/supply/supply.ts:1",
+        "samples": 2238,
+        "sharePct": 8.625
+      },
+      {
+        "function": "establishmentProjection packages/kernel/src/view/people.ts:1",
+        "samples": 2223,
+        "sharePct": 8.567
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/view/view.ts:1",
+        "samples": 2060,
+        "sharePct": 7.939
+      },
+      {
+        "function": "availableMandatePapers packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 1998,
+        "sharePct": 7.7
+      },
+      {
+        "function": "reportView packages/kernel/src/view/view.ts:1",
+        "samples": 1962,
+        "sharePct": 7.561
+      },
+      {
+        "function": "controlEvidence packages/kernel/src/knowledge/control-beliefs.ts:1",
+        "samples": 1845,
+        "sharePct": 7.11
+      },
+      {
+        "function": "buildControlIndex packages/kernel/src/control-index/control-index.ts:1",
+        "samples": 1757,
+        "sharePct": 6.771
+      }
+    ],
+    "exclusiveGroups": {
+      "allocation": {
+        "samples": 189,
+        "sharePct": 0.728
+      },
+      "retention": {
+        "samples": 26,
+        "sharePct": 0.1
+      },
+      "force_requests": {
+        "samples": 6744,
+        "sharePct": 25.989
+      },
+      "service_receipt": {
+        "samples": 0,
+        "sharePct": 0.0
+      },
+      "live_orders": {
+        "samples": 142,
+        "sharePct": 0.547
+      },
+      "other": {
+        "samples": 18848,
+        "sharePct": 72.635
+      }
+    }
+  },
+  "s152": {
+    "label": "s152",
+    "profileSHA256": "54678b5b080b985708d23546f62c60a72c94d1fd7a4907f2b95418e54c7e00f8",
+    "allSamples": 27214,
+    "playDaysSamples": 13698,
+    "self": [
+      {
+        "function": "controlEvidence packages/kernel/src/knowledge/control-beliefs.ts:1",
+        "samples": 1013,
+        "sharePct": 7.395
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/view/people.ts:1",
+        "samples": 642,
+        "sharePct": 4.687
+      },
+      {
+        "function": "reconContacts packages/kernel/src/tick/generate.ts:1",
+        "samples": 620,
+        "sharePct": 4.526
+      },
+      {
+        "function": "establishmentProjection packages/kernel/src/view/people.ts:1",
+        "samples": 517,
+        "sharePct": 3.774
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/command/command.ts:2",
+        "samples": 499,
+        "sharePct": 3.643
+      },
+      {
+        "function": "claimedControlView packages/kernel/src/view/claimed-control.ts:1",
+        "samples": 493,
+        "sharePct": 3.599
+      },
+      {
+        "function": "deepFreeze packages/kernel/src/tick/freeze.ts:1",
+        "samples": 479,
+        "sharePct": 3.497
+      },
+      {
+        "function": "contactEdgesOf packages/kernel/src/control-index/control-index.ts:1",
+        "samples": 438,
+        "sharePct": 3.198
+      },
+      {
+        "function": "reportView packages/kernel/src/view/view.ts:1",
+        "samples": 362,
+        "sharePct": 2.643
+      },
+      {
+        "function": "allCommandedBlocks packages/kernel/src/command/command.ts:2",
+        "samples": 330,
+        "sharePct": 2.409
+      },
+      {
+        "function": "legOf packages/kernel/src/supply/supply.ts:1",
+        "samples": 308,
+        "sharePct": 2.249
+      },
+      {
+        "function": "factionOfBlock packages/kernel/src/forces/forces.ts:2",
+        "samples": 281,
+        "sharePct": 2.051
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/requests.ts:1",
+        "samples": 248,
+        "sharePct": 1.81
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 248,
+        "sharePct": 1.81
+      },
+      {
+        "function": "set filename :0",
+        "samples": 235,
+        "sharePct": 1.716
+      },
+      {
+        "function": "deliverReports packages/kernel/src/knowledge/knowledge.ts:1",
+        "samples": 226,
+        "sharePct": 1.65
+      },
+      {
+        "function": "heldPost packages/kernel/src/command/command.ts:2",
+        "samples": 204,
+        "sharePct": 1.489
+      },
+      {
+        "function": "generateReports packages/kernel/src/tick/generate.ts:1",
+        "samples": 182,
+        "sharePct": 1.329
+      },
+      {
+        "function": "search packages/kernel/src/supply/supply.ts:1",
+        "samples": 172,
+        "sharePct": 1.256
+      },
+      {
+        "function": "blockOf packages/kernel/src/forces/forces.ts:2",
+        "samples": 162,
+        "sharePct": 1.183
+      },
+      {
+        "function": "freeze packages/kernel/src/view/view.ts:1",
+        "samples": 158,
+        "sharePct": 1.153
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/control-index/control-index.ts:1",
+        "samples": 153,
+        "sharePct": 1.117
+      },
+      {
+        "function": "__name packages/kernel/src/control-index/control-index.ts:1",
+        "samples": 152,
+        "sharePct": 1.11
+      },
+      {
+        "function": "viewFor packages/kernel/src/view/view.ts:1",
+        "samples": 146,
+        "sharePct": 1.066
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/world.ts:2",
+        "samples": 145,
+        "sharePct": 1.059
+      }
+    ],
+    "inclusive": [
+      {
+        "function": "playDays packages/kernel/src/log/session.ts:1",
+        "samples": 13698,
+        "sharePct": 100.0
+      },
+      {
+        "function": "tick packages/kernel/src/tick/tick.ts:1",
+        "samples": 7839,
+        "sharePct": 57.227
+      },
+      {
+        "function": "localOptions packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 6578,
+        "sharePct": 48.022
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 6504,
+        "sharePct": 47.481
+      },
+      {
+        "function": "localOptionsAt packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 6262,
+        "sharePct": 45.715
+      },
+      {
+        "function": "pendingRequests packages/kernel/src/seats/requests.ts:1",
+        "samples": 5721,
+        "sharePct": 41.765
+      },
+      {
+        "function": "viewFor packages/kernel/src/view/view.ts:1",
+        "samples": 4422,
+        "sharePct": 32.282
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/tick/tick.ts:1",
+        "samples": 3575,
+        "sharePct": 26.099
+      },
+      {
+        "function": "forceOptions packages/kernel/src/seats/force-requests.ts:1",
+        "samples": 3516,
+        "sharePct": 25.668
+      },
+      {
+        "function": "inputFor packages/kernel/src/seats/force-requests.ts:1",
+        "samples": 3345,
+        "sharePct": 24.42
+      },
+      {
+        "function": "localMenu packages/kernel/src/seats/local-actions.ts:1",
+        "samples": 3255,
+        "sharePct": 23.763
+      },
+      {
+        "function": "generateReports packages/kernel/src/tick/generate.ts:1",
+        "samples": 2033,
+        "sharePct": 14.842
+      },
+      {
+        "function": "plannerInputFor packages/kernel/src/planner/input.ts:1",
+        "samples": 1625,
+        "sharePct": 11.863
+      },
+      {
+        "function": "senderFor packages/kernel/src/seats/sender.ts:1",
+        "samples": 1500,
+        "sharePct": 10.951
+      },
+      {
+        "function": "principalMenu packages/kernel/src/seats/requests.ts:1",
+        "samples": 1430,
+        "sharePct": 10.439
+      },
+      {
+        "function": "claimedControlView packages/kernel/src/view/claimed-control.ts:1",
+        "samples": 1428,
+        "sharePct": 10.425
+      },
+      {
+        "function": "<anonymous> packages/kernel/src/view/view.ts:1",
+        "samples": 1252,
+        "sharePct": 9.14
+      },
+      {
+        "function": "establishmentProjection packages/kernel/src/view/people.ts:1",
+        "samples": 1197,
+        "sharePct": 8.739
+      },
+      {
+        "function": "reportView packages/kernel/src/view/view.ts:1",
+        "samples": 1187,
+        "sharePct": 8.665
+      },
+      {
+        "function": "deriveMap packages/kernel/src/control-index/derived.ts:1",
+        "samples": 1111,
+        "sharePct": 8.111
+      },
+      {
+        "function": "reconContacts packages/kernel/src/tick/generate.ts:1",
+        "samples": 1099,
+        "sharePct": 8.023
+      },
+      {
+        "function": "controlEvidence packages/kernel/src/knowledge/control-beliefs.ts:1",
+        "samples": 1061,
+        "sharePct": 7.746
+      },
+      {
+        "function": "seatIdentity packages/kernel/src/view/people.ts:1",
+        "samples": 924,
+        "sharePct": 6.746
+      },
+      {
+        "function": "sidePosts packages/kernel/src/planner/input.ts:1",
+        "samples": 914,
+        "sharePct": 6.673
+      },
+      {
+        "function": "allCommandedBlocks packages/kernel/src/command/command.ts:2",
+        "samples": 891,
+        "sharePct": 6.505
+      }
+    ],
+    "exclusiveGroups": {
+      "allocation": {
+        "samples": 119,
+        "sharePct": 0.869
+      },
+      "retention": {
+        "samples": 20,
+        "sharePct": 0.146
+      },
+      "force_requests": {
+        "samples": 3571,
+        "sharePct": 26.069
+      },
+      "service_receipt": {
+        "samples": 0,
+        "sharePct": 0.0
+      },
+      "live_orders": {
+        "samples": 172,
+        "sharePct": 1.256
+      },
+      "other": {
+        "samples": 9816,
+        "sharePct": 71.66
+      }
+    }
+  },
+  "groupDeltasPercentagePoints": {
+    "allocation": 0.141,
+    "retention": 0.046,
+    "force_requests": 0.08,
+    "service_receipt": 0.0,
+    "live_orders": 0.709,
+    "other": -0.975
+  },
+  "method": "One Inspector1ms-sampling playDays148history profile per tree. Shares use sample COUNTS under playDays, not timeDeltas or elapsed duration. Exact7d3c1bcd baseline package/pack snapshot; S152 includes the missing-command guard. Diagnostic verifyRetainedDay subtree excluded from counts. Exclusive group priority:retention,live orders,receipt,requests,allocation,other. Inclusive function rows overlap and must not be added. Both profiles must match retained final State hashes.",
+  "limits": "S153 runs alongside per lead. Single-pair sample shares show work distribution, not absolute added milliseconds, causation for every difference, statistical significance, or a Linux budget pass. No S152 optimisation."
+}

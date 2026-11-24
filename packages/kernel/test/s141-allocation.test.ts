@@ -7,7 +7,7 @@ import { createState } from '../src/tick/setup.ts';
 import { toId } from '../src/ids.ts';
 import type { State } from '../src/root-state.ts';
 import type { AllocationInstrument } from '../src/world/allocation.ts';
-import { allocationSelection } from '../src/command/allocation.ts';
+import { allocationAuthority, allocationSelection } from '../src/command/allocation.ts';
 import { issueAllocation, arriveAllocation, receiveAllocations, fulfilAllocation } from '../src/tick/allocation.ts';
 import { ctxFor } from './support/tick-context.ts';
 import { tick, TICK_MECHANICS } from '../src/tick/tick.ts';
@@ -77,6 +77,20 @@ it('A04: issue and rank cannot replace a received authority',()=>{
   const sent=receive(g);
   const refused=arriveAllocation(ctxFor(g.world,state,sent.msg.msgArriveDay,TICK_MECHANICS),state,sent.msg);
   expect(refused.allocationRecords?.[sent.msg.msgOrigin]).toMatchObject({allocReasons:['authority_unavailable'],allocLots:[]});
+});
+it('an unopened sending or receiving command is an authority gap, never a dispatch or a crash',()=>{
+  const g=fixture();
+  expect(allocationAuthority(g.world,g.state,g.paper,1)).toBe(true);
+  for(const absent of [g.paper.from,g.paper.to]) {
+    const posts={...g.state.postStates};delete posts[absent];
+    const state={...g.state,postStates:posts}, before=canonicalHash(state);
+    expect(availableAllocations(g.world,state,g.paper.issuer,1)).toEqual([]);
+    expect(()=>allocationAuthority(g.world,state,g.paper,1)).not.toThrow();
+    expect(allocationAuthority(g.world,state,g.paper,1)).toBe(false);
+    const ctx=ctxFor(g.world,state,1,TICK_MECHANICS);
+    expect(issueAllocation(ctx,state,seatIdFor(g.paper.issuer),{cmd:'allocation',paper:g.paper.id,route:'courier'})).toBe('bad_selection');
+    expect(ctx.outbox).toEqual([]);expect(canonicalHash(state)).toBe(before);
+  }
 });
 it('A06: receipt reserves the selected lot against a competing request; splitting conserves all lot values',()=>{
   const g=fixture(), r=receive(g);

@@ -1,0 +1,24 @@
+{
+  "cause": "The guard added one line before the already-reviewed immutable service comparison. The content hash and raw diagnostic line therefore changed; no service-field write was introduced.",
+  "oldHash": "7888bd1a021e89dab1ce474c2438d588c77987ada338ed906f48f95702202ccc",
+  "newHash": "467f65e3791b7032426d9be85fa438aea89b6c1befffab63cb99d973a433b5f8",
+  "oldLine": 139,
+  "newLine": 140,
+  "rawScannerChanged": false,
+  "secondHook": {
+    "exit": 1,
+    "filesPassed": 291,
+    "filesFailed": 1,
+    "testsPassed": 2559,
+    "testsFailed": 1,
+    "expectedFailures": 3,
+    "skips": 3,
+    "log": "runs/s152/commit-hook-attempt2.log"
+  },
+  "reuse": "All runtime source and data unchanged since both148-day profiles; detailed capture, replay/resume and profile proofs remain valid.",
+  "focusedGreen": {
+    "log": "runs/s152/one-writer-green.log",
+    "exit": 0,
+    "tests": 44
+  }
+}

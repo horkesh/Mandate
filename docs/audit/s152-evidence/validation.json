@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "path": "runs/s152/declarations-red.log",
+      "exit": 1,
+      "result": "3 expected pre-declaration failures",
+      "sha256": "2af6b4bbf5b1327b11e81ab0ca9f595fafcd92486afc77246bb4d90620a23a34"
+    },
+    {
+      "path": "runs/s152/generate.log",
+      "exit": 0,
+      "result": "1 generated world changed; inherited unknown-value warnings",
+      "sha256": "c9ae5ba46d4efac6ba6918b8e62657df353fa21c6fbc4d696e92b0795765126f"
+    },
+    {
+      "path": "runs/s152/declarations-green.log",
+      "exit": 0,
+      "result": "3 files,10 tests passed",
+      "sha256": "6c28c39cabfecbc44e347ff840ae1604a0a48550e4ee0fd081132907622f39da"
+    },
+    {
+      "path": "runs/s152/paired.log",
+      "exit": 0,
+      "result": "2 files,72 tests passed",
+      "sha256": "bd2301637981b654b9cf24ecdf685210f03f02f56f0a79aa8f52e7d082aa01b8"
+    },
+    {
+      "path": "runs/s152/smoke.log",
+      "exit": 0,
+      "result": "2 days,0 rejections",
+      "sha256": "de0ed012dc00bb6e06dc89eef320dd11dceccc2cc129ed6f230d9a01122b75a0"
+    },
+    {
+      "path": "runs/s152/typecheck.log",
+      "exit": 0,
+      "result": "no diagnostics",
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    },
+    {
+      "path": "runs/s152/rules.log",
+      "exit": 0,
+      "result": "0 new,changed,stale findings",
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "path": "runs/s152/boundary.log",
+      "exit": 0,
+      "result": "504files,61terms",
+      "sha256": "75f9c02b95b904e7c0517250ae79a45e15eedde498c4a7ee0150678de534be3f"
+    },
+    {
+      "path": "runs/s152/measurement.log",
+      "exit": 0,
+      "result": "one148-day capture; replay,resume,saved-log match",
+      "sha256": "67968d5f6e06a8ad44ed678552892ff96ff867928977ea13a41139130019a22b"
+    },
+    {
+      "path": "runs/s152/publish.log",
+      "exit": 0,
+      "result": "25allocation fates,2onward fates,7request cycles",
+      "sha256": "56a37770c6f22db41bacef7251695c5bef012faac2279bbef98c9d4d795f61a3"
+    }
+  ],
+  "hook": "ordinary git commit hook remains the final gate; receipt at runs/s152/commit-hook.log and commit-result.json",
+  "review": "author checks only; standing review is a separate lead-owned lane under docs/LANES.md; no independent review claimed",
+  "knownMarks": "all three unchanged;25 failures still observed; no floor,band,seed,date,term or threshold changes",
+  "firstHook": "failed one unopened-command defect; see unopened-command-fix.json",
+  "correctionChecks": [
+    {
+      "path": "runs/s152/unopened-red.log",
+      "exit": 1,
+      "sha256": "927dcf92a431fadf628db50c23f35e20476ae3ea8d379747b3eb041741a17a35"
+    },
+    {
+      "path": "runs/s152/unopened-menu-red.log",
+      "exit": 1,
+      "sha256": "1925eeb55eea299f559ecfabc66a7a9669b8a12fff3098186be1b856e61a3aad"
+    },
+    {
+      "path": "runs/s152/unopened-menu-green.log",
+      "exit": 0,
+      "sha256": "98d3eae49582a51d97f869a630f922443d1c7dc41fb8feaf2604c2fbcc7fc87e"
+    },
+    {
+      "path": "runs/s152/guard-projection-final.log",
+      "exit": 0,
+      "sha256": "615f916325bfd7fa30d2bcf94649cdc56fbc99b93f9c0dabac11dd9c9a42a4fd"
+    },
+    {
+      "path": "runs/s152/guard-rules-final.log",
+      "exit": 0,
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "path": "runs/s152/guard-typecheck.log",
+      "exit": 0,
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    },
+    {
+      "path": "runs/s152/one-writer-green.log",
+      "exit": 0,
+      "sha256": "9e495729341f4c43b20fc8c1093793199a109179035e25269d0faaa1f78d1baa"
+    },
+    {
+      "path": "runs/s152/final-rules.log",
+      "exit": 0,
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "path": "runs/s152/final-typecheck.log",
+      "exit": 0,
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    }
+  ],
+  "profileDailyHashProof": "profile/baseline.json and s152.json:148days verified each, exact retained hashes",
+  "secondHook": "Only the changed reviewed-read source hash and shifted diagnostic line failed; see one-writer-registration.json. All2559 other tests passed,3expected failures and3skips."
+}

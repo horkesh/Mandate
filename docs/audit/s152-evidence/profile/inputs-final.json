@@ -1,0 +1,25 @@
+{
+  "baseline": "7d3c1bcd2ccb507f8094f9c422fdea550df62bb9",
+  "archiveSHA256": "8f9f8863c8e608320a05c2209d9bc262ae11d6b207406ca762ba76b074c77e62",
+  "packFiles": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\runs\\s152\\profile\\baseline\\packs\\union-1861\\pack.json",
+      "sha256": "7e665517e38ffcbf9054887326c63d3878f4743ee6a028dae0b4ba05c17d5d1f"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\runs\\s152\\profile\\baseline\\packs\\union-1861\\data\\world.json",
+      "sha256": "7d100f6c6b72411d970f96c62ea9cf56f0fed99e349c4bdc7a112690a0edc137"
+    }
+  ],
+  "runtime": "exact7d3c1bcd packages plus pack snapshot, with local @mandate junctions to the snapshot",
+  "authorisation": "fresh CODEX For S152 in S153 message: local A/B profile share, not wall-clock claim",
+  "runtimeArchiveSHA256": "cab77b1d59c923227f26b249acf2a571e7877be4c0f40decf3d42e4aeaa986d6",
+  "productionCorrection": [
+    "packages/kernel/src/command/allocation.ts: early missing-command guard",
+    "packages/kernel/src/seats/allocation.ts: matching menu address guard"
+  ],
+  "candidateCodeHashes": {
+    "packages/kernel/src/command/allocation.ts": "6833990d6f8ead7fe6931992f720856fb798d068bf3ae7813639ed216aa9e278",
+    "packages/kernel/src/seats/allocation.ts": "6ed3d5cb83453e61a2c16f35965c06502610259187a000a55ec2b048570c13a1"
+  }
+}

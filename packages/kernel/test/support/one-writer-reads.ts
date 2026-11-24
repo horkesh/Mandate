@@ -74,9 +74,9 @@ export function classifyReads(
 export const REVIEWED_READS: readonly SourceReadClassifications[] = [
   {
     path: 'packages/kernel/src/command/allocation.ts',
-    hash: '7888bd1a021e89dab1ce474c2438d588c77987ada338ed906f48f95702202ccc',
+    hash: '467f65e3791b7032426d9be85fa438aea89b6c1befffab63cb99d973a433b5f8',
     sites: [{
-      line: 139, keys: ['enlEndsDay', 'lotService'], form: 'assignment',
+      line: 140, keys: ['enlEndsDay', 'lotService'], form: 'assignment',
       reason: 'The service end date is compared with null and the current day.',
     }],
   },

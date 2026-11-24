@@ -22,6 +22,7 @@ export function availableAllocations(world: SeatsWorld, state: State, person: Pe
   const knowledge=knowledgeOf(state,seatIdFor(person));
   return (world.map.world.rules.allocationInstruments??[]).filter(p=>p.issuer===person &&
     p.fromDate<=formatIsoDate(dateOfDay(world.start.startDate,day)) &&
+    state.postStates[p.from]!==undefined && state.postStates[p.to]!==undefined &&
     !knowledge.knownDoctrineDispatches?.some(d=>letterKey(d.dispatchLetter)===letterKey(p.letter)) &&
     hasRequiredPapers(p.requiresPapers,knowledge,state.stateDay,world.rules.templates))
     .sort((a,b)=>strictCompare(a.fromDate,b.fromDate)||strictCompare(a.id,b.id));

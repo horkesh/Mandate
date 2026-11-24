@@ -1,0 +1,12 @@
+{
+  "label": "s152",
+  "smoke": false,
+  "days": 148,
+  "worldHash": "4ccf3df48e929384191611770f1a3541f81e11abcc0c5bee93211c48d147ef0b",
+  "finalHash": "d4c187e2a6eeabe19e9aa8f6c625654d37a9c4ebf62ca8557f5c614e12f2b164",
+  "matchesRetainedCapture": true,
+  "verifiedDays": 148,
+  "logEntries": 232,
+  "profileSamples": 27214,
+  "limitation": "Per-function sample shares only, not a wall-clock or Linux budget reading. S153 runs alongside, per lead."
+}

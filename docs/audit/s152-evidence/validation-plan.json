@@ -1,0 +1,28 @@
+{
+  "scope": "S152 only; nine representable sending clauses and full201 research dispositions; no new engine grammar, modes fallback, target size or dates",
+  "baseline": "b2a0c513512bf54397c0deafac50cfa5b919d16150c5a9c9c5c733fb93eb2eb4",
+  "command": "node --import tsx tools/s152-measure-allocation.ts",
+  "capture": "runs/s152/measurement",
+  "days": 148,
+  "cost": "one forward capture with standard daily replay, saved-log replay and day60 resume; expected a few minutes on contended host; no timing claim",
+  "pass": [
+    "zero rejections",
+    "daily replay matches",
+    "save replay and resume match",
+    "publish all armies120/140/146, instruments, requests, battles, bands/floors"
+  ],
+  "stop": "first unexpected error/rejection/hash mismatch; preserve partial evidence; no expensive retry without cheap diagnosis/correction; new zero to lead before hook",
+  "codexFreshRead": {
+    "sha256": "2083590d00860e88ad325e9853d84716a228244bd844092a009d0b229215d9a5",
+    "bytes": 1825845,
+    "hostedTimingPresentAfterS152Brief": false
+  },
+  "cheapEvidence": [
+    "declarations-green.log:10passed",
+    "paired.log:72passed",
+    "smoke.log:2days/0rejections",
+    "typecheck.log:0",
+    "rules.log:0",
+    "boundary.log:0"
+  ]
+}

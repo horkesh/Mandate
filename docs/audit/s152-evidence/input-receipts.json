@@ -1,0 +1,30 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\2026-11-24-S149-sending-orders.md",
+    "sha256": "d6683514f4ea22a1006903895210750914410ea6780d75ea97134acc519cd8c5"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\2026-11-24-S151-july-army-orders.md",
+    "sha256": "c34ca7288ebf8f7379f769517fa5f7c9ddd68c83b2311e235e05c959cf536094"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\sending-instruments.csv",
+    "sha256": "58ea15c7a8ede7f25676d5b723a5c6cb5c095f47c132de47b491c66b747da8a4"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\instruments.csv",
+    "sha256": "125ce0b7c35c3f8ad04f3a4af2f8c40e3b1755c7c56606af2eb6efef276973bd"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\identity-links.csv",
+    "sha256": "8ce7a4545268b207fef6d576094c2a1f5030f1895409298cfdb524981459ae53"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\source-reading.json",
+    "sha256": "6da0574cc74872d5ad811dd022dc052396b3d066d52131550b8a2c1b02fd7915"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\source-reading.json",
+    "sha256": "b094b54149219b484f86c4402c90e3f979f4fe0d6fff58cb8bdb23086bc929e6"
+  }
+]
