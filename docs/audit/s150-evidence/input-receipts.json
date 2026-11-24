@@ -1,0 +1,177 @@
+[
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\sending-instruments.csv",
+    "path": "docs/audit/s150-evidence/s149-instruments.csv",
+    "sha256": "58ea15c7a8ede7f25676d5b723a5c6cb5c095f47c132de47b491c66b747da8a4"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\instruments.csv",
+    "path": "docs/audit/s150-evidence/s138-instruments.csv",
+    "sha256": "cc33a4bfb1db1c20d3a968c875c6a60478bcc03fd545ee709ee2bd0a7030d7f2"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p246.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p246.txt",
+    "sha256": "865b2b4edae6a227b10770448c7e5e05f4bd9ad8a6bb745ba2225d379a407406"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p160.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p160.txt",
+    "sha256": "a44772d6ac35dd023129f79c32ae4d4ab6685d75f9fe72a464e31ed8bee3eb5d"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p119.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p119.txt",
+    "sha256": "a3098ae2bd534936a3a989283e8d573ca36107bbd54dd646388188e9105994b4"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p200.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p200.txt",
+    "sha256": "477a37601ce9de3666e250637a6e7d633ef54b6dadcf057cf8242bf5521c0fc0"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p255.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p255.txt",
+    "sha256": "91d0cca9d0f1526df829b1baa4977f1f24d4535914c31c1ce6b21a2adf640a2e"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p272.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p272.txt",
+    "sha256": "d99a67c16d96ba53de908a7ca17e1472d02f90f601d737e9523f0bd5e0f9c313"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p283.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p283.txt",
+    "sha256": "6e637907c4e6d4b60dde541bc2e4269e2e757761f8d104adea73077f0d22a21b"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p296.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p296.txt",
+    "sha256": "0a6800afe6d72d170e2dbf6c5d56591fc427e924781437f2d094ddb44623f27a"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p389.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.1-p389.txt",
+    "sha256": "f955a0be375acfcfff77b16450c74219403b08b6efca667edce13f1c11e5dedb"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.1-p390.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.1-p390.txt",
+    "sha256": "20f645aea76b65af09b2ef6b0c1db3564103e22a2bfcc26017ead6ad6c50f843"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p716.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-II-p716.txt",
+    "sha256": "24793c0431a2d64dcf732f267b1f13b68cbd16ef4ff7c2254035e0672c3fa599"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p128.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p128.txt",
+    "sha256": "d8c4d7c07c655dcf6563ce8df08d63032c1da10f857e3eca37aa73dc785528d5"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p135.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p135.txt",
+    "sha256": "453612d6a2e1c5c601535d7dc79d3f928af91e806e67a9802d8025fbbdffa11a"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p136.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p136.txt",
+    "sha256": "2d4c969fb3b0d0771e64dd1939e0c6fdf6511eeafc9b5281327220337d294461"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p140.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p140.txt",
+    "sha256": "ac4843bbce90a683291ef490df38f020a78c18661859100208aea3fcbc75d110"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p141.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p141.txt",
+    "sha256": "7941692cd38520310d050140c497f645caa090868de5bc4784f062de3ab3dc8d"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p151.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p151.txt",
+    "sha256": "17df09e2dc437cbbf68fda79a0d23f495b055812edeaa3ca907745624b256f54"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p127.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p127.txt",
+    "sha256": "1341aa4c1670f152c8b7d2b2723895d7a0fd305576c1f91027acca3347cc523b"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p266.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p266.txt",
+    "sha256": "f60fdeee5fce1866b2fc03df7c05197ff848916baffa6b40ea3287cd5ddc4b7e"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p267.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p267.txt",
+    "sha256": "b20952e4db40ab5a11d5df0aa0a71f367989ad040df2fc9d43e38d2bf4573a92"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-III-I-p287.txt",
+    "path": "docs/audit/s150-evidence/read/OR-III-I-p287.txt",
+    "sha256": "512656ba88d668fa67cd4a4a7ceba253954b7cf933aba8c0ae631333792b2a27"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-LI.2-p123.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-LI.2-p123.txt",
+    "sha256": "d8d38ab77fc9485bd44bb43cfd3af64efb9854ca40eb660d1ee7aa1d2b032051"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p559.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-II-p559.txt",
+    "sha256": "d1ccc06da27b717efb2d0e8bd4ba4f5796fa20590c23ec55dcc50f565bdb290d"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p1000.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-II-p1000.txt",
+    "sha256": "7f4ecbb4e5936f18d23c5504b71e715b5abe328a61bce7634c6062bd15d6e913"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p750.txt",
+    "path": "docs/audit/s150-evidence/read/OR-IV-I-p750.txt",
+    "sha256": "e926fa357fb4af8f8953ea5c38e0838de3537680a9c8f906847cc7a1fb6201cd"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\MI-Robertson-1882-p166.txt",
+    "path": "docs/audit/s150-evidence/read/MI-Robertson-1882-p166.txt",
+    "sha256": "444475cd9e74a6a2323b118ba37645fd93573c9477cd703a590d491ab6f627d3"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p619.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-II-p619.txt",
+    "sha256": "5f48431b0ab6203dc0ab9dab0a3e931036b28acf22f632a07d1a379677f3df7f"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p620.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-II-p620.txt",
+    "sha256": "eaee8e5f203d54bba6e79ca43492a08006b0b859ff43a94e152919641a24c0fa"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p622.txt",
+    "path": "docs/audit/s150-evidence/read/OR-I-II-p622.txt",
+    "sha256": "d21b82648591ed7259ac3b4bbdf8481a1307d3a8b3e603051d8cceefb745daab"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\NJ-Stryker-I-p15.txt",
+    "path": "docs/audit/s150-evidence/read/NJ-Stryker-I-p15.txt",
+    "sha256": "983811e0fe4fe3c694cadb0dc77a32841b192b6171144a5016ca97c81821e90a"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p231.txt",
+    "path": "docs/audit/s150-evidence/read/OR-IV-I-p231.txt",
+    "sha256": "b075526178125ed9c28b41a7d9ccb232216f128d73c2cf63703907524e960fb2"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p232.txt",
+    "path": "docs/audit/s150-evidence/read/OR-IV-I-p232.txt",
+    "sha256": "56de124e28aca419fee2cb5c745b4aacb72404bc629f2f4c04fafee2c1820147"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-IV-I-p233.txt",
+    "path": "docs/audit/s150-evidence/read/OR-IV-I-p233.txt",
+    "sha256": "a39022bc2039c5ffc56b3c2b4691c7d3342825147a0f72eea1cb7d6759eebb20"
+  }
+]

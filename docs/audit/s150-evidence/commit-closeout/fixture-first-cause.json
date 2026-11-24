@@ -1,0 +1,57 @@
+{
+  "day": 6,
+  "onlyChangedRoot": "messagesInTransit",
+  "added": [
+    {
+      "id": "m.6.n_governor.n_leader.governor-holdings.n_brenmark_governor",
+      "msgOrigin": "m.6.n_governor.n_leader.governor-holdings.n_brenmark_governor",
+      "msgFrom": "n_governor",
+      "msgTo": "n_leader",
+      "msgToPost": "n_head",
+      "msgRole": "addressee",
+      "msgRoute": "wire",
+      "msgSentDay": 6,
+      "msgArriveDay": 6,
+      "msgVia": [],
+      "msgPending": [],
+      "msgOrder": null,
+      "msgVerb": null,
+      "msgReport": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "n_governor",
+        "reportAuthorPost": "n_brenmark_governor",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "n_brenmark_governor",
+        "reportDay": 6,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null,
+        "reportClaims": [],
+        "reportGovernorLots": [
+          {
+            "availRegiment": null,
+            "availArm": "infantry",
+            "availCall": null,
+            "availEndsDay": 96,
+            "availTermDays": 90
+          },
+          {
+            "availRegiment": null,
+            "availArm": "infantry",
+            "availCall": null,
+            "availEndsDay": 96,
+            "availTermDays": 90
+          }
+        ]
+      },
+      "msgTruth": {
+        "truthTerms": [],
+        "truthTrimmed": []
+      }
+    }
+  ],
+  "removed": [],
+  "changedCommonMessages": [],
+  "otherRootsEqual": true
+}

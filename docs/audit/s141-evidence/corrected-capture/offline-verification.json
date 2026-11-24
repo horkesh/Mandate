@@ -1,0 +1,26 @@
+{
+  "captureCount": 1,
+  "correctedExit": 0,
+  "finalDay": 148,
+  "rejections": 0,
+  "worldHash": "1fda23a8f86861b2682b472b6471bfb4cdbdd10171c2e4e6c95575ec3f0adbeb",
+  "finalHash": "bd5c7e4e2dd3bf7ef5e212e237ca1d5d47e0fe6b08e5acc1504661a2633c0fc1",
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "bd5c7e4e2dd3bf7ef5e212e237ca1d5d47e0fe6b08e5acc1504661a2633c0fc1",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "measuredInputs": 795,
+  "inputDifferences": [
+    "packages/cli/src/liveness-gate.ts"
+  ],
+  "onlyUnionLivenessTableChanged": true,
+  "positiveBandRecords": 47,
+  "remainingDeadBands": 15,
+  "noAdditionalSimulation": true
+}

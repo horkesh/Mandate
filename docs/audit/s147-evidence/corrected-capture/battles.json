@@ -1,0 +1,407 @@
+[
+  [
+    "battle:fort_sumter:38",
+    {
+      "battleRegion": "fort_sumter",
+      "battleStartDay": 38,
+      "battleEndDay": 39,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_charleston"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 38,
+          "bdayNumber": 1,
+          "bdayType": "bombard",
+          "bdayAttacker": "confederate",
+          "bdayFrontage": 0,
+          "bdayContact": 0,
+          "bdayDraws": 0,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_charleston",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "fb_st_charleston_1st_artillery_battalion",
+                "fb_st_charleston_floating_battery",
+                "fb_st_charleston_fort_johnson"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 416,
+              "bsideCommitted": 416,
+              "bsideEngaged": 416,
+              "bsideBase": 0,
+              "bsideTerms": [],
+              "bsideMultiplier": 1000,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_floating_battery",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_fort_johnson",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_fort_sumter",
+              "bsideCommander": "anderson_robert",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "fb_us_sumter_garrison"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 85,
+              "bsideCommitted": 85,
+              "bsideEngaged": 85,
+              "bsideBase": 0,
+              "bsideTerms": [
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 2000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                }
+              ],
+              "bsideMultiplier": 3000,
+              "bsideKw": 0,
+              "bsideKwParts": [
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                }
+              ],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 420,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "guns_attacker",
+                  "btermValue": 416,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "guns_defender",
+                  "btermValue": 85,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 3000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                },
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                },
+                {
+                  "btermKind": "works_wear",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.worksWearPerDay"
+                },
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                },
+                {
+                  "btermKind": "surrender_floor",
+                  "btermValue": 364,
+                  "btermSource": "anderson_robert"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 471,
+                  "btermSource": "anderson_robert"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_us_sumter_garrison",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 39,
+          "bdayNumber": 2,
+          "bdayType": "bombard",
+          "bdayAttacker": "confederate",
+          "bdayFrontage": 0,
+          "bdayContact": 0,
+          "bdayDraws": 0,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_charleston",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "fb_st_charleston_1st_artillery_battalion",
+                "fb_st_charleston_floating_battery",
+                "fb_st_charleston_fort_johnson"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 416,
+              "bsideCommitted": 416,
+              "bsideEngaged": 416,
+              "bsideBase": 0,
+              "bsideTerms": [],
+              "bsideMultiplier": 1000,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_floating_battery",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_fort_johnson",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_fort_sumter",
+              "bsideCommander": "anderson_robert",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "fb_us_sumter_garrison"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 85,
+              "bsideCommitted": 85,
+              "bsideEngaged": 85,
+              "bsideBase": 0,
+              "bsideTerms": [
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 2000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                }
+              ],
+              "bsideMultiplier": 3000,
+              "bsideKw": 0,
+              "bsideKwParts": [
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                }
+              ],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 420,
+              "bsideMoraleAfter": 240,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "guns_attacker",
+                  "btermValue": 416,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "guns_defender",
+                  "btermValue": 85,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 3000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                },
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                },
+                {
+                  "btermKind": "works_wear",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.worksWearPerDay"
+                },
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                },
+                {
+                  "btermKind": "surrender_floor",
+                  "btermValue": 364,
+                  "btermSource": "anderson_robert"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 471,
+                  "btermSource": "anderson_robert"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": "surrender",
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_us_sumter_garrison",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+]

@@ -1,0 +1,400 @@
+{
+  "head": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "raw": [
+    {
+      "inventory": "docs/audit/s147-evidence/raw-inventory.json",
+      "files": 4,
+      "allHashesMatch": true
+    },
+    {
+      "inventory": "docs\\audit\\s147-evidence\\corrected-capture\\raw-inventory.json",
+      "files": 31,
+      "allHashesMatch": true
+    }
+  ],
+  "s141StartingPaths": 76,
+  "s141ByteExact": 71,
+  "paths": [
+    {
+      "path": "docs/audit/s141-evidence/README.md",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/allocations.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/army-lots.csv",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/army-totals.csv",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/army-totals.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/band-count-changes.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/capture-inputs.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/changed-battles.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/coverage.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/gate-failures-after-recentre.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/gate-failures-before-recentre.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/input-receipts.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/lead-liveness-review.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/lead-review.md",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/new-zeros.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/offline-verification.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/raw-inventory.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/rows.csv",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/scores.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/summary.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/unmatched.csv",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/unmatched.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/validation-results.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/instrument-disposition.csv",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/kernel-projection.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/measurement-status.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p166.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p303.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p304.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p307.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p308.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p607.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p619.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p620.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p623.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p624.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p652.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p653.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p690.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p744.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p751.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p897.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p898.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p981.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.1-p413.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.1-p414.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.2-p107.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.2-p108.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-IV-I-p272.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-IV-I-p275.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/Regs-1857-p2-3.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/Richardson-IV-p73.txt",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-input-receipts.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-instruments.csv",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-regiment-instruments.csv",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-source-reading.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/source-reading.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "notes/sprint-S141-allocation.md",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packages/cli/src/liveness-gate.ts",
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "packages/kernel/src/command/authority.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packages/kernel/test/s123-mandates.test.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/testbed/README.md",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "packs/union-1861/pack.json",
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "packs/union-1861/test/northern-concentration.test.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/s141-allocation.test.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/s64-command-inclusion.test.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/s77-concentration.test.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/support/generic-concentration-control.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/support/legacy-concentrations.json",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "tools/rules/liveness-changes.json",
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "tools/s141-measure-allocation.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "tools/test/s134-repair-records.test.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "tools/test/s90-liveness-ruling.test.ts",
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    }
+  ],
+  "additionalCapture": false
+}

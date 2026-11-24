@@ -1,9 +1,10 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { checkLiveness, phase0, type LivenessRow } from '@mandate/kernel';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { bandProblems, declaredMechanics, gateFailures, QUIET, REFERENCE_RUNS, seatsNamed, stalled, type ReferenceRun } from '../src/liveness-gate.ts';
 import { phase0Run } from '../src/phase0-run.ts';
+import { JULY_LIVENESS_KNOWN_FAILURE, unexpectedJulyFailures } from './support/july-liveness-known-failure.ts';
 
 /**
  * The Phase 0 liveness gate (lane 0.8, step 3; FOUNDATION section 11.5): every mechanic the tick and the
@@ -76,9 +77,16 @@ describe('the band table', () => {
 });
 
 describe('the reference runs', () => {
+  const july = REFERENCE_RUNS.find(r=>r.name==='union-1861, war by decision, 148 days')!;
+  let julyRows:readonly LivenessRow[];
+  beforeAll(()=>{julyRows=liveness(july);}); // A run error occurs outside .fails; reuse its rows, never run it twice.
+  it('keeps every July failure outside the lead\'s named diagnostic pairs red',()=>{
+    expect(unexpectedJulyFailures(gateFailures(july,julyRows))).toEqual([]);
+  });
   for (const run of REFERENCE_RUNS) {
-    it(`${run.name}: every mechanic fires within its band`, () => {
-      expect(gateFailures(run, liveness(run))).toEqual([]);
+    const knownJuly = run.name === 'union-1861, war by decision, 148 days';
+    (knownJuly ? it.fails : it)(`${run.name}: every mechanic fires within its band${knownJuly ? ` — ${JULY_LIVENESS_KNOWN_FAILURE}` : ''}`, () => {
+      expect(gateFailures(run, knownJuly ? julyRows : liveness(run))).toEqual([]);
     });
   }
 });

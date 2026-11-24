@@ -1,0 +1,16 @@
+{
+  "captureExit": 0,
+  "runtimeFilesUnchangedSinceSmokeAndCapture": 14,
+  "replayMatches": true,
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "41806f3a04db1b88d954f8ca66f2c89a63ccbbeeb7d65d2e71bd936d4424386e",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "noSecondCapture": true,
+  "pureSnapshotDerivations": "four retained snapshots, no ticks; all State hashes unchanged",
+  "allGateFirstCauses": 21,
+  "GO1Baseline": "30 original daily hashes61–90 matched; no rejection, done before production edits",
+  "actualReceivedReportEvents": 33
+}

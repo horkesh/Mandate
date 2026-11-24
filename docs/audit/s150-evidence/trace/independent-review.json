@@ -1,0 +1,45 @@
+{
+  "verdict": "approve bounded S150 follow-up",
+  "scope": "Completed approved operation releases the saved draft's allocation lock. Live and unstarted commitments remain protected. No change to the organisation policy or operational commitments.",
+  "kernel": {
+    "source": "packages/kernel/src/command/allocation.ts:88",
+    "identity": "Ended operation matches the same post, order, candidate and available draft occurrence. This mirrors the operation runner's already-ran predicate in packages/kernel/src/tick/operations.ts:210. Operation pruning retains the latest operation for each post.",
+    "regression": "The new fixture leaves choosing, review, ready, approved before opening, and live operation lots committed. The same lot is available after the matching operation ends.",
+    "organisation": {
+      "templateCount": 4,
+      "snapshotDays": [120, 140, 146],
+      "solelyStaleDraftBlockedMatchingBlocksByDay": [0, 0, 0],
+      "finding": "Using the original capture snapshots, no otherwise eligible matching named block was blocked solely by a completed draft at an army's organisation seat. Bate was away from Fredericksburg and Turney was already in Johnston's brigade. These observations do not warrant changing organisation.ts."
+    }
+  },
+  "trace": {
+    "coverage": "docs/audit/s150-evidence/trace/coverage.json",
+    "inventory": "docs/audit/s150-evidence/trace/evidence-inventory.json",
+    "dailyHashesMatched": 140,
+    "rejections": 0,
+    "declaredInstruments": 16,
+    "dispatchesWithAddresseeCompliance": 15,
+    "undispatchedPapers": 1,
+    "receivedOffers": 16,
+    "unreceivedOffers": 4,
+    "granularity": "Lot timelines observe net State changes at frozen tick boundaries. Several changes within one phase may combine. Message dispatch and paper receipt use tick events. The first selection screen sees the preceding State boundary and cannot certify each intermediate step in a delivery batch."
+  },
+  "correctedCapture": {
+    "source": "tools/s150-measure-allocation.ts:16",
+    "baseline": "runs/s150/measurement",
+    "baselineInventory": "docs/audit/s150-evidence/capture/raw-inventory.json",
+    "smokeOutput": "runs/s150/smoke-corrected",
+    "measurementOutput": "runs/s150/measurement-corrected",
+    "snapshotDays": [120, 140, 146],
+    "publication": "The runner writes full State snapshots and retains command lots, men, strength kinds and sources in the totals and composition outputs on each requested day. The original capture and smoke use distinct directories. The label accepted refers to acceptance of the original implementation as built. The original capture still has unresolved floors. The corrected report will call it the original S150 baseline. Exclusive creation of started.json would harden concurrent invocation. One authorized sequential invocation was launched.",
+    "verificationBoundary": "The main agent owns corrected capture runtime and publication verification."
+  },
+  "checks": [
+    {"check": "Read-only byte and SHA-256 inventory comparison", "exit": 0, "traceRecords": 12, "originalCaptureRecords": 32, "mismatches": 0},
+    {"check": "Prior retained trace replay", "exit": 0, "evidence": "runs/s150-trace/replay.log"},
+    {"check": "Expected pre-fix regression reproduction", "exit": 1, "evidence": "runs/s150-trace/fix-red.log"},
+    {"check": "Targeted corrected fixtures", "exit": 0, "tests": 7, "evidence": "runs/s150-trace/fix-green.log"},
+    {"check": "Related test group", "exit": 0, "tests": 87, "evidence": "runs/s150-trace/related-tests.log"},
+    {"check": "Corrected typecheck", "exit": 0, "evidence": "runs/s150-trace/fix-types-corrected.log"}
+  ]
+}

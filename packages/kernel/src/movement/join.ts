@@ -23,7 +23,14 @@ export interface AssignmentJourney {
   readonly assignmentRecipient: PersonId;
 }
 
+export interface ServiceJourney {
+  readonly serviceOrder: MessageId;
+  readonly servicePurpose: 'service' | 'transit';
+  readonly serviceReceiver?: PostId;
+  readonly serviceStation?: string;
+}
 export interface ForceJoin {
+  readonly joinService?: ServiceJourney;
   readonly joinAllocation?: MessageId;
   readonly joinOffer?: MessageId;
   readonly joinAssignment?: AssignmentJourney;
@@ -70,9 +77,16 @@ export function markJoins(state: State, blocks: readonly ForceBlockId[], bar: Jo
 }
 
 /** The destination is the call's, while the join post remains the governor's. */
-export function orderOfferJoins(state: State, blocks: readonly ForceBlockId[], owner: PostId, region: RegionId, day: number, offer: MessageId): State {
+export function orderOfferJoins(state: State, blocks: readonly ForceBlockId[], owner: PostId, region: RegionId, day: number, offer: MessageId, allocation = false): State {
  const next = orderJoins(state,blocks,owner,region,day);
  const joins = {...next.forceJoins};
- for (const b of blocks) joins[b] = {...joins[b]!,joinOffer:offer};
+ for (const b of blocks) joins[b] = {...joins[b]!,joinOffer:offer,...(allocation?{joinAllocation:offer}:{})};
  return {...next,forceJoins:joins};
+}
+
+/** Sending authority must already have accepted the service journey; this records its received terms. */
+export function orderServiceJoins(state: State, blocks: readonly ForceBlockId[], post: PostId, region: RegionId, day: number, service: ServiceJourney): State {
+  const next=orderJoins(state,blocks,post,region,day), joins={...next.forceJoins};
+  for(const block of blocks) joins[block]={...joins[block]!,joinService:service};
+  return {...next,forceJoins:joins};
 }

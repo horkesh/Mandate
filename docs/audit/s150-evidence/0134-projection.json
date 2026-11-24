@@ -1,0 +1,23 @@
+{
+  "baseline": "S150 retained projection",
+  "before": {
+    "hash": "6c5afba4d8f4fb4d1d965a1835c11f21ac9e44bcf0f5beb7d39803a80d0e9208",
+    "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/allocation.ts:allocationAuthority (postStates); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/allocation.ts:allocationFulfilments (postStates); packages/kernel/src/seats/force-requests.ts:forceOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptionsAt (postStates); packages/kernel/src/seats/onward-assignments.ts:assignmentOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+  },
+  "replacedPermissionHash": "83b44e1a112ac7e51355dd9aa8ca0dca12d857fe7a374e423a17a6335a07fd19",
+  "after": {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "83b44e1a112ac7e51355dd9aa8ca0dca12d857fe7a374e423a17a6335a07fd19",
+    "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/allocation.ts:allocationAuthority (postStates); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/allocation.ts:allocationFulfilments (postStates); packages/kernel/src/seats/force-requests.ts:forceOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptionsAt (postStates); packages/kernel/src/seats/onward-assignments.ts:assignmentOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+  },
+  "otherRootsUnchanged": 7,
+  "checks": [
+    "identical protected reader identities",
+    "all other permission hashes retained",
+    "subordinate routing uses received attributed returns and active mandate",
+    "superior paper contains scope and quantity, never chosen lots",
+    "subordinate compliance and own planner decide",
+    "physical receiver receipt completes the order"
+  ]
+}

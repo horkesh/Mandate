@@ -1,0 +1,51 @@
+{
+  "verdict": "approve_targeted_corrections",
+  "reviewed": [
+    "S150-R1: Closed. The original mixed-cause failure is fixed by recording an accepted wait after paper authority and response acceptance. The additional legacy source check established that early paper-level authority or recipient failure was refused while both old zero-lot per-candidate or per-batch authority deferrals were deferred. The correction recognizes an older deferred empty subordinate row using its saved, same-day complying addressee response and accepted destination/detail clauses. The correlated legacy report stays nonterminal and the material receipt records proof on the row before logged fulfilment, so it stays nonterminal after the row transitions to pending. The regression includes a true authority refusal, which stays terminal, and an accepted legacy authority-only wait across receipt, save/resume and logged choice. New opportunities still require newly available stable lot IDs and current authority, mission and retention checks.",
+    "S150-R2: Closed. Direct papers use active assign mandates from the issuing post, filtered through paper scope and rechecked per held lot. Nonempty declarations precede empty ones, and another scoped mandate is tried when one cannot select a lot. The three fixtures check wrong destination, no eligible lot, and empty modes and assert the emitted paper pairs the chosen mandate and its own modes.",
+    "S150-R3: Closed. Governor mode-gap detection is independent of the existence of a proposed paper. The force answer and dispatch record modes_unavailable for absent or invalid received modes while separately preserving no_eligible_force or refuse, with no assignment packet or dispatch. Received-stamp provenance and the voluntary holdings owner remain unchanged."
+  ],
+  "retained_evidence": [
+    {
+      "path": "runs/s150-live-orders/correction-red.log",
+      "exit": 1,
+      "result": "6 failed and 8 passed before correction"
+    },
+    {
+      "path": "runs/s150-live-orders/correction-green.log",
+      "exit": 0,
+      "result": "14 passed"
+    },
+    {
+      "path": "runs/s150-live-orders/correction-focused.log",
+      "exit": 1,
+      "result": "70 passed and 1 failed. F07 at s147-receipt-requests.test.ts:713 expects offer after manually constructing an unstamped governor ask at lines 706–708. The required typed defer is preserved."
+    },
+    {
+      "path": "runs/s150-live-orders/correction-types.log",
+      "exit": 0,
+      "result": "tsc --noEmit"
+    },
+    {
+      "path": "runs/s150-live-orders/legacy-authority-red.log",
+      "exit": 1,
+      "result": "1 expected legacy authority regression failed, 14 skipped"
+    },
+    {
+      "path": "runs/s150-live-orders/legacy-authority-green.log",
+      "exit": 0,
+      "result": "4 R1 cases passed, 11 skipped"
+    },
+    {
+      "path": "runs/s150-live-orders/legacy-authority-types-first.log",
+      "exit": 1,
+      "result": "Two TS7053 diagnostics from one test fixture inferred union, corrected by explicit State annotation"
+    },
+    {
+      "path": "runs/s150-live-orders/legacy-authority-types.log",
+      "exit": 0,
+      "result": "tsc --noEmit passed after test annotation fix"
+    }
+  ],
+  "limits": "One bounded verification against current source, the accepted index receipt paths, and the retained logs. The final change only touched R1, and earlier R2/R3 evidence was reused. A pre-change save that has already pruned the original compliance response cannot be promoted through the legacy proof guard. Once recognized, an outstanding wait keeps that response through normal pruning. F07 has no unstaged edit. No independent test reruns, tracked mutations, capture, full suite or hook. This verdict does not establish campaign floors or bands."
+}

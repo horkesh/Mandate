@@ -1,0 +1,72 @@
+{
+  "head": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "baseline": "S1500134 capture",
+  "baselineFinalHash": "1be63020b01905522f15da9375308c6c50e737ad8ff90a24099c6f9b45388eba",
+  "baselineRawFilesVerified": 33,
+  "smokeCommand": "node --import tsx tools/s150-measure-allocation.ts --0135 --smoke",
+  "captureCommand": "node --import tsx tools/s150-measure-allocation.ts --0135",
+  "cost": "3-6 minutes under contention, no timing claim",
+  "stopRule": "first rejection, missing required output, replay/resume mismatch; no blind retry",
+  "files": [
+    {
+      "path": "notes/sprint-S150-sending-orders.md",
+      "sha256": "e88526f1ec0509a7deed930e1a40dc7f631b64f77572e01c09d7266f52128190"
+    },
+    {
+      "path": "packages/kernel/src/command/allocation.ts",
+      "sha256": "af6365a47b57402d951bcfc44ca44631a8fa246da322dff090d98bcd73f92fca"
+    },
+    {
+      "path": "packages/kernel/src/command/force-requests.ts",
+      "sha256": "d7f5a48e0741d96241b5541dbb5e8a9e55fc7db0b27bc5b7d310fb1947927472"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/report.ts",
+      "sha256": "a4f4155646a6766e20b414de95ffd4674f1e280d1b8bec2a7bec9375405e465d"
+    },
+    {
+      "path": "packages/kernel/src/seats/force-requests.ts",
+      "sha256": "f246f052c1661010b87d2618801d0726df9daa511bc4a7f20570a1f0e47a25d8"
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "sha256": "d6c9354036457db678e9cd837159bdc1e3e63866a10d9b9ed17d64fe576b950c"
+    },
+    {
+      "path": "packages/kernel/src/tick/force-requests.ts",
+      "sha256": "94d4a571e488effd74e86070c18c95002297a315722de3493c8e99862f0d938d"
+    },
+    {
+      "path": "packages/kernel/test/s147-receipt-requests.test.ts",
+      "sha256": "b015024110dc1c987b36f5c4e9ae2a2ecd1ef22308f1fe3ae613e80d130e488b"
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "sha256": "7d100f6c6b72411d970f96c62ea9cf56f0fed99e349c4bdc7a112690a0edc137"
+    },
+    {
+      "path": "packs/union-1861/pack.json",
+      "sha256": "f9775163492c310ca84273db745b23cf167efda28ae733ccfca5002662c5f0f1"
+    },
+    {
+      "path": "packs/union-1861/test/s150-sending-instruments.test.ts",
+      "sha256": "d87cd146bbccfb533ca3eedac08ac9ae753066b6eb7124ba3ab142a4783c9696"
+    },
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "sha256": "e4e1998b61653fee3d6470fd3e5e1e763d260d477177628dfff45c1bf54c9a7d"
+    },
+    {
+      "path": "tools/s150-go1-evidence.ts",
+      "sha256": "db28505d2a0e2e4ba76b0df348f6b8a12768887e951c9788672ba671ad438b21"
+    },
+    {
+      "path": "tools/s150-measure-allocation.ts",
+      "sha256": "5f4290798567ed1d66783fd501aac11f70aeee11acac68185c6750104ef76f46"
+    },
+    {
+      "path": "tools/s150-projection-evidence.ts",
+      "sha256": "329b87139afb971adc338085e26c57d9f41c912b193d6de8f3c02f1a89039a63"
+    }
+  ]
+}

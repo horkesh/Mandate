@@ -1,0 +1,7 @@
+{
+  "baseline": "S1500135 capture",
+  "baselineFinalHash": "41806f3a04db1b88d954f8ca66f2c89a63ccbbeeb7d65d2e71bd936d4424386e",
+  "comparison": "63 full printed-regiment/day candidate groups equal current capture; no separate GO1 replay run",
+  "olderDiagnosticReused": "../0135-capture/go1-baseline-verification.json",
+  "currentReplay": "summary.json daily148 matches; day60 resume/saved-log replay match"
+}

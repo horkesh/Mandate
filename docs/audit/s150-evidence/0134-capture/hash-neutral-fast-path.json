@@ -1,0 +1,10 @@
+{
+  "scope": "Only the unlimited numeric mandate fast path; the0134 feature intentionally changes behaviour. No end-to-end timing claim.",
+  "source": "packages/kernel/src/command/authority.ts:mayCommit",
+  "preconditions": "Nonempty unique blocks, held force membership, mandate family and overlapping live-use checks have already passed; ceilingMen and mandateGuard both null.",
+  "previousResult": "Compute spent strengths; skip both numeric checks; return true.",
+  "currentResult": "Return true before the unused numeric aggregation.",
+  "equivalence": "The omitted work is derived arithmetic/cache work, with no State writer, RNG draw or telemetry. Both branches return the same boolean for the preconditions. Numeric mandates retain full lot/ceiling/guard checks and targeted coverage.",
+  "otherSavings": "Dynamic assignment lookup short-circuits without building flatMap answer arrays; direct send checks own holdings before considering subordinate orders. Shared lazy planning ground is retained.",
+  "performanceMeasure": "Hosted Linux CI remains authoritative, roughly3ms headroom per lead; not run here. Other project process left alone, no local reading."
+}

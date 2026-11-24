@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { livenessProblems } from '../rules/liveness-causes.ts';
+import { fingerprint } from '../rules/common.ts';
 import { REFERENCE_RUNS } from '../../packages/cli/src/liveness-gate.ts';
 
 const receipt = JSON.parse(readFileSync(new URL('./support/s90-quiet-transition.json', import.meta.url), 'utf8'));
@@ -17,16 +18,21 @@ describe('S90 continuation ruling 4', () => {
   });
   it('keeps the authorized quiet messenger transition while sourced positive relay bands advance', () => {
     const union = REFERENCE_RUNS.find(run => run.name === 'union-1861, war by decision, 148 days')!;
-    expect(union.bands['messages.special_messenger']).toEqual(r.after);
+    const history = JSON.parse(readFileSync(new URL('../rules/liveness-changes.json', import.meta.url), 'utf8'));
+    expect(history.filter((row: unknown) => fingerprint(row) === fingerprint(r))).toEqual([r]);
+    const later = history.slice(history.findIndex((row: unknown) => fingerprint(row) === fingerprint(r)) + 1)
+      .filter((row: { key: string }) => row.key === r.key);
+    // Keep S90's exact quiet grant; later observed positive firings follow the ordinary ledger.
+    expect(livenessProblems({ [r.key]: r.after }, { [r.key]: union.bands['messages.special_messenger']! }, later)).toEqual([]);
     const key = `${union.name}/orders.relayed`;
-    const updates = JSON.parse(readFileSync(new URL('../rules/liveness-changes.json', import.meta.url), 'utf8'))
-      .filter((change: { key: string }) => change.key === key);
-    const latest = updates.at(-1);
-    // S123 advances S90's positive relay band; its immutable quiet grant is unchanged.
-    expect(latest.before).toEqual({ minFires: 4, maxFires: 18 });
-    expect(latest.observed).toBe(20);
-    expect(union.bands['orders.relayed']).toEqual({ minFires: 10, maxFires: 40 });
-    expect(livenessProblems({ [key]: latest.before }, { [key]: union.bands['orders.relayed']! }, [latest])).toEqual([]);
+    const updates = history.filter((change: { key: string }) => change.key === key);
+    const s123 = updates.find((change: { evidence: string }) => change.evidence === 'docs/audit/s123-evidence/band-changes.json#orders.relayed');
+    // S123's historical relay reading stays exact; current bands may advance through the ledger.
+    expect(s123.before).toEqual({ minFires: 4, maxFires: 18 });
+    expect(s123.observed).toBe(20);
+    expect(s123.after).toEqual({ minFires: 10, maxFires: 40 });
+    expect(livenessProblems({ [key]: s123.before }, { [key]: s123.after }, [s123])).toEqual([]);
+    expect(livenessProblems({ [key]: s123.after }, { [key]: union.bands['orders.relayed']! }, updates.slice(updates.indexOf(s123) + 1))).toEqual([]);
     expect(REFERENCE_RUNS.find(run => run.name === 'testbed, 120 days')!.bands['messages.special_messenger']!.minFires).toBe(1);
   });
 });

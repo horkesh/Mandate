@@ -1,0 +1,97 @@
+{
+  "method": "Pure principal menu derivations from retained120/140 States, no tick or seat choice; all State hashes unchanged. Actual134 packets separately show the selected route.",
+  "rows": [
+    {
+      "folder": "measurement-0135",
+      "day": 120,
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 1,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 0,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 1,
+          "price": 0
+        }
+      ],
+      "control": null
+    },
+    {
+      "folder": "measurement-0135",
+      "day": 140,
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 1,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 0,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 1,
+          "price": 0
+        }
+      ],
+      "control": null
+    },
+    {
+      "folder": "measurement-live-orders",
+      "day": 120,
+      "control": {
+        "union": 360
+      },
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 1,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 0,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ]
+    },
+    {
+      "folder": "measurement-live-orders",
+      "day": 140,
+      "control": {
+        "union": 585
+      },
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 1,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 0,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ]
+    }
+  ]
+}

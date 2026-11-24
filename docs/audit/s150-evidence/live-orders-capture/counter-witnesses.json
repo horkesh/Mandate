@@ -1,0 +1,1581 @@
+{
+  "combat.battle_closed": {
+    "daily": [
+      {
+        "day": 148,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.battle_closed",
+      "fires": 1,
+      "magnitude": 1
+    }
+  },
+  "combat.battle_opened": {
+    "daily": [
+      {
+        "day": 148,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.battle_opened",
+      "fires": 1,
+      "magnitude": 1
+    }
+  },
+  "combat.captured": {
+    "daily": [
+      {
+        "day": 148,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.captured",
+      "fires": 1,
+      "magnitude": 6
+    }
+  },
+  "combat.flank_broken": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.flank_broken",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  "combat.general_hit": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.general_hit",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  "combat.killed_wounded": {
+    "daily": [
+      {
+        "day": 148,
+        "fires": 2
+      }
+    ],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 2,
+      "magnitude": 317
+    }
+  },
+  "combat.missing": {
+    "daily": [
+      {
+        "day": 148,
+        "fires": 2
+      }
+    ],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.missing",
+      "fires": 2,
+      "magnitude": 52
+    }
+  },
+  "combat.routed": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "combat.routed",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  "forces.stragglers_returned": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  "map.pocket_relieved": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  "messages.special_messenger": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "messages.special_messenger",
+      "fires": 1,
+      "magnitude": 1
+    }
+  },
+  "movement.arrived": {
+    "daily": [
+      {
+        "day": 53,
+        "fires": 1
+      },
+      {
+        "day": 54,
+        "fires": 2
+      },
+      {
+        "day": 55,
+        "fires": 5
+      },
+      {
+        "day": 56,
+        "fires": 4
+      },
+      {
+        "day": 57,
+        "fires": 5
+      },
+      {
+        "day": 58,
+        "fires": 6
+      },
+      {
+        "day": 59,
+        "fires": 5
+      },
+      {
+        "day": 60,
+        "fires": 5
+      },
+      {
+        "day": 61,
+        "fires": 7
+      },
+      {
+        "day": 62,
+        "fires": 7
+      },
+      {
+        "day": 63,
+        "fires": 6
+      },
+      {
+        "day": 64,
+        "fires": 3
+      },
+      {
+        "day": 65,
+        "fires": 5
+      },
+      {
+        "day": 66,
+        "fires": 3
+      },
+      {
+        "day": 67,
+        "fires": 3
+      },
+      {
+        "day": 68,
+        "fires": 3
+      },
+      {
+        "day": 69,
+        "fires": 3
+      },
+      {
+        "day": 70,
+        "fires": 2
+      },
+      {
+        "day": 71,
+        "fires": 3
+      },
+      {
+        "day": 72,
+        "fires": 2
+      },
+      {
+        "day": 73,
+        "fires": 1
+      },
+      {
+        "day": 74,
+        "fires": 1
+      },
+      {
+        "day": 75,
+        "fires": 2
+      },
+      {
+        "day": 76,
+        "fires": 2
+      },
+      {
+        "day": 77,
+        "fires": 2
+      },
+      {
+        "day": 78,
+        "fires": 1
+      },
+      {
+        "day": 80,
+        "fires": 1
+      },
+      {
+        "day": 81,
+        "fires": 2
+      },
+      {
+        "day": 82,
+        "fires": 2
+      },
+      {
+        "day": 84,
+        "fires": 1
+      },
+      {
+        "day": 85,
+        "fires": 1
+      },
+      {
+        "day": 86,
+        "fires": 1
+      },
+      {
+        "day": 87,
+        "fires": 2
+      },
+      {
+        "day": 88,
+        "fires": 2
+      },
+      {
+        "day": 89,
+        "fires": 2
+      },
+      {
+        "day": 91,
+        "fires": 1
+      },
+      {
+        "day": 92,
+        "fires": 1
+      },
+      {
+        "day": 93,
+        "fires": 2
+      },
+      {
+        "day": 94,
+        "fires": 3
+      },
+      {
+        "day": 95,
+        "fires": 4
+      },
+      {
+        "day": 96,
+        "fires": 2
+      },
+      {
+        "day": 97,
+        "fires": 5
+      },
+      {
+        "day": 98,
+        "fires": 5
+      },
+      {
+        "day": 99,
+        "fires": 3
+      },
+      {
+        "day": 100,
+        "fires": 6
+      },
+      {
+        "day": 101,
+        "fires": 7
+      },
+      {
+        "day": 102,
+        "fires": 9
+      },
+      {
+        "day": 103,
+        "fires": 7
+      },
+      {
+        "day": 104,
+        "fires": 8
+      },
+      {
+        "day": 105,
+        "fires": 8
+      },
+      {
+        "day": 106,
+        "fires": 5
+      },
+      {
+        "day": 107,
+        "fires": 2
+      },
+      {
+        "day": 108,
+        "fires": 4
+      },
+      {
+        "day": 109,
+        "fires": 2
+      },
+      {
+        "day": 111,
+        "fires": 1
+      },
+      {
+        "day": 114,
+        "fires": 2
+      },
+      {
+        "day": 115,
+        "fires": 1
+      },
+      {
+        "day": 116,
+        "fires": 1
+      },
+      {
+        "day": 117,
+        "fires": 1
+      },
+      {
+        "day": 118,
+        "fires": 1
+      },
+      {
+        "day": 119,
+        "fires": 1
+      },
+      {
+        "day": 124,
+        "fires": 1
+      },
+      {
+        "day": 125,
+        "fires": 1
+      },
+      {
+        "day": 126,
+        "fires": 1
+      },
+      {
+        "day": 127,
+        "fires": 2
+      },
+      {
+        "day": 129,
+        "fires": 1
+      },
+      {
+        "day": 130,
+        "fires": 1
+      },
+      {
+        "day": 131,
+        "fires": 1
+      },
+      {
+        "day": 133,
+        "fires": 1
+      },
+      {
+        "day": 148,
+        "fires": 2
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 77,
+      "cumulative": 88
+    },
+    "baseline": {
+      "mechanic": "movement.arrived",
+      "fires": 211,
+      "magnitude": 211
+    }
+  },
+  "movement.join_blocked": {
+    "daily": [
+      {
+        "day": 66,
+        "fires": 1
+      },
+      {
+        "day": 67,
+        "fires": 1
+      },
+      {
+        "day": 68,
+        "fires": 1
+      },
+      {
+        "day": 69,
+        "fires": 1
+      },
+      {
+        "day": 70,
+        "fires": 1
+      },
+      {
+        "day": 71,
+        "fires": 1
+      },
+      {
+        "day": 72,
+        "fires": 1
+      },
+      {
+        "day": 73,
+        "fires": 1
+      },
+      {
+        "day": 74,
+        "fires": 1
+      },
+      {
+        "day": 75,
+        "fires": 1
+      },
+      {
+        "day": 76,
+        "fires": 1
+      },
+      {
+        "day": 77,
+        "fires": 1
+      },
+      {
+        "day": 78,
+        "fires": 1
+      },
+      {
+        "day": 79,
+        "fires": 1
+      },
+      {
+        "day": 80,
+        "fires": 1
+      },
+      {
+        "day": 81,
+        "fires": 1
+      },
+      {
+        "day": 82,
+        "fires": 1
+      },
+      {
+        "day": 83,
+        "fires": 1
+      },
+      {
+        "day": 84,
+        "fires": 1
+      },
+      {
+        "day": 85,
+        "fires": 1
+      },
+      {
+        "day": 86,
+        "fires": 1
+      },
+      {
+        "day": 87,
+        "fires": 1
+      },
+      {
+        "day": 88,
+        "fires": 1
+      },
+      {
+        "day": 89,
+        "fires": 1
+      },
+      {
+        "day": 90,
+        "fires": 1
+      },
+      {
+        "day": 91,
+        "fires": 1
+      },
+      {
+        "day": 92,
+        "fires": 1
+      },
+      {
+        "day": 93,
+        "fires": 1
+      },
+      {
+        "day": 94,
+        "fires": 1
+      },
+      {
+        "day": 95,
+        "fires": 1
+      },
+      {
+        "day": 96,
+        "fires": 1
+      },
+      {
+        "day": 97,
+        "fires": 1
+      },
+      {
+        "day": 98,
+        "fires": 1
+      },
+      {
+        "day": 99,
+        "fires": 1
+      },
+      {
+        "day": 100,
+        "fires": 1
+      },
+      {
+        "day": 101,
+        "fires": 1
+      },
+      {
+        "day": 102,
+        "fires": 1
+      },
+      {
+        "day": 103,
+        "fires": 1
+      },
+      {
+        "day": 104,
+        "fires": 1
+      },
+      {
+        "day": 105,
+        "fires": 1
+      },
+      {
+        "day": 106,
+        "fires": 1
+      },
+      {
+        "day": 107,
+        "fires": 1
+      },
+      {
+        "day": 108,
+        "fires": 1
+      },
+      {
+        "day": 109,
+        "fires": 1
+      },
+      {
+        "day": 110,
+        "fires": 1
+      },
+      {
+        "day": 111,
+        "fires": 1
+      },
+      {
+        "day": 112,
+        "fires": 1
+      },
+      {
+        "day": 113,
+        "fires": 1
+      },
+      {
+        "day": 114,
+        "fires": 1
+      },
+      {
+        "day": 115,
+        "fires": 1
+      },
+      {
+        "day": 116,
+        "fires": 1
+      },
+      {
+        "day": 117,
+        "fires": 1
+      },
+      {
+        "day": 118,
+        "fires": 1
+      },
+      {
+        "day": 119,
+        "fires": 1
+      },
+      {
+        "day": 120,
+        "fires": 1
+      },
+      {
+        "day": 121,
+        "fires": 1
+      },
+      {
+        "day": 122,
+        "fires": 1
+      },
+      {
+        "day": 123,
+        "fires": 1
+      },
+      {
+        "day": 124,
+        "fires": 1
+      },
+      {
+        "day": 125,
+        "fires": 1
+      },
+      {
+        "day": 126,
+        "fires": 1
+      },
+      {
+        "day": 127,
+        "fires": 1
+      },
+      {
+        "day": 128,
+        "fires": 1
+      },
+      {
+        "day": 129,
+        "fires": 1
+      },
+      {
+        "day": 130,
+        "fires": 1
+      },
+      {
+        "day": 131,
+        "fires": 1
+      },
+      {
+        "day": 132,
+        "fires": 1
+      },
+      {
+        "day": 133,
+        "fires": 1
+      },
+      {
+        "day": 134,
+        "fires": 1
+      },
+      {
+        "day": 135,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 66,
+      "cumulative": 1
+    },
+    "baseline": {
+      "mechanic": "movement.join_blocked",
+      "fires": 70,
+      "magnitude": 70
+    }
+  },
+  "movement.leg_started": {
+    "daily": [
+      {
+        "day": 53,
+        "fires": 3
+      },
+      {
+        "day": 54,
+        "fires": 1
+      },
+      {
+        "day": 55,
+        "fires": 4
+      },
+      {
+        "day": 56,
+        "fires": 6
+      },
+      {
+        "day": 57,
+        "fires": 4
+      },
+      {
+        "day": 58,
+        "fires": 7
+      },
+      {
+        "day": 59,
+        "fires": 5
+      },
+      {
+        "day": 60,
+        "fires": 4
+      },
+      {
+        "day": 61,
+        "fires": 4
+      },
+      {
+        "day": 62,
+        "fires": 6
+      },
+      {
+        "day": 63,
+        "fires": 5
+      },
+      {
+        "day": 64,
+        "fires": 4
+      },
+      {
+        "day": 65,
+        "fires": 3
+      },
+      {
+        "day": 66,
+        "fires": 3
+      },
+      {
+        "day": 67,
+        "fires": 3
+      },
+      {
+        "day": 68,
+        "fires": 3
+      },
+      {
+        "day": 69,
+        "fires": 3
+      },
+      {
+        "day": 70,
+        "fires": 3
+      },
+      {
+        "day": 71,
+        "fires": 2
+      },
+      {
+        "day": 72,
+        "fires": 2
+      },
+      {
+        "day": 73,
+        "fires": 2
+      },
+      {
+        "day": 74,
+        "fires": 1
+      },
+      {
+        "day": 75,
+        "fires": 1
+      },
+      {
+        "day": 76,
+        "fires": 3
+      },
+      {
+        "day": 77,
+        "fires": 2
+      },
+      {
+        "day": 78,
+        "fires": 2
+      },
+      {
+        "day": 81,
+        "fires": 1
+      },
+      {
+        "day": 82,
+        "fires": 1
+      },
+      {
+        "day": 83,
+        "fires": 2
+      },
+      {
+        "day": 85,
+        "fires": 1
+      },
+      {
+        "day": 86,
+        "fires": 1
+      },
+      {
+        "day": 87,
+        "fires": 1
+      },
+      {
+        "day": 88,
+        "fires": 2
+      },
+      {
+        "day": 89,
+        "fires": 2
+      },
+      {
+        "day": 90,
+        "fires": 1
+      },
+      {
+        "day": 92,
+        "fires": 1
+      },
+      {
+        "day": 93,
+        "fires": 3
+      },
+      {
+        "day": 94,
+        "fires": 2
+      },
+      {
+        "day": 95,
+        "fires": 6
+      },
+      {
+        "day": 96,
+        "fires": 7
+      },
+      {
+        "day": 97,
+        "fires": 3
+      },
+      {
+        "day": 98,
+        "fires": 4
+      },
+      {
+        "day": 99,
+        "fires": 4
+      },
+      {
+        "day": 100,
+        "fires": 2
+      },
+      {
+        "day": 101,
+        "fires": 6
+      },
+      {
+        "day": 102,
+        "fires": 6
+      },
+      {
+        "day": 103,
+        "fires": 8
+      },
+      {
+        "day": 104,
+        "fires": 6
+      },
+      {
+        "day": 105,
+        "fires": 7
+      },
+      {
+        "day": 106,
+        "fires": 4
+      },
+      {
+        "day": 107,
+        "fires": 2
+      },
+      {
+        "day": 108,
+        "fires": 3
+      },
+      {
+        "day": 109,
+        "fires": 2
+      },
+      {
+        "day": 111,
+        "fires": 1
+      },
+      {
+        "day": 114,
+        "fires": 2
+      },
+      {
+        "day": 115,
+        "fires": 1
+      },
+      {
+        "day": 116,
+        "fires": 1
+      },
+      {
+        "day": 117,
+        "fires": 1
+      },
+      {
+        "day": 118,
+        "fires": 1
+      },
+      {
+        "day": 119,
+        "fires": 1
+      },
+      {
+        "day": 124,
+        "fires": 2
+      },
+      {
+        "day": 125,
+        "fires": 1
+      },
+      {
+        "day": 126,
+        "fires": 1
+      },
+      {
+        "day": 127,
+        "fires": 1
+      },
+      {
+        "day": 128,
+        "fires": 1
+      },
+      {
+        "day": 129,
+        "fires": 1
+      },
+      {
+        "day": 131,
+        "fires": 1
+      },
+      {
+        "day": 133,
+        "fires": 1
+      },
+      {
+        "day": 146,
+        "fires": 1
+      },
+      {
+        "day": 148,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 81,
+      "cumulative": 87
+    },
+    "baseline": {
+      "mechanic": "movement.leg_started",
+      "fires": 199,
+      "magnitude": 199
+    }
+  },
+  "operations.opened": {
+    "daily": [
+      {
+        "day": 4,
+        "fires": 1
+      },
+      {
+        "day": 38,
+        "fires": 1
+      },
+      {
+        "day": 81,
+        "fires": 1
+      },
+      {
+        "day": 92,
+        "fires": 1
+      },
+      {
+        "day": 99,
+        "fires": 1
+      },
+      {
+        "day": 106,
+        "fires": 1
+      },
+      {
+        "day": 110,
+        "fires": 1
+      },
+      {
+        "day": 121,
+        "fires": 1
+      },
+      {
+        "day": 122,
+        "fires": 1
+      },
+      {
+        "day": 135,
+        "fires": 1
+      },
+      {
+        "day": 143,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 143,
+      "cumulative": 11
+    },
+    "baseline": {
+      "mechanic": "operations.opened",
+      "fires": 9,
+      "magnitude": 9
+    }
+  },
+  "operations.repulsed": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  "operations.works": {
+    "daily": [
+      {
+        "day": 9,
+        "fires": 1
+      },
+      {
+        "day": 86,
+        "fires": 1
+      },
+      {
+        "day": 96,
+        "fires": 1
+      },
+      {
+        "day": 104,
+        "fires": 1
+      },
+      {
+        "day": 105,
+        "fires": 1
+      },
+      {
+        "day": 106,
+        "fires": 1
+      },
+      {
+        "day": 107,
+        "fires": 1
+      },
+      {
+        "day": 108,
+        "fires": 1
+      },
+      {
+        "day": 109,
+        "fires": 1
+      },
+      {
+        "day": 116,
+        "fires": 1
+      },
+      {
+        "day": 132,
+        "fires": 1
+      },
+      {
+        "day": 133,
+        "fires": 1
+      },
+      {
+        "day": 134,
+        "fires": 1
+      },
+      {
+        "day": 135,
+        "fires": 2
+      },
+      {
+        "day": 136,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 109,
+      "cumulative": 9
+    },
+    "baseline": {
+      "mechanic": "operations.works",
+      "fires": 10,
+      "magnitude": 500
+    }
+  },
+  "planner.candidates": {
+    "daily": [
+      {
+        "day": 37,
+        "fires": 1
+      },
+      {
+        "day": 89,
+        "fires": 1
+      },
+      {
+        "day": 95,
+        "fires": 1
+      },
+      {
+        "day": 98,
+        "fires": 2
+      },
+      {
+        "day": 99,
+        "fires": 1
+      },
+      {
+        "day": 100,
+        "fires": 1
+      },
+      {
+        "day": 102,
+        "fires": 1
+      },
+      {
+        "day": 106,
+        "fires": 1
+      },
+      {
+        "day": 107,
+        "fires": 1
+      },
+      {
+        "day": 109,
+        "fires": 1
+      },
+      {
+        "day": 110,
+        "fires": 1
+      },
+      {
+        "day": 112,
+        "fires": 1
+      },
+      {
+        "day": 113,
+        "fires": 1
+      },
+      {
+        "day": 120,
+        "fires": 1
+      },
+      {
+        "day": 134,
+        "fires": 1
+      },
+      {
+        "day": 137,
+        "fires": 1
+      },
+      {
+        "day": 139,
+        "fires": 1
+      },
+      {
+        "day": 140,
+        "fires": 1
+      },
+      {
+        "day": 142,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 137,
+      "cumulative": 17
+    },
+    "baseline": {
+      "mechanic": "planner.candidates",
+      "fires": 19,
+      "magnitude": 24
+    }
+  },
+  "planner.searches": {
+    "daily": [
+      {
+        "day": 37,
+        "fires": 1
+      },
+      {
+        "day": 89,
+        "fires": 1
+      },
+      {
+        "day": 95,
+        "fires": 1
+      },
+      {
+        "day": 98,
+        "fires": 2
+      },
+      {
+        "day": 99,
+        "fires": 1
+      },
+      {
+        "day": 100,
+        "fires": 1
+      },
+      {
+        "day": 102,
+        "fires": 1
+      },
+      {
+        "day": 106,
+        "fires": 1
+      },
+      {
+        "day": 107,
+        "fires": 1
+      },
+      {
+        "day": 109,
+        "fires": 1
+      },
+      {
+        "day": 110,
+        "fires": 1
+      },
+      {
+        "day": 112,
+        "fires": 1
+      },
+      {
+        "day": 113,
+        "fires": 1
+      },
+      {
+        "day": 120,
+        "fires": 1
+      },
+      {
+        "day": 134,
+        "fires": 1
+      },
+      {
+        "day": 137,
+        "fires": 1
+      },
+      {
+        "day": 139,
+        "fires": 1
+      },
+      {
+        "day": 140,
+        "fires": 1
+      },
+      {
+        "day": 142,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 137,
+      "cumulative": 17
+    },
+    "baseline": {
+      "mechanic": "planner.searches",
+      "fires": 19,
+      "magnitude": 62
+    }
+  },
+  "plans.chosen": {
+    "daily": [
+      {
+        "day": 3,
+        "fires": 1
+      },
+      {
+        "day": 38,
+        "fires": 1
+      },
+      {
+        "day": 56,
+        "fires": 1
+      },
+      {
+        "day": 80,
+        "fires": 1
+      },
+      {
+        "day": 91,
+        "fires": 1
+      },
+      {
+        "day": 99,
+        "fires": 1
+      },
+      {
+        "day": 100,
+        "fires": 1
+      },
+      {
+        "day": 101,
+        "fires": 1
+      },
+      {
+        "day": 103,
+        "fires": 1
+      },
+      {
+        "day": 108,
+        "fires": 1
+      },
+      {
+        "day": 110,
+        "fires": 1
+      },
+      {
+        "day": 111,
+        "fires": 1
+      },
+      {
+        "day": 114,
+        "fires": 1
+      },
+      {
+        "day": 121,
+        "fires": 1
+      },
+      {
+        "day": 135,
+        "fires": 1
+      },
+      {
+        "day": 143,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 135,
+      "cumulative": 15
+    },
+    "baseline": {
+      "mechanic": "plans.chosen",
+      "fires": 14,
+      "magnitude": 14
+    }
+  },
+  "plans.drafted": {
+    "daily": [
+      {
+        "day": 37,
+        "fires": 1
+      },
+      {
+        "day": 89,
+        "fires": 1
+      },
+      {
+        "day": 95,
+        "fires": 1
+      },
+      {
+        "day": 98,
+        "fires": 2
+      },
+      {
+        "day": 99,
+        "fires": 1
+      },
+      {
+        "day": 100,
+        "fires": 1
+      },
+      {
+        "day": 102,
+        "fires": 1
+      },
+      {
+        "day": 106,
+        "fires": 1
+      },
+      {
+        "day": 107,
+        "fires": 1
+      },
+      {
+        "day": 109,
+        "fires": 1
+      },
+      {
+        "day": 110,
+        "fires": 1
+      },
+      {
+        "day": 112,
+        "fires": 1
+      },
+      {
+        "day": 113,
+        "fires": 1
+      },
+      {
+        "day": 120,
+        "fires": 1
+      },
+      {
+        "day": 134,
+        "fires": 1
+      },
+      {
+        "day": 137,
+        "fires": 1
+      },
+      {
+        "day": 139,
+        "fires": 1
+      },
+      {
+        "day": 140,
+        "fires": 1
+      },
+      {
+        "day": 142,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 137,
+      "cumulative": 17
+    },
+    "baseline": {
+      "mechanic": "plans.drafted",
+      "fires": 19,
+      "magnitude": 19
+    }
+  },
+  "plans.went_ahead": {
+    "daily": [
+      {
+        "day": 38,
+        "fires": 1
+      },
+      {
+        "day": 99,
+        "fires": 1
+      },
+      {
+        "day": 100,
+        "fires": 1
+      },
+      {
+        "day": 110,
+        "fires": 1
+      },
+      {
+        "day": 121,
+        "fires": 1
+      },
+      {
+        "day": 135,
+        "fires": 1
+      },
+      {
+        "day": 143,
+        "fires": 1
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 135,
+      "cumulative": 6
+    },
+    "baseline": {
+      "mechanic": "plans.went_ahead",
+      "fires": 5,
+      "magnitude": 5
+    }
+  },
+  "reports.battle_dispatch": {
+    "daily": [
+      {
+        "day": 38,
+        "fires": 1
+      },
+      {
+        "day": 39,
+        "fires": 1
+      },
+      {
+        "day": 148,
+        "fires": 8
+      }
+    ],
+    "firstAboveMaximum": {
+      "day": 148,
+      "cumulative": 10
+    },
+    "baseline": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 10,
+      "magnitude": 10
+    }
+  },
+  "reports.commander_lost": {
+    "daily": [],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "reports.commander_lost",
+      "fires": 0,
+      "magnitude": 0
+    }
+  },
+  "seats.battle_orders": {
+    "daily": [
+      {
+        "day": 147,
+        "fires": 2
+      },
+      {
+        "day": 148,
+        "fires": 2
+      }
+    ],
+    "firstAboveMaximum": null,
+    "baseline": {
+      "mechanic": "seats.battle_orders",
+      "fires": 4,
+      "magnitude": 4
+    }
+  }
+}

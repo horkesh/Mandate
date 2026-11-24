@@ -1,6 +1,7 @@
 import { executeLocal, issueMandate } from './mandates.ts';
-import { issueAllocation } from './allocation.ts';
+import { issueAllocation, recordAllocationAvailability } from './allocation.ts';
 import { localOptions } from '../seats/local-actions.ts';
+import { localPlanningGround } from '../seats/planning-ground.ts';
 import { advanceCommissions } from '../people/commissions.ts';
 import { dateOfDay,formatIsoDate } from '../world/calendar.ts';
 import { bundleRaised, organisationPhase } from './organisation.ts';
@@ -194,7 +195,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     if (options !== null && (options.length > 1 || requiresEpisodeChoice(state, post))) menus.set(post, options);
   }
 
-  const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day)]));
+  const localGround = localPlanningGround(world,start,day);
+  const localMenus = new Map(Object.values(start.seatAssignments).map(a => [a.seatPerson, localOptions(world,start,a.seatPerson,day,localGround)]));
   const localChosen = new Set<string>();
 
   // 0b. Attention refills weekly to its cap, with no carry-over (lane 1.5; 0025, 0040).
@@ -379,6 +381,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = applyPhase(politicsPhase(ctx, state));
   state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
+  state = applyPhase(recordAllocationAvailability(ctx,start,state));
+
   // 5. Reports on their cycles.
   battleReports(ctx, state, start.regionControl);
   generateReports(ctx, state);
@@ -395,7 +399,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   let kept = pruneOperations(pruned.state, day, keep.operationDays);
   const battles = pruneBattles(kept, day, keep.battleDays);
   if (battles.pruned > 0) fire(ctx, 'combat.records_pruned', battles.pruned);
-  const responses = pruneResponses(battles.state, day, keep.responseDays);
+  const responses = pruneResponses(battles.state, day, keep.responseDays, world);
   if (responses.pruned > 0) fire(ctx, 'orders.responses_pruned', responses.pruned);
   kept = responses.state;
 

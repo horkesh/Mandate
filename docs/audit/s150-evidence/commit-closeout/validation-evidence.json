@@ -1,0 +1,93 @@
+{
+  "commands": [
+    {
+      "command": "npm test -- packages/kernel/test/one-writer.test.ts packages/kernel/test/one-writer-read-classifications.test.ts",
+      "exit": 0,
+      "passed": 53
+    },
+    {
+      "command": "node node_modules/vitest/vitest.mjs run packages/cli/test/seats-run.test.ts",
+      "exit": 0,
+      "passed": 7
+    },
+    {
+      "command": "focused F07 and junction tests",
+      "exit": 0,
+      "passed": 61,
+      "note": "The combined focused log includes the then-failing messenger setup; that setup is superseded by the separate live test below."
+    },
+    {
+      "command": "node node_modules/vitest/vitest.mjs run packages/rule-seats/test/s150-special-messenger.test.ts",
+      "exit": 0,
+      "passed": 1
+    },
+    {
+      "command": "node node_modules/vitest/vitest.mjs run packages/cli/test/july-liveness-known-failure.test.ts",
+      "exit": 0,
+      "passed": 2
+    },
+    {
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "result": "504 files, 61 terms"
+    },
+    {
+      "command": "npm run check:rules",
+      "exit": 0,
+      "result": "0 new, changed or stale findings"
+    }
+  ],
+  "ordinaryHook": "The commit invokes .githooks/pre-commit without a bypass. Final execution evidence is retained in runs/s150-commit/commit-hook.log and the one final CODEX status. Any other failure stops the commit.",
+  "logInventory": [
+    {
+      "path": "runs/s150-commit/one-writer-green.log",
+      "sha256": "bbc4d27e5647d26b3a1e6e091d0216b1bc95e034417a9737f522a9200090e97d",
+      "bytes": 628
+    },
+    {
+      "path": "runs/s150-commit/ownership-typecheck.log",
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465",
+      "bytes": 68
+    },
+    {
+      "path": "runs/s150-commit/seats-run.log",
+      "sha256": "71ac930865e462bf0be831a8ef2c159fd7cd576075f971fa61f8b4e4c62ba6e8",
+      "bytes": 372
+    },
+    {
+      "path": "runs/s150-commit/focused-fixtures.log",
+      "sha256": "bbe2299bbf72e1d187b1bd0a62a2f635c39727082124dd49598a9cb9315dc998",
+      "bytes": 2716
+    },
+    {
+      "path": "runs/s150-commit/messenger-live-fixture.log",
+      "sha256": "2897f8586c023a9d5c3a2059b43ab9073eeb8ba6dc248b7dc1fcc10c94547b8a",
+      "bytes": 394
+    },
+    {
+      "path": "runs/s150-commit/known-failure-guards.log",
+      "sha256": "acc6675e0beae99f5109569d6317934ca3fd33451a44c199f0b115eb719d9dae",
+      "bytes": 394
+    },
+    {
+      "path": "runs/s150-commit/final-typecheck.log",
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465",
+      "bytes": 68
+    },
+    {
+      "path": "runs/s150-commit/boundary.log",
+      "sha256": "75f9c02b95b904e7c0517250ae79a45e15eedde498c4a7ee0150678de534be3f",
+      "bytes": 208
+    },
+    {
+      "path": "runs/s150-commit/rules.log",
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6",
+      "bytes": 178
+    },
+    {
+      "path": "runs/s150-commit/reviewer-evidence.log",
+      "sha256": "d40d6b116f187fc9749fd261cf1a53c316b5c1c0cb52c049bdb6a9633afe110c",
+      "bytes": 424
+    }
+  ]
+}

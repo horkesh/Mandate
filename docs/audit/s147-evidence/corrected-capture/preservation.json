@@ -1,0 +1,538 @@
+{
+  "startingStagedPaths": 76,
+  "workingBytesExact": 71,
+  "checks": [
+    {
+      "path": "docs/audit/s141-evidence/README.md",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/allocations.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/army-lots.csv",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/army-totals.csv",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/army-totals.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/band-count-changes.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/capture-inputs.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/changed-battles.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/coverage.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/gate-failures-after-recentre.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/gate-failures-before-recentre.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/input-receipts.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/lead-liveness-review.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/lead-review.md",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/new-zeros.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/offline-verification.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/raw-inventory.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/rows.csv",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/scores.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/summary.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/unmatched.csv",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/unmatched.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/corrected-capture/validation-results.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/instrument-disposition.csv",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/kernel-projection.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/measurement-status.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p166.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p303.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p304.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p307.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p308.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p607.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p619.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p620.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p623.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p624.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p652.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p653.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p690.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p744.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p751.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p897.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p898.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-II-p981.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.1-p413.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.1-p414.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.2-p107.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-I-LI.2-p108.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-IV-I-p272.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/OR-IV-I-p275.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/Regs-1857-p2-3.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/read/Richardson-IV-p73.txt",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-input-receipts.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-instruments.csv",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-regiment-instruments.csv",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/s138-source-reading.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "docs/audit/s141-evidence/source-reading.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "notes/sprint-S141-allocation.md",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packages/cli/src/liveness-gate.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "packages/kernel/src/command/authority.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packages/kernel/test/s123-mandates.test.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/testbed/README.md",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "packs/union-1861/pack.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "packs/union-1861/test/northern-concentration.test.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/s141-allocation.test.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/s64-command-inclusion.test.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/s77-concentration.test.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/support/generic-concentration-control.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "packs/union-1861/test/support/legacy-concentrations.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "tools/rules/liveness-changes.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": false,
+      "authorisedExtension": true
+    },
+    {
+      "path": "tools/s141-measure-allocation.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "tools/test/s134-repair-records.test.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    },
+    {
+      "path": "tools/test/s90-liveness-ruling.test.ts",
+      "present": true,
+      "entryIndexStillExactBeforeCombinedStage": true,
+      "workingBytesExact": true,
+      "authorisedExtension": false
+    }
+  ]
+}

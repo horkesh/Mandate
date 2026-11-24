@@ -45,6 +45,7 @@ export class ConsoleSession {
   handle(line: string): Handled {
     const t = this.t;
     const input: DeskInput = parseLine(line, this.request, t);
+    // parseLine rejects principal desk commands for every other menu kind.
     const menu = this.request.menu as phase0.PrincipalMenu;
     switch (input.kind) {
       case 'error':
@@ -117,11 +118,11 @@ export class ConsoleSession {
     this.request = this.game.morning();
     this.seenFrom = this.request.requestDay;
     lines.push(...morningLines(this.request, this.request.requestDay, this.t, { date: this.game.dateOfRequest(this.request.requestDay), attention: this.request.view.attention }).slice(0, 1));
-    const menu = this.request.menu as phase0.PrincipalMenu;
+    const menu = this.request.menu;
     const open = this.request.view.situations.filter((s) => s.status === 'open');
     if (open.length > 0) lines.push(this.t('console.morning.situations', { situations: open.map(s => s.id).join(', ') }));
-    if (menu.reviews.length > 0) lines.push(this.t('console.morning.plans', { posts: menu.reviews.map(r => r.post).join(', ') }));
-    if (menu.awaiting.length > 0) lines.push(this.t('console.morning.awaiting', { posts: menu.awaiting.join(', ') }));
+    if (menu.menuKind==='principal' && menu.reviews.length > 0) lines.push(this.t('console.morning.plans', { posts: menu.reviews.map(r => r.post).join(', ') }));
+    if (menu.menuKind==='principal' && menu.awaiting.length > 0) lines.push(this.t('console.morning.awaiting', { posts: menu.awaiting.join(', ') }));
     return lines;
   }
 }

@@ -1,0 +1,1052 @@
+[
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:davis_jefferson",
+    "report": {
+      "id": "m.103.df6a24e04a3388ae",
+      "knownReceivedDay": 103,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "walker_leroy_p",
+        "reportAuthorPost": "cs_secretary_war",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [],
+        "reportDay": 103,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "needPost": "cs_cmd_harpers_ferry",
+          "needPerson": "johnston_joseph_e",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "harpers_ferry",
+          "needGoal": {
+            "goalObjective": "harpers_ferry",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "b82247982e165e743bf62ce3fd05bcf41083a6464ea959780f9c087e9a9f2706"
+        },
+        "reportForceRequest": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:johnston_joseph_e",
+    "report": {
+      "id": "m.102.284f4a8db9d14a69",
+      "knownReceivedDay": 102,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "lee_robert_e",
+        "reportAuthorPost": "cs_forces_virginia",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 0,
+            "claimToken": "force:relay",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 102,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:johnston_joseph_e",
+    "report": {
+      "id": "m.103.5c750ed617edd9e9",
+      "knownReceivedDay": 103,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "walker_leroy_p",
+        "reportAuthorPost": "cs_secretary_war",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 0,
+            "claimToken": "force:relay",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 103,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:johnston_joseph_e",
+    "report": {
+      "id": "m.104.8ea62c16e78d4401",
+      "knownReceivedDay": 104,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "davis_jefferson",
+        "reportAuthorPost": "cs_president",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 0,
+            "claimToken": "force:ask_governor",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 104,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:johnston_joseph_e",
+    "report": {
+      "id": "m.105.74241e2f51f27453",
+      "knownReceivedDay": 105,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "pickens_francis_w",
+        "reportAuthorPost": "st_gov_south_carolina",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 1,
+            "claimToken": "force:offer",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 105,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:lee_robert_e",
+    "report": {
+      "id": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+      "knownReceivedDay": 101,
+      "knownRoute": "courier",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "johnston_joseph_e",
+        "reportAuthorPost": "cs_cmd_harpers_ferry",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 96,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "needPost": "cs_cmd_harpers_ferry",
+          "needPerson": "johnston_joseph_e",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "harpers_ferry",
+          "needGoal": {
+            "goalObjective": "harpers_ferry",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "b82247982e165e743bf62ce3fd05bcf41083a6464ea959780f9c087e9a9f2706"
+        },
+        "reportForceRequest": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:pickens_francis_w",
+    "report": {
+      "id": "m.104.267b0f420736e74c",
+      "knownReceivedDay": 104,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "davis_jefferson",
+        "reportAuthorPost": "cs_president",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [],
+        "reportDay": 104,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "needPost": "cs_cmd_harpers_ferry",
+          "needPerson": "johnston_joseph_e",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "harpers_ferry",
+          "needGoal": {
+            "goalObjective": "harpers_ferry",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "b82247982e165e743bf62ce3fd05bcf41083a6464ea959780f9c087e9a9f2706"
+        },
+        "reportForceRequest": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:pickens_francis_w",
+    "report": {
+      "id": "m.105.6c0d06aa317eb599",
+      "knownReceivedDay": 105,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "pickens_francis_w",
+        "reportAuthorPost": "st_gov_south_carolina",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "st_gov_south_carolina",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 1,
+            "claimToken": "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.st_gov_south_carolina",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": null,
+            "claimValue": 0,
+            "claimToken": "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.st_gov_south_carolina",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 105,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.105.329d72c05b9bb21d"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:pickens_francis_w",
+    "report": {
+      "id": "m.105.pickens_francis_w.pickens_francis_w.ack.st_gov_south_carolina",
+      "knownReceivedDay": 105,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportLetter": {
+          "namespace": "force-choice",
+          "key": "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.st_gov_south_carolina",
+          "revision": 1
+        },
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "pickens_francis_w",
+        "reportAuthorPost": "st_gov_south_carolina",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "st_gov_south_carolina",
+        "reportClaims": [
+          {
+            "claimKind": "order-obeyed",
+            "claimRegion": null,
+            "claimValue": 1,
+            "claimToken": "comply",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 105,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.105.329d72c05b9bb21d"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:walker_leroy_p",
+    "report": {
+      "id": "m.102.dd12e80176183860",
+      "knownReceivedDay": 102,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "lee_robert_e",
+        "reportAuthorPost": "cs_forces_virginia",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [],
+        "reportDay": 102,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "needPost": "cs_cmd_harpers_ferry",
+          "needPerson": "johnston_joseph_e",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "harpers_ferry",
+          "needGoal": {
+            "goalObjective": "harpers_ferry",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "b82247982e165e743bf62ce3fd05bcf41083a6464ea959780f9c087e9a9f2706"
+        },
+        "reportForceRequest": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:patterson_robert",
+    "report": {
+      "id": "m.114.87eb842ec51bec8b",
+      "knownReceivedDay": 114,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "philadelphia",
+            "claimValue": 0,
+            "claimToken": "force:subordinate_declined",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "philadelphia",
+            "claimValue": 1,
+            "claimToken": "retention_comparison_undetermined",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 114,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:patterson_robert",
+    "report": {
+      "id": "m.114.8b6a593167cd2f36",
+      "knownReceivedDay": 114,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "scott_winfield",
+        "reportAuthorPost": "us_general_in_chief",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "philadelphia",
+            "claimValue": 0,
+            "claimToken": "force:order_subordinate",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 114,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:scott_winfield",
+    "report": {
+      "id": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+      "knownReceivedDay": 113,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "patterson_robert",
+        "reportAuthorPost": "us_dept_pennsylvania",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "philadelphia",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 113,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "needPost": "us_dept_pennsylvania",
+          "needPerson": "patterson_robert",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "philadelphia",
+          "needGoal": {
+            "goalObjective": "lower_valley",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+        },
+        "reportForceRequest": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:scott_winfield",
+    "report": {
+      "id": "m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+      "knownReceivedDay": 114,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportLetter": {
+          "namespace": "force-choice",
+          "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+          "revision": 1
+        },
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_washington",
+        "reportClaims": [
+          {
+            "claimKind": "order-obeyed",
+            "claimRegion": "washington",
+            "claimValue": 0,
+            "claimToken": "comply",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 114,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.114.b70961860618b775"
+      }
+    }
+  },
+  {
+    "snapshot": 120,
+    "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+    "seat": "seat:scott_winfield",
+    "report": {
+      "id": "m.114.mansfield_joseph_k_f.scott_winfield.subordinate-answer.m.114.b70961860618b775",
+      "knownReceivedDay": 114,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_washington",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "philadelphia",
+            "claimValue": 0,
+            "claimToken": "force:subordinate_declined",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "philadelphia",
+            "claimValue": 1,
+            "claimToken": "retention_comparison_undetermined",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 114,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.114.b70961860618b775"
+      }
+    }
+  },
+  {
+    "snapshot": 140,
+    "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+    "seat": "seat:johnston_joseph_e",
+    "report": {
+      "id": "m.124.2c2c39180ab53e24",
+      "knownReceivedDay": 124,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "holmes_theophilus_h",
+        "reportAuthorPost": "cs_cmd_fredericksburg",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 0,
+            "claimToken": "force:subordinate_declined",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 1,
+            "claimToken": "retention_comparison_undetermined",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 124,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b"
+      }
+    }
+  },
+  {
+    "snapshot": 140,
+    "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+    "seat": "seat:johnston_joseph_e",
+    "report": {
+      "id": "m.124.55fe516c6cf5dbda",
+      "knownReceivedDay": 124,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "lee_robert_e",
+        "reportAuthorPost": "cs_forces_virginia",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 0,
+            "claimToken": "force:order_subordinate",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 124,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b"
+      }
+    }
+  },
+  {
+    "snapshot": 140,
+    "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+    "seat": "seat:lee_robert_e",
+    "report": {
+      "id": "m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b",
+      "knownReceivedDay": 123,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "johnston_joseph_e",
+        "reportAuthorPost": "cs_cmd_harpers_ferry",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_harpers_ferry",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 123,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.107.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.107.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+          "needPost": "cs_cmd_harpers_ferry",
+          "needPerson": "johnston_joseph_e",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "harpers_ferry",
+          "needGoal": {
+            "goalObjective": "lynchburg",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": true,
+            "goalSea": true,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": false
+          },
+          "needEvidence": "2c0210477168d59e1d669612c48efa2d7bbb15b8346d253657c68901ef098630"
+        },
+        "reportForceRequest": "m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b"
+      }
+    }
+  },
+  {
+    "snapshot": 140,
+    "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+    "seat": "seat:lee_robert_e",
+    "report": {
+      "id": "m.124.holmes_theophilus_h.lee_robert_e.ack.cs_cmd_fredericksburg",
+      "knownReceivedDay": 124,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportLetter": {
+          "namespace": "force-choice",
+          "key": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+          "revision": 1
+        },
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "holmes_theophilus_h",
+        "reportAuthorPost": "cs_cmd_fredericksburg",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_fredericksburg",
+        "reportClaims": [
+          {
+            "claimKind": "order-obeyed",
+            "claimRegion": "lynchburg",
+            "claimValue": 0,
+            "claimToken": "comply",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 124,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.124.ae63b5c3c61382b4"
+      }
+    }
+  },
+  {
+    "snapshot": 140,
+    "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+    "seat": "seat:lee_robert_e",
+    "report": {
+      "id": "m.124.holmes_theophilus_h.lee_robert_e.subordinate-answer.m.124.ae63b5c3c61382b4",
+      "knownReceivedDay": 124,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "holmes_theophilus_h",
+        "reportAuthorPost": "cs_cmd_fredericksburg",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "cs_cmd_fredericksburg",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 0,
+            "claimToken": "force:subordinate_declined",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "harpers_ferry",
+            "claimValue": 1,
+            "claimToken": "retention_comparison_undetermined",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 124,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.124.ae63b5c3c61382b4"
+      }
+    }
+  },
+  {
+    "snapshot": 140,
+    "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+    "seat": "seat:mcdowell_irvin",
+    "report": {
+      "id": "m.138.8bccb7991c722e3e",
+      "knownReceivedDay": 139,
+      "knownRoute": "courier",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "scott_winfield",
+        "reportAuthorPost": "us_general_in_chief",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_northeastern_virginia",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "northern_virginia",
+            "claimValue": 0,
+            "claimToken": "force:refuse",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 138,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+      }
+    }
+  },
+  {
+    "snapshot": 140,
+    "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+    "seat": "seat:scott_winfield",
+    "report": {
+      "id": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+      "knownReceivedDay": 137,
+      "knownRoute": "courier",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mcdowell_irvin",
+        "reportAuthorPost": "us_dept_northeastern_virginia",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_northeastern_virginia",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "northern_virginia",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 135,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "needPost": "us_dept_northeastern_virginia",
+          "needPerson": "mcdowell_irvin",
+          "needTask": "take",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "northern_virginia",
+          "needGoal": {
+            "goalObjective": "manassas",
+            "goalPosture": "take",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+        },
+        "reportForceRequest": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+      }
+    }
+  },
+  {
+    "snapshot": 146,
+    "snapshotFile": "runs/s150/measurement-0134/state-146.json",
+    "seat": "seat:patterson_robert",
+    "report": {
+      "id": "m.142.e2006784e907f044",
+      "knownReceivedDay": 142,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "scott_winfield",
+        "reportAuthorPost": "us_general_in_chief",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "philadelphia",
+            "claimValue": 0,
+            "claimToken": "force:refuse",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.141.patterson_robert.scott_winfield.force-request:dc78125291462997eeec57fa"
+      }
+    }
+  },
+  {
+    "snapshot": 146,
+    "snapshotFile": "runs/s150/measurement-0134/state-146.json",
+    "seat": "seat:scott_winfield",
+    "report": {
+      "id": "m.141.patterson_robert.scott_winfield.force-request:dc78125291462997eeec57fa",
+      "knownReceivedDay": 141,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "patterson_robert",
+        "reportAuthorPost": "us_dept_pennsylvania",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "philadelphia",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 141,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "needPost": "us_dept_pennsylvania",
+          "needPerson": "patterson_robert",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "philadelphia",
+          "needGoal": {
+            "goalObjective": "harpers_ferry",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "91bc286d90347cb821850dca8f434ba1bc5ac2bbe59fe424fbcbffb2df4cde16"
+        },
+        "reportForceRequest": "m.141.patterson_robert.scott_winfield.force-request:dc78125291462997eeec57fa"
+      }
+    }
+  }
+]

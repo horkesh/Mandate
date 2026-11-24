@@ -1,0 +1,444 @@
+[
+  {
+    "id": "s141_cameron_july13_five",
+    "source": "OR I-II p.166, Cameron to Governor Curtin, 13 July 1861 (S138 U07). Five long-term Pennsylvania regiments, in addition to two at Cumberland, to Patterson, say at Harpers Ferry. [I] Government through Cameron is rooted in the principal under 0129. Long-term means strictly longer than the existing 90-day call family: minTermDays 91 is a service-class comparator, not a new duration or muster rule. No call identity, regiment identity, arm, receipt or departure is inferred. Existing offers take precedence; no substitute for the two at Cumberland is added.",
+    "fromDate": "1861-07-13",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_pennsylvania",
+    "to": "us_dept_pennsylvania",
+    "destination": "harpers_ferry",
+    "letter": {
+      "namespace": "government_us_allocation",
+      "key": "cameron_july13_five",
+      "revision": 1
+    },
+    "words": "send five of the long-term regiments of Pennsylvania Volunteers, in addition to the two at Cumberland, to report to Major-General Patterson, say at Harpers Ferry",
+    "quantity": 5,
+    "scope": {
+      "kind": "cohort",
+      "minTermDays": 91
+    }
+  },
+  {
+    "id": "s141_cameron_july13_remainder",
+    "source": "OR I-II p.166, Cameron to Curtin, 13 July 1861 (S138 U07), remainder of the long-term regiments to report to Scott in Washington. [I] Separate scoped remainder request, rooted in the government under 0129; the same >90-day service comparator as the finite request. It becomes eligible only on the issuer receiving the sending governor's correlated report of no remaining shortfall on the five. This is causal disjoint selection, not a claim the historical receipt or fulfilment occurred. Washington means Scott's Army office, never automatic McDowell membership. No new call or future continuing sweep.",
+    "fromDate": "1861-07-13",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_pennsylvania",
+    "to": "us_general_in_chief",
+    "destination": "washington",
+    "letter": {
+      "namespace": "government_us_allocation",
+      "key": "cameron_july13_remainder",
+      "revision": 1
+    },
+    "words": "the remainder of the long-term regiments to report to Lieutenant-General Scott in this city",
+    "quantity": "all",
+    "scope": {
+      "kind": "cohort",
+      "minTermDays": 91
+    },
+    "requiresPapers": [
+      {
+        "kind": "report",
+        "author": "curtin_andrew_g",
+        "authorPost": "st_gov_pennsylvania",
+        "subjectKind": "post",
+        "subjectId": "st_gov_pennsylvania",
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "answers": {
+          "namespace": "government_us_allocation",
+          "key": "cameron_july13_five",
+          "revision": 1
+        },
+        "claims": [
+          {
+            "kind": "allocation-shortfall",
+            "region": null,
+            "token": "s141_cameron_july13_five",
+            "min": 0,
+            "max": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s150_june3_connecticut",
+    "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+    "fromDate": "1861-06-03",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_connecticut",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_june3_connecticut",
+      "revision": 1
+    },
+    "words": "your three-years' regiments as soon as organized. Report when",
+    "quantity": "all",
+    "continuing": true,
+    "scope": {
+      "kind": "cohort",
+      "arm": "infantry",
+      "minTermDays": 1095
+    }
+  },
+  {
+    "id": "s150_june3_maine",
+    "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+    "fromDate": "1861-06-03",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_maine",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_june3_maine",
+      "revision": 1
+    },
+    "words": "your three-years' regiments as soon as organized. Report when",
+    "quantity": "all",
+    "continuing": true,
+    "scope": {
+      "kind": "cohort",
+      "arm": "infantry",
+      "minTermDays": 1095
+    }
+  },
+  {
+    "id": "s150_june3_michigan",
+    "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+    "fromDate": "1861-06-03",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_michigan",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_june3_michigan",
+      "revision": 1
+    },
+    "words": "your three-years' regiments as soon as organized. Report when",
+    "quantity": "all",
+    "continuing": true,
+    "scope": {
+      "kind": "cohort",
+      "arm": "infantry",
+      "minTermDays": 1095
+    }
+  },
+  {
+    "id": "s150_june3_new_hampshire",
+    "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+    "fromDate": "1861-06-03",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_new_hampshire",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_june3_new_hampshire",
+      "revision": 1
+    },
+    "words": "your three-years' regiments as soon as organized. Report when",
+    "quantity": "all",
+    "continuing": true,
+    "scope": {
+      "kind": "cohort",
+      "arm": "infantry",
+      "minTermDays": 1095
+    }
+  },
+  {
+    "id": "s150_june3_new_jersey",
+    "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+    "fromDate": "1861-06-03",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_new_jersey",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_june3_new_jersey",
+      "revision": 1
+    },
+    "words": "your three-years' regiments as soon as organized. Report when",
+    "quantity": "all",
+    "continuing": true,
+    "scope": {
+      "kind": "cohort",
+      "arm": "infantry",
+      "minTermDays": 1095
+    }
+  },
+  {
+    "id": "s150_june3_wisconsin",
+    "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+    "fromDate": "1861-06-03",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_wisconsin",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_june3_wisconsin",
+      "revision": 1
+    },
+    "words": "your three-years' regiments as soon as organized. Report when",
+    "quantity": "all",
+    "continuing": true,
+    "scope": {
+      "kind": "cohort",
+      "arm": "infantry",
+      "minTermDays": 1095
+    }
+  },
+  {
+    "id": "s150_june3_massachusetts",
+    "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Direct Massachusetts printing; Easton/Harrisburg route remains a named waypoint gap; no route speed or departure hour inferred. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+    "fromDate": "1861-06-03",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_massachusetts",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_june3_massachusetts",
+      "revision": 1
+    },
+    "words": "all your three years' regiments as soon as organized",
+    "quantity": "all",
+    "continuing": true,
+    "scope": {
+      "kind": "cohort",
+      "arm": "infantry",
+      "minTermDays": 1095
+    }
+  },
+  {
+    "id": "s150_connecticut_three",
+    "source": "OR III-I p.160, Cameron to Buckingham May5; S149 U11. [I]0129 government principal; finite named First/Second/Third Connecticut, excluding later Fourth; 0133 Washington station. Sea/Potomac modes retained; precise port/waypoints remain gaps, no journey is promised.",
+    "fromDate": "1861-05-05",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_connecticut",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_connecticut_three",
+      "revision": 1
+    },
+    "words": "Send immediately three regiments, including Colonel Tyler's, of Connecticut Volunteers, to this city by sea via the Potomac River",
+    "quantity": 3,
+    "scope": {
+      "kind": "named",
+      "regiments": [
+        "ct_1_infantry",
+        "ct_2_infantry",
+        "ct_3_infantry"
+      ]
+    },
+    "modes": [
+      "sea",
+      "river"
+    ]
+  },
+  {
+    "id": "s150_michigan_fourth",
+    "source": "OR III-I p.283 Cameron to Blair June20; p.287 Blair names First/Second/Third already near Washington and Fourth next; S149 U33. [I]0129 governmental issuer; Washington station under0133. Elmira/Harrisburg are read intermediate waypoints but exact traversal cannot be required by the existing allocation grammar and stays a named route gap. Arms can be supplied at either place, not a prerequisite invented at the governor.",
+    "fromDate": "1861-06-20",
+    "kind": "request",
+    "issuer": "lincoln_abraham",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_michigan",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_michigan_fourth",
+      "revision": 1
+    },
+    "words": "Send on your Fourth Regiment by Elmira and Harrisburg. They can be furnished with arms, &c., here or, if necessary, at Harrisburg",
+    "quantity": 1,
+    "scope": {
+      "kind": "named",
+      "regiments": [
+        "mi_4_infantry"
+      ]
+    }
+  },
+  {
+    "id": "s150_louisiana_sixth_richmond",
+    "source": "OR I-LI.2 p.128 Walker to Moore June4; OR IV-I p.750 Sixth/Seymour/Lay identity; S149 C30. [I]0129 government principal;0126 governor offers Sixth only, still owned by governor until Richmond administrative receiving command receipt. Fifth has no catalogue identity and remains a separate named gap; not replaced by another Louisiana lot. Secretary of War receiving post follows the existing April22 administrative rendezvous abstraction [I], not an invented regimental commander.",
+    "fromDate": "1861-06-04",
+    "kind": "request",
+    "issuer": "davis_jefferson",
+    "issuerPost": null,
+    "mandate": null,
+    "from": "st_gov_louisiana",
+    "to": "cs_secretary_war",
+    "destination": "richmond",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_louisiana_sixth_richmond",
+      "revision": 1
+    },
+    "words": "Please forward the Fifth and Sixth Regiments to Richmond as soon as possible [Sixth clause only; Fifth identity gap]",
+    "quantity": 1,
+    "scope": {
+      "kind": "named",
+      "regiments": [
+        "la_6_infantry"
+      ]
+    }
+  },
+  {
+    "id": "s150_scott_june23",
+    "source": "OR I-II p.716 Mansfield to McDowell June23 conveying Scott direction; S149 U54. Scott under read1841 Army assignment and Regulations1857 pp.58-60 (0124); Mansfield is actual Washington sender. Third Connecticut and Tompkins Second NY militia only; not Second NY Volunteers. Wagons are the train: land, not invented rail or steamer; ordinary latency/journey and receipt. Northern Virginia is coarse Arlington mapping [I]; no promise of crossing before8pm.",
+    "fromDate": "1861-06-23",
+    "kind": "assignment",
+    "issuer": "scott_winfield",
+    "issuerPost": "us_general_in_chief",
+    "mandate": "scott_army_command",
+    "from": "us_dept_washington",
+    "to": "us_dept_northeastern_virginia",
+    "destination": "northern_virginia",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_scott_june23",
+      "revision": 1
+    },
+    "words": "Third Connecticut Regiment and the Second New York, Colonel Tompkins, shall be sent to you this evening; trains thirty wagons each",
+    "quantity": "all",
+    "scope": {
+      "kind": "named",
+      "regiments": [
+        "ct_3_infantry",
+        "ny_2_militia_infantry"
+      ]
+    },
+    "modes": [
+      "land"
+    ]
+  },
+  {
+    "id": "s150_scott_willcox",
+    "source": "OR III-I p.200 Townsend conveying Scott to Blair May14; Robertson Michigan in the War1882 p.166 reproduces April24 GO5 identifying Willcox First Michigan and May1 three-month muster. [I]0124 Scott Army mandate solicits governor undertaking, not command over governor. Ordinary0126 offer/journey/receipt at Washington station. Read railroad mode retained; exact Baltimore waypoint remains a route gap.",
+    "fromDate": "1861-05-14",
+    "kind": "request",
+    "issuer": "scott_winfield",
+    "issuerPost": "us_general_in_chief",
+    "mandate": "scott_army_command",
+    "from": "st_gov_michigan",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_scott_willcox",
+      "revision": 1
+    },
+    "words": "General Scott requests ... regiment of volunteers under Col. O. B. Willcox ... to this city, via railroad to Baltimore and this city",
+    "quantity": 1,
+    "scope": {
+      "kind": "named",
+      "regiments": [
+        "mi_1_3m_infantry"
+      ]
+    },
+    "modes": [
+      "rail"
+    ]
+  },
+  {
+    "id": "s150_scott_new_jersey_three",
+    "source": "OR III-I pp.287,296 Olden June21 and Scott June25. Olden names First/Montgomery,Second/McLean,Third/Taylor long-term regiments; distinct from April militia. [I]0124 Scott active Army mandate solicits independent governor undertaking;0126 offer/receipt at Washington station. Rail mode retained; Friday is an issue instruction, never an automatic departure or readiness receipt.",
+    "fromDate": "1861-06-25",
+    "kind": "request",
+    "issuer": "scott_winfield",
+    "issuerPost": "us_general_in_chief",
+    "mandate": "scott_army_command",
+    "from": "st_gov_new_jersey",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_scott_new_jersey_three",
+      "revision": 1
+    },
+    "words": "Please send the three New Jersey regiments to Washington by rail on Friday",
+    "quantity": 3,
+    "scope": {
+      "kind": "named",
+      "regiments": [
+        "nj_1_3y_infantry",
+        "nj_2_3y_infantry",
+        "nj_3_3y_infantry"
+      ]
+    },
+    "modes": [
+      "rail"
+    ]
+  },
+  {
+    "id": "s150_scott_patterson_new_jersey",
+    "source": "OR I-II pp.619-620 Scott to Patterson May4; p.622 Patterson acknowledges receipt May5. NJ StrykerI p.15 explicitly identifies then-existing brigade First/Second/Third/Fourth militia; S149 U12 and S138 U01. [I]0124 Scott active Army mandate and named then-existing cohort, not all future New Jersey. Actual Patterson holdings required; initial governor sending still a separate gap. Seven more for capital is an additional need, not seven invented named regiments. Washington station is not McDowell.",
+    "fromDate": "1861-05-04",
+    "kind": "assignment",
+    "issuer": "scott_winfield",
+    "issuerPost": "us_general_in_chief",
+    "mandate": "scott_army_command",
+    "from": "us_dept_pennsylvania",
+    "to": "us_dept_washington",
+    "destination": "washington",
+    "letter": {
+      "namespace": "s150_sending",
+      "key": "s150_scott_patterson_new_jersey",
+      "revision": 1
+    },
+    "words": "Send the New Jersey regiments here, and we shall want for the capital seven more",
+    "quantity": "all",
+    "scope": {
+      "kind": "named",
+      "regiments": [
+        "nj_1_3m_infantry",
+        "nj_2_3m_infantry",
+        "nj_3_3m_infantry",
+        "nj_4_3m_infantry"
+      ]
+    }
+  }
+]

@@ -5,6 +5,7 @@ import { ids, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
+import { seatsWorld as genericConcentrationWorld } from '../../../packs/union-1861/test/support/generic-concentration-control.ts';
 
 /**
  * A transfer concentrates (lane 1.12; the lead's Fix 1). The doctrine transfers what the governors raise to its
@@ -18,7 +19,10 @@ const DC = ids.toId('post', 'us_dc_militia');
 const WASHINGTON = ids.toId('region', 'washington');
 
 describe('a transfer concentrates on union-1861', () => {
-  it('a levy mustered at New York and transferred to Washington’s post marches to Washington, by rail where it runs', () => {
+  it('an explicitly generic concentration control transfers its New York levy and marches it by the existing rail routes', () => {
+    // 0131 retired this policy from history. This fixture explicitly restores it
+    // to test the generic transfer/journey mechanism, never a historical sending claim.
+    const {world,setup}=genericConcentrationWorld('union-1861');
     expect(phase0.createState(world, setup).postStates[DC]!.postSeat).toBe(WASHINGTON);
     const legs = new Map<string, Set<string>>();
     const run = phase0.playDays(world, phase0.createState(world, { ...setup, atWar: true }), () => rules, 75, {

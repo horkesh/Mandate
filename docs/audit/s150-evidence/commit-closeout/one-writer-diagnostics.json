@@ -1,0 +1,208 @@
+{
+  "status": "verified",
+  "rule": "The latest S150 instruction requires auditable read classifications and preserves the raw scanner. The accepted no-exceptions rule in 0061 prohibits exemptions for a key or module.",
+  "registry": {
+    "path": "packages/kernel/test/support/one-writer-reads.ts",
+    "policy": "The raw scanner continues to report all 15. The real-source audit classifies only the exact path, line, key and form at a reviewed full-file LF-normalized SHA-256. A missing, stale, unused or ambiguous entry or a malformed reason fails the audit. The positive controls exercise the unchanged scanner directly.",
+    "sourceHashes": {
+      "packages/kernel/src/command/allocation.ts": "7888bd1a021e89dab1ce474c2438d588c77987ada338ed906f48f95702202ccc",
+      "packages/kernel/src/seats/force-requests.ts": "ca7a978cfc5af23774aa5ed7157e45679c0929c16e95dc502267c4426e9699d6",
+      "packages/kernel/src/tick/allocation.ts": "ee4df7517a0abf88eb28285f54e5282a1cb007a253a830c4ac0169f8b7d372fc",
+      "packages/kernel/src/tick/generate.ts": "c815455b7e64fd3fdf86a671235eaab9a22107194d2d4fc2f61e8a373c905385"
+    }
+  },
+  "immutableRecord": {
+    "name": "ReportedAvailableLot",
+    "source": "packages/kernel/src/knowledge/report.ts",
+    "declaration": "packages/kernel/src/ownership.ts",
+    "keys": [
+      "availRegiment",
+      "availCall",
+      "availArm",
+      "availTermDays",
+      "availEndsDay"
+    ],
+    "resolution": "Declared once in IMMUTABLE_RECORDS. The unchanged scanner derives all five keys from the readonly interface."
+  },
+  "summary": {
+    "rawReadDiagnostics": 15,
+    "verifiedWrites": 0,
+    "immutableProperties": 5
+  },
+  "diagnostics": [
+    {
+      "path": "packages/kernel/src/command/allocation.ts",
+      "key": "enlEndsDay",
+      "line": 139,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The optional service-end date is compared with null and the current day.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/command/allocation.ts",
+      "key": "lotService",
+      "line": 139,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The optional service-end date is compared with null and the current day.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/seats/force-requests.ts",
+      "key": "knownBody",
+      "line": 71,
+      "scannerForm": "write through a local alias",
+      "category": "read alias",
+      "reason": "The report's mode stamp is read and compared with null. The loop and local bindings only read the received report and its body.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/seats/force-requests.ts",
+      "key": "knownReports",
+      "line": 71,
+      "scannerForm": "write through a local alias",
+      "category": "read alias",
+      "reason": "The report's mode stamp is read and compared with null. The loop and local bindings only read the received report and its body.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/seats/force-requests.ts",
+      "key": "reportForceModeAuthority",
+      "line": 71,
+      "scannerForm": "write through a local alias",
+      "category": "read alias",
+      "reason": "The report's mode stamp is read and compared with null. The loop and local bindings only read the received report and its body.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "postStates",
+      "line": 369,
+      "scannerForm": "write through a local alias",
+      "category": "read alias",
+      "reason": "The local receiver is a post-holder id read from command State and guarded before sending an outcome report.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "postHolder",
+      "line": 369,
+      "scannerForm": "write through a local alias",
+      "category": "read alias",
+      "reason": "The local receiver is a post-holder id read from command State and guarded before sending an outcome report.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "allocStatus",
+      "line": 135,
+      "scannerForm": "bracket assignment",
+      "category": "callback type and default",
+      "reason": "The indexed access describes the callback parameter type. The default initializes the local parameter.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "authorityGrant",
+      "line": 315,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The mandate's optional manpower ceiling is checked for presence.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "ceilingMen",
+      "line": 315,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The mandate's optional manpower ceiling is checked for presence.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "mandateCeiling",
+      "line": 315,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The mandate's optional manpower ceiling is checked for presence.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "enlEndsDay",
+      "line": 310,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The optional service-end date is read to decide whether a lot is still fit for passage.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "lotService",
+      "line": 310,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The optional service-end date is read to decide whether a lot is still fit for passage.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "key": "respUndertaking",
+      "line": 159,
+      "scannerForm": "assignment",
+      "category": "read comparison",
+      "reason": "The response undertaking is checked for presence before its accepted clauses are read.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    },
+    {
+      "path": "packages/kernel/src/tick/generate.ts",
+      "key": "postStates",
+      "line": 228,
+      "scannerForm": "write through a parenthesised target",
+      "category": "read in a grouped sort",
+      "reason": "Object.keys returns a fresh array. The sort mutates that local array and leaves the post table intact.",
+      "resolution": "Exact reviewed-read classification in the real-source audit. The raw diagnostic remains."
+    }
+  ],
+  "changedFiles": [
+    "packages/kernel/src/ownership.ts",
+    "packages/kernel/test/one-writer.test.ts",
+    "packages/kernel/test/support/one-writer-reads.ts",
+    "packages/kernel/test/one-writer-read-classifications.test.ts"
+  ],
+  "verification": [
+    {
+      "command": "npm.cmd test -- packages/kernel/test/one-writer.test.ts",
+      "stage": "red",
+      "exit": 1,
+      "passed": 41,
+      "failed": 3,
+      "log": "runs/s150-commit/one-writer-red.log"
+    },
+    {
+      "command": "npm.cmd test -- packages/kernel/test/one-writer.test.ts packages/kernel/test/one-writer-read-classifications.test.ts",
+      "stage": "green",
+      "exit": 0,
+      "passed": 53,
+      "failed": 0,
+      "existingChecks": 44,
+      "registryGuards": 9,
+      "log": "runs/s150-commit/one-writer-green.log"
+    },
+    {
+      "command": "npm.cmd run typecheck",
+      "exit": 0,
+      "log": "runs/s150-commit/ownership-typecheck.log"
+    },
+    {
+      "command": "git diff --check -- packages/kernel/src/ownership.ts packages/kernel/test/one-writer.test.ts",
+      "exit": 0
+    },
+    {
+      "command": "git diff --exit-code -- packages/kernel/test/support/one-writer.ts packages/kernel/src/command/allocation.ts packages/kernel/src/seats/force-requests.ts packages/kernel/src/tick/allocation.ts packages/kernel/src/tick/generate.ts",
+      "exit": 0
+    }
+  ]
+}

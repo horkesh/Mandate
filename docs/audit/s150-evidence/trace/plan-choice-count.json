@@ -1,0 +1,25 @@
+{
+  "fires": 2,
+  "choices": [
+    {
+      "day": 2,
+      "key": "plan:a_reserve:2",
+      "menuKind": "plan-selection",
+      "answer": {
+        "answerKind": "choose",
+        "option": "supply_line:depot_steps:a_mid>a_front>b_front>b_mid"
+      }
+    },
+    {
+      "day": 4,
+      "key": "local:a_reserve:4",
+      "menuKind": "local-action",
+      "answer": {
+        "answerKind": "choose",
+        "option": "force-request:d9812eae03ee45ba105ee5c4"
+      }
+    }
+  ],
+  "assertionChanged": false,
+  "raw": "runs/s150-trace/plan-choice-probe.json"
+}

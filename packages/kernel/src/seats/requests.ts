@@ -1,4 +1,5 @@
 import { availableMandatePapers, localMenu } from './local-actions.ts';
+import { localPlanningGround } from './planning-ground.ts';
 import { availableAllocations } from './allocation.ts';
 import { forceTotals } from '../forces/lots.ts';
 /**
@@ -583,6 +584,7 @@ export function battleMenus(world: SeatsWorld, state: State, ground: MarchGround
 export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCache = createViewCache()): SeatRequest[] {
   const day = state.stateDay + 1;
   const ground = morningGround(world, state, day);
+  const localGround = localPlanningGround(world,state,day);
   const out: SeatRequest[] = [];
   for (const faction of world.factionIds) {
     const seat = seatIdFor(world.faction(faction).principal);
@@ -598,7 +600,7 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
   }
   for (const assignment of Object.values(state.seatAssignments)) {
     const person = assignment.seatPerson;
-    const menu = localMenu(world,state,person,day);
+    const menu = localMenu(world,state,person,day,localGround);
     if (menu === null) continue;
     const seat = seatIdFor(person);
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `local:${menu.post}:${day}`, view: viewFor(world,state,seat,cache), menu },cache));

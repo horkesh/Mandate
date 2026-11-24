@@ -1,0 +1,27 @@
+{
+  "decision": "0135",
+  "verdict": "Both review findings closed; implementation approved for the authorized measurement subject to the remaining capture prerequisites",
+  "verification": [
+    {
+      "finding": "Actual direct grants bypassed retention",
+      "status": "closed",
+      "evidence": "A direct grant is identified by its logged force assignment with the issuer's own sending post and a nonvoluntary packet. At actual paper receipt the holder reselects scoped lots and evaluates his current mission before joins start. A later allocation-fulfil choice independently reselects and re-evaluates. A typed retained remainder closes further choices and preserves an earlier pending or received shipment. An unknown later comparison qualifies the original response without changing its day, actual rung, terms or undertaking and informs the requester. Focused fixtures exercise retention both at self-paper receipt and at later fulfilment after a previous lot was actually received."
+    },
+    {
+      "finding": "Earlier holder mission and embarked forces entered retention",
+      "status": "closed",
+      "evidence": "Both request and retention read the same mission guard. A present response record must belong to the acting holder, and a draft must belong to that commander. Joined land strength excludes embarked, marching, actively joining, surrendered and naval forces. Focused fixtures verify that a predecessor's recorded mission cannot justify holding and that embarked infantry do not make the only landed regiment surplus."
+    }
+  ],
+  "actorValidation": "The removed own-post lookup was redundant. At dispatch, localOptions enumerates posts held by the actor and executeLocal rebuilds the menu against the execution state. Incoming need options additionally verify the holder and executeForceOption verifies the requester's current mission and person. Delivery destinationFailure verifies current holder and serving status before arriveAllocation, which also checks the addressed issuer, recipient, sending post, letter identity and allocation authority. The fulfilment menu and executor both check the current sender, and the executor again validates authority and actual selection. receivedMissionOf keeps the separate response-person and draft-commander verification. No actor, mission or authority validation was removed to match the projection fingerprint.",
+  "retainedEvidence": [
+    "runs/s150-0135/correction-red.log: four expected failing regression tests",
+    "runs/s150-0135/correction-green.log: 134 passed in five files",
+    "runs/s150-0135/correction-final-focused.log: 24 passed after removal of the redundant lookup",
+    "runs/s150-0135/correction-types.log: no diagnostics",
+    "runs/s150-0135/correction-boundary.log: 498 files, 61 terms clean",
+    "runs/s150-0135/correction-index.log: 3,732 index entries and 368 staged paths match",
+    "runs/s150-0135/correction-rules-final.log: pendingRequests fingerprint refresh pending; the existing protected reader identities are retained"
+  ],
+  "scope": "One targeted verification using source inspection and retained evidence. No suite, capture, timing campaign, hook, commit or push run. GO1 remains reporting-only. New measurements, full request-cycle results, floor/band first causes and hosted Linux timing remain outside the verification."
+}

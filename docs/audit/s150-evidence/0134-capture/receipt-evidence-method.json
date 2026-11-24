@@ -1,0 +1,12 @@
+{
+  "eventStream": "Force needs, requester-directed answers/results and orders are observed at actual delivery. The new batched observer has a red/green regression with identical State hashes.",
+  "snapshotSupplement": "Issuer-directed allocation acknowledgements/typed replies answer the order ID. These are additionally published directly from retained seat knowledge, with authored reportDay, knownReceivedDay, route and via, source snapshot and report ID. No dispatch timing is invented and no second capture/replay was run.",
+  "reportedIssuerReplies": 4,
+  "typedIssuerRetentionReplies": 2,
+  "snapshotFiles": [
+    "state-120.json",
+    "state-140.json",
+    "state-146.json",
+    "final-state.json"
+  ]
+}

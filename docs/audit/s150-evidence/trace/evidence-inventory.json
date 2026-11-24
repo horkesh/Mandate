@@ -1,0 +1,114 @@
+{
+  "command": "node --import tsx tools/s150-trace-instruments.ts",
+  "smokeExit": 0,
+  "replayExit": 0,
+  "typecheckExit": 0,
+  "through": 140,
+  "worldHash": "f6bb8d80fde9da8d21ec2a74917e870f38ce51c5abf2d4394c775121af39a5c0",
+  "inputReceipts": [
+    {
+      "file": "runs/s150/optimisation-original-log.json",
+      "sha256": "d3504381b792c37d97d229055246005a21f5eb8f94e554abde1e786e4de2000b"
+    },
+    {
+      "file": "runs/s150/measurement/summary.json",
+      "sha256": "2f6c582ac1b1e3746de1659725596f99627be8163998d5701a3c3f6d30ebc0b2"
+    },
+    {
+      "file": "runs/s150/measurement/causal-events.jsonl",
+      "sha256": "11c317bce345ffe6217001b47925c2cdfe8905e9ea4fda1248c009f658b575b8"
+    }
+  ],
+  "additionalInputs": [
+    {
+      "path": "runs/s150/measurement/offers.json",
+      "bytes": 130597,
+      "sha256": "4fae7c8113e4bb2923ed083e3f4fd6eb4fab1cdc208b4e26a2efa308f8a35606"
+    },
+    {
+      "path": "runs/s150/measurement/state-140.json",
+      "bytes": 6582926,
+      "sha256": "9c888c377d2a8f93685912726b02b3ea36546e8e8ecc8f2c486c85a2e11e4e78"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "runs/s150-trace/before/all-offer-states.json",
+      "bytes": 354473,
+      "sha256": "a390a33b8a37a709dc6847e17fd7e20eda3acaaaf1a65f3fe8f9dcd2b8c3ed7b"
+    },
+    {
+      "path": "runs/s150-trace/before/coverage.json",
+      "bytes": 3043,
+      "sha256": "566396390a700bb1020c37ed4c26c7f7ca1ed202df9f2b50ae81fa49d1b41816"
+    },
+    {
+      "path": "runs/s150-trace/before/daily-hashes.json",
+      "bytes": 17116,
+      "sha256": "ad83d99daa0c6e0db41e6becd5b312e399b3a9515dbddf2634a0ea0e66a9c358"
+    },
+    {
+      "path": "runs/s150-trace/before/instruments.json",
+      "bytes": 3038406,
+      "sha256": "08f005e8436975b0c847352bf809852dce44dcec0f9fa7b0f1c672b67d223237"
+    },
+    {
+      "path": "runs/s150-trace/before/lot-transitions.json",
+      "bytes": 2535480,
+      "sha256": "02dcc0e571897464db1ce4a34c4da6ac832df6f0e6cde49313f61674f155f4de"
+    },
+    {
+      "path": "runs/s150-trace/before/received-offers.json",
+      "bytes": 2606342,
+      "sha256": "d1f82c3750b8b9b9ac11c4ac8f3c9cce5f6933a53e124e14553fa330ae0d2b12"
+    },
+    {
+      "path": "runs/s150-trace/before/started.json",
+      "bytes": 586,
+      "sha256": "625616fed1114551c3272e427948656d976547a316bdadda4ca210583cbb8b73"
+    }
+  ],
+  "crossCheck": {
+    "liveState": "runs/s150/measurement/state-140.json",
+    "stableLotsChecked": 32,
+    "washingtonLots": 17,
+    "washingtonMen": 14722,
+    "tennesseeOperations": [
+      {
+        "lot": "tn_1_infantry",
+        "orders": [
+          "m.107.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry"
+        ]
+      },
+      {
+        "lot": "tn_2_infantry",
+        "orders": [
+          "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg"
+        ]
+      }
+    ]
+  },
+  "followupPublication": {
+    "relatedStableLots": 37,
+    "instrumentChains": 16,
+    "namedUnselectedLotsAdded": [
+      "ny_2_militia_infantry",
+      "nj_1_3m_infantry",
+      "nj_2_3m_infantry",
+      "nj_3_3m_infantry",
+      "nj_4_3m_infantry"
+    ],
+    "files": [
+      {
+        "path": "docs/audit/s150-evidence/trace/instrument-chain.json",
+        "bytes": 319001,
+        "sha256": "70a01bf46c4285ba220508ad8cca63509e9d3f042805a73f03143aaadac40f10"
+      },
+      {
+        "path": "docs/audit/s150-evidence/trace/stable-lot-index.json",
+        "bytes": 326805,
+        "sha256": "70a625ccbbce932d2db1d7b7f28666d0a1ee06314b75f01cc3036976c937d139"
+      }
+    ]
+  }
+}

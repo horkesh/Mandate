@@ -1,0 +1,423 @@
+[
+  {
+    "request": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+    "paper": "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+    "allocationRecords": [
+      {
+        "allocOrder": "m.93.8d0391f7fabc9b1e",
+        "allocPaper": "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+        "allocDay": 93,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [],
+        "allocBlocks": [],
+        "allocReceived": [],
+        "allocShortfall": 1,
+        "allocReasons": [
+          "committed"
+        ],
+        "allocStatus": "deferred"
+      }
+    ],
+    "responses": [
+      {
+        "respOrder": "m.93.8d0391f7fabc9b1e",
+        "respPerson": "mansfield_joseph_k_f",
+        "respPost": "us_dept_washington",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 93,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 264,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  },
+  {
+    "request": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+    "paper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+    "allocationRecords": [
+      {
+        "allocOrder": "m.114.b70961860618b775",
+        "allocPaper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+        "allocDay": 114,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [
+          "ct_4_infantry"
+        ],
+        "allocBlocks": [
+          "raised.st_gov_connecticut.d77"
+        ],
+        "allocReceived": [
+          "raised.st_gov_connecticut.d77"
+        ],
+        "allocShortfall": 0,
+        "allocReasons": [],
+        "allocStatus": "received",
+        "allocRetention": [
+          null,
+          null
+        ],
+        "allocBlockLots": {
+          "raised.st_gov_connecticut.d77": [
+            "ct_4_infantry"
+          ]
+        }
+      }
+    ],
+    "responses": [
+      {
+        "respOrder": "m.114.b70961860618b775",
+        "respPerson": "mansfield_joseph_k_f",
+        "respPost": "us_dept_washington",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 114,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 264,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respDeclaredReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  },
+  {
+    "request": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+    "paper": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+    "allocationRecords": [
+      {
+        "allocOrder": "m.148.54182b6b77783884",
+        "allocPaper": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+        "allocDay": 148,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [
+          "generated.raised.st_gov_massachusetts.d76.5"
+        ],
+        "allocBlocks": [
+          "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671"
+        ],
+        "allocReceived": [],
+        "allocShortfall": 0,
+        "allocReasons": [],
+        "allocStatus": "pending",
+        "allocRetention": [
+          null,
+          null
+        ],
+        "allocBlockLots": {
+          "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671": [
+            "generated.raised.st_gov_massachusetts.d76.5"
+          ]
+        }
+      }
+    ],
+    "responses": [
+      {
+        "respOrder": "m.148.54182b6b77783884",
+        "respPerson": "mansfield_joseph_k_f",
+        "respPost": "us_dept_washington",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 148,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 264,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.148.54182b6b77783884",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.148.54182b6b77783884"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.148.54182b6b77783884",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.148.54182b6b77783884"
+        },
+        "respReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respDeclaredReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  }
+]

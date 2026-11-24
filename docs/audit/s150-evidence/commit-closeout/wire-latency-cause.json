@@ -1,0 +1,245 @@
+{
+  "method": "Pure derivation of retained day120/140 States; no new tick, campaign or day134 State. Actual134 packets and menus remain in accepted live-orders-capture.",
+  "rows": [
+    {
+      "path": "runs/s150/measurement-0135/state-120.json",
+      "hash": "f675ce52dd98fdeb0b25eb031589447d39b37033630b61b438614cf1ada4e130",
+      "day": 120,
+      "threshold": 250,
+      "from": "washington",
+      "to": "northern_virginia",
+      "control": null,
+      "fromWire": {
+        "region": "washington",
+        "owner": "union",
+        "reason": "held"
+      },
+      "toWire": {
+        "region": "northern_virginia",
+        "owner": null,
+        "reason": "no_control"
+      },
+      "daysToWire": 1,
+      "publicWire": false,
+      "courier": {
+        "ok": true,
+        "latency": {
+          "days": 1,
+          "parts": [
+            {
+              "part": "roads",
+              "days": 1
+            }
+          ]
+        }
+      },
+      "wire": {
+        "ok": true,
+        "latency": {
+          "days": 1,
+          "parts": [
+            {
+              "part": "roads",
+              "days": 1
+            }
+          ]
+        }
+      },
+      "messenger": {
+        "ok": true,
+        "latency": {
+          "days": 0,
+          "parts": [
+            {
+              "part": "messenger",
+              "days": 0
+            }
+          ]
+        }
+      },
+      "wireAttentionPrice": 0,
+      "messengerAttentionPrice": 1
+    },
+    {
+      "path": "runs/s150/measurement-0135/state-140.json",
+      "hash": "8675076c69e14fb2e77f7aa5c217d6a291f833e4ac0b9126042ee93f47b39f1d",
+      "day": 140,
+      "threshold": 250,
+      "from": "washington",
+      "to": "northern_virginia",
+      "control": null,
+      "fromWire": {
+        "region": "washington",
+        "owner": "union",
+        "reason": "held"
+      },
+      "toWire": {
+        "region": "northern_virginia",
+        "owner": null,
+        "reason": "no_control"
+      },
+      "daysToWire": 1,
+      "publicWire": false,
+      "courier": {
+        "ok": true,
+        "latency": {
+          "days": 1,
+          "parts": [
+            {
+              "part": "roads",
+              "days": 1
+            }
+          ]
+        }
+      },
+      "wire": {
+        "ok": true,
+        "latency": {
+          "days": 1,
+          "parts": [
+            {
+              "part": "roads",
+              "days": 1
+            }
+          ]
+        }
+      },
+      "messenger": {
+        "ok": true,
+        "latency": {
+          "days": 0,
+          "parts": [
+            {
+              "part": "messenger",
+              "days": 0
+            }
+          ]
+        }
+      },
+      "wireAttentionPrice": 0,
+      "messengerAttentionPrice": 1
+    },
+    {
+      "path": "runs/s150/measurement-live-orders/state-120.json",
+      "hash": "774c88a2f1e29545cea462a8a31da787acd4af0e1bf3d9c1eb3612da1f122c5a",
+      "day": 120,
+      "threshold": 250,
+      "from": "washington",
+      "to": "northern_virginia",
+      "control": {
+        "union": 360
+      },
+      "fromWire": {
+        "region": "washington",
+        "owner": "union",
+        "reason": "held"
+      },
+      "toWire": {
+        "region": "northern_virginia",
+        "owner": "union",
+        "reason": "held"
+      },
+      "daysToWire": 0,
+      "publicWire": false,
+      "courier": {
+        "ok": true,
+        "latency": {
+          "days": 1,
+          "parts": [
+            {
+              "part": "roads",
+              "days": 1
+            }
+          ]
+        }
+      },
+      "wire": {
+        "ok": true,
+        "latency": {
+          "days": 0,
+          "parts": [
+            {
+              "part": "wire",
+              "days": 0
+            }
+          ]
+        }
+      },
+      "messenger": {
+        "ok": true,
+        "latency": {
+          "days": 0,
+          "parts": [
+            {
+              "part": "messenger",
+              "days": 0
+            }
+          ]
+        }
+      },
+      "wireAttentionPrice": 0,
+      "messengerAttentionPrice": 1
+    },
+    {
+      "path": "runs/s150/measurement-live-orders/state-140.json",
+      "hash": "bbce3cc4298a4d16e5510606ea15cfa8dd4b3d35f07ab3e101ec1399ee9a8b38",
+      "day": 140,
+      "threshold": 250,
+      "from": "washington",
+      "to": "northern_virginia",
+      "control": {
+        "union": 585
+      },
+      "fromWire": {
+        "region": "washington",
+        "owner": "union",
+        "reason": "held"
+      },
+      "toWire": {
+        "region": "northern_virginia",
+        "owner": "union",
+        "reason": "held"
+      },
+      "daysToWire": 0,
+      "publicWire": false,
+      "courier": {
+        "ok": true,
+        "latency": {
+          "days": 1,
+          "parts": [
+            {
+              "part": "roads",
+              "days": 1
+            }
+          ]
+        }
+      },
+      "wire": {
+        "ok": true,
+        "latency": {
+          "days": 0,
+          "parts": [
+            {
+              "part": "wire",
+              "days": 0
+            }
+          ]
+        }
+      },
+      "messenger": {
+        "ok": true,
+        "latency": {
+          "days": 0,
+          "parts": [
+            {
+              "part": "messenger",
+              "days": 0
+            }
+          ]
+        }
+      },
+      "wireAttentionPrice": 0,
+      "messengerAttentionPrice": 1
+    }
+  ]
+}

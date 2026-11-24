@@ -5,6 +5,8 @@
  * today too, so the phase repeats until nothing more is due.
  */
 import { sideOfPerson } from '../command/command.ts';
+import { allocationPaper } from '../command/force-requests.ts';
+import { governorUndertaking } from '../command/allocation.ts';
 import { deliverReport, deliverReports, rememberLetterReceipt, type ReportDelivery } from '../knowledge/knowledge.ts';
 import { term } from '../knowledge/truth.ts';
 import { mintMessageId, sendMessages, takeDue, type TransitMessage } from '../messages/transit.ts';
@@ -17,6 +19,7 @@ import { arriveOrder, destinationFailure, relayOrder, returnDispatch } from './o
 import { arriveVerb } from './verbs.ts';
 import { arriveCall } from './recruitment.ts';
 import { paperDoctrines } from '../seats/world.ts';
+import { reportSubordinateReturn } from './allocation.ts';
 
 /** A day can chain same-day hops (a relay in the same town); more rounds than this means a loop, which is a bug. */
 const MAX_ROUNDS = 64;
@@ -71,6 +74,8 @@ export function deliverDue(ctx: TickContext, start: State): State {
       state = deliverReports(state, deliveries);
       for (const msg of arrivals) {
         fire(ctx, 'messages.delivered');
+        const report=msg.msgReport!;
+        if(report.reportForceNeed!==undefined || report.reportAnswers!==null&&state.forceRequests?.[report.reportAnswers]!==undefined)ctx.requestReceipts?.push(msg);
         reportDecisionPoints(ctx, state, msg);
       }
     }
@@ -93,6 +98,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
     return arriveVerb(ctx, state, msg);
   }
   if (msg.msgOrder !== null) {
+    const order=msg.msgOrder;
     if (msg.msgOfficeAddress === true) {
       const holder = msg.msgToPost === null ? null : state.postStates[msg.msgToPost]?.postHolder ?? null;
       if (holder === null) return returnDispatch(ctx,state,msg,'vacant_post');
@@ -100,7 +106,9 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
     }
     const opening=msg.msgRole==='addressee' && msg.msgOrder!.orderKind==='mandate' && ctx.world.map.world.rules.mandates?.some(p=>p.assignment!==undefined && p.grant.mandatePost===msg.msgToPost && p.grant.mandateHolder===msg.msgTo);
     if (msg.msgOrder!.orderKind !== 'support' && msg.msgToPost !== null && !opening) {
-      const failure = destinationFailure(ctx,state,msg.msgToPost,msg.msgTo,msg.msgOrder!.orderIssuer,(msg.msgOrder!.orderKind === 'call' || msg.msgOrder!.orderKind === 'mandate'));
+      const paper=msg.msgRole==='addressee' && order.orderKind==='allocation'?allocationPaper(ctx.world,state,order.orderAllocation??''):undefined;
+      const neutral=order.orderKind==='call' || order.orderKind==='mandate' || (paper!==undefined && governorUndertaking(ctx.world,paper));
+      const failure = destinationFailure(ctx,state,msg.msgToPost,msg.msgTo,order.orderIssuer,neutral);
       if (failure !== null) return returnDispatch(ctx,state,msg,failure);
     }
     ctx.requestReceipts?.push(msg);
@@ -126,6 +134,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
 }
 
 function reportDecisionPoints(ctx: TickContext, state: State, msg: TransitMessage): void {
+  reportSubordinateReturn(ctx,state,msg);
   const report = msg.msgReport!;
   const seat = seatIdFor(msg.msgTo);
   const world = ctx.world;

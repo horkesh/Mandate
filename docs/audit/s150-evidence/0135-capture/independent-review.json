@@ -1,0 +1,39 @@
+{
+  "decision": "0135",
+  "verdict": "Correction required before capture",
+  "findings": [
+    {
+      "severity": "blocker",
+      "where": "packages/kernel/src/tick/allocation.ts:142-182; packages/kernel/src/seats/allocation.ts:11-16",
+      "firstCause": "The direct superior answer checks retention for the original proposed selection. Its issued cohort paper has no lot IDs. On receipt and any later allocation-fulfil choice, fulfilAllocation chooses actual lots afresh and proceeds directly to startSelectedLots. The holder can send a different lot, or later fill a partial quantity, after the facts that justified the initial grant have changed.",
+      "impact": "A late fulfilment can create or deepen the superior's own shortfall and still start a journey. The new direct-grant test proves only the answer and dispatch, before the bypass occurs.",
+      "proofNeeded": "Apply the same retention rule, and the appropriate stated unknown reservation, to the actual direct selection at receipt or later fulfilment. Exercise a previous grant whose current sending would create a shortfall, and an actual direct grant that sends its surplus. Preserve delivery, receipt and non-request static allocation behavior."
+    },
+    {
+      "severity": "blocker",
+      "where": "packages/kernel/src/seats/force-requests.ts:35-39,60-64,175-187",
+      "firstCause": "The retention comparison accepts any plan record at the post after checking its flags and objective. It does not check the mission’s response person and draft commander the way forceOptions does. The shared joined land block filter excludes marches and joins but includes land blocks aboard a carrier.",
+      "impact": "A replacement commander can withhold a cohort for an earlier holder's unreceived mission. An embarked unit can instead make a mission appear to have surplus land strength, permitting a transfer of a regiment actually needed ashore.",
+      "proofNeeded": "Reuse the existing received-mission holder checks, and exclude embarked land strength from the retention comparison. A known-need fixture with one landed candidate and embarked strength proves the latter without changing policy."
+    }
+  ],
+  "verified": {
+    "retention": "On the subordinate path, the shared holding score exposes the existing 0133 planner shortfall. The deterministic counterfactual subtracts selected lot men, evaluates the same mission and received opposition, and compares shortfall rather than total plan score. New or deeper determined needs keep, determined surplus sends, and undetermined needs are both null. Compliance object/refuse/defer/conditions retain their existing control over sending. No reserve size or quantity rule changed.",
+    "knowledge": "The unknown comparison travels as a declared planner_evaluation statement without changing actual comply. In the fictional receipt fixture both issuer and requester read it under the correct child author and their respective correlation IDs. The pending request only closes on its terminal outcome. The prior 0134 authority, sequestration until receiver receipt and delayed return forwarding remain on the same paths.",
+    "compatibility": "allocRetention and fansRetention are optional numeric pairs and preserve old row shapes. The statement object has an immutable annotation; no clock, randomness or platform-dependent sort was added. No save migration or replay mismatch was observed in the retained focused evidence. The final integrated save/replay check remains pending.",
+    "pack": "Structural comparison of the staged baseline and working pack source and generated world found exactly two added offensive declarations, both hold. McDowell's local headquarters hold at northern_virginia starts 28 May and cites GO26 p.61/OR I-II p.653 and Arlington OR I-II pp.59–60. Beauregard's Manassas hold starts 31 May and cites SO149 OR I-II p.896 and reported arrival pp.901–902. Both mark I and use the existing principal-chain hold grammar. Existing date, objective, posture and authority rows are identical. The exact source extracts for the new dossier were still in preparation when reviewed.",
+    "GO1": "The reporting utility reads state and emits regiment candidates, locations, owner posts, holder identities and chains. It issues no declaration, assignment or allocation and does not collapse ambiguous New York identities. The retained 0134 baseline shows 30 matched daily hashes from days 61–90 and 63 regiment-day rows for days 84–90. Its day 90 result places First Michigan with Mansfield at Washington, Fifth Massachusetts with Andrew in New England and New York candidates with Morgan in New York. New-capture holdings and the sourced-paper disposition remain pending.",
+    "index": "A fresh exact comparison of git ls-files --stage and the retained starting index matched 3,732 index entries and preserved 368 staged paths."
+  },
+  "retainedChecks": [
+    "runs/s150-0135/red-final-fixtures.log and green-first.log: expected focused failures followed by seven passing focused cases",
+    "runs/s150-0135/focused-family.log: 129 passed; one mutable annotation failure",
+    "runs/s150-0135/determinism-green.log: 15 passed after the annotation correction",
+    "runs/s150-0135/typecheck-main.log: no diagnostics",
+    "runs/s150-0135/boundary.log: 498 files and 61 terms clean",
+    "runs/s150-0135/hold-missions-green.log: four pack tests passed",
+    "runs/s150-0135/rules.log: one pendingRequests projection fingerprint drift, being refreshed by the capture owner",
+    "runs/s150-0135/go1-baseline/verification.json: 30 retained daily hashes and 63 GO1 rows"
+  ],
+  "scope": "One independent review using retained test evidence and read-only inspection. No suite, scenario capture, timing campaign, hook, commit, or push run. The new baseline comparison, full chains, floor and band results, and hosted Linux timing remain outside this review."
+}

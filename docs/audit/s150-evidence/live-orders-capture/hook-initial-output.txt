@@ -1,0 +1,802 @@
+git : lfs-check: 0 file(s) under art/, every binary an LFS pointer.
+At line:2 char:140
++ ... l-tree.txt; git hook run pre-commit *> runs/s150-live-orders/hook-ini ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (lfs-check: 0 fi...an LFS pointer.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+pre-commit: the working tree equals the index; checking it in place.
+rules: 0 new, changed or stale findings
+
+ RUN  v5.1.0 C:/Pyrrhic/sprint-allocate
+
+ ❯ packages/cli/test/seats-run.test.ts (7 tests | 2 failed) 29250ms
+   ❯ the real mid-run save fixture (testbed, day 40) (3)
+     × its log, replayed from the start, reproduces its State (the log is the truth) 2169ms
+     × resuming from it reaches the continuous run’s final hash 11434ms
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+ ❯ packages/kernel/test/one-writer.test.ts (44 tests | 3 failed) 24576ms
+   ❯ one writer per field, over every package (3)
+     × classifies every property of every State record, and no key is owned twice 1114ms
+     × writes each owned field only from its writer, and never writes an immutable key 22287ms
+   ❯ the scanner catches violations (positive control) (38)
+     ❯ the immutable declaration (tooling item 4: per record, not per key) (7)
+       × is the real declaration: every nested State record is declared, and the derived keys include the ones the old
+list named 1081ms
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+value.txt is not good
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+extra.txt is missing
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+@w/lib is v2 (unstaged)
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+ ❯ packages/cli/test/liveness-gate.test.ts (15 tests | 1 failed) 90012ms
+   ❯ the reference runs (5)
+     × union-1861, war by decision, 148 days: every mechanic fires within its band 62656ms
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+value.txt is not good
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'check.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'extra.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/lib/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'value.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'art/_pilot/paper.recipe.json', LF will be replaced by CRLF the next time Git touches i
+t
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'art-masters/pilot/notes.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+ ❯ packs/union-1861/test/discretion-chain.test.ts (3 tests | 1 failed) 73ms
+   × the July junction carries if-practicable authority and retains the received advance-news gate 41ms
+ ❯ packages/cli/test/done-check.test.ts (15 tests | 2 failed | 1 skipped) 352180ms
+   ❯ the done check on union-1861 at war and the testbed (9)
+     × passes every Phase 0 criterion but the budget, which is a stopwatch 10ms
+   ❯ each criterion can fail (positive controls) (6)
+     × liveness: a planted dead mechanic in a reference run fails the check 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 9 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/cli/test/done-check.test.ts > the done check on union-1861 at war and the testbed > passes every Phase
+0 criterion but the budget, which is a stopwatch
+AssertionError: liveness: expected [ …(21) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "union-1861, war by decision, 148 days: combat.battle_closed is too_rare (1 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: combat.battle_opened is too_rare (1 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: combat.captured is too_rare (1 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: combat.flank_broken is dead (0 fires, band 1..6)",
++   "union-1861, war by decision, 148 days: combat.general_hit is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: combat.killed_wounded is too_rare (2 fires, band 5..20)",
++   "union-1861, war by decision, 148 days: combat.missing is too_rare (2 fires, band 4..18)",
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 92..368)",
++   "union-1861, war by decision, 148 days: map.pocket_relieved is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: movement.arrived is too_frequent (211 fires, band 21..86)",
++   "union-1861, war by decision, 148 days: movement.join_blocked is too_frequent (70 fires, band 0..0)",
++   "union-1861, war by decision, 148 days: movement.leg_started is too_frequent (199 fires, band 21..86)",
++   "union-1861, war by decision, 148 days: operations.repulsed is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: operations.works is too_frequent (10 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: planner.candidates is too_frequent (19 fires, band 4..16)",
++   "union-1861, war by decision, 148 days: planner.searches is too_frequent (19 fires, band 4..16)",
++   "union-1861, war by decision, 148 days: plans.drafted is too_frequent (19 fires, band 4..16)",
++   "union-1861, war by decision, 148 days: reports.battle_dispatch is too_frequent (10 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: reports.commander_lost is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: seats.battle_orders is too_rare (4 fires, band 5..20)",
++ ]
+
+ ❯ packages/cli/test/done-check.test.ts:47:114
+     45| describe('the done check on union-1861 at war and the testbed', () => {
+     46|   it('passes every Phase 0 criterion but the budget, which is a stopwa…
+     47|     for (const c of result.criteria) if (c.milestone === 'phase0' && c…
+       |
+   ^
+     48|     expect(result.criteria.filter((c) => c.milestone === 'phase0').map…
+     49|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/9]⎯
+
+ FAIL  packages/cli/test/done-check.test.ts > each criterion can fail (positive controls) > liveness: a planted dead me
+chanic in a reference run fails the check
+AssertionError: expected [ …(21) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "union-1861, war by decision, 148 days: combat.battle_closed is too_rare (1 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: combat.battle_opened is too_rare (1 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: combat.captured is too_rare (1 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: combat.flank_broken is dead (0 fires, band 1..6)",
++   "union-1861, war by decision, 148 days: combat.general_hit is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: combat.killed_wounded is too_rare (2 fires, band 5..20)",
++   "union-1861, war by decision, 148 days: combat.missing is too_rare (2 fires, band 4..18)",
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 2..10)",
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 92..368)",
++   "union-1861, war by decision, 148 days: map.pocket_relieved is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: movement.arrived is too_frequent (211 fires, band 21..86)",
++   "union-1861, war by decision, 148 days: movement.join_blocked is too_frequent (70 fires, band 0..0)",
++   "union-1861, war by decision, 148 days: movement.leg_started is too_frequent (199 fires, band 21..86)",
++   "union-1861, war by decision, 148 days: operations.repulsed is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: operations.works is too_frequent (10 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: planner.candidates is too_frequent (19 fires, band 4..16)",
++   "union-1861, war by decision, 148 days: planner.searches is too_frequent (19 fires, band 4..16)",
++   "union-1861, war by decision, 148 days: plans.drafted is too_frequent (19 fires, band 4..16)",
++   "union-1861, war by decision, 148 days: reports.battle_dispatch is too_frequent (10 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: reports.commander_lost is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: seats.battle_orders is too_rare (4 fires, band 5..20)",
++ ]
+
+ ❯ packages/cli/test/done-check.test.ts:163:63
+    161|     const run = union();
+    162|     const reference = REFERENCE_RUNS.find((x) => x.name === 'union-186…
+    163|     expect(livenessProblems(reference, run.checked.liveness)).toEqual(…
+       |                                                               ^
+    164|     // Lane 1.12: a mechanic the Union doctrine drives (its run has no…
+    165|     const planted = run.checked.liveness.map((row) => (row.mechanic ==…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/9]⎯
+
+ FAIL  packages/cli/test/liveness-gate.test.ts > the reference runs > union-1861, war by decision, 148 days: every mech
+anic fires within its band
+AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(18) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   {
++     "band": {
++       "maxFires": 10,
++       "minFires": 2,
++     },
++     "fires": 1,
++     "mechanic": "combat.battle_closed",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 10,
++       "minFires": 2,
++     },
++     "fires": 1,
++     "mechanic": "combat.battle_opened",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 10,
++       "minFires": 2,
++     },
++     "fires": 1,
++     "mechanic": "combat.captured",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 6,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.flank_broken",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.general_hit",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 20,
++       "minFires": 5,
++     },
++     "fires": 2,
++     "mechanic": "combat.killed_wounded",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 18,
++       "minFires": 4,
++     },
++     "fires": 2,
++     "mechanic": "combat.missing",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 10,
++       "minFires": 2,
++     },
++     "fires": 0,
++     "mechanic": "combat.routed",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 368,
++       "minFires": 92,
++     },
++     "fires": 0,
++     "mechanic": "forces.stragglers_returned",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++       "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named
+events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved.",
++     },
++     "fires": 0,
++     "mechanic": "map.pocket_relieved",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 86,
++       "minFires": 21,
++       "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Or
+dinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated
+ causal credit is claimed for an individual paper. movement.arrived firings 704->43. No force quantity, contract, plann
+er/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positi
+ve bands.",
++     },
++     "fires": 211,
++     "mechanic": "movement.arrived",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 0,
++       "minFires": 0,
++       "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel te
+st drives the wait",
++     },
++     "fires": 70,
++     "mechanic": "movement.join_blocked",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 86,
++       "minFires": 21,
++       "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Or
+dinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated
+ causal credit is claimed for an individual paper. movement.leg_started firings 387->43. No force quantity, contract, p
+lanner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved po
+sitive bands.",
++     },
++     "fires": 199,
++     "mechanic": "movement.leg_started",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++       "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact d
+ay146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once.",
++     },
++     "fires": 0,
++     "mechanic": "operations.repulsed",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 8,
++       "minFires": 2,
++       "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Or
+dinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated
+ causal credit is claimed for an individual paper. operations.works firings 15->4. No force quantity, contract, planner
+/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive
+ bands.",
++     },
++     "fires": 10,
++     "mechanic": "operations.works",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 16,
++       "minFires": 4,
++       "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Or
+dinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated
+ causal credit is claimed for an individual paper. planner.candidates firings 12->8. No force quantity, contract, plann
+er/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positi
+ve bands.",
++     },
++     "fires": 19,
++     "mechanic": "planner.candidates",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 16,
++       "minFires": 4,
++       "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Or
+dinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated
+ causal credit is claimed for an individual paper. planner.searches firings 12->8. No force quantity, contract, planner
+/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive
+ bands.",
++     },
++     "fires": 19,
++     "mechanic": "planner.searches",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 16,
++       "minFires": 4,
++       "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Or
+dinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated
+ causal credit is claimed for an individual paper. plans.drafted firings 12->8. No force quantity, contract, planner/co
+mbat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive ba
+nds.",
++     },
++     "fires": 19,
++     "mechanic": "plans.drafted",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++       "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Or
+dinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated
+ causal credit is claimed for an individual paper. reports.battle_dispatch firings 50->2. No force quantity, contract,
+planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved p
+ositive bands.",
++     },
++     "fires": 10,
++     "mechanic": "reports.battle_dispatch",
++     "problem": "too_frequent",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "reports.commander_lost",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 20,
++       "minFires": 5,
++     },
++     "fires": 4,
++     "mechanic": "seats.battle_orders",
++     "problem": "too_rare",
++   },
++ ]
+
+ ❯ packages/cli/test/liveness-gate.test.ts:81:48
+     79|   for (const run of REFERENCE_RUNS) {
+     80|     it(`${run.name}: every mechanic fires within its band`, () => {
+     81|       expect(gateFailures(run, liveness(run))).toEqual([]);
+       |                                                ^
+     82|     });
+     83|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/9]⎯
+
+ FAIL  packages/cli/test/seats-run.test.ts > the real mid-run save fixture (testbed, day 40) > its log, replayed from t
+he start, reproduces its State (the log is the truth)
+AssertionError: the saved shape of State or a mechanic changed. Before any public build: regenerate with `npx tsx tools
+/make-save-fixture.ts` and say so in the commit. After one: bump CURRENT_SAVE_SCHEMA and add a migration.: expected '1b
+863e8162908bd849a055f1f003ed726031e…' to be '3f5771408bbf697ba93093529760aa8a0d612…' // Object.is equality
+
+Expected: "3f5771408bbf697ba93093529760aa8a0d612033ce134e5acf0fc458920f9d25"
+Received: "1b863e8162908bd849a055f1f003ed726031e5d873b55ad734aef5732a5f4a72"
+
+ ❯ packages/cli/test/seats-run.test.ts:52:55
+     50|     const save = decodeSave(text, { expectedWorldHash: worldHash });
+     51|     const replayed = phase0.replay(world, phase0.createState(world, se…
+     52|     expect(canonicalHash(replayed.state), REGENERATE).toBe(save.stateH…
+       |                                                       ^
+     53|   });
+     54|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/9]⎯
+
+ FAIL  packages/cli/test/seats-run.test.ts > the real mid-run save fixture (testbed, day 40) > resuming from it reaches
+ the continuous run’s final hash
+AssertionError: the saved shape of State or a mechanic changed. Before any public build: regenerate with `npx tsx tools
+/make-save-fixture.ts` and say so in the commit. After one: bump CURRENT_SAVE_SCHEMA and add a migration.: expected [ {
+ day: 41, …(1) }, …(79) ] to deeply equal [ { day: 41, …(1) }, …(79) ]
+
+- Expected
++ Received
+
+@@ -1,129 +1,129 @@
+  [
+    {
+      "day": 41,
+-     "hash": "0f092b14319dfe6fe2cb4632e373010112bd02e36943268eb22615e26091beb1",
++     "hash": "6393ac827c071496a5fa9757743fd2710f58534caddbab124abbe2787502eb3c",
+    },
+    {
+      "day": 42,
+-     "hash": "f2c5a9cebcbce972d56918e0e5dd4d29ec191cea6e95844a2ab51e1f559ea005",
++     "hash": "c485a5ba655c54f941cbde7bff8e99567c381096ef1e741cd6cb103bb1ae05e2",
+    },
+    {
+      "day": 43,
+-     "hash": "70e806b443447d646c4b2341a949d1715abd9bae650c67adfbf962c4f7e6a0f3",
++     "hash": "652405e9b2166b331aaa2090c981d6fabbc248a7edc51a8382c0ed52145b4948",
+    },
+    {
+      "day": 44,
+-     "hash": "9f5d0bc40fdbb583477d5a36be64fa73df7bef2dffe2caf85fed8ad9f2a7cc14",
++     "hash": "e55a2b37fafd0bad3bdd17afb001558002c792fd3c32b8fcd06fbe2631161f64",
+    },
+    {
+      "day": 45,
+-     "hash": "dd6d7595749f8aeb7dca09f170e2473f8b71d3683d34819d9b20bd981222ba06",
++     "hash": "52a4ed01d5f8d1130ffbe0a24f37dc77e552c9b5b3ab5d56d04b26b5e37564cd",
+    },
+    {
+      "day": 46,
+-     "hash": "402c0a549d9de7c71e2a3e2a6ec9edcd5aaf39bcbf09a8c9e01c5263abc3de35",
++     "hash": "39b722cfbe4d5f01fc25a96df72698ca66ebf45a2d02aa96f8c549cbd27ed887",
+    },
+    {
+      "day": 47,
+-     "hash": "20a4ffe5f3cc5c8c819024fa43bc8ef721c7e2611d114d7c3d5edd77eac36012",
++     "hash": "58a721e7218394a4ffcbf03b8cae00920caea518b4b258057f401e42d0423d8b",
+    },
+    {
+      "day": 48,
+-     "hash": "b912053a948b6c3814102f46bbdef8963dc500ab8338fcadb9b9cd312bdebfc7",
++     "hash": "eda696c235f548243cc4755b9e4badf631edd201c68c925f7f36b0d868b6d36f",
+    },
+    {
+      "day": 49,
+-     "hash": "7ef446d9971252ccc8961b7f7587cbb41360296f1683def5bbf1d6d37a16035f",
++     "hash": "39bb59bdd865ce4ed654c0e2ac3dc73ffb8ba6f9be69112ef1b315e394e8a447",
+    },
+    {
+      "day": 50,
+-     "hash": "7ba01bc535ebdfb5cc1c42f43907baa0eedc52c5bd0dfa828fbea0000194c275",
++     "hash": "754ad80e3703142d4df3d6624d5e379c685b877d1031651a55ee9bb2b4e4bd3c",
+    },
+    {
+      "day": 51,
+-     "hash": "379ccdaa4d02b97e56d81597dec4ca6f572e0c749f28151cc8784694f0a6747f",
++     "hash": "dd36378d4f810761bfc80fe92f8b1f1b93dc6a1c705614ba041b4f2d34abd5ba",
+    },
+    {
+      "day": 52,
+-     "hash": "85a2e89d01c27a7276c2bbea9b4d763d7110f38c996cc4f3423890b9282e4db9",
++     "hash": "3cde116f2bc2bdfaf0e0e397c7a15a59462ba8086f79dc4cb30463ddcdadf64c",
+    },
+    {
+      "day": 53,
+-     "hash": "d0ef68d56564406d3f32cdb49ad693af1747fca858312427efaf74b41d026902",
++     "hash": "046fd89639d0148c9a9e16703515f26c6fd559fe9567d29163feb5b09c37f554",
+    },
+    {
+      "day": 54,
+-     "hash": "17bf922dfefb997f181b31d949ae6cd99412519a285950b87abfdeae962a3f66",
++     "hash": "6e36987b21bab1cf3dac1f79907170eb3a3b6976b7167a42a5c2f712e8e7c0ad",
+    },
+    {
+      "day": 55,
+-     "hash": "be46a438ea9e7328fdabd047b5d3c90b8a3d426fd9b1885b68ce285b8cd3d90f",
++     "hash": "038c6936dc637e954b6fe710cee695c94b86ce2079ef8c52a0d5b7b891c622e6",
+    },
+    {
+      "day": 56,
+-     "hash": "bee8988d509aab4dd62eef8b2b4a3094bfc80c1ad066d407ffc1e6d7d2c3a3da",
++     "hash": "96a9a606ffb224e358bdf36d7611e65395da122b8ea6f97724f5ea51dd6ebc89",
+    },
+    {
+      "day": 57,
+-     "hash": "632deefec8325740bfa923061e1c5df57235be0df553295a2c3b9088399cdb92",
++     "hash": "e08579c52cb7945cfae9e5010ef2f057653a539734db7b42d2b97afb0eedba25",
+    },
+    {
+      "day": 58,
+-     "hash": "76f23ef94895b6aa8b351db124db17d5bdc8d01035b82d14f1aa320641624282",
++     "hash": "940b2208f54d1ddef03cf830ff8763f2cee7eb1c3af387e81a36d8ac9129b252",
+    },
+    {
+      "day": 59,
+-     "hash": "052f7f2243735dcdc78a2e41c5f73a98f7406e6d2e7a2088eecaf41b840abace",
++     "hash": "2eea124cb52bb887a6c61148e9185cdf70ef692a022711bfbf7576e349170ec5",
+    },
+    {
+      "day": 60,
+-     "hash": "16d6cc1bb84abcf0d5cf454ebe2401cfeaedf67366d3c0d32b81eaf74e79f58e",
++     "hash": "285dd0ff3f615f1847fdc2586fcf80fab0c2a7f67bbdd2f8586508aa8017ebff",
+    },
+    {
+      "day": 61,
+-     "hash": "f24d53425ef5c56d4ff8e8ad93bb48eaa3b3e6da2f3fc061b21c9942119d8f82",
++     "hash": "45617161a447be994cdcf4f14b5a589a56fb88c637e781b49cc3cc5f2ea572f5",
+    },
+    {
+      "day": 62,
+-     "hash": "519284f9e223665cda5985af910e7296a1230d7cf4421c6287fc488aa1a8d26c",
++     "hash": "9737abd85b6b5a7f8bc3c4d77211517018c4809eece5c2a33972c2886d2c0aed",
+    },
+    {
+      "day": 63,
+-     "hash": "ec9805f173a5b7a5e74e90090ab71746863a995be19c21e9f9658deea0eb4d10",
++     "hash": "915692fd83587e6d70c2df821c87b3807b207164a1c4b56235f1aefe19ebf94b",
+    },
+    {
+      "day": 64,
+-     "hash": "5f5f2090a88be81273bcee8e38dbb045e96d06131159af9f71d8e3f0e0089a22",
++     "hash": "e31c4c5857a9d5aa4b684a46b0032b7f86ff967b9bb2256f0d5f21e3e1e3642b",
+    },
+    {
+      "day": 65,
+-     "hash": "8d548ccc12c1fd049b3a3886646d8904987ca5cad691d4e5e4ec77d5e62c5f02",
++     "hash": "dbdf4082b73147ddb256b440b05a10577cbee8fc70c3f00b74e289511849a650",
+    },
+    {
+      "day": 66,
+-     "hash": "0882872758d8186e4f0e42ade7c00a12b9cc0d78507785342483d245d0ff0966",
++     "hash": "609843f52a50836a5ded5f32e92fd95ad6e1645714945a59c6369ae955159ac0",
+    },
+    {
+      "day": 67,
+-     "hash": "6d37cacacbbff0cd0b56515514a8df208acce8e82a93fadbb1cca4f09250e0df",
++     "hash": "7abaff0e1429516b6084d9e0022ddc6d33a26c466b96648a2d36113c70ffa471",
+    },
+    {
+      "day": 68,
+-     "hash": "1f967c13105f3cfdce55ca92b2b36b38ec0bb3d09f5039c64ca31e2dd4d13f6b",
++     "hash": "2fdd06fd4236830514926529c4da21fc9e883ba522860178a6ec26d349367fc7",
+    },
+    {
+      "day": 69,
+-     "hash": "9ef570d462fbf6848c06ee6e60c994024a321cfb4f6b2b642298f7a587d8a943",
++     "hash": "8c6626180d71fa8194dd32267cb523c690a1b0074cfe897cdab20010c95cb5cd",
+    },
+    {
+      "day": 70,
+-     "hash": "8bdc43bb8772a6d55eed858d4ec34da31628a9fc4015e77a9e1e358cb077402d",
++     "hash": "c93dfe65cee28aaaf20f4c2fe9184b12fc8c90630101fc7952a593d855f17d05",
+    },
+    {
+      "day": 71,
+-     "hash": "1ef28264a5fe3320d824047a58de164123e4f45f18d8069f03d8ee4e3effbdbf",
++     "hash": "02a2019bb55ac2707f5e3138e1c81fb5c017235ce77c18fbd7e924b05ab24f2a",
+    },
+    {
+      "day": 72,
+      "hash": "8ed01bb9a02d98ebafb836eb9f216c0e95417667e31dcd5e4c3080e31668c821",
+    },
+
+ ❯ packages/cli/test/seats-run.test.ts:60:40
+     58|     const resumed = phase0.playDays(world, save.state as unknown as ph…
+     59|     expect(canonicalHash(resumed.state), REGENERATE).toBe(canonicalHas…
+     60|     expect(resumed.hashes, REGENERATE).toEqual(continuous.hashes.slice…
+       |                                        ^
+     61|   });
+     62| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/9]⎯
+
+ FAIL  packages/kernel/test/one-writer.test.ts > one writer per field, over every package > classifies every property o
+f every State record, and no key is owned twice
+AssertionError: expected [ …(5) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "packages/kernel/src/knowledge/report.ts: ReportedAvailableLot.availRegiment has no writer in OWNED_FIELDS, and Rep
+ortedAvailableLot is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 0
+052) (packages/kernel/src/ownership.ts)",
++   "packages/kernel/src/knowledge/report.ts: ReportedAvailableLot.availCall has no writer in OWNED_FIELDS, and Reporte
+dAvailableLot is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 0052)
+ (packages/kernel/src/ownership.ts)",
++   "packages/kernel/src/knowledge/report.ts: ReportedAvailableLot.availArm has no writer in OWNED_FIELDS, and Reported
+AvailableLot is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 0052)
+(packages/kernel/src/ownership.ts)",
++   "packages/kernel/src/knowledge/report.ts: ReportedAvailableLot.availTermDays has no writer in OWNED_FIELDS, and Rep
+ortedAvailableLot is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 0
+052) (packages/kernel/src/ownership.ts)",
++   "packages/kernel/src/knowledge/report.ts: ReportedAvailableLot.availEndsDay has no writer in OWNED_FIELDS, and Repo
+rtedAvailableLot is not declared in IMMUTABLE_RECORDS; a record below the State root is an immutable value (decision 00
+52) (packages/kernel/src/ownership.ts)",
++ ]
+
+ ❯ packages/kernel/test/one-writer.test.ts:95:92
+     93|   it('classifies every property of every State record, and no key is o…
+     94|     const records = stateRecords(sources);
+     95|     expect(classificationProblems(records, OWNED_FIELDS, IMMUTABLE, LE…
+       |                                                                                            ^
+     96|   });
+     97|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/9]⎯
+
+ FAIL  packages/kernel/test/one-writer.test.ts > one writer per field, over every package > writes each owned field onl
+y from its writer, and never writes an immutable key
+AssertionError: expected [ …(12) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "packages/kernel/src/command/allocation.ts:113: assignment of \"enlEndsDay\" (only nobody may write it)",
++   "packages/kernel/src/command/allocation.ts:113: assignment of \"lotService\" (only nobody may write it)",
++   "packages/kernel/src/tick/allocation.ts:328: write through a local alias of \"postStates\" (only command may write
+it)",
++   "packages/kernel/src/tick/allocation.ts:133: bracket assignment of \"allocStatus\" (only nobody may write it)",
++   "packages/kernel/src/tick/allocation.ts:274: assignment of \"authorityGrant\" (only nobody may write it)",
++   "packages/kernel/src/tick/allocation.ts:274: assignment of \"ceilingMen\" (only nobody may write it)",
++   "packages/kernel/src/tick/allocation.ts:269: assignment of \"enlEndsDay\" (only nobody may write it)",
++   "packages/kernel/src/tick/allocation.ts:269: assignment of \"lotService\" (only nobody may write it)",
++   "packages/kernel/src/tick/allocation.ts:274: assignment of \"mandateCeiling\" (only nobody may write it)",
++   "packages/kernel/src/tick/allocation.ts:328: write through a local alias of \"postHolder\" (only nobody may write i
+t)",
++   "packages/kernel/src/tick/allocation.ts:155: assignment of \"respUndertaking\" (only nobody may write it)",
++   "packages/kernel/src/tick/generate.ts:228: write through a parenthesised target of \"postStates\" (only command may
+ write it)",
++ ]
+
+ ❯ packages/kernel/test/one-writer.test.ts:102:24
+    100|       (v) => `${v.path}:${v.line}: ${v.form} of "${v.key}" (only ${v.w…
+    101|     );
+    102|     expect(violations).toEqual([]);
+       |                        ^
+    103|   });
+    104| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/9]⎯
+
+ FAIL  packages/kernel/test/one-writer.test.ts > the scanner catches violations (positive control) > the immutable decl
+aration (tooling item 4: per record, not per key) > is the real declaration: every nested State record is declared, and
+ the derived keys include the ones the old list named
+AssertionError: expected [ 'AdviceBody', …(131) ] to deeply equal [ 'AdviceBody', …(130) ]
+
+- Expected
++ Received
+
+@@ -109,10 +109,11 @@
+    "RegimentLot",
+    "ReportBody",
+    "ReportClaim",
+    "ReportQualification",
+    "ReportTruth",
++   "ReportedAvailableLot",
+    "Reservation",
+    "ReservationGapDetails",
+    "ReservationGround",
+    "ResponseTerm",
+    "ScheduledChangeState",
+
+ ❯ packages/kernel/test/one-writer.test.ts:665:27
+    663|       expect(IMMUTABLE_KEYS_OF_THE_OLD_LIST).toHaveLength(60);
+    664|       const nestedNames = real.filter((r) => r.record !== 'State' && !…
+    665|       expect(nestedNames).toEqual([...IMMUTABLE_RECORDS].sort());
+       |                           ^
+    666|     });
+    667|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/9]⎯
+
+ FAIL  packs/union-1861/test/discretion-chain.test.ts > the July junction carries if-practicable authority and retains
+the received advance-news gate
+AssertionError: expected { …(6) } to match object { fromDate: '1861-07-17', …(3) }
+(4 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "discretion": {
+-     "condition": "outmatched",
+-     "fallback": {
+-       "objective": null,
++   "fromDate": "1861-05-31",
+    "posture": "hold",
+-     },
+-   },
+-   "fromDate": "1861-07-17",
+-   "posture": "relieve",
+-   "requiresNotice": "manassas_advance_received",
+  }
+
+ ❯ packs/union-1861/test/discretion-chain.test.ts:18:15
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/9]⎯
+
+
+ Test Files  5 failed | 282 passed (287)
+      Tests  9 failed | 2521 passed | 3 skipped (2533)
+   Start at  12:30:27
+   Duration  354.04s (tests 83%, import 17%, transform 1%)

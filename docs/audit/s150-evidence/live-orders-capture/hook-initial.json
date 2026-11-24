@@ -1,0 +1,70 @@
+{
+  "command": "git hook run pre-commit",
+  "exit": 1,
+  "stagedTree": "2ed8c880d5ad4b536c3e5f58c506082c5e4e0282",
+  "stagedPaths": 444,
+  "stagedTreeUnchangedThroughHook": true,
+  "backupTreeMatches": true,
+  "tests": {
+    "failed": 9,
+    "passed": 2521,
+    "skipped": 3,
+    "total": 2533,
+    "filesFailed": 5,
+    "filesPassed": 282
+  },
+  "failures": [
+    {
+      "file": "packages/cli/test/done-check.test.ts",
+      "test": "passes every Phase0 criterion but the budget, which is a stopwatch",
+      "cause": "liveness criterion returns21 unchanged band failures, not[]"
+    },
+    {
+      "file": "packages/cli/test/done-check.test.ts",
+      "test": "liveness: a planted dead mechanic in a reference run fails the check",
+      "cause": "positive control first requires an otherwise clean reference; it already has21 failures"
+    },
+    {
+      "file": "packages/cli/test/liveness-gate.test.ts",
+      "test": "union-1861, war by decision,148days: every mechanic fires within its band",
+      "cause": "21 observed mechanic bands remain unmet; prior0135 publication lists all first causes"
+    },
+    {
+      "file": "packages/cli/test/seats-run.test.ts",
+      "test": "its log, replayed from the start, reproduces its State (the log is the truth)",
+      "cause": "testbed day40 stored save fixture has old State hash; current replay differs; no fixture regenerated"
+    },
+    {
+      "file": "packages/cli/test/seats-run.test.ts",
+      "test": "resuming from it reaches the continuous run’s final hash",
+      "cause": "the same old fixture produces different hashes on41–120 from the current continuous run; no fixture regenerated"
+    },
+    {
+      "file": "packages/kernel/test/one-writer.test.ts",
+      "test": "classifies every property of every State record, and no key is owned twice",
+      "cause": "ReportedAvailableLot is missing from immutable-record declaration; five availability properties unclassified"
+    },
+    {
+      "file": "packages/kernel/test/one-writer.test.ts",
+      "test": "writes each owned field only from its writer, and never writes an immutable key",
+      "cause": "scanner reports12 writes in command/allocation, tick/allocation and tick/generate. Retained source inspection identifies reads/comparisons, indexed callback type/default, and alias forms among them; checker not altered or waived"
+    },
+    {
+      "file": "packages/kernel/test/one-writer.test.ts",
+      "test": "is the real declaration: every nested State record is declared, and the derived keys include the ones the old list named",
+      "cause": "derived record names include ReportedAvailableLot; declared IMMUTABLE_RECORDS omits it"
+    },
+    {
+      "file": "packs/union-1861/test/discretion-chain.test.ts",
+      "test": "the July junction carries if-practicable authority and retains the received advance-news gate",
+      "cause": "find(objective===manassas) now selects the authorised Beauregard May31 hold inserted before Johnston’s July17 relief; unchanged assertion compares different missions"
+    }
+  ],
+  "log": "runs/s150-live-orders/hook-initial.log",
+  "logSha256": "414f03cbf5196d41d78559a9d96915c532cc1c27d121ce890f7394ca3a326c09",
+  "initialCommit": "not attempted because hook failed",
+  "notReached": "boundary,licences and decisions stages follow npm test and were not reached by this hook",
+  "changesToTestsBandsFloors": false,
+  "publishedTranscript": "hook-initial-output.txt",
+  "transcriptNormalization": "Published UTF-8 transcript normalizes line endings and trailing display whitespace; original raw log is retained with its digest."
+}

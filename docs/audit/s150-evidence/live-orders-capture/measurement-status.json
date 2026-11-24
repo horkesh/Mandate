@@ -1,0 +1,38 @@
+{
+  "baseline": "S1500135 capture",
+  "baselineFinalHash": "41806f3a04db1b88d954f8ca66f2c89a63ccbbeeb7d65d2e71bd936d4424386e",
+  "captureCount": 1,
+  "finalHash": "b2a0c513512bf54397c0deafac50cfa5b919d16150c5a9c9c5c733fb93eb2eb4",
+  "rejections": 0,
+  "dailyReplay": true,
+  "day60Resume": true,
+  "savedLogReplay": true,
+  "coverageRows": 33,
+  "armyTotalRows": 422,
+  "compositionRows": 1362,
+  "ownRequests": 7,
+  "ownAnswers": 12,
+  "superiorOrders": 3,
+  "offers": 17,
+  "receivedOffers": 16,
+  "s141PositiveFloors": 15,
+  "remainingZeroFloors": [
+    "combat.flank_broken",
+    "combat.general_hit",
+    "combat.routed",
+    "forces.stragglers_returned",
+    "map.pocket_relieved",
+    "operations.repulsed",
+    "reports.commander_lost"
+  ],
+  "gateFailures": 25,
+  "newZeros": [
+    "messages.special_messenger"
+  ],
+  "allAcceptanceGatesPass": false,
+  "timing": "No local timing evidence; unrelated calibration process left alone",
+  "firstHook": "failed9tests; no initial commit",
+  "finalHook": "exit1:12failed,2533passed,3skipped; two API boundary failures corrected narrowly afterward,10assertions unresolved",
+  "mergeToJuly": "not authorised until every floor and band passes",
+  "commit": "not attempted; all work staged"
+}

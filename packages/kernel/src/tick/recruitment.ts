@@ -1,4 +1,5 @@
 import { putOffer } from '../command/offers.ts';
+import { reportGovernorHoldings } from './force-requests.ts';
 import { orderOfferJoins } from '../movement/join.ts';
 import { enlistmentsOf } from '../forces/enlistment.ts';
 import { sideOfPerson } from '../command/command.ts';
@@ -24,7 +25,7 @@ import { openBattleIn, unresolvedContact } from '../combat/records.ts';
 import { shareOf } from '../control/control.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { applyMusters, enlistmentsEnding, type MusterDelta } from '../forces/enlistment.ts';
-import { toId, type FactionId, type ForceBlockId, type PostId, type RegionId, type SeatId } from '../ids.ts';
+import { toId, type FactionId, type ForceBlockId, type PersonId, type PostId, type RegionId, type SeatId } from '../ids.ts';
 import type { CallCommand } from '../log/commands.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
 import type { TransitMessage } from '../messages/transit.ts';
@@ -152,9 +153,9 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   if (actual === null || actual.regiments === 0) fire(ctx, 'recruitment.refused');
   else {
     if (call.callReadiness !== true) state = recordLevy(state, {
-      ...(side !== null || call.callId === undefined ? {} : (() => {
+      ...(call.callId === undefined ? {} : (() => {
         const offer = world.map.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === call.callId && c.post === post)?.offer;
-        return offer === undefined ? {} : { levyOfferRegion: offer.region, levyOfferReceiver: offer.receiver, levyOfferResponse: state.orderResponses[responseKey(msg.msgOrigin, governor)]! };
+        return offer === undefined ? {} : { levyOfferRegion: offer.region, levyOfferReceiver: offer.receiver, ...(offer.station===undefined?{}:{levyOfferStation:offer.station}), levyOfferResponse: state.orderResponses[responseKey(msg.msgOrigin, governor)]! };
       })()),
       levyPost: post,
       levyGovernor: governor,
@@ -304,10 +305,18 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
     const levy = start.postLevies[key]!;
     const block = assign.find(a => next.forceBlockStates[a.block]?.fbLots.some(l => l.lotService?.enlCall === levy.levyCall))?.block;
     const response = levy.levyOfferResponse ?? start.orderResponses[levy.levyResponse];
-    if (levy.levyOfferRegion === undefined || levy.levyOfferReceiver === undefined || block === undefined || response === undefined || levy.levyCallId === undefined) continue;
-    next = putOffer(next, { offerCall: levy.levyCall, offerCallId: levy.levyCallId, offerOwner: levy.levyPost, offerGovernor: levy.levyGovernor, offerIssuer: levy.levyIssuer, offerReceiver: levy.levyOfferReceiver, offerRegion: levy.levyOfferRegion, offerBlocks: [block], offerReceived: [], offerStatus: 'offered', offerResponse: response, offerReceiptDays: {} });
+    if (levy.levyOfferRegion === undefined || block === undefined || response === undefined || levy.levyCallId === undefined) continue;
+    next = putOffer(next, { offerCall: levy.levyCall, offerCallId: levy.levyCallId, offerOwner: levy.levyPost, offerGovernor: levy.levyGovernor, offerIssuer: levy.levyIssuer, ...(levy.levyOfferReceiver===undefined?{}:{offerReceiver:levy.levyOfferReceiver}), ...(levy.levyOfferStation===undefined?{}:{offerStation:levy.levyOfferStation}), offerRegion: levy.levyOfferRegion, offerBlocks: [block], offerReceived: [], offerStatus: 'offered', offerResponse: response, offerReceiptDays: {} });
     next = orderOfferJoins(next, [block], levy.levyPost, levy.levyOfferRegion, day, levy.levyCall);
   }
+  const musterCallers=new Map<PostId,PersonId[]>();
+  for(const key of due) {
+    const levy=start.postLevies[key]!;
+    const callers=musterCallers.get(levy.levyPost)??[];
+    callers.push(levy.levyIssuer);
+    musterCallers.set(levy.levyPost,callers);
+  }
+  for(const [post,callers] of musterCallers)reportGovernorHoldings(ctx,next,post,'wire-dispatch',callers);
   return next;
 }
 

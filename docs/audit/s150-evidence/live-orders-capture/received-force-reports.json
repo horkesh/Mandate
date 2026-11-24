@@ -1,0 +1,2091 @@
+[
+  {
+    "day": 92,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+        "knownReceivedDay": 92,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 90,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.87.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.87.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+            "needPost": "us_dept_northeastern_virginia",
+            "needPerson": "mcdowell_irvin",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "northern_virginia",
+            "needGoal": {
+              "goalObjective": "northern_virginia",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "82978ac8a0398f2f9b43212faedd061dea210d54e0c7536f83859d3e8afc83e0"
+          },
+          "reportForceRequest": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+        }
+      }
+    }
+  },
+  {
+    "day": 93,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.93.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.93.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+        "knownReceivedDay": 93,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportLetter": {
+            "namespace": "force-choice",
+            "key": "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+            "revision": 1
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "order-obeyed",
+              "claimRegion": "washington",
+              "claimValue": 0,
+              "claimToken": "comply",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 93,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.93.8d0391f7fabc9b1e"
+        }
+      }
+    }
+  },
+  {
+    "day": 93,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.93.mansfield_joseph_k_f.scott_winfield.subordinate-answer.m.93.8d0391f7fabc9b1e",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.93.mansfield_joseph_k_f.scott_winfield.subordinate-answer.m.93.8d0391f7fabc9b1e",
+        "knownReceivedDay": 93,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "northern_virginia",
+              "claimValue": 0,
+              "claimToken": "force:subordinate_deferred",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "committed",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 93,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.93.8d0391f7fabc9b1e"
+        }
+      }
+    }
+  },
+  {
+    "day": 94,
+    "kind": "received_force_report",
+    "key": "seat:mcdowell_irvin:m.93.82dc0f84a9635e40",
+    "value": {
+      "seat": "seat:mcdowell_irvin",
+      "report": {
+        "id": "m.93.82dc0f84a9635e40",
+        "knownReceivedDay": 94,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "northern_virginia",
+              "claimValue": 0,
+              "claimToken": "force:subordinate_deferred",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "committed",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 93,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+        }
+      }
+    }
+  },
+  {
+    "day": 95,
+    "kind": "received_force_report",
+    "key": "seat:mcdowell_irvin:m.93.ee00ac6d37309e04",
+    "value": {
+      "seat": "seat:mcdowell_irvin",
+      "report": {
+        "id": "m.93.ee00ac6d37309e04",
+        "knownReceivedDay": 95,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "northern_virginia",
+              "claimValue": 0,
+              "claimToken": "force:order_subordinate",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 93,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+        }
+      }
+    }
+  },
+  {
+    "day": 97,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.97.d588aa9b66f88b9e",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.97.d588aa9b66f88b9e",
+        "knownReceivedDay": 97,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": null,
+              "claimValue": 0,
+              "claimToken": "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 97,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.93.8d0391f7fabc9b1e"
+        }
+      }
+    }
+  },
+  {
+    "day": 98,
+    "kind": "received_force_report",
+    "key": "seat:mcdowell_irvin:m.97.4ff0d47c78ea7a13",
+    "value": {
+      "seat": "seat:mcdowell_irvin",
+      "report": {
+        "id": "m.97.4ff0d47c78ea7a13",
+        "knownReceivedDay": 98,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "arrived",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_received",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 97,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+        }
+      }
+    }
+  },
+  {
+    "day": 98,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.97.90d983ca0ff9d078",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.97.90d983ca0ff9d078",
+        "knownReceivedDay": 98,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "arrived",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "allocation_received:force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 97,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.93.8d0391f7fabc9b1e"
+        }
+      }
+    }
+  },
+  {
+    "day": 98,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "knownReceivedDay": 98,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "washington",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 98,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+            "needPost": "us_dept_washington",
+            "needPerson": "mansfield_joseph_k_f",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "washington",
+            "needGoal": {
+              "goalObjective": "washington",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": true,
+              "goalSea": true,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": false
+            },
+            "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+          },
+          "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+        }
+      }
+    }
+  },
+  {
+    "day": 99,
+    "kind": "received_force_report",
+    "key": "seat:cameron_simon:m.99.611043a3456432b7",
+    "value": {
+      "seat": "seat:cameron_simon",
+      "report": {
+        "id": "m.99.611043a3456432b7",
+        "knownReceivedDay": 99,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [],
+          "reportDay": 99,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+            "needPost": "us_dept_washington",
+            "needPerson": "mansfield_joseph_k_f",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "washington",
+            "needGoal": {
+              "goalObjective": "washington",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": true,
+              "goalSea": true,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": false
+            },
+            "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+          },
+          "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+        }
+      }
+    }
+  },
+  {
+    "day": 99,
+    "kind": "received_force_report",
+    "key": "seat:cooper_samuel:m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+    "value": {
+      "seat": "seat:cooper_samuel",
+      "report": {
+        "id": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "knownReceivedDay": 99,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "beauregard_pierre_g_t",
+          "reportAuthorPost": "cs_cmd_manassas",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_manassas",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "manassas",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 99,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+            "needPost": "cs_cmd_manassas",
+            "needPerson": "beauregard_pierre_g_t",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "manassas",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+          },
+          "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+        }
+      }
+    }
+  },
+  {
+    "day": 99,
+    "kind": "received_force_report",
+    "key": "seat:mansfield_joseph_k_f:m.99.3d9ca0e5b6b2c973",
+    "value": {
+      "seat": "seat:mansfield_joseph_k_f",
+      "report": {
+        "id": "m.99.3d9ca0e5b6b2c973",
+        "knownReceivedDay": 99,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "washington",
+              "claimValue": 0,
+              "claimToken": "force:relay",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 99,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+        }
+      }
+    }
+  },
+  {
+    "day": 99,
+    "kind": "received_force_report",
+    "key": "seat:mcdowell_irvin:m.97.3c5f9d8048d86941",
+    "value": {
+      "seat": "seat:mcdowell_irvin",
+      "report": {
+        "id": "m.97.3c5f9d8048d86941",
+        "knownReceivedDay": 99,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_sending",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 97,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+        }
+      }
+    }
+  },
+  {
+    "day": 100,
+    "kind": "received_force_report",
+    "key": "seat:beauregard_pierre_g_t:m.100.0c3ef6c71c49c850",
+    "value": {
+      "seat": "seat:beauregard_pierre_g_t",
+      "report": {
+        "id": "m.100.0c3ef6c71c49c850",
+        "knownReceivedDay": 100,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "cooper_samuel",
+          "reportAuthorPost": "cs_war_adjutant_inspector_general",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_manassas",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "manassas",
+              "claimValue": 0,
+              "claimToken": "force:relay",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 100,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+        }
+      }
+    }
+  },
+  {
+    "day": 100,
+    "kind": "received_force_report",
+    "key": "seat:davis_jefferson:m.100.82cab4f26973666a",
+    "value": {
+      "seat": "seat:davis_jefferson",
+      "report": {
+        "id": "m.100.82cab4f26973666a",
+        "knownReceivedDay": 100,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "cooper_samuel",
+          "reportAuthorPost": "cs_war_adjutant_inspector_general",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_manassas",
+          "reportClaims": [],
+          "reportDay": 100,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+            "needPost": "cs_cmd_manassas",
+            "needPerson": "beauregard_pierre_g_t",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "manassas",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+          },
+          "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+        }
+      }
+    }
+  },
+  {
+    "day": 100,
+    "kind": "received_force_report",
+    "key": "seat:lincoln_abraham:m.100.bb69a74a64bf56d8",
+    "value": {
+      "seat": "seat:lincoln_abraham",
+      "report": {
+        "id": "m.100.bb69a74a64bf56d8",
+        "knownReceivedDay": 100,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "cameron_simon",
+          "reportAuthorPost": "us_secretary_war",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [],
+          "reportDay": 100,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+            "needPost": "us_dept_washington",
+            "needPerson": "mansfield_joseph_k_f",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "washington",
+            "needGoal": {
+              "goalObjective": "washington",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": true,
+              "goalSea": true,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": false
+            },
+            "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+          },
+          "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+        }
+      }
+    }
+  },
+  {
+    "day": 100,
+    "kind": "received_force_report",
+    "key": "seat:mansfield_joseph_k_f:m.100.24f0fb79a298d734",
+    "value": {
+      "seat": "seat:mansfield_joseph_k_f",
+      "report": {
+        "id": "m.100.24f0fb79a298d734",
+        "knownReceivedDay": 100,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "cameron_simon",
+          "reportAuthorPost": "us_secretary_war",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "washington",
+              "claimValue": 0,
+              "claimToken": "force:relay",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 100,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+        }
+      }
+    }
+  },
+  {
+    "day": 101,
+    "kind": "received_force_report",
+    "key": "seat:beauregard_pierre_g_t:m.101.083dacb97605dddc",
+    "value": {
+      "seat": "seat:beauregard_pierre_g_t",
+      "report": {
+        "id": "m.101.083dacb97605dddc",
+        "knownReceivedDay": 101,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "davis_jefferson",
+          "reportAuthorPost": "cs_president",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_manassas",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "manassas",
+              "claimValue": 0,
+              "claimToken": "force:ask_governor",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 101,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+        }
+      }
+    }
+  },
+  {
+    "day": 101,
+    "kind": "received_force_report",
+    "key": "seat:curtin_andrew_g:m.101.6603939c00a93e28",
+    "value": {
+      "seat": "seat:curtin_andrew_g",
+      "report": {
+        "id": "m.101.6603939c00a93e28",
+        "knownReceivedDay": 101,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "lincoln_abraham",
+          "reportAuthorPost": "us_president",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [],
+          "reportDay": 101,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+            "needPost": "us_dept_washington",
+            "needPerson": "mansfield_joseph_k_f",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "washington",
+            "needGoal": {
+              "goalObjective": "washington",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": true,
+              "goalSea": true,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": false
+            },
+            "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+          },
+          "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+          "reportForceModeAuthority": null
+        }
+      }
+    }
+  },
+  {
+    "day": 101,
+    "kind": "received_force_report",
+    "key": "seat:lee_robert_e:m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+    "value": {
+      "seat": "seat:lee_robert_e",
+      "report": {
+        "id": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+        "knownReceivedDay": 101,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 96,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "needPost": "cs_cmd_harpers_ferry",
+            "needPerson": "johnston_joseph_e",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "harpers_ferry",
+            "needGoal": {
+              "goalObjective": "harpers_ferry",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "b82247982e165e743bf62ce3fd05bcf41083a6464ea959780f9c087e9a9f2706"
+          },
+          "reportForceRequest": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+        }
+      }
+    }
+  },
+  {
+    "day": 101,
+    "kind": "received_force_report",
+    "key": "seat:mansfield_joseph_k_f:m.101.aac3831a85624177",
+    "value": {
+      "seat": "seat:mansfield_joseph_k_f",
+      "report": {
+        "id": "m.101.aac3831a85624177",
+        "knownReceivedDay": 101,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "lincoln_abraham",
+          "reportAuthorPost": "us_president",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "washington",
+              "claimValue": 0,
+              "claimToken": "force:ask_governor",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 101,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+        }
+      }
+    }
+  },
+  {
+    "day": 101,
+    "kind": "received_force_report",
+    "key": "seat:pickens_francis_w:m.101.2e49db43d3246607",
+    "value": {
+      "seat": "seat:pickens_francis_w",
+      "report": {
+        "id": "m.101.2e49db43d3246607",
+        "knownReceivedDay": 101,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "davis_jefferson",
+          "reportAuthorPost": "cs_president",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_manassas",
+          "reportClaims": [],
+          "reportDay": 101,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+            "needPost": "cs_cmd_manassas",
+            "needPerson": "beauregard_pierre_g_t",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "manassas",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+          },
+          "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+          "reportForceModeAuthority": null
+        }
+      }
+    }
+  },
+  {
+    "day": 102,
+    "kind": "received_force_report",
+    "key": "seat:beauregard_pierre_g_t:m.102.b71b368d883a58f1",
+    "value": {
+      "seat": "seat:beauregard_pierre_g_t",
+      "report": {
+        "id": "m.102.b71b368d883a58f1",
+        "knownReceivedDay": 102,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "pickens_francis_w",
+          "reportAuthorPost": "st_gov_south_carolina",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_manassas",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "manassas",
+              "claimValue": 0,
+              "claimToken": "force:defer",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "manassas",
+              "claimValue": 1,
+              "claimToken": "modes_unavailable",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 102,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+        }
+      }
+    }
+  },
+  {
+    "day": 102,
+    "kind": "received_force_report",
+    "key": "seat:johnston_joseph_e:m.102.284f4a8db9d14a69",
+    "value": {
+      "seat": "seat:johnston_joseph_e",
+      "report": {
+        "id": "m.102.284f4a8db9d14a69",
+        "knownReceivedDay": 102,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "lee_robert_e",
+          "reportAuthorPost": "cs_forces_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 1,
+              "claimToken": "force:grant",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 102,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+        }
+      }
+    }
+  },
+  {
+    "day": 102,
+    "kind": "received_force_report",
+    "key": "seat:johnston_joseph_e:m.102.44a221ab3fae55c0",
+    "value": {
+      "seat": "seat:johnston_joseph_e",
+      "report": {
+        "id": "m.102.44a221ab3fae55c0",
+        "knownReceivedDay": 102,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "lee_robert_e",
+          "reportAuthorPost": "cs_forces_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 1,
+              "claimToken": "force:grant_sending",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 102,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+        }
+      }
+    }
+  },
+  {
+    "day": 102,
+    "kind": "received_force_report",
+    "key": "seat:lee_robert_e:m.102.5b98de4f08187ae1",
+    "value": {
+      "seat": "seat:lee_robert_e",
+      "report": {
+        "id": "m.102.5b98de4f08187ae1",
+        "knownReceivedDay": 102,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "lee_robert_e",
+          "reportAuthorPost": "cs_forces_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_forces_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 1,
+              "claimToken": "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.cs_forces_virginia",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": null,
+              "claimValue": 0,
+              "claimToken": "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.cs_forces_virginia",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 102,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.102.be15f94b2d27f049"
+        }
+      }
+    }
+  },
+  {
+    "day": 102,
+    "kind": "received_force_report",
+    "key": "seat:lee_robert_e:m.102.lee_robert_e.lee_robert_e.ack.cs_forces_virginia",
+    "value": {
+      "seat": "seat:lee_robert_e",
+      "report": {
+        "id": "m.102.lee_robert_e.lee_robert_e.ack.cs_forces_virginia",
+        "knownReceivedDay": 102,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportLetter": {
+            "namespace": "force-choice",
+            "key": "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.cs_forces_virginia",
+            "revision": 1
+          },
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "lee_robert_e",
+          "reportAuthorPost": "cs_forces_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_forces_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "order-obeyed",
+              "claimRegion": "lynchburg",
+              "claimValue": 1,
+              "claimToken": "comply",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 102,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.102.be15f94b2d27f049"
+        }
+      }
+    }
+  },
+  {
+    "day": 102,
+    "kind": "received_force_report",
+    "key": "seat:mansfield_joseph_k_f:m.102.7389bdffd5c5e7a7",
+    "value": {
+      "seat": "seat:mansfield_joseph_k_f",
+      "report": {
+        "id": "m.102.7389bdffd5c5e7a7",
+        "knownReceivedDay": 102,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "curtin_andrew_g",
+          "reportAuthorPost": "st_gov_pennsylvania",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "washington",
+              "claimValue": 0,
+              "claimToken": "force:defer",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "washington",
+              "claimValue": 1,
+              "claimToken": "modes_unavailable",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 102,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+        }
+      }
+    }
+  },
+  {
+    "day": 109,
+    "kind": "received_force_report",
+    "key": "seat:lee_robert_e:m.108.21d1d016f68ed79c",
+    "value": {
+      "seat": "seat:lee_robert_e",
+      "report": {
+        "id": "m.108.21d1d016f68ed79c",
+        "knownReceivedDay": 109,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "johnston_joseph_e",
+          "reportAuthorPost": "cs_cmd_harpers_ferry",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "cs_cmd_harpers_ferry",
+          "reportClaims": [
+            {
+              "claimKind": "arrived",
+              "claimRegion": "harpers_ferry",
+              "claimValue": 1,
+              "claimToken": "allocation_received:force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.cs_forces_virginia",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 108,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.102.be15f94b2d27f049"
+        }
+      }
+    }
+  },
+  {
+    "day": 113,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+        "knownReceivedDay": 113,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "patterson_robert",
+          "reportAuthorPost": "us_dept_pennsylvania",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 113,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+            "needPost": "us_dept_pennsylvania",
+            "needPerson": "patterson_robert",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "philadelphia",
+            "needGoal": {
+              "goalObjective": "lower_valley",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+          },
+          "reportForceRequest": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+        }
+      }
+    }
+  },
+  {
+    "day": 114,
+    "kind": "received_force_report",
+    "key": "seat:patterson_robert:m.114.0d80d32c60b54be7",
+    "value": {
+      "seat": "seat:patterson_robert",
+      "report": {
+        "id": "m.114.0d80d32c60b54be7",
+        "knownReceivedDay": 114,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_sending",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 114,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+        }
+      }
+    }
+  },
+  {
+    "day": 114,
+    "kind": "received_force_report",
+    "key": "seat:patterson_robert:m.114.8b6a593167cd2f36",
+    "value": {
+      "seat": "seat:patterson_robert",
+      "report": {
+        "id": "m.114.8b6a593167cd2f36",
+        "knownReceivedDay": 114,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "philadelphia",
+              "claimValue": 0,
+              "claimToken": "force:order_subordinate",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 114,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+        }
+      }
+    }
+  },
+  {
+    "day": 114,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.114.c1e6f5f61b63d0d8",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.114.c1e6f5f61b63d0d8",
+        "knownReceivedDay": 114,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": null,
+              "claimValue": 0,
+              "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 114,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.114.b70961860618b775"
+        }
+      }
+    }
+  },
+  {
+    "day": 114,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+        "knownReceivedDay": 114,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportLetter": {
+            "namespace": "force-choice",
+            "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "revision": 1
+          },
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "order-obeyed",
+              "claimRegion": "washington",
+              "claimValue": 1,
+              "claimToken": "comply",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 114,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.114.b70961860618b775"
+        }
+      }
+    }
+  },
+  {
+    "day": 120,
+    "kind": "received_force_report",
+    "key": "seat:patterson_robert:m.119.191c212c8d74404c",
+    "value": {
+      "seat": "seat:patterson_robert",
+      "report": {
+        "id": "m.119.191c212c8d74404c",
+        "knownReceivedDay": 120,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "patterson_robert",
+          "reportAuthorPost": "us_dept_pennsylvania",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "arrived",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_received",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 119,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+        }
+      }
+    }
+  },
+  {
+    "day": 120,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.119.77a60c282164da5a",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.119.77a60c282164da5a",
+        "knownReceivedDay": 120,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "patterson_robert",
+          "reportAuthorPost": "us_dept_pennsylvania",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "arrived",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "allocation_received:force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 119,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.114.b70961860618b775"
+        }
+      }
+    }
+  },
+  {
+    "day": 137,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+        "knownReceivedDay": 137,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 137,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+            "needPost": "us_dept_northeastern_virginia",
+            "needPerson": "mcdowell_irvin",
+            "needTask": "take",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "northern_virginia",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "take",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+          },
+          "reportForceRequest": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+        }
+      }
+    }
+  },
+  {
+    "day": 138,
+    "kind": "received_force_report",
+    "key": "seat:mcdowell_irvin:m.138.5f262a48de2c3644",
+    "value": {
+      "seat": "seat:mcdowell_irvin",
+      "report": {
+        "id": "m.138.5f262a48de2c3644",
+        "knownReceivedDay": 138,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "northern_virginia",
+              "claimValue": 0,
+              "claimToken": "force:refuse",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 138,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+        }
+      }
+    }
+  },
+  {
+    "day": 147,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+        "knownReceivedDay": 147,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "patterson_robert",
+          "reportAuthorPost": "us_dept_pennsylvania",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "lower_valley",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 147,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+            "needPost": "us_dept_pennsylvania",
+            "needPerson": "patterson_robert",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "lower_valley",
+            "needGoal": {
+              "goalObjective": "harpers_ferry",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "91bc286d90347cb821850dca8f434ba1bc5ac2bbe59fe424fbcbffb2df4cde16"
+          },
+          "reportForceRequest": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+        }
+      }
+    }
+  },
+  {
+    "day": 148,
+    "kind": "received_force_report",
+    "key": "seat:patterson_robert:m.148.5f5f65c31af0c60c",
+    "value": {
+      "seat": "seat:patterson_robert",
+      "report": {
+        "id": "m.148.5f5f65c31af0c60c",
+        "knownReceivedDay": 148,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "lower_valley",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_sending",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 148,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+        }
+      }
+    }
+  },
+  {
+    "day": 148,
+    "kind": "received_force_report",
+    "key": "seat:patterson_robert:m.148.a26f6c29c3c837d7",
+    "value": {
+      "seat": "seat:patterson_robert",
+      "report": {
+        "id": "m.148.a26f6c29c3c837d7",
+        "knownReceivedDay": 148,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_pennsylvania",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "lower_valley",
+              "claimValue": 0,
+              "claimToken": "force:order_subordinate",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 148,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+        }
+      }
+    }
+  },
+  {
+    "day": 148,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.148.740a28b6530bdfab",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.148.740a28b6530bdfab",
+        "knownReceivedDay": 148,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "lower_valley",
+              "claimValue": 1,
+              "claimToken": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": null,
+              "claimValue": 0,
+              "claimToken": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 148,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.148.54182b6b77783884"
+        }
+      }
+    }
+  },
+  {
+    "day": 148,
+    "kind": "received_force_report",
+    "key": "seat:scott_winfield:m.148.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+    "value": {
+      "seat": "seat:scott_winfield",
+      "report": {
+        "id": "m.148.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+        "knownReceivedDay": 148,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportLetter": {
+            "namespace": "force-choice",
+            "key": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+            "revision": 1
+          },
+          "reportQualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          },
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mansfield_joseph_k_f",
+          "reportAuthorPost": "us_dept_washington",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_washington",
+          "reportClaims": [
+            {
+              "claimKind": "order-obeyed",
+              "claimRegion": "washington",
+              "claimValue": 1,
+              "claimToken": "comply",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 148,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.148.54182b6b77783884"
+        }
+      }
+    }
+  }
+]

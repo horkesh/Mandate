@@ -1,8 +1,9 @@
+import { forceOptions } from './force-requests.ts';
+import type { ForceOption } from './force-requests.ts';
 /** Derived local menu. Its planner reads the acting person's picture only. */
 import { activeMandate, currentMandates, inSubtree, mandateAt, mayCommit, type EnactedMandate } from '../command/authority.ts';
 import { allCommandedBlocks, commandedBlocks, factionOfPost, heldPost } from '../command/command.ts';
 import { strictCompare } from '../compare.ts';
-import { deriveMap } from '../control-index/derived.ts';
 import type { MessageId, PersonId, PostId } from '../ids.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { hasRequiredPapers } from '../knowledge/papers.ts';
@@ -13,10 +14,9 @@ import { POSTURES, type PlanGoal, type Posture } from '../plans/goal.ts';
 import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { canonicalHash } from '../serialize/hash.ts';
-import { passageOf } from '../tick/passage.ts';
 import { optionView } from '../tick/plans.ts';
 import { viewFor } from '../view/view.ts';
-import { dateOfDay, daysFromCivil, parseIsoDate } from '../world/calendar.ts';
+import { daysFromCivil, parseIsoDate } from '../world/calendar.ts';
 import { letterKey } from '../world/letters.ts';
 import type { MandateGrant, MandatePaper } from '../world/mandates.ts';
 import type { LocalActionMenu } from './api.ts';
@@ -33,6 +33,7 @@ import { commandProjection } from '../view/people.ts';
 import { assignmentOptions } from './onward-assignments.ts';
 import { availableAllocations, allocationFulfilments } from './allocation.ts';
 import type { AllocationInstrument } from '../world/allocation.ts';
+import { localPlanningGround, type LocalPlanningGround } from './planning-ground.ts';
 
 export function mandateLetter(paper: MandatePaper) {
   return { namespace: `authority.${paper.grant.mandateIssuer}`, key: paper.grant.mandateKey, revision: paper.grant.mandateRevision };
@@ -85,7 +86,7 @@ export function planAuthorized(world: SeatsWorld, state: State, post: PostId, re
     goalWithin(a.authorityGrant, record.planGoal) && mayCommit(world.map,state,a,post,record.planGoal.goalCommitted) &&
     (candidate === undefined || candidateWithin(state,a,post,record.planGoal,candidate));
 }
-export type LocalOption =
+export type LocalOption = ForceOption |
   { readonly id: string; readonly authority: EnactedMandate | null; readonly kind: 'allocation-fulfil'; readonly order: MessageId; readonly paper: AllocationInstrument } |
   { readonly id: string; readonly authority: EnactedMandate | null; readonly kind: 'allocation'; readonly paper: AllocationInstrument } |
   ReturnType<typeof assignmentOptions>[number] |
@@ -94,16 +95,20 @@ export type LocalOption =
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'review'; readonly received: KnownReport } |
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'goal'; readonly target: PostId; readonly goal: PlanGoal; readonly candidate: PlanCandidate };
 
-export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number): LocalOption[] {
-  if (world.start.factions.some(f => f.principal === person)) return [];
+export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number, ground: LocalPlanningGround = localPlanningGround(world,state,day)): LocalOption[] {
+  if (world.start.factions.some(f => f.principal === person)) {
+    const post=heldPost(state,person);
+    return post===null?[]:forceOptions(world,state,person,post,day,ground).filter(o=>o.kind==='force-answer');
+  }
   const posts=Object.keys(state.postStates).filter(id=>state.postStates[id as PostId]!.postHolder===person).sort(strictCompare) as PostId[];
-  const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post));
-  const rank={'allocation-fulfil':0,allocation:0,assignment:0,grant:0,review:1,letter:2,goal:3};
+  const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post,ground));
+  const rank={'force-request':0,'force-answer':0,'allocation-fulfil':0,allocation:0,assignment:0,grant:0,review:1,letter:2,goal:3};
   return [...new Map(options.map(o=>[o.id,o])).values()].sort((a,b)=>rank[a.kind]-rank[b.kind] || (a.kind==='goal' && b.kind==='goal'?b.candidate.candScore-a.candidate.candScore:0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
 }
-function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId): LocalOption[] {
+function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId, ground: LocalPlanningGround): LocalOption[] {
   const active = currentMandates(state,post).filter(a => activeMandate(world.map,state,a,day));
   const out: LocalOption[] = assignmentOptions(world,state,person,day).filter(o=>o.paper.from===post);
+  out.push(...forceOptions(world,state,person,post,day,ground));
   out.push(...allocationFulfilments(world,state,person,day).filter(o=>o.paper.from===post).map(o=>({id:`fulfil:${o.row.allocOrder}`,kind:'allocation-fulfil' as const,authority:null,order:o.row.allocOrder,paper:o.paper})));
   out.push(...availableAllocations(world,state,person,day).filter(p=>p.issuerPost===post && active.some(a=>a.authorityGrant.mandateKey===p.mandate && a.authorityGrant.mandateActions.includes('assign'))).map(p=>({id:`allocation:${p.id}`,kind:'allocation' as const,authority:null,paper:p})));
   for (const paper of availableMandatePapers(world,state,person,day)) {
@@ -168,9 +173,7 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
   if (!canInitiate && (own === undefined || own.planGoal.goalObjective === null)) return out;
   const view = viewFor(world,state,seatIdFor(person));
   const sender = senderFor(world,state,seatIdFor(person),undefined,undefined,post);
-  const month = dateOfDay(world.start.startDate,day).month;
-  const network = passageOf(world.map,state);
-  const derived = deriveMap(world.map,{ control: state.regionControl, month, network });
+  const { derived, network, month } = ground();
   for (const a of active) for (const target of [...new Set([...(canInitiate ? [post] : []), ...a.authorityGrant.mandateRecipients])].sort(strictCompare)) {
     if (target === post && !canInitiate) continue;
     if (target !== post && sender?.holder(target) == null) continue;
@@ -196,15 +199,15 @@ function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: 
     }
     }
   }
-  const rank = { 'allocation-fulfil':0,allocation:0,assignment:0,grant:0,review:1,letter:1,goal:2 };
+  const rank = { 'force-request':0,'force-answer':0,'allocation-fulfil':0,allocation:0,assignment:0,grant:0,review:1,letter:1,goal:2 };
   return out.sort((a,b) => rank[a.kind]-rank[b.kind] || (a.kind === 'goal' && b.kind === 'goal' ?
     b.candidate.candScore-a.candidate.candScore : 0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
 }
-export function localMenu(world: SeatsWorld, state: State, person: PersonId, day: number): LocalActionMenu | null {
-  const options = localOptions(world,state,person,day);
+export function localMenu(world: SeatsWorld, state: State, person: PersonId, day: number, ground?: LocalPlanningGround): LocalActionMenu | null {
+  const options = localOptions(world,state,person,day,ground);
   return options.length === 0 ? null : { menuKind: 'local-action', post: heldPost(state,person)!, options: options.map(o => ({
     optionId: o.id, mandate: o.authority?.authorityGrant.mandateKey ?? (o.kind === 'grant' ? o.paper.grant.mandateKey : ''),
-    ...(o.kind === 'grant' ? { paper: o.paper.id } : o.kind === 'assignment' || o.kind === 'allocation' || o.kind === 'allocation-fulfil' ? {paper:o.paper.id,to:o.paper.to}
+    ...(o.kind === 'force-request' ? {to:o.to} : o.kind === 'force-answer' ? {paper:o.request,to:o.need.needPost} : o.kind === 'grant' ? { paper: o.paper.id } : o.kind === 'assignment' || o.kind === 'allocation' || o.kind === 'allocation-fulfil' ? {paper:o.paper.id,to:o.paper.to}
       : o.kind === 'review' ? { paper:o.received.id } : o.kind === 'letter' ? { paper: letterKey(o.row.letter!), to: o.row.post } : { to: o.target, plan: optionView(o.candidate) }),
   })) };
 }

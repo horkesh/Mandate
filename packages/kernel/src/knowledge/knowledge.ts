@@ -460,6 +460,10 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
     const goalPapers = new Set([...proposals.values(), ...switches.values(), ...readiness.values(), ...failures.values()]);
     const kept = held.knownReports.filter((r) => {
       if (institutionalPapers.has(r)) return true;
+      const need=r.knownBody.reportForceRequest===undefined?undefined:state.forceRequests?.[r.knownBody.reportForceRequest];
+      if(need!==undefined && !need.freqAnswers.some(a=>a.fansPerson===state.seatAssignments[seat]?.seatPerson))return true;
+      const answered=r.knownBody.reportAnswers===null?undefined:state.forceRequests?.[r.knownBody.reportAnswers];
+      if(answered!==undefined && answered.freqNeed.needPerson===state.seatAssignments[seat]?.seatPerson && state.planRecords[answered.freqNeed.needPost]?.planOrder===answered.freqNeed.needMission)return true;
       // Keep only the latest enclosure per post beyond ordinary dispatch pruning. A late refusal can reopen it;
       // the sender's bounded order copies still prevent an answered paper from becoming actionable again.
       if (r.knownBody.reportPlan !== undefined && pendingPapers.get(r.knownBody.reportPlan.paperPost) === r) return true;

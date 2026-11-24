@@ -25,7 +25,11 @@ export interface NeutralOffer {
  readonly offerOwner: PostId;
  readonly offerGovernor: PersonId;
  readonly offerIssuer: PersonId;
- readonly offerReceiver: PostId;
+ /** Actual author of a relayed request, when the receiving authority is someone else. */
+ readonly offerAsker?: PersonId;
+ readonly offerReceiver?: PostId;
+ readonly offerStation?: string;
+ readonly offerGap?: string;
  readonly offerRegion: RegionId;
  readonly offerBlocks: readonly ForceBlockId[];
  readonly offerReceived: readonly ForceBlockId[];

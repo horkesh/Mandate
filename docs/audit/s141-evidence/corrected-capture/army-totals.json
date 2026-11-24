@@ -1,0 +1,7060 @@
+[
+  {
+    "day": 120,
+    "army": "cs_arsenal_baton_rouge",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_arsenal_mount_vernon",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_cmd_charleston",
+    "holder": "anderson_richard_h",
+    "opened": true,
+    "lots": 18,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 3133,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston",
+      "initial.fb_st_charleston_1st_infantry_regulars",
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_cmd_harpers_ferry",
+    "holder": "johnston_joseph_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_cmd_manassas",
+    "holder": "beauregard_pierre_g_t",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_cmd_morris_island",
+    "holder": null,
+    "opened": true,
+    "lots": 7,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 1518,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3120,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3120,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_fort_morgan",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_fort_morgan"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "cs_navy_charleston_harbour",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston_guard_steamers"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "cs_navy_yard_pensacola",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_president",
+    "holder": "davis_jefferson",
+    "opened": true,
+    "lots": 24,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 3133,
+      "estimate": 0,
+      "rule": 3120,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston",
+      "initial.fb_cs_charleston_guard_steamers",
+      "initial.fb_st_charleston_1st_infantry_regulars",
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion",
+      "initial.fb_st_fort_morgan"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "cs_vice_president",
+    "holder": "stephens_alexander_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_war_commissary_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_war_ordnance_chief",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_war_quartermaster_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_adjutant_general_massachusetts",
+    "holder": "schouler_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_adjutant_general_new_york",
+    "holder": "read_j_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_adjutant_general_ohio",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_alabama",
+    "holder": "moore_andrew_b",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3560,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3560,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_arkansas",
+    "holder": "rector_henry_m",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_california",
+    "holder": "downey_john_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_connecticut",
+    "holder": "buckingham_william_a",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1646,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1646,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_delaware",
+    "holder": "burton_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_florida",
+    "holder": "perry_madison_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 500,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 500,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_georgia",
+    "holder": "brown_joseph_e",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3560,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3560,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_illinois",
+    "holder": "yates_richard",
+    "opened": true,
+    "lots": 12,
+    "fbStrength": 9876,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 9876,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_indiana",
+    "holder": "morton_oliver_h_p_t",
+    "opened": true,
+    "lots": 16,
+    "fbStrength": 13340,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 13340,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_iowa",
+    "holder": "kirkwood_samuel_j",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 2512,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2512,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_kansas",
+    "holder": "robinson_charles",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_kentucky",
+    "holder": "magoffin_beriah",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_louisiana",
+    "holder": "moore_thomas_o",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2480,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_la_forts_jackson_st_philip"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_gov_maine",
+    "holder": "washburn_israel",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1646,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1646,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_maryland",
+    "holder": "hicks_thomas_h",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3120,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3120,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_massachusetts",
+    "holder": "andrew_john_a",
+    "opened": true,
+    "lots": 8,
+    "fbStrength": 6756,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 6756,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_michigan",
+    "holder": "blair_austin",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3378,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3378,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_minnesota",
+    "holder": "ramsey_alexander",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_mississippi",
+    "holder": "pettus_john_j",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3060,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3060,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_missouri",
+    "holder": "jackson_claiborne_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_new_hampshire",
+    "holder": "goodwin_ichabod",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1646,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1646,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_new_jersey",
+    "holder": "olden_charles_s",
+    "opened": true,
+    "lots": 7,
+    "fbStrength": 5718,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 5718,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_new_york",
+    "holder": "morgan_edwin_d",
+    "opened": true,
+    "lots": 69,
+    "fbStrength": 58292,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 58292,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_north_carolina",
+    "holder": "ellis_john_w",
+    "opened": true,
+    "lots": 18,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2340,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "generated.state-forces.cs_nc_additional_north_carolina.1",
+      "generated.state-forces.cs_nc_additional_north_carolina.2",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.3"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_gov_ohio",
+    "holder": "dennison_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_oregon",
+    "holder": "whiteaker_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_pennsylvania",
+    "holder": "curtin_andrew_g",
+    "opened": true,
+    "lots": 14,
+    "fbStrength": 10920,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 10920,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_rhode_island",
+    "holder": "sprague_william",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1646,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1646,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_south_carolina",
+    "holder": "pickens_francis_w",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 3000,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3000,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_tennessee",
+    "holder": "harris_isham_g",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": null,
+    "fbStragglers": null,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.cs_tn_cavalry_tennessee",
+      "unidentified.state-forces.cs_tn_infantry_tennessee",
+      "unidentified.state-forces.cs_tn_river_artillery_tennessee"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_gov_texas",
+    "holder": "clark_edward",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_ford_regiment",
+      "initial.fb_st_tx_galveston_batteries",
+      "initial.fb_st_tx_northwest_frontier_companies"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_gov_vermont",
+    "holder": "fairbanks_erastus",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1646,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1646,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_gov_virginia",
+    "holder": "letcher_john",
+    "opened": true,
+    "lots": 8,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 490,
+      "estimate": 0,
+      "rule": 2340,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_harpers_ferry",
+      "unidentified.state-forces.va_norfolk",
+      "unidentified.state-forces.va_peninsula",
+      "unidentified.state-forces.va_richmond"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_gov_wisconsin",
+    "holder": "randall_alexander_w",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 2512,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2512,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_la_forts_jackson_st_philip",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_la_forts_jackson_st_philip"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_sc_army",
+    "holder": "dunovant_r_g_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_sc_volunteer_division",
+    "holder": "bonham_milledge_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_tx_adjutant_inspector_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_tx_cmd_galveston",
+    "holder": "sherman_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_galveston_batteries"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_tx_committee_public_safety",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_tx_dept_rio_grande",
+    "holder": "ford_john_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_ford_regiment"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_tx_northwest_frontier",
+    "holder": "mcculloch_henry_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_northwest_frontier_companies"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_va_general_in_chief",
+    "holder": "lee_robert_e",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 2340,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2340,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_va_harpers_ferry",
+    "holder": "jackson_thomas_j",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_harpers_ferry"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_va_norfolk",
+    "holder": "huger_benjamin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_norfolk"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_va_peninsula",
+    "holder": "magruder_john_b",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_va_potomac",
+    "holder": "cocke_philip_st_george",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 490,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "st_va_richmond",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_richmond"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "st_va_williamsburg",
+    "holder": "ewell_benjamin_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_peninsula"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "tr_gov_nebraska",
+    "holder": "saunders_alvin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dc_militia",
+    "holder": "stone_charles_p",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_dept_east",
+    "holder": "wool_john_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_fort_monroe_garrison"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_dept_new_mexico",
+    "holder": "fauntleroy_thomas_t",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_new_mexico_troops"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_dept_northeastern_virginia",
+    "holder": "mcdowell_irvin",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dept_pacific",
+    "holder": "howard_oliver_o",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_pacific_troops"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_dept_pennsylvania",
+    "holder": "patterson_robert",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dept_texas",
+    "holder": "waite_carlos_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dept_utah",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dept_virginia",
+    "holder": "butler_benjamin_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dept_west",
+    "holder": "harney_william_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_fort_jefferson",
+    "holder": "arnold_lewis_g",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 66,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 66,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_fort_monroe",
+    "holder": "dimick_justin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_fort_monroe_garrison"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_fort_pickens",
+    "holder": "slemmer_adam_j",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_fort_sumter",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_fort_taylor",
+    "holder": "brannan_john_m",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 44,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 44,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_general_in_chief",
+    "holder": "scott_winfield",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 110,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia",
+      "initial.fb_us_fort_monroe_garrison",
+      "initial.fb_us_new_mexico_troops",
+      "initial.fb_us_pacific_troops",
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a",
+      "initial.fb_us_washington_regulars"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_harpers_ferry_armory",
+    "holder": "barbour_alfred_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_marine_corps",
+    "holder": "harris_john",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_marines_philadelphia_yard",
+      "initial.fb_us_marines_washington_barracks"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_navy_african_squadron",
+    "holder": "inman_william",
+    "opened": true,
+    "lots": 8,
+    "fbStrength": 996,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 996,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_brazil_squadron",
+    "holder": "sands_joshua_r",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 573,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 573,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_bureau_construction",
+    "holder": "lenthall_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_bureau_medicine",
+    "holder": "whelan_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_bureau_ordnance",
+    "holder": "magruder_george_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_bureau_provisions",
+    "holder": "bridge_horatio",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_bureau_yards_docks",
+    "holder": "smith_joseph",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_east_india_squadron",
+    "holder": "stribling_cornelius_k",
+    "opened": true,
+    "lots": 5,
+    "fbStrength": 915,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 915,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_home_squadron",
+    "holder": "pendergrast_garrett_j",
+    "opened": true,
+    "lots": 14,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 2091,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_ship_water_witch"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_navy_mediterranean_squadron",
+    "holder": "bell_charles_h",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 607,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 607,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_pacific_squadron",
+    "holder": "montgomery_john_b",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 1079,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 1079,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_boston",
+    "holder": "hudson_william_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_mare_island",
+    "holder": "cunningham_robert_b",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_new_york",
+    "holder": "breese_samuel_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_norfolk",
+    "holder": "mccauley_charles_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_philadelphia",
+    "holder": "du_pont_samuel_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_portsmouth",
+    "holder": "pearson_george_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_sacketts_harbor",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_navy_yard_washington",
+    "holder": "buchanan_franklin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_ship_anacostia"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_president",
+    "holder": "lincoln_abraham",
+    "opened": true,
+    "lots": 63,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 6371,
+      "estimate": 490,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia",
+      "initial.fb_us_fort_monroe_garrison",
+      "initial.fb_us_marines_philadelphia_yard",
+      "initial.fb_us_marines_washington_barracks",
+      "initial.fb_us_new_mexico_troops",
+      "initial.fb_us_pacific_troops",
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a",
+      "initial.fb_us_ship_anacostia",
+      "initial.fb_us_ship_michigan",
+      "initial.fb_us_ship_water_witch",
+      "initial.fb_us_washington_regulars"
+    ]
+  },
+  {
+    "day": 120,
+    "army": "us_president_secretary",
+    "holder": "nicolay_john_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_recruiting_service",
+    "holder": "smith_charles_f",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 18154,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_revenue_marine",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_brooklyn",
+    "holder": "walker_william_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_congress",
+    "holder": "goldsborough_louis_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_constellation",
+    "holder": "nicholas_j_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_crusader",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_cumberland",
+    "holder": "marston_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_hartford",
+    "holder": "lowndes_charles",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_lancaster",
+    "holder": "rudd_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_macedonian",
+    "holder": "glynn_james",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_mohawk",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_pawnee",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_pocahontas",
+    "holder": "murray_alexander",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_powhatan",
+    "holder": "mercer_samuel",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_richmond",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_sabine",
+    "holder": "adams_henry_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_st_louis",
+    "holder": "poor_charles_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_supply",
+    "holder": "gibson_alexander",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_ship_wyandotte",
+    "holder": "berryman_otway_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_st_louis_arsenal",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_sumter_relief_expedition",
+    "holder": "fox_gustavus_v",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_adjutant_general",
+    "holder": null,
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 18154,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_chief_engineer",
+    "holder": "totten_joseph_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_commissary_general",
+    "holder": "gibson_george",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_inspector_general",
+    "holder": "churchill_sylvester",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_judge_advocate",
+    "holder": "lee_john_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_ordnance",
+    "holder": "craig_henry_k",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_paymaster_general",
+    "holder": "larned_benjamin_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_quartermaster_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_surgeon_general",
+    "holder": "lawson_thomas",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_war_topographical_engineers",
+    "holder": "abert_john_j",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_arsenal_baton_rouge",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_arsenal_mount_vernon",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_cmd_charleston",
+    "holder": "anderson_richard_h",
+    "opened": true,
+    "lots": 18,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 3133,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston",
+      "initial.fb_st_charleston_1st_infantry_regulars",
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_cmd_harpers_ferry",
+    "holder": "johnston_joseph_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_cmd_manassas",
+    "holder": "beauregard_pierre_g_t",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_cmd_morris_island",
+    "holder": null,
+    "opened": true,
+    "lots": 7,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 1518,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3120,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3120,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_fort_morgan",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_fort_morgan"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "cs_navy_charleston_harbour",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston_guard_steamers"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "cs_navy_yard_pensacola",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_president",
+    "holder": "davis_jefferson",
+    "opened": true,
+    "lots": 24,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 3133,
+      "estimate": 0,
+      "rule": 3120,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston",
+      "initial.fb_cs_charleston_guard_steamers",
+      "initial.fb_st_charleston_1st_infantry_regulars",
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion",
+      "initial.fb_st_fort_morgan"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "cs_vice_president",
+    "holder": "stephens_alexander_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_war_commissary_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_war_ordnance_chief",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_war_quartermaster_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_adjutant_general_massachusetts",
+    "holder": "schouler_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_adjutant_general_new_york",
+    "holder": "read_j_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_adjutant_general_ohio",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_alabama",
+    "holder": "moore_andrew_b",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 8120,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_alabama.d122"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_arkansas",
+    "holder": "rector_henry_m",
+    "opened": true,
+    "lots": 14,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3000,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "generated.state-forces.cs_ar_cavalry_arkansas.1",
+      "generated.state-forces.cs_ar_infantry_arkansas.1",
+      "generated.state-forces.cs_ar_infantry_arkansas.2",
+      "generated.state-forces.cs_ar_infantry_arkansas.3",
+      "generated.state-forces.cs_ar_infantry_arkansas.4",
+      "generated.state-forces.cs_ar_infantry_arkansas.5",
+      "generated.state-forces.cs_ar_infantry_arkansas.6",
+      "generated.state-forces.cs_ar_infantry_arkansas.7",
+      "unidentified.raised.st_gov_arkansas.d122",
+      "unidentified.state-forces.cs_ar_artillery_arkansas",
+      "unidentified.state-forces.cs_ar_cavalry_battalion_arkansas"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_california",
+    "holder": "downey_john_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_connecticut",
+    "holder": "buckingham_william_a",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_delaware",
+    "holder": "burton_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_florida",
+    "holder": "perry_madison_s",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1500,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1500,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_georgia",
+    "holder": "brown_joseph_e",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 8120,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_georgia.d122"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_illinois",
+    "holder": "yates_richard",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 5196,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 5196,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_indiana",
+    "holder": "morton_oliver_h_p_t",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 8660,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 8660,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_iowa",
+    "holder": "kirkwood_samuel_j",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1732,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1732,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_kansas",
+    "holder": "robinson_charles",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_kentucky",
+    "holder": "magoffin_beriah",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_louisiana",
+    "holder": "moore_thomas_o",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 4040,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_la_forts_jackson_st_philip"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_maine",
+    "holder": "washburn_israel",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_maryland",
+    "holder": "hicks_thomas_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_massachusetts",
+    "holder": "andrew_john_a",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 5196,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 5196,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_michigan",
+    "holder": "blair_austin",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 2598,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2598,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_minnesota",
+    "holder": "ramsey_alexander",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_mississippi",
+    "holder": "pettus_john_j",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 7620,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_mississippi.d122"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_missouri",
+    "holder": "jackson_claiborne_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_new_hampshire",
+    "holder": "goodwin_ichabod",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_new_jersey",
+    "holder": "olden_charles_s",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 2598,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2598,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_new_york",
+    "holder": "morgan_edwin_d",
+    "opened": true,
+    "lots": 52,
+    "fbStrength": 45032,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 45032,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_north_carolina",
+    "holder": "ellis_john_w",
+    "opened": true,
+    "lots": 19,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3780,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "generated.state-forces.cs_nc_additional_north_carolina.1",
+      "generated.state-forces.cs_nc_additional_north_carolina.2",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.3"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_ohio",
+    "holder": "dennison_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_oregon",
+    "holder": "whiteaker_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_pennsylvania",
+    "holder": "curtin_andrew_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_rhode_island",
+    "holder": "sprague_william",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_south_carolina",
+    "holder": "pickens_francis_w",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 6000,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 6000,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_tennessee",
+    "holder": "harris_isham_g",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": null,
+    "fbStragglers": null,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_tennessee.d129",
+      "unidentified.state-forces.cs_tn_cavalry_tennessee",
+      "unidentified.state-forces.cs_tn_infantry_tennessee",
+      "unidentified.state-forces.cs_tn_river_artillery_tennessee"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_texas",
+    "holder": "clark_edward",
+    "opened": true,
+    "lots": 5,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2000,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_ford_regiment",
+      "initial.fb_st_tx_galveston_batteries",
+      "initial.fb_st_tx_northwest_frontier_companies"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_vermont",
+    "holder": "fairbanks_erastus",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_gov_virginia",
+    "holder": "letcher_john",
+    "opened": true,
+    "lots": 8,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 490,
+      "estimate": 0,
+      "rule": 3000,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_harpers_ferry",
+      "unidentified.state-forces.va_norfolk",
+      "unidentified.state-forces.va_peninsula",
+      "unidentified.state-forces.va_richmond"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_gov_wisconsin",
+    "holder": "randall_alexander_w",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1732,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1732,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_la_forts_jackson_st_philip",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_la_forts_jackson_st_philip"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_sc_army",
+    "holder": "dunovant_r_g_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_sc_volunteer_division",
+    "holder": "bonham_milledge_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_tx_adjutant_inspector_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_tx_cmd_galveston",
+    "holder": "sherman_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_galveston_batteries"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_tx_committee_public_safety",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_tx_dept_rio_grande",
+    "holder": "ford_john_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_ford_regiment"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_tx_northwest_frontier",
+    "holder": "mcculloch_henry_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_northwest_frontier_companies"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_va_general_in_chief",
+    "holder": "lee_robert_e",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 3000,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3000,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_va_harpers_ferry",
+    "holder": "jackson_thomas_j",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_harpers_ferry"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_va_norfolk",
+    "holder": "huger_benjamin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_norfolk"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_va_peninsula",
+    "holder": "magruder_john_b",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_va_potomac",
+    "holder": "cocke_philip_st_george",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 490,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "st_va_richmond",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_richmond"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "st_va_williamsburg",
+    "holder": "ewell_benjamin_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_peninsula"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "tr_gov_nebraska",
+    "holder": "saunders_alvin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dc_militia",
+    "holder": "stone_charles_p",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_dept_east",
+    "holder": "wool_john_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_fort_monroe_garrison"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_dept_new_mexico",
+    "holder": "fauntleroy_thomas_t",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_new_mexico_troops"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_dept_northeastern_virginia",
+    "holder": "mcdowell_irvin",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dept_pacific",
+    "holder": "howard_oliver_o",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_pacific_troops"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_dept_pennsylvania",
+    "holder": "patterson_robert",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dept_texas",
+    "holder": "waite_carlos_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dept_utah",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dept_virginia",
+    "holder": "butler_benjamin_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dept_west",
+    "holder": "harney_william_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_fort_jefferson",
+    "holder": "arnold_lewis_g",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 66,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 66,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_fort_monroe",
+    "holder": "dimick_justin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_fort_monroe_garrison"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_fort_pickens",
+    "holder": "slemmer_adam_j",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_fort_sumter",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_fort_taylor",
+    "holder": "brannan_john_m",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 44,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 44,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_general_in_chief",
+    "holder": "scott_winfield",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 110,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia",
+      "initial.fb_us_fort_monroe_garrison",
+      "initial.fb_us_new_mexico_troops",
+      "initial.fb_us_pacific_troops",
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a",
+      "initial.fb_us_washington_regulars"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_harpers_ferry_armory",
+    "holder": "barbour_alfred_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_marine_corps",
+    "holder": "harris_john",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_marines_philadelphia_yard",
+      "initial.fb_us_marines_washington_barracks"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_navy_african_squadron",
+    "holder": "inman_william",
+    "opened": true,
+    "lots": 8,
+    "fbStrength": 996,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 996,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_brazil_squadron",
+    "holder": "sands_joshua_r",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 573,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 573,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_bureau_construction",
+    "holder": "lenthall_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_bureau_medicine",
+    "holder": "whelan_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_bureau_ordnance",
+    "holder": "magruder_george_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_bureau_provisions",
+    "holder": "bridge_horatio",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_bureau_yards_docks",
+    "holder": "smith_joseph",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_east_india_squadron",
+    "holder": "stribling_cornelius_k",
+    "opened": true,
+    "lots": 5,
+    "fbStrength": 915,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 915,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_home_squadron",
+    "holder": "pendergrast_garrett_j",
+    "opened": true,
+    "lots": 14,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 2091,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_ship_water_witch"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_navy_mediterranean_squadron",
+    "holder": "bell_charles_h",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 607,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 607,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_pacific_squadron",
+    "holder": "montgomery_john_b",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 1079,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 1079,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_boston",
+    "holder": "hudson_william_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_mare_island",
+    "holder": "cunningham_robert_b",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_new_york",
+    "holder": "breese_samuel_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_norfolk",
+    "holder": "mccauley_charles_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_philadelphia",
+    "holder": "du_pont_samuel_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_portsmouth",
+    "holder": "pearson_george_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_sacketts_harbor",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_navy_yard_washington",
+    "holder": "buchanan_franklin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_ship_anacostia"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_president",
+    "holder": "lincoln_abraham",
+    "opened": true,
+    "lots": 63,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 6371,
+      "estimate": 490,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia",
+      "initial.fb_us_fort_monroe_garrison",
+      "initial.fb_us_marines_philadelphia_yard",
+      "initial.fb_us_marines_washington_barracks",
+      "initial.fb_us_new_mexico_troops",
+      "initial.fb_us_pacific_troops",
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a",
+      "initial.fb_us_ship_anacostia",
+      "initial.fb_us_ship_michigan",
+      "initial.fb_us_ship_water_witch",
+      "initial.fb_us_washington_regulars"
+    ]
+  },
+  {
+    "day": 140,
+    "army": "us_president_secretary",
+    "holder": "nicolay_john_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_recruiting_service",
+    "holder": "smith_charles_f",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 18154,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_revenue_marine",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_brooklyn",
+    "holder": "walker_william_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_congress",
+    "holder": "goldsborough_louis_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_constellation",
+    "holder": "nicholas_j_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_crusader",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_cumberland",
+    "holder": "marston_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_hartford",
+    "holder": "lowndes_charles",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_lancaster",
+    "holder": "rudd_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_macedonian",
+    "holder": "glynn_james",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_mohawk",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_pawnee",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_pocahontas",
+    "holder": "murray_alexander",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_powhatan",
+    "holder": "mercer_samuel",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_richmond",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_sabine",
+    "holder": "adams_henry_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_st_louis",
+    "holder": "poor_charles_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_supply",
+    "holder": "gibson_alexander",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_ship_wyandotte",
+    "holder": "berryman_otway_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_st_louis_arsenal",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_sumter_relief_expedition",
+    "holder": "fox_gustavus_v",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_adjutant_general",
+    "holder": null,
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 18154,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_chief_engineer",
+    "holder": "totten_joseph_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_commissary_general",
+    "holder": "gibson_george",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_inspector_general",
+    "holder": "churchill_sylvester",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_judge_advocate",
+    "holder": "lee_john_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_ordnance",
+    "holder": "craig_henry_k",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_paymaster_general",
+    "holder": "larned_benjamin_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_quartermaster_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_surgeon_general",
+    "holder": "lawson_thomas",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_war_topographical_engineers",
+    "holder": "abert_john_j",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_arsenal_baton_rouge",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_arsenal_mount_vernon",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_cmd_charleston",
+    "holder": "anderson_richard_h",
+    "opened": true,
+    "lots": 18,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 3133,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston",
+      "initial.fb_st_charleston_1st_infantry_regulars",
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_cmd_harpers_ferry",
+    "holder": "johnston_joseph_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_cmd_manassas",
+    "holder": "beauregard_pierre_g_t",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_cmd_morris_island",
+    "holder": null,
+    "opened": true,
+    "lots": 7,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 1518,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": 3120,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3120,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_fort_morgan",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_fort_morgan"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "cs_navy_charleston_harbour",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston_guard_steamers"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "cs_navy_yard_pensacola",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_president",
+    "holder": "davis_jefferson",
+    "opened": true,
+    "lots": 24,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 3133,
+      "estimate": 0,
+      "rule": 3120,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_cs_charleston",
+      "initial.fb_cs_charleston_guard_steamers",
+      "initial.fb_st_charleston_1st_infantry_regulars",
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion",
+      "initial.fb_st_fort_morgan"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "cs_vice_president",
+    "holder": "stephens_alexander_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_war_commissary_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_war_ordnance_chief",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_war_quartermaster_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_adjutant_general_massachusetts",
+    "holder": "schouler_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_adjutant_general_new_york",
+    "holder": "read_j_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_adjutant_general_ohio",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_alabama",
+    "holder": "moore_andrew_b",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 8120,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_alabama.d122"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_arkansas",
+    "holder": "rector_henry_m",
+    "opened": true,
+    "lots": 14,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3000,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "generated.state-forces.cs_ar_cavalry_arkansas.1",
+      "generated.state-forces.cs_ar_infantry_arkansas.1",
+      "generated.state-forces.cs_ar_infantry_arkansas.2",
+      "generated.state-forces.cs_ar_infantry_arkansas.3",
+      "generated.state-forces.cs_ar_infantry_arkansas.4",
+      "generated.state-forces.cs_ar_infantry_arkansas.5",
+      "generated.state-forces.cs_ar_infantry_arkansas.6",
+      "generated.state-forces.cs_ar_infantry_arkansas.7",
+      "unidentified.raised.st_gov_arkansas.d122",
+      "unidentified.state-forces.cs_ar_artillery_arkansas",
+      "unidentified.state-forces.cs_ar_cavalry_battalion_arkansas"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_california",
+    "holder": "downey_john_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_connecticut",
+    "holder": "buckingham_william_a",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_delaware",
+    "holder": "burton_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_florida",
+    "holder": "perry_madison_s",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1500,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1500,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_georgia",
+    "holder": "brown_joseph_e",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 8120,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_georgia.d122"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_illinois",
+    "holder": "yates_richard",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 5196,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 5196,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_indiana",
+    "holder": "morton_oliver_h_p_t",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 8660,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 8660,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_iowa",
+    "holder": "kirkwood_samuel_j",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1732,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1732,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_kansas",
+    "holder": "robinson_charles",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_kentucky",
+    "holder": "magoffin_beriah",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_louisiana",
+    "holder": "moore_thomas_o",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 4040,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_la_forts_jackson_st_philip"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_maine",
+    "holder": "washburn_israel",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_maryland",
+    "holder": "hicks_thomas_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_massachusetts",
+    "holder": "andrew_john_a",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 5196,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 5196,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_michigan",
+    "holder": "blair_austin",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 2598,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2598,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_minnesota",
+    "holder": "ramsey_alexander",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_mississippi",
+    "holder": "pettus_john_j",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 7620,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_mississippi.d122"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_missouri",
+    "holder": "jackson_claiborne_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_new_hampshire",
+    "holder": "goodwin_ichabod",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_new_jersey",
+    "holder": "olden_charles_s",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 2598,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2598,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_new_york",
+    "holder": "morgan_edwin_d",
+    "opened": true,
+    "lots": 52,
+    "fbStrength": 45032,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 45032,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_north_carolina",
+    "holder": "ellis_john_w",
+    "opened": true,
+    "lots": 19,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3780,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "generated.state-forces.cs_nc_additional_north_carolina.1",
+      "generated.state-forces.cs_nc_additional_north_carolina.2",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.3"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_ohio",
+    "holder": "dennison_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_oregon",
+    "holder": "whiteaker_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_pennsylvania",
+    "holder": "curtin_andrew_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_rhode_island",
+    "holder": "sprague_william",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_south_carolina",
+    "holder": "pickens_francis_w",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 6000,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 6000,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_tennessee",
+    "holder": "harris_isham_g",
+    "opened": true,
+    "lots": 4,
+    "fbStrength": null,
+    "fbStragglers": null,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.raised.st_gov_tennessee.d129",
+      "unidentified.state-forces.cs_tn_cavalry_tennessee",
+      "unidentified.state-forces.cs_tn_infantry_tennessee",
+      "unidentified.state-forces.cs_tn_river_artillery_tennessee"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_texas",
+    "holder": "clark_edward",
+    "opened": true,
+    "lots": 5,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 2000,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_ford_regiment",
+      "initial.fb_st_tx_galveston_batteries",
+      "initial.fb_st_tx_northwest_frontier_companies"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_vermont",
+    "holder": "fairbanks_erastus",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_gov_virginia",
+    "holder": "letcher_john",
+    "opened": true,
+    "lots": 8,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 490,
+      "estimate": 0,
+      "rule": 3000,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_harpers_ferry",
+      "unidentified.state-forces.va_norfolk",
+      "unidentified.state-forces.va_peninsula",
+      "unidentified.state-forces.va_richmond"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_gov_wisconsin",
+    "holder": "randall_alexander_w",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1732,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1732,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_la_forts_jackson_st_philip",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_la_forts_jackson_st_philip"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_sc_army",
+    "holder": "dunovant_r_g_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_sc_volunteer_division",
+    "holder": "bonham_milledge_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_tx_adjutant_inspector_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_tx_cmd_galveston",
+    "holder": "sherman_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_galveston_batteries"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_tx_committee_public_safety",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_tx_dept_rio_grande",
+    "holder": "ford_john_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_ford_regiment"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_tx_northwest_frontier",
+    "holder": "mcculloch_henry_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_st_tx_northwest_frontier_companies"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_va_general_in_chief",
+    "holder": "lee_robert_e",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 3000,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 3000,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_va_harpers_ferry",
+    "holder": "jackson_thomas_j",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_harpers_ferry"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_va_norfolk",
+    "holder": "huger_benjamin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_norfolk"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_va_peninsula",
+    "holder": "magruder_john_b",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_va_potomac",
+    "holder": "cocke_philip_st_george",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 490,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "st_va_richmond",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_richmond"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "st_va_williamsburg",
+    "holder": "ewell_benjamin_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "unidentified.state-forces.va_peninsula"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "tr_gov_nebraska",
+    "holder": "saunders_alvin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dc_militia",
+    "holder": "stone_charles_p",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_dept_east",
+    "holder": "wool_john_e",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_fort_monroe_garrison"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_dept_new_mexico",
+    "holder": "fauntleroy_thomas_t",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_new_mexico_troops"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_dept_northeastern_virginia",
+    "holder": "mcdowell_irvin",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dept_pacific",
+    "holder": "howard_oliver_o",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_pacific_troops"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_dept_pennsylvania",
+    "holder": "patterson_robert",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dept_texas",
+    "holder": "waite_carlos_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dept_utah",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dept_virginia",
+    "holder": "butler_benjamin_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dept_west",
+    "holder": "harney_william_s",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_fort_jefferson",
+    "holder": "arnold_lewis_g",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 66,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 66,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_fort_monroe",
+    "holder": "dimick_justin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_fort_monroe_garrison"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_fort_pickens",
+    "holder": "slemmer_adam_j",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_fort_sumter",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_fort_taylor",
+    "holder": "brannan_john_m",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 44,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 44,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_general_in_chief",
+    "holder": "scott_winfield",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 110,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia",
+      "initial.fb_us_fort_monroe_garrison",
+      "initial.fb_us_new_mexico_troops",
+      "initial.fb_us_pacific_troops",
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a",
+      "initial.fb_us_washington_regulars"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_harpers_ferry_armory",
+    "holder": "barbour_alfred_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_marine_corps",
+    "holder": "harris_john",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_marines_philadelphia_yard",
+      "initial.fb_us_marines_washington_barracks"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_navy_african_squadron",
+    "holder": "inman_william",
+    "opened": true,
+    "lots": 8,
+    "fbStrength": 996,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 996,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_brazil_squadron",
+    "holder": "sands_joshua_r",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 573,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 573,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_bureau_construction",
+    "holder": "lenthall_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_bureau_medicine",
+    "holder": "whelan_william",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_bureau_ordnance",
+    "holder": "magruder_george_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_bureau_provisions",
+    "holder": "bridge_horatio",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_bureau_yards_docks",
+    "holder": "smith_joseph",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_east_india_squadron",
+    "holder": "stribling_cornelius_k",
+    "opened": true,
+    "lots": 5,
+    "fbStrength": 915,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 915,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_home_squadron",
+    "holder": "pendergrast_garrett_j",
+    "opened": true,
+    "lots": 14,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 2091,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_ship_water_witch"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_navy_mediterranean_squadron",
+    "holder": "bell_charles_h",
+    "opened": true,
+    "lots": 3,
+    "fbStrength": 607,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 607,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_pacific_squadron",
+    "holder": "montgomery_john_b",
+    "opened": true,
+    "lots": 6,
+    "fbStrength": 1079,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 1079,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_boston",
+    "holder": "hudson_william_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_mare_island",
+    "holder": "cunningham_robert_b",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_new_york",
+    "holder": "breese_samuel_l",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_norfolk",
+    "holder": "mccauley_charles_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_philadelphia",
+    "holder": "du_pont_samuel_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_portsmouth",
+    "holder": "pearson_george_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_sacketts_harbor",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_navy_yard_washington",
+    "holder": "buchanan_franklin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_ship_anacostia"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_president",
+    "holder": "lincoln_abraham",
+    "opened": true,
+    "lots": 63,
+    "fbStrength": null,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 6371,
+      "estimate": 490,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": [
+      "initial.fb_us_dc_militia",
+      "initial.fb_us_fort_monroe_garrison",
+      "initial.fb_us_marines_philadelphia_yard",
+      "initial.fb_us_marines_washington_barracks",
+      "initial.fb_us_new_mexico_troops",
+      "initial.fb_us_pacific_troops",
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a",
+      "initial.fb_us_ship_anacostia",
+      "initial.fb_us_ship_michigan",
+      "initial.fb_us_ship_water_witch",
+      "initial.fb_us_washington_regulars"
+    ]
+  },
+  {
+    "day": 146,
+    "army": "us_president_secretary",
+    "holder": "nicolay_john_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_recruiting_service",
+    "holder": "smith_charles_f",
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 18154,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_revenue_marine",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_brooklyn",
+    "holder": "walker_william_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_congress",
+    "holder": "goldsborough_louis_m",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_constellation",
+    "holder": "nicholas_j_s",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_crusader",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_cumberland",
+    "holder": "marston_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_hartford",
+    "holder": "lowndes_charles",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_lancaster",
+    "holder": "rudd_john",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_macedonian",
+    "holder": "glynn_james",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_mohawk",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_pawnee",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_pocahontas",
+    "holder": "murray_alexander",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_powhatan",
+    "holder": "mercer_samuel",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_richmond",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_sabine",
+    "holder": "adams_henry_a",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_st_louis",
+    "holder": "poor_charles_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_supply",
+    "holder": "gibson_alexander",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_ship_wyandotte",
+    "holder": "berryman_otway_h",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_st_louis_arsenal",
+    "holder": null,
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 490,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 490,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_sumter_relief_expedition",
+    "holder": "fox_gustavus_v",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_adjutant_general",
+    "holder": null,
+    "opened": true,
+    "lots": 10,
+    "fbStrength": 18154,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 18154,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_chief_engineer",
+    "holder": "totten_joseph_g",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_commissary_general",
+    "holder": "gibson_george",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_inspector_general",
+    "holder": "churchill_sylvester",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_judge_advocate",
+    "holder": "lee_john_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_ordnance",
+    "holder": "craig_henry_k",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_paymaster_general",
+    "holder": "larned_benjamin_f",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_quartermaster_general",
+    "holder": null,
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_surgeon_general",
+    "holder": "lawson_thomas",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_war_topographical_engineers",
+    "holder": "abert_john_j",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  }
+]

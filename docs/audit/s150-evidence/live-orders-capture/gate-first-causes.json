@@ -1,0 +1,532 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "failure": {
+      "mechanic": "combat.battle_closed",
+      "problem": "too_rare",
+      "fires": 1,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "Only one ordinary field battle opens/closes, Harpers Ferry148, identical to0135. McDowell now receives one Michigan lot97 and runs a northern-Virginia hold, but its service expires136 and the new Manassas operation ends no_forces136 before contact. Beauregard receives no generated lot: the President’s ask carries no declared mode authority and Pickens answers modes_unavailable102. Patterson’s Connecticut4 receipt119 and Johnston’s Alabama receipt108 still produce the sole field meeting on148. Sumter38–39 is a separate bombardment path. One open/close, two sides with killed/wounded and missing, and one with captures(6) stay below the unchanged minimum for this gate.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "operation-comparison.json",
+      "first-prerequisite-witnesses.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "failure": {
+      "mechanic": "combat.battle_opened",
+      "problem": "too_rare",
+      "fires": 1,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "Only one ordinary field battle opens/closes, Harpers Ferry148, identical to0135. McDowell now receives one Michigan lot97 and runs a northern-Virginia hold, but its service expires136 and the new Manassas operation ends no_forces136 before contact. Beauregard receives no generated lot: the President’s ask carries no declared mode authority and Pickens answers modes_unavailable102. Patterson’s Connecticut4 receipt119 and Johnston’s Alabama receipt108 still produce the sole field meeting on148. Sumter38–39 is a separate bombardment path. One open/close, two sides with killed/wounded and missing, and one with captures(6) stay below the unchanged minimum for this gate.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "operation-comparison.json",
+      "first-prerequisite-witnesses.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "combat.captured",
+    "failure": {
+      "mechanic": "combat.captured",
+      "problem": "too_rare",
+      "fires": 1,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "Only one ordinary field battle opens/closes, Harpers Ferry148, identical to0135. McDowell now receives one Michigan lot97 and runs a northern-Virginia hold, but its service expires136 and the new Manassas operation ends no_forces136 before contact. Beauregard receives no generated lot: the President’s ask carries no declared mode authority and Pickens answers modes_unavailable102. Patterson’s Connecticut4 receipt119 and Johnston’s Alabama receipt108 still produce the sole field meeting on148. Sumter38–39 is a separate bombardment path. One open/close, two sides with killed/wounded and missing, and one with captures(6) stay below the unchanged minimum for this gate.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "operation-comparison.json",
+      "first-prerequisite-witnesses.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "failure": {
+      "mechanic": "combat.flank_broken",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      }
+    },
+    "firstCause": "The sole field meeting reaches flank checks, but Johnston draws358 against50 and Patterson591 against138; neither breaks. Before148 there is no field-battle opportunity. No seed or threshold was changed.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/combat/resolve.ts"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "failure": {
+      "mechanic": "combat.general_hit",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    "firstCause": "The meeting’s leader draws are255 and189. The unchanged killed/wounded ranges end at15+40=55; the capture range adds20 only for a routed side, and neither side routes or surrenders. Both recorded hits are null. Before148 no ordinary leader check fires.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/combat/resolve.ts"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "failure": {
+      "mechanic": "combat.killed_wounded",
+      "problem": "too_rare",
+      "fires": 2,
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      }
+    },
+    "firstCause": "Only one ordinary field battle opens/closes, Harpers Ferry148, identical to0135. McDowell now receives one Michigan lot97 and runs a northern-Virginia hold, but its service expires136 and the new Manassas operation ends no_forces136 before contact. Beauregard receives no generated lot: the President’s ask carries no declared mode authority and Pickens answers modes_unavailable102. Patterson’s Connecticut4 receipt119 and Johnston’s Alabama receipt108 still produce the sole field meeting on148. Sumter38–39 is a separate bombardment path. One open/close, two sides with killed/wounded and missing, and one with captures(6) stay below the unchanged minimum for this gate.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "operation-comparison.json",
+      "first-prerequisite-witnesses.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "combat.missing",
+    "failure": {
+      "mechanic": "combat.missing",
+      "problem": "too_rare",
+      "fires": 2,
+      "band": {
+        "minFires": 4,
+        "maxFires": 18
+      }
+    },
+    "firstCause": "Only one ordinary field battle opens/closes, Harpers Ferry148, identical to0135. McDowell now receives one Michigan lot97 and runs a northern-Virginia hold, but its service expires136 and the new Manassas operation ends no_forces136 before contact. Beauregard receives no generated lot: the President’s ask carries no declared mode authority and Pickens answers modes_unavailable102. Patterson’s Connecticut4 receipt119 and Johnston’s Alabama receipt108 still produce the sole field meeting on148. Sumter38–39 is a separate bombardment path. One open/close, two sides with killed/wounded and missing, and one with captures(6) stay below the unchanged minimum for this gate.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "operation-comparison.json",
+      "first-prerequisite-witnesses.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "combat.routed",
+    "failure": {
+      "mechanic": "combat.routed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "The first field meeting leaves morale441 (Johnston) and307 (Patterson), both above the unchanged routAt250. Patterson withdraws by the night decision, which is not a rout. Before148 there is no ordinary field meeting.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/combat/resolve.ts"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "failure": {
+      "mechanic": "forces.stragglers_returned",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 92,
+        "maxFires": 368
+      }
+    },
+    "firstCause": "Retained120/140/146 snapshots contain no known positive stragglers; the three opaque Tennessee lots remain unknown. The first known positive stragglers are created in the day148 field battle (Alabama6, Kentucky6, Connecticut4 forty). stragglersStep excludes blocks fighting that day, requires supply and known strength, and the capture ends148, so there is no subsequent return opportunity. Unknown is never counted as zero.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/forces/stragglers.ts"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "failure": {
+      "mechanic": "map.pocket_relieved",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+      }
+    },
+    "firstCause": "Supply never records an old pocket’s restored path. The four Confederate pockets at Harpers Ferry, Little Rock, Lynchburg and Raleigh still have not_traced cuts on120/140/146/148; the Union lower_valley pocket first closes144 and also remains not_traced on146/148. Sumter’s pocket is lost39, not relieved. Five closures and one loss do not satisfy a relief floor.",
+    "evidence": [
+      "first-prerequisite-witnesses.json",
+      "counter-witnesses.json",
+      "summary.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "failure": {
+      "mechanic": "messages.special_messenger",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.special_messenger firings 0->1. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The sole baseline messenger is Lincoln’s urgent bypass goal to McDowell134 after Scott’s objection133. The same current134 goal is still bypass:true but uses wire, arriving134. The unchanged fastest-route policy sorts typical days then price: retained baseline120/140 menu witnesses give messenger0days/price1 versus wire1day/free, while current witnesses give wire0/free. The new northern-Virginia holding has recorded Union control360/585 at120/140; baseline has no such control entry. Actual134 packets establish the route replacement at the event; the bracketing pure menu derivations establish the changed available route, not an invented134 State. No route rule, courier parameter, price, attention or band was fitted.",
+    "evidence": [
+      "messenger-cause.json",
+      "messenger-route-witnesses.json",
+      "live-order-evidence.json",
+      "packages/rule-seats/src/index.ts:fastest",
+      "packages/kernel/src/seats/requests.ts:principalMenu"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "movement.arrived",
+    "failure": {
+      "mechanic": "movement.arrived",
+      "problem": "too_frequent",
+      "fires": 206,
+      "band": {
+        "minFires": 21,
+        "maxFires": 86,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.arrived firings 704->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "Arrivals first exceed86 on77 (cumulative88), before the new live fulfilment97. Total206 is below baseline211 but still above86. The integrated trajectory gains the Michigan transfer and loses the unsourced-mode governor journey; no isolated causal credit is assigned to an individual leg.",
+    "evidence": [
+      "counter-witnesses.json",
+      "band-count-changes.json",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "failure": {
+      "mechanic": "movement.join_blocked",
+      "problem": "too_frequent",
+      "fires": 70,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+      }
+    },
+    "firstCause": "First Connecticut, raised.st_gov_connecticut.d46, first has no_route on66 and contributes one blocked join daily66–135 (70), until service expiry136. Its exclusive sea/Potomac transport route remains an explicit unsupported sending gap (OR III-I p.160); no overland substitution or new transport mechanism was added.",
+    "evidence": [
+      "counter-witnesses.json",
+      "causal-events.jsonl",
+      "allocations.json",
+      "../read/OR-III-I-p160.txt"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "failure": {
+      "mechanic": "movement.leg_started",
+      "problem": "too_frequent",
+      "fires": 193,
+      "band": {
+        "minFires": 21,
+        "maxFires": 86,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.leg_started firings 387->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "Leg starts first exceed86 on81 (cumulative87), before the new live fulfilment97. Total193 is below baseline199 but still above86. Both volume crossings are inherited; new and removed journeys follow the actual scoped choices.",
+    "evidence": [
+      "counter-witnesses.json",
+      "band-count-changes.json",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "operations.opened",
+    "failure": {
+      "mechanic": "operations.opened",
+      "problem": "too_frequent",
+      "fires": 11,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.opened firings 10->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The two added operation IDs are McDowell’s hold99 and Manassas take135, with no removed baseline operation. Michigan received97 supplies both until its expiry136. Total11 versus baseline9 exceeds10 when Patterson opens143. The criterion remains binding; no opening was suppressed to fit.",
+    "evidence": [
+      "operation-comparison.json",
+      "counter-witnesses.json",
+      "live-order-evidence.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "failure": {
+      "mechanic": "operations.repulsed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+      }
+    },
+    "firstCause": "Patterson’s first withdrawal occurs in the field battle on148. His operation143 still has an axis in march and repulses0 at the148 cutoff. stepAxis consumes yesterdaysBattle with a retreat destination, so that withdrawal cannot produce the operations.repulsed counter earlier on148. No tick149 or horizon extension was added to make the floor fire.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/tick/operations.ts"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "operations.works",
+    "failure": {
+      "mechanic": "operations.works",
+      "problem": "too_frequent",
+      "fires": 16,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.works firings 15->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "Michigan’s physical receipt97 enables McDowell’s new hold operation99. It adds six work firings104–109; the other work days equal0135. Total16 versus baseline10 exceeds8 first on109 (cumulative9). These are ordinary work steps of a newly staffed command, not an automatic grant or fitted duration.",
+    "evidence": [
+      "counter-witnesses.json",
+      "live-order-evidence.json",
+      "operation-comparison.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "planner.candidates",
+    "failure": {
+      "mechanic": "planner.candidates",
+      "problem": "too_frequent",
+      "fires": 20,
+      "band": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.candidates firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "McDowell’s actual97 receipt adds a new received-force draft98 (two candidates) to the prior plan record; that extra firing makes20 versus baseline19. It is distinct from Beauregard’s still-empty draft98. The inherited maximum16 is crossed137 (cumulative17). A candidate telemetry firing is not a count of individual candidate rows. No draft/search term or band was fitted.",
+    "evidence": [
+      "counter-witnesses.json",
+      "first-prerequisite-witnesses.json",
+      "causal-events.jsonl",
+      "live-order-evidence.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "planner.searches",
+    "failure": {
+      "mechanic": "planner.searches",
+      "problem": "too_frequent",
+      "fires": 20,
+      "band": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.searches firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "McDowell’s actual97 receipt adds a new received-force draft98 (two candidates) to the prior plan record; that extra firing makes20 versus baseline19. It is distinct from Beauregard’s still-empty draft98. The inherited maximum16 is crossed137 (cumulative17). A candidate telemetry firing is not a count of individual candidate rows. No draft/search term or band was fitted.",
+    "evidence": [
+      "counter-witnesses.json",
+      "first-prerequisite-witnesses.json",
+      "causal-events.jsonl",
+      "live-order-evidence.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "plans.chosen",
+    "failure": {
+      "mechanic": "plans.chosen",
+      "problem": "too_frequent",
+      "fires": 16,
+      "band": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.chosen firings 14->7. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The new Michigan holding enables McDowell’s choices99 and135. The daily difference from0135 is exactly those two firings:16 versus14, first above14 on135 (cumulative15). No plan choice was removed or test assertion edited.",
+    "evidence": [
+      "counter-witnesses.json",
+      "operation-comparison.json",
+      "causal-events.jsonl"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "plans.drafted",
+    "failure": {
+      "mechanic": "plans.drafted",
+      "problem": "too_frequent",
+      "fires": 20,
+      "band": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.drafted firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "McDowell’s actual97 receipt adds a new received-force draft98 (two candidates) to the prior plan record; that extra firing makes20 versus baseline19. It is distinct from Beauregard’s still-empty draft98. The inherited maximum16 is crossed137 (cumulative17). A candidate telemetry firing is not a count of individual candidate rows. No draft/search term or band was fitted.",
+    "evidence": [
+      "counter-witnesses.json",
+      "first-prerequisite-witnesses.json",
+      "causal-events.jsonl",
+      "live-order-evidence.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "failure": {
+      "mechanic": "plans.went_ahead",
+      "problem": "too_frequent",
+      "fires": 7,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.went_ahead firings 7->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "McDowell’s newly staffed hold99 and take135 add two go-ahead events to baseline5. Total7 exceeds5 first on135 (cumulative6). The take then fails no_forces136 at service expiry; opening and proceeding are not successful combat.",
+    "evidence": [
+      "counter-witnesses.json",
+      "operation-comparison.json",
+      "causal-events.jsonl"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "failure": {
+      "mechanic": "reports.battle_dispatch",
+      "problem": "too_frequent",
+      "fires": 10,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.battle_dispatch firings 50->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The newly reached field meeting produces four phase-stamped dispatches per side on148, eight total, on top of the two Sumter dispatches38/39. Total10 exceeds5 first on148. This counter counts reports, not battles; battle-reports.ts explicitly creates four phase reports per field side.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "counter-witnesses.json",
+      "packages/kernel/src/tick/battle-reports.ts"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "failure": {
+      "mechanic": "reports.commander_lost",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    "firstCause": "No newly lost holder/status transition is recorded. Both field commanders have null hits and neither side routes or surrenders; consequently commanderLossReports has no lost-post-holder input. This is downstream of the actual leader check, not an absent compliance order.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/tick/commander-losses.ts"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "failure": {
+      "mechanic": "seats.battle_orders",
+      "problem": "too_rare",
+      "fires": 4,
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      }
+    },
+    "firstCause": "Only one ordinary field battle opens/closes, Harpers Ferry148, identical to0135. McDowell now receives one Michigan lot97 and runs a northern-Virginia hold, but its service expires136 and the new Manassas operation ends no_forces136 before contact. Beauregard receives no generated lot: the President’s ask carries no declared mode authority and Pickens answers modes_unavailable102. Patterson’s Connecticut4 receipt119 and Johnston’s Alabama receipt108 still produce the sole field meeting on148. Sumter38–39 is a separate bombardment path. Two battle-order choices147 and two148 total4, below5. There is no earlier field encounter supplying another choice.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "operation-comparison.json",
+      "first-prerequisite-witnesses.json",
+      "counter-witnesses.json"
+    ],
+    "disposition": "Lead review; no criterion waived. The new ruling still requires an ordinary hook attempt, and a commit only on its exit0."
+  }
+]

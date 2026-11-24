@@ -1,0 +1,110 @@
+{
+  "command": "git hook run pre-commit",
+  "exit": 1,
+  "stagedTree": "ddb4c8cb8baf121745de5fb0948243b4328bfc06",
+  "stagedPathsChecked": 517,
+  "workingTreeUnchangedThroughHook": true,
+  "tests": {
+    "failed": 12,
+    "passed": 2533,
+    "skipped": 3,
+    "total": 2548,
+    "filesFailed": 7,
+    "filesPassed": 281
+  },
+  "failures": [
+    {
+      "file": "packages/cli/test/done-check.test.ts",
+      "test": "passes every Phase0 criterion but the budget, which is a stopwatch",
+      "cause": "liveness criterion returns25 unchanged band failures, not[]",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/cli/test/done-check.test.ts",
+      "test": "liveness: a planted dead mechanic in a reference run fails the check",
+      "cause": "positive control first requires an otherwise clean reference; it already has25 failures",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/cli/test/liveness-gate.test.ts",
+      "test": "union-1861, war by decision,148days: every mechanic fires within its band",
+      "cause": "25 observed mechanic bands remain unmet; prior0135 publication lists all first causes",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/cli/test/seats-run.test.ts",
+      "test": "its log, replayed from the start, reproduces its State (the log is the truth)",
+      "cause": "testbed day40 stored save fixture has old State hash; current replay differs; no fixture regenerated",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/cli/test/seats-run.test.ts",
+      "test": "resuming from it reaches the continuous run’s final hash",
+      "cause": "the same old fixture produces different hashes on41–120 from the current continuous run; no fixture regenerated",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/kernel/test/one-writer.test.ts",
+      "test": "classifies every property of every State record, and no key is owned twice",
+      "cause": "ReportedAvailableLot is missing from immutable-record declaration; five availability properties unclassified",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/kernel/test/one-writer.test.ts",
+      "test": "writes each owned field only from its writer, and never writes an immutable key",
+      "cause": "Scanner reports15 writes (initial12 plus3 aliases reading knownBody/knownReports/reportForceModeAuthority). Retained source includes read comparisons, callback type/default and aliases rather than mutations; ReportedAvailableLot registration is independently missing. Checker/test unchanged; all exact diagnostics retained.",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/kernel/test/one-writer.test.ts",
+      "test": "is the real declaration: every nested State record is declared, and the derived keys include the ones the old list named",
+      "cause": "derived record names include ReportedAvailableLot; declared IMMUTABLE_RECORDS omits it",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packs/union-1861/test/discretion-chain.test.ts",
+      "test": "the July junction carries if-practicable authority and retains the received advance-news gate",
+      "cause": "find(objective===manassas) now selects the authorised Beauregard May31 hold inserted before Johnston’s July17 relief; unchanged assertion compares different missions",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/kernel/test/s147-receipt-requests.test.ts",
+      "test": "F07 governor chain: a voluntary offer carries the original answer and retains its original owner",
+      "cause": "Unchanged fixture manually constructs an unstamped governor ask; expects offer at713, receives the ruled defer/modes_unavailable. No received authority is invented to satisfy it.",
+      "unresolvedAfterNarrowBoundaryCorrection": true
+    },
+    {
+      "file": "packages/kernel/test/boundary.test.ts",
+      "test": "seat-api.ts and everything it imports stay clear of the forbidden files",
+      "cause": "Public ForceRequestModeAuthority imported private world/mandates through knowledge/force-need. Import closure reached engine internals even though the import was type-only.",
+      "unresolvedAfterNarrowBoundaryCorrection": false,
+      "correction": "Removed the private type import and spelled identical public four-mode tuple. Existing boundary file10/10 and typecheck pass; byte-identical zero-byte emitted JS,17 other pinned inputs unchanged."
+    },
+    {
+      "file": "packages/kernel/test/boundary.test.ts",
+      "test": "claimed control and fronts have no import path to the control writer or the State table",
+      "cause": "Public ForceRequestModeAuthority imported private world/mandates through knowledge/force-need. Import closure reached engine internals even though the import was type-only.",
+      "unresolvedAfterNarrowBoundaryCorrection": false,
+      "correction": "Removed the private type import and spelled identical public four-mode tuple. Existing boundary file10/10 and typecheck pass; byte-identical zero-byte emitted JS,17 other pinned inputs unchanged."
+    }
+  ],
+  "unresolvedAssertionsFromHook": 10,
+  "twoBoundaryAssertionsCorrectedAfterHook": true,
+  "correctionEvidence": {
+    "boundaryTests": 10,
+    "boundaryExit": 0,
+    "typecheckExit": 0,
+    "rulesExit": 0,
+    "runtimeProof": "type-only-boundary-proof.json"
+  },
+  "afterHookChanges": "The sole source change is the erased public type dependency correction; result reports and inventories were then added. This is not claimed to be a fresh passing ordinary-hook tree.",
+  "fullHookRetry": false,
+  "captureRetry": false,
+  "commit": "not attempted, hook failed",
+  "push": false,
+  "rawLog": "runs/s150-live-orders/hook-final.log",
+  "rawLogSha256": "753ce5269d97e097fc6b0f3fb5fbdafae3985a8db2da3d80584eaf1e31db5bd7",
+  "publishedTranscript": "hook-final-output.txt",
+  "stagesNotReached": "Hook boundary/licences/decisions follow failed tests; standalone pack boundary/rules were checked separately.",
+  "transcriptNormalization": "Published UTF-8 transcript normalizes line endings and trailing display whitespace; original raw log is retained with its digest."
+}

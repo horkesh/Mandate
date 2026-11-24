@@ -261,3 +261,10 @@ export function settleCounter(state: State, post: PostId, counter: PlanCounter, 
   if (executes === null) return put(state, post, next);
   return put(state, post, { ...next, planApproved: executes, planStatus: record.planGoal.goalAwaitWord && record.planStatus !== 'approved' ? 'ready' : 'approved' });
 }
+
+/** A received own-request reinforcement reopens planning on the same accepted mission, never on a promise. */
+export function refreshGoalForces(state:State,post:PostId,blocks:PlanGoal['goalCommitted']):State {
+ const old=state.planRecords[post];
+ if(!old || Object.values(state.operationRecords).some(o=>o.opPost===post&&o.opEndDay===null))return state;
+ return put(state,post,{...old,planGoal:{...old.planGoal,goalCommitted:blocks},planStatus:'drafting',planDraft:null,planApproved:null,planChosen:null,planSubmitted:null});
+}

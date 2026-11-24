@@ -1,0 +1,42 @@
+{
+  "boundary": {
+    "log": "runs/s141/corrected-final-boundary.log",
+    "exit": 0
+  },
+  "rules": {
+    "log": "runs/s141/corrected-final-rules.log",
+    "exit": 0
+  },
+  "typecheck": {
+    "log": "runs/s141/corrected-final-typecheck.log",
+    "exit": 0
+  },
+  "staged_history": {
+    "log": "runs/s141/corrected-staged-history.log",
+    "exit": 0
+  },
+  "staged_diff": {
+    "log": "runs/s141/corrected-staged-diff-check.log",
+    "exit": 0
+  },
+  "historical_ledger_targeted": {
+    "log": "runs/s141/positive-band-history-targeted.log",
+    "exit": 0
+  },
+  "history_test_evidence_reused": {
+    "log": "runs/s141/positive-band-history-corrected.log",
+    "six_files_passed": true,
+    "remaining_file_corrected_and_verified": "tools/test/s90-liveness-ruling.test.ts",
+    "final_targeted_files": 2,
+    "final_targeted_tests": 4,
+    "frozen_zero_grants_and_negative_tamper_controls": "preserved"
+  },
+  "runtime_gate": {
+    "checked_from_retained_summary": true,
+    "remaining_failures": 15,
+    "all_zero_floor_breaches": true,
+    "hook_not_run": "lead ruling required; cheapest gate already rejects known floors",
+    "second_commit": "outstanding",
+    "further_simulation": false
+  }
+}

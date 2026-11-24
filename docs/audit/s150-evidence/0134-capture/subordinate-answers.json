@@ -1,0 +1,374 @@
+[
+  {
+    "request": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+    "paper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+    "allocationRecords": [
+      {
+        "allocOrder": "m.114.b70961860618b775",
+        "allocPaper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+        "allocDay": 114,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [],
+        "allocBlocks": [],
+        "allocReceived": [],
+        "allocShortfall": 1,
+        "allocReasons": [
+          "retention_comparison_undetermined"
+        ],
+        "allocStatus": "deferred"
+      }
+    ],
+    "responses": [
+      {
+        "respOrder": "m.114.b70961860618b775",
+        "respPerson": "mansfield_joseph_k_f",
+        "respPost": "us_dept_washington",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 114,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 264,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ],
+    "receivedIssuerReports": [
+      {
+        "snapshot": 120,
+        "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+        "seat": "seat:scott_winfield",
+        "report": {
+          "id": "m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+          "knownReceivedDay": 114,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "revision": 1
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_washington",
+            "reportClaims": [
+              {
+                "claimKind": "order-obeyed",
+                "claimRegion": "washington",
+                "claimValue": 0,
+                "claimToken": "comply",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.114.b70961860618b775"
+          }
+        }
+      },
+      {
+        "snapshot": 120,
+        "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+        "seat": "seat:scott_winfield",
+        "report": {
+          "id": "m.114.mansfield_joseph_k_f.scott_winfield.subordinate-answer.m.114.b70961860618b775",
+          "knownReceivedDay": 114,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_washington",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "philadelphia",
+                "claimValue": 0,
+                "claimToken": "force:subordinate_declined",
+                "claimConfidence": 1000
+              },
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "retention_comparison_undetermined",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.114.b70961860618b775"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "request": "m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b",
+    "paper": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+    "allocationRecords": [
+      {
+        "allocOrder": "m.124.ae63b5c3c61382b4",
+        "allocPaper": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+        "allocDay": 124,
+        "allocSender": "holmes_theophilus_h",
+        "allocStrongest": true,
+        "allocLots": [],
+        "allocBlocks": [],
+        "allocReceived": [],
+        "allocShortfall": 1,
+        "allocReasons": [
+          "retention_comparison_undetermined"
+        ],
+        "allocStatus": "deferred"
+      }
+    ],
+    "responses": [
+      {
+        "respOrder": "m.124.ae63b5c3c61382b4",
+        "respPerson": "holmes_theophilus_h",
+        "respPost": "cs_cmd_fredericksburg",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 124,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 67,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.124.ae63b5c3c61382b4",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.124.ae63b5c3c61382b4"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.124.ae63b5c3c61382b4",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.124.ae63b5c3c61382b4"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ],
+    "receivedIssuerReports": [
+      {
+        "snapshot": 140,
+        "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+        "seat": "seat:lee_robert_e",
+        "report": {
+          "id": "m.124.holmes_theophilus_h.lee_robert_e.ack.cs_cmd_fredericksburg",
+          "knownReceivedDay": 124,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+              "revision": 1
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "holmes_theophilus_h",
+            "reportAuthorPost": "cs_cmd_fredericksburg",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_fredericksburg",
+            "reportClaims": [
+              {
+                "claimKind": "order-obeyed",
+                "claimRegion": "lynchburg",
+                "claimValue": 0,
+                "claimToken": "comply",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 124,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.124.ae63b5c3c61382b4"
+          }
+        }
+      },
+      {
+        "snapshot": 140,
+        "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+        "seat": "seat:lee_robert_e",
+        "report": {
+          "id": "m.124.holmes_theophilus_h.lee_robert_e.subordinate-answer.m.124.ae63b5c3c61382b4",
+          "knownReceivedDay": 124,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "holmes_theophilus_h",
+            "reportAuthorPost": "cs_cmd_fredericksburg",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_fredericksburg",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "harpers_ferry",
+                "claimValue": 0,
+                "claimToken": "force:subordinate_declined",
+                "claimConfidence": 1000
+              },
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "harpers_ferry",
+                "claimValue": 1,
+                "claimToken": "retention_comparison_undetermined",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 124,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.124.ae63b5c3c61382b4"
+          }
+        }
+      }
+    ]
+  }
+]

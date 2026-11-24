@@ -14,7 +14,7 @@ it('Johnston receives a hold and Cooper answers his own received proposal with c
 });
 
 it('the July junction carries if-practicable authority and retains the received advance-news gate', () => {
-  const row = doctrine().offensives.find((o: { objective: string }) => o.objective === 'manassas');
+  const row = doctrine().offensives.find((o: { id: string }) => o.id === 'johnston_junction');
   expect(row).toMatchObject({ fromDate: '1861-07-17', requiresNotice: 'manassas_advance_received', posture: 'relieve', discretion: { condition: 'outmatched', fallback: { objective: null, posture: 'hold' } } });
   expect(row.source).toContain('p.478');
 });

@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { ids, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
-import { seatsWorld } from '../../../packages/cli/src/seats-world.ts';
+// 0131 retires this history policy; preserve its generic mechanics on an explicit synthetic control.
+import { seatsWorld } from './support/generic-concentration-control.ts';
 import { deliverReport } from '../../../packages/kernel/src/knowledge/knowledge.ts';
 import { NO_TRUTH } from '../../../packages/kernel/src/knowledge/truth.ts';
 import { report } from '../../../packages/kernel/test/support/s25-fixture.ts';

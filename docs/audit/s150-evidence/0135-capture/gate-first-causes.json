@@ -1,0 +1,455 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "failure": {
+      "mechanic": "combat.battle_closed",
+      "problem": "too_rare",
+      "fires": 1,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "Only one ordinary field battle occurs: Harpers Ferry on148, after Patterson receives Connecticut4 on119, moves under his hold mission from121, and accepts the later Harpers Ferry mission on142 (operation143). Johnston receives the Alabama lot on108. Fort Sumter38–39 is a separate bombardment path, not an ordinary field-battle firing. McDowell remains empty (Mansfield complies93 but selection is committed; next request135 is refused138). Beauregard’s selected South Carolina lot has not reached Manassas by148. The single meeting yields one open/close, two sides with killed/wounded and missing, and only Patterson’s side with captures (6); those are below this gate’s unchanged minimum.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "failure": {
+      "mechanic": "combat.battle_opened",
+      "problem": "too_rare",
+      "fires": 1,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "Only one ordinary field battle occurs: Harpers Ferry on148, after Patterson receives Connecticut4 on119, moves under his hold mission from121, and accepts the later Harpers Ferry mission on142 (operation143). Johnston receives the Alabama lot on108. Fort Sumter38–39 is a separate bombardment path, not an ordinary field-battle firing. McDowell remains empty (Mansfield complies93 but selection is committed; next request135 is refused138). Beauregard’s selected South Carolina lot has not reached Manassas by148. The single meeting yields one open/close, two sides with killed/wounded and missing, and only Patterson’s side with captures (6); those are below this gate’s unchanged minimum.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "combat.captured",
+    "failure": {
+      "mechanic": "combat.captured",
+      "problem": "too_rare",
+      "fires": 1,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "Only one ordinary field battle occurs: Harpers Ferry on148, after Patterson receives Connecticut4 on119, moves under his hold mission from121, and accepts the later Harpers Ferry mission on142 (operation143). Johnston receives the Alabama lot on108. Fort Sumter38–39 is a separate bombardment path, not an ordinary field-battle firing. McDowell remains empty (Mansfield complies93 but selection is committed; next request135 is refused138). Beauregard’s selected South Carolina lot has not reached Manassas by148. The single meeting yields one open/close, two sides with killed/wounded and missing, and only Patterson’s side with captures (6); those are below this gate’s unchanged minimum.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "failure": {
+      "mechanic": "combat.flank_broken",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      }
+    },
+    "firstCause": "The sole field meeting reaches flank checks, but Johnston draws358 against50 and Patterson591 against138; neither breaks. Before148 there is no field-battle opportunity. No seed or threshold was changed.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/combat/resolve.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "failure": {
+      "mechanic": "combat.general_hit",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    "firstCause": "The meeting’s leader draws are255 and189. The unchanged killed/wounded ranges end at15+40=55; the capture range adds20 only for a routed side, and neither side routes or surrenders. Both recorded hits are null. Before148 no ordinary leader check fires.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/combat/resolve.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "failure": {
+      "mechanic": "combat.killed_wounded",
+      "problem": "too_rare",
+      "fires": 2,
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      }
+    },
+    "firstCause": "Only one ordinary field battle occurs: Harpers Ferry on148, after Patterson receives Connecticut4 on119, moves under his hold mission from121, and accepts the later Harpers Ferry mission on142 (operation143). Johnston receives the Alabama lot on108. Fort Sumter38–39 is a separate bombardment path, not an ordinary field-battle firing. McDowell remains empty (Mansfield complies93 but selection is committed; next request135 is refused138). Beauregard’s selected South Carolina lot has not reached Manassas by148. The single meeting yields one open/close, two sides with killed/wounded and missing, and only Patterson’s side with captures (6); those are below this gate’s unchanged minimum.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "combat.missing",
+    "failure": {
+      "mechanic": "combat.missing",
+      "problem": "too_rare",
+      "fires": 2,
+      "band": {
+        "minFires": 4,
+        "maxFires": 18
+      }
+    },
+    "firstCause": "Only one ordinary field battle occurs: Harpers Ferry on148, after Patterson receives Connecticut4 on119, moves under his hold mission from121, and accepts the later Harpers Ferry mission on142 (operation143). Johnston receives the Alabama lot on108. Fort Sumter38–39 is a separate bombardment path, not an ordinary field-battle firing. McDowell remains empty (Mansfield complies93 but selection is committed; next request135 is refused138). Beauregard’s selected South Carolina lot has not reached Manassas by148. The single meeting yields one open/close, two sides with killed/wounded and missing, and only Patterson’s side with captures (6); those are below this gate’s unchanged minimum.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "combat.routed",
+    "failure": {
+      "mechanic": "combat.routed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 2,
+        "maxFires": 10
+      }
+    },
+    "firstCause": "The first field meeting leaves morale441 (Johnston) and307 (Patterson), both above the unchanged routAt250. Patterson withdraws by the night decision, which is not a rout. Before148 there is no ordinary field meeting.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/combat/resolve.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "failure": {
+      "mechanic": "forces.stragglers_returned",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 92,
+        "maxFires": 368
+      }
+    },
+    "firstCause": "Retained120/140/146 snapshots contain no known positive stragglers; the three opaque Tennessee lots remain unknown. The first known positive stragglers are created in the day148 field battle (Alabama6, Kentucky6, Connecticut4 forty). stragglersStep excludes blocks fighting that day, requires supply and known strength, and the capture ends148, so there is no subsequent return opportunity. Unknown is never counted as zero.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/forces/stragglers.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "failure": {
+      "mechanic": "map.pocket_relieved",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+      }
+    },
+    "firstCause": "Supply never records an old pocket’s restored path. The four Confederate pockets at Harpers Ferry, Little Rock, Lynchburg and Raleigh still have not_traced cuts on120/140/146/148; the Union lower_valley pocket first closes144 and also remains not_traced on146/148. Sumter’s pocket is lost39, not relieved. Five closures and one loss do not satisfy a relief floor.",
+    "evidence": [
+      "first-prerequisite-witnesses.json",
+      "counter-witnesses.json",
+      "summary.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "movement.arrived",
+    "failure": {
+      "mechanic": "movement.arrived",
+      "problem": "too_frequent",
+      "fires": 211,
+      "band": {
+        "minFires": 21,
+        "maxFires": 86,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.arrived firings 704->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "Cumulative arrivals first exceed86 on77 (88), before the two hold missions are received and before any0135 request transfer. The ordinary integrated movement trajectory finishes211, versus189 in0134. The new receipts add actual journeys; this comparison gives no isolated causal credit to a paper.",
+    "evidence": [
+      "counter-witnesses.json",
+      "summary.json",
+      "band-count-changes.json",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "failure": {
+      "mechanic": "movement.join_blocked",
+      "problem": "too_frequent",
+      "fires": 70,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+      }
+    },
+    "firstCause": "First Connecticut, raised.st_gov_connecticut.d46, first has no_route on66 and contributes one blocked join daily66–135 (70), until service expiry136. Its exclusive sea/Potomac transport route remains an explicit unsupported sending gap (OR III-I p.160); no overland substitution or new transport mechanism was added.",
+    "evidence": [
+      "counter-witnesses.json",
+      "causal-events.jsonl",
+      "allocations.json",
+      "../read/OR-III-I-p160.txt"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "failure": {
+      "mechanic": "movement.leg_started",
+      "problem": "too_frequent",
+      "fires": 199,
+      "band": {
+        "minFires": 21,
+        "maxFires": 86,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.leg_started firings 387->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "Cumulative starts first exceed86 on81 (87), before either new hold mission is received or any0135 request transfer. The integrated trajectory finishes199, versus176 in0134. New journeys are real, but the first band crossing is inherited.",
+    "evidence": [
+      "counter-witnesses.json",
+      "summary.json",
+      "band-count-changes.json",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "failure": {
+      "mechanic": "operations.repulsed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+      }
+    },
+    "firstCause": "Patterson’s first withdrawal occurs in the field battle on148. His operation143 still has an axis in march and repulses0 at the148 cutoff. stepAxis consumes yesterdaysBattle with a retreat destination, so that withdrawal cannot produce the operations.repulsed counter earlier on148. No tick149 or horizon extension was added to make the floor fire.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/tick/operations.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "operations.works",
+    "failure": {
+      "mechanic": "operations.works",
+      "problem": "too_frequent",
+      "fires": 10,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.works firings 15->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The successful Patterson receipt119 lets his operation121 reach lower_valley131 and work there132–136 before supersession137. These five work days join the earlier/other work events; on135 the daily total2 raises the cumulative total to9, first above8. Total10 is an actual newly active force trajectory, not a missing request or an automatic troop grant.",
+    "evidence": [
+      "counter-witnesses.json",
+      "causal-events.jsonl",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "planner.candidates",
+    "failure": {
+      "mechanic": "planner.candidates",
+      "problem": "too_frequent",
+      "fires": 19,
+      "band": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.candidates firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The two newly declared hold missions create McDowell’s draft89 and Beauregard’s98. Physical reinforcements also produce Johnston’s109 and Patterson’s120 drafts; later Patterson mission/revisions remain in the recorded set. The integrated trajectory has19 counted drafting/search/candidate events (baseline12); first above16 is139. These examples do not isolate all seven added events to one paper. Some zero-candidate records are not counted as a search. The new activity is now real and exceeds the inherited maximum; no draft, band or planner term was suppressed to fit.",
+    "evidence": [
+      "counter-witnesses.json",
+      "first-prerequisite-witnesses.json",
+      "causal-events.jsonl",
+      "band-count-changes.json",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "planner.searches",
+    "failure": {
+      "mechanic": "planner.searches",
+      "problem": "too_frequent",
+      "fires": 19,
+      "band": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.searches firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The two newly declared hold missions create McDowell’s draft89 and Beauregard’s98. Physical reinforcements also produce Johnston’s109 and Patterson’s120 drafts; later Patterson mission/revisions remain in the recorded set. The integrated trajectory has19 counted drafting/search/candidate events (baseline12); first above16 is139. These examples do not isolate all seven added events to one paper. Some zero-candidate records are not counted as a search. The new activity is now real and exceeds the inherited maximum; no draft, band or planner term was suppressed to fit.",
+    "evidence": [
+      "counter-witnesses.json",
+      "first-prerequisite-witnesses.json",
+      "causal-events.jsonl",
+      "band-count-changes.json",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "plans.drafted",
+    "failure": {
+      "mechanic": "plans.drafted",
+      "problem": "too_frequent",
+      "fires": 19,
+      "band": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.drafted firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The two newly declared hold missions create McDowell’s draft89 and Beauregard’s98. Physical reinforcements also produce Johnston’s109 and Patterson’s120 drafts; later Patterson mission/revisions remain in the recorded set. The integrated trajectory has19 counted drafting/search/candidate events (baseline12); first above16 is139. These examples do not isolate all seven added events to one paper. Some zero-candidate records are not counted as a search. The new activity is now real and exceeds the inherited maximum; no draft, band or planner term was suppressed to fit.",
+    "evidence": [
+      "counter-witnesses.json",
+      "first-prerequisite-witnesses.json",
+      "causal-events.jsonl",
+      "band-count-changes.json",
+      "request-cycles.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "failure": {
+      "mechanic": "reports.battle_dispatch",
+      "problem": "too_frequent",
+      "fires": 10,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.battle_dispatch firings 50->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      }
+    },
+    "firstCause": "The newly reached field meeting produces four phase-stamped dispatches per side on148, eight total, on top of the two Sumter dispatches38/39. Total10 exceeds5 first on148. This counter counts reports, not battles; battle-reports.ts explicitly creates four phase reports per field side.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "counter-witnesses.json",
+      "packages/kernel/src/tick/battle-reports.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "failure": {
+      "mechanic": "reports.commander_lost",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    "firstCause": "No newly lost holder/status transition is recorded. Both field commanders have null hits and neither side routes or surrenders; consequently commanderLossReports has no lost-post-holder input. This is downstream of the actual leader check, not an absent compliance order.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "packages/kernel/src/tick/commander-losses.ts"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "failure": {
+      "mechanic": "seats.battle_orders",
+      "problem": "too_rare",
+      "fires": 4,
+      "band": {
+        "minFires": 5,
+        "maxFires": 20
+      }
+    },
+    "firstCause": "Only one ordinary field battle occurs: Harpers Ferry on148, after Patterson receives Connecticut4 on119, moves under his hold mission from121, and accepts the later Harpers Ferry mission on142 (operation143). Johnston receives the Alabama lot on108. Fort Sumter38–39 is a separate bombardment path, not an ordinary field-battle firing. McDowell remains empty (Mansfield complies93 but selection is committed; next request135 is refused138). Beauregard’s selected South Carolina lot has not reached Manassas by148. Battle-order choices occur twice on147 and twice on148, four total, below minimum5. They are present only at the late encounter, not missing from an earlier field battle.",
+    "evidence": [
+      "battles.json",
+      "request-cycles.json",
+      "army-focus.json",
+      "first-prerequisite-witnesses.json",
+      "packages/kernel/src/tick/forces.ts",
+      "counter-witnesses.json"
+    ],
+    "disposition": "Lead review before hook; no fitted band, floor, term, quantity, ratio, seed, roster, date or horizon"
+  }
+]

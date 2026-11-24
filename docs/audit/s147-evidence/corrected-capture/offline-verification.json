@@ -1,0 +1,38 @@
+{
+  "day": 148,
+  "rejections": 0,
+  "finalHash": "2c15472760578da1e426327c9a8bf66012910ed3693099d507047aa6156e66a0",
+  "dailyReplay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "day60Resume": {
+    "atTurn": 60,
+    "finalHash": "2c15472760578da1e426327c9a8bf66012910ed3693099d507047aa6156e66a0",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "rows": 33,
+  "armyTotals": 420,
+  "original417CommandTotalsUnchanged": true,
+  "lotRows": 1223,
+  "lotCSVByteIdenticalToS141": true,
+  "requests": 5,
+  "answers": 14,
+  "battleRecords": 1,
+  "changedBattles": 0,
+  "newZeros": 0,
+  "remainingPositiveZeroBreaches": 15,
+  "positiveBandsRecentred": 8,
+  "journalKinds": {
+    "dispatch": 216,
+    "paper_receipt": 206,
+    "offer_receipt": 7,
+    "request": 5,
+    "answer": 14,
+    "allocation_receipt": 1
+  },
+  "failedAttemptInventoryStillExact": true,
+  "rawSnapshotAndSaveHashesPinned": true,
+  "noMeasurementRetryAfterCorrectedCapture": true
+}

@@ -1,0 +1,3633 @@
+[
+  {
+    "request": {
+      "freqId": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+      "freqNeed": {
+        "needOrigin": "commander_choice",
+        "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "needPost": "us_dept_pennsylvania",
+        "needPerson": "patterson_robert",
+        "needTask": "hold",
+        "needScope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        "needQuantity": 1,
+        "needShortfall": null,
+        "needEstablishment": 780,
+        "needReason": "unknown_enemy_bootstrap",
+        "needDestination": "philadelphia",
+        "needGoal": {
+          "goalObjective": "lower_valley",
+          "goalPosture": "hold",
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+      },
+      "freqDay": 113,
+      "freqTo": "us_general_in_chief",
+      "freqAnswers": [
+        {
+          "fansDay": 114,
+          "fansPerson": "scott_winfield",
+          "fansPost": "us_general_in_chief",
+          "fansIssuer": "patterson_robert",
+          "fansAction": "order_subordinate",
+          "fansTo": "us_dept_washington",
+          "fansEvidence": "m.111.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+          "fansReasons": [
+            "compliance:comply",
+            "scope_unavailable",
+            "subordinate_holdings_reported"
+          ],
+          "fansScore": [
+            null,
+            null,
+            null
+          ],
+          "fansAssignment": [
+            "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "scott_winfield",
+            "us_general_in_chief",
+            "us_dept_washington",
+            "us_dept_pennsylvania",
+            "philadelphia",
+            {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            1,
+            "scott_army_command",
+            [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            null,
+            "mansfield_joseph_k_f"
+          ]
+        }
+      ]
+    },
+    "missionTraffic": [
+      {
+        "day": 112,
+        "kind": "dispatch",
+        "key": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgOrigin": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "lincoln_abraham",
+          "msgTo": "cameron_simon",
+          "msgToPost": "us_secretary_war",
+          "msgRole": "relay",
+          "msgRoute": "wire",
+          "msgSentDay": 112,
+          "msgArriveDay": 112,
+          "msgVia": [],
+          "msgPending": [
+            {
+              "hopPerson": "scott_winfield",
+              "hopPost": "us_general_in_chief",
+              "hopRole": "relay"
+            },
+            {
+              "hopPerson": "patterson_robert",
+              "hopPost": "us_dept_pennsylvania",
+              "hopRole": "addressee"
+            }
+          ],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "lower_valley",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 112
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 112,
+        "kind": "paper_receipt",
+        "key": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgOrigin": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "lincoln_abraham",
+          "msgTo": "cameron_simon",
+          "msgToPost": "us_secretary_war",
+          "msgRole": "relay",
+          "msgRoute": "wire",
+          "msgSentDay": 112,
+          "msgArriveDay": 112,
+          "msgVia": [],
+          "msgPending": [
+            {
+              "hopPerson": "scott_winfield",
+              "hopPost": "us_general_in_chief",
+              "hopRole": "relay"
+            },
+            {
+              "hopPerson": "patterson_robert",
+              "hopPost": "us_dept_pennsylvania",
+              "hopRole": "addressee"
+            }
+          ],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "lower_valley",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 112
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 112,
+        "kind": "paper_receipt",
+        "key": "m.112.cameron_simon.scott_winfield.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.112.cameron_simon.scott_winfield.order.us_dept_pennsylvania",
+          "msgOrigin": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "cameron_simon",
+          "msgTo": "scott_winfield",
+          "msgToPost": "us_general_in_chief",
+          "msgRole": "relay",
+          "msgRoute": "wire",
+          "msgSentDay": 112,
+          "msgArriveDay": 112,
+          "msgVia": [
+            "us_secretary_war"
+          ],
+          "msgPending": [
+            {
+              "hopPerson": "patterson_robert",
+              "hopPost": "us_dept_pennsylvania",
+              "hopRole": "addressee"
+            }
+          ],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "lower_valley",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 112
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 112,
+        "kind": "paper_receipt",
+        "key": "m.112.scott_winfield.patterson_robert.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.112.scott_winfield.patterson_robert.order.us_dept_pennsylvania",
+          "msgOrigin": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 112,
+          "msgArriveDay": 112,
+          "msgVia": [
+            "us_secretary_war",
+            "us_general_in_chief"
+          ],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "lower_valley",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 112
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "papers": [
+      {
+        "id": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+        "issuer": "scott_winfield",
+        "issuerPost": "us_general_in_chief",
+        "from": "us_dept_washington",
+        "to": "us_dept_pennsylvania",
+        "destination": "philadelphia",
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        "quantity": 1,
+        "mandate": "scott_army_command",
+        "modes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "voluntary": null,
+        "recipient": "mansfield_joseph_k_f",
+        "subordinateOrder": true
+      }
+    ],
+    "traffic": [
+      {
+        "day": 113,
+        "kind": "dispatch",
+        "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+        "value": {
+          "id": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "msgOrigin": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "msgFrom": "patterson_robert",
+          "msgTo": "scott_winfield",
+          "msgToPost": "us_general_in_chief",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 113,
+          "msgArriveDay": 113,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "patterson_robert",
+            "reportAuthorPost": "us_dept_pennsylvania",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "unknown_enemy_bootstrap",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 113,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+            "reportForceNeed": {
+              "needOrigin": "commander_choice",
+              "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+              "needPost": "us_dept_pennsylvania",
+              "needPerson": "patterson_robert",
+              "needTask": "hold",
+              "needScope": {
+                "kind": "cohort",
+                "arm": "infantry",
+                "minTermDays": 1
+              },
+              "needQuantity": 1,
+              "needShortfall": null,
+              "needEstablishment": 780,
+              "needReason": "unknown_enemy_bootstrap",
+              "needDestination": "philadelphia",
+              "needGoal": {
+                "goalObjective": "lower_valley",
+                "goalPosture": "hold",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+            }
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 113,
+        "kind": "paper_receipt",
+        "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+        "value": {
+          "id": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "msgOrigin": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "msgFrom": "patterson_robert",
+          "msgTo": "scott_winfield",
+          "msgToPost": "us_general_in_chief",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 113,
+          "msgArriveDay": 113,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "patterson_robert",
+            "reportAuthorPost": "us_dept_pennsylvania",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "unknown_enemy_bootstrap",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 113,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+            "reportForceNeed": {
+              "needOrigin": "commander_choice",
+              "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+              "needPost": "us_dept_pennsylvania",
+              "needPerson": "patterson_robert",
+              "needTask": "hold",
+              "needScope": {
+                "kind": "cohort",
+                "arm": "infantry",
+                "minTermDays": 1
+              },
+              "needQuantity": 1,
+              "needShortfall": null,
+              "needEstablishment": 780,
+              "needReason": "unknown_enemy_bootstrap",
+              "needDestination": "philadelphia",
+              "needGoal": {
+                "goalObjective": "lower_valley",
+                "goalPosture": "hold",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+            },
+            "reportForceRequest": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "dispatch",
+        "key": "m.114.8b6a593167cd2f36",
+        "value": {
+          "id": "m.114.8b6a593167cd2f36",
+          "msgOrigin": "m.114.8b6a593167cd2f36",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "scott_winfield",
+            "reportAuthorPost": "us_general_in_chief",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "philadelphia",
+                "claimValue": 0,
+                "claimToken": "force:order_subordinate",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "dispatch",
+        "key": "m.114.b70961860618b775",
+        "value": {
+          "id": "m.114.b70961860618b775",
+          "msgOrigin": "m.114.b70961860618b775",
+          "msgFrom": "scott_winfield",
+          "msgTo": "mansfield_joseph_k_f",
+          "msgToPost": "us_dept_washington",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_washington",
+            "orderBypass": false,
+            "orderIssuedDay": 114
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 114,
+        "kind": "dispatch",
+        "key": "m.114.0d80d32c60b54be7",
+        "value": {
+          "id": "m.114.0d80d32c60b54be7",
+          "msgOrigin": "m.114.0d80d32c60b54be7",
+          "msgFrom": "mansfield_joseph_k_f",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportQualification": {
+              "statedUndertaking": "original",
+              "statedReservations": [
+                {
+                  "clause": "detail",
+                  "subject": "organisation",
+                  "grounds": {
+                    "groundKind": "course_judgment",
+                    "groundReference": "retention_comparison_undetermined"
+                  },
+                  "treatment": "protest",
+                  "effect": "statement",
+                  "reservationProvenance": "planner_evaluation",
+                  "knowledge": "unknown"
+                }
+              ],
+              "statedGaps": []
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "force:subordinate_sending",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "paper_receipt",
+        "key": "m.114.8b6a593167cd2f36",
+        "value": {
+          "id": "m.114.8b6a593167cd2f36",
+          "msgOrigin": "m.114.8b6a593167cd2f36",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "scott_winfield",
+            "reportAuthorPost": "us_general_in_chief",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "philadelphia",
+                "claimValue": 0,
+                "claimToken": "force:order_subordinate",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "paper_receipt",
+        "key": "m.114.b70961860618b775",
+        "value": {
+          "id": "m.114.b70961860618b775",
+          "msgOrigin": "m.114.b70961860618b775",
+          "msgFrom": "scott_winfield",
+          "msgTo": "mansfield_joseph_k_f",
+          "msgToPost": "us_dept_washington",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_washington",
+            "orderBypass": false,
+            "orderIssuedDay": 114
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 114,
+        "kind": "paper_receipt",
+        "key": "m.114.0d80d32c60b54be7",
+        "value": {
+          "id": "m.114.0d80d32c60b54be7",
+          "msgOrigin": "m.114.0d80d32c60b54be7",
+          "msgFrom": "mansfield_joseph_k_f",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportQualification": {
+              "statedUndertaking": "original",
+              "statedReservations": [
+                {
+                  "clause": "detail",
+                  "subject": "organisation",
+                  "grounds": {
+                    "groundKind": "course_judgment",
+                    "groundReference": "retention_comparison_undetermined"
+                  },
+                  "treatment": "protest",
+                  "effect": "statement",
+                  "reservationProvenance": "planner_evaluation",
+                  "knowledge": "unknown"
+                }
+              ],
+              "statedGaps": []
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "force:subordinate_sending",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 119,
+        "kind": "dispatch",
+        "key": "m.119.191c212c8d74404c",
+        "value": {
+          "id": "m.119.191c212c8d74404c",
+          "msgOrigin": "m.119.191c212c8d74404c",
+          "msgFrom": "patterson_robert",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 119,
+          "msgArriveDay": 119,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "patterson_robert",
+            "reportAuthorPost": "us_dept_pennsylvania",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "arrived",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "force:subordinate_received",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 119,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 120,
+        "kind": "paper_receipt",
+        "key": "m.119.191c212c8d74404c",
+        "value": {
+          "id": "m.119.191c212c8d74404c",
+          "msgOrigin": "m.119.191c212c8d74404c",
+          "msgFrom": "patterson_robert",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 119,
+          "msgArriveDay": 119,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "patterson_robert",
+            "reportAuthorPost": "us_dept_pennsylvania",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "arrived",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "force:subordinate_received",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 119,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      }
+    ],
+    "receivedReports": [
+      {
+        "day": 113,
+        "kind": "received_force_report",
+        "key": "seat:scott_winfield:m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+        "value": {
+          "seat": "seat:scott_winfield",
+          "report": {
+            "id": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+            "knownReceivedDay": 113,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "patterson_robert",
+              "reportAuthorPost": "us_dept_pennsylvania",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-shortfall",
+                  "claimRegion": "philadelphia",
+                  "claimValue": 1,
+                  "claimToken": "unknown_enemy_bootstrap",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 113,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+              "reportForceNeed": {
+                "needOrigin": "commander_choice",
+                "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+                "needPost": "us_dept_pennsylvania",
+                "needPerson": "patterson_robert",
+                "needTask": "hold",
+                "needScope": {
+                  "kind": "cohort",
+                  "arm": "infantry",
+                  "minTermDays": 1
+                },
+                "needQuantity": 1,
+                "needShortfall": null,
+                "needEstablishment": 780,
+                "needReason": "unknown_enemy_bootstrap",
+                "needDestination": "philadelphia",
+                "needGoal": {
+                  "goalObjective": "lower_valley",
+                  "goalPosture": "hold",
+                  "goalRisk": 500,
+                  "goalDeadlineDays": 30,
+                  "goalRail": true,
+                  "goalRiver": false,
+                  "goalSea": false,
+                  "goalNeutral": false,
+                  "goalCommitted": [],
+                  "goalAwaitWord": false,
+                  "goalApproveAsDrafted": true
+                },
+                "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+              },
+              "reportForceRequest": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+            }
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "received_force_report",
+        "key": "seat:patterson_robert:m.114.0d80d32c60b54be7",
+        "value": {
+          "seat": "seat:patterson_robert",
+          "report": {
+            "id": "m.114.0d80d32c60b54be7",
+            "knownReceivedDay": 114,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportQualification": {
+                "statedUndertaking": "original",
+                "statedReservations": [
+                  {
+                    "clause": "detail",
+                    "subject": "organisation",
+                    "grounds": {
+                      "groundKind": "course_judgment",
+                      "groundReference": "retention_comparison_undetermined"
+                    },
+                    "treatment": "protest",
+                    "effect": "statement",
+                    "reservationProvenance": "planner_evaluation",
+                    "knowledge": "unknown"
+                  }
+                ],
+                "statedGaps": []
+              },
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "mansfield_joseph_k_f",
+              "reportAuthorPost": "us_dept_washington",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-selected",
+                  "claimRegion": "philadelphia",
+                  "claimValue": 1,
+                  "claimToken": "force:subordinate_sending",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 114,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+            }
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "received_force_report",
+        "key": "seat:patterson_robert:m.114.8b6a593167cd2f36",
+        "value": {
+          "seat": "seat:patterson_robert",
+          "report": {
+            "id": "m.114.8b6a593167cd2f36",
+            "knownReceivedDay": 114,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "scott_winfield",
+              "reportAuthorPost": "us_general_in_chief",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-selected",
+                  "claimRegion": "philadelphia",
+                  "claimValue": 0,
+                  "claimToken": "force:order_subordinate",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 114,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+            }
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "received_force_report",
+        "key": "seat:scott_winfield:m.114.c1e6f5f61b63d0d8",
+        "value": {
+          "seat": "seat:scott_winfield",
+          "report": {
+            "id": "m.114.c1e6f5f61b63d0d8",
+            "knownReceivedDay": 114,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "mansfield_joseph_k_f",
+              "reportAuthorPost": "us_dept_washington",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_washington",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-selected",
+                  "claimRegion": "philadelphia",
+                  "claimValue": 1,
+                  "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+                  "claimConfidence": 1000
+                },
+                {
+                  "claimKind": "allocation-shortfall",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 114,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.114.b70961860618b775"
+            }
+          }
+        }
+      },
+      {
+        "day": 114,
+        "kind": "received_force_report",
+        "key": "seat:scott_winfield:m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+        "value": {
+          "seat": "seat:scott_winfield",
+          "report": {
+            "id": "m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+            "knownReceivedDay": 114,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportLetter": {
+                "namespace": "force-choice",
+                "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+                "revision": 1
+              },
+              "reportQualification": {
+                "statedUndertaking": "original",
+                "statedReservations": [
+                  {
+                    "clause": "detail",
+                    "subject": "organisation",
+                    "grounds": {
+                      "groundKind": "course_judgment",
+                      "groundReference": "retention_comparison_undetermined"
+                    },
+                    "treatment": "protest",
+                    "effect": "statement",
+                    "reservationProvenance": "planner_evaluation",
+                    "knowledge": "unknown"
+                  }
+                ],
+                "statedGaps": []
+              },
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "mansfield_joseph_k_f",
+              "reportAuthorPost": "us_dept_washington",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_washington",
+              "reportClaims": [
+                {
+                  "claimKind": "order-obeyed",
+                  "claimRegion": "washington",
+                  "claimValue": 1,
+                  "claimToken": "comply",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 114,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.114.b70961860618b775"
+            }
+          }
+        }
+      },
+      {
+        "day": 120,
+        "kind": "received_force_report",
+        "key": "seat:patterson_robert:m.119.191c212c8d74404c",
+        "value": {
+          "seat": "seat:patterson_robert",
+          "report": {
+            "id": "m.119.191c212c8d74404c",
+            "knownReceivedDay": 120,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "patterson_robert",
+              "reportAuthorPost": "us_dept_pennsylvania",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "arrived",
+                  "claimRegion": "philadelphia",
+                  "claimValue": 1,
+                  "claimToken": "force:subordinate_received",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 119,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+            }
+          }
+        }
+      },
+      {
+        "day": 120,
+        "kind": "received_force_report",
+        "key": "seat:scott_winfield:m.119.77a60c282164da5a",
+        "value": {
+          "seat": "seat:scott_winfield",
+          "report": {
+            "id": "m.119.77a60c282164da5a",
+            "knownReceivedDay": 120,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "patterson_robert",
+              "reportAuthorPost": "us_dept_pennsylvania",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "arrived",
+                  "claimRegion": "philadelphia",
+                  "claimValue": 1,
+                  "claimToken": "allocation_received:force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 119,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.114.b70961860618b775"
+            }
+          }
+        }
+      }
+    ],
+    "senderResponses": [
+      {
+        "respOrder": "m.114.b70961860618b775",
+        "respPerson": "mansfield_joseph_k_f",
+        "respPost": "us_dept_washington",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 114,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 264,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respDeclaredReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ],
+    "allocationHistory": [
+      {
+        "day": 114,
+        "kind": "allocation_receipt",
+        "key": "m.114.b70961860618b775",
+        "value": {
+          "allocOrder": "m.114.b70961860618b775",
+          "allocPaper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+          "allocDay": 114,
+          "allocSender": "mansfield_joseph_k_f",
+          "allocStrongest": true,
+          "allocLots": [
+            "ct_4_infantry"
+          ],
+          "allocBlocks": [
+            "raised.st_gov_connecticut.d77"
+          ],
+          "allocReceived": [],
+          "allocShortfall": 0,
+          "allocReasons": [],
+          "allocStatus": "pending",
+          "allocRetention": [
+            null,
+            null
+          ],
+          "allocBlockLots": {
+            "raised.st_gov_connecticut.d77": [
+              "ct_4_infantry"
+            ]
+          }
+        }
+      },
+      {
+        "day": 119,
+        "kind": "allocation_receipt",
+        "key": "m.114.b70961860618b775",
+        "value": {
+          "allocOrder": "m.114.b70961860618b775",
+          "allocPaper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+          "allocDay": 114,
+          "allocSender": "mansfield_joseph_k_f",
+          "allocStrongest": true,
+          "allocLots": [
+            "ct_4_infantry"
+          ],
+          "allocBlocks": [
+            "raised.st_gov_connecticut.d77"
+          ],
+          "allocReceived": [
+            "raised.st_gov_connecticut.d77"
+          ],
+          "allocShortfall": 0,
+          "allocReasons": [],
+          "allocStatus": "received",
+          "allocRetention": [
+            null,
+            null
+          ],
+          "allocBlockLots": {
+            "raised.st_gov_connecticut.d77": [
+              "ct_4_infantry"
+            ]
+          }
+        }
+      }
+    ],
+    "journeyStates": [
+      {
+        "day": 114,
+        "kind": "join_state",
+        "key": "raised.st_gov_connecticut.d77",
+        "value": {
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          },
+          "location": {
+            "locRegion": "southern_maryland",
+            "locAboard": null,
+            "locSinceDay": 114,
+            "locMarch": null
+          },
+          "assignment": "us_dept_washington",
+          "lots": [
+            "ct_4_infantry"
+          ]
+        }
+      },
+      {
+        "day": 115,
+        "kind": "join_state",
+        "key": "raised.st_gov_connecticut.d77",
+        "value": {
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          },
+          "location": {
+            "locRegion": "baltimore_county",
+            "locAboard": null,
+            "locSinceDay": 115,
+            "locMarch": null
+          },
+          "assignment": "us_dept_washington",
+          "lots": [
+            "ct_4_infantry"
+          ]
+        }
+      },
+      {
+        "day": 116,
+        "kind": "join_state",
+        "key": "raised.st_gov_connecticut.d77",
+        "value": {
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          },
+          "location": {
+            "locRegion": "york_adams",
+            "locAboard": null,
+            "locSinceDay": 116,
+            "locMarch": null
+          },
+          "assignment": "us_dept_washington",
+          "lots": [
+            "ct_4_infantry"
+          ]
+        }
+      },
+      {
+        "day": 117,
+        "kind": "join_state",
+        "key": "raised.st_gov_connecticut.d77",
+        "value": {
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          },
+          "location": {
+            "locRegion": "harrisburg",
+            "locAboard": null,
+            "locSinceDay": 117,
+            "locMarch": null
+          },
+          "assignment": "us_dept_washington",
+          "lots": [
+            "ct_4_infantry"
+          ]
+        }
+      },
+      {
+        "day": 118,
+        "kind": "join_state",
+        "key": "raised.st_gov_connecticut.d77",
+        "value": {
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          },
+          "location": {
+            "locRegion": "southeast_pa",
+            "locAboard": null,
+            "locSinceDay": 118,
+            "locMarch": null
+          },
+          "assignment": "us_dept_washington",
+          "lots": [
+            "ct_4_infantry"
+          ]
+        }
+      }
+    ],
+    "steps": [
+      {
+        "day": 113,
+        "step": "request sent",
+        "actor": "patterson_robert",
+        "to": "us_general_in_chief",
+        "detail": {
+          "quantity": 1,
+          "scope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "reason": "unknown_enemy_bootstrap",
+          "shortfall": null
+        }
+      },
+      {
+        "day": 113,
+        "step": "request received",
+        "actor": "scott_winfield",
+        "detail": {
+          "role": "addressee"
+        }
+      },
+      {
+        "day": 113,
+        "step": "answer/result received",
+        "actor": "seat:scott_winfield",
+        "detail": {
+          "author": "patterson_robert",
+          "authoredDay": 113,
+          "report": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "answers": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "claims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      },
+      {
+        "day": 114,
+        "step": "sending order dispatched",
+        "actor": "scott_winfield",
+        "to": "us_dept_washington",
+        "detail": {
+          "paper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+          "role": "addressee"
+        }
+      },
+      {
+        "day": 114,
+        "step": "sending order received",
+        "actor": "mansfield_joseph_k_f",
+        "to": "us_dept_washington",
+        "detail": {
+          "paper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+          "role": "addressee"
+        }
+      },
+      {
+        "day": 114,
+        "step": "request answer",
+        "actor": "scott_winfield",
+        "to": "us_dept_washington",
+        "detail": {
+          "action": "order_subordinate",
+          "reasons": [
+            "compliance:comply",
+            "scope_unavailable",
+            "subordinate_holdings_reported"
+          ],
+          "retention": null
+        }
+      },
+      {
+        "day": 114,
+        "step": "sender compliance answer",
+        "actor": "mansfield_joseph_k_f",
+        "detail": {
+          "respOrder": "m.114.b70961860618b775",
+          "respPerson": "mansfield_joseph_k_f",
+          "respPost": "us_dept_washington",
+          "respRole": "addressee",
+          "respKind": "allocation",
+          "respDay": 114,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 264,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 64
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": [],
+          "respClauses": [
+            {
+              "clauseId": "course",
+              "clauseSubject": "course"
+            },
+            {
+              "clauseId": "destination",
+              "clauseSubject": "destination"
+            },
+            {
+              "clauseId": "detail",
+              "clauseSubject": "organisation"
+            }
+          ],
+          "respUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.114.b70961860618b775",
+            "clauses": [
+              "course",
+              "destination",
+              "detail"
+            ],
+            "undertakingRevision": "m.114.b70961860618b775"
+          },
+          "respDeclaredUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.114.b70961860618b775",
+            "clauses": [
+              "course",
+              "destination",
+              "detail"
+            ],
+            "undertakingRevision": "m.114.b70961860618b775"
+          },
+          "respReservations": [
+            {
+              "clause": "detail",
+              "subject": "organisation",
+              "grounds": {
+                "groundKind": "course_judgment",
+                "groundReference": "retention_comparison_undetermined"
+              },
+              "treatment": "protest",
+              "effect": "statement",
+              "reservationProvenance": "planner_evaluation",
+              "knowledge": "unknown"
+            }
+          ],
+          "respDeclaredReservations": [
+            {
+              "clause": "detail",
+              "subject": "organisation",
+              "grounds": {
+                "groundKind": "course_judgment",
+                "groundReference": "retention_comparison_undetermined"
+              },
+              "treatment": "protest",
+              "effect": "statement",
+              "reservationProvenance": "planner_evaluation",
+              "knowledge": "unknown"
+            }
+          ],
+          "respReservationGaps": [],
+          "respDeclaredReservationGaps": []
+        }
+      },
+      {
+        "day": 114,
+        "step": "lots selected",
+        "actor": "mansfield_joseph_k_f",
+        "detail": {
+          "lots": [
+            "ct_4_infantry"
+          ],
+          "retention": [
+            null,
+            null
+          ],
+          "order": "m.114.b70961860618b775"
+        }
+      },
+      {
+        "day": 114,
+        "step": "journey observed",
+        "actor": "us_dept_washington",
+        "detail": {
+          "block": "raised.st_gov_connecticut.d77",
+          "lots": [
+            "ct_4_infantry"
+          ],
+          "location": {
+            "locRegion": "southern_maryland",
+            "locAboard": null,
+            "locSinceDay": 114,
+            "locMarch": null
+          },
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          }
+        }
+      },
+      {
+        "day": 114,
+        "step": "answer/result received",
+        "actor": "seat:patterson_robert",
+        "detail": {
+          "author": "mansfield_joseph_k_f",
+          "authoredDay": 114,
+          "report": "m.114.0d80d32c60b54be7",
+          "answers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "claims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_sending",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          }
+        }
+      },
+      {
+        "day": 114,
+        "step": "answer/result received",
+        "actor": "seat:patterson_robert",
+        "detail": {
+          "author": "scott_winfield",
+          "authoredDay": 114,
+          "report": "m.114.8b6a593167cd2f36",
+          "answers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "claims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "philadelphia",
+              "claimValue": 0,
+              "claimToken": "force:order_subordinate",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      },
+      {
+        "day": 114,
+        "step": "answer/result received",
+        "actor": "seat:scott_winfield",
+        "detail": {
+          "author": "mansfield_joseph_k_f",
+          "authoredDay": 114,
+          "report": "m.114.c1e6f5f61b63d0d8",
+          "answers": "m.114.b70961860618b775",
+          "claims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": null,
+              "claimValue": 0,
+              "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      },
+      {
+        "day": 114,
+        "step": "answer/result received",
+        "actor": "seat:scott_winfield",
+        "detail": {
+          "author": "mansfield_joseph_k_f",
+          "authoredDay": 114,
+          "report": "m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+          "answers": "m.114.b70961860618b775",
+          "claims": [
+            {
+              "claimKind": "order-obeyed",
+              "claimRegion": "washington",
+              "claimValue": 1,
+              "claimToken": "comply",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          }
+        }
+      },
+      {
+        "day": 115,
+        "step": "journey observed",
+        "actor": "us_dept_washington",
+        "detail": {
+          "block": "raised.st_gov_connecticut.d77",
+          "lots": [
+            "ct_4_infantry"
+          ],
+          "location": {
+            "locRegion": "baltimore_county",
+            "locAboard": null,
+            "locSinceDay": 115,
+            "locMarch": null
+          },
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          }
+        }
+      },
+      {
+        "day": 116,
+        "step": "journey observed",
+        "actor": "us_dept_washington",
+        "detail": {
+          "block": "raised.st_gov_connecticut.d77",
+          "lots": [
+            "ct_4_infantry"
+          ],
+          "location": {
+            "locRegion": "york_adams",
+            "locAboard": null,
+            "locSinceDay": 116,
+            "locMarch": null
+          },
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          }
+        }
+      },
+      {
+        "day": 117,
+        "step": "journey observed",
+        "actor": "us_dept_washington",
+        "detail": {
+          "block": "raised.st_gov_connecticut.d77",
+          "lots": [
+            "ct_4_infantry"
+          ],
+          "location": {
+            "locRegion": "harrisburg",
+            "locAboard": null,
+            "locSinceDay": 117,
+            "locMarch": null
+          },
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          }
+        }
+      },
+      {
+        "day": 118,
+        "step": "journey observed",
+        "actor": "us_dept_washington",
+        "detail": {
+          "block": "raised.st_gov_connecticut.d77",
+          "lots": [
+            "ct_4_infantry"
+          ],
+          "location": {
+            "locRegion": "southeast_pa",
+            "locAboard": null,
+            "locSinceDay": 118,
+            "locMarch": null
+          },
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "philadelphia",
+            "joinSinceDay": 114,
+            "joinBlocked": null,
+            "joinAllocation": "m.114.b70961860618b775"
+          }
+        }
+      },
+      {
+        "day": 119,
+        "step": "physical receiver receipt",
+        "actor": "us_dept_pennsylvania",
+        "detail": {
+          "block": "raised.st_gov_connecticut.d77",
+          "lots": [
+            "ct_4_infantry"
+          ],
+          "order": "m.114.b70961860618b775"
+        }
+      },
+      {
+        "day": 120,
+        "step": "answer/result received",
+        "actor": "seat:patterson_robert",
+        "detail": {
+          "author": "patterson_robert",
+          "authoredDay": 119,
+          "report": "m.119.191c212c8d74404c",
+          "answers": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+          "claims": [
+            {
+              "claimKind": "arrived",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_received",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      },
+      {
+        "day": 120,
+        "step": "answer/result received",
+        "actor": "seat:scott_winfield",
+        "detail": {
+          "author": "patterson_robert",
+          "authoredDay": 119,
+          "report": "m.119.77a60c282164da5a",
+          "answers": "m.114.b70961860618b775",
+          "claims": [
+            {
+              "claimKind": "arrived",
+              "claimRegion": "philadelphia",
+              "claimValue": 1,
+              "claimToken": "allocation_received:force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      }
+    ],
+    "latestAllocations": [
+      {
+        "allocOrder": "m.114.b70961860618b775",
+        "allocPaper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+        "allocDay": 114,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [
+          "ct_4_infantry"
+        ],
+        "allocBlocks": [
+          "raised.st_gov_connecticut.d77"
+        ],
+        "allocReceived": [
+          "raised.st_gov_connecticut.d77"
+        ],
+        "allocShortfall": 0,
+        "allocReasons": [],
+        "allocStatus": "received",
+        "allocRetention": [
+          null,
+          null
+        ],
+        "allocBlockLots": {
+          "raised.st_gov_connecticut.d77": [
+            "ct_4_infantry"
+          ]
+        }
+      }
+    ],
+    "cycleThroughDay": 148,
+    "timeResolution": "simulation days; same-day steps preserve causal packet/ledger evidence without invented within-day times"
+  },
+  {
+    "request": {
+      "freqId": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+      "freqNeed": {
+        "needOrigin": "commander_choice",
+        "needMission": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "needPost": "us_dept_pennsylvania",
+        "needPerson": "patterson_robert",
+        "needTask": "hold",
+        "needScope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        "needQuantity": 1,
+        "needShortfall": null,
+        "needEstablishment": 780,
+        "needReason": "unknown_enemy_bootstrap",
+        "needDestination": "lower_valley",
+        "needGoal": {
+          "goalObjective": "harpers_ferry",
+          "goalPosture": "hold",
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "needEvidence": "91bc286d90347cb821850dca8f434ba1bc5ac2bbe59fe424fbcbffb2df4cde16"
+      },
+      "freqDay": 147,
+      "freqTo": "us_general_in_chief",
+      "freqAnswers": [
+        {
+          "fansDay": 148,
+          "fansPerson": "scott_winfield",
+          "fansPost": "us_general_in_chief",
+          "fansIssuer": "patterson_robert",
+          "fansAction": "order_subordinate",
+          "fansTo": "us_dept_washington",
+          "fansEvidence": "m.141.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+          "fansReasons": [
+            "compliance:comply",
+            "scope_unavailable",
+            "subordinate_holdings_reported"
+          ],
+          "fansScore": [
+            null,
+            null,
+            null
+          ],
+          "fansAssignment": [
+            "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+            "scott_winfield",
+            "us_general_in_chief",
+            "us_dept_washington",
+            "us_dept_pennsylvania",
+            "lower_valley",
+            {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            1,
+            "scott_army_command",
+            [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            null,
+            "mansfield_joseph_k_f"
+          ]
+        }
+      ]
+    },
+    "missionTraffic": [
+      {
+        "day": 140,
+        "kind": "dispatch",
+        "key": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgOrigin": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "lincoln_abraham",
+          "msgTo": "cameron_simon",
+          "msgToPost": "us_secretary_war",
+          "msgRole": "relay",
+          "msgRoute": "wire",
+          "msgSentDay": 140,
+          "msgArriveDay": 140,
+          "msgVia": [],
+          "msgPending": [
+            {
+              "hopPerson": "scott_winfield",
+              "hopPost": "us_general_in_chief",
+              "hopRole": "relay"
+            },
+            {
+              "hopPerson": "patterson_robert",
+              "hopPost": "us_dept_pennsylvania",
+              "hopRole": "addressee"
+            }
+          ],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "harpers_ferry",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 140
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 140,
+        "kind": "paper_receipt",
+        "key": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgOrigin": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "lincoln_abraham",
+          "msgTo": "cameron_simon",
+          "msgToPost": "us_secretary_war",
+          "msgRole": "relay",
+          "msgRoute": "wire",
+          "msgSentDay": 140,
+          "msgArriveDay": 140,
+          "msgVia": [],
+          "msgPending": [
+            {
+              "hopPerson": "scott_winfield",
+              "hopPost": "us_general_in_chief",
+              "hopRole": "relay"
+            },
+            {
+              "hopPerson": "patterson_robert",
+              "hopPost": "us_dept_pennsylvania",
+              "hopRole": "addressee"
+            }
+          ],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "harpers_ferry",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 140
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 140,
+        "kind": "paper_receipt",
+        "key": "m.140.cameron_simon.scott_winfield.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.140.cameron_simon.scott_winfield.order.us_dept_pennsylvania",
+          "msgOrigin": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "cameron_simon",
+          "msgTo": "scott_winfield",
+          "msgToPost": "us_general_in_chief",
+          "msgRole": "relay",
+          "msgRoute": "wire",
+          "msgSentDay": 140,
+          "msgArriveDay": 140,
+          "msgVia": [
+            "us_secretary_war"
+          ],
+          "msgPending": [
+            {
+              "hopPerson": "patterson_robert",
+              "hopPost": "us_dept_pennsylvania",
+              "hopRole": "addressee"
+            }
+          ],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "harpers_ferry",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 140
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 142,
+        "kind": "paper_receipt",
+        "key": "m.140.scott_winfield.patterson_robert.order.us_dept_pennsylvania",
+        "value": {
+          "id": "m.140.scott_winfield.patterson_robert.order.us_dept_pennsylvania",
+          "msgOrigin": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 140,
+          "msgArriveDay": 142,
+          "msgVia": [
+            "us_secretary_war",
+            "us_general_in_chief"
+          ],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "harpers_ferry",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 140
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "papers": [
+      {
+        "id": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+        "issuer": "scott_winfield",
+        "issuerPost": "us_general_in_chief",
+        "from": "us_dept_washington",
+        "to": "us_dept_pennsylvania",
+        "destination": "lower_valley",
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        "quantity": 1,
+        "mandate": "scott_army_command",
+        "modes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "voluntary": null,
+        "recipient": "mansfield_joseph_k_f",
+        "subordinateOrder": true
+      }
+    ],
+    "traffic": [
+      {
+        "day": 147,
+        "kind": "dispatch",
+        "key": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+        "value": {
+          "id": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+          "msgOrigin": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+          "msgFrom": "patterson_robert",
+          "msgTo": "scott_winfield",
+          "msgToPost": "us_general_in_chief",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 147,
+          "msgArriveDay": 147,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "patterson_robert",
+            "reportAuthorPost": "us_dept_pennsylvania",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "lower_valley",
+                "claimValue": 1,
+                "claimToken": "unknown_enemy_bootstrap",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 147,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+            "reportForceNeed": {
+              "needOrigin": "commander_choice",
+              "needMission": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+              "needPost": "us_dept_pennsylvania",
+              "needPerson": "patterson_robert",
+              "needTask": "hold",
+              "needScope": {
+                "kind": "cohort",
+                "arm": "infantry",
+                "minTermDays": 1
+              },
+              "needQuantity": 1,
+              "needShortfall": null,
+              "needEstablishment": 780,
+              "needReason": "unknown_enemy_bootstrap",
+              "needDestination": "lower_valley",
+              "needGoal": {
+                "goalObjective": "harpers_ferry",
+                "goalPosture": "hold",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "needEvidence": "91bc286d90347cb821850dca8f434ba1bc5ac2bbe59fe424fbcbffb2df4cde16"
+            }
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 147,
+        "kind": "paper_receipt",
+        "key": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+        "value": {
+          "id": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+          "msgOrigin": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+          "msgFrom": "patterson_robert",
+          "msgTo": "scott_winfield",
+          "msgToPost": "us_general_in_chief",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 147,
+          "msgArriveDay": 147,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "patterson_robert",
+            "reportAuthorPost": "us_dept_pennsylvania",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "lower_valley",
+                "claimValue": 1,
+                "claimToken": "unknown_enemy_bootstrap",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 147,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+            "reportForceNeed": {
+              "needOrigin": "commander_choice",
+              "needMission": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+              "needPost": "us_dept_pennsylvania",
+              "needPerson": "patterson_robert",
+              "needTask": "hold",
+              "needScope": {
+                "kind": "cohort",
+                "arm": "infantry",
+                "minTermDays": 1
+              },
+              "needQuantity": 1,
+              "needShortfall": null,
+              "needEstablishment": 780,
+              "needReason": "unknown_enemy_bootstrap",
+              "needDestination": "lower_valley",
+              "needGoal": {
+                "goalObjective": "harpers_ferry",
+                "goalPosture": "hold",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "needEvidence": "91bc286d90347cb821850dca8f434ba1bc5ac2bbe59fe424fbcbffb2df4cde16"
+            },
+            "reportForceRequest": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "dispatch",
+        "key": "m.148.a26f6c29c3c837d7",
+        "value": {
+          "id": "m.148.a26f6c29c3c837d7",
+          "msgOrigin": "m.148.a26f6c29c3c837d7",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 148,
+          "msgArriveDay": 148,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "scott_winfield",
+            "reportAuthorPost": "us_general_in_chief",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "lower_valley",
+                "claimValue": 0,
+                "claimToken": "force:order_subordinate",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 148,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "dispatch",
+        "key": "m.148.54182b6b77783884",
+        "value": {
+          "id": "m.148.54182b6b77783884",
+          "msgOrigin": "m.148.54182b6b77783884",
+          "msgFrom": "scott_winfield",
+          "msgTo": "mansfield_joseph_k_f",
+          "msgToPost": "us_dept_washington",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 148,
+          "msgArriveDay": 148,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_washington",
+            "orderBypass": false,
+            "orderIssuedDay": 148
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 148,
+        "kind": "dispatch",
+        "key": "m.148.5f5f65c31af0c60c",
+        "value": {
+          "id": "m.148.5f5f65c31af0c60c",
+          "msgOrigin": "m.148.5f5f65c31af0c60c",
+          "msgFrom": "mansfield_joseph_k_f",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 148,
+          "msgArriveDay": 148,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportQualification": {
+              "statedUndertaking": "original",
+              "statedReservations": [
+                {
+                  "clause": "detail",
+                  "subject": "organisation",
+                  "grounds": {
+                    "groundKind": "course_judgment",
+                    "groundReference": "retention_comparison_undetermined"
+                  },
+                  "treatment": "protest",
+                  "effect": "statement",
+                  "reservationProvenance": "planner_evaluation",
+                  "knowledge": "unknown"
+                }
+              ],
+              "statedGaps": []
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "lower_valley",
+                "claimValue": 1,
+                "claimToken": "force:subordinate_sending",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 148,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "paper_receipt",
+        "key": "m.148.54182b6b77783884",
+        "value": {
+          "id": "m.148.54182b6b77783884",
+          "msgOrigin": "m.148.54182b6b77783884",
+          "msgFrom": "scott_winfield",
+          "msgTo": "mansfield_joseph_k_f",
+          "msgToPost": "us_dept_washington",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 148,
+          "msgArriveDay": 148,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_washington",
+            "orderBypass": false,
+            "orderIssuedDay": 148
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 148,
+        "kind": "paper_receipt",
+        "key": "m.148.a26f6c29c3c837d7",
+        "value": {
+          "id": "m.148.a26f6c29c3c837d7",
+          "msgOrigin": "m.148.a26f6c29c3c837d7",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 148,
+          "msgArriveDay": 148,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "scott_winfield",
+            "reportAuthorPost": "us_general_in_chief",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "lower_valley",
+                "claimValue": 0,
+                "claimToken": "force:order_subordinate",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 148,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "paper_receipt",
+        "key": "m.148.5f5f65c31af0c60c",
+        "value": {
+          "id": "m.148.5f5f65c31af0c60c",
+          "msgOrigin": "m.148.5f5f65c31af0c60c",
+          "msgFrom": "mansfield_joseph_k_f",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 148,
+          "msgArriveDay": 148,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportQualification": {
+              "statedUndertaking": "original",
+              "statedReservations": [
+                {
+                  "clause": "detail",
+                  "subject": "organisation",
+                  "grounds": {
+                    "groundKind": "course_judgment",
+                    "groundReference": "retention_comparison_undetermined"
+                  },
+                  "treatment": "protest",
+                  "effect": "statement",
+                  "reservationProvenance": "planner_evaluation",
+                  "knowledge": "unknown"
+                }
+              ],
+              "statedGaps": []
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_pennsylvania",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "lower_valley",
+                "claimValue": 1,
+                "claimToken": "force:subordinate_sending",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 148,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+          },
+          "msgTruth": {
+            "truthTerms": [],
+            "truthTrimmed": []
+          }
+        }
+      }
+    ],
+    "receivedReports": [
+      {
+        "day": 147,
+        "kind": "received_force_report",
+        "key": "seat:scott_winfield:m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+        "value": {
+          "seat": "seat:scott_winfield",
+          "report": {
+            "id": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+            "knownReceivedDay": 147,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "patterson_robert",
+              "reportAuthorPost": "us_dept_pennsylvania",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-shortfall",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 1,
+                  "claimToken": "unknown_enemy_bootstrap",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 147,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+              "reportForceNeed": {
+                "needOrigin": "commander_choice",
+                "needMission": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+                "needPost": "us_dept_pennsylvania",
+                "needPerson": "patterson_robert",
+                "needTask": "hold",
+                "needScope": {
+                  "kind": "cohort",
+                  "arm": "infantry",
+                  "minTermDays": 1
+                },
+                "needQuantity": 1,
+                "needShortfall": null,
+                "needEstablishment": 780,
+                "needReason": "unknown_enemy_bootstrap",
+                "needDestination": "lower_valley",
+                "needGoal": {
+                  "goalObjective": "harpers_ferry",
+                  "goalPosture": "hold",
+                  "goalRisk": 500,
+                  "goalDeadlineDays": 30,
+                  "goalRail": true,
+                  "goalRiver": false,
+                  "goalSea": false,
+                  "goalNeutral": false,
+                  "goalCommitted": [],
+                  "goalAwaitWord": false,
+                  "goalApproveAsDrafted": true
+                },
+                "needEvidence": "91bc286d90347cb821850dca8f434ba1bc5ac2bbe59fe424fbcbffb2df4cde16"
+              },
+              "reportForceRequest": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+            }
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "received_force_report",
+        "key": "seat:patterson_robert:m.148.5f5f65c31af0c60c",
+        "value": {
+          "seat": "seat:patterson_robert",
+          "report": {
+            "id": "m.148.5f5f65c31af0c60c",
+            "knownReceivedDay": 148,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportQualification": {
+                "statedUndertaking": "original",
+                "statedReservations": [
+                  {
+                    "clause": "detail",
+                    "subject": "organisation",
+                    "grounds": {
+                      "groundKind": "course_judgment",
+                      "groundReference": "retention_comparison_undetermined"
+                    },
+                    "treatment": "protest",
+                    "effect": "statement",
+                    "reservationProvenance": "planner_evaluation",
+                    "knowledge": "unknown"
+                  }
+                ],
+                "statedGaps": []
+              },
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "mansfield_joseph_k_f",
+              "reportAuthorPost": "us_dept_washington",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-selected",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 1,
+                  "claimToken": "force:subordinate_sending",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 148,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+            }
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "received_force_report",
+        "key": "seat:patterson_robert:m.148.a26f6c29c3c837d7",
+        "value": {
+          "seat": "seat:patterson_robert",
+          "report": {
+            "id": "m.148.a26f6c29c3c837d7",
+            "knownReceivedDay": 148,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "scott_winfield",
+              "reportAuthorPost": "us_general_in_chief",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_pennsylvania",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-selected",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 0,
+                  "claimToken": "force:order_subordinate",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 148,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+            }
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "received_force_report",
+        "key": "seat:scott_winfield:m.148.740a28b6530bdfab",
+        "value": {
+          "seat": "seat:scott_winfield",
+          "report": {
+            "id": "m.148.740a28b6530bdfab",
+            "knownReceivedDay": 148,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "mansfield_joseph_k_f",
+              "reportAuthorPost": "us_dept_washington",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_washington",
+              "reportClaims": [
+                {
+                  "claimKind": "allocation-selected",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 1,
+                  "claimToken": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+                  "claimConfidence": 1000
+                },
+                {
+                  "claimKind": "allocation-shortfall",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 148,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.148.54182b6b77783884"
+            }
+          }
+        }
+      },
+      {
+        "day": 148,
+        "kind": "received_force_report",
+        "key": "seat:scott_winfield:m.148.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+        "value": {
+          "seat": "seat:scott_winfield",
+          "report": {
+            "id": "m.148.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+            "knownReceivedDay": 148,
+            "knownRoute": "wire",
+            "knownVia": [],
+            "knownBody": {
+              "reportLetter": {
+                "namespace": "force-choice",
+                "key": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+                "revision": 1
+              },
+              "reportQualification": {
+                "statedUndertaking": "original",
+                "statedReservations": [
+                  {
+                    "clause": "detail",
+                    "subject": "organisation",
+                    "grounds": {
+                      "groundKind": "course_judgment",
+                      "groundReference": "retention_comparison_undetermined"
+                    },
+                    "treatment": "protest",
+                    "effect": "statement",
+                    "reservationProvenance": "planner_evaluation",
+                    "knowledge": "unknown"
+                  }
+                ],
+                "statedGaps": []
+              },
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "mansfield_joseph_k_f",
+              "reportAuthorPost": "us_dept_washington",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "us_dept_washington",
+              "reportClaims": [
+                {
+                  "claimKind": "order-obeyed",
+                  "claimRegion": "washington",
+                  "claimValue": 1,
+                  "claimToken": "comply",
+                  "claimConfidence": 1000
+                }
+              ],
+              "reportDay": 148,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": "m.148.54182b6b77783884"
+            }
+          }
+        }
+      }
+    ],
+    "senderResponses": [
+      {
+        "respOrder": "m.148.54182b6b77783884",
+        "respPerson": "mansfield_joseph_k_f",
+        "respPost": "us_dept_washington",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 148,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 264,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.148.54182b6b77783884",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.148.54182b6b77783884"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.148.54182b6b77783884",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.148.54182b6b77783884"
+        },
+        "respReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respDeclaredReservations": [
+          {
+            "clause": "detail",
+            "subject": "organisation",
+            "grounds": {
+              "groundKind": "course_judgment",
+              "groundReference": "retention_comparison_undetermined"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "planner_evaluation",
+            "knowledge": "unknown"
+          }
+        ],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ],
+    "allocationHistory": [
+      {
+        "day": 148,
+        "kind": "allocation_receipt",
+        "key": "m.148.54182b6b77783884",
+        "value": {
+          "allocOrder": "m.148.54182b6b77783884",
+          "allocPaper": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+          "allocDay": 148,
+          "allocSender": "mansfield_joseph_k_f",
+          "allocStrongest": true,
+          "allocLots": [
+            "generated.raised.st_gov_massachusetts.d76.5"
+          ],
+          "allocBlocks": [
+            "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671"
+          ],
+          "allocReceived": [],
+          "allocShortfall": 0,
+          "allocReasons": [],
+          "allocStatus": "pending",
+          "allocRetention": [
+            null,
+            null
+          ],
+          "allocBlockLots": {
+            "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671": [
+              "generated.raised.st_gov_massachusetts.d76.5"
+            ]
+          }
+        }
+      }
+    ],
+    "journeyStates": [
+      {
+        "day": 148,
+        "kind": "join_state",
+        "key": "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671",
+        "value": {
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "lower_valley",
+            "joinSinceDay": 148,
+            "joinBlocked": null,
+            "joinAllocation": "m.148.54182b6b77783884"
+          },
+          "location": {
+            "locRegion": "southern_maryland",
+            "locAboard": null,
+            "locSinceDay": 148,
+            "locMarch": null
+          },
+          "assignment": "us_dept_washington",
+          "lots": [
+            "generated.raised.st_gov_massachusetts.d76.5"
+          ]
+        }
+      }
+    ],
+    "steps": [
+      {
+        "day": 147,
+        "step": "request sent",
+        "actor": "patterson_robert",
+        "to": "us_general_in_chief",
+        "detail": {
+          "quantity": 1,
+          "scope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "reason": "unknown_enemy_bootstrap",
+          "shortfall": null
+        }
+      },
+      {
+        "day": 147,
+        "step": "request received",
+        "actor": "scott_winfield",
+        "detail": {
+          "role": "addressee"
+        }
+      },
+      {
+        "day": 147,
+        "step": "answer/result received",
+        "actor": "seat:scott_winfield",
+        "detail": {
+          "author": "patterson_robert",
+          "authoredDay": 147,
+          "report": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+          "answers": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "claims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "lower_valley",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      },
+      {
+        "day": 148,
+        "step": "sending order dispatched",
+        "actor": "scott_winfield",
+        "to": "us_dept_washington",
+        "detail": {
+          "paper": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+          "role": "addressee"
+        }
+      },
+      {
+        "day": 148,
+        "step": "sending order received",
+        "actor": "mansfield_joseph_k_f",
+        "to": "us_dept_washington",
+        "detail": {
+          "paper": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+          "role": "addressee"
+        }
+      },
+      {
+        "day": 148,
+        "step": "request answer",
+        "actor": "scott_winfield",
+        "to": "us_dept_washington",
+        "detail": {
+          "action": "order_subordinate",
+          "reasons": [
+            "compliance:comply",
+            "scope_unavailable",
+            "subordinate_holdings_reported"
+          ],
+          "retention": null
+        }
+      },
+      {
+        "day": 148,
+        "step": "sender compliance answer",
+        "actor": "mansfield_joseph_k_f",
+        "detail": {
+          "respOrder": "m.148.54182b6b77783884",
+          "respPerson": "mansfield_joseph_k_f",
+          "respPost": "us_dept_washington",
+          "respRole": "addressee",
+          "respKind": "allocation",
+          "respDay": 148,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 264,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 64
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": [],
+          "respClauses": [
+            {
+              "clauseId": "course",
+              "clauseSubject": "course"
+            },
+            {
+              "clauseId": "destination",
+              "clauseSubject": "destination"
+            },
+            {
+              "clauseId": "detail",
+              "clauseSubject": "organisation"
+            }
+          ],
+          "respUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.148.54182b6b77783884",
+            "clauses": [
+              "course",
+              "destination",
+              "detail"
+            ],
+            "undertakingRevision": "m.148.54182b6b77783884"
+          },
+          "respDeclaredUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.148.54182b6b77783884",
+            "clauses": [
+              "course",
+              "destination",
+              "detail"
+            ],
+            "undertakingRevision": "m.148.54182b6b77783884"
+          },
+          "respReservations": [
+            {
+              "clause": "detail",
+              "subject": "organisation",
+              "grounds": {
+                "groundKind": "course_judgment",
+                "groundReference": "retention_comparison_undetermined"
+              },
+              "treatment": "protest",
+              "effect": "statement",
+              "reservationProvenance": "planner_evaluation",
+              "knowledge": "unknown"
+            }
+          ],
+          "respDeclaredReservations": [
+            {
+              "clause": "detail",
+              "subject": "organisation",
+              "grounds": {
+                "groundKind": "course_judgment",
+                "groundReference": "retention_comparison_undetermined"
+              },
+              "treatment": "protest",
+              "effect": "statement",
+              "reservationProvenance": "planner_evaluation",
+              "knowledge": "unknown"
+            }
+          ],
+          "respReservationGaps": [],
+          "respDeclaredReservationGaps": []
+        }
+      },
+      {
+        "day": 148,
+        "step": "lots selected",
+        "actor": "mansfield_joseph_k_f",
+        "detail": {
+          "lots": [
+            "generated.raised.st_gov_massachusetts.d76.5"
+          ],
+          "retention": [
+            null,
+            null
+          ],
+          "order": "m.148.54182b6b77783884"
+        }
+      },
+      {
+        "day": 148,
+        "step": "journey observed",
+        "actor": "us_dept_washington",
+        "detail": {
+          "block": "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671",
+          "lots": [
+            "generated.raised.st_gov_massachusetts.d76.5"
+          ],
+          "location": {
+            "locRegion": "southern_maryland",
+            "locAboard": null,
+            "locSinceDay": 148,
+            "locMarch": null
+          },
+          "join": {
+            "joinPost": "us_dept_washington",
+            "joinRegion": "lower_valley",
+            "joinSinceDay": 148,
+            "joinBlocked": null,
+            "joinAllocation": "m.148.54182b6b77783884"
+          }
+        }
+      },
+      {
+        "day": 148,
+        "step": "answer/result received",
+        "actor": "seat:patterson_robert",
+        "detail": {
+          "author": "mansfield_joseph_k_f",
+          "authoredDay": 148,
+          "report": "m.148.5f5f65c31af0c60c",
+          "answers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+          "claims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "lower_valley",
+              "claimValue": 1,
+              "claimToken": "force:subordinate_sending",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          }
+        }
+      },
+      {
+        "day": 148,
+        "step": "answer/result received",
+        "actor": "seat:patterson_robert",
+        "detail": {
+          "author": "scott_winfield",
+          "authoredDay": 148,
+          "report": "m.148.a26f6c29c3c837d7",
+          "answers": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+          "claims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "lower_valley",
+              "claimValue": 0,
+              "claimToken": "force:order_subordinate",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      },
+      {
+        "day": 148,
+        "step": "answer/result received",
+        "actor": "seat:scott_winfield",
+        "detail": {
+          "author": "mansfield_joseph_k_f",
+          "authoredDay": 148,
+          "report": "m.148.740a28b6530bdfab",
+          "answers": "m.148.54182b6b77783884",
+          "claims": [
+            {
+              "claimKind": "allocation-selected",
+              "claimRegion": "lower_valley",
+              "claimValue": 1,
+              "claimToken": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": null,
+              "claimValue": 0,
+              "claimToken": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": null
+        }
+      },
+      {
+        "day": 148,
+        "step": "answer/result received",
+        "actor": "seat:scott_winfield",
+        "detail": {
+          "author": "mansfield_joseph_k_f",
+          "authoredDay": 148,
+          "report": "m.148.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+          "answers": "m.148.54182b6b77783884",
+          "claims": [
+            {
+              "claimKind": "order-obeyed",
+              "claimRegion": "washington",
+              "claimValue": 1,
+              "claimToken": "comply",
+              "claimConfidence": 1000
+            }
+          ],
+          "qualification": {
+            "statedUndertaking": "original",
+            "statedReservations": [
+              {
+                "clause": "detail",
+                "subject": "organisation",
+                "grounds": {
+                  "groundKind": "course_judgment",
+                  "groundReference": "retention_comparison_undetermined"
+                },
+                "treatment": "protest",
+                "effect": "statement",
+                "reservationProvenance": "planner_evaluation",
+                "knowledge": "unknown"
+              }
+            ],
+            "statedGaps": []
+          }
+        }
+      }
+    ],
+    "latestAllocations": [
+      {
+        "allocOrder": "m.148.54182b6b77783884",
+        "allocPaper": "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+        "allocDay": 148,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [
+          "generated.raised.st_gov_massachusetts.d76.5"
+        ],
+        "allocBlocks": [
+          "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671"
+        ],
+        "allocReceived": [],
+        "allocShortfall": 0,
+        "allocReasons": [],
+        "allocStatus": "pending",
+        "allocRetention": [
+          null,
+          null
+        ],
+        "allocBlockLots": {
+          "raised.st_gov_massachusetts.d76.bundle.2.allocation.56e1c9e42e257671": [
+            "generated.raised.st_gov_massachusetts.d76.5"
+          ]
+        }
+      }
+    ],
+    "cycleThroughDay": 148,
+    "timeResolution": "simulation days; same-day steps preserve causal packet/ledger evidence without invented within-day times"
+  }
+]

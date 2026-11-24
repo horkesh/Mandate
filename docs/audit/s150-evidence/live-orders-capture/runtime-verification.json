@@ -1,0 +1,22 @@
+{
+  "captureExit": 0,
+  "captureCount": 1,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "b2a0c513512bf54397c0deafac50cfa5b919d16150c5a9c9c5c733fb93eb2eb4",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "pureDerivations": "four supply/draft snapshot witnesses and four menu route witnesses; all State hashes unchanged; no additional tick or seat campaign",
+  "allGateFirstCauses": 25,
+  "receivedReportEvents": 43,
+  "pinnedInputs": 18,
+  "pinnedInputsSourceByteIdentical": 17,
+  "typeOnlyRuntimeEquivalentInput": "packages/kernel/src/knowledge/force-need.ts",
+  "postHookTypeOnlyProof": "type-only-boundary-proof.json",
+  "captureStillValid": true
+}

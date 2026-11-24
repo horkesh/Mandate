@@ -1,0 +1,155 @@
+[
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p37.txt",
+    "printedPage": "37",
+    "work": "OR I-II",
+    "sha256": "e5ee980a97f029160a3451f51aaa56f7e145e032bccd165229c46425da46a43e",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 56,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p38.txt",
+    "printedPage": "38",
+    "work": "OR I-II",
+    "sha256": "4b4f2e1080dd464787e63675d578929faa609471e397d561eb15a80725561dc0",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 57,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p39.txt",
+    "printedPage": "39",
+    "work": "OR I-II",
+    "sha256": "40f24ab06fe3ea506c6ec62a213cb683af3f3a2b7573351d5a0ef876fffbb696",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 58,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p40.txt",
+    "printedPage": "40",
+    "work": "OR I-II",
+    "sha256": "682d9ea37a4c37900989413e3e900f085bf3672b91739721af8c3c50adae8905",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 59,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p41.txt",
+    "printedPage": "41",
+    "work": "OR I-II",
+    "sha256": "b588d66eec48da8f4ac26ac9902596060a0aed92c79ae2df7ed29590ca988f59",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 60,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p59.txt",
+    "printedPage": "59",
+    "work": "OR I-II",
+    "sha256": "e7c9ff887c1b120e07ca2b6cf7d11d4872bd75ed88096a1256329346559e9240",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 78,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p60.txt",
+    "printedPage": "60",
+    "work": "OR I-II",
+    "sha256": "b54dc603e4bd1231de6cd2eccdce536d66ec850d5bea308fb5060f129d6398d8",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 79,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p902.txt",
+    "printedPage": "902",
+    "work": "OR I-II",
+    "sha256": "53283ea5ea3306873f4def11a020833a53cb46e49dd1442527751bd5b899b077",
+    "readFrom": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+    "objectIndex": 921,
+    "containerSha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "method": "Selected primary printed-page OCR read; no fresh facsimile collation or whole-volume reading claimed",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p896.txt",
+    "printedPage": "896",
+    "work": "OR I-II",
+    "sha256": "e198be1cb8143aab65c29a04d87a09f3a97470104f60f40a0af1928027c38cf8",
+    "readFrom": "docs\\audit\\s147-evidence\\read\\OR-I-II-p896.txt",
+    "sourceSha256": "e198be1cb8143aab65c29a04d87a09f3a97470104f60f40a0af1928027c38cf8",
+    "method": "Read selected retained primary page OCR; no fresh facsimile collation",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p901.txt",
+    "printedPage": "901",
+    "work": "OR I-II",
+    "sha256": "13f89ad98a3c426def5ad81e154e27dffc9bd0aa9de05b0c23a90b0921dad64b",
+    "readFrom": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\read\\OR-I-II-p901.txt",
+    "sourceSha256": "13f89ad98a3c426def5ad81e154e27dffc9bd0aa9de05b0c23a90b0921dad64b",
+    "method": "Read selected retained primary page OCR; no fresh facsimile collation",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-II-p653.txt",
+    "printedPage": "653",
+    "work": "OR I-II",
+    "sha256": "ac1468e6be69560dbfc8d656264047a267df657320a33c502b1a19450abe05f6",
+    "readFrom": "docs\\audit\\s147-evidence\\read\\OR-I-II-p653.txt",
+    "sourceSha256": "ac1468e6be69560dbfc8d656264047a267df657320a33c502b1a19450abe05f6",
+    "method": "Read selected retained primary page OCR; no fresh facsimile collation",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-LI.1-p389.txt",
+    "printedPage": "389",
+    "work": "OR I-LI.1",
+    "sha256": "f955a0be375acfcfff77b16450c74219403b08b6efca667edce13f1c11e5dedb",
+    "readFrom": "docs\\audit\\s150-evidence\\read\\OR-I-LI.1-p389.txt",
+    "sourceSha256": "f955a0be375acfcfff77b16450c74219403b08b6efca667edce13f1c11e5dedb",
+    "method": "Read selected retained primary page OCR; no fresh facsimile collation",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "path": "docs/audit/s150-evidence/0135-read/OR-I-LI.1-p390.txt",
+    "printedPage": "390",
+    "work": "OR I-LI.1",
+    "sha256": "20f645aea76b65af09b2ef6b0c1db3564103e22a2bfcc26017ead6ad6c50f843",
+    "readFrom": "docs\\audit\\s150-evidence\\read\\OR-I-LI.1-p390.txt",
+    "sourceSha256": "20f645aea76b65af09b2ef6b0c1db3564103e22a2bfcc26017ead6ad6c50f843",
+    "method": "Read selected retained primary page OCR; no fresh facsimile collation",
+    "outputNormalization": "Trailing whitespace removed and line endings normalized to LF in the published reading copy; original retained source/container digests remain above."
+  },
+  {
+    "work": "General orders of the War Department, embracing1861–1863",
+    "printedPage": "61",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/General_orders_of_the_War_Department%2C_embracing_the_years_1861%2C_1862_%26_1863_-_adapted_specially_for_the_use_of_the_Army_and_Navy_of_the_United_States_-_chronologically_arranged_%28IA_generalordersofw00unit%29.pdf",
+    "method": "Primary PDF text read headlessly, GO26 paragraph at printed61; the same text is retained locally in OR I-II p.653. No PDF download/facsimile collation claimed.",
+    "reading": "GO26 establishes the geographical department and McDowell command with movable headquarters; no named regiment or instruction to send a body from Washington."
+  }
+]

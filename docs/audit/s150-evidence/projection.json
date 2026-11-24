@@ -1,0 +1,27 @@
+{
+  "baseline": "S147 retained projection",
+  "before": {
+    "hash": "b6db97782dea43fd41afeae321a5bd30296f6908ca7c08d1eca83b86031d05e0",
+    "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/allocation.ts:allocationAuthority (postStates); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/allocation.ts:allocationFulfilments (postStates); packages/kernel/src/seats/force-requests.ts:forceOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptionsAt (postStates); packages/kernel/src/seats/onward-assignments.ts:assignmentOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+  },
+  "replacedPermissionHash": "054f4648bcd7631b4d0a6631935bf16a65b6ace04791ffaa1799ed6d07934b7b",
+  "after": {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "6c5afba4d8f4fb4d1d965a1835c11f21ac9e44bcf0f5beb7d39803a80d0e9208",
+    "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/allocation.ts:allocationAuthority (postStates); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/allocation.ts:allocationFulfilments (postStates); packages/kernel/src/seats/force-requests.ts:forceOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptionsAt (postStates); packages/kernel/src/seats/onward-assignments.ts:assignmentOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+  },
+  "otherRootsUnchanged": 7,
+  "checks": [
+    "identical protected reader identities",
+    "all other permission hashes retained",
+    "fictional unreceived/other-seat/current-day/wrong-arm returns cannot select a governor",
+    "remote holdings perturbation cannot alter received governor selection",
+    "governor root, issuer mandate and physical receipt revalidated at execution"
+  ],
+  "followup": {
+    "change": "Ended own-operation draft no longer reserves alternatives; live axes still apply",
+    "readerIdentitiesUnchanged": true,
+    "evidence": "docs/audit/s150-evidence/trace/README.md"
+  }
+}

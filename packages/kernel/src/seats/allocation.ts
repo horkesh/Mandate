@@ -13,7 +13,8 @@ export function allocationFulfilments(world: SeatsWorld, state: State, person: P
   return Object.values(state.allocationRecords??{}).filter(r=>r.allocSender===person).flatMap(row=>{
     const paper=outstandingAllocation(world,state,row);
     if(!paper || state.postStates[paper.from]?.postHolder!==person)return [];
-    return allocationSelection(world,state,paper,day,row.allocStrongest,row.allocLots).lots.length?[{row,paper}]:[];
+    if(paper.subordinateOrder===true&&!row.allocReadyLots?.length)return [];
+    return allocationSelection(world,state,paper,day,row.allocStrongest,row.allocLots,paper.subordinateOrder===true,row.allocReadyLots).lots.length?[{row,paper}]:[];
   });
 }
 

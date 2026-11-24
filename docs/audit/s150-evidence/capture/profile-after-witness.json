@@ -1,0 +1,126 @@
+[
+  {
+    "day": 60,
+    "worldHash": "f6bb8d80fde9da8d21ec2a74917e870f38ce51c5abf2d4394c775121af39a5c0",
+    "inputSha256": "183b318df8c53f6c768e387850143635b3b73d91abd3b868f16e0108e0ed8e6d",
+    "inputHash": "c8a367c3630edd7cf012d97d3d6eb8a2a9a6d1fb1d7efba8f900f417fc07faec",
+    "outputHash": "e9886e8533e8568bf03fa243d3d50ffab3ca08e9bac962c49cb145cb135b7e92",
+    "log": [
+      {
+        "day": 61,
+        "seat": "seat:lincoln_abraham",
+        "command": {
+          "cmd": "allocation",
+          "paper": "s150_connecticut_three",
+          "route": "courier"
+        }
+      }
+    ]
+  },
+  {
+    "day": 120,
+    "worldHash": "f6bb8d80fde9da8d21ec2a74917e870f38ce51c5abf2d4394c775121af39a5c0",
+    "inputSha256": "41b05cefe4b7029e68b4caf4b05b0058f2174deba16e486a6449d9908da7425d",
+    "inputHash": "a9acbaf3907526bed11cc30b408da341716a32bb309f6fab4699ba6155ac844c",
+    "outputHash": "56b29ebe22ae7e9121a3f60d16d6a447cd4213a3a4da9881e218d9b79387cc7a",
+    "log": [
+      {
+        "day": 121,
+        "seat": "seat:davis_jefferson",
+        "command": {
+          "cmd": "inquire",
+          "to": "cs_cmd_fredericksburg",
+          "subject": null,
+          "route": "courier"
+        }
+      },
+      {
+        "day": 121,
+        "seat": "seat:davis_jefferson",
+        "command": {
+          "cmd": "inquire",
+          "to": "cs_cmd_harpers_ferry",
+          "subject": null,
+          "route": "wire"
+        }
+      }
+    ]
+  },
+  {
+    "day": 140,
+    "worldHash": "f6bb8d80fde9da8d21ec2a74917e870f38ce51c5abf2d4394c775121af39a5c0",
+    "inputSha256": "9c888c377d2a8f93685912726b02b3ea36546e8e8ecc8f2c486c85a2e11e4e78",
+    "inputHash": "46583b47360b467d6cbc08eee2276c2f2bb0ee55e7b9d73fc37a01a42dd88a86",
+    "outputHash": "2dbddaebb1d53db095ec7a07d34de4265af885a77e371687ad7d503972224620",
+    "log": [
+      {
+        "day": 141,
+        "seat": "seat:patterson_robert",
+        "command": {
+          "cmd": "choose",
+          "request": "local:us_dept_pennsylvania:141",
+          "option": "force-request:dc78125291462997eeec57fa"
+        }
+      }
+    ]
+  },
+  {
+    "day": 146,
+    "worldHash": "f6bb8d80fde9da8d21ec2a74917e870f38ce51c5abf2d4394c775121af39a5c0",
+    "inputSha256": "56287d43c0d3ff97c6096ec1e6e6eb72adbecb8a6bce92bc95d1d974706c2e98",
+    "inputHash": "562289b3c6db5f650a445d72b75c2bcf42feb3d0f462e58dfe5228094d54d9b0",
+    "outputHash": "edeb895f7b793c6a1224b26b4c3275d0de5004bf207f2afc43a38c0da01c02b8",
+    "log": [
+      {
+        "day": 147,
+        "seat": "seat:lincoln_abraham",
+        "command": {
+          "cmd": "call",
+          "to": "st_gov_new_york",
+          "regiments": 2,
+          "termDays": null,
+          "route": "wire",
+          "bypass": false,
+          "termsId": "us_jul30_cavalry_new_york",
+          "callId": "us_jul30_cavalry_new_york",
+          "arm": "cavalry"
+        }
+      },
+      {
+        "day": 147,
+        "seat": "seat:lincoln_abraham",
+        "command": {
+          "cmd": "call",
+          "to": "st_gov_new_york",
+          "regiments": 2,
+          "termDays": null,
+          "route": "wire",
+          "bypass": false,
+          "termsId": "us_jul30_artillery_new_york",
+          "callId": "us_jul30_artillery_new_york",
+          "arm": "artillery"
+        }
+      },
+      {
+        "day": 147,
+        "seat": "seat:lincoln_abraham",
+        "command": {
+          "cmd": "inquire",
+          "to": "us_dept_northeastern_virginia",
+          "subject": null,
+          "route": "courier"
+        }
+      },
+      {
+        "day": 147,
+        "seat": "seat:lincoln_abraham",
+        "command": {
+          "cmd": "inquire",
+          "to": "us_dept_pennsylvania",
+          "subject": null,
+          "route": "wire"
+        }
+      }
+    ]
+  }
+]

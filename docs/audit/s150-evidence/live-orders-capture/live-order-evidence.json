@@ -1,0 +1,629 @@
+{
+  "request": {
+    "freqId": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.87.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+      "needPost": "us_dept_northeastern_virginia",
+      "needPerson": "mcdowell_irvin",
+      "needTask": "hold",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "northern_virginia",
+      "needGoal": {
+        "goalObjective": "northern_virginia",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "82978ac8a0398f2f9b43212faedd061dea210d54e0c7536f83859d3e8afc83e0"
+    },
+    "freqDay": 90,
+    "freqTo": "us_general_in_chief",
+    "freqAnswers": [
+      {
+        "fansDay": 93,
+        "fansPerson": "scott_winfield",
+        "fansPost": "us_general_in_chief",
+        "fansIssuer": "mcdowell_irvin",
+        "fansAction": "order_subordinate",
+        "fansTo": "us_dept_washington",
+        "fansEvidence": "m.91.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+        "fansReasons": [
+          "compliance:comply",
+          "scope_unavailable",
+          "subordinate_holdings_reported"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ],
+        "fansAssignment": [
+          "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+          "scott_winfield",
+          "us_general_in_chief",
+          "us_dept_washington",
+          "us_dept_northeastern_virginia",
+          "northern_virginia",
+          {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          1,
+          "scott_army_command",
+          [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ],
+          null,
+          "mansfield_joseph_k_f"
+        ]
+      }
+    ]
+  },
+  "originalCompliance": [
+    {
+      "respOrder": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 34,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    {
+      "respOrder": "m.93.8d0391f7fabc9b1e",
+      "respPerson": "mansfield_joseph_k_f",
+      "respPost": "us_dept_washington",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 264,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+      },
+      "respReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  ],
+  "readinessEvents": [
+    {
+      "day": 96,
+      "kind": "allocation_receipt",
+      "key": "m.93.8d0391f7fabc9b1e",
+      "value": {
+        "allocOrder": "m.93.8d0391f7fabc9b1e",
+        "allocPaper": "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+        "allocDay": 93,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [],
+        "allocBlocks": [],
+        "allocReceived": [],
+        "allocShortfall": 1,
+        "allocReasons": [
+          "committed"
+        ],
+        "allocStatus": "deferred",
+        "allocWaitForLots": true,
+        "allocReadyLots": [
+          "mi_1_3m_infantry"
+        ]
+      }
+    }
+  ],
+  "selection": [
+    {
+      "day": 97,
+      "step": "lots selected",
+      "actor": "mansfield_joseph_k_f",
+      "detail": {
+        "lots": [
+          "mi_1_3m_infantry"
+        ],
+        "retention": [
+          null,
+          null
+        ],
+        "order": "m.93.8d0391f7fabc9b1e"
+      }
+    }
+  ],
+  "physicalReceipt": [
+    {
+      "day": 97,
+      "step": "physical receiver receipt",
+      "actor": "us_dept_northeastern_virginia",
+      "detail": {
+        "block": "raised.st_gov_michigan.d46",
+        "lots": [
+          "mi_1_3m_infantry"
+        ],
+        "order": "m.93.8d0391f7fabc9b1e"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "day": 92,
+      "kind": "operation_record",
+      "key": "op:us_dept_washington:92",
+      "value": {
+        "opPost": "us_dept_washington",
+        "opCommander": "mansfield_joseph_k_f",
+        "opOrder": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+        "opPlan": "direct:least_cost:washington",
+        "opMethod": "direct",
+        "opPosture": "hold",
+        "opObjective": "washington",
+        "opStartDay": 92,
+        "opEndDay": null,
+        "opOutcome": null,
+        "opAxes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_washington",
+            "oaxBlocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "oaxRoute": {
+              "routeFrom": "washington",
+              "routeTo": "washington",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0,
+              "routeUnknownThreat": true
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 2000,
+                "phaseRegion": "washington"
+              }
+            ],
+            "oaxObjective": "washington",
+            "oaxStage": "assemble",
+            "oaxSince": 92,
+            "oaxUntil": 94,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": null,
+            "oaxLog": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ],
+        "opRequests": [],
+        "opEncirclement": null,
+        "opEncirclementWhy": null
+      }
+    },
+    {
+      "day": 94,
+      "kind": "operation_record",
+      "key": "op:us_dept_washington:92",
+      "value": {
+        "opPost": "us_dept_washington",
+        "opCommander": "mansfield_joseph_k_f",
+        "opOrder": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+        "opPlan": "direct:least_cost:washington",
+        "opMethod": "direct",
+        "opPosture": "hold",
+        "opObjective": "washington",
+        "opStartDay": 92,
+        "opEndDay": null,
+        "opOutcome": null,
+        "opAxes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_washington",
+            "oaxBlocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "oaxRoute": {
+              "routeFrom": "washington",
+              "routeTo": "washington",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0,
+              "routeUnknownThreat": true
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 2000,
+                "phaseRegion": "washington"
+              }
+            ],
+            "oaxObjective": "washington",
+            "oaxStage": "march",
+            "oaxSince": 94,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": null,
+            "oaxLog": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ],
+        "opRequests": [],
+        "opEncirclement": null,
+        "opEncirclementWhy": null
+      }
+    },
+    {
+      "day": 95,
+      "kind": "operation_record",
+      "key": "op:us_dept_washington:92",
+      "value": {
+        "opPost": "us_dept_washington",
+        "opCommander": "mansfield_joseph_k_f",
+        "opOrder": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+        "opPlan": "direct:least_cost:washington",
+        "opMethod": "direct",
+        "opPosture": "hold",
+        "opObjective": "washington",
+        "opStartDay": 92,
+        "opEndDay": null,
+        "opOutcome": null,
+        "opAxes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_washington",
+            "oaxBlocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "oaxRoute": {
+              "routeFrom": "washington",
+              "routeTo": "washington",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0,
+              "routeUnknownThreat": true
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 2000,
+                "phaseRegion": "washington"
+              }
+            ],
+            "oaxObjective": "washington",
+            "oaxStage": "works",
+            "oaxSince": 95,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 95,
+            "oaxLog": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 95,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ],
+        "opRequests": [],
+        "opEncirclement": null,
+        "opEncirclementWhy": null
+      }
+    },
+    {
+      "day": 96,
+      "kind": "operation_record",
+      "key": "op:us_dept_washington:92",
+      "value": {
+        "opPost": "us_dept_washington",
+        "opCommander": "mansfield_joseph_k_f",
+        "opOrder": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+        "opPlan": "direct:least_cost:washington",
+        "opMethod": "direct",
+        "opPosture": "hold",
+        "opObjective": "washington",
+        "opStartDay": 92,
+        "opEndDay": 96,
+        "opOutcome": "objective_reached",
+        "opAxes": [
+          {
+            "oaxName": "main",
+            "oaxPost": "us_dept_washington",
+            "oaxBlocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "oaxRoute": {
+              "routeFrom": "washington",
+              "routeTo": "washington",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0,
+              "routeUnknownThreat": true
+            },
+            "oaxPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 2000,
+                "phaseRegion": "washington"
+              }
+            ],
+            "oaxObjective": "washington",
+            "oaxStage": "end",
+            "oaxSince": 96,
+            "oaxUntil": null,
+            "oaxRepulses": 0,
+            "oaxPursuit": null,
+            "oaxSteps": [],
+            "oaxArrived": 95,
+            "oaxLog": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 95,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 96,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ],
+        "opRequests": [],
+        "opEncirclement": null,
+        "opEncirclementWhy": null
+      }
+    }
+  ],
+  "journeyLimit": "The lot is selected and physically received within day97; no intermediate end-of-day join remains. Operation92 logs Washington through release96; next receiving operation99 begins at northern_virginia. The public observer cannot assign a within-day leg timestamp.",
+  "noDailyRetry": "One original request90 and original sending order93; row stays stable until eligible material release96 and the single logged selection97; original compliance day93 preserved."
+}

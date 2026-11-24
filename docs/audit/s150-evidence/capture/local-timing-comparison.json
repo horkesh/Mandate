@@ -1,0 +1,125 @@
+{
+  "platform": "Windows",
+  "baselineRevision": "de3a6601b8eb0dacc1485d5fd3f65fab53c739b3",
+  "sequentialSingleLaneReadings": true,
+  "machineIsolationEstablished": false,
+  "bindingLinuxBudgetEstablished": false,
+  "limitation": "Other lanes Vitest jobs and active node CPU were observed immediately after the final reading; isolation was not monitored before earlier readings. No end-to-end timing improvement or Linux budget pass can be claimed. A quiet window is requested; no full benchmark retry performed.",
+  "readings": [
+    {
+      "runtime": {
+        "label": "july-de3a6601",
+        "cwd": "C:\\Pyrrhic\\sprint-allocate\\runs\\s150\\july-baseline",
+        "node": "v22.23.2",
+        "platform": "win32",
+        "workspacePackages": {
+          "kernel": "C:\\Pyrrhic\\sprint-allocate\\runs\\s150\\july-baseline\\packages\\kernel",
+          "pack-format": "C:\\Pyrrhic\\sprint-allocate\\runs\\s150\\july-baseline\\packages\\pack-format",
+          "rule-seats": "C:\\Pyrrhic\\sprint-allocate\\runs\\s150\\july-baseline\\packages\\rule-seats"
+        }
+      },
+      "readings": [
+        {
+          "atWar": true,
+          "finalHash": "965df1daba977d9c360a93f97376055ae01bd3a4e452f05a6fabeab4fa8a9d71",
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 43.49549999999908,
+            "p95": 81.48359999999957,
+            "max": 111.83230000000003
+          }
+        },
+        {
+          "atWar": false,
+          "finalHash": "d0d2b5f8a1b1e494371800bc424ac1394f21ef1f31d6d11a374b3cba939415cc",
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 38.80870000000141,
+            "p95": 69.55329999999958,
+            "max": 97.23890000000029
+          }
+        }
+      ]
+    },
+    {
+      "runtime": {
+        "label": "s150",
+        "cwd": "C:\\Pyrrhic\\sprint-allocate",
+        "node": "v22.23.2",
+        "platform": "win32",
+        "workspacePackages": {
+          "kernel": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel",
+          "pack-format": "C:\\Pyrrhic\\sprint-allocate\\packages\\pack-format",
+          "rule-seats": "C:\\Pyrrhic\\sprint-allocate\\packages\\rule-seats"
+        }
+      },
+      "readings": [
+        {
+          "atWar": true,
+          "finalHash": "e5cf28af6707e75d9235593df82f2afd5cbccb11b0b40b5819873770a25a3326",
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 129.46279999999933,
+            "p95": 311.0440000000017,
+            "max": 410.0745999999999
+          }
+        },
+        {
+          "atWar": false,
+          "finalHash": "619dbdeb2e5fb7df95949fb2c04c02142c0f31d26527fae1d36ecfdbdc92b26c",
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 114.92339999999967,
+            "p95": 269.5851000000039,
+            "max": 332.80859999999666
+          }
+        }
+      ]
+    },
+    {
+      "runtime": {
+        "label": "s150-optimised",
+        "cwd": "C:\\Pyrrhic\\sprint-allocate",
+        "node": "v22.23.2",
+        "platform": "win32",
+        "workspacePackages": {
+          "kernel": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel",
+          "pack-format": "C:\\Pyrrhic\\sprint-allocate\\packages\\pack-format",
+          "rule-seats": "C:\\Pyrrhic\\sprint-allocate\\packages\\rule-seats"
+        }
+      },
+      "readings": [
+        {
+          "atWar": true,
+          "finalHash": "e5cf28af6707e75d9235593df82f2afd5cbccb11b0b40b5819873770a25a3326",
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 194.78689999999915,
+            "p95": 389.3058999999994,
+            "max": 461.883600000001
+          }
+        },
+        {
+          "atWar": false,
+          "finalHash": "619dbdeb2e5fb7df95949fb2c04c02142c0f31d26527fae1d36ecfdbdc92b26c",
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 170.33039999999892,
+            "p95": 392.3258999999962,
+            "max": 476.70650000000023
+          }
+        }
+      ]
+    }
+  ],
+  "clockNeutrality": {
+    "war": "entire summaries equal after removing clock values",
+    "history": "entire summaries equal after removing clock values"
+  }
+}

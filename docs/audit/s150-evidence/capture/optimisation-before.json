@@ -1,0 +1,13 @@
+{
+  "stage": "before",
+  "cwd": "C:\\Pyrrhic\\sprint-allocate\\runs\\s150\\pre-opt-runtime",
+  "worldHash": "f6bb8d80fde9da8d21ec2a74917e870f38ce51c5abf2d4394c775121af39a5c0",
+  "days": 88,
+  "firstDay": 61,
+  "lastDay": 148,
+  "rejections": 0,
+  "finalHash": "619dbdeb2e5fb7df95949fb2c04c02142c0f31d26527fae1d36ecfdbdc92b26c",
+  "allDailyHashesMatch": true,
+  "freeze": true,
+  "deepChecks": true
+}

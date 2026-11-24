@@ -1,0 +1,5 @@
+{
+  "reusedUnaffected": "../0134-capture/hash-neutral-fast-path.json",
+  "scope": "Accepted unlimited-mandate fast path unchanged; no new timing/optimisation campaign. Current hash changes are intentional behavior changes, not hash-neutral to0135.",
+  "hostedLinux": "Unverified; no local timing evidence, other project process left alone"
+}

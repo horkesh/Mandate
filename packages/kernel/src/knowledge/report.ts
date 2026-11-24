@@ -1,3 +1,4 @@
+import type { ForceNeed, ForceRequestModeAuthority } from './force-need.ts';
 /**
  * Reports are typed data (decision 0032, amended by 0040): an author, a
  * subject, claims with the author's confidence, a stamp, and (as the message
@@ -153,6 +154,15 @@ export const CLAIM_KINDS = [
 export type ClaimKind = (typeof CLAIM_KINDS)[number];
 export type AppointmentRefusal = 'post_held' | 'person_holds_post' | 'other_side' | 'not_serving' | 'undeclared_post';
 
+/** Reported service terms, as held and available on the governor's report day. */
+export interface ReportedAvailableLot {
+  readonly availRegiment: string | null;
+  readonly availCall: string | null;
+  readonly availArm: string;
+  readonly availTermDays: number | 'indefinite' | null;
+  readonly availEndsDay: number | null;
+}
+
 /** One typed claim. `claimToken` is a closed word from the claim kind's vocabulary (e.g. `holding`), never prose. */
 export interface ReportClaim {
   readonly claimStrength?: StrengthEstimate;
@@ -218,6 +228,11 @@ export interface DiscretionReport {
 
 /** What a report says. Shared by a message in transit and the report as a seat holds it. */
 export interface ReportBody {
+  readonly reportForceNeed?: ForceNeed;
+  readonly reportForceRequest?: MessageId;
+  readonly reportForceModeAuthority?: ForceRequestModeAuthority | null;
+  readonly reportGovernorLots?: readonly ReportedAvailableLot[];
+  readonly reportCommandLots?: readonly ReportedAvailableLot[];
   readonly reportCourseEvidence?: readonly CourseEvidence[];
   /** The requisition answered by a named concentration's prerequisite report. */
   readonly reportRequisition?: string;
@@ -258,7 +273,7 @@ export interface ReportQualification {
   readonly statedGaps: readonly ReservationGap[];
 }
 
-export function reportQualificationOf(response: DirectiveResponse): Pick<ReportBody, 'reportQualification'> {
+export function reportQualificationOf(response: Pick<DirectiveResponse,'declaredUndertaking'|'declaredReservations'|'declaredReservationGaps'>): Pick<ReportBody, 'reportQualification'> {
   if (response.declaredReservations.length === 0 && response.declaredReservationGaps.length === 0) return {};
   return { reportQualification: {
     statedUndertaking: response.declaredUndertaking?.undertakingKind ?? null,
@@ -298,6 +313,13 @@ export function reportProblems(body: ReportBody): string[] {
   }
   if (body.reportCourseEvidence !== undefined && (body.reportSubjectKind !== 'situation' || body.reportCourseEvidence.length === 0 ||
     body.reportCourseEvidence.some(e => !validCourseEvidence(e)) || new Set(body.reportCourseEvidence.map(e => `${e.evidenceCourse}|${e.evidenceResource}`)).size !== body.reportCourseEvidence.length)) problems.push('course evidence needs a situation and distinct nonnegative resource accounts; unknown is null');
+  const modeAuthority = body.reportForceModeAuthority;
+  if (modeAuthority !== undefined && (body.reportType !== 'wire-dispatch' || body.reportAuthorPost === null ||
+    body.reportForceNeed === undefined || body.reportAnswers !== body.reportForceRequest ||
+    modeAuthority !== null && (!isWellFormedId(modeAuthority[0]) || !modeAuthority[1].length ||
+      new Set(modeAuthority[1]).size !== modeAuthority[1].length || modeAuthority[1].some(m => !['land','rail','river','sea'].includes(m))))) {
+    problems.push('force request modes require a correlated office dispatch and a mandate receipt with distinct modes');
+  }
   for (const c of body.reportClaims) {
     if (c.claimStrength !== undefined) {
       problems.push(...strengthProblems(c.claimStrength));

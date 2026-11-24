@@ -1,0 +1,730 @@
+{
+  "authority": "CODEX 2026-11-24 S141 corrected capture is authorised; positive moved bands recentre under standing around(observed) rule",
+  "records": [
+    {
+      "key": "union-1861, war by decision, 148 days/combat.battle_day",
+      "before": {
+        "minFires": 3,
+        "maxFires": 14
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. combat.battle_day firings 8->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 2,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. combat.battle_day firings 8->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#combat.battle_day"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/combat.occupation",
+      "before": {
+        "minFires": 157,
+        "maxFires": 628
+      },
+      "after": {
+        "minFires": 140,
+        "maxFires": 560,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. combat.occupation firings 408->280. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 280,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. combat.occupation firings 408->280. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#combat.occupation"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/control.changed",
+      "before": {
+        "minFires": 160,
+        "maxFires": 640
+      },
+      "after": {
+        "minFires": 141,
+        "maxFires": 564,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. control.changed firings 414->282. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 282,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. control.changed firings 414->282. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#control.changed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/control.threshold_crossed",
+      "before": {
+        "minFires": 19,
+        "maxFires": 78
+      },
+      "after": {
+        "minFires": 10,
+        "maxFires": 42,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. control.threshold_crossed firings 49->21. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 21,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. control.threshold_crossed firings 49->21. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#control.threshold_crossed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/forces.stores_fell",
+      "before": {
+        "minFires": 1444,
+        "maxFires": 5776,
+        "why": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted."
+      },
+      "after": {
+        "minFires": 233,
+        "maxFires": 932,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_fell firings 2627->466. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 466,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_fell firings 2627->466. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#forces.stores_fell"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/forces.stores_low",
+      "before": {
+        "minFires": 51,
+        "maxFires": 206
+      },
+      "after": {
+        "minFires": 5,
+        "maxFires": 22,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_low firings 98->11. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 11,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_low firings 98->11. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#forces.stores_low"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/forces.stores_refilled",
+      "before": {
+        "minFires": 1200,
+        "maxFires": 4800
+      },
+      "after": {
+        "minFires": 1045,
+        "maxFires": 4182,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_refilled firings 2974->2091. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 2091,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_refilled firings 2974->2091. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#forces.stores_refilled"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/knowledge.pruned_age",
+      "before": {
+        "minFires": 53,
+        "maxFires": 214
+      },
+      "after": {
+        "minFires": 51,
+        "maxFires": 206,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. knowledge.pruned_age firings 107->103. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 103,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. knowledge.pruned_age firings 107->103. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#knowledge.pruned_age"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/map.pocket_closed",
+      "before": {
+        "minFires": 1,
+        "maxFires": 6,
+        "why": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes."
+      },
+      "after": {
+        "minFires": 2,
+        "maxFires": 8,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. map.pocket_closed firings 6->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 4,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. map.pocket_closed firings 6->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#map.pocket_closed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/map.recomputed",
+      "before": {
+        "minFires": 26,
+        "maxFires": 104
+      },
+      "after": {
+        "minFires": 18,
+        "maxFires": 74,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. map.recomputed firings 55->37. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 37,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. map.recomputed firings 55->37. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#map.recomputed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/messages.courier_delay",
+      "before": {
+        "minFires": 49,
+        "maxFires": 198,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires99; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 78,
+        "maxFires": 312,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.courier_delay firings 161->156. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 156,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.courier_delay firings 161->156. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#messages.courier_delay"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/messages.delivered",
+      "before": {
+        "minFires": 7221,
+        "maxFires": 28886,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires14443; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 8111,
+        "maxFires": 32446,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.delivered firings 14879->16223. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 16223,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.delivered firings 14879->16223. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#messages.delivered"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/messages.mail_delay",
+      "before": {
+        "minFires": 1428,
+        "maxFires": 5712
+      },
+      "after": {
+        "minFires": 1412,
+        "maxFires": 5650,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.mail_delay firings 2869->2825. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 2825,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.mail_delay firings 2869->2825. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#messages.mail_delay"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/messages.sent",
+      "before": {
+        "minFires": 7607,
+        "maxFires": 30428,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires15214; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 8477,
+        "maxFires": 33910,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.sent firings 15657->16955. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 16955,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.sent firings 15657->16955. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#messages.sent"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/messages.special_messenger",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.special_messenger firings 0->1. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 1,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.special_messenger firings 0->1. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#messages.special_messenger"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/movement.arrived",
+      "before": {
+        "minFires": 319,
+        "maxFires": 1276
+      },
+      "after": {
+        "minFires": 21,
+        "maxFires": 86,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.arrived firings 704->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 43,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.arrived firings 704->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#movement.arrived"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/movement.joined",
+      "before": {
+        "minFires": 32,
+        "maxFires": 128
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.joined firings 65->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 2,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.joined firings 65->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#movement.joined"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/movement.leg_started",
+      "before": {
+        "minFires": 155,
+        "maxFires": 620
+      },
+      "after": {
+        "minFires": 21,
+        "maxFires": 86,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.leg_started firings 387->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 43,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.leg_started firings 387->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#movement.leg_started"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.ended",
+      "before": {
+        "minFires": 4,
+        "maxFires": 18,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.ended."
+      },
+      "after": {
+        "minFires": 2,
+        "maxFires": 10,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.ended firings 9->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 5,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.ended firings 9->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#operations.ended"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.opened",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12,
+        "why": "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed."
+      },
+      "after": {
+        "minFires": 2,
+        "maxFires": 10,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.opened firings 10->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 5,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.opened firings 10->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#operations.opened"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.stage",
+      "before": {
+        "minFires": 12,
+        "maxFires": 48,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires24; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 12,
+        "maxFires": 50,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.stage firings 38->25. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 25,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.stage firings 38->25. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#operations.stage"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.works",
+      "before": {
+        "minFires": 7,
+        "maxFires": 30,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.works."
+      },
+      "after": {
+        "minFires": 2,
+        "maxFires": 8,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.works firings 15->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 4,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.works firings 15->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#operations.works"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/orders.obeyed",
+      "before": {
+        "minFires": 4,
+        "maxFires": 18,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. orders.obeyed firings 13->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 8,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. orders.obeyed firings 13->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#orders.obeyed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/orders.relayed",
+      "before": {
+        "minFires": 10,
+        "maxFires": 40
+      },
+      "after": {
+        "minFires": 8,
+        "maxFires": 34,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. orders.relayed firings 20->17. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 17,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. orders.relayed firings 20->17. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#orders.relayed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/orders.responses_pruned",
+      "before": {
+        "minFires": 13,
+        "maxFires": 54
+      },
+      "after": {
+        "minFires": 9,
+        "maxFires": 38,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. orders.responses_pruned firings 30->19. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 19,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. orders.responses_pruned firings 30->19. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#orders.responses_pruned"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.candidates",
+      "before": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.candidates firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 8,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.candidates firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#planner.candidates"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.searches",
+      "before": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.searches firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 8,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. planner.searches firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#planner.searches"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.approved",
+      "before": {
+        "minFires": 0,
+        "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+      },
+      "after": {
+        "minFires": 2,
+        "maxFires": 8,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.approved firings 5->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 4,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.approved firings 5->4. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#plans.approved"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.chosen",
+      "before": {
+        "minFires": 7,
+        "maxFires": 28,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.chosen."
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.chosen firings 14->7. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 7,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.chosen firings 14->7. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#plans.chosen"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.drafted",
+      "before": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.drafted firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 8,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.drafted firings 12->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#plans.drafted"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.goal_reached",
+      "before": {
+        "minFires": 1,
+        "maxFires": 6,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires3; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 2,
+        "maxFires": 10,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.goal_reached firings 6->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 5,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.goal_reached firings 6->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#plans.goal_reached"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.goal_set",
+      "before": {
+        "minFires": 4,
+        "maxFires": 18,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.goal_set firings 13->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 8,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.goal_set firings 13->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#plans.goal_set"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.submitted",
+      "before": {
+        "minFires": 0,
+        "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+      },
+      "after": {
+        "minFires": 2,
+        "maxFires": 10,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.submitted firings 7->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 5,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.submitted firings 7->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#plans.submitted"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.went_ahead",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.went_ahead firings 7->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 2,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. plans.went_ahead firings 7->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#plans.went_ahead"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/politics.support",
+      "before": {
+        "minFires": 42,
+        "maxFires": 170
+      },
+      "after": {
+        "minFires": 24,
+        "maxFires": 98,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. politics.support firings 103->49. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 49,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. politics.support firings 103->49. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#politics.support"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/regions.reached_lines",
+      "before": {
+        "minFires": 137,
+        "maxFires": 548
+      },
+      "after": {
+        "minFires": 130,
+        "maxFires": 520,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. regions.reached_lines firings 271->260. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 260,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. regions.reached_lines firings 271->260. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#regions.reached_lines"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/regions.self_emancipation",
+      "before": {
+        "minFires": 1548,
+        "maxFires": 6194
+      },
+      "after": {
+        "minFires": 1534,
+        "maxFires": 6136,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. regions.self_emancipation firings 3081->3068. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 3068,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. regions.self_emancipation firings 3081->3068. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#regions.self_emancipation"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/reports.battle_dispatch",
+      "before": {
+        "minFires": 21,
+        "maxFires": 84
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.battle_dispatch firings 50->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 2,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.battle_dispatch firings 50->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#reports.battle_dispatch"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/reports.casualty_return",
+      "before": {
+        "minFires": 10,
+        "maxFires": 40
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.casualty_return firings 24->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 8,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.casualty_return firings 24->8. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#reports.casualty_return"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/reports.governor_wire",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.governor_wire firings 7->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 2,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. reports.governor_wire firings 7->2. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#reports.governor_wire"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/seats.attention_spent",
+      "before": {
+        "minFires": 76,
+        "maxFires": 306
+      },
+      "after": {
+        "minFires": 50,
+        "maxFires": 200,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. seats.attention_spent firings 181->100. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 100,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. seats.attention_spent firings 181->100. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#seats.attention_spent"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/seats.choices",
+      "before": {
+        "minFires": 12,
+        "maxFires": 50,
+        "why": "S134 merge [I]: combined received demonstration letters, advice and command readiness change the recorded path through existing owners. Retained events, candidate terms and daily counter differences are published; no weight, quota or true strength is fitted."
+      },
+      "after": {
+        "minFires": 7,
+        "maxFires": 30,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. seats.choices firings 25->15. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 15,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. seats.choices firings 25->15. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#seats.choices"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/situations.fired",
+      "before": {
+        "minFires": 44,
+        "maxFires": 176
+      },
+      "after": {
+        "minFires": 44,
+        "maxFires": 178,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.fired firings 90->89. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 89,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.fired firings 90->89. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#situations.fired"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/situations.notice_reports",
+      "before": {
+        "minFires": 35,
+        "maxFires": 140
+      },
+      "after": {
+        "minFires": 35,
+        "maxFires": 142,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.notice_reports firings 72->71. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 71,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.notice_reports firings 72->71. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#situations.notice_reports"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/situations.noticed",
+      "before": {
+        "minFires": 34,
+        "maxFires": 138
+      },
+      "after": {
+        "minFires": 35,
+        "maxFires": 140,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.noticed firings 71->70. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 70,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.noticed firings 71->70. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#situations.noticed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/situations.surfaced",
+      "before": {
+        "minFires": 43,
+        "maxFires": 174
+      },
+      "after": {
+        "minFires": 43,
+        "maxFires": 174,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.surfaced firings 88->87. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 87,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. situations.surfaced firings 88->87. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#situations.surfaced"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/verbs.answered",
+      "before": {
+        "minFires": 61,
+        "maxFires": 246
+      },
+      "after": {
+        "minFires": 32,
+        "maxFires": 130,
+        "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. verbs.answered firings 163->65. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+      },
+      "observed": 65,
+      "cause": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. verbs.answered firings 163->65. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands.",
+      "evidence": "docs/audit/s141-evidence/corrected-capture/positive-band-review.json#verbs.answered"
+    }
+  ],
+  "unmodified_zero_bands": true,
+  "other_reference_runs_unchanged": true
+}

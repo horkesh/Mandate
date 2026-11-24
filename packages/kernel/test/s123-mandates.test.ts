@@ -18,6 +18,8 @@ import { playDays, replay } from '../src/log/session.ts';
 import { mandateProblems, type MandateGrant } from '../src/world/mandates.ts';
 import type { State } from '../src/root-state.ts';
 import { knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { applyMusters } from '../src/forces/enlistment.ts';
+import { musterAssignments } from '../src/command/levies.ts';
 
 const origin = (s: string) => toId('message',s);
 const grant = (more: Partial<MandateGrant> = {}): MandateGrant => ({
@@ -148,6 +150,17 @@ describe('S123 received authority', () => {
     state=setGoal(state,POST('a_reserve'),{id:origin('sibling.use'),issuer:P('a_sec'),goal:goalOf(goalTerms('hold','a_mid')),
       viaChain:true,issuedDay:1,response:'answer'},1);
     expect(mayCommit(world.map,state,mandateAt(state,POST('a_army'),'a_army')!,POST('a_army'),[toId('forceBlock','a_army_1')])).toBe(false);
+  });
+  it('C2/S141: an old live order cannot charge a disbanded block against a shared ceiling',()=>{
+    const {world,active,g}=fixture();
+    const army=toId('forceBlock','a_army_1'), reserve=toId('forceBlock','a_reserve_1');
+    let state=commitAuthority(active,mandateAt(active,g.mandatePost,g.mandateKey)!,origin('old.use'),POST('a_army'),[army]);
+    state=setGoal(state,POST('a_army'),{id:origin('old.use'),issuer:P('a_sec'),goal:goalOf(goalTerms('hold','a_front')),viaChain:true,issuedDay:1,response:'answer'},1);
+    expect(mayCommit(world.map,state,mandateAt(state,g.mandatePost,g.mandateKey)!,POST('a_reserve'),[reserve])).toBe(false);
+    const removed=applyMusters(world.map,state,[{change:'disband',block:army,cause:'recruitment'}]);
+    const expired=musterAssignments(removed.state,[],[],removed.disbanded);
+    expect(mayCommit(world.map,expired,mandateAt(expired,g.mandatePost,g.mandateKey)!,POST('a_reserve'),[reserve])).toBe(true);
+    expect(mayCommit(world.map,expired,mandateAt(expired,g.mandatePost,g.mandateKey)!,POST('a_army'),[army])).toBe(false);
   });
   it('C7: revocation changes authority on receipt; a late older grant never restores it', () => {
     const { world,active,g } = fixture();

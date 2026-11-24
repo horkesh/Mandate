@@ -1,0 +1,47 @@
+{
+  "decision": "0134",
+  "head": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "verdict": "Correction required before the authorized capture",
+  "blockers": [
+    {
+      "lens": "Authority and allocation",
+      "location": "packages/kernel/src/command/allocation.ts:147; packages/kernel/src/tick/allocation.ts:156,166-172",
+      "firstCause": "The child filters separately over each candidate block and commits the resulting cohort together. Two separate 600-man blocks each pass a 1,000-man ceiling and can both transfer. A guard can pass individually and fail for the combined selection in the same way. Passage revalidates each block separately while excluding the same order's use.",
+      "criterion": "Decisions 0121 section 4, 0124 section 2 and 0134 sections 1–2 require the actual selection to remain within the superior's mandate.",
+      "targetedProof": "Try a multi-block cohort with a ceiling or guard that allows either block alone. Verify both cannot start and receipt does not bypass the limit. Preserve full-case and unrelated paths."
+    },
+    {
+      "lens": "Receipt quantity and explanations",
+      "location": "packages/kernel/src/tick/allocation.ts:37-45,200-224",
+      "firstCause": "The terminal result uses received containers as quantity and defaults every shortfall reason to one. Invalid containers likewise increment the shortfall by container count. One container can hold multiple selected regimental lots.",
+      "criterion": "Decisions 0133 and 0134 specify shortfall in regiments. The ledger and dispatched terminal claims must preserve that unit through receipt, partial receipt and cancellation.",
+      "targetedProof": "Receive two selected lots in one block and assert terminal quantity two; exercise losing a multi-lot container while pending and check the lot-denominated remaining shortfall."
+    },
+    {
+      "lens": "Correspondence provenance",
+      "location": "packages/kernel/src/tick/allocation.ts:36-58,77-106; packages/kernel/src/tick/orders.ts:315-342,394-411; packages/kernel/src/tick/context.ts:268-286",
+      "firstCause": "When a hop fails or a relay objects, the correlated terminal decline is authored as the superior at the superior's physical location, while his own notice of the failure is still travelling back. When a child declines for retention, the requester receives the typed reason but the ordering superior receives only a generic acknowledgement.",
+      "criterion": "Decisions 0121 and 0134 require ordinary correspondence and an attributable child answer. A failed hop's first witness is the failed address or the objecting relay, and the superior should receive the child's typed answer to his order.",
+      "targetedProof": "Check that a returned or objected order reports from the actual failure point, and that a child decline's typed reason reaches the issuer through ordinary delivery."
+    }
+  ],
+  "evidence": {
+    "canon": "Reviewed the user's last full ruling and Decisions 0002, 0121, 0124, 0133 and 0134. Dynamic orders are finite scoped cohorts with a named addressee; remote lot identities are outside the superior's paper. Source selection uses his received prior-day return and active mandate rather than querying remote lot truth. Peer and other-seat negatives pass. Governor routing remains the prior voluntary mechanism. The child independently validates holdings and runs compliance and retention. A fictional order marches before command ownership changes. The direct-send guard also avoids scanning the superior's subordinate lot universe.",
+    "coverage": "The eight 0134 tests exercise the new path, keeper uncertainty as a typed decline, peer and other-seat negatives, vacant-post return, no named lot, physical receiver receipt, one pending need with save/replay and one-regiment bootstrap. The retention fixture demonstrates an undetermined comparison. A determined retain_for_own_mission fixture would separately demonstrate that branch.",
+    "determinismAndSave": "Routing sorts mandates by key and received returns by report day, receipt day and ID. Donor ties use strictCompare. The pending order survives encode/decode and matching replay in the fictional fixture. Older pre-0134 assignment packet shapes decode as before and the return attachment is optional. Full capture replay/resume are pending.",
+    "retainedChecks": [
+      "runs/s150-0134/focused-family.log: 5 files, 118 passing tests",
+      "runs/s150-0134/terminal-green.log: 8 passing targeted 0134 tests",
+      "runs/s150-0134/plan-choice-after.log: 1 targeted plan-choice test passes; assertion identifies day 2 plan selection and day 4 unknown_enemy_bootstrap own request",
+      "runs/s150-0134/typecheck-final.log: no tsc diagnostics",
+      "runs/s150-0134/boundary.log: 498 files and 61 terms clean",
+      "runs/s150-0134/rules-after-projection.log: zero findings after the pendingRequests citation refresh; identical protected-reader identities in docs/audit/s150-evidence/0134-projection.json",
+      "runs/s150-0134/retained-return-probe.log: corrected day-140 state emits day-141 Mansfield to Scott with 17 lots and Holmes at Fredericksburg to Lee with one. This proves report generation from the retained state. Lynchburg transfer, Patterson's recipients and responses, and battlefield effects require the new capture."
+    ],
+    "capturePrerequisites": "The --0134 runner reads the corrected S150 baseline, final hash 95c0c13100fb0566417ffdbb6b29add90c669796f93ddc61ebaec78cad443f1a, with 32 inventory entries verified. The output and smoke directories are separate and once-only. Source inspection shows 33 rows, days 120/140/146 with lot and strength kind, Lynchburg holder expansion, logged requests/answers/orders/receipts/offers, battles, all reference bands and S141's 18 former zero rows including its 15 positive floors. New outcomes remain unmeasured. The plan sets commands, expected cost and stop rule before execution.",
+    "preservation": "Fresh git ls-files --stage matched all 3,681 starting index rows byte for byte and git diff --cached listed 316 staged paths. No baseline or staged file was edited in review.",
+    "performance": "The change saves the old dynamic-paper flatMap and avoids inspecting subordinate lots for a direct grant. Added work includes an optional cadence-time report attachment, sorted received reports on a commander answer and child planning when accepting a new subordinate order. No quiet local reading or hosted Linux result was established. The roughly 3 ms Linux headroom remains unverified."
+  },
+  "reviewChecks": "Read-only static inspection and retained evidence. No repeated suite, smoke, capture, hook, commit, push or process action was taken.",
+  "findingsOutsideMyScope": "Capture results and first causes for untriggered bands or floors, hosted Linux timing, and the named historical transport, conditional station and missing-cohort gaps remain outside this review."
+}

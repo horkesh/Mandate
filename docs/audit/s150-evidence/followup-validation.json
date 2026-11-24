@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "command": "expected pre-fix allocation regression",
+      "exit": 1,
+      "log": "runs/s150-trace/fix-red.log"
+    },
+    {
+      "command": "targeted allocation lifecycle tests",
+      "exit": 0,
+      "tests": 7,
+      "log": "runs/s150-trace/fix-green.log"
+    },
+    {
+      "command": "related five-file Vitest group",
+      "exit": 0,
+      "tests": 87,
+      "log": "runs/s150-trace/related-tests.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "log": "runs/s150-trace/final-types.log"
+    },
+    {
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "log": "runs/s150-trace/final-boundary.log"
+    },
+    {
+      "command": "npm run check:rules",
+      "exit": 0,
+      "log": "runs/s150-trace/final-rules.log"
+    },
+    {
+      "command": "original retained trace replay to140",
+      "exit": 0,
+      "hashes": 140,
+      "log": "runs/s150-trace/replay.log"
+    },
+    {
+      "command": "corrected smoke2",
+      "exit": 0,
+      "log": "runs/s150-trace/smoke-corrected.log"
+    },
+    {
+      "command": "corrected capture148, replay, resume",
+      "exit": 0,
+      "log": "runs/s150-trace/measurement-corrected.log"
+    },
+    {
+      "command": "independent review",
+      "verdict": "approve bounded follow-up",
+      "evidence": "docs/audit/s150-evidence/trace/independent-review.json"
+    }
+  ],
+  "reusedUnaffected": "Original S150 sweep/scanner29, optimisation52 and licence/decision-index evidence retained; no full-suite or Linux timing claim",
+  "pending": "Global plan-choice assertion and15 positive zero floors; ordinary hook/commit held"
+}

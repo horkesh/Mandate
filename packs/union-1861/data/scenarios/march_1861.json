@@ -752,6 +752,7 @@
 {"department":"us_war","holder":null,"id":"us_dept_northeastern_virginia","kind":"temporary_appointment","name":"post.us_dept_northeastern_virginia.name","operation":"northeastern_virginia_command","parent":"us_general_in_chief","region":"northern_virginia"},
 {"department":"us_war","holder":null,"id":"us_dept_pennsylvania","kind":"temporary_appointment","name":"post.us_dept_pennsylvania.name","operation":"pennsylvania_command","parent":"us_general_in_chief","region":"philadelphia"},
 {"department":"us_war","holder":null,"id":"us_dept_virginia","kind":"temporary_appointment","name":"post.us_dept_virginia.name","operation":"fort_monroe_command","parent":"us_general_in_chief","region":"fort_monroe"},
+{"department":"us_war","holder":"mansfield_joseph_k_f","id":"us_dept_washington","kind":"temporary_appointment","name":"post.us_dept_washington.name","operation":"washington_command","parent":"us_general_in_chief","region":"washington"},
 {"department":"us_war","holder":null,"id":"us_recruiting_service","kind":"recruiting_office","name":"post.us_recruiting_service.name","operation":"regular_recruiting_1861","parent":"us_war_adjutant_general","region":"new_york"},
 {"department":"us_war","holder":"fox_gustavus_v","id":"us_sumter_relief_expedition","kind":"temporary_command","name":"post.us_sumter_relief_expedition.name","operation":"sumter_relief","parent":"us_secretary_war","region":"new_york"}
 ]

@@ -1,0 +1,360 @@
+[
+  {
+    "id": "battle:harpers_ferry:148",
+    "before": null,
+    "after": {
+      "battleRegion": "harpers_ferry",
+      "battleStartDay": 148,
+      "battleEndDay": 148,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_harpers_ferry",
+        "cs_forces_virginia",
+        "st_va_harpers_ferry",
+        "us_dept_pennsylvania"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 148,
+          "bdayNumber": 1,
+          "bdayType": "meeting",
+          "bdayAttacker": "confederate",
+          "bdayFrontage": 50000,
+          "bdayContact": 866,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_harpers_ferry",
+              "bsideCommander": "johnston_joseph_e",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "raised.st_gov_alabama.d53.allocation.5667fca72ded391e",
+                "raised.st_gov_kentucky.d58",
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsidePresent": 1560,
+              "bsideCommitted": 1092,
+              "bsideEngaged": 1092,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -22,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -66,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -49,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1163,
+              "bsideKw": 161,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 138,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -3,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 42,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -9,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -7,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 24,
+              "bsideWounded": 137,
+              "bsideMissing": 12,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 12,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 358,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 441,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -154,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 25,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -30,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1801,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 694,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 1970,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 600,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "pursue_believed_ratio",
+                  "btermValue": 1970,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 694,
+                  "btermSource": "johnston_joseph_e"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": "follow",
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_alabama.d53.allocation.5667fca72ded391e",
+                  "blossKilled": 12,
+                  "blossWounded": 69,
+                  "blossMissing": 6,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_kentucky.d58",
+                  "blossKilled": 12,
+                  "blossWounded": 68,
+                  "blossMissing": 6,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 255,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_pennsylvania",
+              "bsideCommander": "patterson_robert",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "raised.st_gov_connecticut.d77"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 866,
+              "bsideCommitted": 866,
+              "bsideEngaged": 866,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 22,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 66,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 39,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1127,
+              "bsideKw": 156,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 139,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 3,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 9,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 5,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 23,
+              "bsideWounded": 133,
+              "bsideMissing": 40,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_withdrew",
+                  "btermValue": 46,
+                  "btermSource": "withdrew"
+                },
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": -6,
+                  "btermSource": null
+                }
+              ],
+              "bsideCaptured": 6,
+              "bsideCapturedParts": [
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": 6,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankDraw": 591,
+              "bsideFlankThreshold": 138,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 88,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 307,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -270,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 7,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -30,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 406,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1244,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 870,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 371,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 746,
+                  "btermSource": "patterson_robert"
+                }
+              ],
+              "bsideResult": "withdrew",
+              "bsideCutOff": null,
+              "bsideRetreatTo": "lower_valley",
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_connecticut.d77",
+                  "blossKilled": 23,
+                  "blossWounded": 133,
+                  "blossMissing": 40,
+                  "blossCaptured": 6,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 189,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

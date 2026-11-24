@@ -309,6 +309,7 @@ export function sendReport(
     msgReport: report.body,
     msgTruth: report.truth,
   });
+  if(report.body.reportForceNeed!==undefined || report.body.reportAnswers!==null&&state.forceRequests?.[report.body.reportAnswers]!==undefined)ctx.requestDispatches?.push(ctx.outbox.at(-1)!);
   fire(ctx, 'messages.sent');
   return id;
 }

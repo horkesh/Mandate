@@ -1,0 +1,91 @@
+{
+  "head": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "files": [
+    {
+      "path": "docs/design/FOUNDATION.md",
+      "sha256": "75dfd0fd0d73c879a3ad9511691006fd768442788ce1b19c84d0a4cede2195ae"
+    },
+    {
+      "path": "notes/sprint-S150-sending-orders.md",
+      "sha256": "0f6c5435b2407a9894c3dc29da008ea1b54087e7a7d330d9b8af857e65e2d929"
+    },
+    {
+      "path": "packages/kernel/src/command/allocation.ts",
+      "sha256": "4f1a58a973460d51603a2b709161267d6c45033554665d545de05c0cca0e5413"
+    },
+    {
+      "path": "packages/kernel/src/command/authority.ts",
+      "sha256": "154a4de40cd3cb6d394451a62591a1d21a4d8546ffabb37abb29bf066138830f"
+    },
+    {
+      "path": "packages/kernel/src/command/force-requests.ts",
+      "sha256": "efe08c925ed3478c1a8db824d2491a5e0546a5249a0b893df1e50827a705e469"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/report.ts",
+      "sha256": "42d3aadcf1c638b4851da4a77ef19889a28aff1b7d8af95cbc5d25d42f119f93"
+    },
+    {
+      "path": "packages/kernel/src/seats/force-requests.ts",
+      "sha256": "5e041c66804742bef35d9165bfe90424a714a3d6d12ac3738483182ed5e76fdc"
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "sha256": "7573b1467c2f8bbf7c5dc6b25bae1e98deb7cd59745f9d5eb640dc4c444b5c5e"
+    },
+    {
+      "path": "packages/kernel/src/tick/deliver.ts",
+      "sha256": "7a15c8e309c0f24ec2a48e7ed17e59e67c3228bfcab5ab1c910fa5a379236080"
+    },
+    {
+      "path": "packages/kernel/src/tick/force-requests.ts",
+      "sha256": "1aec2f026a1e50a7f6a7a64f5e3f7994cc6b3d7b2b0acd54bf76bf6fc3304361"
+    },
+    {
+      "path": "packages/kernel/src/tick/generate.ts",
+      "sha256": "c815455b7e64fd3fdf86a671235eaab9a22107194d2d4fc2f61e8a373c905385"
+    },
+    {
+      "path": "packages/kernel/src/tick/orders.ts",
+      "sha256": "74310b697a9d4f0fda13f508b8e03531b9ef2d0d910e452e01807fc539b7b9e8"
+    },
+    {
+      "path": "packages/kernel/src/world/allocation.ts",
+      "sha256": "0889f66430761dce0fb6ca81061ede1f82ab1c1a3fac9c520aaa353b6b4c098b"
+    },
+    {
+      "path": "packages/kernel/test/plans.test.ts",
+      "sha256": "5ae57ac42ff7fb51044fa47c6c25b5aa0ce157bb966504960c65f34ed3b87aa1"
+    },
+    {
+      "path": "packages/kernel/test/s147-receipt-requests.test.ts",
+      "sha256": "6c96616a70dccfcad45da1589ec5a5691902730ff0c867765a149cf80d3987c3"
+    },
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "sha256": "a23b06eb6bf650617949b60c157584ae48df690862c0bb40b8337dde2778cc33"
+    },
+    {
+      "path": "tools/s150-measure-allocation.ts",
+      "sha256": "646e416e875c341abcaae933303896708feaf519ab0d48347fc2b4224b06744e"
+    },
+    {
+      "path": "tools/s150-projection-evidence.ts",
+      "sha256": "044e67d3a92ba15b72d6fbb606ae209d901a2f93b7337485ce4ec19cc188fabd"
+    },
+    {
+      "path": "tools/s150-trace-instruments.ts",
+      "sha256": "a97a993561587fb6b041cada10b3861993a11fd6124376b6b5c6e615f86631d8"
+    }
+  ],
+  "baseline": {
+    "baseline": "S150 corrected capture",
+    "finalHash": "95c0c13100fb0566417ffdbb6b29add90c669796f93ddc61ebaec78cad443f1a",
+    "verifiedRawFiles": 32,
+    "mismatches": 0
+  },
+  "smokeCommand": "node --import tsx tools/s150-measure-allocation.ts --0134 --smoke",
+  "captureCommand": "node --import tsx tools/s150-measure-allocation.ts --0134",
+  "expectedCaptureCost": "3-6 minutes under contention; not a performance reading",
+  "stopRule": "first rejection, replay/resume mismatch or missing required output; no blind retry"
+}

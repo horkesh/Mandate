@@ -1,3 +1,4 @@
+import { sideOfPerson } from '../command/command.ts';
 import { planAuthorized } from '../seats/local-actions.ts';
 import { withinCommand } from '../command/command.ts';
 import { receiveOffers } from './offers.ts';
@@ -476,7 +477,7 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
     if (allows === null) { ended.push(b); continue; }
     if (loc.locMarch !== null || loc.locAboard !== null) continue;
     if (loc.locRegion === j.joinRegion) {
-      if (assignment === undefined && j.joinAllocation === undefined) {
+      if (assignment === undefined && j.joinAllocation === undefined && j.joinService === undefined) {
         ended.push(b);
         fire(ctx, 'movement.joined');
       }
@@ -485,7 +486,7 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
     const naval = isNaval(ctx.world.map, state, b);
     const offer = j.joinOffer === undefined ? undefined : state.neutralOffers?.[j.joinOffer];
     // Voluntary transit uses the recipient's access policy; service and assignment stay the governor's.
-    const side = offer === undefined ? factionOfBlock(ctx.world.map,state,b) : postFaction(ctx.world,state,offer.offerReceiver);
+    const side = offer === undefined ? factionOfBlock(ctx.world.map,state,b) : offer.offerReceiver===undefined?sideOfPerson(ctx.world.map,state,offer.offerIssuer):postFaction(ctx.world,state,offer.offerReceiver);
     const baseKey = `${loc.locRegion}|${j.joinRegion}|${naval ? 'n' : 'l'}|${side}`;
     const key = j.joinAllocation !== undefined ? `${baseKey}|${j.joinAllocation}` : assignment === undefined ? baseKey : `${baseKey}|${assignment.assignmentOrder}`;
     const g = groups.get(key) ?? { from: loc.locRegion, to: j.joinRegion, naval, side, blocks: [], ...(allows === undefined ? {} : {allows}) };

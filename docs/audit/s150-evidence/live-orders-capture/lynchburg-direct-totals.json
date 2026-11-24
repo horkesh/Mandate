@@ -1,0 +1,66 @@
+[
+  {
+    "day": 120,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "lots": 5,
+    "knownMen": 3900,
+    "unknownLots": []
+  },
+  {
+    "day": 120,
+    "post": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "lots": 1,
+    "knownMen": 780,
+    "unknownLots": []
+  },
+  {
+    "day": 140,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "lots": 5,
+    "knownMen": 3900,
+    "unknownLots": []
+  },
+  {
+    "day": 140,
+    "post": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "lots": 1,
+    "knownMen": 780,
+    "unknownLots": []
+  },
+  {
+    "day": 140,
+    "post": "s74_johnston_brigade_3",
+    "holder": null,
+    "lots": 1,
+    "knownMen": 780,
+    "unknownLots": []
+  },
+  {
+    "day": 146,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "lots": 5,
+    "knownMen": 3900,
+    "unknownLots": []
+  },
+  {
+    "day": 146,
+    "post": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "lots": 1,
+    "knownMen": 780,
+    "unknownLots": []
+  },
+  {
+    "day": 146,
+    "post": "s74_johnston_brigade_3",
+    "holder": null,
+    "lots": 1,
+    "knownMen": 780,
+    "unknownLots": []
+  }
+]

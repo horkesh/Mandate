@@ -1,0 +1,77 @@
+{
+  "rawBaselines": [
+    {
+      "inventory": "docs/audit/s141-evidence/corrected-capture/raw-inventory.json",
+      "files": 21,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s147-evidence/corrected-capture/raw-inventory.json",
+      "files": 31,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/capture/raw-inventory.json",
+      "files": 32,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/corrected-capture/raw-inventory.json",
+      "files": 32,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/0134-capture/raw-inventory.json",
+      "files": 33,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/0135-capture/raw-inventory.json",
+      "files": 41,
+      "mismatches": 0
+    }
+  ],
+  "priorRawFilesPreserved": 190,
+  "newRawFiles": 41,
+  "initialStagedPaths": 444,
+  "startingIndex": "runs/s150-live-orders/starting-index.json",
+  "initialHookTree": "2ed8c880d5ad4b536c3e5f58c506082c5e4e0282",
+  "backupRef": "refs/backup/s150-staged-2026-11-24",
+  "otherWorktrees": "Read-only except final one authorised CODEX append",
+  "sourcePages": "Unchanged0135-read/ manifest and prior source papers reused; no new historical claim",
+  "hook": "Second hook failed on its frozen tree. Final additions are closure evidence and the proven runtime-neutral public type import correction; no third full suite/capture, no commit or push.",
+  "index": {
+    "startingEntries": 3808,
+    "finalEntries": 3885,
+    "initialStagedPaths": 444,
+    "initialStagedPathsRetained": 444,
+    "initialStagedByteIdentical": 431,
+    "initialStagedExtensions": 13,
+    "allAuthorisedExistingTrackedExtensions": [
+      "docs/design/FOUNDATION.md",
+      "notes/sprint-S150-sending-orders.md",
+      "packages/kernel/src/command/allocation.ts",
+      "packages/kernel/src/command/force-requests.ts",
+      "packages/kernel/src/knowledge/force-need.ts",
+      "packages/kernel/src/knowledge/report.ts",
+      "packages/kernel/src/seats/allocation.ts",
+      "packages/kernel/src/seats/force-requests.ts",
+      "packages/kernel/src/tick/allocation.ts",
+      "packages/kernel/src/tick/force-requests.ts",
+      "packages/kernel/src/tick/tick.ts",
+      "tools/rules/projection-derivations.json",
+      "tools/s150-measure-allocation.ts",
+      "tools/s150-projection-evidence.ts"
+    ],
+    "newlyChangedPreviouslyCleanTrackedPaths": [
+      "packages/kernel/src/seats/allocation.ts"
+    ],
+    "finalStagedPaths": 522,
+    "noPriorTestBandFloorPackOrFixtureChanged": true,
+    "noUnstagedOrUntracked": true,
+    "checkedSecondHookTree": "ddb4c8cb8baf121745de5fb0948243b4328bfc06",
+    "head": "91a816bddb8f200d939a9a2b39fca936ce33d813"
+  },
+  "runtimeException": "type-only-boundary-proof.json:17/18source-identical and1emitted-JS-identical.",
+  "prehookStagedByteIdenticalCountCorrection": "The preliminary430 figure subtracted a previously clean tracked file as if it had already been staged. The final index comparison below counts the original444paths directly."
+}

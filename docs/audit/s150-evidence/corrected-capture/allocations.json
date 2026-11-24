@@ -1,0 +1,329 @@
+{
+  "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1": {
+    "allocOrder": "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1",
+    "allocPaper": "s150_scott_patterson_new_jersey",
+    "allocDay": 65,
+    "allocSender": "patterson_robert",
+    "allocStrongest": true,
+    "allocLots": [],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 4,
+    "allocReasons": [
+      "scope_unavailable"
+    ],
+    "allocStatus": "shortfall"
+  },
+  "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1": {
+    "allocOrder": "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1",
+    "allocPaper": "s150_connecticut_three",
+    "allocDay": 66,
+    "allocSender": "buckingham_william_a",
+    "allocStrongest": true,
+    "allocLots": [
+      "ct_1_infantry"
+    ],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 3,
+    "allocReasons": [
+      "named_absent",
+      "discharged"
+    ],
+    "allocStatus": "shortfall"
+  },
+  "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1": {
+    "allocOrder": "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1",
+    "allocPaper": "s150_scott_willcox",
+    "allocDay": 76,
+    "allocSender": "blair_austin",
+    "allocStrongest": true,
+    "allocLots": [
+      "mi_1_3m_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_michigan.d46"
+    ],
+    "allocReceived": [
+      "raised.st_gov_michigan.d46"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1": {
+    "allocOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1",
+    "allocPaper": "s150_june3_maine",
+    "allocDay": 95,
+    "allocSender": "washburn_israel",
+    "allocStrongest": true,
+    "allocLots": [
+      "me_3_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_maine.d77"
+    ],
+    "allocReceived": [
+      "raised.st_gov_maine.d77"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1": {
+    "allocOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1",
+    "allocPaper": "s150_june3_new_hampshire",
+    "allocDay": 95,
+    "allocSender": "goodwin_ichabod",
+    "allocStrongest": true,
+    "allocLots": [
+      "nh_2_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_new_hampshire.d77"
+    ],
+    "allocReceived": [
+      "raised.st_gov_new_hampshire.d77"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1": {
+    "allocOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1",
+    "allocPaper": "s150_june3_new_jersey",
+    "allocDay": 95,
+    "allocSender": "olden_charles_s",
+    "allocStrongest": true,
+    "allocLots": [
+      "nj_1_3y_infantry",
+      "nj_2_3y_infantry",
+      "nj_3_3y_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_new_jersey.d77"
+    ],
+    "allocReceived": [
+      "raised.st_gov_new_jersey.d77"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1": {
+    "allocOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1",
+    "allocPaper": "s150_june3_connecticut",
+    "allocDay": 96,
+    "allocSender": "buckingham_william_a",
+    "allocStrongest": true,
+    "allocLots": [
+      "ct_4_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_connecticut.d77"
+    ],
+    "allocReceived": [
+      "raised.st_gov_connecticut.d77"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1": {
+    "allocOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1",
+    "allocPaper": "s150_june3_massachusetts",
+    "allocDay": 96,
+    "allocSender": "andrew_john_a",
+    "allocStrongest": true,
+    "allocLots": [
+      "generated.raised.st_gov_massachusetts.d76.5",
+      "generated.raised.st_gov_massachusetts.d76.6",
+      "ma_11_infantry",
+      "ma_1_infantry",
+      "ma_2_infantry",
+      "ma_9_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_massachusetts.d76.bundle.2",
+      "raised.st_gov_massachusetts.d76"
+    ],
+    "allocReceived": [
+      "raised.st_gov_massachusetts.d76.bundle.2",
+      "raised.st_gov_massachusetts.d76"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1": {
+    "allocOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1",
+    "allocPaper": "s150_june3_michigan",
+    "allocDay": 96,
+    "allocSender": "blair_austin",
+    "allocStrongest": true,
+    "allocLots": [
+      "generated.raised.st_gov_michigan.d77.2",
+      "generated.raised.st_gov_michigan.d77.3",
+      "mi_2_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_michigan.d77"
+    ],
+    "allocReceived": [
+      "raised.st_gov_michigan.d77"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1": {
+    "allocOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1",
+    "allocPaper": "s150_june3_wisconsin",
+    "allocDay": 96,
+    "allocSender": "randall_alexander_w",
+    "allocStrongest": true,
+    "allocLots": [
+      "generated.raised.st_gov_wisconsin.d83.2",
+      "wi_2_infantry"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_wisconsin.d83"
+    ],
+    "allocReceived": [
+      "raised.st_gov_wisconsin.d83"
+    ],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "received"
+  },
+  "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1": {
+    "allocOrder": "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1",
+    "allocPaper": "s150_louisiana_sixth_richmond",
+    "allocDay": 103,
+    "allocSender": "moore_thomas_o",
+    "allocStrongest": true,
+    "allocLots": [],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 1,
+    "allocReasons": [
+      "named_absent"
+    ],
+    "allocStatus": "shortfall"
+  },
+  "m.105.329d72c05b9bb21d": {
+    "allocOrder": "m.105.329d72c05b9bb21d",
+    "allocPaper": "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.st_gov_south_carolina",
+    "allocDay": 105,
+    "allocSender": "pickens_francis_w",
+    "allocStrongest": true,
+    "allocLots": [
+      "generated.raised.st_gov_south_carolina.d9.3"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_south_carolina.d9.allocation.f29d8136e83c1f85"
+    ],
+    "allocReceived": [],
+    "allocShortfall": 0,
+    "allocReasons": [
+      "superseded"
+    ],
+    "allocStatus": "superseded"
+  },
+  "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1": {
+    "allocOrder": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1",
+    "allocPaper": "s150_scott_june23",
+    "allocDay": 110,
+    "allocSender": "mansfield_joseph_k_f",
+    "allocStrongest": true,
+    "allocLots": [],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 2,
+    "allocReasons": [
+      "named_absent"
+    ],
+    "allocStatus": "shortfall"
+  },
+  "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1": {
+    "allocOrder": "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1",
+    "allocPaper": "s150_michigan_fourth",
+    "allocDay": 113,
+    "allocSender": "blair_austin",
+    "allocStrongest": true,
+    "allocLots": [],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 1,
+    "allocReasons": [
+      "named_absent"
+    ],
+    "allocStatus": "shortfall"
+  },
+  "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1": {
+    "allocOrder": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1",
+    "allocPaper": "s150_scott_new_jersey_three",
+    "allocDay": 117,
+    "allocSender": "olden_charles_s",
+    "allocStrongest": true,
+    "allocLots": [],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 3,
+    "allocReasons": [
+      "scope_unavailable"
+    ],
+    "allocStatus": "shortfall"
+  },
+  "m.117.af793ebcea0dd46e": {
+    "allocOrder": "m.117.af793ebcea0dd46e",
+    "allocPaper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.st_gov_new_york",
+    "allocDay": 117,
+    "allocSender": "morgan_edwin_d",
+    "allocStrongest": true,
+    "allocLots": [
+      "generated.raised.st_gov_new_york.d64.22"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_new_york.d64.bundle.6.allocation.ac32476e02eba633"
+    ],
+    "allocReceived": [],
+    "allocShortfall": 0,
+    "allocReasons": [
+      "superseded"
+    ],
+    "allocStatus": "superseded"
+  },
+  "m.127.b1d7288d10e10210": {
+    "allocOrder": "m.127.b1d7288d10e10210",
+    "allocPaper": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.st_gov_mississippi",
+    "allocDay": 127,
+    "allocSender": "pettus_john_j",
+    "allocStrongest": true,
+    "allocLots": [
+      "generated.raised.st_gov_mississippi.d122.2.3"
+    ],
+    "allocBlocks": [
+      "raised.st_gov_mississippi.d122.2.allocation.992f44795ede63bb"
+    ],
+    "allocReceived": [],
+    "allocShortfall": 0,
+    "allocReasons": [],
+    "allocStatus": "pending"
+  },
+  "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1": {
+    "allocOrder": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1",
+    "allocPaper": "s141_cameron_july13_five",
+    "allocDay": 135,
+    "allocSender": "curtin_andrew_g",
+    "allocStrongest": true,
+    "allocLots": [],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 5,
+    "allocReasons": [
+      "scope_unavailable"
+    ],
+    "allocStatus": "shortfall"
+  }
+}

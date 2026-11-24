@@ -1,0 +1,196 @@
+{
+  "request": {
+    "freqId": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "needPost": "us_dept_northeastern_virginia",
+      "needPerson": "mcdowell_irvin",
+      "needTask": "take",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "northern_virginia",
+      "needGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+    },
+    "freqDay": 137,
+    "freqTo": "us_general_in_chief",
+    "freqAnswers": [
+      {
+        "fansDay": 138,
+        "fansPerson": "scott_winfield",
+        "fansPost": "us_general_in_chief",
+        "fansIssuer": "mcdowell_irvin",
+        "fansAction": "refuse",
+        "fansReasons": [
+          "compliance:object",
+          "scope_unavailable"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "response": {
+    "respOrder": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+    "respPerson": "scott_winfield",
+    "respPost": "us_general_in_chief",
+    "respRole": "addressee",
+    "respKind": "allocation",
+    "respDay": 138,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -11,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 34
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": -45
+      }
+    ],
+    "respReasons": [
+      {
+        "kind": "shielded_by_standing"
+      },
+      {
+        "kind": "holds_grievance",
+        "grievance": "bypassed",
+        "weight": 150
+      }
+    ],
+    "respStated": [
+      {
+        "kind": "shielded_by_standing"
+      },
+      {
+        "kind": "holds_grievance",
+        "grievance": "bypassed",
+        "weight": 150
+      }
+    ],
+    "respConditions": [],
+    "respClauses": [
+      {
+        "clauseId": "course",
+        "clauseSubject": "course"
+      },
+      {
+        "clauseId": "destination",
+        "clauseSubject": "destination"
+      },
+      {
+        "clauseId": "detail",
+        "clauseSubject": "organisation"
+      }
+    ],
+    "respUndertaking": null,
+    "respDeclaredUndertaking": null,
+    "respReservations": [],
+    "respDeclaredReservations": [],
+    "respReservationGaps": [],
+    "respDeclaredReservationGaps": []
+  },
+  "receivedRequest": [
+    {
+      "id": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+      "knownReceivedDay": 137,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mcdowell_irvin",
+        "reportAuthorPost": "us_dept_northeastern_virginia",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_northeastern_virginia",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "northern_virginia",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 137,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "needPost": "us_dept_northeastern_virginia",
+          "needPerson": "mcdowell_irvin",
+          "needTask": "take",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "northern_virginia",
+          "needGoal": {
+            "goalObjective": "manassas",
+            "goalPosture": "take",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+        },
+        "reportForceRequest": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+      }
+    }
+  ],
+  "sameResponseAs0135ExceptRequestId": true
+}

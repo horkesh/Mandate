@@ -6,12 +6,15 @@ import { parseIsoDate } from './calendar.ts';
 import type { World } from './world.ts';
 import type { ScenarioStart } from './scenario.ts';
 
-export type AllocationScope =
-  | { readonly kind: 'named'; readonly regiments: readonly string[]; readonly calls?: readonly string[] }
-  | { readonly kind: 'cohort'; readonly calls?: readonly string[]; readonly arm?: string; readonly minTermDays: number };
+export type { AllocationScope } from './allocation-scope.ts';
+import type { AllocationScope } from './allocation-scope.ts';
 
 /** Read words constrain a commander's request; they never create a regiment or a receipt. */
 export interface AllocationInstrument {
+  /** Runtime governor undertaking only; never accepted as a pack instruction. */
+  readonly voluntary?: true;
+  /** Runtime 0134 order to the holding subordinate, issued against a received force request. */
+  readonly subordinateOrder?: true;
   readonly id: string;
   readonly source: string;
   readonly fromDate: string;
@@ -37,7 +40,15 @@ export interface AllocationInstrument {
 export function allocationProblems(world: World, start: ScenarioStart): string[] {
   const problems: string[] = [], ids = new Set<string>(), letters = new Set<string>();
   const posts = new Set([...start.posts, ...start.temporaryPosts].map(p => p.id));
+  const stations=new Set<string>();
+  for(const s of world.rules.serviceStations??[]) {
+    if(!s.id || stations.has(s.id) || !s.source?.trim() || !posts.has(s.post) || !world.regions.some(r=>r.id===s.region) ||
+      !['station','territory'].includes(s.kind) || !s.mandate)problems.push(`serviceStations.${s.id}: unique sourced station, declared command and assignment required`);
+    stations.add(s.id);
+  }
   for (const p of world.rules.allocationInstruments ?? []) {
+    if(p.voluntary!==undefined)problems.push(`allocationInstruments.${p.id}: voluntary undertakings are runtime choices, never pack assignments`);
+    if(p.subordinateOrder!==undefined)problems.push(`allocationInstruments.${p.id}: subordinate force orders are runtime choices`);
     const at = `allocationInstruments.${p.id}`, s = p.scope;
     if (!p.id || ids.has(p.id) || !p.source?.trim() || !p.words?.trim() ||
       !isLetterIdentity(p.letter) || letters.has(letterKey(p.letter))) problems.push(`${at}: unique sourced paper and read scope words required`);
@@ -57,4 +68,17 @@ export function allocationProblems(world: World, start: ScenarioStart): string[]
     if (p.modes !== undefined && (!unique(p.modes) || p.modes.some(m => !['land','rail','river','sea'].includes(m)))) problems.push(`${at}: invalid travel modes`);
   }
   return problems;
+}
+
+/** Exact station declarations are sourced; territorial fallback is the 0133 [I] rule. */
+export interface ServiceStation {
+  readonly arms?: readonly string[];
+  readonly id: string;
+  readonly source: string;
+  readonly region: RegionId;
+  readonly post: PostId;
+  readonly mandate: string;
+  readonly kind: 'station' | 'territory';
+  /** A partial coarse region is a gap, never a whole-region permission. */
+  readonly partial?: boolean;
 }

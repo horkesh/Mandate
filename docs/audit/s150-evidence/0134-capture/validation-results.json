@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "command": "original plan-choice assertion",
+      "exit": 1,
+      "log": "plan-choice-before.log",
+      "meaning": "Expected prior failure1 versus2"
+    },
+    {
+      "command": "plan-cycle file with choices asserted by kind and reason",
+      "exit": 0,
+      "tests": 12,
+      "log": "plans.log"
+    },
+    {
+      "command": "0134 initial fictional fixture family",
+      "exit": 0,
+      "tests": 118,
+      "log": "focused-family.log"
+    },
+    {
+      "command": "review correction reproduction",
+      "exit": 1,
+      "failures": 6,
+      "log": "correction-red.log",
+      "meaning": "Expected RED authority/count/provenance failures"
+    },
+    {
+      "command": "targeted review correction and legacy authority cases",
+      "exit": 0,
+      "tests": 23,
+      "log": "correction-green-final.log"
+    },
+    {
+      "command": "npx vitest run s147-receipt-requests s141-allocation s124-office-offers s123-mandates banned-apis plans save serialize seats-log and pack s150-sending-instruments",
+      "exit": 0,
+      "files": 10,
+      "tests": 181,
+      "log": "compatibility-final.log"
+    },
+    {
+      "command": "batched request/answer receipt observer, corrected fixture before fix",
+      "exit": 1,
+      "log": "observer-red-corrected-fixture.log",
+      "meaning": "Expected missing receipt metadata; State hash already equal"
+    },
+    {
+      "command": "batched request/answer receipt observer after fix",
+      "exit": 0,
+      "tests": 1,
+      "log": "observer-green.log",
+      "meaning": "Both arrivals observed once; State hash equals direct delivery"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "log": "types-after-observer.log"
+    },
+    {
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "log": "boundary-capture.log"
+    },
+    {
+      "command": "npm run check:rules",
+      "exit": 0,
+      "log": "rules-capture.log"
+    },
+    {
+      "command": "node --import tsx tools/s150-measure-allocation.ts --0134 --smoke",
+      "exit": 0,
+      "log": "smoke.log"
+    },
+    {
+      "command": "node --import tsx tools/s150-measure-allocation.ts --0134",
+      "exit": 0,
+      "log": "measurement.log",
+      "captures": 1
+    },
+    {
+      "command": "pure prerequisite derivations from four retained snapshots",
+      "exit": 0,
+      "log": "derive-prerequisites.log",
+      "meaning": "No tick/seat/new run; all State hashes unchanged"
+    }
+  ],
+  "logRoot": "runs/s150-0134/",
+  "groupsOverlap": true,
+  "independentReview": "independent-review.json",
+  "targetedCorrectionVerification": "review-correction.json",
+  "retentionCoverage": "The child retention fixture proves the typed undetermined comparison; determined retain_for_own_mission is not separately exercised. The planner policy is unchanged.",
+  "reusedUnaffected": "Previous S150 retired-sweep/scanner and licence/decision-index evidence; no dependency, decision record, band or pack-data edits in0134.",
+  "ordinaryHook": "Not attempted:15 zero floors and18 band failures require lead review first",
+  "fullSuiteAndWholeBranchReview": "Not claimed; ordinary hook and formal sprint branch review remain pending",
+  "timing": "No local timing reading or hosted Linux budget proof"
+}

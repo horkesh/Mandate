@@ -1,0 +1,285 @@
+[
+  {
+    "day": 102,
+    "kind": "answer",
+    "key": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a:0",
+    "value": {
+      "fansDay": 102,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansAction": "relay",
+      "fansReasons": [
+        "compliance:comply",
+        "committed"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 103,
+    "kind": "answer",
+    "key": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a:1",
+    "value": {
+      "fansDay": 103,
+      "fansPerson": "walker_leroy_p",
+      "fansPost": "cs_secretary_war",
+      "fansAction": "relay",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 104,
+    "kind": "answer",
+    "key": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a:2",
+    "value": {
+      "fansDay": 104,
+      "fansPerson": "davis_jefferson",
+      "fansPost": "cs_president",
+      "fansAction": "ask_governor",
+      "fansTo": "st_gov_alabama",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 105,
+    "kind": "answer",
+    "key": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a:3",
+    "value": {
+      "fansDay": 105,
+      "fansPerson": "moore_andrew_b",
+      "fansPost": "st_gov_alabama",
+      "fansAction": "defer",
+      "fansReasons": [
+        "compliance:comply",
+        "offer_unreceived"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 114,
+    "kind": "answer",
+    "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856:0",
+    "value": {
+      "fansDay": 114,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansAction": "relay",
+      "fansReasons": [
+        "compliance:comply",
+        "scope_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 115,
+    "kind": "answer",
+    "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856:1",
+    "value": {
+      "fansDay": 115,
+      "fansPerson": "cameron_simon",
+      "fansPost": "us_secretary_war",
+      "fansAction": "relay",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 116,
+    "kind": "answer",
+    "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856:2",
+    "value": {
+      "fansDay": 116,
+      "fansPerson": "lincoln_abraham",
+      "fansPost": "us_president",
+      "fansAction": "ask_governor",
+      "fansTo": "st_gov_california",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 126,
+    "kind": "answer",
+    "key": "m.125.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b:0",
+    "value": {
+      "fansDay": 126,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansAction": "relay",
+      "fansReasons": [
+        "compliance:comply",
+        "retention_comparison_undetermined"
+      ],
+      "fansScore": [
+        792,
+        792,
+        792
+      ]
+    }
+  },
+  {
+    "day": 127,
+    "kind": "answer",
+    "key": "m.125.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b:1",
+    "value": {
+      "fansDay": 127,
+      "fansPerson": "walker_leroy_p",
+      "fansPost": "cs_secretary_war",
+      "fansAction": "relay",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 128,
+    "kind": "answer",
+    "key": "m.125.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b:2",
+    "value": {
+      "fansDay": 128,
+      "fansPerson": "davis_jefferson",
+      "fansPost": "cs_president",
+      "fansAction": "ask_governor",
+      "fansTo": "st_gov_alabama",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 129,
+    "kind": "answer",
+    "key": "m.125.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b:3",
+    "value": {
+      "fansDay": 129,
+      "fansPerson": "moore_andrew_b",
+      "fansPost": "st_gov_alabama",
+      "fansAction": "defer",
+      "fansReasons": [
+        "compliance:comply",
+        "offer_unreceived"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 130,
+    "kind": "answer",
+    "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856:3",
+    "value": {
+      "fansDay": 130,
+      "fansPerson": "downey_john_g",
+      "fansPost": "st_gov_california",
+      "fansAction": "defer",
+      "fansReasons": [
+        "compliance:comply",
+        "scope_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 138,
+    "kind": "answer",
+    "key": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770:0",
+    "value": {
+      "fansDay": 138,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansAction": "refuse",
+      "fansReasons": [
+        "compliance:object",
+        "scope_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 142,
+    "kind": "answer",
+    "key": "m.141.patterson_robert.scott_winfield.force-request:dc78125291462997eeec57fa:0",
+    "value": {
+      "fansDay": 142,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansAction": "refuse",
+      "fansReasons": [
+        "compliance:object",
+        "scope_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  }
+]

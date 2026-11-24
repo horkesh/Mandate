@@ -1,0 +1,22 @@
+[
+  {
+    "path": "runs/s147/measurement/causal-events.jsonl",
+    "bytes": 786528,
+    "sha256": "1f4e8db0a2a1eeeaa792ecccad6f588bfd39e565c29b79c544c569dfe8858508"
+  },
+  {
+    "path": "runs/s147/measurement/partial-state.json",
+    "bytes": 5036887,
+    "sha256": "9fc99cefa66072911d49cfd8dbdde3c12e488531d551c205cf80c98468691707"
+  },
+  {
+    "path": "runs/s147/measurement/partial.json",
+    "bytes": 126,
+    "sha256": "6e741aef5b2f1af65315f6ecff00f8be6a66cc3b869d24b9709bc97a0434f179"
+  },
+  {
+    "path": "runs/s147/measurement/started.json",
+    "bytes": 113,
+    "sha256": "dc6dfc969ad9493e5400ca6af954b079dd17517b3f396478bd04d3ddc2363b46"
+  }
+]

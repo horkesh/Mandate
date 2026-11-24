@@ -1,0 +1,257 @@
+{
+  "scope": "Only listed excerpts read; quoted papers distinguish issue, receipt and retrospective report. Historical facts [H]; software observations [M]; proposed policy/counterfactual [I].",
+  "receipts": [
+    {
+      "path": "docs/research/S144/read/Regs-1857-p23.txt",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "23",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "sha256": "de63737441e1ae58d1e76afb8adcb600e4590f904b57dd3785cead526f1b2d1c",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\0255005.nlm.nih.gov-full.txt",
+      "method": "Exact OCR interval between retained running headers/paragraph; wording uncorrected; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/Regs-1857-p63.txt",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "63",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "sha256": "fc614144bb94d944008ab72699603bb5b8953a449e29fa805fe3260183ad51b2",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\0255005.nlm.nih.gov-full.txt",
+      "method": "Exact OCR interval between retained running headers/paragraph; wording uncorrected; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/Regs-1857-p126-excerpt.txt",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "126, paragraph977 (excerpt)",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "sha256": "2addda21b3d3e8b18f8a0830ccf88d1d773ed60ba9726703e6cc34a0fb2917d3",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\0255005.nlm.nih.gov-full.txt",
+      "method": "Exact OCR interval between retained running headers/paragraph; wording uncorrected; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/Regs-1857-p430-431.txt",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "430-431",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "sha256": "b5c2f46592cc0b21739e79937755d6c3027ed3288134bda9e1305c2a3108b297",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\0255005.nlm.nih.gov-full.txt",
+      "method": "Exact OCR interval between retained running headers/paragraph; wording uncorrected; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/Regs-1857-p2-3.txt",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "2-3",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "sha256": "7351b34d8c0baa74ddbab890325908936d7689ada5b868004321876cb8757a45",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\Regs-1857-p2-3.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/Regs-1857-p57-60.txt",
+      "work": "Regulations for the Army of the United States (1857)",
+      "printed_pages": "57-60",
+      "url": "https://archive.org/details/0255005.nlm.nih.gov",
+      "sha256": "2a77917eb449b544928b703e2b14baeed296adf5692d88c59b9b9d0071af0c24",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\Regs-1857-p57-60.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p166.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "166",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n185/mode/1up",
+      "sha256": "fc8cc23cc6406a20bc23aeb1d3be58afcf34cf5c715c07b186bccdaa278da462",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p166.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p607.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "607",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n626/mode/1up",
+      "sha256": "1585b0b88abf67d7ba57552a0265135dde032c1a4a3de437ce486dbea18bce2c",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p607.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p619.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "619",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n638/mode/1up",
+      "sha256": "5f48431b0ab6203dc0ab9dab0a3e931036b28acf22f632a07d1a379677f3df7f",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p619.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p620.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "620",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n639/mode/1up",
+      "sha256": "eaee8e5f203d54bba6e79ca43492a08006b0b859ff43a94e152919641a24c0fa",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p620.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p652.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "652",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n671/mode/1up",
+      "sha256": "f96ec6b9da93282b74e4b3370be13b9ecfd27214f60cd9c2f1a9c255c1f92112",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p652.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p653.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "653",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n672/mode/1up",
+      "sha256": "ac1468e6be69560dbfc8d656264047a267df657320a33c502b1a19450abe05f6",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p653.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p742.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "742",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n761/mode/1up",
+      "sha256": "41a9438fb8522ff28bcc1453175cf5e8940a4be2f3a949b455029ac03e925e9c",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p742.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p747.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "747",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n766/mode/1up",
+      "sha256": "2c6f6312d35f4fd8585bfbef3cf8f98ee86a22f0e74ce4cc095e75189ed11322",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p747.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p751.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "751",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n770/mode/1up",
+      "sha256": "b04971d1f93ade0a08e6616480410a8cbcb90b7e83e6aabaf281596cde75ac25",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p751.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p754.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "754",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n773/mode/1up",
+      "sha256": "b7910eb1d5ee06ea1bebb9b1096d54666d12bfdd306f945dcc606e4fe81a8874",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p754.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p775.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "775",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n794/mode/1up",
+      "sha256": "07fb853c1294e9ddf47ca042f5ebec920cda183561ca7f166cfa4edf4d5602f2",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p775.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p776.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "776",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n795/mode/1up",
+      "sha256": "2f017b2174ad769bd1dd32abd85821af7ed7ac1d446666f9f9a3514b2d223b3b",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p776.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p827.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "827",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n846/mode/1up",
+      "sha256": "50662c4bd18fe19d1ca78b07f8ef74d20b701bed37c66556e173b37f83818197",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p827.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p872.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "872",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n891/mode/1up",
+      "sha256": "7caebfed6ffdf9a1c2ce8dc03ec2ccd1d4147a296266b4db553643d27518cb0d",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p872.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p911.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "911",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n930/mode/1up",
+      "sha256": "308a6be3a13e854e5912726664d80e01386ee6980c1f15c554c2912d89c7c7e9",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p911.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p912.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "912",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n931/mode/1up",
+      "sha256": "01c8ac94f1c8b3b611066d5c33d43c43fe72ade39fb7aecda914a99713138829",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p912.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p932.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "932",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n951/mode/1up",
+      "sha256": "8f96af17a13eb2a9c33b64932197a0d6f44496c09eba0b44ee86f50522243482",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p932.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p933.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "933",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n952/mode/1up",
+      "sha256": "3f39dfc43ca94369214823a745ec4ca93e89fa8a6831242e258c508a03e53c7a",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p933.txt",
+      "method": "Read selected primary OCR; no fresh scan collation or whole-volume claim; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p783.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "783",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n802/mode/1up",
+      "sha256": "f50507082b29243155cec0e1da0c28914b447731201c27f79fbad04ccd1026c2",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "method": "Read indexed primary OCR page; index=printed page+19; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p882.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "882",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n901/mode/1up",
+      "sha256": "4ff4b7e021168d5a9c067434e890c35929e81e1671ae3384678b73e3bf0a093a",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "method": "Read indexed primary OCR page; index=printed page+19; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p896.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "896",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n915/mode/1up",
+      "sha256": "e198be1cb8143aab65c29a04d87a09f3a97470104f60f40a0af1928027c38cf8",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "method": "Read indexed primary OCR page; index=printed page+19; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    },
+    {
+      "path": "docs/research/S144/read/OR-I-II-p907.txt",
+      "work": "Official Records, series I, volume II",
+      "printed_pages": "907",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n926/mode/1up",
+      "sha256": "4e5830c4ee1c04315d055dcf67682be53287eb8a4e6208e91132cbd8363a5a24",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "method": "Read indexed primary OCR page; index=printed page+19; no fresh scan collation; delivery normalises line endings to LF and removes trailing whitespace only"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { executeForceOption } from './force-requests.ts';
 import { canonicalHash } from '../serialize/hash.ts';
 /** Transport/compliance coordinator: authority itself is written by command. */
 import { activeMandate, commitAuthority, enactMandate, inSubtree, mandateAt, mayCommit } from '../command/authority.ts';
@@ -112,6 +113,7 @@ export function executeLocal(ctx: TickContext, state: State, person: PersonId, o
   // Rebuild from execution state, not a caller-supplied candidate or the frozen menu.
   const fresh = localOptions(ctx.world,state,person,ctx.day).find(o => o.id === option.id);
   if (fresh === undefined) return { state, reason: 'bad_selection' };
+  if (fresh.kind === 'force-request' || fresh.kind === 'force-answer') return {state:executeForceOption(ctx,state,person,fresh),reason:null};
   if (fresh.kind === 'grant') return { state, reason: issueMandate(ctx,state,seatIdFor(person),{ cmd: 'mandate', paper: fresh.paper.id, route: 'courier' }) };
   if (fresh.kind === 'allocation') return {state,reason:issueAllocation(ctx,state,seatIdFor(person),{cmd:'allocation',paper:fresh.paper.id,route:'courier'})};
   if (fresh.kind === 'allocation-fulfil') return {state:fulfilAllocation(ctx,state,fresh.order),reason:null};

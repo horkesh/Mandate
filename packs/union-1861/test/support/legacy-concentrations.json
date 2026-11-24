@@ -1,0 +1,119 @@
+{
+  "union": {
+    "concentrateAt": "us_dc_militia",
+    "concentrateSource": "[I] concentration-post stand-in; owner lane 1.14: the post commanding Washington's defences at the start (Stone, Inspector General of the District militia, regulars brought in from February: docs/research/2026-11-14-march-1861-facts.md, NPS CWDW ch. 4); Washington held throughout, isolated 19-25 April, the Department of Washington about 41,000 present on 30 June (docs/research/2026-11-16-numbers-and-facts-1861.md, OR III-1 p. 301; OR I-2 pp. 29-30, 38-40)",
+    "concentrations": [
+      {
+        "post": "us_dept_pennsylvania",
+        "fromDate": "1861-04-27",
+        "requiresDepartment": "us_war",
+        "fromPosts": [
+          "st_gov_pennsylvania",
+          "st_gov_wisconsin"
+        ],
+        "receiveLevies": false,
+        "source": "OR I-LI.1 pp397-398,406,415-416, sourced brigade regiments. S74 [I]: request identified regiments through the sender, never create a historical roster or move an arrival."
+      },
+      {
+        "post": "us_dept_northeastern_virginia",
+        "fromDate": "1861-05-28",
+        "requiresDepartment": "us_war",
+        "fromPosts": [
+          "st_gov_connecticut",
+          "st_gov_massachusetts",
+          "st_gov_maine",
+          "st_gov_michigan",
+          "st_gov_minnesota",
+          "st_gov_new_hampshire",
+          "st_gov_new_jersey",
+          "st_gov_new_york",
+          "st_gov_ohio",
+          "st_gov_rhode_island",
+          "st_gov_vermont"
+        ],
+        "source": "OR I-2 pp.303-309,314-315,751,754. [I] The dated McDowell department is not the whole Washington garrison or any whole statewide requisition. The model call batches have no named regiment membership, so their July command allocation remains unresolved. Keep them with their current posts; do not apply the 37,321 departmental duty total to these batches or distribute it over divisions. S74/0108: identified lots can now be requested; senders select regiments by compliance, and movement owns arrivals. [I] Shared-state requests prefer the Pennsylvania department for Pennsylvania/Wisconsin, the Washington-facing department for the other supplied states.",
+        "receiveLevies": false
+      }
+    ]
+  },
+  "confederate": {
+    "concentrateAt": "cs_cmd_charleston",
+    "concentrateSource": "[I] concentration-post stand-in; owner lane 1.14: Beauregard's command at Charleston: 3,700 at the posts and batteries on 9 April with 3,000 more due the next day, under instructions of 1 March limiting him to 5,000 (docs/research/2026-11-16-numbers-and-facts-1861.md, OR I-1 pp. 290, 293)",
+    "concentrations": [
+      {
+        "post": "cs_cmd_harpers_ferry",
+        "fromDate": "1861-05-23",
+        "requiresDepartment": "st_virginia",
+        "fromPosts": [
+          "st_va_harpers_ferry",
+          "st_gov_alabama",
+          "st_gov_georgia",
+          "st_gov_mississippi",
+          "st_gov_virginia"
+        ],
+        "source": "OR I-II p.470, Johnston roster of 30 June: Virginia, Georgia, Alabama and Mississippi regiments, and two separately requested Tennessee regiments. [I] Existing broad requests retain their prior allocation precedence; the local Harpers Ferry contingent remains included.",
+        "receiveLevies": false
+      },
+      {
+        "post": "cs_cmd_manassas",
+        "fromDate": "1861-05-31",
+        "requiresDepartment": "st_virginia",
+        "fromPosts": [
+          "st_va_potomac",
+          "st_gov_alabama",
+          "st_gov_louisiana",
+          "st_gov_mississippi",
+          "st_gov_south_carolina",
+          "st_gov_virginia"
+        ],
+        "source": "OR I-II pp.943-944, General Orders No.20, 20 June: South Carolina, Alabama, Louisiana, Mississippi and Virginia regiments; p.470 lists unbrigaded Louisiana units. S77 [I]: ask the raising posts for their actual raised lots through the existing sender compliance and movement. A known regiment count is sufficient for a whole aggregate transfer; no identity or regimental strength is invented. Generated lots stay generated. Keep the two local Manassas battalions opaque. Charleston harbour forces are not silently emptied or renamed as this field army.",
+        "receiveLevies": false
+      },
+      {
+        "post": "cs_cmd_manassas",
+        "fromDate": "1861-07-17",
+        "requiresDepartment": "st_virginia",
+        "fromPosts": [
+          "st_gov_north_carolina"
+        ],
+        "receiveLevies": false,
+        "source": "OR I-II pp.980-981, Cooper/Davis dispatches and SO224, 17-18 July: McRae North Carolina regiment directed to Manassas. S77 [I]: a source-guided request to the raising command through ordinary compliance; no named arrival or headcount is created, and generated lots retain their identities."
+      },
+      {
+        "id": "johnston_tennessee_named",
+        "post": "cs_cmd_harpers_ferry",
+        "fromDate": "1861-06-01",
+        "requiresDepartment": "st_virginia",
+        "fromPosts": [
+          "st_gov_tennessee"
+        ],
+        "namedRegiments": {
+          "afterCall": "cs_apr22_absolute_tennessee",
+          "ids": [
+            "tn_1_infantry",
+            "tn_3_infantry"
+          ]
+        },
+        "receiveLevies": false,
+        "source": "OR I-II pp.898,470,472. Turney specifically ordered to report to Johnston; the June 30 return and arrival narrative identify the Third in that army. The roster can guide the request; the Third has no proved April-call identity. No State-pool lot is included."
+      },
+      {
+        "id": "fredericksburg_bate_named",
+        "post": "cs_cmd_fredericksburg",
+        "fromDate": "1861-05-25",
+        "requiresDepartment": "st_virginia",
+        "fromPosts": [
+          "st_gov_tennessee"
+        ],
+        "namedRegiments": {
+          "afterCall": "cs_apr22_absolute_tennessee",
+          "ids": [
+            "tn_2_infantry"
+          ]
+        },
+        "receiveLevies": false,
+        "source": "OR I-LI.2 p.107, SO119, directs Bate to report to Ruggles at Fredericksburg; OR I-II pp.56,907 attest presence and the later Holmes assignment. [I] Address a request for the existing April-call lot to the modeled Fredericksburg command once its appointment and the call answer are received."
+      }
+    ]
+  }
+}

@@ -354,8 +354,8 @@
         {
           "faction": "union",
           "crossNeutral": false,
-          "concentrateAt": "us_dc_militia",
-          "concentrateSource": "[I] concentration-post stand-in; owner lane 1.14: the post commanding Washington's defences at the start (Stone, Inspector General of the District militia, regulars brought in from February: docs/research/2026-11-14-march-1861-facts.md, NPS CWDW ch. 4); Washington held throughout, isolated 19-25 April, the Department of Washington about 41,000 present on 30 June (docs/research/2026-11-16-numbers-and-facts-1861.md, OR III-1 p. 301; OR I-2 pp. 29-30, 38-40)",
+          "concentrateAt": null,
+          "concentrateSource": null,
           "calls": [
             {
               "id": "us_may03_accepted_new_york",
@@ -582,6 +582,14 @@
           ],
           "offensives": [
             {
+              "id": "s150_mcdowell_department_hold",
+              "post": "us_dept_northeastern_virginia",
+              "objective": "northern_virginia",
+              "posture": "hold",
+              "fromDate": "1861-05-28",
+              "source": "GO1861 p.61, GO26,27May1861, creates McDowell’s department with movable headquarters; reprinted OR I-II p.653. OR I-LI.1 p.389, GO1,28May, records his assumption; OR I-II pp.59-60 places headquarters at Arlington. [I] Existing hold grammar represents the assigned local command at its model headquarters region from assumption. Government principal issues through the existing chain, as for Holmes and Johnston. No claim that Lincoln authored GO1, no opening troops, forced arrival, brigade declaration or crossing of the Potomac; ordinary receipt, compliance and planning decide."
+            },
+            {
               "post": "us_dept_northeastern_virginia",
               "objective": "manassas",
               "fromDate": "1861-07-16",
@@ -733,39 +741,7 @@
               "naval_officer"
             ]
           },
-          "concentrations": [
-            {
-              "post": "us_dept_pennsylvania",
-              "fromDate": "1861-04-27",
-              "requiresDepartment": "us_war",
-              "fromPosts": [
-                "st_gov_pennsylvania",
-                "st_gov_wisconsin"
-              ],
-              "receiveLevies": false,
-              "source": "OR I-LI.1 pp397-398,406,415-416, sourced brigade regiments. S74 [I]: request identified regiments through the sender, never create a historical roster or move an arrival."
-            },
-            {
-              "post": "us_dept_northeastern_virginia",
-              "fromDate": "1861-05-28",
-              "requiresDepartment": "us_war",
-              "fromPosts": [
-                "st_gov_connecticut",
-                "st_gov_massachusetts",
-                "st_gov_maine",
-                "st_gov_michigan",
-                "st_gov_minnesota",
-                "st_gov_new_hampshire",
-                "st_gov_new_jersey",
-                "st_gov_new_york",
-                "st_gov_ohio",
-                "st_gov_rhode_island",
-                "st_gov_vermont"
-              ],
-              "source": "OR I-2 pp.303-309,314-315,751,754. [I] The dated McDowell department is not the whole Washington garrison or any whole statewide requisition. The model call batches have no named regiment membership, so their July command allocation remains unresolved. Keep them with their current posts; do not apply the 37,321 departmental duty total to these batches or distribute it over divisions. S74/0108: identified lots can now be requested; senders select regiments by compliance, and movement owns arrivals. [I] Shared-state requests prefer the Pennsylvania department for Pennsylvania/Wisconsin, the Washington-facing department for the other supplied states.",
-              "receiveLevies": false
-            }
-          ],
+          "concentrations": [],
           "letterNamespace": "us_army_orders",
           "consultations": [
             {
@@ -999,8 +975,8 @@
         {
           "faction": "confederate",
           "crossNeutral": false,
-          "concentrateAt": "cs_cmd_charleston",
-          "concentrateSource": "[I] concentration-post stand-in; owner lane 1.14: Beauregard's command at Charleston: 3,700 at the posts and batteries on 9 April with 3,000 more due the next day, under instructions of 1 March limiting him to 5,000 (docs/research/2026-11-16-numbers-and-facts-1861.md, OR I-1 pp. 290, 293)",
+          "concentrateAt": null,
+          "concentrateSource": null,
           "calls": [
             {
               "id": "cs_mar09_alabama",
@@ -1246,8 +1222,13 @@
               "regiments": 2,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
-              "termsId": "cs_apr22_absolute_alabama"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S150: OR IV-I pp.231-233 read sending request to governor office; Direct printed governor address and rendezvous. 0126 governor undertaking sends this existing finite call as an offer to lynchburg; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
+              "termsId": "cs_apr22_absolute_alabama",
+              "address": "office",
+              "offer": {
+                "region": "lynchburg",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_apr22_absolute_arkansas",
@@ -1255,7 +1236,7 @@
               "regiments": 1,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S124/0126: office address from OR I-I pp.687-688. [I] The War Department is the administrative receiving post at the named Lynchburg rendezvous; no receiving officer or historical receipt is reconstructed.",
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S124/0126: office address from OR I-I pp.687-688. [I] The War Department is the administrative receiving post at the named Lynchburg rendezvous; no receiving officer or historical receipt is reconstructed. S150: OR IV-I pp.231-233 read sending request to governor office; AR/NC/TN destinations are printed same-mutatis-mutandis notice, not separate original copies. 0126 governor undertaking sends this existing finite call as an offer to lynchburg; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
               "termsId": "cs_apr22_absolute_arkansas",
               "address": "office",
               "offer": {
@@ -1269,8 +1250,13 @@
               "regiments": 2,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
-              "termsId": "cs_apr22_absolute_georgia"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S150: OR IV-I pp.231-233 read sending request to governor office; Direct printed governor address and rendezvous. 0126 governor undertaking sends this existing finite call as an offer to richmond; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
+              "termsId": "cs_apr22_absolute_georgia",
+              "address": "office",
+              "offer": {
+                "region": "richmond",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_apr22_absolute_kentucky",
@@ -1278,8 +1264,13 @@
               "regiments": 1,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
-              "termsId": "cs_apr22_absolute_kentucky"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S150: OR IV-I pp.231-233 read sending request to governor office; Direct printed governor address and rendezvous. 0126 governor undertaking sends this existing finite call as an offer to harpers_ferry; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
+              "termsId": "cs_apr22_absolute_kentucky",
+              "address": "office",
+              "offer": {
+                "region": "harpers_ferry",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_apr22_absolute_louisiana",
@@ -1287,8 +1278,13 @@
               "regiments": 1,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
-              "termsId": "cs_apr22_absolute_louisiana"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S150: OR IV-I pp.231-233 read sending request to governor office; Direct printed governor address and rendezvous. 0126 governor undertaking sends this existing finite call as an offer to richmond; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
+              "termsId": "cs_apr22_absolute_louisiana",
+              "address": "office",
+              "offer": {
+                "region": "richmond",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_apr22_absolute_mississippi",
@@ -1296,8 +1292,13 @@
               "regiments": 2,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
-              "termsId": "cs_apr22_absolute_mississippi"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S150: OR IV-I pp.231-233 read sending request to governor office; Direct printed governor address and rendezvous. 0126 governor undertaking sends this existing finite call as an offer to lynchburg; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
+              "termsId": "cs_apr22_absolute_mississippi",
+              "address": "office",
+              "offer": {
+                "region": "lynchburg",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_apr22_absolute_north_carolina",
@@ -1305,8 +1306,13 @@
               "regiments": 1,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
-              "termsId": "cs_apr22_absolute_north_carolina"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S150: OR IV-I pp.231-233 read sending request to governor office; AR/NC/TN destinations are printed same-mutatis-mutandis notice, not separate original copies. 0126 governor undertaking sends this existing finite call as an offer to richmond; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
+              "termsId": "cs_apr22_absolute_north_carolina",
+              "address": "office",
+              "offer": {
+                "region": "richmond",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_apr22_absolute_tennessee",
@@ -1314,7 +1320,7 @@
               "regiments": 3,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S119: the known quota is three regiments; Harris does not report an actual number of men or stragglers (OR IV-I pp.272,275). S122/0125/0127: the model-raised lots keep their own legal-minimum rule quantity; historical naming supplies no personnel return. S124/0126: office address from OR IV-I p.272. [I] The War Department is the administrative receiving post at the named Lynchburg rendezvous; no receiving officer or historical receipt is reconstructed.",
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S119: the known quota is three regiments; Harris does not report an actual number of men or stragglers (OR IV-I pp.272,275). S122/0125/0127: the model-raised lots keep their own legal-minimum rule quantity; historical naming supplies no personnel return. S124/0126: office address from OR IV-I p.272. [I] The War Department is the administrative receiving post at the named Lynchburg rendezvous; no receiving officer or historical receipt is reconstructed. S150: OR IV-I pp.231-233 read sending request to governor office; AR/NC/TN destinations are printed same-mutatis-mutandis notice, not separate original copies. 0126 governor undertaking sends this existing finite call as an offer to lynchburg; same call identity, quantity and service terms. [I] Existing War Department administrative receiving abstraction extends to this stated rendezvous; no receiving officer, named regiment, departure or historical receipt invented. Optional second Louisiana regiment remains a separate conditional gap, not an extra quota.",
               "termsId": "cs_apr22_absolute_tennessee",
               "address": "office",
               "offer": {
@@ -1526,6 +1532,14 @@
           ],
           "offensives": [
             {
+              "id": "s150_beauregard_manassas_hold",
+              "post": "cs_cmd_manassas",
+              "objective": "manassas",
+              "posture": "hold",
+              "fromDate": "1861-05-31",
+              "source": "OR I-II p.896, Special Orders149,31May1861, assigns Beauregard to troops in the Alexandria line; pp.901-902, his3June letter from Camp Pickens records arrival1June. [I] Existing hold grammar represents his assigned local command at the model Manassas post from the assignment lower bound. Government principal issues through the existing Cooper chain, as for Holmes and Johnston. Not a claim that Davis authored Lee’s order; no forced arrival, troop transfer, battle or new conditional station terms."
+            },
+            {
               "id": "johnston_harpers_hold",
               "post": "cs_cmd_harpers_ferry",
               "objective": "harpers_ferry",
@@ -1607,82 +1621,7 @@
               "source": "OR I-II p.907, Special Orders64 IV, 5 June1861, directs Holmes to Fredericksburg and command in its vicinity. [I] Government principal issues this sourced appointment through ordinary service eligibility, latency and answer; no pre-positioning, force or automatic acceptance. Subsequent hold uses his actual appointed post, not C26 peer disagreement."
             }
           ],
-          "concentrations": [
-            {
-              "post": "cs_cmd_harpers_ferry",
-              "fromDate": "1861-05-23",
-              "requiresDepartment": "st_virginia",
-              "fromPosts": [
-                "st_va_harpers_ferry",
-                "st_gov_alabama",
-                "st_gov_georgia",
-                "st_gov_mississippi",
-                "st_gov_virginia"
-              ],
-              "source": "OR I-II p.470, Johnston roster of 30 June: Virginia, Georgia, Alabama and Mississippi regiments, and two separately requested Tennessee regiments. [I] Existing broad requests retain their prior allocation precedence; the local Harpers Ferry contingent remains included.",
-              "receiveLevies": false
-            },
-            {
-              "post": "cs_cmd_manassas",
-              "fromDate": "1861-05-31",
-              "requiresDepartment": "st_virginia",
-              "fromPosts": [
-                "st_va_potomac",
-                "st_gov_alabama",
-                "st_gov_louisiana",
-                "st_gov_mississippi",
-                "st_gov_south_carolina",
-                "st_gov_virginia"
-              ],
-              "source": "OR I-II pp.943-944, General Orders No.20, 20 June: South Carolina, Alabama, Louisiana, Mississippi and Virginia regiments; p.470 lists unbrigaded Louisiana units. S77 [I]: ask the raising posts for their actual raised lots through the existing sender compliance and movement. A known regiment count is sufficient for a whole aggregate transfer; no identity or regimental strength is invented. Generated lots stay generated. Keep the two local Manassas battalions opaque. Charleston harbour forces are not silently emptied or renamed as this field army.",
-              "receiveLevies": false
-            },
-            {
-              "post": "cs_cmd_manassas",
-              "fromDate": "1861-07-17",
-              "requiresDepartment": "st_virginia",
-              "fromPosts": [
-                "st_gov_north_carolina"
-              ],
-              "receiveLevies": false,
-              "source": "OR I-II pp.980-981, Cooper/Davis dispatches and SO224, 17-18 July: McRae North Carolina regiment directed to Manassas. S77 [I]: a source-guided request to the raising command through ordinary compliance; no named arrival or headcount is created, and generated lots retain their identities."
-            },
-            {
-              "id": "johnston_tennessee_named",
-              "post": "cs_cmd_harpers_ferry",
-              "fromDate": "1861-06-01",
-              "requiresDepartment": "st_virginia",
-              "fromPosts": [
-                "st_gov_tennessee"
-              ],
-              "namedRegiments": {
-                "afterCall": "cs_apr22_absolute_tennessee",
-                "ids": [
-                  "tn_1_infantry",
-                  "tn_3_infantry"
-                ]
-              },
-              "receiveLevies": false,
-              "source": "OR I-II pp.898,470,472. Turney specifically ordered to report to Johnston; the June 30 return and arrival narrative identify the Third in that army. The roster can guide the request; the Third has no proved April-call identity. No State-pool lot is included."
-            },
-            {
-              "id": "fredericksburg_bate_named",
-              "post": "cs_cmd_fredericksburg",
-              "fromDate": "1861-05-25",
-              "requiresDepartment": "st_virginia",
-              "fromPosts": [
-                "st_gov_tennessee"
-              ],
-              "namedRegiments": {
-                "afterCall": "cs_apr22_absolute_tennessee",
-                "ids": [
-                  "tn_2_infantry"
-                ]
-              },
-              "receiveLevies": false,
-              "source": "OR I-LI.2 p.107, SO119, directs Bate to report to Ruggles at Fredericksburg; OR I-II pp.56,907 attest presence and the later Holmes assignment. [I] Address a request for the existing April-call lot to the modeled Fredericksburg command once its appointment and the call answer are received."
-            }
-          ],
+          "concentrations": [],
           "proposalAnswers": [
             {
               "id": "johnston_valley_discretion",
@@ -16280,7 +16219,7 @@
       {
         "id": "s123_scott_1841",
         "fromDate": "1841-07-05",
-        "source": "Richardson IV p.73, presidential General Orders of 5 July 1841; Army Regulations 1857 pp.2-3 paras.7-14 and pp.57-60 paras.422-447. Retained read texts: docs/research/S123/sources/.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. The runtime principal transmits the declared Army office grant; this is not a claim that Lincoln wrote the 1841 instrument. Army land-domain mapping and strict exclusion of state-governor and Navy peers: docs/research/S123/standing-mandates.md. [I:S130] The newly offered field-goal form is included under 0124 item2, inside this same read Army assignment and its existing troops/territory; no new force, guard or authority root.",
+        "source": "Richardson IV p.73, presidential General Orders of 5 July 1841; Army Regulations 1857 pp.2-3 paras.7-14 and pp.57-60 paras.422-447. Retained read texts: docs/research/S123/sources/.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. The runtime principal transmits the declared Army office grant; this is not a claim that Lincoln wrote the 1841 instrument. Army land-domain mapping and strict exclusion of state-governor and Navy peers: docs/research/S123/standing-mandates.md. [I:S130] The newly offered field-goal form is included under 0124 item2, inside this same read Army assignment and its existing troops/territory; no new force, guard or authority root. [I:S147/0133] Assignment of actual troops within this received command follows 0124 item2 and Regulations1857 pp.58-60 paras.424-429,438-441. No wider recipient, territory or force ceiling is added.",
         "grant": {
           "mandateKey": "scott_army_command",
           "mandateRevision": 1,
@@ -16294,7 +16233,8 @@
             "relieve",
             "take",
             "attack_or_demonstrate",
-            "approve"
+            "approve",
+            "assign"
           ],
           "mandateRecipients": [
             "us_general_in_chief"
@@ -16544,7 +16484,7 @@
       {
         "id": "s123_patterson_go12",
         "fromDate": "1861-04-27",
-        "source": "OR I-II p.607, War Department GO12 of 27 April 1861, para.3; Regulations 1857 pp.57-60 paras.422-447. GO23 on p.611 gives twelve miles where GO12 gives twenty; the issuer GO12 governs.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. No Virginia region is in this standing grant. Ambiguous mixed Maryland regions are withheld; exact mapping and discrepancy: docs/research/S123/standing-mandates.md.",
+        "source": "OR I-II p.607, War Department GO12 of 27 April 1861, para.3; Regulations 1857 pp.57-60 paras.422-447. GO23 on p.611 gives twelve miles where GO12 gives twenty; the issuer GO12 governs.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. No Virginia region is in this standing grant. Ambiguous mixed Maryland regions are withheld; exact mapping and discrepancy: docs/research/S123/standing-mandates.md. [I:S147/0133] Assignment of actual troops within this received command follows 0124 item2 and Regulations1857 pp.58-60 paras.424-429,438-441. No wider recipient, territory or force ceiling is added.",
         "grant": {
           "mandateKey": "patterson_department_command",
           "mandateRevision": 1,
@@ -16557,7 +16497,8 @@
             "hold",
             "relieve",
             "take",
-            "approve"
+            "approve",
+            "assign"
           ],
           "mandateRecipients": [
             "us_dept_pennsylvania"
@@ -16853,6 +16794,102 @@
             "cs_secretary_war"
           ]
         }
+      },
+      {
+        "id": "s147_mansfield_go12",
+        "fromDate": "1861-04-27",
+        "source": "OR I-II p.607 GO12 paragraph1 assigns Mansfield with Washington headquarters. Regulations1857 pp.58-60 paras.424-429,438-441. [I] Washington region only; original District overlap and Maryland fragments are withheld. [I] Executable field permissions and movement modes under0124; only actual troops, no numeric ceiling, guard or fitted establishment. Issue eligibility never opens a post or delivers troops.",
+        "grant": {
+          "mandateKey": "mansfield_go12",
+          "mandateRevision": 1,
+          "mandateIssuer": "lincoln_abraham",
+          "mandateIssuerPost": null,
+          "mandateHolder": "mansfield_joseph_k_f",
+          "mandatePost": "us_dept_washington",
+          "mandateParent": null,
+          "mandateActions": [
+            "hold",
+            "relieve",
+            "take",
+            "approve",
+            "assign"
+          ],
+          "mandateRecipients": [
+            "us_dept_washington"
+          ],
+          "mandateRegions": [
+            "washington"
+          ],
+          "mandateModes": [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ],
+          "mandateCeiling": {
+            "ceilingPost": "us_dept_washington",
+            "ceilingMen": null
+          },
+          "mandateGuard": null,
+          "mandateExpires": null,
+          "mandateReports": [
+            "copies_of_orders_to_adjutant_general",
+            "operations_and_position"
+          ],
+          "mandateOnward": true,
+          "mandateRevoke": false
+        },
+        "assignment": {}
+      },
+      {
+        "id": "s147_mcdowell_go26",
+        "fromDate": "1861-05-27",
+        "source": "OR I-II p.653 GO26,27May and McDowell29May report. [I] Conservative model-region mapping of the north-of-James/east-of-Alleghanies department; northern_virginia is withheld for unresolved original-District overlap, and coastal sixty-mile fragments are withheld. Existing appointment still opens the post separately. [I] Executable field permissions and movement modes under0124; only actual troops, no numeric ceiling, guard or fitted establishment. Issue eligibility never opens a post or delivers troops.",
+        "grant": {
+          "mandateKey": "mcdowell_go26",
+          "mandateRevision": 1,
+          "mandateIssuer": "lincoln_abraham",
+          "mandateIssuerPost": null,
+          "mandateHolder": "mcdowell_irvin",
+          "mandatePost": "us_dept_northeastern_virginia",
+          "mandateParent": null,
+          "mandateActions": [
+            "hold",
+            "relieve",
+            "take",
+            "approve",
+            "assign"
+          ],
+          "mandateRecipients": [
+            "us_dept_northeastern_virginia"
+          ],
+          "mandateRegions": [
+            "manassas",
+            "culpeper_orange",
+            "loudoun_fauquier",
+            "lower_valley",
+            "middle_valley",
+            "upper_valley"
+          ],
+          "mandateModes": [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ],
+          "mandateCeiling": {
+            "ceilingPost": "us_dept_northeastern_virginia",
+            "ceilingMen": null
+          },
+          "mandateGuard": null,
+          "mandateExpires": null,
+          "mandateReports": [
+            "copies_of_orders_to_adjutant_general",
+            "operations_and_position"
+          ],
+          "mandateOnward": true,
+          "mandateRevoke": false
+        }
       }
     ],
     "onwardAssignments": [
@@ -16884,6 +16921,589 @@
         "mandate": "lee_confederate_virginia",
         "call": "cs_apr22_absolute_tennessee",
         "regiment": "tn_1_infantry"
+      }
+    ],
+    "allocationInstruments": [
+      {
+        "id": "s141_cameron_july13_five",
+        "source": "OR I-II p.166, Cameron to Governor Curtin, 13 July 1861 (S138 U07). Five long-term Pennsylvania regiments, in addition to two at Cumberland, to Patterson, say at Harpers Ferry. [I] Government through Cameron is rooted in the principal under 0129. Long-term means strictly longer than the existing 90-day call family: minTermDays 91 is a service-class comparator, not a new duration or muster rule. No call identity, regiment identity, arm, receipt or departure is inferred. Existing offers take precedence; no substitute for the two at Cumberland is added.",
+        "fromDate": "1861-07-13",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_pennsylvania",
+        "to": "us_dept_pennsylvania",
+        "destination": "harpers_ferry",
+        "letter": {
+          "namespace": "government_us_allocation",
+          "key": "cameron_july13_five",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "minTermDays": 91
+        },
+        "words": "send five of the long-term regiments of Pennsylvania Volunteers, in addition to the two at Cumberland, to report to Major-General Patterson, say at Harpers Ferry",
+        "quantity": 5
+      },
+      {
+        "id": "s141_cameron_july13_remainder",
+        "source": "OR I-II p.166, Cameron to Curtin, 13 July 1861 (S138 U07), remainder of the long-term regiments to report to Scott in Washington. [I] Separate scoped remainder request, rooted in the government under 0129; the same >90-day service comparator as the finite request. It becomes eligible only on the issuer receiving the sending governor's correlated report of no remaining shortfall on the five. This is causal disjoint selection, not a claim the historical receipt or fulfilment occurred. Washington means Scott's Army office, never automatic McDowell membership. No new call or future continuing sweep.",
+        "fromDate": "1861-07-13",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_pennsylvania",
+        "to": "us_general_in_chief",
+        "destination": "washington",
+        "letter": {
+          "namespace": "government_us_allocation",
+          "key": "cameron_july13_remainder",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "minTermDays": 91
+        },
+        "words": "the remainder of the long-term regiments to report to Lieutenant-General Scott in this city",
+        "quantity": "all",
+        "requiresPapers": [
+          {
+            "kind": "report",
+            "author": "curtin_andrew_g",
+            "authorPost": "st_gov_pennsylvania",
+            "subjectKind": "post",
+            "subjectId": "st_gov_pennsylvania",
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "answers": {
+              "namespace": "government_us_allocation",
+              "key": "cameron_july13_five",
+              "revision": 1
+            },
+            "claims": [
+              {
+                "kind": "allocation-shortfall",
+                "region": null,
+                "token": "s141_cameron_july13_five",
+                "min": 0,
+                "max": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s150_june3_connecticut",
+        "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+        "fromDate": "1861-06-03",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_connecticut",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_june3_connecticut",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1095
+        },
+        "words": "your three-years' regiments as soon as organized. Report when",
+        "quantity": "all",
+        "continuing": true
+      },
+      {
+        "id": "s150_june3_maine",
+        "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+        "fromDate": "1861-06-03",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_maine",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_june3_maine",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1095
+        },
+        "words": "your three-years' regiments as soon as organized. Report when",
+        "quantity": "all",
+        "continuing": true
+      },
+      {
+        "id": "s150_june3_michigan",
+        "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+        "fromDate": "1861-06-03",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_michigan",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_june3_michigan",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1095
+        },
+        "words": "your three-years' regiments as soon as organized. Report when",
+        "quantity": "all",
+        "continuing": true
+      },
+      {
+        "id": "s150_june3_new_hampshire",
+        "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+        "fromDate": "1861-06-03",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_new_hampshire",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_june3_new_hampshire",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1095
+        },
+        "words": "your three-years' regiments as soon as organized. Report when",
+        "quantity": "all",
+        "continuing": true
+      },
+      {
+        "id": "s150_june3_new_jersey",
+        "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+        "fromDate": "1861-06-03",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_new_jersey",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_june3_new_jersey",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1095
+        },
+        "words": "your three-years' regiments as soon as organized. Report when",
+        "quantity": "all",
+        "continuing": true
+      },
+      {
+        "id": "s150_june3_wisconsin",
+        "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Connecticut direct printing; Maine/Michigan/New Hampshire/New Jersey/Wisconsin supplied by the printed similar-dispatch notice, not separately recovered originals. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+        "fromDate": "1861-06-03",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_wisconsin",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_june3_wisconsin",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1095
+        },
+        "words": "your three-years' regiments as soon as organized. Report when",
+        "quantity": "all",
+        "continuing": true
+      },
+      {
+        "id": "s150_june3_massachusetts",
+        "source": "OR III-I p.246, Cameron, June3; S149 U23/U24. [I]0129 governmental War Department channel rooted in Lincoln; 0133 Washington station is Mansfield, not McDowell. Direct Massachusetts printing; Easton/Harrisburg route remains a named waypoint gap; no route speed or departure hour inferred. Organized means actual mustered whole lots [I], not scheduled departures. Successive preparation is explicit; only three-year infantry, no short-term or state-origin-only sweep.",
+        "fromDate": "1861-06-03",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_massachusetts",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_june3_massachusetts",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1095
+        },
+        "words": "all your three years' regiments as soon as organized",
+        "quantity": "all",
+        "continuing": true
+      },
+      {
+        "id": "s150_connecticut_three",
+        "source": "OR III-I p.160, Cameron to Buckingham May5; S149 U11. [I]0129 government principal; finite named First/Second/Third Connecticut, excluding later Fourth; 0133 Washington station. Sea/Potomac modes retained; precise port/waypoints remain gaps, no journey is promised.",
+        "fromDate": "1861-05-05",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_connecticut",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_connecticut_three",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "named",
+          "regiments": [
+            "ct_1_infantry",
+            "ct_2_infantry",
+            "ct_3_infantry"
+          ]
+        },
+        "words": "Send immediately three regiments, including Colonel Tyler's, of Connecticut Volunteers, to this city by sea via the Potomac River",
+        "quantity": 3,
+        "modes": [
+          "sea",
+          "river"
+        ]
+      },
+      {
+        "id": "s150_michigan_fourth",
+        "source": "OR III-I p.283 Cameron to Blair June20; p.287 Blair names First/Second/Third already near Washington and Fourth next; S149 U33. [I]0129 governmental issuer; Washington station under0133. Elmira/Harrisburg are read intermediate waypoints but exact traversal cannot be required by the existing allocation grammar and stays a named route gap. Arms can be supplied at either place, not a prerequisite invented at the governor.",
+        "fromDate": "1861-06-20",
+        "kind": "request",
+        "issuer": "lincoln_abraham",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_michigan",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_michigan_fourth",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "named",
+          "regiments": [
+            "mi_4_infantry"
+          ]
+        },
+        "words": "Send on your Fourth Regiment by Elmira and Harrisburg. They can be furnished with arms, &c., here or, if necessary, at Harrisburg",
+        "quantity": 1
+      },
+      {
+        "id": "s150_louisiana_sixth_richmond",
+        "source": "OR I-LI.2 p.128 Walker to Moore June4; OR IV-I p.750 Sixth/Seymour/Lay identity; S149 C30. [I]0129 government principal;0126 governor offers Sixth only, still owned by governor until Richmond administrative receiving command receipt. Fifth has no catalogue identity and remains a separate named gap; not replaced by another Louisiana lot. Secretary of War receiving post follows the existing April22 administrative rendezvous abstraction [I], not an invented regimental commander.",
+        "fromDate": "1861-06-04",
+        "kind": "request",
+        "issuer": "davis_jefferson",
+        "issuerPost": null,
+        "mandate": null,
+        "from": "st_gov_louisiana",
+        "to": "cs_secretary_war",
+        "destination": "richmond",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_louisiana_sixth_richmond",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "named",
+          "regiments": [
+            "la_6_infantry"
+          ]
+        },
+        "words": "Please forward the Fifth and Sixth Regiments to Richmond as soon as possible [Sixth clause only; Fifth identity gap]",
+        "quantity": 1
+      },
+      {
+        "id": "s150_scott_june23",
+        "source": "OR I-II p.716 Mansfield to McDowell June23 conveying Scott direction; S149 U54. Scott under read1841 Army assignment and Regulations1857 pp.58-60 (0124); Mansfield is actual Washington sender. Third Connecticut and Tompkins Second NY militia only; not Second NY Volunteers. Wagons are the train: land, not invented rail or steamer; ordinary latency/journey and receipt. Northern Virginia is coarse Arlington mapping [I]; no promise of crossing before8pm.",
+        "fromDate": "1861-06-23",
+        "kind": "assignment",
+        "issuer": "scott_winfield",
+        "issuerPost": "us_general_in_chief",
+        "mandate": "scott_army_command",
+        "from": "us_dept_washington",
+        "to": "us_dept_northeastern_virginia",
+        "destination": "northern_virginia",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_scott_june23",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "named",
+          "regiments": [
+            "ct_3_infantry",
+            "ny_2_militia_infantry"
+          ]
+        },
+        "words": "Third Connecticut Regiment and the Second New York, Colonel Tompkins, shall be sent to you this evening; trains thirty wagons each",
+        "quantity": "all",
+        "modes": [
+          "land"
+        ]
+      },
+      {
+        "id": "s150_scott_willcox",
+        "source": "OR III-I p.200 Townsend conveying Scott to Blair May14; Robertson Michigan in the War1882 p.166 reproduces April24 GO5 identifying Willcox First Michigan and May1 three-month muster. [I]0124 Scott Army mandate solicits governor undertaking, not command over governor. Ordinary0126 offer/journey/receipt at Washington station. Read railroad mode retained; exact Baltimore waypoint remains a route gap.",
+        "fromDate": "1861-05-14",
+        "kind": "request",
+        "issuer": "scott_winfield",
+        "issuerPost": "us_general_in_chief",
+        "mandate": "scott_army_command",
+        "from": "st_gov_michigan",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_scott_willcox",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "named",
+          "regiments": [
+            "mi_1_3m_infantry"
+          ]
+        },
+        "words": "General Scott requests ... regiment of volunteers under Col. O. B. Willcox ... to this city, via railroad to Baltimore and this city",
+        "quantity": 1,
+        "modes": [
+          "rail"
+        ]
+      },
+      {
+        "id": "s150_scott_new_jersey_three",
+        "source": "OR III-I pp.287,296 Olden June21 and Scott June25. Olden names First/Montgomery,Second/McLean,Third/Taylor long-term regiments; distinct from April militia. [I]0124 Scott active Army mandate solicits independent governor undertaking;0126 offer/receipt at Washington station. Rail mode retained; Friday is an issue instruction, never an automatic departure or readiness receipt.",
+        "fromDate": "1861-06-25",
+        "kind": "request",
+        "issuer": "scott_winfield",
+        "issuerPost": "us_general_in_chief",
+        "mandate": "scott_army_command",
+        "from": "st_gov_new_jersey",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_scott_new_jersey_three",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "named",
+          "regiments": [
+            "nj_1_3y_infantry",
+            "nj_2_3y_infantry",
+            "nj_3_3y_infantry"
+          ]
+        },
+        "words": "Please send the three New Jersey regiments to Washington by rail on Friday",
+        "quantity": 3,
+        "modes": [
+          "rail"
+        ]
+      },
+      {
+        "id": "s150_scott_patterson_new_jersey",
+        "source": "OR I-II pp.619-620 Scott to Patterson May4; p.622 Patterson acknowledges receipt May5. NJ StrykerI p.15 explicitly identifies then-existing brigade First/Second/Third/Fourth militia; S149 U12 and S138 U01. [I]0124 Scott active Army mandate and named then-existing cohort, not all future New Jersey. Actual Patterson holdings required; initial governor sending still a separate gap. Seven more for capital is an additional need, not seven invented named regiments. Washington station is not McDowell.",
+        "fromDate": "1861-05-04",
+        "kind": "assignment",
+        "issuer": "scott_winfield",
+        "issuerPost": "us_general_in_chief",
+        "mandate": "scott_army_command",
+        "from": "us_dept_pennsylvania",
+        "to": "us_dept_washington",
+        "destination": "washington",
+        "letter": {
+          "namespace": "s150_sending",
+          "key": "s150_scott_patterson_new_jersey",
+          "revision": 1
+        },
+        "scope": {
+          "kind": "named",
+          "regiments": [
+            "nj_1_3m_infantry",
+            "nj_2_3m_infantry",
+            "nj_3_3m_infantry",
+            "nj_4_3m_infantry"
+          ]
+        },
+        "words": "Send the New Jersey regiments here, and we shall want for the capital seven more",
+        "quantity": "all"
+      }
+    ],
+    "serviceStations": [
+      {
+        "id": "s147_washington",
+        "kind": "station",
+        "region": "washington",
+        "post": "us_dept_washington",
+        "mandate": "mansfield_go12",
+        "source": "OR I-II p.607 GO12 paragraph1, Washington headquarters. [I] Receipt accountability under0133, not McDowell membership."
+      },
+      {
+        "id": "s147_philadelphia",
+        "kind": "station",
+        "region": "philadelphia",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3, Philadelphia headquarters. [I] Only lawful service arrivals; not Pennsylvania recruits at their raising place."
+      },
+      {
+        "id": "s147_northern_virginia_gap",
+        "kind": "territory",
+        "region": "northern_virginia",
+        "post": "us_dept_northeastern_virginia",
+        "mandate": "mcdowell_go26",
+        "partial": true,
+        "source": "OR I-II pp.607,653 GO12 original District and GO26 geographical department. [I] Coarse overlap stays an ambiguous-territory gap."
+      },
+      {
+        "id": "s147_pa_cumberland_valley_pa",
+        "kind": "territory",
+        "region": "cumberland_valley_pa",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_pa_delaware",
+        "kind": "territory",
+        "region": "delaware",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_pa_harrisburg",
+        "kind": "territory",
+        "region": "harrisburg",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_pa_pennsylvania_north",
+        "kind": "territory",
+        "region": "pennsylvania_north",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_pa_pittsburgh",
+        "kind": "territory",
+        "region": "pittsburgh",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_pa_southeast_pa",
+        "kind": "territory",
+        "region": "southeast_pa",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_pa_western_maryland",
+        "kind": "territory",
+        "region": "western_maryland",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_pa_york_adams",
+        "kind": "territory",
+        "region": "york_adams",
+        "post": "us_dept_pennsylvania",
+        "mandate": "patterson_department_command",
+        "source": "OR I-II p.607 GO12 paragraph3; existing conservative territory mapping, not a state-force claim. [I]0133 territorial receiving default."
+      },
+      {
+        "id": "s147_neva_manassas",
+        "kind": "territory",
+        "region": "manassas",
+        "post": "us_dept_northeastern_virginia",
+        "mandate": "mcdowell_go26",
+        "source": "OR I-II p.653 GO26. [I] Conservative north-of-James departmental mapping and0133 receipt default. No territorial change to troops already specifically assigned."
+      },
+      {
+        "id": "s147_neva_culpeper_orange",
+        "kind": "territory",
+        "region": "culpeper_orange",
+        "post": "us_dept_northeastern_virginia",
+        "mandate": "mcdowell_go26",
+        "source": "OR I-II p.653 GO26. [I] Conservative north-of-James departmental mapping and0133 receipt default. No territorial change to troops already specifically assigned."
+      },
+      {
+        "id": "s147_neva_loudoun_fauquier",
+        "kind": "territory",
+        "region": "loudoun_fauquier",
+        "post": "us_dept_northeastern_virginia",
+        "mandate": "mcdowell_go26",
+        "source": "OR I-II p.653 GO26. [I] Conservative north-of-James departmental mapping and0133 receipt default. No territorial change to troops already specifically assigned."
+      },
+      {
+        "id": "s147_neva_lower_valley",
+        "kind": "territory",
+        "region": "lower_valley",
+        "post": "us_dept_northeastern_virginia",
+        "mandate": "mcdowell_go26",
+        "source": "OR I-II p.653 GO26. [I] Conservative north-of-James departmental mapping and0133 receipt default. No territorial change to troops already specifically assigned."
+      },
+      {
+        "id": "s147_neva_middle_valley",
+        "kind": "territory",
+        "region": "middle_valley",
+        "post": "us_dept_northeastern_virginia",
+        "mandate": "mcdowell_go26",
+        "source": "OR I-II p.653 GO26. [I] Conservative north-of-James departmental mapping and0133 receipt default. No territorial change to troops already specifically assigned."
+      },
+      {
+        "id": "s147_neva_upper_valley",
+        "kind": "territory",
+        "region": "upper_valley",
+        "post": "us_dept_northeastern_virginia",
+        "mandate": "mcdowell_go26",
+        "source": "OR I-II p.653 GO26. [I] Conservative north-of-James departmental mapping and0133 receipt default. No territorial change to troops already specifically assigned."
       }
     ]
   },

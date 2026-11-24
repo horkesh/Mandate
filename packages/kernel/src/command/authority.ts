@@ -145,7 +145,7 @@ export function authorityFamily(state: State, a: EnactedMandate): EnactedMandate
   return result;
 }
 /** The same blocks/men cannot be spent by two siblings or their parent. */
-export function mayCommit(map: WorldIndex, state: State, a: EnactedMandate, target: PostId, blocks: readonly ForceBlockId[], assignment?: true | MessageId): boolean {
+export function mayCommit(map: WorldIndex, state: State, a: EnactedMandate, target: PostId, blocks: readonly ForceBlockId[], assignment?: true | MessageId, selectedLots?:ReadonlySet<string>): boolean {
   if (blocks.length === 0 || new Set(blocks).size !== blocks.length) return false;
   return authorityFamily(state,a).every(row => {
     const g = row.authorityGrant;
@@ -155,11 +155,21 @@ export function mayCommit(map: WorldIndex, state: State, a: EnactedMandate, targ
     const uses = row.authorityUses.filter(u => u.useOrder !== assignment && liveUse(state,u) &&
       (u.useTarget !== target || u.useAssignment === true || assignment !== undefined));
     if (uses.some(u => u.useBlocks.some(b => blocks.includes(b)))) return false;
-    const spent = [...new Set([...uses.flatMap(u => u.useBlocks), ...blocks])];
-    const strengths = spent.map(b => forceTotals(state.forceBlockStates[b]!).fbStrength);
-    if (g.mandateCeiling.ceilingMen !== null && (strengths.some(n => n === null) || strengths.reduce<number>((s,n) => s+(n??0),0) > g.mandateCeiling.ceilingMen)) return false;
+    if(g.mandateCeiling.ceilingMen===null && g.mandateGuard===null)return true;
+    // A live order can outlast a disbanded/regrouped container; only extant forces consume its shared ceiling.
+    const alreadySpent = new Set(uses.flatMap(u=>u.useBlocks).filter(b=>state.forceBlockStates[b]!==undefined));
+    // Allocation may be checking a prospective whole-lot split before the new container exists.
+    const strength=(block:ForceBlockId,selected:boolean)=>{
+      const force=state.forceBlockStates[block]!;
+      return forceTotals(selectedLots===undefined?force:{fbLots:force.fbLots.filter(l=>selectedLots.has(l.lotId)===selected)}).fbStrength;
+    };
+    if(g.mandateCeiling.ceilingMen!==null) {
+      const strengths=[...[...alreadySpent].map(b=>forceTotals(state.forceBlockStates[b]!).fbStrength),...blocks.map(b=>strength(b,true))];
+      if(strengths.some(n=>n===null)||strengths.reduce<number>((s,n)=>s+(n??0),0)>g.mandateCeiling.ceilingMen)return false;
+    }
     if (g.mandateGuard !== null) {
-      const retained = authorityBlocks(state,g.mandatePost).filter(b => !spent.includes(b)).map(b => forceTotals(state.forceBlockStates[b]!).fbStrength);
+      const retained = authorityBlocks(state,g.mandatePost).filter(b=>!alreadySpent.has(b)).flatMap(b=>
+        blocks.includes(b)?selectedLots===undefined?[]:[strength(b,false)]:[forceTotals(state.forceBlockStates[b]!).fbStrength]);
       if (retained.some(n => n === null) || retained.reduce<number>((s,n) => s+(n??0),0) < g.mandateGuard) return false;
     }
     return true;

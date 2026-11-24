@@ -1,0 +1,87 @@
+{
+  "head": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "initialStagedTree": "2ed8c880d5ad4b536c3e5f58c506082c5e4e0282",
+  "baseline": "S1500135 capture",
+  "baselineFinalHash": "41806f3a04db1b88d954f8ca66f2c89a63ccbbeeb7d65d2e71bd936d4424386e",
+  "baselineRawFilesVerified": 41,
+  "allPriorRawFilesVerified": 190,
+  "smokeCommand": "node --import tsx tools/s150-measure-allocation.ts --live-orders --smoke",
+  "captureCommand": "node --import tsx tools/s150-measure-allocation.ts --live-orders",
+  "expectedCost": "3-6 minutes under contention, no local timing evidence",
+  "stopRule": "Any unexpected prerequisite failure; first rejected command, missing output or replay/resume/saved-log mismatch; no blind retry",
+  "knownFailuresReused": "Initialhook9; compatibility207pass/1F07fixturefailure. No old test, band, floor or fixture changed. These are reported and not waived.",
+  "files": [
+    {
+      "path": "packages/cli/src/liveness-gate.ts",
+      "sha256": "37a14a6d7477078fa0dd914c0a5d48b1bc3a2db9b24114906163f7b029f962a6"
+    },
+    {
+      "path": "packages/kernel/src/command/allocation.ts",
+      "sha256": "595ca843b689f122dd6c0080ff255fe354784e4acbeccebd82e38458ce558cdc"
+    },
+    {
+      "path": "packages/kernel/src/command/force-requests.ts",
+      "sha256": "ebe627192b4ad8300bf29831088c14457ba5e1d3da7c64bf4f7b0be505211823"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/force-need.ts",
+      "sha256": "9450982c04179f3a9a8c2f9c87d691ff1ac734fd6e557f48b20016fc78f2943e"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/report.ts",
+      "sha256": "8a20e68317d67f8a153e140a7a4c3b7b79dbb3bda9f10373d219e576c1d94994"
+    },
+    {
+      "path": "packages/kernel/src/seats/allocation.ts",
+      "sha256": "e34d422389b1bfecfd86923cd45b749403b38dd57487387fe89e041d2284dc5f"
+    },
+    {
+      "path": "packages/kernel/src/seats/force-requests.ts",
+      "sha256": "c6b3f9da494a17a0a14be643075dfe43e3b22b9c19d15d1998fcc4fdbcf6f5bf"
+    },
+    {
+      "path": "packages/kernel/src/tick/allocation.ts",
+      "sha256": "079b10a5d4af8cf7de2bab3e41ef3ab74167be89d26b7c26f38e9a11847f98bd"
+    },
+    {
+      "path": "packages/kernel/src/tick/force-requests.ts",
+      "sha256": "17ad11fc5193e589f5b835d74b15a431d2a964d7f11afedc6e70a63c3ff02904"
+    },
+    {
+      "path": "packages/kernel/src/tick/tick.ts",
+      "sha256": "98ffc3ce3a7d097b535fa001b5c346b29d878829b7c6f678f4d09cb8d899d87c"
+    },
+    {
+      "path": "packages/kernel/test/s150-live-orders.test.ts",
+      "sha256": "4c91aa07c3fa47e5033c4656590110509274f1a80f696eee6c539c2aa327f00b"
+    },
+    {
+      "path": "packs/union-1861/checkpoints.json",
+      "sha256": "d114683a73ff7a7fa6c95c7da3ff0253a5a7a94c89ac20800c6eff312c584756"
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "sha256": "7d100f6c6b72411d970f96c62ea9cf56f0fed99e349c4bdc7a112690a0edc137"
+    },
+    {
+      "path": "packs/union-1861/pack.json",
+      "sha256": "f9775163492c310ca84273db745b23cf167efda28ae733ccfca5002662c5f0f1"
+    },
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "sha256": "c9815e9eedcb754146f7fa40388782d987c8f04b7b6281569849a54e653c0e18"
+    },
+    {
+      "path": "tools/s150-go1-evidence.ts",
+      "sha256": "db28505d2a0e2e4ba76b0df348f6b8a12768887e951c9788672ba671ad438b21"
+    },
+    {
+      "path": "tools/s150-measure-allocation.ts",
+      "sha256": "ac7f13ddd9f3537d200f8cef7be8f64435d0ba520560fafbbf3606dae41a001b"
+    },
+    {
+      "path": "tools/s150-projection-evidence.ts",
+      "sha256": "f92b6fd2789d0318110eedcad55d446ce90006db437051363155468a817a5582"
+    }
+  ]
+}

@@ -49,5 +49,5 @@ it('permits only the lead-authorised testbed flank zero with its complete finger
   expect(record.cause).toContain(frozen.driver.needle);
   expect(readFileSync(new URL('../../' + frozen.driver.test, import.meta.url), 'utf8')).toContain(frozen.driver.needle);
   const history = read('tools/rules/liveness-changes.json');
-  expect(history.at(-1)).toEqual(record);
+  expect(history.filter((row: unknown) => fingerprint(row) === frozen.fingerprint)).toEqual([record]);
 });

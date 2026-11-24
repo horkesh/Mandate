@@ -28,6 +28,9 @@ import { toId } from '../src/ids.ts';
 import { pendingRequests } from '../src/seats/requests.ts';
 import { localOptions } from '../src/seats/local-actions.ts';
 import { executeLocal } from '../src/tick/mandates.ts';
+import { fulfilAllocation, issueAllocation } from '../src/tick/allocation.ts';
+import { pruneResponses, responseKey } from '../src/proxy/responses.ts';
+import type { AllocationInstrument } from '../src/world/allocation.ts';
 
 const assignment = {
  id:'fixture_onward', source:'Fictional onward order, p.2', fromDate:'1900-06-01',
@@ -67,6 +70,78 @@ it('leaves a holder-addressed call on the received-holder gate',()=>{
 it('rejects office addressing for a call that has no office instrument',()=>{
  const {world,state,seat}=fixture();
  expect(issueCall(ctxFor(world,state,1,TICK_MECHANICS),state,seat,{...call,callId:'unread'})).toBe('bad_call');
+});
+
+it.each([[false,false,false],[true,false,false],[false,true,false],[false,false,true]])('S150 national request to a neutral governor (%s delegated, %s slow-walked, %s late muster)',(delegated,slowWalk,lateMuster)=>{
+ const g=fixture(), governor=POST('b_army'), receiver=POST('a_army');
+ let block=toId('forceBlock','b_army_1');
+ const paper:AllocationInstrument={id:'national_volunteers',source:'Fictional mobilization letter p.1',fromDate:'1900-06-01',kind:'request',issuer:delegated?P('a_sec'):P('a_lead'),
+  issuerPost:delegated?POST('a_office'):null,mandate:delegated?'send':null,from:governor,to:receiver,destination:R('a_front'),recipient:P('b_gen'),
+  scope:{kind:'cohort',arm:'infantry',minTermDays:30},quantity:lateMuster?'all':1,...(lateMuster?{continuing:true}:{}),words:'Please send infantry for national service.',letter:{namespace:'fixture',key:'national_volunteers',revision:1},modes:['land']};
+ const rules=g.world.map.world.rules;
+ const people=slowWalk?{...rules.people,compliance:{...rules.people.compliance,valueWeight:0,deterrenceWeight:0,regardWeight:100}}:rules.people;
+ const ruleSeats=lateMuster?{...rules.ruleSeats,principals:rules.ruleSeats.principals.map(p=>({...p,calls:p.calls.map(({offer,...callTerms})=>callTerms)}))}:rules.ruleSeats;
+ const world=indexSeatsWorld(indexWorld({...g.world.map.world,rules:{...rules,people,ruleSeats,allocationInstruments:[paper]}}),g.world.start);
+ const donor=g.state.forceBlockStates[block]!;
+ let state:State={...g.state,forceBlockStates:{...g.state.forceBlockStates,[block]:{...donor,fbLots:donor.fbLots.map(l=>({...l,lotGenerated:true,lotService:{enlPost:governor,enlRaisedBy:P('b_gen'),enlCall:toId('message','earlier_call'),enlCallId:'q',enlRegiments:1,enlMusterDay:0,enlEndsDay:365}}))}}};
+ if(lateMuster)state=g.state;
+ if(slowWalk)state={...state,personRegard:{...state.personRegard,[P('b_gen')]:{[paper.issuer]:-1000}},personTrue:{...state.personTrue,[P('b_gen')]:{...state.personTrue[P('b_gen')]!,trueCandour:0}}};
+ const seat=seatIdFor(paper.issuer), issue=(s:State)=>{
+  const ctx=ctxFor(world,s,1,TICK_MECHANICS);
+  return {reason:issueAllocation(ctx,s,seat,{cmd:'allocation',paper:paper.id,route:'courier'}),message:ctx.outbox[0]};
+ };
+ if(delegated){
+  expect(issue(state).reason).toBe('bad_selection');
+  const grant={mandateKey:'send',mandateRevision:1,mandateIssuer:P('a_lead'),mandateIssuerPost:null,mandateHolder:P('a_sec'),mandatePost:POST('a_office'),mandateParent:null,
+   mandateActions:['assign'] as const,mandateRecipients:[receiver],mandateRegions:[R('a_front')],mandateModes:['land'] as const,
+   mandateCeiling:{ceilingPost:POST('a_office'),ceilingMen:null},mandateGuard:null,mandateExpires:null,mandateReports:[],mandateOnward:true,mandateRevoke:false};
+  state=enactMandate(world.map,state,grant,toId('message','national_authority'),0,'fixture',['assign','onward']);
+ }
+ const letter=issue(state);
+ expect(letter.reason).toBeNull();
+ expect(letter.message?.msgOrder?.orderIssuer).toBe(paper.issuer);
+ const message=letter.message!;
+ expect(state.neutralOffers?.[message.msgOrigin]).toBeUndefined();
+ state=deliverDue(ctxFor(world,state,message.msgArriveDay,TICK_MECHANICS),sendMessages(state,[message]));
+ if(slowWalk){
+  expect(Object.values(state.orderResponses).find(r=>r.respOrder===message.msgOrigin)?.respActual).toBe('slow_walk');
+  expect(state.allocationRecords?.[message.msgOrigin]).toMatchObject({allocStatus:'deferred',allocReasons:['deferred'],allocLots:[]});
+  expect(state.neutralOffers?.[message.msgOrigin]).toBeUndefined();
+  expect(state.forceAssignments[block]).toBe(governor);
+  return;
+ }
+ let offerDay=message.msgArriveDay;
+ const key=responseKey(message.msgOrigin,P('b_gen')), original=state.orderResponses[key]!;
+ if(lateMuster){
+  expect(state.allocationRecords?.[message.msgOrigin]).toMatchObject({allocStatus:'shortfall',allocLots:[]});
+  expect(state.neutralOffers?.[message.msgOrigin]).toBeUndefined();
+  const afterPruning=message.msgArriveDay+61;
+  state=pruneResponses(state,afterPruning,60,world).state;
+  const callCtx=ctxFor(world,state,afterPruning,TICK_MECHANICS);
+  expect(issueCall(callCtx,state,g.seat,call)).toBeNull();
+  const callLetter=callCtx.outbox[0]!;
+  state=deliverDue(ctxFor(world,state,callLetter.msgArriveDay,TICK_MECHANICS),sendMessages(state,[callLetter]));
+  const levy=state.postLevies[callLetter.msgOrigin]!;
+  offerDay=levy.levyMusterDay;
+  state=recruitmentPhase(ctxFor(world,state,offerDay,TICK_MECHANICS),state);
+  block=Object.keys(state.forceBlockStates).find(id=>id.startsWith('raised.'))! as ForceBlockId;
+  state=fulfilAllocation(ctxFor(world,state,offerDay,TICK_MECHANICS),state,message.msgOrigin);
+ }
+ expect(state.neutralOffers?.[message.msgOrigin]).toMatchObject({offerOwner:governor,offerIssuer:paper.issuer,offerGovernor:P('b_gen'),offerReceiver:receiver,offerStatus:'offered'});
+ expect(state.neutralOffers?.[message.msgOrigin]?.offerResponse).toBe(original);
+ expect(state.forceAssignments[block]).toBe(governor);
+ expect(factionOfBlock(world.map,state,block)).toBeNull();
+ for(let day=offerDay+1;day<=offerDay+20&&state.neutralOffers![message.msgOrigin]!.offerStatus==='offered';day++){
+  expect(state.forceAssignments[block]).toBe(governor);
+  state=operationsPhase(ctxFor(world,state,day,TICK_MECHANICS),state);
+ }
+ expect(state.neutralOffers?.[message.msgOrigin]?.offerStatus).toBe('received');
+ expect(state.forceAssignments[block]).toBe(receiver);
+ expect(factionOfBlock(world.map,state,block)).toBe(F('a'));
+ if(lateMuster){
+  expect(state.allocationRecords?.[message.msgOrigin]?.allocStatus).toBe('received');
+  expect(pruneResponses(state,offerDay+61,60,world).state.orderResponses[key]).toBe(original);
+ }
 });
 
 
@@ -119,7 +194,7 @@ it('rejects altered terms on the sourced office instrument',()=>{
 
 it('saves offers, their original reservations and pending journeys; migration from schema4 invents none',()=>{
  const g=offered();const encoded=encodeSave({worldHash:canonicalHash('fixture'),state:g.state,log:[{day:1,seat:'seat:b_gen',command:{cmd:'recall_offer',offer:g.id}}]});
- const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(7);
+ const decoded=decodeSave(encoded);expect(decoded.schemaVersion).toBe(8);
  expect(decoded.state).toEqual(g.state);
  const old=JSON.parse(encodeSave({worldHash:canonicalHash('fixture'),state:fixture().state,log:[]}));old.schemaVersion=4;
  const migrated=decodeSave(JSON.stringify(old));expect(migrated.state).toEqual(old.state);expect(migrated.logHash).toBe(old.logHash);

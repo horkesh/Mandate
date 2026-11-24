@@ -1,0 +1,157 @@
+[
+  {
+    "path": "runs/s147/measurement-corrected/all-bands.json",
+    "bytes": 87449,
+    "sha256": "cb8f9526db75ead56e1c28564e56dda1b94124f97c8cf17664bc6159a2c5210c"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/allocations.json",
+    "bytes": 533,
+    "sha256": "4ea7f4f0b4a4ea8ffef52ae4e8aa3bdf0af1cc2688d2da9576440e046e8e25b8"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/answers.json",
+    "bytes": 6397,
+    "sha256": "54c6a5e36814acb080f6e3698a2de1d800936cc035a9265797950c6853bab00e"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/army-lots.csv",
+    "bytes": 465108,
+    "sha256": "44508ead486034adabf7025801581d322d1b5147a5f3ec72fe0bcd5103696b03"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/army-totals.csv",
+    "bytes": 60782,
+    "sha256": "680218c19499f2e4c98c46f428e961a5195a0919b2cc0bdaf80ea1495bc55dde"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/army-totals.json",
+    "bytes": 141112,
+    "sha256": "9675f6434c4920408f659557c870640d107aba208d4cdf785192b0044c142ca4"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/band-count-changes.json",
+    "bytes": 7898,
+    "sha256": "47fdc57446c17c812c99447f8dd10269ca8446748e6f821663a1e00d037c09eb"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/battles.json",
+    "bytes": 13776,
+    "sha256": "19e269ac71b07550f062859800761d858fd39771091d168adce82f5fbbb370db"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/causal-events.jsonl",
+    "bytes": 1168163,
+    "sha256": "cc22a9b0d9975ef71dfe1c72838fe0aacfcb97ef03dd3f81d8c1e2d8b702ffc3"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/changed-battles.json",
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/coverage.json",
+    "bytes": 711103,
+    "sha256": "eb44537d36b10715ca34507bc4abd746db120ddab1e91457b4a19d41b95614ac"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/final-state.json",
+    "bytes": 6160454,
+    "sha256": "49372dcade98d636e377dd9e0b07e41ee74797da91388d1fed30e8921b87fec2"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/gate-failures.json",
+    "bytes": 4004,
+    "sha256": "cfd9b9f1d40a4b5022dfc03f3330a50ce77e6b9c678ebf42ae68e79ebcd7a0df"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/input-receipts.json",
+    "bytes": 342,
+    "sha256": "742bdaa5cb0d55570dec5ee98d2105d4a5e1a74cce1757170a1f972261ea41cc"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/new-zeros.json",
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/observations.json",
+    "bytes": 619862,
+    "sha256": "89d9410a47ba96108593823e25c53ac599e9606907928b81fe82f714d9c5638e"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/offers.json",
+    "bytes": 22132,
+    "sha256": "5d6bfadf25b8709ece949776c7da4037d2a640b3a05e075fc2fe9eb855bdf16f"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/receipts.json",
+    "bytes": 935347,
+    "sha256": "d52be4ca881ff542748621b35153eb8d1e9449d9e2d5bb143719ac1acfb49cc3"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/requests.json",
+    "bytes": 6369,
+    "sha256": "aa59c126015c1354776770530b8cb80659e655a1932b89fc137b456fdad0d72a"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/rows.csv",
+    "bytes": 21746,
+    "sha256": "cc6860bf93c88aed389da38fa4580198e5d49d4114b557c11223a326187b9938"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/s141-zero-disposition.json",
+    "bytes": 5329,
+    "sha256": "b513631a68060fa5f21299f568394ab9f0715edd14dfadfc5f056d991890174c"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/save-60.json",
+    "bytes": 2709017,
+    "sha256": "ab51024631ed453e9ae8fe653be0df67d181fe7e3839b7563259c0f229b5c3f6"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/scores.json",
+    "bytes": 14291,
+    "sha256": "4696d77a9657c9dc36a25a3f6b12bb597d0fa787103c7eefe89bd4b8084b84b9"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/service-receipts.json",
+    "bytes": 3,
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/started.json",
+    "bytes": 113,
+    "sha256": "dc6dfc969ad9493e5400ca6af954b079dd17517b3f396478bd04d3ddc2363b46"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/state-120.json",
+    "bytes": 6062341,
+    "sha256": "0ae4fbb0575d30a85c6c0de10b003c881e56b459cc4d2a1f9991aeb5f6b31a6e"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/state-140.json",
+    "bytes": 6199917,
+    "sha256": "9d24989104128bddf173529b5c8db88ed90ee8438881260e2d92c3d17ce3f6e8"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/state-146.json",
+    "bytes": 5884367,
+    "sha256": "9e5f8977ecc84d95d5fb5c3e9e93bab0a1406a33730e1e7d7a0378c83146f78f"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/summary.json",
+    "bytes": 152842,
+    "sha256": "e08659390cfdb2b1f0112b307d92901ec3de5606c8ae42641b1806ecafab98e6"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/unmatched.csv",
+    "bytes": 175851,
+    "sha256": "051b8ceb4b3be64ff65091564ea3918de5a023edb8bffa15a284f2df6aba08ab"
+  },
+  {
+    "path": "runs/s147/measurement-corrected/unmatched.json",
+    "bytes": 309571,
+    "sha256": "708fd96f7f653deff9857c7e20b3d52fa4d391cf4ef2daa1f5159eb313d9c5d2"
+  }
+]

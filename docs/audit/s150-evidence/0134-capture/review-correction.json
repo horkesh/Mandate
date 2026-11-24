@@ -1,0 +1,34 @@
+{
+  "decision": "0134",
+  "verdict": "Three implementation findings closed; one measurement instrumentation gap reported separately",
+  "verification": [
+    {
+      "finding": "Aggregate mandate ceiling and guard",
+      "status": "closed",
+      "evidence": "Prospective selection tests the joint set of scoped lots with actual lot strengths, including the retained fraction of split containers. The actual post-split joint set is checked before joins and commitment. Numeric mandate changes in transit revalidate the joint pending set and permit a deterministic lawful subset. Focused fixtures cover combined ceiling, combined guard, split portion, and a tightened ceiling during the journey."
+    },
+    {
+      "finding": "Regiment counts at receipt and departure loss",
+      "status": "closed",
+      "evidence": "Optional allocation ledger fields preserve selected lot IDs by container and prevent counting a lost lot twice. Receipt count and typed shortfall claims use those identities and lot totals. Two lots in one container report a receipt of two; disappearance yields a shortfall of two. Older allocation records use their known stable lot IDs without a one-per-block imputation."
+    },
+    {
+      "finding": "Returning paper and typed child answer provenance",
+      "status": "closed",
+      "evidence": "A failed hop or objecting relay records an allocation refusal and sends the ordinary return or objection to the issuer. Only delivery to that issuer triggers the correlated report to the requester. The empty-post fixture checks both the absence of a premature report and forwarding on receipt. The child independently dispatches the typed decline to the issuer, and the fixture verifies the delivered author, post and order correlation. It covers retention_comparison_undetermined; a determined retain_for_own_mission outcome is not separately exercised."
+    }
+  ],
+  "measurementInstrumentation": {
+    "status": "reported to capture owner",
+    "location": "packages/kernel/src/tick/deliver.ts:63-77,123",
+    "finding": "The old observation-only force-report receipt collector is in the single-message handler while routine report delivery takes the batch branch. The raw paper_receipt stream therefore omits force needs and answers delivered through that branch. Allocation and offer records still show physical receipts. Moving the observer to the real batch delivery records request and answer receipt timing for the capture without affecting simulation state."
+  },
+  "retainedEvidence": [
+    "runs/s150-0134/correction-red.log: expected exit 1 with six focused failures",
+    "runs/s150-0134/correction-green-final.log: exit 0, 23 passed",
+    "runs/s150-0134/correction-types.log: exit 0, no diagnostics",
+    "runs/s150-0134/correction-boundary.log: exit 0, 498 files and 61 terms clean",
+    "runs/s150-0134/correction-preservation.log: all 3,681 staged index rows, including the 316 staged paths, match the baseline"
+  ],
+  "scope": "Targeted read-only correction verification. Reused focused test runs. No measurement, full suite, timing campaign, hook, commit or push. This verification does not establish the 148-day scenario, band or hosted Linux timing results."
+}

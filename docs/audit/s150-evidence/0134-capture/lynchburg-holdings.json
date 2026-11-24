@@ -1,0 +1,784 @@
+[
+  {
+    "day": 120,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_alabama.d53",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_alabama.d53.1",
+      "lotRegiment": "generated.raised.st_gov_alabama.d53.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_alabama",
+        "enlRaisedBy": "moore_andrew_b",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_alabama",
+        "enlRegiments": 2,
+        "enlMusterDay": 53,
+        "enlEndsDay": 418,
+        "enlCallId": "cs_apr22_absolute_alabama"
+      }
+    }
+  },
+  {
+    "day": 120,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_alabama.d53",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_alabama.d53.2",
+      "lotRegiment": "generated.raised.st_gov_alabama.d53.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_alabama",
+        "enlRaisedBy": "moore_andrew_b",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_alabama",
+        "enlRegiments": 2,
+        "enlMusterDay": 53,
+        "enlEndsDay": 418,
+        "enlCallId": "cs_apr22_absolute_alabama"
+      }
+    }
+  },
+  {
+    "day": 120,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_mississippi.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 71,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_mississippi.d55.1",
+      "lotRegiment": "generated.raised.st_gov_mississippi.d55.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_mississippi",
+        "enlRaisedBy": "pettus_john_j",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_mississippi",
+        "enlRegiments": 2,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_mississippi"
+      }
+    }
+  },
+  {
+    "day": 120,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_mississippi.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 71,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_mississippi.d55.2",
+      "lotRegiment": "generated.raised.st_gov_mississippi.d55.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_mississippi",
+        "enlRaisedBy": "pettus_john_j",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_mississippi",
+        "enlRegiments": 2,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_mississippi"
+      }
+    }
+  },
+  {
+    "day": 120,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_arkansas.d56",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 105,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_arkansas.d56.1",
+      "lotRegiment": "generated.raised.st_gov_arkansas.d56.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+        "enlRegiments": 1,
+        "enlMusterDay": 56,
+        "enlEndsDay": 421,
+        "enlCallId": "cs_apr22_absolute_arkansas"
+      }
+    }
+  },
+  {
+    "day": 120,
+    "post": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "block": "raised.st_gov_tennessee.d55.assignment.s129_so119_bate",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 115,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "tn_2_infantry",
+      "lotRegiment": "tn_2_infantry",
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  },
+  {
+    "day": 120,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_tennessee.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_tennessee.d55.3",
+      "lotRegiment": "generated.raised.st_gov_tennessee.d55.3",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_alabama.d53",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_alabama.d53.1",
+      "lotRegiment": "generated.raised.st_gov_alabama.d53.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_alabama",
+        "enlRaisedBy": "moore_andrew_b",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_alabama",
+        "enlRegiments": 2,
+        "enlMusterDay": 53,
+        "enlEndsDay": 418,
+        "enlCallId": "cs_apr22_absolute_alabama"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_alabama.d53",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_alabama.d53.2",
+      "lotRegiment": "generated.raised.st_gov_alabama.d53.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_alabama",
+        "enlRaisedBy": "moore_andrew_b",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_alabama",
+        "enlRegiments": 2,
+        "enlMusterDay": 53,
+        "enlEndsDay": 418,
+        "enlCallId": "cs_apr22_absolute_alabama"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_mississippi.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 71,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_mississippi.d55.1",
+      "lotRegiment": "generated.raised.st_gov_mississippi.d55.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_mississippi",
+        "enlRaisedBy": "pettus_john_j",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_mississippi",
+        "enlRegiments": 2,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_mississippi"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_mississippi.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 71,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_mississippi.d55.2",
+      "lotRegiment": "generated.raised.st_gov_mississippi.d55.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_mississippi",
+        "enlRaisedBy": "pettus_john_j",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_mississippi",
+        "enlRegiments": 2,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_mississippi"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_arkansas.d56",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 105,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_arkansas.d56.1",
+      "lotRegiment": "generated.raised.st_gov_arkansas.d56.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+        "enlRegiments": 1,
+        "enlMusterDay": 56,
+        "enlEndsDay": 421,
+        "enlCallId": "cs_apr22_absolute_arkansas"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "block": "raised.st_gov_tennessee.d55.assignment.s129_so119_bate",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 115,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "tn_2_infantry",
+      "lotRegiment": "tn_2_infantry",
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_tennessee.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_tennessee.d55.3",
+      "lotRegiment": "generated.raised.st_gov_tennessee.d55.3",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  },
+  {
+    "day": 140,
+    "post": "s74_johnston_brigade_3",
+    "holder": null,
+    "block": "organised.s74_johnston_brigade_3.1",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 131,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "tn_1_infantry",
+      "lotRegiment": "tn_1_infantry",
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_alabama.d53",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_alabama.d53.1",
+      "lotRegiment": "generated.raised.st_gov_alabama.d53.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_alabama",
+        "enlRaisedBy": "moore_andrew_b",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_alabama",
+        "enlRegiments": 2,
+        "enlMusterDay": 53,
+        "enlEndsDay": 418,
+        "enlCallId": "cs_apr22_absolute_alabama"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_alabama.d53",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_alabama.d53.2",
+      "lotRegiment": "generated.raised.st_gov_alabama.d53.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_alabama",
+        "enlRaisedBy": "moore_andrew_b",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_alabama",
+        "enlRegiments": 2,
+        "enlMusterDay": 53,
+        "enlEndsDay": 418,
+        "enlCallId": "cs_apr22_absolute_alabama"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_mississippi.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 71,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_mississippi.d55.1",
+      "lotRegiment": "generated.raised.st_gov_mississippi.d55.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_mississippi",
+        "enlRaisedBy": "pettus_john_j",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_mississippi",
+        "enlRegiments": 2,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_mississippi"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_mississippi.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 71,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_mississippi.d55.2",
+      "lotRegiment": "generated.raised.st_gov_mississippi.d55.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_mississippi",
+        "enlRaisedBy": "pettus_john_j",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_mississippi",
+        "enlRegiments": 2,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_mississippi"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_arkansas.d56",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 105,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_arkansas.d56.1",
+      "lotRegiment": "generated.raised.st_gov_arkansas.d56.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+        "enlRegiments": 1,
+        "enlMusterDay": 56,
+        "enlEndsDay": 421,
+        "enlCallId": "cs_apr22_absolute_arkansas"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "cs_cmd_fredericksburg",
+    "holder": "holmes_theophilus_h",
+    "block": "raised.st_gov_tennessee.d55.assignment.s129_so119_bate",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 115,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "tn_2_infantry",
+      "lotRegiment": "tn_2_infantry",
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "cs_forces_virginia",
+    "holder": "lee_robert_e",
+    "block": "raised.st_gov_tennessee.d55",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 65,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "generated.raised.st_gov_tennessee.d55.3",
+      "lotRegiment": "generated.raised.st_gov_tennessee.d55.3",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  },
+  {
+    "day": 146,
+    "post": "s74_johnston_brigade_3",
+    "holder": null,
+    "block": "organised.s74_johnston_brigade_3.1",
+    "location": {
+      "locRegion": "lynchburg",
+      "locAboard": null,
+      "locSinceDay": 131,
+      "locMarch": null
+    },
+    "lot": {
+      "lotId": "tn_1_infantry",
+      "lotRegiment": "tn_1_infantry",
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": 780,
+      "lotStrength": {
+        "strengthKind": "rule",
+        "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+        "strengthDate": null
+      },
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 55,
+        "enlEndsDay": 420,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    }
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "request": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+    "answer": 0,
+    "before": {
+      "fansDay": 102,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansIssuer": "johnston_joseph_e",
+      "fansAction": "relay",
+      "fansTo": "cs_secretary_war",
+      "fansReasons": [
+        "compliance:comply",
+        "retention_comparison_undetermined",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        792,
+        792,
+        792
+      ]
+    },
+    "after": {
+      "fansDay": 102,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansIssuer": "johnston_joseph_e",
+      "fansAction": "relay",
+      "fansTo": "cs_secretary_war",
+      "fansReasons": [
+        "compliance:comply",
+        "retention_comparison_undetermined",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        792,
+        544,
+        333
+      ]
+    }
+  },
+  {
+    "request": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+    "answer": 0,
+    "before": {
+      "fansDay": 114,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "patterson_robert",
+      "fansAction": "relay",
+      "fansTo": "us_secretary_war",
+      "fansReasons": [
+        "compliance:comply",
+        "committed",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    },
+    "after": {
+      "fansDay": 114,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "patterson_robert",
+      "fansAction": "relay",
+      "fansTo": "us_secretary_war",
+      "fansReasons": [
+        "compliance:comply",
+        "no_eligible_force",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "request": "m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b",
+    "answer": 0,
+    "before": {
+      "fansDay": 124,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansIssuer": "johnston_joseph_e",
+      "fansAction": "relay",
+      "fansTo": "cs_secretary_war",
+      "fansReasons": [
+        "compliance:comply",
+        "retention_comparison_undetermined",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        792,
+        792,
+        792
+      ]
+    },
+    "after": {
+      "fansDay": 124,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansIssuer": "johnston_joseph_e",
+      "fansAction": "relay",
+      "fansTo": "cs_secretary_war",
+      "fansReasons": [
+        "compliance:comply",
+        "retention_comparison_undetermined",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        792,
+        544,
+        792
+      ]
+    }
+  },
+  {
+    "request": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+    "answer": 0,
+    "before": {
+      "fansDay": 138,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "mcdowell_irvin",
+      "fansAction": "refuse",
+      "fansReasons": [
+        "compliance:object",
+        "committed"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    },
+    "after": {
+      "fansDay": 138,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "mcdowell_irvin",
+      "fansAction": "refuse",
+      "fansReasons": [
+        "compliance:object",
+        "no_eligible_force"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "request": "m.141.patterson_robert.scott_winfield.force-request:dc78125291462997eeec57fa",
+    "answer": 0,
+    "before": {
+      "fansDay": 142,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "patterson_robert",
+      "fansAction": "refuse",
+      "fansReasons": [
+        "compliance:object",
+        "committed"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    },
+    "after": {
+      "fansDay": 142,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "patterson_robert",
+      "fansAction": "refuse",
+      "fansReasons": [
+        "compliance:object",
+        "no_eligible_force"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  }
+]

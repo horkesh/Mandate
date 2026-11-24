@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "check": "paired lifecycle and S144 specifications",
+      "command": "npx vitest run S147 S124 S141 --no-file-parallelism",
+      "log": "runs/s150/final-paired.log",
+      "exit": 0,
+      "tests": 74,
+      "sha256": "96369e2fde113ee819b7563f75db2b7590eb20deb8b83a5e0b9045d98bd36cec"
+    },
+    {
+      "check": "pack declarations",
+      "command": "npx vitest run S150 S141 pack tests",
+      "log": "runs/s150/final-instruments.log",
+      "exit": 0,
+      "tests": 6,
+      "sha256": "d987c4fa9b392e920c1ce95fa6baed65f3aeb023d69e9cca9e9a46178fc2ea36"
+    },
+    {
+      "check": "retired sweep fixtures and banned APIs",
+      "command": "npx vitest run concentration war-gate s77 banned-apis --no-file-parallelism",
+      "log": "runs/s150/final-retired-sweep-and-scanner.log",
+      "exit": 0,
+      "tests": 29,
+      "sha256": "223f1bd1ddc781e0477db5ad7ffcc3297b38344ee30e83171dc380ef5b031a4c"
+    },
+    {
+      "check": "optimisation focused cases",
+      "command": "npx vitest run S123 S147",
+      "log": "runs/s150/profile/targeted-tests.log",
+      "exit": 0,
+      "tests": 52,
+      "sha256": "0522acc6cdfd68a307aef7919f2a2fe2d4ca1629fbeb42ec93f07beaa1c07e95"
+    },
+    {
+      "check": "retained unrelated plan-choice assertion",
+      "command": "npx vitest run plans.test.ts -t counts a commander",
+      "log": "runs/s150/final-retained-plan-choice.log",
+      "exit": 1,
+      "tests": 1,
+      "sha256": "57b8c9daf78b233d83d74ca68900afab32e28b5469e9aba2d5ded2a5dec22f9d"
+    },
+    {
+      "check": "typecheck",
+      "command": "npm run typecheck",
+      "log": "runs/s150/final-candidate-typecheck.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    },
+    {
+      "check": "boundary",
+      "command": "npm run check:boundary",
+      "log": "runs/s150/final-boundary.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "94ef3227df9facc84f1f7ec59dccab8d56d3bb782549c79014b02fb50df5bfa4"
+    },
+    {
+      "check": "rules",
+      "command": "npm run check:rules",
+      "log": "runs/s150/final-rules.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "check": "licences",
+      "command": "npm run check:licences",
+      "log": "runs/s150/final-licences.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "7d41e5e4301849c17b27df3bd2c2419572a252cda182cce22ec6d0c7f828e1c5"
+    },
+    {
+      "check": "decision index",
+      "command": "npm run check:decisions",
+      "log": "runs/s150/final-decisions.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "cafddb308fad22669308535a4f8150cf0a36ea9b99a165f7feba11b1274282b4"
+    },
+    {
+      "check": "single capture",
+      "command": "npx tsx tools/s150-measure-allocation.ts",
+      "log": "runs/s150/measurement.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "d1298721643e3cb5d33654aab12dafe219d0ddabbfea7ccdacf5fff002cb2ac8"
+    },
+    {
+      "check": "unoptimised retained continuation",
+      "command": "s150-verify-optimisation.ts before",
+      "log": "runs/s150/optimisation-before-corrected.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "205244cd49de3e01e57a6f63e7f907d99132432f3e02ac58e784d7b902a536a9"
+    },
+    {
+      "check": "optimised148-day replay",
+      "command": "s150-verify-optimisation.ts after",
+      "log": "runs/s150/optimisation-after.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "8463d06306794f3742ecf77ad2cf1699e76ca5543e8ac4a5f79b38f42c962fd5"
+    },
+    {
+      "check": "final package audit",
+      "command": "python runs/s150/final-package-audit.py",
+      "log": "runs/s150/final-package-audit-corrected.log",
+      "exit": 0,
+      "tests": null,
+      "sha256": "9ed529d8270f42c7322f688c73e6fd1cfdd3c245de80470adb97939b448224df"
+    }
+  ],
+  "countsAreSeparateOverlappingGroups": true,
+  "retainedPlanChoice": "unchanged: expected1 global choice, observed2; lead ruling requested under retired-sweep-only instruction",
+  "ordinaryHook": {
+    "status": "not attempted",
+    "reason": "retained-summary gate rejects18 bands, including15 positive zero floors; required lead zero review pending"
+  },
+  "isolatedTiming": "unmet; other lanes Vitest jobs observed, no unknown process stopped",
+  "commit": null,
+  "push": false
+}

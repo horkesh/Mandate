@@ -35,6 +35,7 @@ export interface Levy {
   readonly levyOfferResponse?: OrderResponse;
   readonly levyOfferRegion?: RegionId;
   readonly levyOfferReceiver?: PostId;
+  readonly levyOfferStation?: string;
   /** The day they muster. */
   readonly levyMusterDay: number;
   /** His response to the call (`proxy`'s key). */

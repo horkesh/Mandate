@@ -1,0 +1,252 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "problem": "too_rare",
+    "fires": 2,
+    "band": {
+      "minFires": 3,
+      "maxFires": 14
+    }
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.captured",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 6
+    }
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    }
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    }
+  },
+  {
+    "mechanic": "combat.missing",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 4,
+      "maxFires": 18
+    }
+  },
+  {
+    "mechanic": "combat.routed",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+    }
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "problem": "too_rare",
+    "fires": 466,
+    "band": {
+      "minFires": 1444,
+      "maxFires": 5776,
+      "why": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted."
+    }
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "problem": "too_rare",
+    "fires": 11,
+    "band": {
+      "minFires": 51,
+      "maxFires": 206
+    }
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 92,
+      "maxFires": 368
+    }
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+    }
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "problem": "too_frequent",
+    "fires": 1,
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+    }
+  },
+  {
+    "mechanic": "movement.arrived",
+    "problem": "too_rare",
+    "fires": 43,
+    "band": {
+      "minFires": 319,
+      "maxFires": 1276
+    }
+  },
+  {
+    "mechanic": "movement.joined",
+    "problem": "too_rare",
+    "fires": 2,
+    "band": {
+      "minFires": 32,
+      "maxFires": 128
+    }
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "problem": "too_rare",
+    "fires": 43,
+    "band": {
+      "minFires": 155,
+      "maxFires": 620
+    }
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+    }
+  },
+  {
+    "mechanic": "operations.works",
+    "problem": "too_rare",
+    "fires": 4,
+    "band": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.works."
+    }
+  },
+  {
+    "mechanic": "planner.term.time",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluable scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged. S130 current quiet designation was already retired in the merge."
+    }
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "problem": "too_rare",
+    "fires": 2,
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    }
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "problem": "too_rare",
+    "fires": 2,
+    "band": {
+      "minFires": 21,
+      "maxFires": 84
+    }
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "problem": "too_rare",
+    "fires": 8,
+    "band": {
+      "minFires": 10,
+      "maxFires": 40
+    }
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    }
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "problem": "too_rare",
+    "fires": 2,
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    }
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    }
+  }
+]

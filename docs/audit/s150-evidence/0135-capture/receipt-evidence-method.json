@@ -1,0 +1,5 @@
+{
+  "eventStream": "The batched paper-delivery observer records request/order arrivals. New report-only daily receipt observation reads received seat knowledge for force-request and allocation-order IDs and records knownReceivedDay and authored reportDay. All33 actual received-report changes are published. No post-run reply time is invented.",
+  "fullCycles": "request-cycles.json includes six full cycles through148: mission packets, request packets, answers, every sending paper and compliance answer, selections, daily join positions, actual lot receipts and issuer/requester acknowledgement receipts. Same-day legs can finish before a persistent march stamp exists; daily journey positions, not first persistent stamp, establish pace.",
+  "StateWritesAdded": false
+}

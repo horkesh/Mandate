@@ -1,0 +1,7 @@
+request,requester,mission,missionReceived,requestDay,firstAnswerDay,sendingOrderDay,senderAnswerDay,firstSelectionDay,firstJourneyObservedDay,firstPersistentLegStampDay,firstReceiverReceiptDay,lastAnswerActions,allocationState,lotsSelected,lotsReceived,receivedContainers
+m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75,McDowell,m.87.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia,89,90,93,93,93,,,,,order_subordinate,deferred:committed,0,0,0
+m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a,Johnston,m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry,95,96,102,102,102,102,102,105,108,grant,received:,1,1,1
+m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e,Beauregard,m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas,98,99,100,102,102,102,102,102,,relay;ask_governor;offer,pending:,1,0,0
+m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856,Patterson,m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania,112,113,114,114,114,114,114,,119,order_subordinate,received:,1,1,1
+m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770,McDowell,m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia,134,135,138,,,,,,,refuse,no sending order,0,0,0
+m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da,Patterson,m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania,142,147,148,148,148,148,148,,,order_subordinate,pending:,1,0,0

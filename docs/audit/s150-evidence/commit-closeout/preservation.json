@@ -1,0 +1,47 @@
+{
+  "branch": "sprint/allocate",
+  "head": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "startingIndexTree": "387794045a03b3978d2656dc507d6adba5e5db83",
+  "startingStagedPaths": 522,
+  "startingIndexStillExactBeforeCloseoutStaging": true,
+  "rawInventories": [
+    {
+      "inventory": "docs/audit/s141-evidence/corrected-capture/raw-inventory.json",
+      "files": 21,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s147-evidence/corrected-capture/raw-inventory.json",
+      "files": 31,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/capture/raw-inventory.json",
+      "files": 32,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/corrected-capture/raw-inventory.json",
+      "files": 32,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/0134-capture/raw-inventory.json",
+      "files": 33,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/0135-capture/raw-inventory.json",
+      "files": 41,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/live-orders-capture/raw-inventory.json",
+      "files": 41,
+      "mismatches": 0
+    }
+  ],
+  "rawFilesVerified": 231,
+  "rawScannerUnchanged": true,
+  "noNewJulyCapture": true
+}

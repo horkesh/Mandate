@@ -1,0 +1,485 @@
+{
+  "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75": {
+    "freqId": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.87.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+      "needPost": "us_dept_northeastern_virginia",
+      "needPerson": "mcdowell_irvin",
+      "needTask": "hold",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "northern_virginia",
+      "needGoal": {
+        "goalObjective": "northern_virginia",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "82978ac8a0398f2f9b43212faedd061dea210d54e0c7536f83859d3e8afc83e0"
+    },
+    "freqDay": 90,
+    "freqTo": "us_general_in_chief",
+    "freqAnswers": [
+      {
+        "fansDay": 93,
+        "fansPerson": "scott_winfield",
+        "fansPost": "us_general_in_chief",
+        "fansIssuer": "mcdowell_irvin",
+        "fansAction": "order_subordinate",
+        "fansTo": "us_dept_washington",
+        "fansEvidence": "m.91.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+        "fansReasons": [
+          "compliance:comply",
+          "scope_unavailable",
+          "subordinate_holdings_reported"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ],
+        "fansAssignment": [
+          "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+          "scott_winfield",
+          "us_general_in_chief",
+          "us_dept_washington",
+          "us_dept_northeastern_virginia",
+          "northern_virginia",
+          {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          1,
+          "scott_army_command",
+          [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ],
+          null,
+          "mansfield_joseph_k_f"
+        ]
+      }
+    ]
+  },
+  "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a": {
+    "freqId": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "needPost": "cs_cmd_harpers_ferry",
+      "needPerson": "johnston_joseph_e",
+      "needTask": "hold",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "harpers_ferry",
+      "needGoal": {
+        "goalObjective": "harpers_ferry",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "b82247982e165e743bf62ce3fd05bcf41083a6464ea959780f9c087e9a9f2706"
+    },
+    "freqDay": 96,
+    "freqTo": "cs_forces_virginia",
+    "freqAnswers": [
+      {
+        "fansDay": 102,
+        "fansPerson": "lee_robert_e",
+        "fansPost": "cs_forces_virginia",
+        "fansIssuer": "johnston_joseph_e",
+        "fansAction": "grant",
+        "fansReasons": [
+          "compliance:comply",
+          "retention_comparison_undetermined",
+          "support_terms_unavailable"
+        ],
+        "fansScore": [
+          null,
+          null,
+          333
+        ],
+        "fansRetention": [
+          null,
+          null
+        ],
+        "fansAssignment": [
+          "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.cs_forces_virginia",
+          "lee_robert_e",
+          "cs_forces_virginia",
+          "cs_forces_virginia",
+          "cs_cmd_harpers_ferry",
+          "harpers_ferry",
+          {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          1,
+          "lee_confederate_virginia",
+          [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ]
+        ]
+      }
+    ]
+  },
+  "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e": {
+    "freqId": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+      "needPost": "cs_cmd_manassas",
+      "needPerson": "beauregard_pierre_g_t",
+      "needTask": "hold",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "manassas",
+      "needGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+    },
+    "freqDay": 99,
+    "freqTo": "cs_war_adjutant_inspector_general",
+    "freqAnswers": [
+      {
+        "fansDay": 100,
+        "fansPerson": "cooper_samuel",
+        "fansPost": "cs_war_adjutant_inspector_general",
+        "fansIssuer": "beauregard_pierre_g_t",
+        "fansAction": "relay",
+        "fansTo": "cs_president",
+        "fansReasons": [
+          "compliance:comply",
+          "authority_unavailable",
+          "governor_holdings_unknown"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "fansDay": 101,
+        "fansPerson": "davis_jefferson",
+        "fansPost": "cs_president",
+        "fansIssuer": "cooper_samuel",
+        "fansAction": "ask_governor",
+        "fansTo": "st_gov_south_carolina",
+        "fansEvidence": "m.81.pickens_francis_w.davis_jefferson.governor-holdings.st_gov_south_carolina",
+        "fansReasons": [
+          "compliance:comply",
+          "authority_unavailable",
+          "governor_holdings_reported"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "fansDay": 102,
+        "fansPerson": "pickens_francis_w",
+        "fansPost": "st_gov_south_carolina",
+        "fansIssuer": "davis_jefferson",
+        "fansAction": "offer",
+        "fansReasons": [
+          "compliance:comply"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ],
+        "fansAssignment": [
+          "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+          "pickens_francis_w",
+          "st_gov_south_carolina",
+          "st_gov_south_carolina",
+          "cs_cmd_manassas",
+          "manassas",
+          {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          1,
+          "governor_root",
+          [
+            "land"
+          ],
+          true
+        ]
+      }
+    ]
+  },
+  "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856": {
+    "freqId": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "needPost": "us_dept_pennsylvania",
+      "needPerson": "patterson_robert",
+      "needTask": "hold",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "philadelphia",
+      "needGoal": {
+        "goalObjective": "lower_valley",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+    },
+    "freqDay": 113,
+    "freqTo": "us_general_in_chief",
+    "freqAnswers": [
+      {
+        "fansDay": 114,
+        "fansPerson": "scott_winfield",
+        "fansPost": "us_general_in_chief",
+        "fansIssuer": "patterson_robert",
+        "fansAction": "order_subordinate",
+        "fansTo": "us_dept_washington",
+        "fansEvidence": "m.111.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+        "fansReasons": [
+          "compliance:comply",
+          "scope_unavailable",
+          "subordinate_holdings_reported"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ],
+        "fansAssignment": [
+          "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+          "scott_winfield",
+          "us_general_in_chief",
+          "us_dept_washington",
+          "us_dept_pennsylvania",
+          "philadelphia",
+          {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          1,
+          "scott_army_command",
+          [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ],
+          null,
+          "mansfield_joseph_k_f"
+        ]
+      }
+    ]
+  },
+  "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770": {
+    "freqId": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "needPost": "us_dept_northeastern_virginia",
+      "needPerson": "mcdowell_irvin",
+      "needTask": "take",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "northern_virginia",
+      "needGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+    },
+    "freqDay": 135,
+    "freqTo": "us_general_in_chief",
+    "freqAnswers": [
+      {
+        "fansDay": 138,
+        "fansPerson": "scott_winfield",
+        "fansPost": "us_general_in_chief",
+        "fansIssuer": "mcdowell_irvin",
+        "fansAction": "refuse",
+        "fansReasons": [
+          "compliance:object",
+          "scope_unavailable"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da": {
+    "freqId": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "needPost": "us_dept_pennsylvania",
+      "needPerson": "patterson_robert",
+      "needTask": "hold",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "lower_valley",
+      "needGoal": {
+        "goalObjective": "harpers_ferry",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "91bc286d90347cb821850dca8f434ba1bc5ac2bbe59fe424fbcbffb2df4cde16"
+    },
+    "freqDay": 147,
+    "freqTo": "us_general_in_chief",
+    "freqAnswers": [
+      {
+        "fansDay": 148,
+        "fansPerson": "scott_winfield",
+        "fansPost": "us_general_in_chief",
+        "fansIssuer": "patterson_robert",
+        "fansAction": "order_subordinate",
+        "fansTo": "us_dept_washington",
+        "fansEvidence": "m.141.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+        "fansReasons": [
+          "compliance:comply",
+          "scope_unavailable",
+          "subordinate_holdings_reported"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ],
+        "fansAssignment": [
+          "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+          "scott_winfield",
+          "us_general_in_chief",
+          "us_dept_washington",
+          "us_dept_pennsylvania",
+          "lower_valley",
+          {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          1,
+          "scott_army_command",
+          [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ],
+          null,
+          "mansfield_joseph_k_f"
+        ]
+      }
+    ]
+  }
+}

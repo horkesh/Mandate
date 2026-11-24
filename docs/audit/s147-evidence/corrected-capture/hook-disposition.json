@@ -1,0 +1,108 @@
+{
+  "command": "git commit -m \"S147: implement 0133 receipt and force requests with S141 allocation data\"",
+  "exit": 1,
+  "durationSeconds": 304.28,
+  "fullRun": {
+    "filesPassed": 274,
+    "filesFailed": 12,
+    "testsPassed": 2469,
+    "testsFailed": 16,
+    "testsSkipped": 3
+  },
+  "log": "runs/s147/ordinary-hook.log",
+  "logSHA256": "c73e9dac41d01e1c300ee02e7fc290191428cd5958252f252e803dd267875849",
+  "failureExcerpts": "hook-failures.txt",
+  "blocks": [
+    {
+      "block": 1,
+      "file": "console.test.ts",
+      "disposition": "fixed; principal-only morning fields guarded; focused test passes"
+    },
+    {
+      "block": 2,
+      "file": "concentration.test.ts",
+      "disposition": "unresolved; New York levy remains at governor instead of DC in historical fixture; no quantity or runtime fitted"
+    },
+    {
+      "block": 3,
+      "file": "done-check.test.ts",
+      "disposition": "unresolved;15 positive zero floors"
+    },
+    {
+      "block": 4,
+      "file": "done-check.test.ts",
+      "disposition": "unresolved;15 positive zero floors in positive-control prerequisite"
+    },
+    {
+      "block": 5,
+      "file": "liveness-gate.test.ts",
+      "disposition": "fixed; removed contradictory global quiet declaration for plans.approved, which already has positive reference band"
+    },
+    {
+      "block": 6,
+      "file": "liveness-gate.test.ts",
+      "disposition": "fixed; same contradictory quiet metadata; band-table controls pass"
+    },
+    {
+      "block": 7,
+      "file": "liveness-gate.test.ts",
+      "disposition": "unresolved;15 positive zero floors"
+    },
+    {
+      "block": 8,
+      "file": "s123-mandate-pack.test.ts",
+      "disposition": "fixed; retain exact original five plus exact two sourced S147 mandate identities"
+    },
+    {
+      "block": 9,
+      "file": "war-gate.test.ts",
+      "disposition": "unresolved; first doctrine expected day1, actual4; no timing fitted"
+    },
+    {
+      "block": 10,
+      "file": "war-gate.test.ts",
+      "disposition": "unresolved; midwar first doctrine expected day11, actual14; no timing fitted"
+    },
+    {
+      "block": 11,
+      "file": "banned-apis.test.ts",
+      "disposition": "fixed; inline import type expressions replaced by explicit type imports; scanner unchanged"
+    },
+    {
+      "block": 12,
+      "file": "boundary.test.ts",
+      "disposition": "fixed; ForceNeed and AllocationScope moved to pure public contracts; scanner unchanged"
+    },
+    {
+      "block": 13,
+      "file": "boundary.test.ts",
+      "disposition": "fixed; same public contract separation; claimed-control closure passes"
+    },
+    {
+      "block": 14,
+      "file": "lexer.test.ts",
+      "disposition": "fixed; test arithmetic uses checked locals instead of non-null postfix before slash; lexer unchanged"
+    },
+    {
+      "block": 15,
+      "file": "plans.test.ts",
+      "disposition": "unresolved; choices expected1, actual2 after own-force request option; no telemetry semantics or assertion fitted"
+    },
+    {
+      "block": 16,
+      "file": "seats-log.test.ts",
+      "disposition": "fixed; declare both new command-owned optional State roots in exact inventory"
+    },
+    {
+      "block": 17,
+      "file": "s77-concentration.test.ts",
+      "disposition": "unresolved; synthetic historical concentration fixture expects isolated named lot, actual mixed block; no runtime or expectation fitted"
+    }
+  ],
+  "unresolvedBlocks": 8,
+  "postCorrectionFullHook": "not repeated; binding fifteen floors unchanged; focused evidence only",
+  "commit": null,
+  "bypass": false,
+  "push": false,
+  "failureExcerptsNormalization": "line endings and trailing whitespace normalized; original hook log retained and hashed"
+}

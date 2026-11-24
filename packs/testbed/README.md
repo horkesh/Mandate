@@ -76,3 +76,7 @@ Design parameters, stated by every pack with no kernel default (0072). The plann
 | `plans.goalDefaults` | risk 500, 20 days, rail only, approve as drafted | The goal terms an order carries when it names only a posture and an objective (a situation's option, the generic principal) |
 | `plans.compliance*` | 800, 500, 500, 500, 500 | STAND-IN until the people recast: the candour, standing, resources, oversight and credibility compliance reads when a commander answers an edit |
 
+
+## Generic concentration policy
+
+The rule-seat concentration and its whole-force requests are a declared fictional test policy. They exercise ordinary sender compliance and real joining journeys; they are not a historical allocation rule. S141/0131 retires that policy only from the history pack.

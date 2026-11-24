@@ -1,0 +1,45 @@
+{
+  "baselines": [
+    {
+      "inventory": "docs/audit/s141-evidence/corrected-capture/raw-inventory.json",
+      "verifiedFiles": 21,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s147-evidence/corrected-capture/raw-inventory.json",
+      "verifiedFiles": 31,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/capture/raw-inventory.json",
+      "verifiedFiles": 32,
+      "mismatches": 0
+    }
+  ],
+  "startingIndex": "runs/s150-trace/starting-index.json",
+  "startingPatch": "runs/s150-trace/starting-staged.patch",
+  "head": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "rawCaptureFiles": 32,
+  "otherWorktrees": "Read-only except explicitly authorised final CODEX UTF-8 Python append",
+  "index": {
+    "startingTrackedEntries": 3638,
+    "finalTrackedEntries": 3681,
+    "startingCombinedStagedPaths": 273,
+    "finalCombinedStagedPaths": 316,
+    "originalTrackedEntriesByteIdentical": 3632,
+    "authorisedExtendedPaths": [
+      "docs/audit/s150-evidence/projection.json",
+      "notes/sprint-S150-sending-orders.md",
+      "packages/kernel/src/command/allocation.ts",
+      "packages/kernel/test/s147-receipt-requests.test.ts",
+      "tools/rules/projection-derivations.json",
+      "tools/s150-measure-allocation.ts"
+    ],
+    "removedOriginalEntries": [],
+    "unstaged": 0,
+    "untracked": 0,
+    "stagedDiffCheckExit": 0,
+    "initialPatchBytes": 16710800,
+    "initialPatchSha256": "ab57cdd39cd019f4d67175b7d790cefb1ebd4316408958d85df7b1f164f649e2"
+  }
+}

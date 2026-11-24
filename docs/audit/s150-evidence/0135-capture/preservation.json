@@ -1,0 +1,66 @@
+{
+  "rawBaselines": [
+    {
+      "inventory": "docs/audit/s141-evidence/corrected-capture/raw-inventory.json",
+      "verifiedFiles": 21,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s147-evidence/corrected-capture/raw-inventory.json",
+      "verifiedFiles": 31,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/capture/raw-inventory.json",
+      "verifiedFiles": 32,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/corrected-capture/raw-inventory.json",
+      "verifiedFiles": 32,
+      "mismatches": 0
+    },
+    {
+      "inventory": "docs/audit/s150-evidence/0134-capture/raw-inventory.json",
+      "verifiedFiles": 33,
+      "mismatches": 0
+    }
+  ],
+  "priorRawFilesVerified": 149,
+  "newCaptureRawFilesVerified": 41,
+  "readPrimaryPagesVerified": 13,
+  "initialIndexEntries": 3732,
+  "initialStagedPaths": 368,
+  "startingIndex": "runs/s150-0135/starting-index.json",
+  "startingStagedPatch": "runs/s150-0135/starting-staged.patch",
+  "otherWorktrees": "Read-only except the final expressly authorised one-status CODEX append",
+  "runtimeEvidence": "capture-inputs.json and runtime-verification.json",
+  "initialIndexUnchangedBeforeStaging": true,
+  "index": {
+    "startingEntries": 3732,
+    "finalEntries": 3808,
+    "startingStagedPaths": 368,
+    "originalStagedPathsRetained": 368,
+    "originalStagedByteIdentical": 353,
+    "authorisedExtensions": [
+      "docs/design/FOUNDATION.md",
+      "notes/sprint-S150-sending-orders.md",
+      "packages/kernel/src/command/allocation.ts",
+      "packages/kernel/src/command/force-requests.ts",
+      "packages/kernel/src/knowledge/report.ts",
+      "packages/kernel/src/seats/force-requests.ts",
+      "packages/kernel/src/tick/allocation.ts",
+      "packages/kernel/src/tick/force-requests.ts",
+      "packages/kernel/test/s147-receipt-requests.test.ts",
+      "packs/union-1861/data/world.json",
+      "packs/union-1861/pack.json",
+      "packs/union-1861/test/s150-sending-instruments.test.ts",
+      "tools/rules/projection-derivations.json",
+      "tools/s150-measure-allocation.ts",
+      "tools/s150-projection-evidence.ts"
+    ],
+    "finalStagedPaths": 444,
+    "noUnstagedOrUntracked": true,
+    "head": "91a816bddb8f200d939a9a2b39fca936ce33d813"
+  }
+}

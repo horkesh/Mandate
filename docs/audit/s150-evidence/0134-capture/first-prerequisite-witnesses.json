@@ -1,0 +1,1823 @@
+{
+  "method": "Pure derivations from retained snapshots and recorded draft sets; no tick, seat choice or new capture",
+  "snapshots": [
+    {
+      "day": 120,
+      "pockets": [
+        {
+          "faction": "confederate",
+          "pockets": [
+            {
+              "id": "pocket:confederate:harpers_ferry",
+              "faction": "confederate",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "eastern_shore",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:little_rock",
+              "faction": "confederate",
+              "regions": [
+                "little_rock"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "ar_white_arkansas",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:lynchburg",
+              "faction": "confederate",
+              "regions": [
+                "lynchburg"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:raleigh",
+              "faction": "confederate",
+              "regions": [
+                "raleigh"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            }
+          ]
+        },
+        {
+          "faction": "union",
+          "pockets": []
+        }
+      ],
+      "stragglers": [
+        {
+          "block": "state-forces.cs_tn_infantry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_infantry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_cavalry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_cavalry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_river_artillery_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+          "men": null,
+          "stragglers": null
+        }
+      ],
+      "stateHashUnchanged": true
+    },
+    {
+      "day": 140,
+      "pockets": [
+        {
+          "faction": "confederate",
+          "pockets": [
+            {
+              "id": "pocket:confederate:harpers_ferry",
+              "faction": "confederate",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "eastern_shore",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:little_rock",
+              "faction": "confederate",
+              "regions": [
+                "little_rock"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "ar_white_arkansas",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:lynchburg",
+              "faction": "confederate",
+              "regions": [
+                "lynchburg"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:raleigh",
+              "faction": "confederate",
+              "regions": [
+                "raleigh"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            }
+          ]
+        },
+        {
+          "faction": "union",
+          "pockets": []
+        }
+      ],
+      "stragglers": [
+        {
+          "block": "state-forces.cs_tn_infantry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_infantry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_cavalry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_cavalry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_river_artillery_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+          "men": null,
+          "stragglers": null
+        }
+      ],
+      "stateHashUnchanged": true
+    },
+    {
+      "day": 146,
+      "pockets": [
+        {
+          "faction": "confederate",
+          "pockets": [
+            {
+              "id": "pocket:confederate:harpers_ferry",
+              "faction": "confederate",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "eastern_shore",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:little_rock",
+              "faction": "confederate",
+              "regions": [
+                "little_rock"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "ar_white_arkansas",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:lynchburg",
+              "faction": "confederate",
+              "regions": [
+                "lynchburg"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:raleigh",
+              "faction": "confederate",
+              "regions": [
+                "raleigh"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            }
+          ]
+        },
+        {
+          "faction": "union",
+          "pockets": []
+        }
+      ],
+      "stragglers": [
+        {
+          "block": "state-forces.cs_tn_infantry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_infantry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_cavalry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_cavalry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_river_artillery_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+          "men": null,
+          "stragglers": null
+        }
+      ],
+      "stateHashUnchanged": true
+    },
+    {
+      "day": 148,
+      "pockets": [
+        {
+          "faction": "confederate",
+          "pockets": [
+            {
+              "id": "pocket:confederate:harpers_ferry",
+              "faction": "confederate",
+              "regions": [
+                "harpers_ferry"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "eastern_shore",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:little_rock",
+              "faction": "confederate",
+              "regions": [
+                "little_rock"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "ar_white_arkansas",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:lynchburg",
+              "faction": "confederate",
+              "regions": [
+                "lynchburg"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            },
+            {
+              "id": "pocket:confederate:raleigh",
+              "faction": "confederate",
+              "regions": [
+                "raleigh"
+              ],
+              "cut": {
+                "why": "not_traced",
+                "region": "cape_fear",
+                "edge": null,
+                "by": null
+              }
+            }
+          ]
+        },
+        {
+          "faction": "union",
+          "pockets": []
+        }
+      ],
+      "stragglers": [
+        {
+          "block": "state-forces.cs_tn_infantry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_infantry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_cavalry_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_cavalry_tennessee",
+          "men": null,
+          "stragglers": null
+        },
+        {
+          "block": "state-forces.cs_tn_river_artillery_tennessee",
+          "lot": "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+          "men": null,
+          "stragglers": null
+        }
+      ],
+      "stateHashUnchanged": true
+    }
+  ],
+  "drafts": [
+    {
+      "post": "us_general_in_chief",
+      "day": 2,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:washington",
+          "method": "direct",
+          "score": 778,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 27000 permille days early"
+            }
+          ]
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "post": "cs_cmd_charleston",
+      "day": 37,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "bombard:across_water:charleston",
+          "method": "bombard",
+          "score": 846,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 30000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "holding:hold:georgetown_pee_dee",
+          "method": "holding",
+          "score": -226,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            }
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "rejMethod": "direct",
+          "rejVariant": "least_cost",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no land route to fort_sumter"
+            }
+          ]
+        },
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no direct route to flank"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no land route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside fort_sumter"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "st_va_general_in_chief",
+      "day": 55,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:richmond",
+          "method": "direct",
+          "score": 792,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 27000 permille days early"
+            }
+          ]
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "post": "cs_forces_virginia",
+      "day": 79,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:lynchburg",
+          "method": "direct",
+          "score": 792,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 27000 permille days early"
+            }
+          ]
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "post": "us_dept_washington",
+      "day": 90,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:washington",
+          "method": "direct",
+          "score": 818,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 28000 permille days early"
+            }
+          ]
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "post": "cs_cmd_harpers_ferry",
+      "day": 95,
+      "liveTerms": [],
+      "candidates": [],
+      "rejected": [
+        {
+          "rejMethod": "direct",
+          "rejVariant": "least_cost",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside harpers_ferry"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "bombard",
+          "rejVariant": "across_water",
+          "rejGates": [
+            {
+              "gateKind": "no_objective",
+              "gateHard": true,
+              "gateDetail": "only a goal to take is bombarded"
+            }
+          ]
+        },
+        {
+          "rejMethod": "holding",
+          "rejVariant": "hold",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "nothing to hold with"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "cs_cmd_fredericksburg",
+      "day": 99,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:fredericksburg",
+          "method": "direct",
+          "score": 801,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 28000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "holding:hold:fredericksburg",
+          "method": "holding",
+          "score": -54,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            }
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "alternative shares 1000 permille of the direct route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "his own staging fredericksburg is not beside fredericksburg"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            },
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "second route repeats the first"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "repeats direct:least_cost:fredericksburg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "cs_cmd_fredericksburg",
+      "day": 100,
+      "liveTerms": [
+        "supply"
+      ],
+      "candidates": [
+        {
+          "id": "supply_line:depot_steps:fredericksburg>hanover>charlottesville>lynchburg",
+          "method": "supply_line",
+          "score": 594,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 21000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "direct:least_cost:fredericksburg>hanover>charlottesville>lynchburg",
+          "method": "direct",
+          "score": 476,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 25000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "holding:hold:lynchburg",
+          "method": "holding",
+          "score": -54,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            }
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "alternative shares 1000 permille of the direct route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside lynchburg"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "his own staging fredericksburg is not beside lynchburg"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            },
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "second route repeats the first"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "us_dept_washington",
+      "day": 102,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:washington",
+          "method": "direct",
+          "score": 818,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 28000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "holding:hold:washington",
+          "method": "holding",
+          "score": -95,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            }
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "alternative shares 1000 permille of the direct route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "his own staging washington is not beside washington"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "second route repeats the first"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "repeats direct:least_cost:washington"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "us_dept_washington",
+      "day": 107,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:washington",
+          "method": "direct",
+          "score": 818,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 28000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "holding:hold:washington",
+          "method": "holding",
+          "score": -95,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            }
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "alternative shares 1000 permille of the direct route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "his own staging washington is not beside washington"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "second route repeats the first"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "repeats direct:least_cost:washington"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "us_dept_washington",
+      "day": 110,
+      "liveTerms": [],
+      "candidates": [
+        {
+          "id": "direct:least_cost:washington",
+          "method": "direct",
+          "score": 818,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 28000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "holding:hold:washington",
+          "method": "holding",
+          "score": -95,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            }
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "alternative shares 1000 permille of the direct route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "his own staging washington is not beside washington"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "second route repeats the first"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "repeats direct:least_cost:washington"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "cs_cmd_harpers_ferry",
+      "day": 112,
+      "liveTerms": [
+        "supply"
+      ],
+      "candidates": [
+        {
+          "id": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "supply_line",
+          "score": 575,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 18000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "direct",
+          "score": 453,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 21000 permille days early"
+            }
+          ]
+        },
+        {
+          "id": "holding:hold:lynchburg",
+          "method": "holding",
+          "score": -147,
+          "time": [
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            }
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "alternative shares 1000 permille of the direct route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside lynchburg"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "his own staging harpers_ferry is not beside lynchburg"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            },
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "second route repeats the first"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "us_dept_pennsylvania",
+      "day": 112,
+      "liveTerms": [],
+      "candidates": [],
+      "rejected": [
+        {
+          "rejMethod": "direct",
+          "rejVariant": "least_cost",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside lower_valley"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "bombard",
+          "rejVariant": "across_water",
+          "rejGates": [
+            {
+              "gateKind": "no_objective",
+              "gateHard": true,
+              "gateDetail": "only a goal to take is bombarded"
+            }
+          ]
+        },
+        {
+          "rejMethod": "holding",
+          "rejVariant": "hold",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "nothing to hold with"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "us_dept_northeastern_virginia",
+      "day": 134,
+      "liveTerms": [],
+      "candidates": [],
+      "rejected": [
+        {
+          "rejMethod": "direct",
+          "rejVariant": "least_cost",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside manassas"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "bombard",
+          "rejVariant": "across_water",
+          "rejGates": [
+            {
+              "gateKind": "no_target",
+              "gateHard": true,
+              "gateDetail": "manassas is not a fortification the rules let be bombarded (combat.bombardment.objectives)"
+            }
+          ]
+        },
+        {
+          "rejMethod": "holding",
+          "rejVariant": "hold",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "nothing to hold with"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post": "us_dept_pennsylvania",
+      "day": 140,
+      "liveTerms": [],
+      "candidates": [],
+      "rejected": [
+        {
+          "rejMethod": "direct",
+          "rejVariant": "least_cost",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside harpers_ferry"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "max_axes",
+              "gateHard": true,
+              "gateDetail": "he runs at most 1 axis"
+            },
+            {
+              "gateKind": "no_route",
+              "gateHard": true,
+              "gateDetail": "no main route"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no land blocks under his post"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "no troops under his post"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "bombard",
+          "rejVariant": "across_water",
+          "rejGates": [
+            {
+              "gateKind": "no_objective",
+              "gateHard": true,
+              "gateDetail": "only a goal to take is bombarded"
+            }
+          ]
+        },
+        {
+          "rejMethod": "holding",
+          "rejVariant": "hold",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "nothing to hold with"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

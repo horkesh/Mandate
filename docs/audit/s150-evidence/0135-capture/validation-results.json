@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "command": "Fictional0135 initial red fixtures",
+      "exit": 1,
+      "testsOrExpectedFailures": 5,
+      "log": "runs/s150-0135/red-final-fixtures.log"
+    },
+    {
+      "command": "Initial fictional retention focus",
+      "exit": 0,
+      "testsOrExpectedFailures": 7,
+      "log": "runs/s150-0135/green-first.log"
+    },
+    {
+      "command": "Review correction RED",
+      "exit": 1,
+      "testsOrExpectedFailures": 4,
+      "log": "runs/s150-0135/correction-red.log"
+    },
+    {
+      "command": "Corrected five-file family",
+      "exit": 0,
+      "testsOrExpectedFailures": 134,
+      "log": "runs/s150-0135/correction-green.log"
+    },
+    {
+      "command": "Targeted correction after redundant lookup removal",
+      "exit": 0,
+      "testsOrExpectedFailures": 24,
+      "log": "runs/s150-0135/correction-final-focused.log"
+    },
+    {
+      "command": "Ten-file final compatibility including save/serialize/plan/pack/banned APIs",
+      "exit": 0,
+      "testsOrExpectedFailures": 193,
+      "log": "runs/s150-0135/compatibility-final.log"
+    },
+    {
+      "command": "Hold mission fixture RED",
+      "exit": 1,
+      "testsOrExpectedFailures": 1,
+      "log": "runs/s150-0135/hold-missions-red.log"
+    },
+    {
+      "command": "Pack sending/hold fixtures",
+      "exit": 0,
+      "testsOrExpectedFailures": 4,
+      "log": "runs/s150-0135/hold-missions-green.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/typecheck-main.log"
+    },
+    {
+      "command": "npm run pack:generate -- union-1861",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/pack-generate.log"
+    },
+    {
+      "command": "npm run pack:check -- union-1861",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/pack-check.log"
+    },
+    {
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/boundary-integrated.log"
+    },
+    {
+      "command": "npm run check:rules",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/rules-final.log"
+    },
+    {
+      "command": "0135 projection proof refresh",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/projection.log"
+    },
+    {
+      "command": "GO1 baseline diagnostic",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/go1-baseline.log"
+    },
+    {
+      "command": "node --import tsx tools/s150-measure-allocation.ts --0135 --smoke",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/smoke.log"
+    },
+    {
+      "command": "node --import tsx tools/s150-measure-allocation.ts --0135",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/measurement.log"
+    },
+    {
+      "command": "Pure retained-state prerequisite derivations",
+      "exit": 0,
+      "testsOrExpectedFailures": null,
+      "log": "runs/s150-0135/prerequisites.log"
+    }
+  ],
+  "groupsOverlap": true,
+  "initialFamilyFailure": "One type-only readonly annotation failure reproduced and fixed using as const satisfies;15 determinism tests pass. Not an extra measurement.",
+  "review": "independent-review.json followed by targeted review-correction.json closes two findings; no repeated whole-branch review claimed",
+  "coverage": "Determined need keeps, determined surplus sends, unknown comply sends with issuer/requester reservation, typed objection holds; direct grant actual receipt and late partial fulfilment recheck current need; predecessor and embarked scope regressions. All fictional.",
+  "reusedUnaffected": "Accepted0134 reader/provenance/authority/receipt-observer and hash-neutral fast-path evidence; final193-test family additionally exercises current compatible paths. No dependency, licence, source band or historical-condition fit.",
+  "ordinaryHook": "Not attempted:7 positive floors remain0 and21 bands fail. Combined work staged for lead ruling.",
+  "fullSuiteAndWholeBranchReview": "Not claimed; ordinary hook and formal sprint review remain pending.",
+  "timing": "No local timing evidence, no hosted Linux budget proof"
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "path": "docs/audit/s147-evidence/read/OR-I-II-p607.txt",
+    "sha256": "1585b0b88abf67d7ba57552a0265135dde032c1a4a3de437ce486dbea18bce2c",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/OR-I-II-p653.txt",
+    "sha256": "ac1468e6be69560dbfc8d656264047a267df657320a33c502b1a19450abe05f6",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/OR-I-II-p896.txt",
+    "sha256": "e198be1cb8143aab65c29a04d87a09f3a97470104f60f40a0af1928027c38cf8",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/OR-I-II-p907.txt",
+    "sha256": "4e5830c4ee1c04315d055dcf67682be53287eb8a4e6208e91132cbd8363a5a24",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/OR-I-II-p932.txt",
+    "sha256": "8f96af17a13eb2a9c33b64932197a0d6f44496c09eba0b44ee86f50522243482",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/OR-I-II-p933.txt",
+    "sha256": "3f39dfc43ca94369214823a745ec4ca93e89fa8a6831242e258c508a03e53c7a",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/Regs-1857-p2-3.txt",
+    "sha256": "7351b34d8c0baa74ddbab890325908936d7689ada5b868004321876cb8757a45",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/Regs-1857-p23.txt",
+    "sha256": "de63737441e1ae58d1e76afb8adcb600e4590f904b57dd3785cead526f1b2d1c",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/Regs-1857-p57-60.txt",
+    "sha256": "2a77917eb449b544928b703e2b14baeed296adf5692d88c59b9b9d0071af0c24",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s147-evidence/read/Regs-1857-p63.txt",
+    "sha256": "fc614144bb94d944008ab72699603bb5b8953a449e29fa805fe3260183ad51b2",
+    "reading": "read OCR excerpt; printed page is named in file; no fresh facsimile collation"
+  },
+  {
+    "path": "docs/audit/s141-evidence/read/Richardson-IV-p73.txt",
+    "sha256": "7284595e97ad965405ab4b1bfe16a12ec8ddc2ad9c482af92651def9f40eb898",
+    "reading": "read OCR, printed page73"
+  }
+]

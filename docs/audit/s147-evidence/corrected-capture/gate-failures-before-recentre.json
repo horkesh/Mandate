@@ -1,0 +1,151 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.captured",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 6
+    }
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    }
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    }
+  },
+  {
+    "mechanic": "combat.missing",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 4,
+      "maxFires": 18
+    }
+  },
+  {
+    "mechanic": "combat.routed",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    }
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+    }
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 92,
+      "maxFires": 368
+    }
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+    }
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+    }
+  },
+  {
+    "mechanic": "planner.term.time",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluable scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged. S130 current quiet designation was already retired in the merge."
+    }
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    }
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    }
+  },
+  {
+    "mechanic": "seats.choices",
+    "problem": "too_frequent",
+    "fires": 34,
+    "band": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. seats.choices firings 25->15. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    }
+  }
+]

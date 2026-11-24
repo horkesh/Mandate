@@ -1,0 +1,654 @@
+[
+  {
+    "request": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+    "answer": {
+      "fansDay": 114,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "patterson_robert",
+      "fansAction": "order_subordinate",
+      "fansTo": "us_dept_washington",
+      "fansEvidence": "m.111.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+      "fansReasons": [
+        "compliance:comply",
+        "scope_unavailable",
+        "subordinate_holdings_reported"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansAssignment": [
+        "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+        "scott_winfield",
+        "us_general_in_chief",
+        "us_dept_washington",
+        "us_dept_pennsylvania",
+        "philadelphia",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "scott_army_command",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        null,
+        "mansfield_joseph_k_f"
+      ]
+    },
+    "paper": {
+      "id": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+      "issuer": "scott_winfield",
+      "issuerPost": "us_general_in_chief",
+      "from": "us_dept_washington",
+      "to": "us_dept_pennsylvania",
+      "destination": "philadelphia",
+      "scope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "quantity": 1,
+      "mandate": "scott_army_command",
+      "modes": [
+        "land",
+        "rail",
+        "river",
+        "sea"
+      ],
+      "voluntary": null,
+      "recipient": "mansfield_joseph_k_f"
+    },
+    "traffic": [
+      {
+        "day": 114,
+        "kind": "dispatch",
+        "key": "m.114.b70961860618b775",
+        "value": {
+          "id": "m.114.b70961860618b775",
+          "msgOrigin": "m.114.b70961860618b775",
+          "msgFrom": "scott_winfield",
+          "msgTo": "mansfield_joseph_k_f",
+          "msgToPost": "us_dept_washington",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_washington",
+            "orderBypass": false,
+            "orderIssuedDay": 114
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 114,
+        "kind": "paper_receipt",
+        "key": "m.114.b70961860618b775",
+        "value": {
+          "id": "m.114.b70961860618b775",
+          "msgOrigin": "m.114.b70961860618b775",
+          "msgFrom": "scott_winfield",
+          "msgTo": "mansfield_joseph_k_f",
+          "msgToPost": "us_dept_washington",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 114,
+          "msgArriveDay": 114,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_washington",
+            "orderBypass": false,
+            "orderIssuedDay": 114
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "allocationRecords": [
+      {
+        "allocOrder": "m.114.b70961860618b775",
+        "allocPaper": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+        "allocDay": 114,
+        "allocSender": "mansfield_joseph_k_f",
+        "allocStrongest": true,
+        "allocLots": [],
+        "allocBlocks": [],
+        "allocReceived": [],
+        "allocShortfall": 1,
+        "allocReasons": [
+          "retention_comparison_undetermined"
+        ],
+        "allocStatus": "deferred"
+      }
+    ],
+    "subordinateResponses": [
+      {
+        "respOrder": "m.114.b70961860618b775",
+        "respPerson": "mansfield_joseph_k_f",
+        "respPost": "us_dept_washington",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 114,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 264,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 64
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.114.b70961860618b775",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.114.b70961860618b775"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ],
+    "receivedReportsFromSnapshots": [
+      {
+        "snapshot": 120,
+        "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+        "seat": "seat:scott_winfield",
+        "report": {
+          "id": "m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+          "knownReceivedDay": 114,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+              "revision": 1
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_washington",
+            "reportClaims": [
+              {
+                "claimKind": "order-obeyed",
+                "claimRegion": "washington",
+                "claimValue": 0,
+                "claimToken": "comply",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.114.b70961860618b775"
+          }
+        }
+      },
+      {
+        "snapshot": 120,
+        "snapshotFile": "runs/s150/measurement-0134/state-120.json",
+        "seat": "seat:scott_winfield",
+        "report": {
+          "id": "m.114.mansfield_joseph_k_f.scott_winfield.subordinate-answer.m.114.b70961860618b775",
+          "knownReceivedDay": 114,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "mansfield_joseph_k_f",
+            "reportAuthorPost": "us_dept_washington",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_washington",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "philadelphia",
+                "claimValue": 0,
+                "claimToken": "force:subordinate_declined",
+                "claimConfidence": 1000
+              },
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "philadelphia",
+                "claimValue": 1,
+                "claimToken": "retention_comparison_undetermined",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 114,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.114.b70961860618b775"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "request": "m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b",
+    "answer": {
+      "fansDay": 124,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansIssuer": "johnston_joseph_e",
+      "fansAction": "order_subordinate",
+      "fansTo": "cs_cmd_fredericksburg",
+      "fansEvidence": "m.121.holmes_theophilus_h.lee_robert_e.return.cs_cmd_fredericksburg",
+      "fansReasons": [
+        "compliance:comply",
+        "retention_comparison_undetermined",
+        "subordinate_holdings_reported"
+      ],
+      "fansScore": [
+        792,
+        544,
+        792
+      ],
+      "fansAssignment": [
+        "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+        "lee_robert_e",
+        "cs_forces_virginia",
+        "cs_cmd_fredericksburg",
+        "cs_cmd_harpers_ferry",
+        "harpers_ferry",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "lee_confederate_virginia",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        null,
+        "holmes_theophilus_h"
+      ]
+    },
+    "paper": {
+      "id": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+      "issuer": "lee_robert_e",
+      "issuerPost": "cs_forces_virginia",
+      "from": "cs_cmd_fredericksburg",
+      "to": "cs_cmd_harpers_ferry",
+      "destination": "harpers_ferry",
+      "scope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "quantity": 1,
+      "mandate": "lee_confederate_virginia",
+      "modes": [
+        "land",
+        "rail",
+        "river",
+        "sea"
+      ],
+      "voluntary": null,
+      "recipient": "holmes_theophilus_h"
+    },
+    "traffic": [
+      {
+        "day": 124,
+        "kind": "dispatch",
+        "key": "m.124.ae63b5c3c61382b4",
+        "value": {
+          "id": "m.124.ae63b5c3c61382b4",
+          "msgOrigin": "m.124.ae63b5c3c61382b4",
+          "msgFrom": "lee_robert_e",
+          "msgTo": "holmes_theophilus_h",
+          "msgToPost": "cs_cmd_fredericksburg",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 124,
+          "msgArriveDay": 124,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lee_robert_e",
+            "orderTarget": "cs_cmd_fredericksburg",
+            "orderBypass": false,
+            "orderIssuedDay": 124
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      },
+      {
+        "day": 124,
+        "kind": "paper_receipt",
+        "key": "m.124.ae63b5c3c61382b4",
+        "value": {
+          "id": "m.124.ae63b5c3c61382b4",
+          "msgOrigin": "m.124.ae63b5c3c61382b4",
+          "msgFrom": "lee_robert_e",
+          "msgTo": "holmes_theophilus_h",
+          "msgToPost": "cs_cmd_fredericksburg",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 124,
+          "msgArriveDay": 124,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "allocation",
+            "orderAllocation": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+            "orderLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lee_robert_e",
+            "orderTarget": "cs_cmd_fredericksburg",
+            "orderBypass": false,
+            "orderIssuedDay": 124
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "allocationRecords": [
+      {
+        "allocOrder": "m.124.ae63b5c3c61382b4",
+        "allocPaper": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+        "allocDay": 124,
+        "allocSender": "holmes_theophilus_h",
+        "allocStrongest": true,
+        "allocLots": [],
+        "allocBlocks": [],
+        "allocReceived": [],
+        "allocShortfall": 1,
+        "allocReasons": [
+          "retention_comparison_undetermined"
+        ],
+        "allocStatus": "deferred"
+      }
+    ],
+    "subordinateResponses": [
+      {
+        "respOrder": "m.124.ae63b5c3c61382b4",
+        "respPerson": "holmes_theophilus_h",
+        "respPost": "cs_cmd_fredericksburg",
+        "respRole": "addressee",
+        "respKind": "allocation",
+        "respDay": 124,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 67,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "destination",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "detail",
+            "clauseSubject": "organisation"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.124.ae63b5c3c61382b4",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.124.ae63b5c3c61382b4"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.124.ae63b5c3c61382b4",
+          "clauses": [
+            "course",
+            "destination",
+            "detail"
+          ],
+          "undertakingRevision": "m.124.ae63b5c3c61382b4"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ],
+    "receivedReportsFromSnapshots": [
+      {
+        "snapshot": 140,
+        "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+        "seat": "seat:lee_robert_e",
+        "report": {
+          "id": "m.124.holmes_theophilus_h.lee_robert_e.ack.cs_cmd_fredericksburg",
+          "knownReceivedDay": 124,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportLetter": {
+              "namespace": "force-choice",
+              "key": "force.m.123.johnston_joseph_e.lee_robert_e.force-request:55f07f3b9f9fd3847800fb9b.cs_forces_virginia",
+              "revision": 1
+            },
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "holmes_theophilus_h",
+            "reportAuthorPost": "cs_cmd_fredericksburg",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_fredericksburg",
+            "reportClaims": [
+              {
+                "claimKind": "order-obeyed",
+                "claimRegion": "lynchburg",
+                "claimValue": 0,
+                "claimToken": "comply",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 124,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.124.ae63b5c3c61382b4"
+          }
+        }
+      },
+      {
+        "snapshot": 140,
+        "snapshotFile": "runs/s150/measurement-0134/state-140.json",
+        "seat": "seat:lee_robert_e",
+        "report": {
+          "id": "m.124.holmes_theophilus_h.lee_robert_e.subordinate-answer.m.124.ae63b5c3c61382b4",
+          "knownReceivedDay": 124,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "holmes_theophilus_h",
+            "reportAuthorPost": "cs_cmd_fredericksburg",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_fredericksburg",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "harpers_ferry",
+                "claimValue": 0,
+                "claimToken": "force:subordinate_declined",
+                "claimConfidence": 1000
+              },
+              {
+                "claimKind": "allocation-shortfall",
+                "claimRegion": "harpers_ferry",
+                "claimValue": 1,
+                "claimToken": "retention_comparison_undetermined",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 124,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.124.ae63b5c3c61382b4"
+          }
+        }
+      }
+    ]
+  }
+]

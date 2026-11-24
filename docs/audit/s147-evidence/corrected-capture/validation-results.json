@@ -1,0 +1,116 @@
+{
+  "reusedImplementationEvidence": [
+    "runs/s147/final-paired-fixtures.log:31 passed",
+    "runs/s147/ownership-correction.log:44 passed",
+    "runs/s147/typecheck-correction.log:exit0",
+    "runs/s147/correction-boundary.json:day83->84,0 rejections",
+    "docs/audit/s147-evidence/projection.json:seven other roots exact"
+  ],
+  "freshCapture": {
+    "day": 148,
+    "rejections": 0,
+    "finalHash": "2c15472760578da1e426327c9a8bf66012910ed3693099d507047aa6156e66a0",
+    "dailyReplay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "day60Resume": {
+      "atTurn": 60,
+      "finalHash": "2c15472760578da1e426327c9a8bf66012910ed3693099d507047aa6156e66a0",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rows": 33,
+    "armyTotals": 420,
+    "original417CommandTotalsUnchanged": true,
+    "lotRows": 1223,
+    "lotCSVByteIdenticalToS141": true,
+    "requests": 5,
+    "answers": 14,
+    "battleRecords": 1,
+    "changedBattles": 0,
+    "newZeros": 0,
+    "remainingPositiveZeroBreaches": 15,
+    "positiveBandsRecentred": 8,
+    "journalKinds": {
+      "dispatch": 216,
+      "paper_receipt": 206,
+      "offer_receipt": 7,
+      "request": 5,
+      "answer": 14,
+      "allocation_receipt": 1
+    },
+    "failedAttemptInventoryStillExact": true,
+    "rawSnapshotAndSaveHashesPinned": true,
+    "noMeasurementRetryAfterCorrectedCapture": true
+  },
+  "boundary": {
+    "exit": 0,
+    "log": "runs/s147/final-boundary.log"
+  },
+  "rules": {
+    "exit": 0,
+    "findings": 0,
+    "log": "runs/s147/correction-rules.log"
+  },
+  "ordinaryHook": {
+    "exit": 1,
+    "report": "hook-disposition.json",
+    "noRetry": true
+  },
+  "noGateWaiver": true,
+  "focusedCorrectionTests": {
+    "files": 7,
+    "passed": 98,
+    "exit": 0
+  },
+  "bandTable": {
+    "passed": 6,
+    "skipped": 9,
+    "exit": 0
+  },
+  "typecheck": {
+    "exit": 0,
+    "log": "runs/s147/correction-typecheck.log"
+  },
+  "licences": {
+    "exit": 0,
+    "log": "runs/s147/final-licences.log"
+  },
+  "decisions": {
+    "exit": 0,
+    "log": "runs/s147/final-decisions.log"
+  },
+  "logs": [
+    {
+      "path": "runs/s147/correction-typecheck.log",
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    },
+    {
+      "path": "runs/s147/targeted-corrections.log",
+      "sha256": "9ea217c6c52936f4e2a1bf5d81c952ad06ae679699df9b47ae4957ec99a45b88"
+    },
+    {
+      "path": "runs/s147/targeted-band-table.log",
+      "sha256": "169d8c0f6c38027cf66d465bf426e44fdb57caa57f3208926e843159b1fb452d"
+    },
+    {
+      "path": "runs/s147/correction-rules.log",
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "path": "runs/s147/final-boundary.log",
+      "sha256": "0e2fbf453b2aecef53779381df5a86d440296f2fcdbdfa6a795ec35f1107d72f"
+    },
+    {
+      "path": "runs/s147/final-licences.log",
+      "sha256": "7d41e5e4301849c17b27df3bd2c2419572a252cda182cce22ec6d0c7f828e1c5"
+    },
+    {
+      "path": "runs/s147/final-decisions.log",
+      "sha256": "cafddb308fad22669308535a4f8150cf0a36ea9b99a165f7feba11b1274282b4"
+    }
+  ],
+  "runtimeEvidenceReused": "four changed kernel files have identical type-stripped executable output; see type-only-runtime-equivalence.json",
+  "independentReview": false
+}

@@ -1,0 +1,21 @@
+{
+  "days": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+  ],
+  "printedRegimentDayGroups": 63,
+  "sameCandidatePositionsAndHoldersAs0134": true,
+  "anyCandidateUnderMcDowell": false,
+  "GO1BrigadeProvisionsDeclared": false,
+  "newHoldMission": "GO1 assumption paragraph and GO26 are source evidence for a local hold; they do not declare its brigades or reassign troops",
+  "identityReading": "GO1 numbers are unqualified. Sandford’s contemporaneous May28 report explicitly identifies New York militia5/8/12/25/28/69 and Eleventh New York Volunteers, OR I-II pp.37–39. These primary candidates are report metadata only; alternate IDs are retained in go1-holdings-84-90.json. U39’s earlier Twenty-fifth volunteer candidate is not silently adopted. No regiment identity was changed.",
+  "crossing": "OR I-II pp.37–39 attests the May24 crossing under Scott/Mansfield’s direction, with Fifth Massachusetts postedMay25 and Eighth New York militia crossingMay26. The original referenced crossing order has not been recovered in this reading. The pack has no declared May24 crossing/GO1 brigade handover.",
+  "department": "GO26 (GO1861 p.61; OR I-II p.653) creates a geographical Virginia command; it contains no named regiments or instruction sending Washington bodies across. McDowell’s May29 report at Arlington describes inspection of Michigan, Zouaves and69th already in Virginia (OR I-II p.653). GO1 pp.389–390 then explicitly brigades the named bodies within his department. Read together these attest the historical command, not a power to move a model body still at Washington by the territorial title alone.",
+  "existingTemplates": "s74_mcdowell is a July brigade template (evidenceDate1861-07-08; OR I-LI.1 pp.408–410,413–414), not a declaration of May28 GO1",
+  "mechanismAdded": false
+}

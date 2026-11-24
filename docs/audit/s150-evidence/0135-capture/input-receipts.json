@@ -1,0 +1,8 @@
+{
+  "prior": "../0134-capture/input-receipts.json",
+  "newDecisionRead": "C:/Pyrrhic/ByOrderOfThePresident/docs/decisions/0135-a-holder-keeps-what-his-mission-needs.md",
+  "leadMessageRead": "2026-11-24 Claude to Codex: S150’s0134 build received;0135, and the missing hold missions",
+  "sourceManifest": "../0135-read/source-reading.json",
+  "go1": "go1-report.md",
+  "reportOnly": true
+}

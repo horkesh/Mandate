@@ -1,0 +1,4179 @@
+{
+  "referenceCommit": "5c4a9d835ac97f2f35e6b3122e235955a09c85a7",
+  "worldHash": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+  "historicalReplayMatchesOldFixture": true,
+  "oldFixtureStateHash": "3f5771408bbf697ba93093529760aa8a0d612033ce134e5acf0fc458920f9d25",
+  "sameLogCurrentReplayHash": "1b863e8162908bd849a055f1f003ed726031e5d873b55ad734aef5732a5f4a72",
+  "firstDivergence": {
+    "day": 6,
+    "beforeHash": "46dc658d9894b2daff963916ba0b84d8e7f45e6d11c1c81f03a75a876233f806",
+    "afterHash": "7b20e472bbf6e98c285152911de69217157c2486474c0e1e8329945620d5eb64",
+    "differences": [
+      {
+        "path": "$.messagesInTransit",
+        "before": [
+          {
+            "id": "m.6.n_appointee.n_appointee.estimate.n_army_west",
+            "msgOrigin": "m.6.n_appointee.n_appointee.estimate.n_army_west",
+            "msgFrom": "n_appointee",
+            "msgTo": "n_appointee",
+            "msgToPost": "n_army_west",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_appointee",
+              "reportAuthorPost": "n_army_west",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_army_west",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_railhead",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_west_front",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_tip",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "w_valley",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "n_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "n_railhead",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "n_west_front",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "salient_tip",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "w_valley",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_commodore.n_commodore.estimate.n_home_squadron",
+            "msgOrigin": "m.6.n_commodore.n_commodore.estimate.n_home_squadron",
+            "msgFrom": "n_commodore",
+            "msgTo": "n_commodore",
+            "msgToPost": "n_home_squadron",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_commodore",
+              "reportAuthorPost": "n_home_squadron",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_home_squadron",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_commodore",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_naval_base",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_commodore",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "north_sea",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_commodore",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": "n_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": "n_naval_base",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": "north_sea",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_engineer.n_engineer.estimate.n_gull_rock",
+            "msgOrigin": "m.6.n_engineer.n_engineer.estimate.n_gull_rock",
+            "msgFrom": "n_engineer",
+            "msgTo": "n_engineer",
+            "msgToPost": "n_gull_rock",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_engineer",
+              "reportAuthorPost": "n_gull_rock",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_gull_rock",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "island_fort",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_engineer",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "island_fort",
+                  "claimValue": 800,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "south_sea",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_engineer",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 1,
+                  "claimToken": "sea:island_fort:south_sea",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": "s_coast",
+                  "claimValue": 1,
+                  "claimToken": "sea:s_coast:south_sea",
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": "island_fort",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": "island_fort",
+                  "termValue": 800,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": "south_sea",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_fighter.n_fighter.estimate.n_relief_army",
+            "msgOrigin": "m.6.n_fighter.n_fighter.estimate.n_relief_army",
+            "msgFrom": "n_fighter",
+            "msgTo": "n_fighter",
+            "msgToPost": "n_relief_army",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_fighter",
+              "reportAuthorPost": "n_relief_army",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_relief_army",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_fighter",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_naval_base",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_fighter",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "north_sea",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_fighter",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": "n_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": "n_naval_base",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": "north_sea",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_governor.n_governor.estimate.n_brenmark_governor",
+            "msgOrigin": "m.6.n_governor.n_governor.estimate.n_brenmark_governor",
+            "msgFrom": "n_governor",
+            "msgTo": "n_governor",
+            "msgToPost": "n_brenmark_governor",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_governor",
+              "reportAuthorPost": "n_brenmark_governor",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_brenmark_governor",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_capital",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "n_capital",
+                  "claimValue": 400,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "n_centre_line",
+                  "claimValue": 7100,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": true,
+                    "strengthCoverage": "complete",
+                    "strengthUnknown": false,
+                    "strengthLower": 7100,
+                    "strengthUpper": 7100,
+                    "strengthCounts": [
+                      {
+                        "countKind": "men",
+                        "count": 7100
+                      }
+                    ],
+                    "strengthComponents": [
+                      {
+                        "componentId": "region:men:0",
+                        "componentKind": "count",
+                        "componentLower": 7100,
+                        "componentUpper": 7100,
+                        "componentBasis": "observed men"
+                      }
+                    ],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-command",
+                  "claimRegion": "n_centre_line",
+                  "claimValue": 1,
+                  "claimToken": "s_army_salient",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_west_front",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_west_hills",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_capital",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_capital",
+                  "termValue": 400,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_centre_line",
+                  "termValue": 7100,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_west_front",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_west_hills",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_organiser.n_organiser.estimate.n_army_east",
+            "msgOrigin": "m.6.n_organiser.n_organiser.estimate.n_army_east",
+            "msgFrom": "n_organiser",
+            "msgTo": "n_organiser",
+            "msgToPost": "n_army_east",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_organiser",
+              "reportAuthorPost": "n_army_east",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_army_east",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "e_lowlands",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_east_front",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_east_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_tip",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "e_lowlands",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "n_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "n_east_front",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "n_east_plain",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "salient_tip",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_cavalier.s_cavalier.estimate.s_army_salient",
+            "msgOrigin": "m.6.s_cavalier.s_cavalier.estimate.s_army_salient",
+            "msgFrom": "s_cavalier",
+            "msgTo": "s_cavalier",
+            "msgToPost": "s_army_salient",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_cavalier",
+              "reportAuthorPost": "s_army_salient",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_army_salient",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_centre_line",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_east_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 2000,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": true,
+                    "strengthCoverage": "complete",
+                    "strengthUnknown": false,
+                    "strengthLower": 2000,
+                    "strengthUpper": 2000,
+                    "strengthCounts": [
+                      {
+                        "countKind": "men",
+                        "count": 2000
+                      }
+                    ],
+                    "strengthComponents": [
+                      {
+                        "componentId": "region:men:0",
+                        "componentKind": "count",
+                        "componentLower": 2000,
+                        "componentUpper": 2000,
+                        "componentBasis": "observed men"
+                      }
+                    ],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-command",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 1,
+                  "claimToken": "n_brenmark_governor",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_tip",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "n_centre_line",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "n_east_plain",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "n_heartland",
+                  "termValue": 2000,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "salient_tip",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_minister.s_minister.estimate.s_war_office",
+            "msgOrigin": "m.6.s_minister.s_minister.estimate.s_war_office",
+            "msgFrom": "s_minister",
+            "msgTo": "s_minister",
+            "msgToPost": "s_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_minister",
+              "reportAuthorPost": "s_war_office",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_war_office",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_capital",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_west_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "sea:s_coast:south_sea",
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_capital",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_west_plain",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_reserve.s_reserve.estimate.s_corran_command",
+            "msgOrigin": "m.6.s_reserve.s_reserve.estimate.s_corran_command",
+            "msgFrom": "s_reserve",
+            "msgTo": "s_reserve",
+            "msgToPost": "s_corran_command",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_reserve",
+              "reportAuthorPost": "s_corran_command",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_corran_command",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "mere_crossing",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "mere_crossing",
+                  "claimValue": 600,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "mere_lower",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "mere_upper",
+                  "claimValue": 180,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": true,
+                    "strengthCoverage": "complete",
+                    "strengthUnknown": false,
+                    "strengthLower": 180,
+                    "strengthUpper": 180,
+                    "strengthCounts": [
+                      {
+                        "countKind": "men",
+                        "count": 180
+                      }
+                    ],
+                    "strengthComponents": [
+                      {
+                        "componentId": "region:men:0",
+                        "componentKind": "count",
+                        "componentLower": 180,
+                        "componentUpper": 180,
+                        "componentBasis": "observed men"
+                      }
+                    ],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-command",
+                  "claimRegion": "mere_upper",
+                  "claimValue": 1,
+                  "claimToken": "n_river_flotilla",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_base",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "salient_base",
+                  "claimValue": 300,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "river:mere_crossing:mere_lower",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "river:mere_crossing:mere_upper",
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_crossing",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_crossing",
+                  "termValue": 600,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_lower",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_upper",
+                  "termValue": 180,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "s_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "salient_base",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "salient_base",
+                  "termValue": 300,
+                  "termRule": "works"
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_veteran.s_veteran.estimate.s_army_west",
+            "msgOrigin": "m.6.s_veteran.s_veteran.estimate.s_army_west",
+            "msgFrom": "s_veteran",
+            "msgTo": "s_veteran",
+            "msgToPost": "s_army_west",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_veteran",
+              "reportAuthorPost": "s_army_west",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_army_west",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_west_hills",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_west_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "w_valley",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "s_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "s_west_hills",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "s_west_plain",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "w_valley",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.1.n_commodore.n_navy_secretary.return.n_home_squadron",
+            "msgOrigin": "m.1.n_commodore.n_navy_secretary.return.n_home_squadron",
+            "msgFrom": "n_commodore",
+            "msgTo": "n_navy_secretary",
+            "msgToPost": "n_navy_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 7,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "n_commodore",
+              "reportAuthorPost": "n_home_squadron",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "n_home_squadron",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 680,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 952,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": null,
+                  "termValue": 680,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.1.n_fighter.n_secretary.return.n_relief_army",
+            "msgOrigin": "m.1.n_fighter.n_secretary.return.n_relief_army",
+            "msgFrom": "n_fighter",
+            "msgTo": "n_secretary",
+            "msgToPost": "n_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 7,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "n_fighter",
+              "reportAuthorPost": "n_relief_army",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "n_relief_army",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 200,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 280,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": null,
+                  "termValue": 200,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.5.n_secretary.n_organiser.order.n_army_east",
+            "msgOrigin": "m.5.n_leader.n_secretary.order.n_army_east",
+            "msgFrom": "n_secretary",
+            "msgTo": "n_organiser",
+            "msgToPost": "n_army_east",
+            "msgRole": "addressee",
+            "msgRoute": "special-messenger",
+            "msgSentDay": 5,
+            "msgArriveDay": 8,
+            "msgVia": [
+              "n_war_office"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "s_capital",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 20,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "n_leader",
+              "orderTarget": "n_army_east",
+              "orderBypass": false,
+              "orderIssuedDay": 5
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          },
+          {
+            "id": "m.1.s_cavalier.s_minister.return.s_army_salient",
+            "msgOrigin": "m.1.s_cavalier.s_minister.return.s_army_salient",
+            "msgFrom": "s_cavalier",
+            "msgTo": "s_minister",
+            "msgToPost": "s_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 9,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "s_cavalier",
+              "reportAuthorPost": "s_army_salient",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "s_army_salient",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 11500,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 16100,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": null,
+                  "termValue": 11500,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.1.n_engineer.n_secretary.return.n_gull_rock",
+            "msgOrigin": "m.1.n_engineer.n_secretary.return.n_gull_rock",
+            "msgFrom": "n_engineer",
+            "msgTo": "n_secretary",
+            "msgToPost": "n_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 13,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "n_engineer",
+              "reportAuthorPost": "n_gull_rock",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "n_gull_rock",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 90,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 126,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": null,
+                  "termValue": 90,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          }
+        ],
+        "after": [
+          {
+            "id": "m.6.n_appointee.n_appointee.estimate.n_army_west",
+            "msgOrigin": "m.6.n_appointee.n_appointee.estimate.n_army_west",
+            "msgFrom": "n_appointee",
+            "msgTo": "n_appointee",
+            "msgToPost": "n_army_west",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_appointee",
+              "reportAuthorPost": "n_army_west",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_army_west",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_railhead",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_west_front",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_tip",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "w_valley",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_appointee",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "n_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "n_railhead",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "n_west_front",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "salient_tip",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_west",
+                  "termRegion": "w_valley",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_commodore.n_commodore.estimate.n_home_squadron",
+            "msgOrigin": "m.6.n_commodore.n_commodore.estimate.n_home_squadron",
+            "msgFrom": "n_commodore",
+            "msgTo": "n_commodore",
+            "msgToPost": "n_home_squadron",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_commodore",
+              "reportAuthorPost": "n_home_squadron",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_home_squadron",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_commodore",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_naval_base",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_commodore",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "north_sea",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_commodore",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": "n_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": "n_naval_base",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": "north_sea",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_engineer.n_engineer.estimate.n_gull_rock",
+            "msgOrigin": "m.6.n_engineer.n_engineer.estimate.n_gull_rock",
+            "msgFrom": "n_engineer",
+            "msgTo": "n_engineer",
+            "msgToPost": "n_gull_rock",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_engineer",
+              "reportAuthorPost": "n_gull_rock",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_gull_rock",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "island_fort",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_engineer",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "island_fort",
+                  "claimValue": 800,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "south_sea",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_engineer",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 1,
+                  "claimToken": "sea:island_fort:south_sea",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": "s_coast",
+                  "claimValue": 1,
+                  "claimToken": "sea:s_coast:south_sea",
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": "island_fort",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": "island_fort",
+                  "termValue": 800,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": "south_sea",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_fighter.n_fighter.estimate.n_relief_army",
+            "msgOrigin": "m.6.n_fighter.n_fighter.estimate.n_relief_army",
+            "msgFrom": "n_fighter",
+            "msgTo": "n_fighter",
+            "msgToPost": "n_relief_army",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_fighter",
+              "reportAuthorPost": "n_relief_army",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_relief_army",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_fighter",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_naval_base",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_fighter",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "north_sea",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_fighter",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": "n_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": "n_naval_base",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": "north_sea",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_governor.n_governor.estimate.n_brenmark_governor",
+            "msgOrigin": "m.6.n_governor.n_governor.estimate.n_brenmark_governor",
+            "msgFrom": "n_governor",
+            "msgTo": "n_governor",
+            "msgToPost": "n_brenmark_governor",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_governor",
+              "reportAuthorPost": "n_brenmark_governor",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_brenmark_governor",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_capital",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "n_capital",
+                  "claimValue": 400,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "n_centre_line",
+                  "claimValue": 7100,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": true,
+                    "strengthCoverage": "complete",
+                    "strengthUnknown": false,
+                    "strengthLower": 7100,
+                    "strengthUpper": 7100,
+                    "strengthCounts": [
+                      {
+                        "countKind": "men",
+                        "count": 7100
+                      }
+                    ],
+                    "strengthComponents": [
+                      {
+                        "componentId": "region:men:0",
+                        "componentKind": "count",
+                        "componentLower": 7100,
+                        "componentUpper": 7100,
+                        "componentBasis": "observed men"
+                      }
+                    ],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-command",
+                  "claimRegion": "n_centre_line",
+                  "claimValue": 1,
+                  "claimToken": "s_army_salient",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_west_front",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_west_hills",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_governor",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_capital",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_capital",
+                  "termValue": 400,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_centre_line",
+                  "termValue": 7100,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_west_front",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_brenmark_governor",
+                  "termRegion": "n_west_hills",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_governor.n_leader.governor-holdings.n_brenmark_governor",
+            "msgOrigin": "m.6.n_governor.n_leader.governor-holdings.n_brenmark_governor",
+            "msgFrom": "n_governor",
+            "msgTo": "n_leader",
+            "msgToPost": "n_head",
+            "msgRole": "addressee",
+            "msgRoute": "wire",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "wire-dispatch",
+              "reportSubtype": null,
+              "reportAuthor": "n_governor",
+              "reportAuthorPost": "n_brenmark_governor",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "n_brenmark_governor",
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null,
+              "reportClaims": [],
+              "reportGovernorLots": [
+                {
+                  "availRegiment": null,
+                  "availArm": "infantry",
+                  "availCall": null,
+                  "availEndsDay": 96,
+                  "availTermDays": 90
+                },
+                {
+                  "availRegiment": null,
+                  "availArm": "infantry",
+                  "availCall": null,
+                  "availEndsDay": 96,
+                  "availTermDays": 90
+                }
+              ]
+            },
+            "msgTruth": {
+              "truthTerms": [],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.n_organiser.n_organiser.estimate.n_army_east",
+            "msgOrigin": "m.6.n_organiser.n_organiser.estimate.n_army_east",
+            "msgFrom": "n_organiser",
+            "msgTo": "n_organiser",
+            "msgToPost": "n_army_east",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "n_organiser",
+              "reportAuthorPost": "n_army_east",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "n_army_east",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "e_lowlands",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_east_front",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_east_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_tip",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "n_organiser",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "e_lowlands",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "n_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "n_east_front",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "n_east_plain",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_army_east",
+                  "termRegion": "salient_tip",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_cavalier.s_cavalier.estimate.s_army_salient",
+            "msgOrigin": "m.6.s_cavalier.s_cavalier.estimate.s_army_salient",
+            "msgFrom": "s_cavalier",
+            "msgTo": "s_cavalier",
+            "msgToPost": "s_army_salient",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_cavalier",
+              "reportAuthorPost": "s_army_salient",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_army_salient",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_centre_line",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "n_east_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 2000,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": true,
+                    "strengthCoverage": "complete",
+                    "strengthUnknown": false,
+                    "strengthLower": 2000,
+                    "strengthUpper": 2000,
+                    "strengthCounts": [
+                      {
+                        "countKind": "men",
+                        "count": 2000
+                      }
+                    ],
+                    "strengthComponents": [
+                      {
+                        "componentId": "region:men:0",
+                        "componentKind": "count",
+                        "componentLower": 2000,
+                        "componentUpper": 2000,
+                        "componentBasis": "observed men"
+                      }
+                    ],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-command",
+                  "claimRegion": "n_heartland",
+                  "claimValue": 1,
+                  "claimToken": "n_brenmark_governor",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_tip",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_cavalier",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "n_centre_line",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "n_east_plain",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "n_heartland",
+                  "termValue": 2000,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": "salient_tip",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_minister.s_minister.estimate.s_war_office",
+            "msgOrigin": "m.6.s_minister.s_minister.estimate.s_war_office",
+            "msgFrom": "s_minister",
+            "msgTo": "s_minister",
+            "msgToPost": "s_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_minister",
+              "reportAuthorPost": "s_war_office",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_war_office",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_capital",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_coast",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_west_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_minister",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "sea:s_coast:south_sea",
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_capital",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_coast",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_war_office",
+                  "termRegion": "s_west_plain",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_reserve.s_reserve.estimate.s_corran_command",
+            "msgOrigin": "m.6.s_reserve.s_reserve.estimate.s_corran_command",
+            "msgFrom": "s_reserve",
+            "msgTo": "s_reserve",
+            "msgToPost": "s_corran_command",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_reserve",
+              "reportAuthorPost": "s_corran_command",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_corran_command",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "mere_crossing",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "mere_crossing",
+                  "claimValue": 600,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "mere_lower",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "mere_upper",
+                  "claimValue": 180,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": true,
+                    "strengthCoverage": "complete",
+                    "strengthUnknown": false,
+                    "strengthLower": 180,
+                    "strengthUpper": 180,
+                    "strengthCounts": [
+                      {
+                        "countKind": "men",
+                        "count": 180
+                      }
+                    ],
+                    "strengthComponents": [
+                      {
+                        "componentId": "region:men:0",
+                        "componentKind": "count",
+                        "componentLower": 180,
+                        "componentUpper": 180,
+                        "componentBasis": "observed men"
+                      }
+                    ],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-command",
+                  "claimRegion": "mere_upper",
+                  "claimValue": 1,
+                  "claimToken": "n_river_flotilla",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "salient_base",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_reserve",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "salient_base",
+                  "claimValue": 300,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "river:mere_crossing:mere_lower",
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "obstruction",
+                  "claimRegion": null,
+                  "claimValue": 0,
+                  "claimToken": "river:mere_crossing:mere_upper",
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_crossing",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_crossing",
+                  "termValue": 600,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_lower",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "mere_upper",
+                  "termValue": 180,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "s_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "salient_base",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_corran_command",
+                  "termRegion": "salient_base",
+                  "termValue": 300,
+                  "termRule": "works"
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.6.s_veteran.s_veteran.estimate.s_army_west",
+            "msgOrigin": "m.6.s_veteran.s_veteran.estimate.s_army_west",
+            "msgFrom": "s_veteran",
+            "msgTo": "s_veteran",
+            "msgToPost": "s_army_west",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 6,
+            "msgArriveDay": 6,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "s_veteran",
+              "reportAuthorPost": "s_army_west",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "s_army_west",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_heartland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_west_hills",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "s_west_plain",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                },
+                {
+                  "claimKind": "enemy-estimate-unknown",
+                  "claimRegion": "w_valley",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700,
+                  "claimStrength": {
+                    "strengthObserver": "s_veteran",
+                    "strengthDay": 6,
+                    "strengthScope": "region",
+                    "strengthPresence": false,
+                    "strengthCoverage": "unknown",
+                    "strengthUnknown": true,
+                    "strengthLower": null,
+                    "strengthUpper": null,
+                    "strengthCounts": [],
+                    "strengthComponents": [],
+                    "strengthReaders": [],
+                    "strengthConditions": "regional reconnaissance: counted exposed quantified component; no formation count or bound for unquantified contact"
+                  }
+                }
+              ],
+              "reportDay": 6,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "s_heartland",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "s_west_hills",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "s_west_plain",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_west",
+                  "termRegion": "w_valley",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.1.n_commodore.n_navy_secretary.return.n_home_squadron",
+            "msgOrigin": "m.1.n_commodore.n_navy_secretary.return.n_home_squadron",
+            "msgFrom": "n_commodore",
+            "msgTo": "n_navy_secretary",
+            "msgToPost": "n_navy_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 7,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "n_commodore",
+              "reportAuthorPost": "n_home_squadron",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "n_home_squadron",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 680,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 952,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": null,
+                  "termValue": 680,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "n_home_squadron",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.1.n_fighter.n_secretary.return.n_relief_army",
+            "msgOrigin": "m.1.n_fighter.n_secretary.return.n_relief_army",
+            "msgFrom": "n_fighter",
+            "msgTo": "n_secretary",
+            "msgToPost": "n_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 7,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "n_fighter",
+              "reportAuthorPost": "n_relief_army",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "n_relief_army",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 200,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 280,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": null,
+                  "termValue": 200,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "n_relief_army",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.5.n_secretary.n_organiser.order.n_army_east",
+            "msgOrigin": "m.5.n_leader.n_secretary.order.n_army_east",
+            "msgFrom": "n_secretary",
+            "msgTo": "n_organiser",
+            "msgToPost": "n_army_east",
+            "msgRole": "addressee",
+            "msgRoute": "special-messenger",
+            "msgSentDay": 5,
+            "msgArriveDay": 8,
+            "msgVia": [
+              "n_war_office"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "s_capital",
+                "goalPosture": "take",
+                "goalRisk": 500,
+                "goalDeadlineDays": 20,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderIssuer": "n_leader",
+              "orderTarget": "n_army_east",
+              "orderBypass": false,
+              "orderIssuedDay": 5
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          },
+          {
+            "id": "m.1.s_cavalier.s_minister.return.s_army_salient",
+            "msgOrigin": "m.1.s_cavalier.s_minister.return.s_army_salient",
+            "msgFrom": "s_cavalier",
+            "msgTo": "s_minister",
+            "msgToPost": "s_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 9,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "s_cavalier",
+              "reportAuthorPost": "s_army_salient",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "s_army_salient",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 11500,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 16100,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": null,
+                  "termValue": 11500,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "s_army_salient",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.1.n_engineer.n_secretary.return.n_gull_rock",
+            "msgOrigin": "m.1.n_engineer.n_secretary.return.n_gull_rock",
+            "msgFrom": "n_engineer",
+            "msgTo": "n_secretary",
+            "msgToPost": "n_war_office",
+            "msgRole": "addressee",
+            "msgRoute": "mail",
+            "msgSentDay": 1,
+            "msgArriveDay": 13,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "strength-return",
+              "reportSubtype": null,
+              "reportAuthor": "n_engineer",
+              "reportAuthorPost": "n_gull_rock",
+              "reportSubjectKind": "post",
+              "reportSubjectId": "n_gull_rock",
+              "reportClaims": [
+                {
+                  "claimKind": "present-for-duty",
+                  "claimRegion": null,
+                  "claimValue": 90,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                },
+                {
+                  "claimKind": "present-and-absent",
+                  "claimRegion": null,
+                  "claimValue": 126,
+                  "claimToken": null,
+                  "claimConfidence": 900
+                }
+              ],
+              "reportDay": 1,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": null,
+                  "termValue": 90,
+                  "termRule": null
+                },
+                {
+                  "termKind": "paper_strength",
+                  "termPerson": null,
+                  "termPost": "n_gull_rock",
+                  "termRegion": null,
+                  "termValue": 1400,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "dayHashes": [
+    {
+      "day": 1,
+      "reference": "7f56fad4540ad39a2fe1f6f73b88c5a27af400b9c3536e846ef5e71e7a041a10",
+      "current": "7f56fad4540ad39a2fe1f6f73b88c5a27af400b9c3536e846ef5e71e7a041a10"
+    },
+    {
+      "day": 2,
+      "reference": "c32e2769f30fc8b6c5b5a2361e5233b762b51c3d2590c2b91d0ed538d5843b3a",
+      "current": "c32e2769f30fc8b6c5b5a2361e5233b762b51c3d2590c2b91d0ed538d5843b3a"
+    },
+    {
+      "day": 3,
+      "reference": "9c643c4b7a5122d0528d9ed5ffa927c00edb37baf68e34896a4e90daba2d0917",
+      "current": "9c643c4b7a5122d0528d9ed5ffa927c00edb37baf68e34896a4e90daba2d0917"
+    },
+    {
+      "day": 4,
+      "reference": "87d3303d67093cdf9014931a58e68f66a4d28d5a47ea43b577bc25cf84142445",
+      "current": "87d3303d67093cdf9014931a58e68f66a4d28d5a47ea43b577bc25cf84142445"
+    },
+    {
+      "day": 5,
+      "reference": "20581157820034fdca5d71135e564f1ebec02332117faee97a3afeb1e52193ed",
+      "current": "20581157820034fdca5d71135e564f1ebec02332117faee97a3afeb1e52193ed"
+    },
+    {
+      "day": 6,
+      "reference": "46dc658d9894b2daff963916ba0b84d8e7f45e6d11c1c81f03a75a876233f806",
+      "current": "7b20e472bbf6e98c285152911de69217157c2486474c0e1e8329945620d5eb64"
+    },
+    {
+      "day": 7,
+      "reference": "1f97462117a6e0b91596d9e11f4c40af6c4c9a48a211fe6c124df75ff7a43654",
+      "current": "a80437153a5c973283176ff4693e85f40df61612a8b1da22ee72678e23bc6e0f"
+    },
+    {
+      "day": 8,
+      "reference": "c3bb53e1b1cc993551d849f6c90861aba7631727c2b576daabc62c8dc2e76824",
+      "current": "e0f0bdd377bccdbe82892830d35f3722b5a88de53a1bd6c1d41b748a30f5827a"
+    },
+    {
+      "day": 9,
+      "reference": "e77bcbf417dec6e63a270180e23cf66abe8149c232edefcf6b46ffd4fc1358c4",
+      "current": "b47b3a7e6477b9ce2460d0587c062676a0fe81e60e3f307126c45de3dda22d63"
+    },
+    {
+      "day": 10,
+      "reference": "64a1d6afe396716ba21f1644194dccef900d9c45bd793704eda546e1ce69c279",
+      "current": "285fd66a399b1656cf2eb7fe2f4cace2f5bb3a3ce8895740352da5956373b188"
+    },
+    {
+      "day": 11,
+      "reference": "f9eaa35d9cdbe8a304e51aef56c18da3b7619d52a028b730dcf5a2e386359e7b",
+      "current": "a320919b4a508e829e5f565af4785c31ae4283eca1a9288e4db5ff5b5bc052ce"
+    },
+    {
+      "day": 12,
+      "reference": "2adfe11a89f4b5dda8eab8f18104913d5d68e8b21e3993c2fe9516814a80010d",
+      "current": "612d4605e42df9781243be7f5771f767a81ec4f41031f43e6d53f791a4d9be77"
+    },
+    {
+      "day": 13,
+      "reference": "9b26662d96eddd0fb95a1d2778fc0cd3df823e519a146382b076f7f21b2bef6d",
+      "current": "30e13dfbee4088c687480adf682930fd118a6c01ab1e22549a0522f61d6491e3"
+    },
+    {
+      "day": 14,
+      "reference": "8693c10cfc63b4721c9a9c5792e2f1086c7b49b165e5dcd5a60e3530dfd1b516",
+      "current": "9a58188b00667b281218f6b8d0b2063e628d76f096ef1c72dd4a9b8611a459c3"
+    },
+    {
+      "day": 15,
+      "reference": "39b4c73db003871bb2b613bc42b3a07bf8dfeabcc7f70cf7edab16e8a03af008",
+      "current": "e89996909e1d771bc1429731f65ad6e93845b2e336a48fa3610639bfd603feed"
+    },
+    {
+      "day": 16,
+      "reference": "4b895a2e8b6a1f4a6ee09566102b4e25c504250fc28e05945ccadb8b26562408",
+      "current": "697aebcadfa63f5b8696b72de1c45974f85376efb1a69dac78530a0d203037ae"
+    },
+    {
+      "day": 17,
+      "reference": "9ac658e8669667a2fc75e4802a5b26b0ca94b1bb0161ee58ce65a5ee7e9c02c2",
+      "current": "e85e7f89b7f42d3f916a1a438bc4da3ca18fdfe867711d11e5403139fbe5668c"
+    },
+    {
+      "day": 18,
+      "reference": "3a5568da05b38d0ba6d4a3a463cec79ddc0690a1dfce3a60559fc84a4b68ed5e",
+      "current": "4746b6fc41d99483b8131b95c38f77f2a06e38790d4b1885c0fe609ab49b3d48"
+    },
+    {
+      "day": 19,
+      "reference": "d56e59dc3c942a85e6fc6dc444f45dfa0778157c325435fea2b5ec9d9a7d2ebf",
+      "current": "4439060e84cf309d9466cfefe63789b89112d927c6e1dcfc6fdea89edfce472d"
+    },
+    {
+      "day": 20,
+      "reference": "c2414401bb06a3ef74232646e853a79b9be2c881ef48e117ba503a44493c1641",
+      "current": "226d7260cdd924f453e5f68854fe7bca726f2b2bd9b83f4d6d07bc30b81d207d"
+    },
+    {
+      "day": 21,
+      "reference": "12b95a3af5200e1ed8e910366195ddff7c0f003a69d5d22a143b61e0f774b083",
+      "current": "90a8807e0da91d2b577d42cd60f59569c6a36a1a1d4ec5136b7d6bdf93b0ccb1"
+    },
+    {
+      "day": 22,
+      "reference": "49f7b12f0e3d7f2bf15d9058b3c4b8545982dea105da7aede9589df668bdcd8a",
+      "current": "2a83886d991f0dbf461180edf84bb98062fbb74003c582974412d4d24afcefc3"
+    },
+    {
+      "day": 23,
+      "reference": "403543f50d256421183344bc234e7fb602a573f00ccedd01aa1684be2b08ed8a",
+      "current": "18f39d11bf937fca98d2ce87c31b0129f0ad3ac2067f85f9cb583df09364b785"
+    },
+    {
+      "day": 24,
+      "reference": "1d8a6e285b5015de2dab3a398994759039ac84f31c7cd58162fb998fcf8142d3",
+      "current": "49ded5f9813075e4a6adfd26024ad7edab14bc7092b873c2b41d709841d22ca2"
+    },
+    {
+      "day": 25,
+      "reference": "5cdbe2203c90ce39b0682d24d3f5dc32830a6b820c1c153437167e5363f79f89",
+      "current": "f0c74be734d7aee0b38005ae11fbb1b95e64b63c9f482cace487908dd16603f5"
+    },
+    {
+      "day": 26,
+      "reference": "f3ed9eab09a1c9567170a88452d54da81e9eaae52d3d01df5f79022cfe53b528",
+      "current": "6cc7f17c2463cae2c49bebbf19077f02d76817af6c2a2f9d300ca1a584a2c31c"
+    },
+    {
+      "day": 27,
+      "reference": "0a1a8348fd3f0fa1dd4ce435f941f022d8f03803407b0e4283d8051524c8b3c7",
+      "current": "bd0db8c8aaafd47e29551b26aafd35404eba5c7d8be5903bc18288e84bbed30b"
+    },
+    {
+      "day": 28,
+      "reference": "843b736a44bc0f67190ff0a9928cfad552f3adfae6f2ad50315c3ac2cdc7db9a",
+      "current": "8e8fbdc25e7c8e6f938c5f7e5c89d9366e131ec6490581be8961135b0fc408c9"
+    },
+    {
+      "day": 29,
+      "reference": "4af85d4a8ee646dfb65bcd1d69a9049a2fd67f51fb3d09354034a449dddb759f",
+      "current": "c7080a5e11ff54492ea96819428a08f48bbbee0e1183f809cfaf40fbbf0299e0"
+    },
+    {
+      "day": 30,
+      "reference": "53ad428e800dd70c58fbf91b9ebd5958296ef139b67ca49770009209565fbeb1",
+      "current": "a67a235bb37a6d4d7366e2f63c9a8d524ab21fc320a24aca2cf2a54d15652e94"
+    },
+    {
+      "day": 31,
+      "reference": "325967bdeb600a70bcfb253467d0f1cce581ca9febf2f4ff84a4bcb3470245d8",
+      "current": "7b0f17793ea08b22f54eef0b59833512160b95669fb1a91c06449c4f5b66e56f"
+    },
+    {
+      "day": 32,
+      "reference": "754cc081cdac63d473ec4263a2ff0697cab7a9e779e32709605d907c3271ee88",
+      "current": "29d0149cb1b2e8dc874c14d84c7e2abf3b164e67b7e3a4ed38c86ed56c979d21"
+    },
+    {
+      "day": 33,
+      "reference": "6e56ee314fde2f07c2e62cfc0a6ccfe0b2c0b60f9fc1139a6d2a83f1911db333",
+      "current": "7c127f1c5a9bb55355ba433cc8bbfdca73e07004a1c3b58d83d4c8ad3e207f30"
+    },
+    {
+      "day": 34,
+      "reference": "60aff5259deed01ab8920ca879a4d37e2594ee88c693997e7ae240fbe29730fc",
+      "current": "5188563254130895e478857c9455d4650a263862941e345cc16597cb9f0d640a"
+    },
+    {
+      "day": 35,
+      "reference": "af542d073b738c8a5e3b46333e8b05667d8525a505875bd3b78962aa8eef5e9e",
+      "current": "e6157aaf73c64afdb78747175dbbcfde888c5a070eceed1f3a38815d75bdedc8"
+    },
+    {
+      "day": 36,
+      "reference": "64d005fd9a03a6e5fccdac88c00f661fa24b62ac81d25d198657e0b62e1d24bc",
+      "current": "fb90119622f8d684fcc7200966613635dbf99f291fd38b19ae26670e464a22ff"
+    },
+    {
+      "day": 37,
+      "reference": "6400e300c5709680e2fb52011dd67238c4821de1aecad69ddcce8bb6cf5f3ef5",
+      "current": "13f521f95644416e5fd3a2b192c781d97ce41ea122409723b56a143e1dd9a4f5"
+    },
+    {
+      "day": 38,
+      "reference": "6a4a4f9e97d1aeedb77fbe7a2e422179d5022c1d3ac156a6b4ac6321844a31f2",
+      "current": "1e3c8f45d67e2964dd9b5eac392cb8ad6137fbb9c50e8697271edc3a825c6735"
+    },
+    {
+      "day": 39,
+      "reference": "92a8dff8a085e4384a41b6cfda86e7e73d9fe6b7ac0279250784eca2513e35f3",
+      "current": "8db0b8e2138b7adf39102899e34cb99247529fd9961e0a5046fc2ded08ec83f1"
+    },
+    {
+      "day": 40,
+      "reference": "3f5771408bbf697ba93093529760aa8a0d612033ce134e5acf0fc458920f9d25",
+      "current": "1b863e8162908bd849a055f1f003ed726031e5d873b55ad734aef5732a5f4a72"
+    }
+  ],
+  "regenerationCause": "Accepted 0133 after-muster governor holdings report, first added on day 6; no other root or common message differs on that day.",
+  "generator": "node --import tsx tools/make-save-fixture.ts",
+  "oldFixtureSha256": "0541fcbf20387bdbf91b75d9b57aface7ffe18b6f21fd971c1ce4cf687d52430",
+  "newFixtureSha256": "2060d26c6fbdaa0a72b59a080d24a795f7851c1e850cfa1927443860e3b09699",
+  "newFixtureStateHash": "1b863e8162908bd849a055f1f003ed726031e5d873b55ad734aef5732a5f4a72",
+  "newFixtureWorldHash": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5"
+}

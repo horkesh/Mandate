@@ -1,0 +1,1103 @@
+ packages/cli/test/console.test.ts [ packages/cli/test/console.test.ts ]
+
+TypeError: Cannot read properties of undefined (reading 'length')
+
+ ❯ ConsoleSession.endTurn packages/cli/src/console/session.ts:123:22
+
+    121|     const open = this.request.view.situations.filter((s) => s.status =…
+
+    122|     if (open.length > 0) lines.push(this.t('console.morning.situations…
+
+    123|     if (menu.reviews.length > 0) lines.push(this.t('console.morning.pl…
+
+       |                      ^
+
+    124|     if (menu.awaiting.length > 0) lines.push(this.t('console.morning.a…
+
+    125|     return lines;
+
+ ❯ ConsoleSession.handle packages/cli/src/console/session.ts:75:30
+
+ ❯ play packages/cli/test/console.test.ts:18:25
+
+ ❯ packages/cli/test/console.test.ts:47:39
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/17]⎯
+
+
+
+
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 16 ⎯⎯⎯⎯⎯⎯⎯
+
+
+FAIL  packages/cli/test/concentration.test.ts > a transfer concentrates on union-1861 > a levy mustered at New York an
+
+d transferred to Washington’s post marches to Washington, by rail where it runs
+
+AssertionError: expected 'st_gov_new_york' to be 'us_dc_militia' // Object.is equality
+
+
+
+Expected: "us_dc_militia"
+
+Received: "st_gov_new_york"
+
+
+
+ ❯ packages/cli/test/concentration.test.ts:41:65
+
+     39|     for (const b of ny) {
+
+     40|       // Handed to Washington's post, it stands at Washington with no …
+
+     41|       expect(run.state.forceAssignments[b as ids.ForceBlockId]).toBe(D…
+
+       |                                                                 ^
+
+     42|       expect(run.state.forceLocations[b as ids.ForceBlockId]!.locRegio…
+
+     43|       expect(run.state.forceJoins[b as ids.ForceBlockId]).toBeUndefine…
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/17]⎯
+
+
+FAIL  packages/cli/test/done-check.test.ts > the done check on union-1861 at war and the testbed > passes every Phase
+
+0 criterion but the budget, which is a stopwatch
+
+AssertionError: liveness: expected [ …(15) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   "union-1861, war by decision, 148 days: combat.battle_closed is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.battle_opened is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.captured is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.flank_broken is dead (0 fires, band 1..6)",
+
++   "union-1861, war by decision, 148 days: combat.general_hit is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: combat.killed_wounded is dead (0 fires, band 5..20)",
+
++   "union-1861, war by decision, 148 days: combat.missing is dead (0 fires, band 4..18)",
+
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.withdrew is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 92..368)",
+
++   "union-1861, war by decision, 148 days: map.pocket_relieved is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: operations.repulsed is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: planner.term.time is dead (0 fires, band 1..5)",
+
++   "union-1861, war by decision, 148 days: reports.commander_lost is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: seats.battle_orders is dead (0 fires, band 5..20)",
+
++ ]
+
+
+
+ ❯ packages/cli/test/done-check.test.ts:47:114
+
+     45| describe('the done check on union-1861 at war and the testbed', () => {
+
+     46|   it('passes every Phase 0 criterion but the budget, which is a stopwa…
+
+     47|     for (const c of result.criteria) if (c.milestone === 'phase0' && c…
+
+       |
+
+   ^
+
+     48|     expect(result.criteria.filter((c) => c.milestone === 'phase0').map…
+
+     49|   });
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/17]⎯
+
+
+FAIL  packages/cli/test/done-check.test.ts > each criterion can fail (positive controls) > liveness: a planted dead me
+
+chanic in a reference run fails the check
+
+AssertionError: expected [ …(15) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   "union-1861, war by decision, 148 days: combat.battle_closed is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.battle_opened is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.captured is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.flank_broken is dead (0 fires, band 1..6)",
+
++   "union-1861, war by decision, 148 days: combat.general_hit is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: combat.killed_wounded is dead (0 fires, band 5..20)",
+
++   "union-1861, war by decision, 148 days: combat.missing is dead (0 fires, band 4..18)",
+
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 2..10)",
+
++   "union-1861, war by decision, 148 days: combat.withdrew is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 92..368)",
+
++   "union-1861, war by decision, 148 days: map.pocket_relieved is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: operations.repulsed is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: planner.term.time is dead (0 fires, band 1..5)",
+
++   "union-1861, war by decision, 148 days: reports.commander_lost is dead (0 fires, band 1..4)",
+
++   "union-1861, war by decision, 148 days: seats.battle_orders is dead (0 fires, band 5..20)",
+
++ ]
+
+
+
+ ❯ packages/cli/test/done-check.test.ts:163:63
+
+    161|     const run = union();
+
+    162|     const reference = REFERENCE_RUNS.find((x) => x.name === 'union-186…
+
+    163|     expect(livenessProblems(reference, run.checked.liveness)).toEqual(…
+
+       |                                                               ^
+
+    164|     // Lane 1.12: a mechanic the Union doctrine drives (its run has no…
+
+    165|     const planted = run.checked.liveness.map((row) => (row.mechanic ==…
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/17]⎯
+
+
+FAIL  packages/cli/test/liveness-gate.test.ts > the band table > is sound: every mechanic banded in each full run, eve
+
+ry zero band explained, none fires nowhere unexplained
+
+AssertionError: expected [ Array(1) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   "plans.approved fires in a reference run but is also listed as quiet",
+
++ ]
+
+
+
+ ❯ packages/cli/test/liveness-gate.test.ts:22:28
+
+     20| describe('the band table', () => {
+
+     21|   it('is sound: every mechanic banded in each full run, every zero ban…
+
+     22|     expect(bandProblems()).toEqual([]);
+
+       |                            ^
+
+     23|   });
+
+     24|
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/17]⎯
+
+
+FAIL  packages/cli/test/liveness-gate.test.ts > the band table > a stalled band names a kernel test that exists and sa
+
+ys so, and has a ceiling
+
+AssertionError: expected [ Array(1) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   "plans.approved fires in a reference run but is also listed as quiet",
+
++ ]
+
+
+
+ ❯ packages/cli/test/liveness-gate.test.ts:44:105
+
+
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/17]⎯
+
+
+FAIL  packages/cli/test/liveness-gate.test.ts > the reference runs > union-1861, war by decision, 148 days: every mech
+
+anic fires within its band
+
+AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(12) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   {
+
++     "band": {
+
++       "maxFires": 10,
+
++       "minFires": 2,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.battle_closed",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 10,
+
++       "minFires": 2,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.battle_opened",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 10,
+
++       "minFires": 2,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.captured",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 6,
+
++       "minFires": 1,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.flank_broken",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 4,
+
++       "minFires": 1,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.general_hit",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 20,
+
++       "minFires": 5,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.killed_wounded",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 18,
+
++       "minFires": 4,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.missing",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 10,
+
++       "minFires": 2,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.routed",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 4,
+
++       "minFires": 1,
+
++       "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture traject
+
+ory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Fe
+
+rry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. C
+
+ombat and decision rules are unchanged.",
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "combat.withdrew",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 368,
+
++       "minFires": 92,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "forces.stragglers_returned",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 4,
+
++       "minFires": 1,
+
++       "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named
+
+events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved.",
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "map.pocket_relieved",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 4,
+
++       "minFires": 1,
+
++       "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact d
+
+ay146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once.",
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "operations.repulsed",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 5,
+
++       "minFires": 1,
+
++       "why": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluab
+
+le scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged.
+
+ S130 current quiet designation was already retired in the merge.",
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "planner.term.time",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 4,
+
++       "minFires": 1,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "reports.commander_lost",
+
++     "problem": "dead",
+
++   },
+
++   {
+
++     "band": {
+
++       "maxFires": 20,
+
++       "minFires": 5,
+
++     },
+
++     "fires": 0,
+
++     "mechanic": "seats.battle_orders",
+
++     "problem": "dead",
+
++   },
+
++ ]
+
+
+
+ ❯ packages/cli/test/liveness-gate.test.ts:81:48
+
+     79|   for (const run of REFERENCE_RUNS) {
+
+     80|     it(`${run.name}: every mechanic fires within its band`, () => {
+
+     81|       expect(gateFailures(run, liveness(run))).toEqual([]);
+
+       |                                                ^
+
+     82|     });
+
+     83|   }
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/17]⎯
+
+
+FAIL  packages/cli/test/s123-mandate-pack.test.ts > S123 sourced standing assignments > declares five standing offices
+
+ for the four commanders with explicit source, bounds and referenced forces
+
+AssertionError: expected [ …(7) ] to have a length of 5 but got 7
+
+
+
+- Expected
+
++ Received
+
+
+
+- 5
+
++ 7
+
+
+
+ ❯ packages/cli/test/s123-mandate-pack.test.ts:9:61
+
+      7|     const {world}=seatsWorld('union-1861');
+
+      8|     const papers=world.map.world.rules.mandates ?? [];
+
+      9|     expect(papers.filter(p => p.grant.mandateRevision===1)).toHaveLeng…
+
+       |                                                             ^
+
+     10|     expect(papers.map(p => p.grant.mandateHolder)).toEqual(expect.arra…
+
+     11|     for (const p of papers) {
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/17]⎯
+
+
+FAIL  packages/cli/test/war-gate.test.ts > the war gate on union-1861 > the labelled at-war option starts doctrine, ca
+
+lls and concentration
+
+AssertionError: expected 4 to be 1 // Object.is equality
+
+
+
+- Expected
+
++ Received
+
+
+
+- 1
+
++ 4
+
+
+
+ ❯ packages/cli/test/war-gate.test.ts:84:65
+
+     82|     // no dated doctrine row duplicates it; what they raise still goes…
+
+     83|     // authored opening alone: the doctrine sends no second goal down …
+
+     84|     expect(Math.min(...doctrine(warRun.log).map((e) => e.day))).toBe(1…
+
+       |                                                                 ^
+
+     85|     expect(Math.min(...warRun.log.filter((e) => e.command.cmd === 'cal…
+
+     86|     expect(callers(warRun.log, 34)).toEqual(['seat:davis_jefferson']);
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/17]⎯
+
+
+FAIL  packages/cli/test/war-gate.test.ts > the war gate on union-1861 > a war that begins mid-run starts martial doctr
+
+ine next morning, and each dated requisition is sent once
+
+AssertionError: expected 14 to be 11 // Object.is equality
+
+
+
+- Expected
+
++ Received
+
+
+
+- 11
+
++ 14
+
+
+
+ ❯ packages/cli/test/war-gate.test.ts:117:63
+
+    115|     const declared = { ...early.state, situationFlags: flags };
+
+    116|     const late = phase0.playDays(world, declared, seats, 50, { freeze:…
+
+    117|     expect(Math.min(...doctrine(late.log).map((e) => e.day))).toBe(11);
+
+       |                                                               ^
+
+    118|     // Each call still waits for its own date (8 and 15 April), and go…
+
+    119|     expect(Math.min(...late.log.filter((e) => e.command.cmd === 'call'…
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/17]⎯
+
+
+FAIL  packages/kernel/test/banned-apis.test.ts > banned APIs in deterministic packages (decision 0002) > kernel: uses
+
+no banned API and imports nothing unscanned
+
+AssertionError: expected [ …(3) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   "packages/kernel/src/knowledge/report.ts:221: dynamic import: the kernel loads nothing at run time",
+
++   "packages/kernel/src/root-state.ts:55: dynamic import: the kernel loads nothing at run time",
+
++   "packages/kernel/src/root-state.ts:57: dynamic import: the kernel loads nothing at run time",
+
++ ]
+
+
+
+ ❯ packages/kernel/test/banned-apis.test.ts:197:26
+
+    195|         bannedApiViolations(repoPath(file), readFileSync(file, 'utf8')…
+
+    196|       );
+
+    197|       expect(violations).toEqual([]);
+
+       |                          ^
+
+    198|     });
+
+    199|   }
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/17]⎯
+
+
+FAIL  packages/kernel/test/boundary.test.ts > the view layer cannot reach State or the truth layer > seat-api.ts and e
+
+verything it imports stay clear of the forbidden files
+
+AssertionError: expected [ …(16) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   "packages/kernel/src/knowledge/knowledge.ts",
+
++   "packages/kernel/src/knowledge/truth.ts",
+
++   "packages/kernel/src/messages/transit.ts",
+
++   "packages/kernel/src/people/people.ts",
+
++   "packages/kernel/src/people/ranks.ts",
+
++   "packages/kernel/src/people/resignation.ts",
+
++   "packages/kernel/src/people/rules.ts",
+
++   "packages/kernel/src/people/traits.ts",
+
++   "packages/kernel/src/people/verb-rules.ts",
+
++   "packages/kernel/src/proxy/responses.ts",
+
++   "packages/kernel/src/reading/orders.ts",
+
++   "packages/kernel/src/root-state.ts",
+
++   "packages/kernel/src/situations/conditions.ts",
+
++   "packages/kernel/src/situations/references.ts",
+
++   "packages/kernel/src/situations/situations.ts",
+
++   "packages/kernel/src/situations/types.ts",
+
++ ]
+
+
+
+ ❯ packages/kernel/test/boundary.test.ts:136:34
+
+    134|     expect(closure).toContain('packages/kernel/src/seats/api.ts');
+
+    135|     expect(closure).toContain('packages/kernel/src/control/vocabulary.…
+
+    136|     expect(forbiddenIn(closure)).toEqual([]);
+
+       |                                  ^
+
+    137|   });
+
+    138|
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/17]⎯
+
+
+FAIL  packages/kernel/test/boundary.test.ts > the view layer cannot reach State or the truth layer > claimed control a
+
+nd fronts have no import path to the control writer or the State table
+
+AssertionError: expected [ …(109) ] to not include 'packages/kernel/src/control/control.ts'
+
+ ❯ packages/kernel/test/boundary.test.ts:142:25
+
+    140|     const closure = importClosure('packages/kernel/src/view/claimed-co…
+
+    141|     expect(closure).toContain('packages/kernel/src/control-index/contr…
+
+    142|     expect(closure).not.toContain('packages/kernel/src/control/control…
+
+       |                         ^
+
+    143|     expect(forbiddenIn(closure)).toEqual([]);
+
+    144|     expect(closure.filter((file) => /\bregionControl\b/.test(lexSource…
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/17]⎯
+
+
+FAIL  packages/kernel/test/lexer.test.ts > source lexer > lexes every source file in the repository without losing syn
+
+c
+
+AssertionError: expected [ Array(1) ] to deeply equal []
+
+
+
+- Expected
+
++ Received
+
+
+
+- []
+
++ [
+
++   "packages/kernel/test/s147-receipt-requests.test.ts: lexer lost sync at line 199: a regex literal meets a newline",
+
++ ]
+
+
+
+ ❯ packages/kernel/test/lexer.test.ts:61:22
+
+     59|     });
+
+     60|     expect(files.length).toBeGreaterThan(20);
+
+     61|     expect(failures).toEqual([]);
+
+       |                      ^
+
+     62|   });
+
+     63| });
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/17]⎯
+
+
+FAIL  packages/kernel/test/plans.test.ts > a goal is drafted on request, and the commander picks (lane 1.2) > counts a
+
+ commander’s pick among his candidates as seats.choices, once, and a pick the menu never offered is refused (lane 1.12)
+
+AssertionError: expected 2 to be 1 // Object.is equality
+
+
+
+- Expected
+
++ Received
+
+
+
+- 1
+
++ 2
+
+
+
+ ❯ packages/kernel/test/plans.test.ts:93:47
+
+     91|     playDays(world, createState(world, { seed: 7 }), scriptedSeats({ a…
+
+     92|     expect(days.flatMap((r) => r.rejections)).toEqual([]);
+
+     93|     expect(fired(telemetry, 'seats.choices')).toBe(1);
+
+       |                                               ^
+
+     94|     // The pick his seat made is the plan he chose: the best his own s…
+
+     95|     const record = days.at(-1)!.state.planRecords[RESERVE]!;
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/17]⎯
+
+
+FAIL  packages/kernel/test/seats-log.test.ts > ownership of the new State (0044) > registers every root field with one
+
+ writer, and the stand-ins are labelled
+
+AssertionError: expected [ 'allocationRecords:command', …(56) ] to deeply equal [ 'allocationRecords:command', …(54) ]
+
+
+
+- Expected
+
++ Received
+
+
+
+@@ -12,10 +12,11 @@
+
+    "forceAssignments:command",
+
+    "forceBlockStates:forces",
+
+    "forceJoins:movement",
+
+    "forceLocations:movement",
+
+    "forceRaisedIdentities:forces",
+
++   "forceRequests:command",
+
+    "infraDepotCondition:infrastructure",
+
+    "infraEdgeCondition:infrastructure",
+
+    "infraObstructions:infrastructure",
+
+    "knowledgeBySeat:knowledge",
+
+    "messagesInTransit:messages",
+
+@@ -48,10 +49,11 @@
+
+    "regionReachedUnionLines:regions",
+
+    "reportTruth:knowledge",
+
+    "seatAssignments:seats",
+
+    "seatAttention:seats",
+
+    "seatInitiatives:seats",
+
++   "serviceReceipts:command",
+
+    "situationFlags:situations",
+
+    "situationStates:situations",
+
+    "stateDay:tick",
+
+    "warFraming:politics",
+
+  ]
+
+
+
+ ❯ packages/kernel/test/seats-log.test.ts:345:19
+
+    343|   it('registers every root field with one writer, and the stand-ins ar…
+
+    344|     const roots = OWNED_FIELDS.flatMap((f) => f.code.filter((c) => c.r…
+
+    345|     expect(roots).toEqual([
+
+       |                   ^
+
+    346|       'allocationRecords:command',
+
+    347|       'audienceHeld:audience',
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/17]⎯
+
+
+FAIL  packs/union-1861/test/s77-concentration.test.ts > S119: a received call answer opens named transfer after the no
+
+rmal muster window
+
+AssertionError: expected [ 'tn_1_infantry', …(2) ] to deeply equal [ 'tn_1_infantry' ]
+
+
+
+- Expected
+
++ Received
+
+
+
+  [
+
+    "tn_1_infantry",
+
++   "tn_2_infantry",
+
++   "generated.raised.st_gov_tennessee.d146.3",
+
+  ]
+
+
+
+ ❯ packs/union-1861/test/s77-concentration.test.ts:148:49
+
+    146|  for (const [regiment, receiver] of [['tn_1_infantry','cs_cmd_harpers_…
+
+    147|    const [id, block] = Object.entries(moved.forceBlockStates).find(([,…
+
+    148|    expect(block.fbLots.map(l => l.lotRegiment)).toEqual([regiment]);
+
+       |                                                 ^
+
+    149|    expect(moved.forceAssignments[toId('forceBlock',id)]).toBe(receiver…
+
+    150|    expect(moved.forceJoins[toId('forceBlock',id)]).toBeDefined();
+
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/17]⎯
+
+
+
+
+
+ Test Files  12 failed | 274 passed (286)
+
+      Tests  16 failed | 2469 passed | 3 skipped (2488)
+
+   Start at  08:13:19
+
+   Duration  304.28s (tests 83%, import 16%, transform 1%)

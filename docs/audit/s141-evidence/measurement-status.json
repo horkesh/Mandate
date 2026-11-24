@@ -1,0 +1,65 @@
+{
+  "status": "waiting_on_lead_zero_ruling_before_hook",
+  "kernel_commit": "91a816bddb8f200d939a9a2b39fca936ce33d813",
+  "accepted_by_lead": [
+    "kernel",
+    "data readings",
+    "missing-container authority correction"
+  ],
+  "measurement_attempts": {
+    "original_failed": 1,
+    "authorised_corrected": 1,
+    "further_captures": 0
+  },
+  "original_attempt": {
+    "exit": 1,
+    "log": "runs/s141/measurement.log",
+    "last_state": "not retained; failed before day120; exact departing block unknown"
+  },
+  "corrected_attempt": {
+    "exit": 0,
+    "log": "runs/s141/measurement-corrected.log",
+    "final_day": 148,
+    "rejections": 0,
+    "last_state": "runs/s141/measurement-corrected/final-state.json",
+    "snapshots": [
+      120,
+      140,
+      146
+    ],
+    "final_hash": "bd5c7e4e2dd3bf7ef5e212e237ca1d5d47e0fe6b08e5acc1504661a2633c0fc1",
+    "replay_matches": true,
+    "day60_resume_matches": true,
+    "saved_log_replays": true
+  },
+  "coverage": {
+    "rows": 33,
+    "matched": 6,
+    "mismatch": 13,
+    "representation_gap": 10,
+    "unresolved": 2,
+    "not_observed": 2
+  },
+  "composition": {
+    "command_total_rows": 417,
+    "lot_rows": 1223,
+    "unmatched_observations": 602
+  },
+  "changes": {
+    "battles": 6,
+    "mechanic_counts_or_magnitudes": 66,
+    "positive_bands_recentred": 47,
+    "positive_out_of_band_results_resolved": 12,
+    "new_zero_counts_to_lead": 18,
+    "zero_floor_breaches_remaining": 15
+  },
+  "lead_packet": "docs/audit/s141-evidence/corrected-capture/lead-review.md",
+  "acceptance_unmet": [
+    "lead ruling on new zeros and remaining floor breaches",
+    "data ordinary hook",
+    "second commit"
+  ],
+  "zero_permissions_changed": false,
+  "no_additional_simulation": true,
+  "no_push": true
+}

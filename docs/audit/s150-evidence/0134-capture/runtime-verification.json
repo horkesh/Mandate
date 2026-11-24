@@ -1,0 +1,15 @@
+{
+  "captureExit": 0,
+  "runtimeFilesUnchangedSinceSmokeAndCapture": 17,
+  "replayMatches": true,
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "1be63020b01905522f15da9375308c6c50e737ad8ff90a24099c6f9b45388eba",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "noSecondCapture": true,
+  "snapshotDerivations": "four retained snapshots, no ticks; all State hashes unchanged",
+  "allGateFirstCauses": 18,
+  "issuerTypedRepliesRecoveredFromReceivedKnowledge": true
+}

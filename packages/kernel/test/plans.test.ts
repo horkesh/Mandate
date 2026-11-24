@@ -84,13 +84,26 @@ describe('a goal is drafted on request, and the commander picks (lane 1.2)', () 
     expect(out.state.planRecords[RESERVE]!.planStatus).toBe('approved');
   });
 
-  it('counts a commander’s pick among his candidates as seats.choices, once, and a pick the menu never offered is refused (lane 1.12)', () => {
+  it('counts the plan pick once and the accepted own-force request separately by kind and reason (0133), and refuses an unoffered pick', () => {
     const world = strong();
     const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
     const days: TickResult[] = [];
-    playDays(world, createState(world, { seed: 7 }), scriptedSeats({ a: { 1: [take()] } }), 4, { freeze: true, telemetry, onDay: (r) => days.push(r) });
+    const played = playDays(world, createState(world, { seed: 7 }), scriptedSeats({ a: { 1: [take()] } }), 4, { freeze: true, telemetry, onDay: (r) => days.push(r) });
     expect(days.flatMap((r) => r.rejections)).toEqual([]);
-    expect(fired(telemetry, 'seats.choices')).toBe(1);
+    const choices = played.log.flatMap(entry => {
+      const command = entry.command;
+      if (command.cmd !== 'choose') return [];
+      const menu = pendingRequests(world, days.find(r => r.day === entry.day - 1)!.state)
+        .find(request => request.requestKey === command.request)?.menu;
+      const need = Object.values(played.state.forceRequests ?? {}).find(request => request.freqDay === entry.day)?.freqNeed;
+      return [{ day: entry.day, kind: menu?.menuKind, option: command.option.startsWith('force-request:') ? 'force-request' : 'plan',
+        reason: need?.needReason ?? null }];
+    });
+    expect(choices).toEqual([
+      { day: 2, kind: 'plan-selection', option: 'plan', reason: null },
+      { day: 4, kind: 'local-action', option: 'force-request', reason: 'unknown_enemy_bootstrap' },
+    ]);
+    expect(fired(telemetry, 'seats.choices')).toBe(choices.length);
     // The pick his seat made is the plan he chose: the best his own scorer ranked (the scripted seat takes the top score).
     const record = days.at(-1)!.state.planRecords[RESERVE]!;
     expect(record.planChosen).toBe([...record.planDraft!.draftCandidates].sort((a, b) => b.candScore - a.candScore || (a.id < b.id ? -1 : 1))[0]!.id);

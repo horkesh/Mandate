@@ -1,0 +1,261 @@
+{
+  "scope": "26 selected primary OCR excerpts actually read in S141; no fresh scan collation. Other S138 records remain attributed inputs, not a claim of fresh original reading.",
+  "selected": [
+    {
+      "work": "OR-I-II",
+      "printed_page": "166",
+      "path": "docs/research/S138/read/OR-I-II-p166.txt",
+      "sha256": "fc8cc23cc6406a20bc23aeb1d3be58afcf34cf5c715c07b186bccdaa278da462",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n185/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "303",
+      "path": "docs/research/S138/read/OR-I-II-p303.txt",
+      "sha256": "9f044d1697efd49cf146e4f2b059fde2436a780148f394d7a0d09601046c1264",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n322/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "304",
+      "path": "docs/research/S138/read/OR-I-II-p304.txt",
+      "sha256": "b71fbe0ee39ad4374af325bc5fb807b0fe9a3fde1d6e1c71fcf15482e0eaa9d4",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n323/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "307",
+      "path": "docs/research/S138/read/OR-I-II-p307.txt",
+      "sha256": "9ee53e5c1f705957048c96f113c26aed056814e7c76c622c94db51a36556d6b6",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n326/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "308",
+      "path": "docs/research/S138/read/OR-I-II-p308.txt",
+      "sha256": "3a9df99dbe849be2d5d274295dd2036e4ddffcb5b6c2d1591c96a2882ad87466",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n327/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "607",
+      "path": "docs/research/S138/read/OR-I-II-p607.txt",
+      "sha256": "1585b0b88abf67d7ba57552a0265135dde032c1a4a3de437ce486dbea18bce2c",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n626/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "619",
+      "path": "docs/research/S138/read/OR-I-II-p619.txt",
+      "sha256": "5f48431b0ab6203dc0ab9dab0a3e931036b28acf22f632a07d1a379677f3df7f",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n638/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "620",
+      "path": "docs/research/S138/read/OR-I-II-p620.txt",
+      "sha256": "eaee8e5f203d54bba6e79ca43492a08006b0b859ff43a94e152919641a24c0fa",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n639/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "623",
+      "path": "docs/research/S138/read/OR-I-II-p623.txt",
+      "sha256": "b527cd59579841f6c1ab006488e6e6ee9aa73ccb58508830315bec7c30d1e872",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n642/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "624",
+      "path": "docs/research/S138/read/OR-I-II-p624.txt",
+      "sha256": "9679eb39ca00bf0f57ce06fab159060dcead45300593b4b7e926debb7497b5ee",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n643/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "652",
+      "path": "docs/research/S138/read/OR-I-II-p652.txt",
+      "sha256": "f96ec6b9da93282b74e4b3370be13b9ecfd27214f60cd9c2f1a9c255c1f92112",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n671/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "653",
+      "path": "docs/research/S138/read/OR-I-II-p653.txt",
+      "sha256": "ac1468e6be69560dbfc8d656264047a267df657320a33c502b1a19450abe05f6",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n672/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "690",
+      "path": "docs/research/S138/read/OR-I-II-p690.txt",
+      "sha256": "d5d9881e358c5191f576d77225dbfa8513c24e8a8183024a0e29e746cb13a0aa",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n709/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "744",
+      "path": "docs/research/S138/read/OR-I-II-p744.txt",
+      "sha256": "a248e87f6709357380a798db97837990036781333433b4e2ed06186e53db3cf6",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n763/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "751",
+      "path": "docs/research/S138/read/OR-I-II-p751.txt",
+      "sha256": "b04971d1f93ade0a08e6616480410a8cbcb90b7e83e6aabaf281596cde75ac25",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n770/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "897",
+      "path": "docs/research/S138/read/OR-I-II-p897.txt",
+      "sha256": "f4d41b8818845fa6ebd8c87f6e077e436e9479912f845dba51096acf899d92d8",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n916/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "898",
+      "path": "docs/research/S138/read/OR-I-II-p898.txt",
+      "sha256": "fa075af8064d8ecd39d97ed50da94b0bde001fe8e072154aa01119c9c3b2ae4f",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n917/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-II",
+      "printed_page": "981",
+      "path": "docs/research/S138/read/OR-I-II-p981.txt",
+      "sha256": "00edec9d5088c73d7fbd5a77b7900caf6acfb25ac51c3605386e01f0fa986a33",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n1000/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-LI.1",
+      "printed_page": "413",
+      "path": "docs/research/S138/read/OR-I-LI.1-p413.txt",
+      "sha256": "4ca6c98e418bf66fd4e78741414eff2133d88435dccf81595ce5ded08f8adb0e",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-pages.json",
+      "url": "https://archive.org/details/warofrebellion511unit/page/n418/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-LI.1",
+      "printed_page": "414",
+      "path": "docs/research/S138/read/OR-I-LI.1-p414.txt",
+      "sha256": "d482b0387bbe97e76cb9e78e7eb74151c0dfd302cc2be6d36b44f1bcc6d52e8b",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-pages.json",
+      "url": "https://archive.org/details/warofrebellion511unit/page/n419/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-IV-I",
+      "printed_page": "272",
+      "path": "docs/research/S138/read/OR-IV-I-p272.txt",
+      "sha256": "f41abacd89ce5cdd62a3a5bda64532821161f982fdad5f847a529aec828ce078",
+      "read_from": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S136\\read\\OR-IV-I-p272.txt",
+      "url": "https://archive.org/details/cu31924079579524",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-IV-I",
+      "printed_page": "275",
+      "path": "docs/research/S138/read/OR-IV-I-p275.txt",
+      "sha256": "66aa992a7c81bb22797b0e6cdb4eec3f61e8c2939fe9c344ec015b3fab0b633d",
+      "read_from": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S136\\read\\OR-IV-I-p275.txt",
+      "url": "https://archive.org/details/cu31924079579524",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-LI.2",
+      "printed_page": "107",
+      "path": "docs/research/S138/read/OR-I-LI.2-p107.txt",
+      "sha256": "0d0085d75c1a47839241483ec3f3d44c3375e22fc2a695514e4981ff050307b3",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2_djvu.xml",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n115/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "OR-I-LI.2",
+      "printed_page": "108",
+      "path": "docs/research/S138/read/OR-I-LI.2-p108.txt",
+      "sha256": "9592443b78790f81aa4142b9a285288efe38ce6063e361490c437c85bb3cb613",
+      "read_from": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2_djvu.xml",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n116/mode/1up",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "Richardson-IV",
+      "printed_page": "73",
+      "path": "docs/research/S138/read/Richardson-IV-p73.txt",
+      "sha256": "7284595e97ad965405ab4b1bfe16a12ec8ddc2ad9c482af92651def9f40eb898",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\sources\\Richardson-IV-p73.txt",
+      "url": "See S117/source-reading.json original locator",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    },
+    {
+      "work": "Regs-1857",
+      "printed_page": "2-3",
+      "path": "docs/research/S138/read/Regs-1857-p2-3.txt",
+      "sha256": "7351b34d8c0baa74ddbab890325908936d7689ada5b868004321876cb8757a45",
+      "read_from": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\sources\\Regs-1857-pp2-3.txt",
+      "url": "See S117/source-reading.json original locator",
+      "method": "Selected primary-page OCR; wording uncorrected; no whole-volume or fresh facsimile collation claim"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\instruments.csv",
+      "sha256": "cc33a4bfb1db1c20d3a968c875c6a60478bcc03fd545ee709ee2bd0a7030d7f2",
+      "copied_to": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\s138-instruments.csv"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\regiment-instruments.csv",
+      "sha256": "8515305b33c1ff81d9031a6d0936357652826ce2e37e3ef2cd760e8e858583d5",
+      "copied_to": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\s138-regiment-instruments.csv"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\source-reading.json",
+      "sha256": "f304c9bf2690a980905f89a775fa5223cbb99cd80439d07559aabe86d724f61b",
+      "copied_to": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\s138-source-reading.json"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\input-receipts.json",
+      "sha256": "5e6d397379012d179c82c9e3a213fee0669dd14fc544d9d450ce89af6ae18c97",
+      "copied_to": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\s138-input-receipts.json"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "method": "New observer63 groups compared directly with retained0135 observer",
+  "days": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+  ],
+  "groups": 63,
+  "allCandidatePositionsHoldersAndPrimaryIdentitiesUnchanged": true,
+  "readReport": "../0135-capture/go1-report.md",
+  "sourceReading": "../0135-read/source-reading.json",
+  "noNewGO1Mechanism": true
+}

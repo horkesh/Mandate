@@ -1,0 +1,1212 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "band": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 847
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 8332
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2443
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 408,
+      "magnitude": 13817
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 280,
+      "magnitude": 6561
+    },
+    "band": {
+      "minFires": 157,
+      "maxFires": 628
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "before": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.routed",
+    "before": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.routed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "before": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "combat.works_stormed",
+    "before": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "after": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 414,
+      "magnitude": 16617
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 282,
+      "magnitude": 8561
+    },
+    "band": {
+      "minFires": 160,
+      "maxFires": 640
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 49,
+      "magnitude": 49
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 21,
+      "magnitude": 21
+    },
+    "band": {
+      "minFires": 19,
+      "maxFires": 78
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2627,
+      "magnitude": 2597278
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 466,
+      "magnitude": 457119
+    },
+    "band": {
+      "minFires": 1444,
+      "maxFires": 5776,
+      "why": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 98,
+      "magnitude": 98
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "band": {
+      "minFires": 51,
+      "maxFires": 206
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2974,
+      "magnitude": 2928592
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2091,
+      "magnitude": 2064575
+    },
+    "band": {
+      "minFires": 1200,
+      "maxFires": 4800
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 174,
+      "magnitude": 895
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 92,
+      "maxFires": 368
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 107,
+      "magnitude": 1536
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 103,
+      "magnitude": 1394
+    },
+    "band": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12348
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 14072
+    },
+    "band": {
+      "minFires": 73,
+      "maxFires": 292
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "before": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 55,
+      "magnitude": 62
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 37,
+      "magnitude": 42
+    },
+    "band": {
+      "minFires": 26,
+      "maxFires": 104
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 161,
+      "magnitude": 161
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 156,
+      "magnitude": 156
+    },
+    "band": {
+      "minFires": 49,
+      "maxFires": 198,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires99; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14879,
+      "magnitude": 14879
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 16223,
+      "magnitude": 16223
+    },
+    "band": {
+      "minFires": 7221,
+      "maxFires": 28886,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires14443; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2869,
+      "magnitude": 2869
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2825,
+      "magnitude": 2825
+    },
+    "band": {
+      "minFires": 1428,
+      "maxFires": 5712
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 15657,
+      "magnitude": 15657
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 16955,
+      "magnitude": 16955
+    },
+    "band": {
+      "minFires": 7607,
+      "maxFires": 30428,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires15214; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "before": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "messages.special_messenger",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 704,
+      "magnitude": 704
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 43,
+      "magnitude": 43
+    },
+    "band": {
+      "minFires": 319,
+      "maxFires": 1276
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "movement.joined",
+    "before": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "after": {
+      "mechanic": "movement.joined",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "band": {
+      "minFires": 32,
+      "maxFires": 128
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 387,
+      "magnitude": 387
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 43,
+      "magnitude": 43
+    },
+    "band": {
+      "minFires": 155,
+      "maxFires": 620
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "operations.ended",
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "band": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.ended."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "operations.opened",
+    "before": {
+      "mechanic": "operations.opened",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "band": {
+      "minFires": 3,
+      "maxFires": 12,
+      "why": "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 38,
+      "magnitude": 38
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "band": {
+      "minFires": 12,
+      "maxFires": 48,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires24; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "operations.works",
+    "before": {
+      "mechanic": "operations.works",
+      "fires": 15,
+      "magnitude": 750
+    },
+    "after": {
+      "mechanic": "operations.works",
+      "fires": 4,
+      "magnitude": 200
+    },
+    "band": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.works."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "before": {
+      "mechanic": "orders.obeyed",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "orders.obeyed",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "band": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "orders.relayed",
+    "before": {
+      "mechanic": "orders.relayed",
+      "fires": 20,
+      "magnitude": 20
+    },
+    "after": {
+      "mechanic": "orders.relayed",
+      "fires": 17,
+      "magnitude": 17
+    },
+    "band": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 30,
+      "magnitude": 78
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 19,
+      "magnitude": 33
+    },
+    "band": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 12,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 8,
+      "magnitude": 10
+    },
+    "band": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 12,
+      "magnitude": 62
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 8,
+      "magnitude": 20
+    },
+    "band": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S134 /0130 [I]: time is live on Patterson days112 and140 after the unknown remainder and common evaluable scoring are preserved. Removing time changes each retained winner to holding; the existing time weight is unchanged. S130 current quiet designation was already retired in the merge."
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "plans.approved",
+    "before": {
+      "mechanic": "plans.approved",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.approved",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "band": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "plans.chosen",
+    "before": {
+      "mechanic": "plans.chosen",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "after": {
+      "mechanic": "plans.chosen",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "band": {
+      "minFires": 7,
+      "maxFires": 28,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.chosen."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "plans.drafted",
+    "before": {
+      "mechanic": "plans.drafted",
+      "fires": 12,
+      "magnitude": 12
+    },
+    "after": {
+      "mechanic": "plans.drafted",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "band": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "before": {
+      "mechanic": "plans.goal_reached",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.goal_reached",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires3; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "before": {
+      "mechanic": "plans.goal_set",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "plans.goal_set",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "band": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "plans.submitted",
+    "before": {
+      "mechanic": "plans.submitted",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "plans.submitted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "band": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "before": {
+      "mechanic": "plans.went_ahead",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "plans.went_ahead",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "politics.support",
+    "before": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "after": {
+      "mechanic": "politics.support",
+      "fires": 49,
+      "magnitude": 49
+    },
+    "band": {
+      "minFires": 42,
+      "maxFires": 170
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "before": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "after": {
+      "mechanic": "regions.reached_lines",
+      "fires": 260,
+      "magnitude": 260
+    },
+    "band": {
+      "minFires": 137,
+      "maxFires": 548
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "before": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "after": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3068,
+      "magnitude": 3068
+    },
+    "band": {
+      "minFires": 1548,
+      "maxFires": 6194
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "band": {
+      "minFires": 21,
+      "maxFires": 84
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "band": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 181,
+      "magnitude": 181
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 100,
+      "magnitude": 101
+    },
+    "band": {
+      "minFires": 76,
+      "maxFires": 306
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "newZero": true
+  },
+  {
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "band": {
+      "minFires": 12,
+      "maxFires": 50,
+      "why": "S134 merge [I]: combined received demonstration letters, advice and command readiness change the recorded path through existing owners. Retained events, candidate terms and daily counter differences are published; no weight, quota or true strength is fitted."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 89,
+      "magnitude": 89
+    },
+    "band": {
+      "minFires": 44,
+      "maxFires": 176
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "band": {
+      "minFires": 35,
+      "maxFires": 140
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "band": {
+      "minFires": 34,
+      "maxFires": 138
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "band": {
+      "minFires": 43,
+      "maxFires": 174
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 163,
+      "magnitude": 163
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "band": {
+      "minFires": 61,
+      "maxFires": 246
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "verbs.declined",
+    "before": {
+      "mechanic": "verbs.declined",
+      "fires": 34,
+      "magnitude": 34
+    },
+    "after": {
+      "mechanic": "verbs.declined",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 0,
+      "why": "every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"
+    },
+    "newZero": true
+  }
+]

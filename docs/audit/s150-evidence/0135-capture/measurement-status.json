@@ -1,0 +1,32 @@
+{
+  "baseline": "S1500134 capture",
+  "baselineFinalHash": "1be63020b01905522f15da9375308c6c50e737ad8ff90a24099c6f9b45388eba",
+  "captureCount": 1,
+  "finalHash": "41806f3a04db1b88d954f8ca66f2c89a63ccbbeeb7d65d2e71bd936d4424386e",
+  "rejections": 0,
+  "dailyReplay": true,
+  "day60Resume": true,
+  "savedLogReplay": true,
+  "coverageRows": 33,
+  "armyTotalRows": 422,
+  "ownRequests": 6,
+  "ownAnswers": 8,
+  "superiorOrders": 3,
+  "offers": 18,
+  "receivedOffers": 16,
+  "s141PositiveFloors": 15,
+  "remainingZeroFloors": [
+    "combat.flank_broken",
+    "combat.general_hit",
+    "combat.routed",
+    "forces.stragglers_returned",
+    "map.pocket_relieved",
+    "operations.repulsed",
+    "reports.commander_lost"
+  ],
+  "gateFailures": 21,
+  "newZeros": [],
+  "allAcceptanceGatesPass": false,
+  "timing": "No local timing evidence; unrelated calibration process left alone",
+  "hook": "May proceed only if allAcceptanceGatesPass; otherwise held for lead first-cause review"
+}

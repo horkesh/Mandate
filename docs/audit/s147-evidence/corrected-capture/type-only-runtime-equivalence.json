@@ -1,0 +1,26 @@
+[
+  {
+    "file": "packages/kernel/src/root-state.ts",
+    "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "equal": true
+  },
+  {
+    "file": "packages/kernel/src/knowledge/report.ts",
+    "before": "a8d74a27f1de9810fe3211fc7f8131989472b8422d220d40aa665ec7b3442ff0",
+    "after": "a8d74a27f1de9810fe3211fc7f8131989472b8422d220d40aa665ec7b3442ff0",
+    "equal": true
+  },
+  {
+    "file": "packages/kernel/src/command/force-requests.ts",
+    "before": "ee6c34115bb00adc4a5f0ded44b6bac9fc8b289066d6f86fb16d51375cfe224e",
+    "after": "ee6c34115bb00adc4a5f0ded44b6bac9fc8b289066d6f86fb16d51375cfe224e",
+    "equal": true
+  },
+  {
+    "file": "packages/kernel/src/world/allocation.ts",
+    "before": "c75c35d5e5d46c1f3cc9df486c8845a6265e8514a4a003bd273f2d497df46a9a",
+    "after": "c75c35d5e5d46c1f3cc9df486c8845a6265e8514a4a003bd273f2d497df46a9a",
+    "equal": true
+  }
+]

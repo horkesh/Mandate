@@ -1,0 +1,230 @@
+{
+  "scope": "Read-only inputs pinned at design preparation; main CODEX will be freshly read separately for the one authorised append. Original working tree preserved in ignored runs/s144/baseline.json.",
+  "inputs": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s117\\0255005.nlm.nih.gov-full.txt",
+      "sha256": "66f94ffd28e07e997e2fa5d9c5f3ecdc284c0c35aa3b7a41c689302c15579499",
+      "role": "retained 1857 Regulations OCR searched for specified paragraphs"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\Regs-1857-p2-3.txt",
+      "sha256": "7351b34d8c0baa74ddbab890325908936d7689ada5b868004321876cb8757a45",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\Regs-1857-p57-60.txt",
+      "sha256": "2a77917eb449b544928b703e2b14baeed296adf5692d88c59b9b9d0071af0c24",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p166.txt",
+      "sha256": "fc8cc23cc6406a20bc23aeb1d3be58afcf34cf5c715c07b186bccdaa278da462",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p607.txt",
+      "sha256": "1585b0b88abf67d7ba57552a0265135dde032c1a4a3de437ce486dbea18bce2c",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p619.txt",
+      "sha256": "5f48431b0ab6203dc0ab9dab0a3e931036b28acf22f632a07d1a379677f3df7f",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p620.txt",
+      "sha256": "eaee8e5f203d54bba6e79ca43492a08006b0b859ff43a94e152919641a24c0fa",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p652.txt",
+      "sha256": "f96ec6b9da93282b74e4b3370be13b9ecfd27214f60cd9c2f1a9c255c1f92112",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p653.txt",
+      "sha256": "ac1468e6be69560dbfc8d656264047a267df657320a33c502b1a19450abe05f6",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p742.txt",
+      "sha256": "41a9438fb8522ff28bcc1453175cf5e8940a4be2f3a949b455029ac03e925e9c",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p747.txt",
+      "sha256": "2c6f6312d35f4fd8585bfbef3cf8f98ee86a22f0e74ce4cc095e75189ed11322",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p751.txt",
+      "sha256": "b04971d1f93ade0a08e6616480410a8cbcb90b7e83e6aabaf281596cde75ac25",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p754.txt",
+      "sha256": "b7910eb1d5ee06ea1bebb9b1096d54666d12bfdd306f945dcc606e4fe81a8874",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p775.txt",
+      "sha256": "07fb853c1294e9ddf47ca042f5ebec920cda183561ca7f166cfa4edf4d5602f2",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p776.txt",
+      "sha256": "2f017b2174ad769bd1dd32abd85821af7ed7ac1d446666f9f9a3514b2d223b3b",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p827.txt",
+      "sha256": "50662c4bd18fe19d1ca78b07f8ef74d20b701bed37c66556e173b37f83818197",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p872.txt",
+      "sha256": "7caebfed6ffdf9a1c2ce8dc03ec2ccd1d4147a296266b4db553643d27518cb0d",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p911.txt",
+      "sha256": "308a6be3a13e854e5912726664d80e01386ee6980c1f15c554c2912d89c7c7e9",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p912.txt",
+      "sha256": "01c8ac94f1c8b3b611066d5c33d43c43fe72ade39fb7aecda914a99713138829",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p932.txt",
+      "sha256": "8f96af17a13eb2a9c33b64932197a0d6f44496c09eba0b44ee86f50522243482",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\read\\OR-I-II-p933.txt",
+      "sha256": "3f39dfc43ca94369214823a745ec4ca93e89fa8a6831242e258c508a03e53c7a",
+      "role": "read primary excerpt"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-pages.json",
+      "sha256": "9dc0d37ee447a38c364480c2d754034bece92a8c8d988a839b9d5c1ab4f25c56",
+      "role": "retained page-indexed OR OCR; only registered pages read/adopted"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0124-standing-authority-comes-from-an-assignment.md",
+      "sha256": "617b81d725c40bd7bab2c99d82a31efd153d9ea12f3a6960febc848d55df8ca8",
+      "role": "accepted ruling read in main; not copied as a new decision"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0126-a-call-addressed-to-an-office-reaches-its-holder.md",
+      "sha256": "cd4d0508d1c4286f70fef2f99a6240894a681e2f41775f6285c4b3e895407eb9",
+      "role": "accepted ruling read in main; not copied as a new decision"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0129-an-assignment-to-command-opens-the-post.md",
+      "sha256": "7f859419d6243d2a96604c8ad5bd8956ff55edfcf5ac55c507a80d8e97bad26f",
+      "role": "accepted ruling read in main; not copied as a new decision"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0131-regiments-go-where-read-orders-send-them.md",
+      "sha256": "69a77ce5b618091bffc792d8ccc4d6fdd09afd84ff974e8a5fc730d962aabd2b",
+      "role": "accepted ruling read in main; not copied as a new decision"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\lead-review.md",
+      "sha256": "d2e993ae73d499f34a4a64d44df22a25f56e4938622a017f1efec5c02e56f167",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\scores.json",
+      "sha256": "4696d77a9657c9dc36a25a3f6b12bb597d0fa787103c7eefe89bd4b8084b84b9",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\allocations.json",
+      "sha256": "4ea7f4f0b4a4ea8ffef52ae4e8aa3bdf0af1cc2688d2da9576440e046e8e25b8",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\changed-battles.json",
+      "sha256": "9db9d6b97be727f927a80650c45feb1baa506860b5f983d9f5233115e79feb1c",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\army-lots.csv",
+      "sha256": "44508ead486034adabf7025801581d322d1b5147a5f3ec72fe0bcd5103696b03",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\army-totals.csv",
+      "sha256": "e9d0f72e5d364248be723f3991b1882e1b91e39279ec9192e6326ed9c3802648",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\unmatched.csv",
+      "sha256": "051b8ceb4b3be64ff65091564ea3918de5a023edb8bffa15a284f2df6aba08ab",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\docs\\audit\\s141-evidence\\corrected-capture\\raw-inventory.json",
+      "sha256": "cb3cd904afc450e02ba812725f2cfbba95fc665e0a9e6a30a2f91ddf59c29195",
+      "role": "S141 corrected capture read; no new run"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\instruments.csv",
+      "sha256": "cc33a4bfb1db1c20d3a968c875c6a60478bcc03fd545ee709ee2bd0a7030d7f2",
+      "role": "S138 research instrument register; not independent historical proof"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\regiment-instruments.csv",
+      "sha256": "8515305b33c1ff81d9031a6d0936357652826ce2e37e3ef2cd760e8e858583d5",
+      "role": "S138 research instrument register; not independent historical proof"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\source-reading.json",
+      "sha256": "f304c9bf2690a980905f89a775fa5223cbb99cd80439d07559aabe86d724f61b",
+      "role": "S138 research instrument register; not independent historical proof"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\cli\\src\\history-run.ts",
+      "sha256": "af29e8e77d769792043021d9ed0a477372d9dc23e15d6adca9293c249192ca3d",
+      "role": "operationScore/operationsFought implementation read"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\command\\allocation.ts",
+      "sha256": "21e15c5773d133ccf44eed5b6bc080d293154e8b0a17c194ddef091c62f58ce6",
+      "role": "actual selector/authority/offer barriers read"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\packages\\kernel\\src\\tick\\offers.ts",
+      "sha256": "3dbd74e51dd8f831fdb863d82f42822de4dfb995d684c166c8d9fd597d50bcf6",
+      "role": "actual receiving receipt path read"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S136-CONCENTRATION-AND-JUNCTION.md",
+      "sha256": "933d60911d678036d67a51e73c0139d5e206c6477cb2e68b5b04151a70b5cca4",
+      "role": "prior design read"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S136\\paired-tests.csv",
+      "sha256": "12757cae260c3cfce14110d4eb0ca4b9c5129121712858ffcb20fdd58fb1ecd2",
+      "role": "existing fictional acceptance specifications read"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\runs\\s141\\measurement-corrected\\state-120.json",
+      "sha256": "45085133ee6336ff08a8023eb0fe7e458583fe0f6be124c153d629373f414aa4",
+      "role": "retained snapshot inspected offline; not a simulation/replay"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\runs\\s141\\measurement-corrected\\state-140.json",
+      "sha256": "989ba1e66f7eaad56fee6300c6f13f62dac214f10149a5e28067849eed06d093",
+      "role": "retained snapshot inspected offline; not a simulation/replay"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-allocate\\runs\\s141\\measurement-corrected\\state-146.json",
+      "sha256": "cad2f28ac3394b31a1f003125d4b76767f60e083b563d918a0743d32a6af35df",
+      "role": "retained snapshot inspected offline; not a simulation/replay"
+    }
+  ]
+}

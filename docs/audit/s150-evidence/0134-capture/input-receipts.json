@@ -1,0 +1,12 @@
+[
+  {
+    "file": "summary.json",
+    "sha256": "44e052813d9ec0f553e787e0619491e7b1a37f3129c0b5c99e77942025acc3e9",
+    "source": "runs/s150/measurement-corrected"
+  },
+  {
+    "file": "observations.json",
+    "sha256": "739482b9cfa6bcf67eb54e07ce4dd136a460450d54314d96a26d9b4a5af25ecd",
+    "source": "runs/s150/measurement-corrected"
+  }
+]

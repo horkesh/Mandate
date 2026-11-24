@@ -1,0 +1,29 @@
+{
+  "reviewedScope": "S150 closeout working changes against the 2026-11-24 ruling",
+  "existingEvidence": [
+    "one-writer-green.log",
+    "seats-run.log",
+    "messenger-live-fixture.log",
+    "known-failure-guards.log"
+  ],
+  "verified": {
+    "unchangedRawOwnershipScan": true,
+    "reviewedReadDiagnostics": 15,
+    "immutableProperties": 5,
+    "fixtureFirstDivergingDay": 6,
+    "fixtureAcceptedCause": "0133 governor after-muster holdings report",
+    "fixtureCurrentStateHash": "1b863e8162908bd849a055f1f003ed726031e5d873b55ad734aef5732a5f4a72",
+    "junctionSelectionById": "johnston_junction",
+    "f07": "Land mode stamped by the fictional superior; unstamped defer/no assignment/no join",
+    "specialMessenger": "Actual rules seat and tick send and count the urgent fictional bypass; the retained day-134 capture and tariff witness explain historical wire replacement",
+    "exactKnownMechanicProblemPairsMatchedRetainedCapture": 25,
+    "newCampaigns": 0
+  },
+  "correctionReview": {
+    "method": "Targeted static inspection of the final done-check diff; no campaign or test run.",
+    "phase0CriterionInventory": "Exact ordered IDs asserted in the ordinary beforeAll hook.",
+    "plantedControl": "Ordinary beforeAll asserts that recruitment.called is the only new dead diagnostic and the entire baseline is unchanged, and that evaluateDoneCheck surfaces the planted failure. The guard works both before and after reference recovery.",
+    "markScope": "The original three marked bodies remain intact. The ordinary guards keep new liveness diagnostics, run errors, unrelated criteria and planted-control regressions visible."
+  },
+  "verdict": "pass"
+}

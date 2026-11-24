@@ -1,0 +1,18 @@
+{
+  "question": "Does the causal mission-holder correction fix the observed day84 boundary?",
+  "retainedDay": 83,
+  "menuCount": 2,
+  "completedDay": 84,
+  "rejections": 0,
+  "hash": "19a3b8b07ff2f9b0708021d043e70b3a89437491bab2a9a43b46868fda64d837",
+  "priorRequests": 0,
+  "priorAnswers": 0,
+  "unreached": [
+    "day120/140/146 compositions",
+    "full33-row coverage",
+    "all148-day battles and bands",
+    "full daily replay",
+    "day60 resume and saved-log replay"
+  ],
+  "noCampaignRerun": true
+}

@@ -11,7 +11,10 @@
  */
 import type { ComplianceRung, ContributionTerm, DirectiveClause, DirectiveReservation, DirectiveResponse, Reason, ReservationGap, ResponseCondition, Undertaking } from '../directive.ts';
 import type { MessageId, PersonId, PostId } from '../ids.ts';
+import { outstandingAllocation } from '../command/allocation.ts';
+import { assignmentPaper } from '../command/force-requests.ts';
 import type { State } from '../root-state.ts';
+import type { SeatsWorld } from '../seats/world.ts';
 
 /** One term of his willingness (hard rule 6), named apart from compliance's own record so the State's keys stay unique. */
 export interface ResponseTerm {
@@ -112,7 +115,7 @@ export function recordResponse(state: State, response: OrderResponse): State {
  * grows with every hop of every order. A response a plan, an operation or a levy still names is kept, whatever its age,
  * and so is each post holder's first answer to a call (lane 1.11).
  */
-export function pruneResponses(state: State, day: number, keepDays: number): { readonly state: State; readonly pruned: number } {
+export function pruneResponses(state: State, day: number, keepDays: number, world?: SeatsWorld): { readonly state: State; readonly pruned: number } {
   const named = new Set<string>();
   for (const join of Object.values(state.forceJoins)) {
     const assignment = join.joinAssignment;
@@ -127,6 +130,16 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
   for (const o of Object.values(state.operationRecords)) for (const q of o.opRequests) if (q.oreqResponse !== null) named.add(q.oreqResponse);
   // Lane 1.7: a levy names the governor's answer to the call that raised it.
   for (const l of Object.values(state.postLevies)) named.add(l.levyResponse);
+  // A governor's own sending terms still name his original response to the requesting authority.
+  for (const request of Object.values(state.forceRequests ?? {})) for (const answer of request.freqAnswers) {
+    if (answer.fansAssignment !== undefined && assignmentPaper(answer.fansAssignment).voluntary === true) named.add(responseKey(request.freqId,answer.fansPerson));
+  }
+  // In flight or still eligible for fulfilment, an allocation names the sending holder's original reply.
+  for (const row of Object.values(state.allocationRecords ?? {})) {
+    if (row.allocStatus === 'pending' || (world === undefined ? row.allocStatus === 'shortfall' : outstandingAllocation(world,state,row) !== undefined)) {
+      named.add(responseKey(row.allocOrder,row.allocSender));
+    }
+  }
   // Lane 1.11: a post holder's first answer to a call is kept, since the `callReceived` condition dates a government's
   // act from the call's arrival (at most one per post).
   const firstCall: Record<string, string> = {};

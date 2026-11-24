@@ -1,0 +1,1109 @@
+{
+  "baseline": "0135 capture",
+  "request": {
+    "freqId": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+    "freqNeed": {
+      "needOrigin": "commander_choice",
+      "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "needPost": "us_dept_northeastern_virginia",
+      "needPerson": "mcdowell_irvin",
+      "needTask": "take",
+      "needScope": {
+        "kind": "cohort",
+        "arm": "infantry",
+        "minTermDays": 1
+      },
+      "needQuantity": 1,
+      "needShortfall": null,
+      "needEstablishment": 780,
+      "needReason": "unknown_enemy_bootstrap",
+      "needDestination": "northern_virginia",
+      "needGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+    },
+    "freqDay": 135,
+    "freqTo": "us_general_in_chief",
+    "freqAnswers": [
+      {
+        "fansDay": 138,
+        "fansPerson": "scott_winfield",
+        "fansPost": "us_general_in_chief",
+        "fansIssuer": "mcdowell_irvin",
+        "fansAction": "refuse",
+        "fansReasons": [
+          "compliance:object",
+          "scope_unavailable"
+        ],
+        "fansScore": [
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "responses": [
+    {
+      "respOrder": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 138,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -11,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": -45
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        },
+        {
+          "kind": "holds_grievance",
+          "grievance": "bypassed",
+          "weight": 150
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        },
+        {
+          "kind": "holds_grievance",
+          "grievance": "bypassed",
+          "weight": 150
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": null,
+      "respDeclaredUndertaking": null,
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  ],
+  "requestAndReplyPackets": [
+    {
+      "day": 135,
+      "kind": "dispatch",
+      "key": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+      "value": {
+        "id": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+        "msgOrigin": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+        "msgFrom": "mcdowell_irvin",
+        "msgTo": "scott_winfield",
+        "msgToPost": "us_general_in_chief",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 135,
+        "msgArriveDay": 137,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": null,
+        "msgVerb": null,
+        "msgReport": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 135,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+            "needPost": "us_dept_northeastern_virginia",
+            "needPerson": "mcdowell_irvin",
+            "needTask": "take",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "northern_virginia",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "take",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+          }
+        },
+        "msgTruth": {
+          "truthTerms": [],
+          "truthTrimmed": []
+        }
+      }
+    },
+    {
+      "day": 137,
+      "kind": "paper_receipt",
+      "key": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+      "value": {
+        "id": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+        "msgOrigin": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+        "msgFrom": "mcdowell_irvin",
+        "msgTo": "scott_winfield",
+        "msgToPost": "us_general_in_chief",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 135,
+        "msgArriveDay": 137,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": null,
+        "msgVerb": null,
+        "msgReport": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "allocation-shortfall",
+              "claimRegion": "northern_virginia",
+              "claimValue": 1,
+              "claimToken": "unknown_enemy_bootstrap",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 135,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "reportForceNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+            "needPost": "us_dept_northeastern_virginia",
+            "needPerson": "mcdowell_irvin",
+            "needTask": "take",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "northern_virginia",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "take",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+          },
+          "reportForceRequest": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+        },
+        "msgTruth": {
+          "truthTerms": [],
+          "truthTrimmed": []
+        }
+      }
+    },
+    {
+      "day": 139,
+      "kind": "received_force_report",
+      "key": "seat:mcdowell_irvin:m.138.8bccb7991c722e3e",
+      "value": {
+        "seat": "seat:mcdowell_irvin",
+        "report": {
+          "id": "m.138.8bccb7991c722e3e",
+          "knownReceivedDay": 139,
+          "knownRoute": "courier",
+          "knownVia": [],
+          "knownBody": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "scott_winfield",
+            "reportAuthorPost": "us_general_in_chief",
+            "reportSubjectKind": "post",
+            "reportSubjectId": "us_dept_northeastern_virginia",
+            "reportClaims": [
+              {
+                "claimKind": "allocation-selected",
+                "claimRegion": "northern_virginia",
+                "claimValue": 0,
+                "claimToken": "force:refuse",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 138,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+          }
+        }
+      }
+    }
+  ],
+  "directHoldingWitnessAt140": [
+    {
+      "block": "fb_us_washington_regulars",
+      "force": {
+        "fbName": "force_block.fb_us_washington_regulars.name",
+        "fbKind": "block",
+        "fbParent": null,
+        "fbDepartment": "us_war",
+        "fbArm": "mixed",
+        "fbLots": [
+          {
+            "lotId": "initial.fb_us_washington_regulars",
+            "lotRegiment": null,
+            "lotGenerated": false,
+            "lotArm": "mixed",
+            "lotMen": null,
+            "lotStrength": {
+              "strengthKind": "unknown",
+              "strengthSource": "NOTE-march-1861-facts q.15 (NPS, Civil War Defenses of Washington, ch.4); OR I-1 p.373; no dated strength at this lot scope; recover a dated unit return or estimate",
+              "strengthDate": "1861-04-18"
+            },
+            "lotStragglers": 0,
+            "lotService": null
+          }
+        ],
+        "fbNonCombatants": 0,
+        "fbStoresMilli": null,
+        "fbStoresAssumed": false,
+        "fbMorale": 600,
+        "fbExperience": 400,
+        "fbEquipment": 600,
+        "fbRoutedDay": null,
+        "fbSurrenderedDay": null
+      },
+      "location": {
+        "locRegion": "washington",
+        "locAboard": null,
+        "locSinceDay": 0,
+        "locMarch": null
+      }
+    }
+  ],
+  "retainedReportsReceivedNoLaterThan138From140Snapshot": [
+    {
+      "id": "m.110.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+      "knownReceivedDay": 110,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportLetter": {
+          "namespace": "s150_sending",
+          "key": "s150_scott_june23",
+          "revision": 1
+        },
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_washington",
+        "reportClaims": [
+          {
+            "claimKind": "order-obeyed",
+            "claimRegion": "washington",
+            "claimValue": 1,
+            "claimToken": "comply",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 110,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1"
+      }
+    },
+    {
+      "id": "m.110.mansfield_joseph_k_f.scott_winfield.allocation.s150_scott_june23",
+      "knownReceivedDay": 110,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_washington",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "northern_virginia",
+            "claimValue": 0,
+            "claimToken": "s150_scott_june23",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": null,
+            "claimValue": 2,
+            "claimToken": "s150_scott_june23",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 110,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1"
+      }
+    },
+    {
+      "id": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+      "knownReceivedDay": 113,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "patterson_robert",
+        "reportAuthorPost": "us_dept_pennsylvania",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "philadelphia",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 113,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "needPost": "us_dept_pennsylvania",
+          "needPerson": "patterson_robert",
+          "needTask": "hold",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "philadelphia",
+          "needGoal": {
+            "goalObjective": "lower_valley",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "b7fea109378907c62463e67f3ff207fa1d202f60a2eb1432d302a4bc65246adc"
+        },
+        "reportForceRequest": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+      }
+    },
+    {
+      "id": "m.114.c1e6f5f61b63d0d8",
+      "knownReceivedDay": 114,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_washington",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "philadelphia",
+            "claimValue": 1,
+            "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": null,
+            "claimValue": 0,
+            "claimToken": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 114,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.114.b70961860618b775"
+      }
+    },
+    {
+      "id": "m.114.mansfield_joseph_k_f.scott_winfield.ack.us_dept_washington",
+      "knownReceivedDay": 114,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportLetter": {
+          "namespace": "force-choice",
+          "key": "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+          "revision": 1
+        },
+        "reportQualification": {
+          "statedUndertaking": "original",
+          "statedReservations": [
+            {
+              "clause": "detail",
+              "subject": "organisation",
+              "grounds": {
+                "groundKind": "course_judgment",
+                "groundReference": "retention_comparison_undetermined"
+              },
+              "treatment": "protest",
+              "effect": "statement",
+              "reservationProvenance": "planner_evaluation",
+              "knowledge": "unknown"
+            }
+          ],
+          "statedGaps": []
+        },
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_washington",
+        "reportClaims": [
+          {
+            "claimKind": "order-obeyed",
+            "claimRegion": "washington",
+            "claimValue": 1,
+            "claimToken": "comply",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 114,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.114.b70961860618b775"
+      }
+    },
+    {
+      "id": "m.117.olden_charles_s.scott_winfield.ack.st_gov_new_jersey",
+      "knownReceivedDay": 117,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportLetter": {
+          "namespace": "s150_sending",
+          "key": "s150_scott_new_jersey_three",
+          "revision": 1
+        },
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "olden_charles_s",
+        "reportAuthorPost": "st_gov_new_jersey",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "st_gov_new_jersey",
+        "reportClaims": [
+          {
+            "claimKind": "order-obeyed",
+            "claimRegion": null,
+            "claimValue": 1,
+            "claimToken": "comply",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 117,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1"
+      }
+    },
+    {
+      "id": "m.117.olden_charles_s.scott_winfield.allocation.s150_scott_new_jersey_three",
+      "knownReceivedDay": 117,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "olden_charles_s",
+        "reportAuthorPost": "st_gov_new_jersey",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "st_gov_new_jersey",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-selected",
+            "claimRegion": "washington",
+            "claimValue": 0,
+            "claimToken": "s150_scott_new_jersey_three",
+            "claimConfidence": 1000
+          },
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": null,
+            "claimValue": 3,
+            "claimToken": "s150_scott_new_jersey_three",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 117,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1"
+      }
+    },
+    {
+      "id": "m.119.77a60c282164da5a",
+      "knownReceivedDay": 120,
+      "knownRoute": "wire",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "patterson_robert",
+        "reportAuthorPost": "us_dept_pennsylvania",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "arrived",
+            "claimRegion": "philadelphia",
+            "claimValue": 1,
+            "claimToken": "allocation_received:force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 119,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.114.b70961860618b775"
+      }
+    },
+    {
+      "id": "m.101.howard_oliver_o.scott_winfield.return.us_dept_pacific",
+      "knownReceivedDay": 131,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "strength-return",
+        "reportSubtype": null,
+        "reportAuthor": "howard_oliver_o",
+        "reportAuthorPost": "us_dept_pacific",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pacific",
+        "reportClaims": [
+          {
+            "claimKind": "present-for-duty",
+            "claimRegion": null,
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 900
+          },
+          {
+            "claimKind": "present-and-absent",
+            "claimRegion": null,
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 900
+          }
+        ],
+        "reportDay": 101,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null,
+        "reportCommandLots": []
+      }
+    },
+    {
+      "id": "m.131.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+      "knownReceivedDay": 132,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "strength-return",
+        "reportSubtype": null,
+        "reportAuthor": "mansfield_joseph_k_f",
+        "reportAuthorPost": "us_dept_washington",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_washington",
+        "reportClaims": [
+          {
+            "claimKind": "present-for-duty",
+            "claimRegion": null,
+            "claimValue": 14636,
+            "claimToken": null,
+            "claimConfidence": 900
+          },
+          {
+            "claimKind": "present-and-absent",
+            "claimRegion": null,
+            "claimValue": 20490,
+            "claimToken": null,
+            "claimConfidence": 900
+          }
+        ],
+        "reportDay": 131,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null,
+        "reportCommandLots": [
+          {
+            "availRegiment": "me_3_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_maine",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "ma_11_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may15_vol_massachusetts",
+            "availEndsDay": 1171,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "ma_1_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may15_vol_massachusetts",
+            "availEndsDay": 1171,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "ma_2_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may15_vol_massachusetts",
+            "availEndsDay": 1171,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "ma_9_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may15_vol_massachusetts",
+            "availEndsDay": 1171,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": null,
+            "availArm": "infantry",
+            "availCall": "us_may15_vol_massachusetts",
+            "availEndsDay": 1171,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": null,
+            "availArm": "infantry",
+            "availCall": "us_may15_vol_massachusetts",
+            "availEndsDay": 1171,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "mi_1_3m_infantry",
+            "availArm": "infantry",
+            "availCall": null,
+            "availEndsDay": 136,
+            "availTermDays": 90
+          },
+          {
+            "availRegiment": "mi_2_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_michigan",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": null,
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_michigan",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": null,
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_michigan",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "nh_2_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_new_hampshire",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "nj_1_3y_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_new_jersey",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "nj_2_3y_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_new_jersey",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "nj_3_3y_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_new_jersey",
+            "availEndsDay": 1172,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": "wi_2_infantry",
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_wisconsin",
+            "availEndsDay": 1178,
+            "availTermDays": 1095
+          },
+          {
+            "availRegiment": null,
+            "availArm": "infantry",
+            "availCall": "us_may16_vol_wisconsin",
+            "availEndsDay": 1178,
+            "availTermDays": 1095
+          }
+        ]
+      }
+    },
+    {
+      "id": "m.131.stone_charles_p.scott_winfield.return.us_dc_militia",
+      "knownReceivedDay": 132,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "strength-return",
+        "reportSubtype": null,
+        "reportAuthor": "stone_charles_p",
+        "reportAuthorPost": "us_dc_militia",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dc_militia",
+        "reportClaims": [
+          {
+            "claimKind": "present-for-duty",
+            "claimRegion": null,
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 900
+          },
+          {
+            "claimKind": "present-and-absent",
+            "claimRegion": null,
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 900
+          }
+        ],
+        "reportDay": 131,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null,
+        "reportCommandLots": []
+      }
+    },
+    {
+      "id": "m.121.brannan_john_m.scott_winfield.return.us_fort_taylor",
+      "knownReceivedDay": 135,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "strength-return",
+        "reportSubtype": null,
+        "reportAuthor": "brannan_john_m",
+        "reportAuthorPost": "us_fort_taylor",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_fort_taylor",
+        "reportClaims": [
+          {
+            "claimKind": "present-for-duty",
+            "claimRegion": null,
+            "claimValue": 44,
+            "claimToken": null,
+            "claimConfidence": 900
+          },
+          {
+            "claimKind": "present-and-absent",
+            "claimRegion": null,
+            "claimValue": 61,
+            "claimToken": null,
+            "claimConfidence": 900
+          }
+        ],
+        "reportDay": 121,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null,
+        "reportCommandLots": []
+      }
+    },
+    {
+      "id": "m.121.arnold_lewis_g.scott_winfield.return.us_fort_jefferson",
+      "knownReceivedDay": 136,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "strength-return",
+        "reportSubtype": null,
+        "reportAuthor": "arnold_lewis_g",
+        "reportAuthorPost": "us_fort_jefferson",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_fort_jefferson",
+        "reportClaims": [
+          {
+            "claimKind": "present-for-duty",
+            "claimRegion": null,
+            "claimValue": 66,
+            "claimToken": null,
+            "claimConfidence": 900
+          },
+          {
+            "claimKind": "present-and-absent",
+            "claimRegion": null,
+            "claimValue": 92,
+            "claimToken": null,
+            "claimConfidence": 900
+          }
+        ],
+        "reportDay": 121,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null,
+        "reportCommandLots": []
+      }
+    },
+    {
+      "id": "m.126.bennett_james_g.scott_winfield.press.herald.scott_winfield",
+      "knownReceivedDay": 136,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "press",
+        "reportSubtype": null,
+        "reportAuthor": "bennett_james_g",
+        "reportAuthorPost": null,
+        "reportSubjectKind": "person",
+        "reportSubjectId": "bennett_james_g",
+        "reportClaims": [
+          {
+            "claimKind": "framing",
+            "claimRegion": null,
+            "claimValue": 500,
+            "claimToken": null,
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 126,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "id": "m.126.raymond_henry_j.scott_winfield.press.times.scott_winfield",
+      "knownReceivedDay": 136,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "press",
+        "reportSubtype": null,
+        "reportAuthor": "raymond_henry_j",
+        "reportAuthorPost": null,
+        "reportSubjectKind": "person",
+        "reportSubjectId": "raymond_henry_j",
+        "reportClaims": [
+          {
+            "claimKind": "framing",
+            "claimRegion": null,
+            "claimValue": 500,
+            "claimToken": null,
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 126,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "id": "m.126.greeley_horace.scott_winfield.press.tribune.scott_winfield",
+      "knownReceivedDay": 137,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "press",
+        "reportSubtype": null,
+        "reportAuthor": "greeley_horace",
+        "reportAuthorPost": null,
+        "reportSubjectKind": "person",
+        "reportSubjectId": "greeley_horace",
+        "reportClaims": [
+          {
+            "claimKind": "framing",
+            "claimRegion": null,
+            "claimValue": 500,
+            "claimToken": null,
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 126,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "id": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+      "knownReceivedDay": 137,
+      "knownRoute": "courier",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mcdowell_irvin",
+        "reportAuthorPost": "us_dept_northeastern_virginia",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_northeastern_virginia",
+        "reportClaims": [
+          {
+            "claimKind": "allocation-shortfall",
+            "claimRegion": "northern_virginia",
+            "claimValue": 1,
+            "claimToken": "unknown_enemy_bootstrap",
+            "claimConfidence": 1000
+          }
+        ],
+        "reportDay": 135,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+        "reportForceNeed": {
+          "needOrigin": "commander_choice",
+          "needMission": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "needPost": "us_dept_northeastern_virginia",
+          "needPerson": "mcdowell_irvin",
+          "needTask": "take",
+          "needScope": {
+            "kind": "cohort",
+            "arm": "infantry",
+            "minTermDays": 1
+          },
+          "needQuantity": 1,
+          "needShortfall": null,
+          "needEstablishment": 780,
+          "needReason": "unknown_enemy_bootstrap",
+          "needDestination": "northern_virginia",
+          "needGoal": {
+            "goalObjective": "manassas",
+            "goalPosture": "take",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "needEvidence": "09804ea24529ca081e4e6bc25a75328367054717c2859048efbd465b90b91c4a"
+        },
+        "reportForceRequest": "m.135.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770"
+      }
+    }
+  ],
+  "limits": "No new simulation or response was run. Day140 snapshot is a retained witness, not a reconstructed complete day138 knowledge set. scope_unavailable is returned by direct lot scope filtering before compliance determines the action; no received report is consulted by that selection. Actual received request packet and stored138 response preserve their own dates."
+}

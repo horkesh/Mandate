@@ -1,0 +1,154 @@
+[
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 486,
+      "magnitude": 477010
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 486,
+      "magnitude": 477119
+    },
+    "band": {
+      "minFires": 233,
+      "maxFires": 932,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_fell firings 2627->466. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2071,
+      "magnitude": 2044466
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2071,
+      "magnitude": 2044575
+    },
+    "band": {
+      "minFires": 1045,
+      "maxFires": 4182,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. forces.stores_refilled firings 2974->2091. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 103,
+      "magnitude": 1469
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 102,
+      "magnitude": 1464
+    },
+    "band": {
+      "minFires": 51,
+      "maxFires": 206,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. knowledge.pruned_age firings 107->103. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 16612,
+      "magnitude": 16612
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 16602,
+      "magnitude": 16602
+    },
+    "band": {
+      "minFires": 8146,
+      "maxFires": 32586,
+      "why": "S147 /0133 [I]: accepted sourced receipt and mission-scoped request/answer paths change the integrated correspondence and local-choice trajectory. Corrected capture records five requests and fourteen answers; messages.delivered firings 16223->16293. No isolated causal credit for an individual paper, force/contract/transport/planner/combat parameter, seed, criterion or zero floor changes. The lead's 2026-11-24 corrected-capture ruling authorises around(observed) for moved positive counts only."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 17370,
+      "magnitude": 17370
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 17360,
+      "magnitude": 17360
+    },
+    "band": {
+      "minFires": 8515,
+      "maxFires": 34062,
+      "why": "S147 /0133 [I]: accepted sourced receipt and mission-scoped request/answer paths change the integrated correspondence and local-choice trajectory. Corrected capture records five requests and fourteen answers; messages.sent firings 16955->17031. No isolated causal credit for an individual paper, force/contract/transport/planner/combat parameter, seed, criterion or zero floor changes. The lead's 2026-11-24 corrected-capture ruling authorises around(observed) for moved positive counts only."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 192,
+      "magnitude": 192
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 189,
+      "magnitude": 189
+    },
+    "band": {
+      "minFires": 21,
+      "maxFires": 86,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.arrived firings 704->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 180,
+      "magnitude": 180
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "band": {
+      "minFires": 21,
+      "maxFires": 86,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. movement.leg_started firings 387->43. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    },
+    "newZero": false
+  },
+  {
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 36,
+      "magnitude": 36
+    },
+    "band": {
+      "minFires": 17,
+      "maxFires": 68,
+      "why": "S147 /0133 [I]: accepted sourced receipt and mission-scoped request/answer paths change the integrated correspondence and local-choice trajectory. Corrected capture records five requests and fourteen answers; seats.choices firings 15->34. No isolated causal credit for an individual paper, force/contract/transport/planner/combat parameter, seed, criterion or zero floor changes. The lead's 2026-11-24 corrected-capture ruling authorises around(observed) for moved positive counts only."
+    },
+    "newZero": false
+  }
+]

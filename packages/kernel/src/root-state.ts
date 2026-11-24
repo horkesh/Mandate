@@ -1,3 +1,5 @@
+import type { ForceRequest } from './command/force-requests.ts';
+import type { ServiceReceipt } from './command/service-receipt.ts';
 import type { AuthorityTable } from './command/authority.ts';
 /**
  * The Phase 0 State: mutable truth, saved and hashed (FOUNDATION section 10).
@@ -51,6 +53,10 @@ import type { BattleTable } from './combat/records.ts';
 import type { JoinTable } from './movement/join.ts';
 
 export interface State {
+  /** Authored mission needs and separate superior choices. Writer: command. */
+  readonly forceRequests?: Readonly<Record<MessageId, ForceRequest>>;
+  /** Actual service arrival receipts and gaps; absent in older saves means none. Writer: command. */
+  readonly serviceReceipts?: Readonly<Record<string, ServiceReceipt>>;
   /** Received instrument undertakings; absent in older saves means none. Writer: command. */
   readonly allocationRecords?: Readonly<Record<MessageId, AllocationRecord>>;
   /** Governor-owned offers; absent in older saves means none. Writer: command. */

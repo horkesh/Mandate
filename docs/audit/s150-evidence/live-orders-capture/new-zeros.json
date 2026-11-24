@@ -1,0 +1,21 @@
+[
+  {
+    "mechanic": "messages.special_messenger",
+    "before": {
+      "mechanic": "messages.special_messenger",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. messages.special_messenger firings 0->1. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    },
+    "newZero": true
+  }
+]

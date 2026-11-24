@@ -31,6 +31,9 @@ import type { State } from '../root-state.ts';
 import { commandStrength, fieldPosts, headquartersOf, offices, postFaction } from '../seats/posts.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import { sendReport, type TickContext } from './context.ts';
+import { reportGovernorHoldings } from './force-requests.ts';
+import { reportedCommandHoldings } from '../command/allocation.ts';
+import { activeMandate, currentMandates } from '../command/authority.ts';
 
 /** Whether a template with `cadence` fires today. Day 1 always fires, so every cycle starts at once. */
 export function onCycle(day: number, cadence: number): boolean {
@@ -222,16 +225,18 @@ export function generateReports(ctx: TickContext, state: State): void {
   }
 
   if (onCycle(day, tpl('strength-return').cadenceDays)) {
+    for (const post of (Object.keys(state.postStates) as PostId[]).sort(strictCompare)) reportGovernorHoldings(ctx,state,post,'strength-return');
     for (const id of fields) {
       const parent = state.postStates[id]!.postParent;
       const to = (parent === null ? null : state.postStates[parent]!.postHolder) ?? world.faction(sideOf(id)).principal;
-      const strength = commandStrength(state, id, world.map.forceTotalsCache).men;
+      const {men:strength,blocks}=commandStrength(state,id,world.map.forceTotalsCache);
       const paper = Math.trunc((strength * world.rules.traits.paperPermille) / 1000);
+      const reportsLots=parent!==null && currentMandates(state,parent).some(a=>a.authorityGrant.mandateActions.includes('assign') && activeMandate(world.map,state,a,day));
       sendReport(ctx, state, {
-        body: body(holderOf(id), id, day, 'strength-return', null, { kind: 'post', id }, [
+        body: {...body(holderOf(id), id, day, 'strength-return', null, { kind: 'post', id }, [
           claim('present-for-duty', null, strength, null, confidence.returnPresentForDuty),
           claim('present-and-absent', null, paper, null, confidence.returnPaperStrength),
-        ]),
+        ]),...(reportsLots?{reportCommandLots:reportedCommandHoldings(state,id,blocks,day)}:{})},
         truth: { truthTerms: [term('observed', strength, { post: id }), term('paper_strength', world.rules.traits.paperPermille, { post: id })], truthTrimmed: [] },
         to,
         tag: `return.${id}`,

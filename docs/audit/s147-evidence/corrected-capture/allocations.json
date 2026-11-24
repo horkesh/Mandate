@@ -1,0 +1,17 @@
+{
+  "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1": {
+    "allocOrder": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1",
+    "allocPaper": "s141_cameron_july13_five",
+    "allocDay": 135,
+    "allocSender": "curtin_andrew_g",
+    "allocStrongest": true,
+    "allocLots": [],
+    "allocBlocks": [],
+    "allocReceived": [],
+    "allocShortfall": 5,
+    "allocReasons": [
+      "scope_unavailable"
+    ],
+    "allocStatus": "shortfall"
+  }
+}

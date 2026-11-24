@@ -24,6 +24,7 @@ import {
   type SourceFile,
 } from './support/one-writer.ts';
 import { repoPath, tsFiles, workspacePackages } from './support/source.ts';
+import { classifyReads, REVIEWED_READS } from './support/one-writer-reads.ts';
 
 /**
  * One writer per field (CLAUDE.md rule 5; FOUNDATION sections 10 and 11.4).
@@ -96,9 +97,11 @@ describe('one writer per field, over every package', () => {
   });
 
   it('writes each owned field only from its writer, and never writes an immutable key', () => {
-    const violations = writeViolations(sources, ownedKeys(OWNED_FIELDS), immutableKeys(stateRecords(sources), IMMUTABLE), STATE_CONSTRUCTORS).map(
+    const raw = writeViolations(sources, ownedKeys(OWNED_FIELDS), immutableKeys(stateRecords(sources), IMMUTABLE), STATE_CONSTRUCTORS);
+    const audit = classifyReads(sources, raw, REVIEWED_READS);
+    const violations = audit.violations.map(
       (v) => `${v.path}:${v.line}: ${v.form} of "${v.key}" (only ${v.writer} may write it)`,
-    );
+    ).concat(audit.problems);
     expect(violations).toEqual([]);
   });
 });

@@ -1,0 +1,3816 @@
+[
+  {
+    "day": 84,
+    "brigade": "Stone",
+    "printed": "First Michigan",
+    "primaryCandidate": "mi_1_3m_infantry",
+    "candidates": [
+      {
+        "regiment": "mi_1_3m_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_michigan.d46",
+            "lot": "mi_1_3m_infantry",
+            "regiment": "mi_1_3m_infantry",
+            "post": "st_gov_michigan",
+            "holder": "blair_austin",
+            "chain": [
+              "st_gov_michigan"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "pennsylvania_north",
+              "locAboard": null,
+              "locSinceDay": 84,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_michigan",
+              "enlRaisedBy": "blair_austin",
+              "enlCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+              "enlRegiments": 1,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Stone",
+    "printed": "New York Zouaves",
+    "primaryCandidate": "ny_11_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_11_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64",
+            "lot": "ny_11_infantry",
+            "regiment": "ny_11_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Stone",
+    "printed": "Fifth Massachusetts",
+    "primaryCandidate": "ma_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ma_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_massachusetts.d46",
+            "lot": "ma_5_militia_infantry",
+            "regiment": "ma_5_militia_infantry",
+            "post": "st_gov_massachusetts",
+            "holder": "andrew_john_a",
+            "chain": [
+              "st_gov_massachusetts"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_england",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_massachusetts",
+              "enlRaisedBy": "andrew_john_a",
+              "enlCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+              "enlRegiments": 2,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Heintzelman",
+    "printed": "Eighth New York",
+    "primaryCandidate": "ny_8_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_8_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_8_militia_infantry",
+            "regiment": "ny_8_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_8_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.6",
+            "lot": "ny_8_infantry",
+            "regiment": "ny_8_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Heintzelman",
+    "printed": "Twelfth New York",
+    "primaryCandidate": "ny_12_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_12_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_militia_infantry",
+            "regiment": "ny_12_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_12_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_infantry",
+            "regiment": "ny_12_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Heintzelman",
+    "printed": "Twenty-fifth New York",
+    "primaryCandidate": "ny_25_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_25_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_25_militia_infantry",
+            "regiment": "ny_25_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_25_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_25_infantry",
+            "regiment": "ny_25_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Hunter",
+    "printed": "Fifth New York",
+    "primaryCandidate": "ny_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_5_militia_infantry",
+            "regiment": "ny_5_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Hunter",
+    "printed": "Twenty-eighth New York",
+    "primaryCandidate": "ny_28_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_28_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_28_militia_infantry",
+            "regiment": "ny_28_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_28_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_28_infantry",
+            "regiment": "ny_28_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 84,
+    "brigade": "Hunter",
+    "printed": "Sixty-ninth New York",
+    "primaryCandidate": "ny_69_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_69_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_69_militia_infantry",
+            "regiment": "ny_69_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Stone",
+    "printed": "First Michigan",
+    "primaryCandidate": "mi_1_3m_infantry",
+    "candidates": [
+      {
+        "regiment": "mi_1_3m_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_michigan.d46",
+            "lot": "mi_1_3m_infantry",
+            "regiment": "mi_1_3m_infantry",
+            "post": "st_gov_michigan",
+            "holder": "blair_austin",
+            "chain": [
+              "st_gov_michigan"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "harrisburg",
+              "locAboard": null,
+              "locSinceDay": 85,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_michigan",
+              "enlRaisedBy": "blair_austin",
+              "enlCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+              "enlRegiments": 1,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Stone",
+    "printed": "New York Zouaves",
+    "primaryCandidate": "ny_11_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_11_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64",
+            "lot": "ny_11_infantry",
+            "regiment": "ny_11_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Stone",
+    "printed": "Fifth Massachusetts",
+    "primaryCandidate": "ma_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ma_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_massachusetts.d46",
+            "lot": "ma_5_militia_infantry",
+            "regiment": "ma_5_militia_infantry",
+            "post": "st_gov_massachusetts",
+            "holder": "andrew_john_a",
+            "chain": [
+              "st_gov_massachusetts"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_england",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_massachusetts",
+              "enlRaisedBy": "andrew_john_a",
+              "enlCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+              "enlRegiments": 2,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Heintzelman",
+    "printed": "Eighth New York",
+    "primaryCandidate": "ny_8_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_8_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_8_militia_infantry",
+            "regiment": "ny_8_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_8_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.6",
+            "lot": "ny_8_infantry",
+            "regiment": "ny_8_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Heintzelman",
+    "printed": "Twelfth New York",
+    "primaryCandidate": "ny_12_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_12_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_militia_infantry",
+            "regiment": "ny_12_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_12_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_infantry",
+            "regiment": "ny_12_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Heintzelman",
+    "printed": "Twenty-fifth New York",
+    "primaryCandidate": "ny_25_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_25_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_25_militia_infantry",
+            "regiment": "ny_25_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_25_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_25_infantry",
+            "regiment": "ny_25_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Hunter",
+    "printed": "Fifth New York",
+    "primaryCandidate": "ny_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_5_militia_infantry",
+            "regiment": "ny_5_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Hunter",
+    "printed": "Twenty-eighth New York",
+    "primaryCandidate": "ny_28_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_28_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_28_militia_infantry",
+            "regiment": "ny_28_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_28_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_28_infantry",
+            "regiment": "ny_28_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 85,
+    "brigade": "Hunter",
+    "printed": "Sixty-ninth New York",
+    "primaryCandidate": "ny_69_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_69_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_69_militia_infantry",
+            "regiment": "ny_69_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Stone",
+    "printed": "First Michigan",
+    "primaryCandidate": "mi_1_3m_infantry",
+    "candidates": [
+      {
+        "regiment": "mi_1_3m_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_michigan.d46",
+            "lot": "mi_1_3m_infantry",
+            "regiment": "mi_1_3m_infantry",
+            "post": "st_gov_michigan",
+            "holder": "blair_austin",
+            "chain": [
+              "st_gov_michigan"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "york_adams",
+              "locAboard": null,
+              "locSinceDay": 86,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_michigan",
+              "enlRaisedBy": "blair_austin",
+              "enlCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+              "enlRegiments": 1,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Stone",
+    "printed": "New York Zouaves",
+    "primaryCandidate": "ny_11_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_11_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64",
+            "lot": "ny_11_infantry",
+            "regiment": "ny_11_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Stone",
+    "printed": "Fifth Massachusetts",
+    "primaryCandidate": "ma_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ma_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_massachusetts.d46",
+            "lot": "ma_5_militia_infantry",
+            "regiment": "ma_5_militia_infantry",
+            "post": "st_gov_massachusetts",
+            "holder": "andrew_john_a",
+            "chain": [
+              "st_gov_massachusetts"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_england",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_massachusetts",
+              "enlRaisedBy": "andrew_john_a",
+              "enlCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+              "enlRegiments": 2,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Heintzelman",
+    "printed": "Eighth New York",
+    "primaryCandidate": "ny_8_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_8_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_8_militia_infantry",
+            "regiment": "ny_8_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_8_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.6",
+            "lot": "ny_8_infantry",
+            "regiment": "ny_8_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Heintzelman",
+    "printed": "Twelfth New York",
+    "primaryCandidate": "ny_12_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_12_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_militia_infantry",
+            "regiment": "ny_12_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_12_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_infantry",
+            "regiment": "ny_12_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Heintzelman",
+    "printed": "Twenty-fifth New York",
+    "primaryCandidate": "ny_25_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_25_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_25_militia_infantry",
+            "regiment": "ny_25_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_25_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_25_infantry",
+            "regiment": "ny_25_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Hunter",
+    "printed": "Fifth New York",
+    "primaryCandidate": "ny_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_5_militia_infantry",
+            "regiment": "ny_5_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Hunter",
+    "printed": "Twenty-eighth New York",
+    "primaryCandidate": "ny_28_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_28_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_28_militia_infantry",
+            "regiment": "ny_28_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_28_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_28_infantry",
+            "regiment": "ny_28_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 86,
+    "brigade": "Hunter",
+    "printed": "Sixty-ninth New York",
+    "primaryCandidate": "ny_69_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_69_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_69_militia_infantry",
+            "regiment": "ny_69_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Stone",
+    "printed": "First Michigan",
+    "primaryCandidate": "mi_1_3m_infantry",
+    "candidates": [
+      {
+        "regiment": "mi_1_3m_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_michigan.d46",
+            "lot": "mi_1_3m_infantry",
+            "regiment": "mi_1_3m_infantry",
+            "post": "st_gov_michigan",
+            "holder": "blair_austin",
+            "chain": [
+              "st_gov_michigan"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "baltimore_county",
+              "locAboard": null,
+              "locSinceDay": 87,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_michigan",
+              "enlRaisedBy": "blair_austin",
+              "enlCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+              "enlRegiments": 1,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Stone",
+    "printed": "New York Zouaves",
+    "primaryCandidate": "ny_11_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_11_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64",
+            "lot": "ny_11_infantry",
+            "regiment": "ny_11_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Stone",
+    "printed": "Fifth Massachusetts",
+    "primaryCandidate": "ma_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ma_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_massachusetts.d46",
+            "lot": "ma_5_militia_infantry",
+            "regiment": "ma_5_militia_infantry",
+            "post": "st_gov_massachusetts",
+            "holder": "andrew_john_a",
+            "chain": [
+              "st_gov_massachusetts"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_england",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_massachusetts",
+              "enlRaisedBy": "andrew_john_a",
+              "enlCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+              "enlRegiments": 2,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Heintzelman",
+    "printed": "Eighth New York",
+    "primaryCandidate": "ny_8_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_8_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_8_militia_infantry",
+            "regiment": "ny_8_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_8_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.6",
+            "lot": "ny_8_infantry",
+            "regiment": "ny_8_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Heintzelman",
+    "printed": "Twelfth New York",
+    "primaryCandidate": "ny_12_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_12_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_militia_infantry",
+            "regiment": "ny_12_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_12_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_infantry",
+            "regiment": "ny_12_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Heintzelman",
+    "printed": "Twenty-fifth New York",
+    "primaryCandidate": "ny_25_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_25_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_25_militia_infantry",
+            "regiment": "ny_25_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_25_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_25_infantry",
+            "regiment": "ny_25_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Hunter",
+    "printed": "Fifth New York",
+    "primaryCandidate": "ny_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_5_militia_infantry",
+            "regiment": "ny_5_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Hunter",
+    "printed": "Twenty-eighth New York",
+    "primaryCandidate": "ny_28_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_28_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_28_militia_infantry",
+            "regiment": "ny_28_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_28_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_28_infantry",
+            "regiment": "ny_28_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "brigade": "Hunter",
+    "printed": "Sixty-ninth New York",
+    "primaryCandidate": "ny_69_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_69_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_69_militia_infantry",
+            "regiment": "ny_69_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Stone",
+    "printed": "First Michigan",
+    "primaryCandidate": "mi_1_3m_infantry",
+    "candidates": [
+      {
+        "regiment": "mi_1_3m_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_michigan.d46",
+            "lot": "mi_1_3m_infantry",
+            "regiment": "mi_1_3m_infantry",
+            "post": "st_gov_michigan",
+            "holder": "blair_austin",
+            "chain": [
+              "st_gov_michigan"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "southern_maryland",
+              "locAboard": null,
+              "locSinceDay": 88,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_michigan",
+              "enlRaisedBy": "blair_austin",
+              "enlCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+              "enlRegiments": 1,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Stone",
+    "printed": "New York Zouaves",
+    "primaryCandidate": "ny_11_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_11_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64",
+            "lot": "ny_11_infantry",
+            "regiment": "ny_11_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Stone",
+    "printed": "Fifth Massachusetts",
+    "primaryCandidate": "ma_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ma_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_massachusetts.d46",
+            "lot": "ma_5_militia_infantry",
+            "regiment": "ma_5_militia_infantry",
+            "post": "st_gov_massachusetts",
+            "holder": "andrew_john_a",
+            "chain": [
+              "st_gov_massachusetts"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_england",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_massachusetts",
+              "enlRaisedBy": "andrew_john_a",
+              "enlCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+              "enlRegiments": 2,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Heintzelman",
+    "printed": "Eighth New York",
+    "primaryCandidate": "ny_8_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_8_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_8_militia_infantry",
+            "regiment": "ny_8_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_8_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.6",
+            "lot": "ny_8_infantry",
+            "regiment": "ny_8_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Heintzelman",
+    "printed": "Twelfth New York",
+    "primaryCandidate": "ny_12_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_12_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_militia_infantry",
+            "regiment": "ny_12_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_12_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_infantry",
+            "regiment": "ny_12_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Heintzelman",
+    "printed": "Twenty-fifth New York",
+    "primaryCandidate": "ny_25_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_25_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_25_militia_infantry",
+            "regiment": "ny_25_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_25_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_25_infantry",
+            "regiment": "ny_25_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Hunter",
+    "printed": "Fifth New York",
+    "primaryCandidate": "ny_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_5_militia_infantry",
+            "regiment": "ny_5_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Hunter",
+    "printed": "Twenty-eighth New York",
+    "primaryCandidate": "ny_28_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_28_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_28_militia_infantry",
+            "regiment": "ny_28_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_28_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_28_infantry",
+            "regiment": "ny_28_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "brigade": "Hunter",
+    "printed": "Sixty-ninth New York",
+    "primaryCandidate": "ny_69_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_69_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_69_militia_infantry",
+            "regiment": "ny_69_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Stone",
+    "printed": "First Michigan",
+    "primaryCandidate": "mi_1_3m_infantry",
+    "candidates": [
+      {
+        "regiment": "mi_1_3m_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_michigan.d46",
+            "lot": "mi_1_3m_infantry",
+            "regiment": "mi_1_3m_infantry",
+            "post": "us_dept_washington",
+            "holder": "mansfield_joseph_k_f",
+            "chain": [
+              "us_dept_washington",
+              "us_general_in_chief",
+              "us_secretary_war",
+              "us_president"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "washington",
+              "locAboard": null,
+              "locSinceDay": 89,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_michigan",
+              "enlRaisedBy": "blair_austin",
+              "enlCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+              "enlRegiments": 1,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Stone",
+    "printed": "New York Zouaves",
+    "primaryCandidate": "ny_11_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_11_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64",
+            "lot": "ny_11_infantry",
+            "regiment": "ny_11_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Stone",
+    "printed": "Fifth Massachusetts",
+    "primaryCandidate": "ma_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ma_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_massachusetts.d46",
+            "lot": "ma_5_militia_infantry",
+            "regiment": "ma_5_militia_infantry",
+            "post": "st_gov_massachusetts",
+            "holder": "andrew_john_a",
+            "chain": [
+              "st_gov_massachusetts"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_england",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_massachusetts",
+              "enlRaisedBy": "andrew_john_a",
+              "enlCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+              "enlRegiments": 2,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Heintzelman",
+    "printed": "Eighth New York",
+    "primaryCandidate": "ny_8_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_8_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_8_militia_infantry",
+            "regiment": "ny_8_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_8_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.6",
+            "lot": "ny_8_infantry",
+            "regiment": "ny_8_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Heintzelman",
+    "printed": "Twelfth New York",
+    "primaryCandidate": "ny_12_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_12_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_militia_infantry",
+            "regiment": "ny_12_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_12_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_infantry",
+            "regiment": "ny_12_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Heintzelman",
+    "printed": "Twenty-fifth New York",
+    "primaryCandidate": "ny_25_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_25_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_25_militia_infantry",
+            "regiment": "ny_25_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_25_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_25_infantry",
+            "regiment": "ny_25_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Hunter",
+    "printed": "Fifth New York",
+    "primaryCandidate": "ny_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_5_militia_infantry",
+            "regiment": "ny_5_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Hunter",
+    "printed": "Twenty-eighth New York",
+    "primaryCandidate": "ny_28_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_28_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_28_militia_infantry",
+            "regiment": "ny_28_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_28_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_28_infantry",
+            "regiment": "ny_28_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "brigade": "Hunter",
+    "printed": "Sixty-ninth New York",
+    "primaryCandidate": "ny_69_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_69_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_69_militia_infantry",
+            "regiment": "ny_69_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Stone",
+    "printed": "First Michigan",
+    "primaryCandidate": "mi_1_3m_infantry",
+    "candidates": [
+      {
+        "regiment": "mi_1_3m_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_michigan.d46",
+            "lot": "mi_1_3m_infantry",
+            "regiment": "mi_1_3m_infantry",
+            "post": "us_dept_washington",
+            "holder": "mansfield_joseph_k_f",
+            "chain": [
+              "us_dept_washington",
+              "us_general_in_chief",
+              "us_secretary_war",
+              "us_president"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "washington",
+              "locAboard": null,
+              "locSinceDay": 89,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_michigan",
+              "enlRaisedBy": "blair_austin",
+              "enlCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+              "enlRegiments": 1,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Stone",
+    "printed": "New York Zouaves",
+    "primaryCandidate": "ny_11_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_11_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64",
+            "lot": "ny_11_infantry",
+            "regiment": "ny_11_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Stone",
+    "printed": "Fifth Massachusetts",
+    "primaryCandidate": "ma_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ma_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_massachusetts.d46",
+            "lot": "ma_5_militia_infantry",
+            "regiment": "ma_5_militia_infantry",
+            "post": "st_gov_massachusetts",
+            "holder": "andrew_john_a",
+            "chain": [
+              "st_gov_massachusetts"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_england",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_massachusetts",
+              "enlRaisedBy": "andrew_john_a",
+              "enlCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+              "enlRegiments": 2,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Heintzelman",
+    "printed": "Eighth New York",
+    "primaryCandidate": "ny_8_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_8_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_8_militia_infantry",
+            "regiment": "ny_8_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_8_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.6",
+            "lot": "ny_8_infantry",
+            "regiment": "ny_8_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Heintzelman",
+    "printed": "Twelfth New York",
+    "primaryCandidate": "ny_12_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_12_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_militia_infantry",
+            "regiment": "ny_12_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_12_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46",
+            "lot": "ny_12_infantry",
+            "regiment": "ny_12_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Heintzelman",
+    "printed": "Twenty-fifth New York",
+    "primaryCandidate": "ny_25_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_25_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_25_militia_infantry",
+            "regiment": "ny_25_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_25_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_25_infantry",
+            "regiment": "ny_25_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Hunter",
+    "printed": "Fifth New York",
+    "primaryCandidate": "ny_5_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_5_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_5_militia_infantry",
+            "regiment": "ny_5_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Hunter",
+    "printed": "Twenty-eighth New York",
+    "primaryCandidate": "ny_28_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_28_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.2",
+            "lot": "ny_28_militia_infantry",
+            "regiment": "ny_28_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      },
+      {
+        "regiment": "ny_28_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d64.bundle.3",
+            "lot": "ny_28_infantry",
+            "regiment": "ny_28_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 64,
+              "locMarch": null
+            },
+            "men": 866,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_go15_infantry: OR III-I p.151; OR III-I p.152",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 38,
+              "enlMusterDay": 64,
+              "enlEndsDay": 794,
+              "enlCallId": "us_may03_accepted_new_york"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 90,
+    "brigade": "Hunter",
+    "printed": "Sixty-ninth New York",
+    "primaryCandidate": "ny_69_militia_infantry",
+    "candidates": [
+      {
+        "regiment": "ny_69_militia_infantry",
+        "lots": [
+          {
+            "block": "raised.st_gov_new_york.d46.bundle.3",
+            "lot": "ny_69_militia_infantry",
+            "regiment": "ny_69_militia_infantry",
+            "post": "st_gov_new_york",
+            "holder": "morgan_edwin_d",
+            "chain": [
+              "st_gov_new_york"
+            ],
+            "underMcDowell": false,
+            "location": {
+              "locRegion": "new_york",
+              "locAboard": null,
+              "locSinceDay": 46,
+              "locMarch": null
+            },
+            "men": 780,
+            "strength": {
+              "strengthKind": "rule",
+              "strengthSource": "us_april_militia: OR III-I p.69",
+              "strengthDate": null
+            },
+            "service": {
+              "enlPost": "st_gov_new_york",
+              "enlRaisedBy": "morgan_edwin_d",
+              "enlCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+              "enlRegiments": 17,
+              "enlMusterDay": 46,
+              "enlEndsDay": 136
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

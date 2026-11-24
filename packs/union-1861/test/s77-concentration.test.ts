@@ -1,5 +1,6 @@
 import { expect, it } from 'vitest';
-import { seatsWorld } from '../../../packages/cli/src/seats-world.ts';
+// 0131 retires this history policy; preserve its generic mechanics on an explicit synthetic control.
+import { seatsWorld } from './support/generic-concentration-control.ts';
 import { readFileSync } from 'node:fs';
 import { phase0 } from '@mandate/kernel';
 import { toId } from '../../../packages/kernel/src/ids.ts';
@@ -60,7 +61,13 @@ it('S119: a received call answer opens named transfer after the normal muster wi
  const loaded = seatsWorld('union-1861');
  const {setup} = loaded;
  const notices = ['virginia_military_convention', 'tennessee_military_league'];
- const world = {...loaded.world, situations: loaded.world.situations.filter(s => notices.includes(s.id))};
+ // This legacy generic-policy control must not simultaneously invoke the
+ // historical0126 Lynchburg offer. Its named-transfer assertions test the
+ // retired generic mechanism, not permission to seize a still-pending offer.
+ const world = {...loaded.world, situations: loaded.world.situations.filter(s => notices.includes(s.id)),
+   map:{...loaded.world.map,world:{...loaded.world.map.world,rules:{...loaded.world.map.world.rules,
+     ruleSeats:{...loaded.world.map.world.rules.ruleSeats,principals:loaded.world.map.world.rules.ruleSeats.principals.map(p=>({...p,
+       calls:p.calls.map(c=>c.id==='cs_apr22_absolute_tennessee'?{...c,offer:undefined}:c)}))}}}}};
  const initial = phase0.createState(world, setup);
  const seat = toId('seat','seat:davis_jefferson');
  const donor = toId('post','st_gov_tennessee');

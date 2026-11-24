@@ -1,7 +1,8 @@
+import { allocationPaper } from '../command/force-requests.ts';
 import { detentionProblems } from '../plans/detention.ts';
 import { arriveMandate, validateLocalOrder } from './mandates.ts';
 import { arriveAssignment } from './onward-assignments.ts';
-import { arriveAllocation } from './allocation.ts';
+import { arriveAllocation, returnSubordinateAllocation } from './allocation.ts';
 /**
  * Orders through chains (decision 0040): issuing an order, relaying it link by link, and its arrival.
  *
@@ -221,11 +222,11 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
   // The whole chain of posts between the principal's own post and the target relays his order.
-  const allocation=world.map.world.rules.allocationInstruments?.find(p=>p.id===body.orderAllocation);
+  const allocation=allocationPaper(world,state,body.orderAllocation??'');
   const local = allocation?.issuerPost ?? (body.orderAuthority === undefined && body.orderMandate === undefined ? undefined : heldPost(state, issuerId) ?? undefined);
   const detentionAddress = body.orderAuthority === undefined || body.orderLetter === undefined || body.orderGoal?.goalPurpose === undefined ? undefined : to;
   const sender = senderFor(world, state, seat, requisition, ctx.senderViews, local, detentionAddress)!;
-  const officeAddress = requisition !== undefined && (resolveOffice || sender.holder(cmd.to) === null);
+  const officeAddress = requisition !== undefined && allocation?.recipient===undefined && (resolveOffice || sender.holder(cmd.to) === null);
   const namedAssignment=body.orderAssignment===undefined?undefined:world.map.world.rules.onwardAssignments?.find(p=>p.id===body.orderAssignment!.paper)?.recipient;
   const chain = officeAddress ? [cmd.to] : sender.chain(cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
@@ -338,7 +339,7 @@ export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessa
     fromRegion: addressRegion(ctx, state, post, issuer),
   });
   fire(ctx, 'orders.returned');
-  return state;
+  return returnSubordinateAllocation(ctx,state,msg,'authority_unavailable');
 }
 
 /** A report answering an order: its subject is the post the order was for, and it names the order it answers. */
@@ -407,7 +408,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
       to: order.orderIssuer,
       tag: `objection.${order.orderTarget}`,
     });
-    return state;
+    return returnSubordinateAllocation(ctx,state,msg,'refused');
   }
   if (answer.declaredReservations.length > 0 || answer.declaredReservationGaps.length > 0) acknowledge(ctx, state, msg, 'relayed', true, answer);
   const next = msg.msgPending[0]!;

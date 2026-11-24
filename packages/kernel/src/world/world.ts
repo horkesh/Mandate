@@ -38,7 +38,7 @@ import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
 import type { RegimentRecord } from './regiments.ts';
 import type { OnwardAssignment } from './assignments.ts';
-import type { AllocationInstrument } from './allocation.ts';
+import type { AllocationInstrument, ServiceStation } from './allocation.ts';
 import type { LetterIdentity } from './letters.ts';
 import type { ConsultationRound } from './consultations.ts';
 export type { ConsultationRound } from './consultations.ts';
@@ -192,7 +192,7 @@ export interface PrincipalDoctrine {
    * Exact men override conversion by regiment; null men/regiments preserve an unquantified unit. Readiness alone
    * records an answer without mustering. Null termDays means war service, with no invented fixed expiry.
    */
-  readonly calls: readonly { readonly address?: 'office'; readonly offer?: { readonly region: RegionId; readonly receiver: PostId }; readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string; readonly requiresPapers?: readonly PaperSelector[] }[];
+  readonly calls: readonly { readonly address?: 'office'; readonly offer?: { readonly region: RegionId; readonly receiver?: PostId; readonly station?: string }; readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string; readonly requiresPapers?: readonly PaperSelector[] }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
   readonly offensives: readonly DoctrineOffensive[];
   readonly proposalAnswers?: readonly DoctrineProposalAnswer[];
@@ -356,6 +356,7 @@ export interface PlansRules {
 
 /** Pack-tunable rules the map needs (0019: thresholds start from AGEoD's tested values). */
 export interface WorldRules {
+  readonly serviceStations?: readonly ServiceStation[];
   readonly allocationInstruments?: readonly AllocationInstrument[];
   readonly mandates?: readonly MandatePaper[];
   readonly onwardAssignments?: readonly OnwardAssignment[];

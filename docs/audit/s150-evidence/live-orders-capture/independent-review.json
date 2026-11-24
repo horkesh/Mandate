@@ -1,0 +1,38 @@
+{
+  "verdict": "approve_after_fixes",
+  "basis": "Unstaged S150 kernel diff against the accepted 444-path index, plus the new s150-live-orders.test.ts. Read CLAUDE.md, docs/LANES.md, lead S150 request and decisions 0133/0134/0135 in the main checkout.",
+  "findings": [
+    {
+      "id": "S150-R1",
+      "severity": "blocker",
+      "at": "packages/kernel/src/command/allocation.ts:46",
+      "related": [
+        "packages/kernel/src/command/allocation.ts:170",
+        "packages/kernel/src/tick/allocation.ts:165",
+        "packages/kernel/src/tick/allocation.ts:183",
+        "packages/kernel/src/tick/allocation.ts:202"
+      ],
+      "finding": "A valid paper can produce zero selected lots and both a stock reason and per-lot authority_unavailable. Example: one matching regiment is committed and the other is free but outside the issuing mandate's regions. arriveAllocation has already passed paper-level authority and records a complying zero-selection deferral. lotDeferredAllocation requires every reason to be a stock reason, so it reports a terminal decline, allows renewed requester choices on changed evidence and will never recognize later eligible receipts/releases. Distinguish the accepted wait from candidate-level exclusion and preserve current authority checks at wake/choice."
+    },
+    {
+      "id": "S150-R2",
+      "severity": "blocker",
+      "at": "packages/kernel/src/seats/force-requests.ts:188",
+      "finding": "The direct-answer path selects its first active assign grant by key before checking scope, usable lots or modes. An unrelated grant can prevent a direct answer even when a second grant covers the sender, recipient, destination and candidate lot. An empty-mode grant ahead of an otherwise identical nonempty grant yields a false typed gap. Filter/evaluate the issuing holder's actual scoped grants, and use deterministic ordering among viable grants without borrowing modes from another grant or subordinate."
+    },
+    {
+      "id": "S150-R3",
+      "severity": "blocker",
+      "at": "packages/kernel/src/tick/force-requests.ts:63",
+      "finding": "A governor's absent, empty or mismatched received stamp becomes modes_unavailable only if there is also a proposed sending. When a formerly promising return is stale and no lot is currently available, proposed is undefined and a complying governor emits no_eligible_force or generic defer without the required modes gap. Preserve the received mode gap independently of inventory and any independently applicable compliance reason. Never dispatch from the invalid stamp."
+    }
+  ],
+  "reviewed": {
+    "canon": "The live path otherwise maps to 0133's single outstanding request and no daily retry, 0134's sender-owned scoped choice and physical receipt, and 0135's current-mission retention and preserved compliance. Menu execution runs through executeLocal's fresh option; tick records a stable-ID opportunity without sending by itself.",
+    "determinism": "The readiness state is sorted by stable lot ID and follows a before/after eligibility transition; no new nondeterministic API noted. Mandate and report candidate tie-breaking is explicit. No measurement or timing rerun.",
+    "save_and_ownership": "The new fields are optional and encode as ordinary state. The new focused cases exercise receipt/release across save/resume, in-flight assignment ownership and legacy decline claims. Source paths use putAllocation, putForceRequest and report owners. Issued assignment packets are read back unchanged, with current direct/subordinate travel permissions separately enforced. The governor uses the received stamp with same author, office, request and need correlation against the archived actual ask, without opening the asker's live authority table.",
+    "history_and_reality": "Read-only pack inspection shows Davis signs the declared Johnston/Lee grants but has no generated world mandate as holder. His generated request should have a real typed gap if that is the only authority available. No basis exists here to take modes from those officers or invent a mode to move Pickens. Actual day-102 movement and Scott day-138 reporting are outside this source review.",
+    "process": "No source/index/test mutations or validation reruns. Read the retained red.log (5 failures, exit 1), focused.log (64 pass / 1 fail, exit 1), and typecheck.log (exit 0). S147 F07 asserts offer for a manually unstamped governor ask; the new defer is visible at s147-receipt-requests.test.ts:713. This fixture remains untouched, with no transport fallback. Parent brief reports the baseline hook had nine independent failures; that hook was outside review. Verify only the targeted corrections before the authorized capture.",
+    "outside_scope": "None."
+  }
+}

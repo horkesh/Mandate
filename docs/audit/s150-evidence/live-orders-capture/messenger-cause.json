@@ -1,0 +1,959 @@
+{
+  "baseline": {
+    "day134Goal": [
+      {
+        "day": 134,
+        "kind": "dispatch",
+        "key": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+        "value": {
+          "id": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "msgOrigin": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "msgFrom": "lincoln_abraham",
+          "msgTo": "mcdowell_irvin",
+          "msgToPost": "us_dept_northeastern_virginia",
+          "msgRole": "addressee",
+          "msgRoute": "special-messenger",
+          "msgSentDay": 134,
+          "msgArriveDay": 134,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "take",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_northeastern_virginia",
+            "orderBypass": true,
+            "orderIssuedDay": 134
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "retainedLincolnReports129to134": [
+      {
+        "id": "m.133.scott_winfield.lincoln_abraham.objection.us_dept_northeastern_virginia",
+        "knownReceivedDay": 133,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "order-objected",
+              "claimRegion": "manassas",
+              "claimValue": 1,
+              "claimToken": "goal",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "withdraw-order",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_offended",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "shielded_by_standing",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 800
+          },
+          "reportAnswers": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia"
+        }
+      },
+      {
+        "id": "m.133.bates_edward.lincoln_abraham.initiative.bid_for_direction.bates_edward",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "bates_edward",
+          "reportAuthorPost": "us_attorney_general",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "bates_edward",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      },
+      {
+        "id": "m.133.blair_montgomery.lincoln_abraham.initiative.bid_for_direction.blair_montgomery",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "blair_montgomery",
+          "reportAuthorPost": "us_postmaster_general",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "blair_montgomery",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      },
+      {
+        "id": "m.133.chase_salmon_p.lincoln_abraham.initiative.bid_for_direction.chase_salmon_p",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "chase_salmon_p",
+          "reportAuthorPost": "us_secretary_treasury",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "chase_salmon_p",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "trusts_leader",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "shielded_by_standing",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      },
+      {
+        "id": "m.133.seward_william_h.lincoln_abraham.initiative.bid_for_direction.seward_william_h",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "seward_william_h",
+          "reportAuthorPost": "us_secretary_state",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "seward_william_h",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "shielded_by_standing",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      }
+    ],
+    "memorandumPackets129to134": [],
+    "commandOperations": [
+      {
+        "day": 92,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": null,
+        "outcome": null,
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "assemble",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 94,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": null,
+        "outcome": null,
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "march",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 95,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": null,
+        "outcome": null,
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "works",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 95,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 96,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": 96,
+        "outcome": "objective_reached",
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "end",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 95,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 96,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "current": {
+    "day134Goal": [
+      {
+        "day": 134,
+        "kind": "dispatch",
+        "key": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+        "value": {
+          "id": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "msgOrigin": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "msgFrom": "lincoln_abraham",
+          "msgTo": "mcdowell_irvin",
+          "msgToPost": "us_dept_northeastern_virginia",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 134,
+          "msgArriveDay": 134,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "take",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderIssuer": "lincoln_abraham",
+            "orderTarget": "us_dept_northeastern_virginia",
+            "orderBypass": true,
+            "orderIssuedDay": 134
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "retainedLincolnReports129to134": [
+      {
+        "id": "m.133.mcdowell_irvin.lincoln_abraham.answer.inquire.us_dept_northeastern_virginia",
+        "knownReceivedDay": 133,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "position",
+              "claimRegion": "northern_virginia",
+              "claimValue": 0,
+              "claimToken": null,
+              "claimConfidence": 1000
+            },
+            {
+              "claimKind": "verb-answered",
+              "claimRegion": null,
+              "claimValue": 1,
+              "claimToken": "inquire:comply",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.133.lincoln_abraham.mcdowell_irvin.verb.inquire.us_dept_northeastern_virginia"
+        }
+      },
+      {
+        "id": "m.133.scott_winfield.lincoln_abraham.objection.us_dept_northeastern_virginia",
+        "knownReceivedDay": 133,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "scott_winfield",
+          "reportAuthorPost": "us_general_in_chief",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "order-objected",
+              "claimRegion": "manassas",
+              "claimValue": 1,
+              "claimToken": "goal",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "withdraw-order",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_offended",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "shielded_by_standing",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 800
+          },
+          "reportAnswers": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia"
+        }
+      },
+      {
+        "id": "m.133.bates_edward.lincoln_abraham.initiative.bid_for_direction.bates_edward",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "bates_edward",
+          "reportAuthorPost": "us_attorney_general",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "bates_edward",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      },
+      {
+        "id": "m.133.blair_montgomery.lincoln_abraham.initiative.bid_for_direction.blair_montgomery",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "blair_montgomery",
+          "reportAuthorPost": "us_postmaster_general",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "blair_montgomery",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      },
+      {
+        "id": "m.133.chase_salmon_p.lincoln_abraham.initiative.bid_for_direction.chase_salmon_p",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "chase_salmon_p",
+          "reportAuthorPost": "us_secretary_treasury",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "chase_salmon_p",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "trusts_leader",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "shielded_by_standing",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      },
+      {
+        "id": "m.133.seward_william_h.lincoln_abraham.initiative.bid_for_direction.seward_william_h",
+        "knownReceivedDay": 134,
+        "knownRoute": "courier",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "advice",
+          "reportSubtype": "memorandum",
+          "reportAuthor": "seward_william_h",
+          "reportAuthorPost": "us_secretary_state",
+          "reportSubjectKind": "person",
+          "reportSubjectId": "seward_william_h",
+          "reportClaims": [],
+          "reportDay": 133,
+          "reportHour": null,
+          "reportAdvice": {
+            "adviceRecommends": "direct-policy",
+            "adviceReasons": [
+              {
+                "reasonKind": "values_honoured",
+                "reasonWeight": 1000
+              },
+              {
+                "reasonKind": "shielded_by_standing",
+                "reasonWeight": 1000
+              }
+            ],
+            "adviceConfidence": 700
+          },
+          "reportAnswers": null
+        }
+      },
+      {
+        "id": "m.134.mcdowell_irvin.lincoln_abraham.ack.us_dept_northeastern_virginia",
+        "knownReceivedDay": 134,
+        "knownRoute": "wire",
+        "knownVia": [],
+        "knownBody": {
+          "reportType": "wire-dispatch",
+          "reportSubtype": null,
+          "reportAuthor": "mcdowell_irvin",
+          "reportAuthorPost": "us_dept_northeastern_virginia",
+          "reportSubjectKind": "post",
+          "reportSubjectId": "us_dept_northeastern_virginia",
+          "reportClaims": [
+            {
+              "claimKind": "order-obeyed",
+              "claimRegion": "manassas",
+              "claimValue": 1,
+              "claimToken": "new",
+              "claimConfidence": 1000
+            }
+          ],
+          "reportDay": 134,
+          "reportHour": null,
+          "reportAdvice": null,
+          "reportAnswers": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+        }
+      }
+    ],
+    "memorandumPackets129to134": [],
+    "commandOperations": [
+      {
+        "day": 92,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": null,
+        "outcome": null,
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "assemble",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 94,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": null,
+        "outcome": null,
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "march",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 95,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": null,
+        "outcome": null,
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "works",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 95,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 96,
+        "id": "op:us_dept_washington:92",
+        "post": "us_dept_washington",
+        "start": 92,
+        "end": 96,
+        "outcome": "objective_reached",
+        "objective": "washington",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "end",
+            "log": [
+              {
+                "axevDay": 92,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 94,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 95,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "washington"
+              },
+              {
+                "axevDay": 96,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "washington"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 99,
+        "id": "op:us_dept_northeastern_virginia:99",
+        "post": "us_dept_northeastern_virginia",
+        "start": 99,
+        "end": null,
+        "outcome": null,
+        "objective": "northern_virginia",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "assemble",
+            "log": [
+              {
+                "axevDay": 99,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 102,
+        "id": "op:us_dept_northeastern_virginia:99",
+        "post": "us_dept_northeastern_virginia",
+        "start": 99,
+        "end": null,
+        "outcome": null,
+        "objective": "northern_virginia",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "march",
+            "log": [
+              {
+                "axevDay": 99,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 102,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "northern_virginia"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 103,
+        "id": "op:us_dept_northeastern_virginia:99",
+        "post": "us_dept_northeastern_virginia",
+        "start": 99,
+        "end": null,
+        "outcome": null,
+        "objective": "northern_virginia",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "works",
+            "log": [
+              {
+                "axevDay": 99,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 102,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 103,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "northern_virginia"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 131,
+        "id": "op:us_dept_northeastern_virginia:99",
+        "post": "us_dept_northeastern_virginia",
+        "start": 99,
+        "end": 131,
+        "outcome": "objective_reached",
+        "objective": "northern_virginia",
+        "axes": [
+          {
+            "blocks": [
+              "raised.st_gov_michigan.d46"
+            ],
+            "stage": "end",
+            "log": [
+              {
+                "axevDay": 99,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 102,
+                "axevStage": "march",
+                "axevReason": "concentrated",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 103,
+                "axevStage": "works",
+                "axevReason": "objective_reached",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 131,
+                "axevStage": "end",
+                "axevReason": "objective_held",
+                "axevRegion": "northern_virginia"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 135,
+        "id": "op:us_dept_northeastern_virginia:135",
+        "post": "us_dept_northeastern_virginia",
+        "start": 135,
+        "end": null,
+        "outcome": null,
+        "objective": "manassas",
+        "axes": [
+          {
+            "blocks": [
+              "organised.s74_mcdowell_division_3_brigade_2.1"
+            ],
+            "stage": "assemble",
+            "log": [
+              {
+                "axevDay": 135,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day": 136,
+        "id": "op:us_dept_northeastern_virginia:135",
+        "post": "us_dept_northeastern_virginia",
+        "start": 135,
+        "end": 136,
+        "outcome": "failed",
+        "objective": "manassas",
+        "axes": [
+          {
+            "blocks": [
+              "organised.s74_mcdowell_division_3_brigade_2.1"
+            ],
+            "stage": "end",
+            "log": [
+              {
+                "axevDay": 135,
+                "axevStage": "assemble",
+                "axevReason": "opened",
+                "axevRegion": "northern_virginia"
+              },
+              {
+                "axevDay": 136,
+                "axevStage": "end",
+                "axevReason": "no_forces",
+                "axevRegion": "manassas"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

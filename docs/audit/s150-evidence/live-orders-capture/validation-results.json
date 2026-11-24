@@ -1,0 +1,63 @@
+{
+  "initialHook": "hook-initial.json",
+  "newFictionalTests": 15,
+  "compatibility": {
+    "command": "node node_modules/vitest/vitest.mjs run s150-live-orders s147-receipt-requests s141-allocation s124-office-offers s123-mandates banned-apis plans save serialize seats-log and pack s150-sending-instruments (explicit file paths in retained command)",
+    "exit": 1,
+    "passed": 207,
+    "failed": 1,
+    "files": 11,
+    "failure": "Unchanged F07 at s147-receipt-requests.test.ts:713 expects offer from an unstamped manually fabricated governor ask; current rule produces defer/modes_unavailable",
+    "log": "runs/s150-live-orders/compatibility-final.log"
+  },
+  "redGreen": {
+    "initial": "red.log5failed,focused.log64pass/1F07fail",
+    "review": "correction-red.log6failed/8pass;correction-green.log14pass;correction-focused.log70pass/1F07fail",
+    "legacyR1": "legacy-authority-red.log1expectedfail/14skipped;legacy-authority-green.log4R1pass/11skipped;R2/R3evidence reused"
+  },
+  "types": {
+    "exit": 0,
+    "log": "runs/s150-live-orders/legacy-authority-types.log",
+    "annotationCorrection": "One fictional State annotation resolves the retained prior TS7053 diagnostics; no behavior/test assertion weakened"
+  },
+  "boundary": {
+    "exit": 0,
+    "files": 499,
+    "terms": 61,
+    "log": "runs/s150-live-orders/boundary-final.log"
+  },
+  "rules": {
+    "exit": 0,
+    "log": "runs/s150-live-orders/rules-final.log",
+    "projection": "../live-orders-projection.json; same protected reader identities and seven other roots unchanged"
+  },
+  "measurement": {
+    "smokeExit": 0,
+    "captureExit": 0,
+    "captureCount": 1,
+    "smoke": "runs/s150-live-orders/smoke.log",
+    "log": "runs/s150-live-orders/measurement.log"
+  },
+  "groupsOverlap": true,
+  "fullSuite": {
+    "firstHook": "9failed/2521passed/3skipped,exit1",
+    "secondHook": "12failed/2533passed/3skipped,exit1",
+    "verdict": "hook-final.json",
+    "afterHook": "Two boundary failures corrected by a type-only dependency change.10existing boundary tests/typecheck/rules pass; current runtime JS identical. Ten other assertions remain unresolved. No third hook or capture."
+  },
+  "saveLimits": "Current capture replay/save/resume and fictional live waits pass. Existing testbed fixture/current mechanics hash incompatibility stays reported. A pre-change save already missing its pruned original compliance reply cannot prove an old undertaking. Previously issued sending packets retain their recorded modes; unstamped in-flight asks are typed gaps.",
+  "timing": "No local timing/hosted Linux claim",
+  "typeOnlyBoundaryCorrection": {
+    "tests": 10,
+    "boundaryExit": 0,
+    "typecheckExit": 0,
+    "rulesExit": 0,
+    "logs": [
+      "runs/s150-live-orders/boundary-correction.log",
+      "runs/s150-live-orders/typecheck-boundary.log",
+      "runs/s150-live-orders/rules-after-boundary.log"
+    ],
+    "proof": "type-only-boundary-proof.json",
+    "reused": "15new fictional cases and207/208compatibility evidence unaffected by identical emitted JS"
+  }
+}
