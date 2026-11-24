@@ -1,0 +1,30 @@
+{
+  "baseline": "d4c187e2a6eeabe19e9aa8f6c625654d37a9c4ebf62ca8557f5c614e12f2b164",
+  "referenceCaptures": 1,
+  "finalHash": "6f670ed792870f4b72c8478b88b77bc5ee735ae7018e3463eb8ac787df397071",
+  "days": 148,
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "6f670ed792870f4b72c8478b88b77bc5ee735ae7018e3463eb8ac787df397071",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "armyRows": 422,
+  "lotKindRows": 1373,
+  "instruments": 25,
+  "onward": 2,
+  "requestCycles": 7,
+  "requestAnswers": 12,
+  "battles": 2,
+  "changedBattles": 0,
+  "newZeros": [],
+  "bands": 164,
+  "gateFailures": 26,
+  "timing": "not measured locally; S153 runs alongside; no performance verdict",
+  "method": "read-only after-tick observations in the one forward run; same-day substeps may be net effects. Gates are labelled for the following day, never historical receipt assertions."
+}

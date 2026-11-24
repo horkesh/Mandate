@@ -1,5 +1,6 @@
 /** A request is an offered local choice, derived from the holder's received mission and picture. */
 import { activeMandate, currentMandates, inSubtree } from '../command/authority.ts';
+import { rootModeAuthority } from '../command/root-modes.ts';
 import { allocationAuthority, allocationSelection, legacyLotDeferral, reportedScopeMatches } from '../command/allocation.ts';
 import type { ForceNeed, ForceRequest, RetentionShortfalls } from '../command/force-requests.ts';
 import { allCommandedBlocks, commandedBlocks, factionOfPost } from '../command/command.ts';
@@ -173,6 +174,7 @@ export function governorForNeed(world:SeatsWorld, state:State, person:PersonId, 
 export function governorRequestAuthority(world:SeatsWorld,state:State,person:PersonId,post:PostId,need:ForceNeed,day:number):ForceRequestModeAuthority|undefined {
  const side=factionOfPost(world.map,state,need.needPost);
  if(side===null||factionOfPost(world.map,state,post)!==side)return undefined;
+ if(world.start.factions.some(f=>f.principal===person&&f.faction===side))return rootModeAuthority(world,person);
  const mandate=currentMandates(state,post).filter(a=>{
    const g=a.authorityGrant;
    return activeMandate(world.map,state,a,day) && g.mandateHolder===person &&

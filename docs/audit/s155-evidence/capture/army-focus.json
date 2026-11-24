@@ -1,0 +1,194 @@
+[
+  {
+    "day": 120,
+    "army": "cs_cmd_harpers_ferry",
+    "holder": "johnston_joseph_e",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1560,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1560,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "cs_cmd_manassas",
+    "holder": "beauregard_pierre_g_t",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 1440,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1440,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dept_northeastern_virginia",
+    "holder": "mcdowell_irvin",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 780,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 780,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 120,
+    "army": "us_dept_pennsylvania",
+    "holder": "patterson_robert",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_cmd_harpers_ferry",
+    "holder": "johnston_joseph_e",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1560,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1560,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "cs_cmd_manassas",
+    "holder": "beauregard_pierre_g_t",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 1440,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1440,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dept_northeastern_virginia",
+    "holder": "mcdowell_irvin",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 140,
+    "army": "us_dept_pennsylvania",
+    "holder": "patterson_robert",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_cmd_harpers_ferry",
+    "holder": "johnston_joseph_e",
+    "opened": true,
+    "lots": 2,
+    "fbStrength": 1560,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1560,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "cs_cmd_manassas",
+    "holder": "beauregard_pierre_g_t",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 1440,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 1440,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dept_northeastern_virginia",
+    "holder": "mcdowell_irvin",
+    "opened": true,
+    "lots": 0,
+    "fbStrength": 0,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 0,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  },
+  {
+    "day": 146,
+    "army": "us_dept_pennsylvania",
+    "holder": "patterson_robert",
+    "opened": true,
+    "lots": 1,
+    "fbStrength": 866,
+    "fbStragglers": 0,
+    "fbByKind": {
+      "return": 0,
+      "estimate": 0,
+      "rule": 866,
+      "unknown": null
+    },
+    "fbUnknownLots": []
+  }
+]

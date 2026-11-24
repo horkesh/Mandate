@@ -1,0 +1,20 @@
+{
+  "scope": "S155 only: 0137 root modes; no optimisation or S154 grammar",
+  "entry": "d2ccca82a5bbc9c82fc1b550cfae4b49aad88306",
+  "baseline": "d4c187e2a6eeabe19e9aa8f6c625654d37a9c4ebf62ca8557f5c614e12f2b164",
+  "commands": [
+    "node --import tsx tools/s155-measure-allocation.ts --smoke",
+    "node --import tsx tools/s155-measure-allocation.ts",
+    "python tools/s155-publish.py",
+    "git commit -F runs/s155/commit-message.txt"
+  ],
+  "cost": "one 148-day capture, standard daily replay/saved-log replay/day60 resume; several contended local minutes, then required ordinary hook; no timing verdict",
+  "pass": [
+    "focused fictional tests",
+    "zero run rejections",
+    "matching replay/resume",
+    "publish Curtin/Pickens fates, armies120/140/146 and all bands/floors"
+  ],
+  "stop": "unexpected error/rejection/replay mismatch or cheap gate failure: preserve evidence, diagnose cheaply before any affected rerun; new zero to lead before hook",
+  "review": "lead-owned separate reviewer lane per docs/LANES.md and S152 precedent"
+}

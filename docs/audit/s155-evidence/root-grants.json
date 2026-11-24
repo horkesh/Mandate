@@ -1,0 +1,86 @@
+[
+  {
+    "id": "s123_scott_1841",
+    "issuer": "lincoln_abraham",
+    "source": "Richardson IV p.73, presidential General Orders of 5 July 1841; Army Regulations 1857 pp.2-3 paras.7-14 and pp.57-60 paras.422-447. Retained read texts: docs/research/S123/sources/.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. The runtime principal transmits the declared Army office grant; this is not a claim that Lincoln wrote the 1841 instrument. Army land-domain mapping and strict exclusion of state-governor and Navy peers: docs/research/S123/standing-mandates.md. [I:S130] The newly offered field-goal form is included under 0124 item2, inside this same read Army assignment and its existing troops/territory; no new force, guard or authority root. [I:S147/0133] Assignment of actual troops within this received command follows 0124 item2 and Regulations1857 pp.58-60 paras.424-429,438-441. No wider recipient, territory or force ceiling is added.",
+    "modes": [
+      "land",
+      "rail",
+      "river",
+      "sea"
+    ],
+    "revocation": false
+  },
+  {
+    "id": "s123_patterson_go12",
+    "issuer": "lincoln_abraham",
+    "source": "OR I-II p.607, War Department GO12 of 27 April 1861, para.3; Regulations 1857 pp.57-60 paras.422-447. GO23 on p.611 gives twelve miles where GO12 gives twenty; the issuer GO12 governs.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. No Virginia region is in this standing grant. Ambiguous mixed Maryland regions are withheld; exact mapping and discrepancy: docs/research/S123/standing-mandates.md. [I:S147/0133] Assignment of actual troops within this received command follows 0124 item2 and Regulations1857 pp.58-60 paras.424-429,438-441. No wider recipient, territory or force ceiling is added.",
+    "modes": [
+      "land",
+      "rail",
+      "river",
+      "sea"
+    ],
+    "revocation": false
+  },
+  {
+    "id": "s123_johnston_attested",
+    "issuer": "davis_jefferson",
+    "source": "OR I-II pp.871-872, Johnston assumption at and near Harpers Ferry and Jackson receipt/refusal; pp.894,897,910, government correspondence addressing him as commander.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. The original Secretary of War assignment remains unread. A national root declared from the read attesting papers, not rank or reconstructed assignment. Jackson refusal is not assent; it is retained in the source packet and named as a receipt/answer gap.",
+    "modes": [
+      "land",
+      "rail",
+      "river",
+      "sea"
+    ],
+    "revocation": false
+  },
+  {
+    "id": "s123_johnston_june18",
+    "issuer": "davis_jefferson",
+    "source": "OR I-II pp.934-935, Cooper to Johnston at Camp Bunker Hill, 18 June 1861: discretionary operations and frequent full position/intention reports; pp.923-925 supplies the Winchester/railroad retirement context.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. [I] The existing lower_valley region represents Winchester/Bunker Hill; no separate places within it are claimed. Cooper carries the government instruction, not an independent granting principal. Civilian requisitions, destruction, recruitment and a timed retirement are not granted.",
+    "modes": [
+      "land",
+      "rail",
+      "river",
+      "sea"
+    ],
+    "revocation": false
+  },
+  {
+    "id": "s129_lee_national",
+    "issuer": "davis_jefferson",
+    "source": "OR I-II p.827, Walker10May telegram published as Lee GO13: control Confederate forces in Virginia and assign duties until further orders. Statutes at Large, Provisional Government, ch.IX,21February1861,p.32,sections1-2: Secretary acts under President direction/control. 0129 [I]: runtime government root is the principal, not Walker as a new principal; no President-to-Walker instruction is reconstructed. Read assignments may retain the separately received state command. Scope/lineage maps the two declared Virginia receiving commands and national troops received at the War Department within Virginia; no troops, holder for Fredericksburg or historical receipt is invented. See docs/research/S129/assignments.md.",
+    "modes": [
+      "land",
+      "rail",
+      "river",
+      "sea"
+    ],
+    "revocation": false
+  },
+  {
+    "id": "s147_mansfield_go12",
+    "issuer": "lincoln_abraham",
+    "source": "OR I-II p.607 GO12 paragraph1 assigns Mansfield with Washington headquarters. Regulations1857 pp.58-60 paras.424-429,438-441. [I] Washington region only; original District overlap and Maryland fragments are withheld. [I] Executable field permissions and movement modes under0124; only actual troops, no numeric ceiling, guard or fitted establishment. Issue eligibility never opens a post or delivers troops.",
+    "modes": [
+      "land",
+      "rail",
+      "river",
+      "sea"
+    ],
+    "revocation": false
+  },
+  {
+    "id": "s147_mcdowell_go26",
+    "issuer": "lincoln_abraham",
+    "source": "OR I-II p.653 GO26,27May and McDowell29May report. [I] Conservative model-region mapping of the north-of-James/east-of-Alleghanies department; northern_virginia is withheld for unresolved original-District overlap, and coastal sixty-mile fragments are withheld. Existing appointment still opens the post separately. [I] Executable field permissions and movement modes under0124; only actual troops, no numeric ceiling, guard or fitted establishment. Issue eligibility never opens a post or delivers troops.",
+    "modes": [
+      "land",
+      "rail",
+      "river",
+      "sea"
+    ],
+    "revocation": false
+  }
+]

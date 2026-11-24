@@ -1,0 +1,45 @@
+{
+  "entry": "d2ccca82",
+  "unchangedTrackedFiles": 3972,
+  "changedStartingFiles": [
+    {
+      "path": "packages/cli/src/liveness-gate.ts",
+      "before": "37a14a6d7477078fa0dd914c0a5d48b1bc3a2db9b24114906163f7b029f962a6",
+      "after": "5e6107a628daff062ce4d04a252cd9808405e6faca94c719309098337de24e99"
+    },
+    {
+      "path": "packages/kernel/src/command/force-requests.ts",
+      "before": "ebe627192b4ad8300bf29831088c14457ba5e1d3da7c64bf4f7b0be505211823",
+      "after": "80cfbdbc7a73f8f71521e7df67804483d5ea2105af1bca5a0a9c9117cd771bc9"
+    },
+    {
+      "path": "packages/kernel/src/seats/force-requests.ts",
+      "before": "c6b3f9da494a17a0a14be643075dfe43e3b22b9c19d15d1998fcc4fdbcf6f5bf",
+      "after": "268f296147b64b963a94937bc38a1acaeca7eb8e19703ac4ee172d68da12cb3f"
+    },
+    {
+      "path": "packages/kernel/test/s150-live-orders.test.ts",
+      "before": "4c91aa07c3fa47e5033c4656590110509274f1a80f696eee6c539c2aa327f00b",
+      "after": "600c1d16da8b09d976d34c6f4faa079bbbb0570eda140d3cfa196194db07e605"
+    },
+    {
+      "path": "packages/kernel/test/support/one-writer-reads.ts",
+      "before": "f6f26c7a894974ef2b5305e50847ed089f71c4b0529ad67913d990b749144e1e",
+      "after": "f88ecf269e4684b219df59e1572c38a3199e45d21fc245190d47e96ea544992f"
+    },
+    {
+      "path": "tools/rules/liveness-changes.json",
+      "before": "f94f4bdb9f2b6949bb0640fc84334463d8e1229359577fa7e7865def4f60bd4e",
+      "after": "2b680f42d94df6c2a0628ea996908dfa4fb5a87662ac277057965e6c1a7e9cf9"
+    },
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "before": "5d35c482826e4106ffcaec6566893328dcb4ae29a7519a0468230f4a68c00554",
+      "after": "ada4aa1f4752ce95d9bd5752a89bbc7c1c14ccd789549897ebc7319692f648d4"
+    }
+  ],
+  "priorInventoryEntriesVerified": 491,
+  "priorUniqueFilesVerified": 431,
+  "packFloorsAndFailsFilesUnchanged": true,
+  "onlyBandChange": "operations.ended around11:5..22; see band-recentre.json"
+}

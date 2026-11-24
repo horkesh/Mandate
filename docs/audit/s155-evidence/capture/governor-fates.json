@@ -1,0 +1,2969 @@
+[
+  {
+    "governor": "curtin_andrew_g",
+    "cycles": [
+      {
+        "request": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "before": {
+          "freqId": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+          "freqNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+            "needPost": "us_dept_washington",
+            "needPerson": "mansfield_joseph_k_f",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "washington",
+            "needGoal": {
+              "goalObjective": "washington",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": true,
+              "goalSea": true,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": false
+            },
+            "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+          },
+          "freqDay": 98,
+          "freqTo": "us_general_in_chief",
+          "freqAnswers": [
+            {
+              "fansDay": 99,
+              "fansPerson": "scott_winfield",
+              "fansPost": "us_general_in_chief",
+              "fansIssuer": "mansfield_joseph_k_f",
+              "fansAction": "relay",
+              "fansTo": "us_secretary_war",
+              "fansReasons": [
+                "compliance:comply",
+                "scope_unavailable",
+                "governor_holdings_unknown"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 100,
+              "fansPerson": "cameron_simon",
+              "fansPost": "us_secretary_war",
+              "fansIssuer": "scott_winfield",
+              "fansAction": "relay",
+              "fansTo": "us_president",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_unknown"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 101,
+              "fansPerson": "lincoln_abraham",
+              "fansPost": "us_president",
+              "fansIssuer": "cameron_simon",
+              "fansAction": "ask_governor",
+              "fansTo": "st_gov_pennsylvania",
+              "fansEvidence": "m.91.curtin_andrew_g.lincoln_abraham.governor-holdings.st_gov_pennsylvania",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_reported"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 102,
+              "fansPerson": "curtin_andrew_g",
+              "fansPost": "st_gov_pennsylvania",
+              "fansIssuer": "lincoln_abraham",
+              "fansAction": "defer",
+              "fansReasons": [
+                "compliance:comply",
+                "modes_unavailable"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        "after": {
+          "freqId": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+          "freqNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+            "needPost": "us_dept_washington",
+            "needPerson": "mansfield_joseph_k_f",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "washington",
+            "needGoal": {
+              "goalObjective": "washington",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": true,
+              "goalSea": true,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": false
+            },
+            "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+          },
+          "freqDay": 98,
+          "freqTo": "us_general_in_chief",
+          "freqAnswers": [
+            {
+              "fansDay": 99,
+              "fansPerson": "scott_winfield",
+              "fansPost": "us_general_in_chief",
+              "fansIssuer": "mansfield_joseph_k_f",
+              "fansAction": "relay",
+              "fansTo": "us_secretary_war",
+              "fansReasons": [
+                "compliance:comply",
+                "scope_unavailable",
+                "governor_holdings_unknown"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 100,
+              "fansPerson": "cameron_simon",
+              "fansPost": "us_secretary_war",
+              "fansIssuer": "scott_winfield",
+              "fansAction": "relay",
+              "fansTo": "us_president",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_unknown"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 101,
+              "fansPerson": "lincoln_abraham",
+              "fansPost": "us_president",
+              "fansIssuer": "cameron_simon",
+              "fansAction": "ask_governor",
+              "fansTo": "st_gov_pennsylvania",
+              "fansEvidence": "m.91.curtin_andrew_g.lincoln_abraham.governor-holdings.st_gov_pennsylvania",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_reported"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ],
+              "fansModeAuthority": [
+                "root-modes.lincoln_abraham",
+                [
+                  "land",
+                  "rail",
+                  "river",
+                  "sea"
+                ]
+              ]
+            },
+            {
+              "fansDay": 102,
+              "fansPerson": "curtin_andrew_g",
+              "fansPost": "st_gov_pennsylvania",
+              "fansIssuer": "lincoln_abraham",
+              "fansAction": "offer",
+              "fansReasons": [
+                "compliance:comply"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ],
+              "fansAssignment": [
+                "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+                "curtin_andrew_g",
+                "st_gov_pennsylvania",
+                "st_gov_pennsylvania",
+                "us_dept_washington",
+                "washington",
+                {
+                  "kind": "cohort",
+                  "arm": "infantry",
+                  "minTermDays": 1
+                },
+                1,
+                "governor_root",
+                [
+                  "land",
+                  "rail",
+                  "river",
+                  "sea"
+                ],
+                true
+              ],
+              "fansModeAuthority": [
+                "root-modes.lincoln_abraham",
+                [
+                  "land",
+                  "rail",
+                  "river",
+                  "sea"
+                ]
+              ]
+            }
+          ]
+        },
+        "allocations": [
+          {
+            "allocOrder": "m.102.d73c8dac95b0e26a",
+            "allocPaper": "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+            "allocDay": 102,
+            "allocSender": "curtin_andrew_g",
+            "allocStrongest": true,
+            "allocLots": [
+              "pa_10_infantry"
+            ],
+            "allocBlocks": [
+              "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174"
+            ],
+            "allocReceived": [
+              "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174"
+            ],
+            "allocShortfall": 0,
+            "allocReasons": [],
+            "allocStatus": "received",
+            "allocBlockLots": {
+              "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174": [
+                "pa_10_infantry"
+              ]
+            }
+          }
+        ],
+        "allocationHistory": [
+          {
+            "day": 102,
+            "kind": "allocation_receipt",
+            "key": "m.102.d73c8dac95b0e26a",
+            "value": {
+              "allocOrder": "m.102.d73c8dac95b0e26a",
+              "allocPaper": "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+              "allocDay": 102,
+              "allocSender": "curtin_andrew_g",
+              "allocStrongest": true,
+              "allocLots": [
+                "pa_10_infantry"
+              ],
+              "allocBlocks": [
+                "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174"
+              ],
+              "allocReceived": [],
+              "allocShortfall": 0,
+              "allocReasons": [],
+              "allocStatus": "pending",
+              "allocBlockLots": {
+                "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174": [
+                  "pa_10_infantry"
+                ]
+              }
+            }
+          },
+          {
+            "day": 105,
+            "kind": "allocation_receipt",
+            "key": "m.102.d73c8dac95b0e26a",
+            "value": {
+              "allocOrder": "m.102.d73c8dac95b0e26a",
+              "allocPaper": "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+              "allocDay": 102,
+              "allocSender": "curtin_andrew_g",
+              "allocStrongest": true,
+              "allocLots": [
+                "pa_10_infantry"
+              ],
+              "allocBlocks": [
+                "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174"
+              ],
+              "allocReceived": [
+                "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174"
+              ],
+              "allocShortfall": 0,
+              "allocReasons": [],
+              "allocStatus": "received",
+              "allocBlockLots": {
+                "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174": [
+                  "pa_10_infantry"
+                ]
+              }
+            }
+          }
+        ],
+        "receivedDay": 105,
+        "selectedLots": [
+          "pa_10_infantry"
+        ],
+        "wires": [
+          {
+            "day": 98,
+            "kind": "dispatch",
+            "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+            "value": {
+              "id": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+              "msgOrigin": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+              "msgFrom": "mansfield_joseph_k_f",
+              "msgTo": "scott_winfield",
+              "msgToPost": "us_general_in_chief",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 98,
+              "msgArriveDay": 98,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "mansfield_joseph_k_f",
+                "reportAuthorPost": "us_dept_washington",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-shortfall",
+                    "claimRegion": "washington",
+                    "claimValue": 1,
+                    "claimToken": "unknown_enemy_bootstrap",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 98,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                }
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 98,
+            "kind": "paper_receipt",
+            "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+            "value": {
+              "id": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+              "msgOrigin": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+              "msgFrom": "mansfield_joseph_k_f",
+              "msgTo": "scott_winfield",
+              "msgToPost": "us_general_in_chief",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 98,
+              "msgArriveDay": 98,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "mansfield_joseph_k_f",
+                "reportAuthorPost": "us_dept_washington",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-shortfall",
+                    "claimRegion": "washington",
+                    "claimValue": 1,
+                    "claimToken": "unknown_enemy_bootstrap",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 98,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                },
+                "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 99,
+            "kind": "dispatch",
+            "key": "m.99.3d9ca0e5b6b2c973",
+            "value": {
+              "id": "m.99.3d9ca0e5b6b2c973",
+              "msgOrigin": "m.99.3d9ca0e5b6b2c973",
+              "msgFrom": "scott_winfield",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 99,
+              "msgArriveDay": 99,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "scott_winfield",
+                "reportAuthorPost": "us_general_in_chief",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 0,
+                    "claimToken": "force:relay",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 99,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 99,
+            "kind": "dispatch",
+            "key": "m.99.611043a3456432b7",
+            "value": {
+              "id": "m.99.611043a3456432b7",
+              "msgOrigin": "m.99.611043a3456432b7",
+              "msgFrom": "scott_winfield",
+              "msgTo": "cameron_simon",
+              "msgToPost": "us_secretary_war",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 99,
+              "msgArriveDay": 99,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "scott_winfield",
+                "reportAuthorPost": "us_general_in_chief",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [],
+                "reportDay": 99,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                },
+                "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 99,
+            "kind": "paper_receipt",
+            "key": "m.99.3d9ca0e5b6b2c973",
+            "value": {
+              "id": "m.99.3d9ca0e5b6b2c973",
+              "msgOrigin": "m.99.3d9ca0e5b6b2c973",
+              "msgFrom": "scott_winfield",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 99,
+              "msgArriveDay": 99,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "scott_winfield",
+                "reportAuthorPost": "us_general_in_chief",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 0,
+                    "claimToken": "force:relay",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 99,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 99,
+            "kind": "paper_receipt",
+            "key": "m.99.611043a3456432b7",
+            "value": {
+              "id": "m.99.611043a3456432b7",
+              "msgOrigin": "m.99.611043a3456432b7",
+              "msgFrom": "scott_winfield",
+              "msgTo": "cameron_simon",
+              "msgToPost": "us_secretary_war",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 99,
+              "msgArriveDay": 99,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "scott_winfield",
+                "reportAuthorPost": "us_general_in_chief",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [],
+                "reportDay": 99,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                },
+                "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "dispatch",
+            "key": "m.100.24f0fb79a298d734",
+            "value": {
+              "id": "m.100.24f0fb79a298d734",
+              "msgOrigin": "m.100.24f0fb79a298d734",
+              "msgFrom": "cameron_simon",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cameron_simon",
+                "reportAuthorPost": "us_secretary_war",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 0,
+                    "claimToken": "force:relay",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "dispatch",
+            "key": "m.100.bb69a74a64bf56d8",
+            "value": {
+              "id": "m.100.bb69a74a64bf56d8",
+              "msgOrigin": "m.100.bb69a74a64bf56d8",
+              "msgFrom": "cameron_simon",
+              "msgTo": "lincoln_abraham",
+              "msgToPost": "us_president",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cameron_simon",
+                "reportAuthorPost": "us_secretary_war",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                },
+                "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "paper_receipt",
+            "key": "m.100.24f0fb79a298d734",
+            "value": {
+              "id": "m.100.24f0fb79a298d734",
+              "msgOrigin": "m.100.24f0fb79a298d734",
+              "msgFrom": "cameron_simon",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cameron_simon",
+                "reportAuthorPost": "us_secretary_war",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 0,
+                    "claimToken": "force:relay",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "paper_receipt",
+            "key": "m.100.bb69a74a64bf56d8",
+            "value": {
+              "id": "m.100.bb69a74a64bf56d8",
+              "msgOrigin": "m.100.bb69a74a64bf56d8",
+              "msgFrom": "cameron_simon",
+              "msgTo": "lincoln_abraham",
+              "msgToPost": "us_president",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cameron_simon",
+                "reportAuthorPost": "us_secretary_war",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                },
+                "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "dispatch",
+            "key": "m.101.aac3831a85624177",
+            "value": {
+              "id": "m.101.aac3831a85624177",
+              "msgOrigin": "m.101.aac3831a85624177",
+              "msgFrom": "lincoln_abraham",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "lincoln_abraham",
+                "reportAuthorPost": "us_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 0,
+                    "claimToken": "force:ask_governor",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "dispatch",
+            "key": "m.101.6603939c00a93e28",
+            "value": {
+              "id": "m.101.6603939c00a93e28",
+              "msgOrigin": "m.101.6603939c00a93e28",
+              "msgFrom": "lincoln_abraham",
+              "msgTo": "curtin_andrew_g",
+              "msgToPost": "st_gov_pennsylvania",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "lincoln_abraham",
+                "reportAuthorPost": "us_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                },
+                "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceModeAuthority": [
+                  "root-modes.lincoln_abraham",
+                  [
+                    "land",
+                    "rail",
+                    "river",
+                    "sea"
+                  ]
+                ]
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "paper_receipt",
+            "key": "m.101.6603939c00a93e28",
+            "value": {
+              "id": "m.101.6603939c00a93e28",
+              "msgOrigin": "m.101.6603939c00a93e28",
+              "msgFrom": "lincoln_abraham",
+              "msgTo": "curtin_andrew_g",
+              "msgToPost": "st_gov_pennsylvania",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "lincoln_abraham",
+                "reportAuthorPost": "us_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.90.mansfield_joseph_k_f.mansfield_joseph_k_f.local.goal:9038894831047c3b5911bf49",
+                  "needPost": "us_dept_washington",
+                  "needPerson": "mansfield_joseph_k_f",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "washington",
+                  "needGoal": {
+                    "goalObjective": "washington",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": true,
+                    "goalSea": true,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": false
+                  },
+                  "needEvidence": "e8c3ee58c3cda04252a4836aa6bcb8d599e8ff13891ba107046248cbab05d81e"
+                },
+                "reportForceRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+                "reportForceModeAuthority": [
+                  "root-modes.lincoln_abraham",
+                  [
+                    "land",
+                    "rail",
+                    "river",
+                    "sea"
+                  ]
+                ]
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "paper_receipt",
+            "key": "m.101.aac3831a85624177",
+            "value": {
+              "id": "m.101.aac3831a85624177",
+              "msgOrigin": "m.101.aac3831a85624177",
+              "msgFrom": "lincoln_abraham",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "lincoln_abraham",
+                "reportAuthorPost": "us_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 0,
+                    "claimToken": "force:ask_governor",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 102,
+            "kind": "dispatch",
+            "key": "m.102.7389bdffd5c5e7a7",
+            "value": {
+              "id": "m.102.7389bdffd5c5e7a7",
+              "msgOrigin": "m.102.7389bdffd5c5e7a7",
+              "msgFrom": "curtin_andrew_g",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "curtin_andrew_g",
+                "reportAuthorPost": "st_gov_pennsylvania",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 1,
+                    "claimToken": "force:offer",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 102,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 102,
+            "kind": "dispatch",
+            "key": "m.102.d73c8dac95b0e26a",
+            "value": {
+              "id": "m.102.d73c8dac95b0e26a",
+              "msgOrigin": "m.102.d73c8dac95b0e26a",
+              "msgFrom": "curtin_andrew_g",
+              "msgTo": "curtin_andrew_g",
+              "msgToPost": "st_gov_pennsylvania",
+              "msgRole": "addressee",
+              "msgRoute": "courier",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": {
+                "orderKind": "allocation",
+                "orderAllocation": "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+                "orderLetter": {
+                  "namespace": "force-choice",
+                  "key": "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+                  "revision": 1
+                },
+                "orderGoal": null,
+                "orderEdit": null,
+                "orderCall": null,
+                "orderIssuer": "curtin_andrew_g",
+                "orderTarget": "st_gov_pennsylvania",
+                "orderBypass": false,
+                "orderIssuedDay": 102
+              },
+              "msgVerb": null,
+              "msgReport": null,
+              "msgTruth": null
+            }
+          },
+          {
+            "day": 102,
+            "kind": "paper_receipt",
+            "key": "m.102.7389bdffd5c5e7a7",
+            "value": {
+              "id": "m.102.7389bdffd5c5e7a7",
+              "msgOrigin": "m.102.7389bdffd5c5e7a7",
+              "msgFrom": "curtin_andrew_g",
+              "msgTo": "mansfield_joseph_k_f",
+              "msgToPost": "us_dept_washington",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "curtin_andrew_g",
+                "reportAuthorPost": "st_gov_pennsylvania",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "us_dept_washington",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "washington",
+                    "claimValue": 1,
+                    "claimToken": "force:offer",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 102,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 102,
+            "kind": "paper_receipt",
+            "key": "m.102.d73c8dac95b0e26a",
+            "value": {
+              "id": "m.102.d73c8dac95b0e26a",
+              "msgOrigin": "m.102.d73c8dac95b0e26a",
+              "msgFrom": "curtin_andrew_g",
+              "msgTo": "curtin_andrew_g",
+              "msgToPost": "st_gov_pennsylvania",
+              "msgRole": "addressee",
+              "msgRoute": "courier",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": {
+                "orderKind": "allocation",
+                "orderAllocation": "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+                "orderLetter": {
+                  "namespace": "force-choice",
+                  "key": "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+                  "revision": 1
+                },
+                "orderGoal": null,
+                "orderEdit": null,
+                "orderCall": null,
+                "orderIssuer": "curtin_andrew_g",
+                "orderTarget": "st_gov_pennsylvania",
+                "orderBypass": false,
+                "orderIssuedDay": 102
+              },
+              "msgVerb": null,
+              "msgReport": null,
+              "msgTruth": null
+            }
+          }
+        ],
+        "lotJourneys": [
+          {
+            "day": 46,
+            "kind": "lot_place",
+            "key": "pa_10_infantry",
+            "value": {
+              "block": "raised.st_gov_pennsylvania.d46",
+              "post": "st_gov_pennsylvania",
+              "location": {
+                "locRegion": "harrisburg",
+                "locAboard": null,
+                "locSinceDay": 46,
+                "locMarch": null
+              },
+              "join": null,
+              "regiment": "pa_10_infantry",
+              "generated": false,
+              "kind": "rule",
+              "men": 780
+            }
+          },
+          {
+            "day": 102,
+            "kind": "lot_place",
+            "key": "pa_10_infantry",
+            "value": {
+              "block": "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174",
+              "post": "st_gov_pennsylvania",
+              "location": {
+                "locRegion": "york_adams",
+                "locAboard": null,
+                "locSinceDay": 102,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_pennsylvania",
+                "joinRegion": "washington",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.d73c8dac95b0e26a",
+                "joinAllocation": "m.102.d73c8dac95b0e26a"
+              },
+              "regiment": "pa_10_infantry",
+              "generated": false,
+              "kind": "rule",
+              "men": 780
+            }
+          },
+          {
+            "day": 103,
+            "kind": "lot_place",
+            "key": "pa_10_infantry",
+            "value": {
+              "block": "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174",
+              "post": "st_gov_pennsylvania",
+              "location": {
+                "locRegion": "baltimore_county",
+                "locAboard": null,
+                "locSinceDay": 103,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_pennsylvania",
+                "joinRegion": "washington",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.d73c8dac95b0e26a",
+                "joinAllocation": "m.102.d73c8dac95b0e26a"
+              },
+              "regiment": "pa_10_infantry",
+              "generated": false,
+              "kind": "rule",
+              "men": 780
+            }
+          },
+          {
+            "day": 104,
+            "kind": "lot_place",
+            "key": "pa_10_infantry",
+            "value": {
+              "block": "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174",
+              "post": "st_gov_pennsylvania",
+              "location": {
+                "locRegion": "southern_maryland",
+                "locAboard": null,
+                "locSinceDay": 104,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_pennsylvania",
+                "joinRegion": "washington",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.d73c8dac95b0e26a",
+                "joinAllocation": "m.102.d73c8dac95b0e26a"
+              },
+              "regiment": "pa_10_infantry",
+              "generated": false,
+              "kind": "rule",
+              "men": 780
+            }
+          },
+          {
+            "day": 105,
+            "kind": "lot_place",
+            "key": "pa_10_infantry",
+            "value": {
+              "block": "raised.st_gov_pennsylvania.d46.allocation.d3909d2afb53b174",
+              "post": "us_dept_washington",
+              "location": {
+                "locRegion": "washington",
+                "locAboard": null,
+                "locSinceDay": 105,
+                "locMarch": null
+              },
+              "join": null,
+              "regiment": "pa_10_infantry",
+              "generated": false,
+              "kind": "rule",
+              "men": 780
+            }
+          },
+          {
+            "day": 136,
+            "kind": "lot_place",
+            "key": "pa_10_infantry",
+            "value": null
+          }
+        ],
+        "finalLots": []
+      }
+    ]
+  },
+  {
+    "governor": "pickens_francis_w",
+    "cycles": [
+      {
+        "request": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "before": {
+          "freqId": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+          "freqNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+            "needPost": "cs_cmd_manassas",
+            "needPerson": "beauregard_pierre_g_t",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "manassas",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+          },
+          "freqDay": 99,
+          "freqTo": "cs_war_adjutant_inspector_general",
+          "freqAnswers": [
+            {
+              "fansDay": 100,
+              "fansPerson": "cooper_samuel",
+              "fansPost": "cs_war_adjutant_inspector_general",
+              "fansIssuer": "beauregard_pierre_g_t",
+              "fansAction": "relay",
+              "fansTo": "cs_president",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_unknown"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 101,
+              "fansPerson": "davis_jefferson",
+              "fansPost": "cs_president",
+              "fansIssuer": "cooper_samuel",
+              "fansAction": "ask_governor",
+              "fansTo": "st_gov_south_carolina",
+              "fansEvidence": "m.81.pickens_francis_w.davis_jefferson.governor-holdings.st_gov_south_carolina",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_reported"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 102,
+              "fansPerson": "pickens_francis_w",
+              "fansPost": "st_gov_south_carolina",
+              "fansIssuer": "davis_jefferson",
+              "fansAction": "defer",
+              "fansReasons": [
+                "compliance:comply",
+                "modes_unavailable"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        "after": {
+          "freqId": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+          "freqNeed": {
+            "needOrigin": "commander_choice",
+            "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+            "needPost": "cs_cmd_manassas",
+            "needPerson": "beauregard_pierre_g_t",
+            "needTask": "hold",
+            "needScope": {
+              "kind": "cohort",
+              "arm": "infantry",
+              "minTermDays": 1
+            },
+            "needQuantity": 1,
+            "needShortfall": null,
+            "needEstablishment": 780,
+            "needReason": "unknown_enemy_bootstrap",
+            "needDestination": "manassas",
+            "needGoal": {
+              "goalObjective": "manassas",
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+          },
+          "freqDay": 99,
+          "freqTo": "cs_war_adjutant_inspector_general",
+          "freqAnswers": [
+            {
+              "fansDay": 100,
+              "fansPerson": "cooper_samuel",
+              "fansPost": "cs_war_adjutant_inspector_general",
+              "fansIssuer": "beauregard_pierre_g_t",
+              "fansAction": "relay",
+              "fansTo": "cs_president",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_unknown"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fansDay": 101,
+              "fansPerson": "davis_jefferson",
+              "fansPost": "cs_president",
+              "fansIssuer": "cooper_samuel",
+              "fansAction": "ask_governor",
+              "fansTo": "st_gov_south_carolina",
+              "fansEvidence": "m.81.pickens_francis_w.davis_jefferson.governor-holdings.st_gov_south_carolina",
+              "fansReasons": [
+                "compliance:comply",
+                "authority_unavailable",
+                "governor_holdings_reported"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ],
+              "fansModeAuthority": [
+                "root-modes.davis_jefferson",
+                [
+                  "land",
+                  "rail",
+                  "river",
+                  "sea"
+                ]
+              ]
+            },
+            {
+              "fansDay": 102,
+              "fansPerson": "pickens_francis_w",
+              "fansPost": "st_gov_south_carolina",
+              "fansIssuer": "davis_jefferson",
+              "fansAction": "offer",
+              "fansReasons": [
+                "compliance:comply"
+              ],
+              "fansScore": [
+                null,
+                null,
+                null
+              ],
+              "fansAssignment": [
+                "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+                "pickens_francis_w",
+                "st_gov_south_carolina",
+                "st_gov_south_carolina",
+                "cs_cmd_manassas",
+                "manassas",
+                {
+                  "kind": "cohort",
+                  "arm": "infantry",
+                  "minTermDays": 1
+                },
+                1,
+                "governor_root",
+                [
+                  "land",
+                  "rail",
+                  "river",
+                  "sea"
+                ],
+                true
+              ],
+              "fansModeAuthority": [
+                "root-modes.davis_jefferson",
+                [
+                  "land",
+                  "rail",
+                  "river",
+                  "sea"
+                ]
+              ]
+            }
+          ]
+        },
+        "allocations": [
+          {
+            "allocOrder": "m.102.4e6ee1be01b70eed",
+            "allocPaper": "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+            "allocDay": 102,
+            "allocSender": "pickens_francis_w",
+            "allocStrongest": true,
+            "allocLots": [
+              "generated.raised.st_gov_south_carolina.d9.3"
+            ],
+            "allocBlocks": [
+              "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56"
+            ],
+            "allocReceived": [
+              "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56"
+            ],
+            "allocShortfall": 0,
+            "allocReasons": [],
+            "allocStatus": "received",
+            "allocBlockLots": {
+              "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56": [
+                "generated.raised.st_gov_south_carolina.d9.3"
+              ]
+            }
+          }
+        ],
+        "allocationHistory": [
+          {
+            "day": 102,
+            "kind": "allocation_receipt",
+            "key": "m.102.4e6ee1be01b70eed",
+            "value": {
+              "allocOrder": "m.102.4e6ee1be01b70eed",
+              "allocPaper": "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+              "allocDay": 102,
+              "allocSender": "pickens_francis_w",
+              "allocStrongest": true,
+              "allocLots": [
+                "generated.raised.st_gov_south_carolina.d9.3"
+              ],
+              "allocBlocks": [
+                "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56"
+              ],
+              "allocReceived": [],
+              "allocShortfall": 0,
+              "allocReasons": [],
+              "allocStatus": "pending",
+              "allocBlockLots": {
+                "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56": [
+                  "generated.raised.st_gov_south_carolina.d9.3"
+                ]
+              }
+            }
+          },
+          {
+            "day": 112,
+            "kind": "allocation_receipt",
+            "key": "m.102.4e6ee1be01b70eed",
+            "value": {
+              "allocOrder": "m.102.4e6ee1be01b70eed",
+              "allocPaper": "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+              "allocDay": 102,
+              "allocSender": "pickens_francis_w",
+              "allocStrongest": true,
+              "allocLots": [
+                "generated.raised.st_gov_south_carolina.d9.3"
+              ],
+              "allocBlocks": [
+                "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56"
+              ],
+              "allocReceived": [
+                "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56"
+              ],
+              "allocShortfall": 0,
+              "allocReasons": [],
+              "allocStatus": "received",
+              "allocBlockLots": {
+                "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56": [
+                  "generated.raised.st_gov_south_carolina.d9.3"
+                ]
+              }
+            }
+          }
+        ],
+        "receivedDay": 112,
+        "selectedLots": [
+          "generated.raised.st_gov_south_carolina.d9.3"
+        ],
+        "wires": [
+          {
+            "day": 99,
+            "kind": "dispatch",
+            "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+            "value": {
+              "id": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+              "msgOrigin": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+              "msgFrom": "beauregard_pierre_g_t",
+              "msgTo": "cooper_samuel",
+              "msgToPost": "cs_war_adjutant_inspector_general",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 99,
+              "msgArriveDay": 99,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "beauregard_pierre_g_t",
+                "reportAuthorPost": "cs_cmd_manassas",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-shortfall",
+                    "claimRegion": "manassas",
+                    "claimValue": 1,
+                    "claimToken": "unknown_enemy_bootstrap",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 99,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                  "needPost": "cs_cmd_manassas",
+                  "needPerson": "beauregard_pierre_g_t",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "manassas",
+                  "needGoal": {
+                    "goalObjective": "manassas",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  },
+                  "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+                }
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 99,
+            "kind": "paper_receipt",
+            "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+            "value": {
+              "id": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+              "msgOrigin": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+              "msgFrom": "beauregard_pierre_g_t",
+              "msgTo": "cooper_samuel",
+              "msgToPost": "cs_war_adjutant_inspector_general",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 99,
+              "msgArriveDay": 99,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "beauregard_pierre_g_t",
+                "reportAuthorPost": "cs_cmd_manassas",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-shortfall",
+                    "claimRegion": "manassas",
+                    "claimValue": 1,
+                    "claimToken": "unknown_enemy_bootstrap",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 99,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                  "needPost": "cs_cmd_manassas",
+                  "needPerson": "beauregard_pierre_g_t",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "manassas",
+                  "needGoal": {
+                    "goalObjective": "manassas",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  },
+                  "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+                },
+                "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "dispatch",
+            "key": "m.100.0c3ef6c71c49c850",
+            "value": {
+              "id": "m.100.0c3ef6c71c49c850",
+              "msgOrigin": "m.100.0c3ef6c71c49c850",
+              "msgFrom": "cooper_samuel",
+              "msgTo": "beauregard_pierre_g_t",
+              "msgToPost": "cs_cmd_manassas",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cooper_samuel",
+                "reportAuthorPost": "cs_war_adjutant_inspector_general",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "manassas",
+                    "claimValue": 0,
+                    "claimToken": "force:relay",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "dispatch",
+            "key": "m.100.82cab4f26973666a",
+            "value": {
+              "id": "m.100.82cab4f26973666a",
+              "msgOrigin": "m.100.82cab4f26973666a",
+              "msgFrom": "cooper_samuel",
+              "msgTo": "davis_jefferson",
+              "msgToPost": "cs_president",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cooper_samuel",
+                "reportAuthorPost": "cs_war_adjutant_inspector_general",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                  "needPost": "cs_cmd_manassas",
+                  "needPerson": "beauregard_pierre_g_t",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "manassas",
+                  "needGoal": {
+                    "goalObjective": "manassas",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  },
+                  "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+                },
+                "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "paper_receipt",
+            "key": "m.100.0c3ef6c71c49c850",
+            "value": {
+              "id": "m.100.0c3ef6c71c49c850",
+              "msgOrigin": "m.100.0c3ef6c71c49c850",
+              "msgFrom": "cooper_samuel",
+              "msgTo": "beauregard_pierre_g_t",
+              "msgToPost": "cs_cmd_manassas",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cooper_samuel",
+                "reportAuthorPost": "cs_war_adjutant_inspector_general",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "manassas",
+                    "claimValue": 0,
+                    "claimToken": "force:relay",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 100,
+            "kind": "paper_receipt",
+            "key": "m.100.82cab4f26973666a",
+            "value": {
+              "id": "m.100.82cab4f26973666a",
+              "msgOrigin": "m.100.82cab4f26973666a",
+              "msgFrom": "cooper_samuel",
+              "msgTo": "davis_jefferson",
+              "msgToPost": "cs_president",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 100,
+              "msgArriveDay": 100,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "cooper_samuel",
+                "reportAuthorPost": "cs_war_adjutant_inspector_general",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [],
+                "reportDay": 100,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                  "needPost": "cs_cmd_manassas",
+                  "needPerson": "beauregard_pierre_g_t",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "manassas",
+                  "needGoal": {
+                    "goalObjective": "manassas",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  },
+                  "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+                },
+                "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "dispatch",
+            "key": "m.101.083dacb97605dddc",
+            "value": {
+              "id": "m.101.083dacb97605dddc",
+              "msgOrigin": "m.101.083dacb97605dddc",
+              "msgFrom": "davis_jefferson",
+              "msgTo": "beauregard_pierre_g_t",
+              "msgToPost": "cs_cmd_manassas",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "davis_jefferson",
+                "reportAuthorPost": "cs_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "manassas",
+                    "claimValue": 0,
+                    "claimToken": "force:ask_governor",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "dispatch",
+            "key": "m.101.2e49db43d3246607",
+            "value": {
+              "id": "m.101.2e49db43d3246607",
+              "msgOrigin": "m.101.2e49db43d3246607",
+              "msgFrom": "davis_jefferson",
+              "msgTo": "pickens_francis_w",
+              "msgToPost": "st_gov_south_carolina",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "davis_jefferson",
+                "reportAuthorPost": "cs_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                  "needPost": "cs_cmd_manassas",
+                  "needPerson": "beauregard_pierre_g_t",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "manassas",
+                  "needGoal": {
+                    "goalObjective": "manassas",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  },
+                  "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+                },
+                "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+                "reportForceModeAuthority": [
+                  "root-modes.davis_jefferson",
+                  [
+                    "land",
+                    "rail",
+                    "river",
+                    "sea"
+                  ]
+                ]
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "paper_receipt",
+            "key": "m.101.083dacb97605dddc",
+            "value": {
+              "id": "m.101.083dacb97605dddc",
+              "msgOrigin": "m.101.083dacb97605dddc",
+              "msgFrom": "davis_jefferson",
+              "msgTo": "beauregard_pierre_g_t",
+              "msgToPost": "cs_cmd_manassas",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "davis_jefferson",
+                "reportAuthorPost": "cs_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "manassas",
+                    "claimValue": 0,
+                    "claimToken": "force:ask_governor",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 101,
+            "kind": "paper_receipt",
+            "key": "m.101.2e49db43d3246607",
+            "value": {
+              "id": "m.101.2e49db43d3246607",
+              "msgOrigin": "m.101.2e49db43d3246607",
+              "msgFrom": "davis_jefferson",
+              "msgTo": "pickens_francis_w",
+              "msgToPost": "st_gov_south_carolina",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 101,
+              "msgArriveDay": 101,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "davis_jefferson",
+                "reportAuthorPost": "cs_president",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [],
+                "reportDay": 101,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+                "reportForceNeed": {
+                  "needOrigin": "commander_choice",
+                  "needMission": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+                  "needPost": "cs_cmd_manassas",
+                  "needPerson": "beauregard_pierre_g_t",
+                  "needTask": "hold",
+                  "needScope": {
+                    "kind": "cohort",
+                    "arm": "infantry",
+                    "minTermDays": 1
+                  },
+                  "needQuantity": 1,
+                  "needShortfall": null,
+                  "needEstablishment": 780,
+                  "needReason": "unknown_enemy_bootstrap",
+                  "needDestination": "manassas",
+                  "needGoal": {
+                    "goalObjective": "manassas",
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  },
+                  "needEvidence": "53b14b0441576054710eceac547474a5e6acdf7101fbefb311fa2dcd49b0d272"
+                },
+                "reportForceRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+                "reportForceModeAuthority": [
+                  "root-modes.davis_jefferson",
+                  [
+                    "land",
+                    "rail",
+                    "river",
+                    "sea"
+                  ]
+                ]
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 102,
+            "kind": "dispatch",
+            "key": "m.102.b71b368d883a58f1",
+            "value": {
+              "id": "m.102.b71b368d883a58f1",
+              "msgOrigin": "m.102.b71b368d883a58f1",
+              "msgFrom": "pickens_francis_w",
+              "msgTo": "beauregard_pierre_g_t",
+              "msgToPost": "cs_cmd_manassas",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "pickens_francis_w",
+                "reportAuthorPost": "st_gov_south_carolina",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "manassas",
+                    "claimValue": 1,
+                    "claimToken": "force:offer",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 102,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          },
+          {
+            "day": 102,
+            "kind": "dispatch",
+            "key": "m.102.4e6ee1be01b70eed",
+            "value": {
+              "id": "m.102.4e6ee1be01b70eed",
+              "msgOrigin": "m.102.4e6ee1be01b70eed",
+              "msgFrom": "pickens_francis_w",
+              "msgTo": "pickens_francis_w",
+              "msgToPost": "st_gov_south_carolina",
+              "msgRole": "addressee",
+              "msgRoute": "courier",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": {
+                "orderKind": "allocation",
+                "orderAllocation": "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+                "orderLetter": {
+                  "namespace": "force-choice",
+                  "key": "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+                  "revision": 1
+                },
+                "orderGoal": null,
+                "orderEdit": null,
+                "orderCall": null,
+                "orderIssuer": "pickens_francis_w",
+                "orderTarget": "st_gov_south_carolina",
+                "orderBypass": false,
+                "orderIssuedDay": 102
+              },
+              "msgVerb": null,
+              "msgReport": null,
+              "msgTruth": null
+            }
+          },
+          {
+            "day": 102,
+            "kind": "paper_receipt",
+            "key": "m.102.4e6ee1be01b70eed",
+            "value": {
+              "id": "m.102.4e6ee1be01b70eed",
+              "msgOrigin": "m.102.4e6ee1be01b70eed",
+              "msgFrom": "pickens_francis_w",
+              "msgTo": "pickens_francis_w",
+              "msgToPost": "st_gov_south_carolina",
+              "msgRole": "addressee",
+              "msgRoute": "courier",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": {
+                "orderKind": "allocation",
+                "orderAllocation": "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+                "orderLetter": {
+                  "namespace": "force-choice",
+                  "key": "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+                  "revision": 1
+                },
+                "orderGoal": null,
+                "orderEdit": null,
+                "orderCall": null,
+                "orderIssuer": "pickens_francis_w",
+                "orderTarget": "st_gov_south_carolina",
+                "orderBypass": false,
+                "orderIssuedDay": 102
+              },
+              "msgVerb": null,
+              "msgReport": null,
+              "msgTruth": null
+            }
+          },
+          {
+            "day": 102,
+            "kind": "paper_receipt",
+            "key": "m.102.b71b368d883a58f1",
+            "value": {
+              "id": "m.102.b71b368d883a58f1",
+              "msgOrigin": "m.102.b71b368d883a58f1",
+              "msgFrom": "pickens_francis_w",
+              "msgTo": "beauregard_pierre_g_t",
+              "msgToPost": "cs_cmd_manassas",
+              "msgRole": "addressee",
+              "msgRoute": "wire",
+              "msgSentDay": 102,
+              "msgArriveDay": 102,
+              "msgVia": [],
+              "msgPending": [],
+              "msgOrder": null,
+              "msgVerb": null,
+              "msgReport": {
+                "reportType": "wire-dispatch",
+                "reportSubtype": null,
+                "reportAuthor": "pickens_francis_w",
+                "reportAuthorPost": "st_gov_south_carolina",
+                "reportSubjectKind": "post",
+                "reportSubjectId": "cs_cmd_manassas",
+                "reportClaims": [
+                  {
+                    "claimKind": "allocation-selected",
+                    "claimRegion": "manassas",
+                    "claimValue": 1,
+                    "claimToken": "force:offer",
+                    "claimConfidence": 1000
+                  }
+                ],
+                "reportDay": 102,
+                "reportHour": null,
+                "reportAdvice": null,
+                "reportAnswers": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+              },
+              "msgTruth": {
+                "truthTerms": [],
+                "truthTrimmed": []
+              }
+            }
+          }
+        ],
+        "lotJourneys": [
+          {
+            "day": 9,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "columbia_sc",
+                "locAboard": null,
+                "locSinceDay": 9,
+                "locMarch": null
+              },
+              "join": null,
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 102,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "sc_midlands",
+                "locAboard": null,
+                "locSinceDay": 102,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 103,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "georgetown_pee_dee",
+                "locAboard": null,
+                "locSinceDay": 103,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 104,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 104,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 105,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "nc_coastal_plain",
+                "locAboard": null,
+                "locSinceDay": 105,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 106,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "nc_coastal_plain",
+                "locAboard": null,
+                "locSinceDay": 105,
+                "locMarch": {
+                  "marchEdge": "rail:nc_coastal_plain:southside:petersburg",
+                  "marchFrom": "nc_coastal_plain",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 106
+                }
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 107,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 107,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 108,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "lynchburg",
+                "locAboard": null,
+                "locSinceDay": 108,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 109,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "charlottesville",
+                "locAboard": null,
+                "locSinceDay": 109,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 110,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "culpeper_orange",
+                "locAboard": null,
+                "locSinceDay": 110,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 111,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "st_gov_south_carolina",
+              "location": {
+                "locRegion": "loudoun_fauquier",
+                "locAboard": null,
+                "locSinceDay": 111,
+                "locMarch": null
+              },
+              "join": {
+                "joinPost": "st_gov_south_carolina",
+                "joinRegion": "manassas",
+                "joinSinceDay": 102,
+                "joinBlocked": null,
+                "joinOffer": "m.102.4e6ee1be01b70eed",
+                "joinAllocation": "m.102.4e6ee1be01b70eed"
+              },
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          },
+          {
+            "day": 112,
+            "kind": "lot_place",
+            "key": "generated.raised.st_gov_south_carolina.d9.3",
+            "value": {
+              "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+              "post": "cs_cmd_manassas",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 112,
+                "locMarch": null
+              },
+              "join": null,
+              "regiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "generated": true,
+              "kind": "rule",
+              "men": 1440
+            }
+          }
+        ],
+        "finalLots": [
+          {
+            "block": "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56",
+            "post": "cs_cmd_manassas",
+            "location": {
+              "locRegion": "manassas",
+              "locAboard": null,
+              "locSinceDay": 112,
+              "locMarch": null
+            },
+            "lot": {
+              "lotId": "generated.raised.st_gov_south_carolina.d9.3",
+              "lotRegiment": "generated.raised.st_gov_south_carolina.d9.3",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 1440,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "call:cs_mar09_south_carolina; OR-IV-I p.117; OR-IV-I p.134; OR-IV-I p.135",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_south_carolina",
+                "enlRaisedBy": "pickens_francis_w",
+                "enlCall": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+                "enlRegiments": 3,
+                "enlMusterDay": 9,
+                "enlEndsDay": 374,
+                "enlCallId": "cs_mar09_south_carolina"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

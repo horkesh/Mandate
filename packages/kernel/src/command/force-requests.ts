@@ -5,6 +5,8 @@ import type { State } from '../root-state.ts';
 import type { AllocationInstrument, AllocationScope } from '../world/allocation.ts';
 export type { ForceNeed } from '../knowledge/force-need.ts';
 import type { ForceNeed, ForceRequestModeAuthority } from '../knowledge/force-need.ts';
+import { stampRootModes } from './root-modes.ts';
+import type { SeatsWorld } from '../seats/world.ts';
 
 export type ForceAction = 'grant' | 'partial' | 'offer' | 'defer' | 'refuse' | 'no_eligible_force' | 'relay' | 'ask_governor' | 'order_subordinate';
 export const FORCE_MODES_UNAVAILABLE = 'modes_unavailable';
@@ -67,8 +69,9 @@ export interface ForceRequest {
 export function putForceRequest(state:State, row:ForceRequest):State {
  return {...state,forceRequests:{...state.forceRequests,[row.freqId]:row}};
 }
-export function allocationPaper(world:{readonly map:{readonly world:{readonly rules:{readonly allocationInstruments?:readonly AllocationInstrument[]}}}},state:State,id:string) {
- return world.map.world.rules.allocationInstruments?.find(p=>p.id===id)??dynamicPaper(state,id);
+export function allocationPaper(world:SeatsWorld,state:State,id:string) {
+ const paper=world.map.world.rules.allocationInstruments?.find(p=>p.id===id)??dynamicPaper(state,id);
+ return paper===undefined?undefined:stampRootModes(world,paper);
 }
 
 function dynamicPaper(state:State,id:string):AllocationInstrument|undefined {

@@ -1,0 +1,4291 @@
+[
+  {
+    "day": 65,
+    "kind": "allocation_answer",
+    "key": "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1:patterson_robert:addressee",
+    "value": {
+      "respOrder": "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1",
+      "respPerson": "patterson_robert",
+      "respPost": "us_dept_pennsylvania",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 65,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.60.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_patterson_new_jersey.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 66,
+    "kind": "allocation_answer",
+    "key": "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1:buckingham_william_a:addressee",
+    "value": {
+      "respOrder": "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1",
+      "respPerson": "buckingham_william_a",
+      "respPost": "st_gov_connecticut",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 66,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.61.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_connecticut_three.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 76,
+    "kind": "allocation_answer",
+    "key": "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1:blair_austin:addressee",
+    "value": {
+      "respOrder": "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1",
+      "respPerson": "blair_austin",
+      "respPost": "st_gov_michigan",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 76,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 45,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.70.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_willcox.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 93,
+    "kind": "answer",
+    "key": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75:0",
+    "value": {
+      "fansDay": 93,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "mcdowell_irvin",
+      "fansAction": "order_subordinate",
+      "fansTo": "us_dept_washington",
+      "fansEvidence": "m.91.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+      "fansReasons": [
+        "compliance:comply",
+        "scope_unavailable",
+        "subordinate_holdings_reported"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansAssignment": [
+        "force.m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75.us_general_in_chief",
+        "scott_winfield",
+        "us_general_in_chief",
+        "us_dept_washington",
+        "us_dept_northeastern_virginia",
+        "northern_virginia",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "scott_army_command",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        null,
+        "mansfield_joseph_k_f"
+      ]
+    }
+  },
+  {
+    "day": 93,
+    "kind": "allocation_answer",
+    "key": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75:scott_winfield:addressee",
+    "value": {
+      "respOrder": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 34,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.mcdowell_irvin.scott_winfield.force-request:5e4209fd01d7bb448361fc75"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 93,
+    "kind": "allocation_answer",
+    "key": "m.93.8d0391f7fabc9b1e:mansfield_joseph_k_f:addressee",
+    "value": {
+      "respOrder": "m.93.8d0391f7fabc9b1e",
+      "respPerson": "mansfield_joseph_k_f",
+      "respPost": "us_dept_washington",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 264,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 95,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1:washburn_israel:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1",
+      "respPerson": "washburn_israel",
+      "respPost": "st_gov_maine",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 95,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_maine.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 95,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1:goodwin_ichabod:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1",
+      "respPerson": "goodwin_ichabod",
+      "respPost": "st_gov_new_hampshire",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 95,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_hampshire.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 95,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1:olden_charles_s:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1",
+      "respPerson": "olden_charles_s",
+      "respPost": "st_gov_new_jersey",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 95,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 57,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 57
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_new_jersey.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 95,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s152_sending.vermont_second.1:fairbanks_erastus:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s152_sending.vermont_second.1",
+      "respPerson": "fairbanks_erastus",
+      "respPost": "st_gov_vermont",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 95,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s152_sending.vermont_second.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s152_sending.vermont_second.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s152_sending.vermont_second.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s152_sending.vermont_second.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 95,
+    "kind": "allocation_answer",
+    "key": "m.91.davis_jefferson.davis_jefferson.letter.s152_sending.bartow.1:lee_robert_e:addressee",
+    "value": {
+      "respOrder": "m.91.davis_jefferson.davis_jefferson.letter.s152_sending.bartow.1",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 95,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 231,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.91.davis_jefferson.davis_jefferson.letter.s152_sending.bartow.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.91.davis_jefferson.davis_jefferson.letter.s152_sending.bartow.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.91.davis_jefferson.davis_jefferson.letter.s152_sending.bartow.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.91.davis_jefferson.davis_jefferson.letter.s152_sending.bartow.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 96,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1:buckingham_william_a:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1",
+      "respPerson": "buckingham_william_a",
+      "respPost": "st_gov_connecticut",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_connecticut.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 96,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1:andrew_john_a:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 123,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_massachusetts.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 96,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1:blair_austin:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1",
+      "respPerson": "blair_austin",
+      "respPost": "st_gov_michigan",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 44,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 44
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_michigan.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 96,
+    "kind": "allocation_answer",
+    "key": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1:randall_alexander_w:addressee",
+    "value": {
+      "respOrder": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1",
+      "respPerson": "randall_alexander_w",
+      "respPost": "st_gov_wisconsin",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 44,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 44
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.90.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_june3_wisconsin.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 96,
+    "kind": "allocation_answer",
+    "key": "m.93.davis_jefferson.davis_jefferson.letter.s152_sending.gartrell.1:lee_robert_e:addressee",
+    "value": {
+      "respOrder": "m.93.davis_jefferson.davis_jefferson.letter.s152_sending.gartrell.1",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 231,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.davis_jefferson.davis_jefferson.letter.s152_sending.gartrell.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.davis_jefferson.davis_jefferson.letter.s152_sending.gartrell.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.davis_jefferson.davis_jefferson.letter.s152_sending.gartrell.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.davis_jefferson.davis_jefferson.letter.s152_sending.gartrell.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 97,
+    "kind": "allocation_answer",
+    "key": "m.93.8d0391f7fabc9b1e:mansfield_joseph_k_f:addressee",
+    "value": {
+      "respOrder": "m.93.8d0391f7fabc9b1e",
+      "respPerson": "mansfield_joseph_k_f",
+      "respPost": "us_dept_washington",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 264,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.8d0391f7fabc9b1e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.93.8d0391f7fabc9b1e"
+      },
+      "respReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 98,
+    "kind": "allocation_answer",
+    "key": "m.94.davis_jefferson.davis_jefferson.letter.s152_sending.cash.1:lee_robert_e:addressee",
+    "value": {
+      "respOrder": "m.94.davis_jefferson.davis_jefferson.letter.s152_sending.cash.1",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 98,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 231,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.94.davis_jefferson.davis_jefferson.letter.s152_sending.cash.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.94.davis_jefferson.davis_jefferson.letter.s152_sending.cash.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.94.davis_jefferson.davis_jefferson.letter.s152_sending.cash.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.94.davis_jefferson.davis_jefferson.letter.s152_sending.cash.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 99,
+    "kind": "answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:0",
+    "value": {
+      "fansDay": 99,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "mansfield_joseph_k_f",
+      "fansAction": "relay",
+      "fansTo": "us_secretary_war",
+      "fansReasons": [
+        "compliance:comply",
+        "scope_unavailable",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 99,
+    "kind": "allocation_answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:scott_winfield:addressee",
+    "value": {
+      "respOrder": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 99,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 34,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 100,
+    "kind": "answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:1",
+    "value": {
+      "fansDay": 100,
+      "fansPerson": "cameron_simon",
+      "fansPost": "us_secretary_war",
+      "fansIssuer": "scott_winfield",
+      "fansAction": "relay",
+      "fansTo": "us_president",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 100,
+    "kind": "answer",
+    "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e:0",
+    "value": {
+      "fansDay": 100,
+      "fansPerson": "cooper_samuel",
+      "fansPost": "cs_war_adjutant_inspector_general",
+      "fansIssuer": "beauregard_pierre_g_t",
+      "fansAction": "relay",
+      "fansTo": "cs_president",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable",
+        "governor_holdings_unknown"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 100,
+    "kind": "allocation_answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:cameron_simon:addressee",
+    "value": {
+      "respOrder": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 100,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 50,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 50
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 100,
+    "kind": "allocation_answer",
+    "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e:cooper_samuel:addressee",
+    "value": {
+      "respOrder": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 100,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 101,
+    "kind": "answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:2",
+    "value": {
+      "fansDay": 101,
+      "fansPerson": "lincoln_abraham",
+      "fansPost": "us_president",
+      "fansIssuer": "cameron_simon",
+      "fansAction": "ask_governor",
+      "fansTo": "st_gov_pennsylvania",
+      "fansEvidence": "m.91.curtin_andrew_g.lincoln_abraham.governor-holdings.st_gov_pennsylvania",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable",
+        "governor_holdings_reported"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansModeAuthority": [
+        "root-modes.lincoln_abraham",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ]
+      ]
+    }
+  },
+  {
+    "day": 101,
+    "kind": "answer",
+    "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e:1",
+    "value": {
+      "fansDay": 101,
+      "fansPerson": "davis_jefferson",
+      "fansPost": "cs_president",
+      "fansIssuer": "cooper_samuel",
+      "fansAction": "ask_governor",
+      "fansTo": "st_gov_south_carolina",
+      "fansEvidence": "m.81.pickens_francis_w.davis_jefferson.governor-holdings.st_gov_south_carolina",
+      "fansReasons": [
+        "compliance:comply",
+        "authority_unavailable",
+        "governor_holdings_reported"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansModeAuthority": [
+        "root-modes.davis_jefferson",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ]
+      ]
+    }
+  },
+  {
+    "day": 101,
+    "kind": "allocation_answer",
+    "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e:davis_jefferson:addressee",
+    "value": {
+      "respOrder": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+      "respPerson": "davis_jefferson",
+      "respPost": "cs_president",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 101,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 101,
+    "kind": "allocation_answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:lincoln_abraham:addressee",
+    "value": {
+      "respOrder": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+      "respPerson": "lincoln_abraham",
+      "respPost": "us_president",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 101,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 64,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 102,
+    "kind": "answer",
+    "key": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a:0",
+    "value": {
+      "fansDay": 102,
+      "fansPerson": "lee_robert_e",
+      "fansPost": "cs_forces_virginia",
+      "fansIssuer": "johnston_joseph_e",
+      "fansAction": "grant",
+      "fansReasons": [
+        "compliance:comply",
+        "retention_comparison_undetermined",
+        "support_terms_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        333
+      ],
+      "fansRetention": [
+        null,
+        null
+      ],
+      "fansAssignment": [
+        "force.m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a.cs_forces_virginia",
+        "lee_robert_e",
+        "cs_forces_virginia",
+        "cs_forces_virginia",
+        "cs_cmd_harpers_ferry",
+        "harpers_ferry",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "lee_confederate_virginia",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ]
+      ]
+    }
+  },
+  {
+    "day": 102,
+    "kind": "answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:3",
+    "value": {
+      "fansDay": 102,
+      "fansPerson": "curtin_andrew_g",
+      "fansPost": "st_gov_pennsylvania",
+      "fansIssuer": "lincoln_abraham",
+      "fansAction": "offer",
+      "fansReasons": [
+        "compliance:comply"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansAssignment": [
+        "force.m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3.st_gov_pennsylvania",
+        "curtin_andrew_g",
+        "st_gov_pennsylvania",
+        "st_gov_pennsylvania",
+        "us_dept_washington",
+        "washington",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "governor_root",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        true
+      ],
+      "fansModeAuthority": [
+        "root-modes.lincoln_abraham",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ]
+      ]
+    }
+  },
+  {
+    "day": 102,
+    "kind": "answer",
+    "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e:2",
+    "value": {
+      "fansDay": 102,
+      "fansPerson": "pickens_francis_w",
+      "fansPost": "st_gov_south_carolina",
+      "fansIssuer": "davis_jefferson",
+      "fansAction": "offer",
+      "fansReasons": [
+        "compliance:comply"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansAssignment": [
+        "force.m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e.st_gov_south_carolina",
+        "pickens_francis_w",
+        "st_gov_south_carolina",
+        "st_gov_south_carolina",
+        "cs_cmd_manassas",
+        "manassas",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "governor_root",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        true
+      ],
+      "fansModeAuthority": [
+        "root-modes.davis_jefferson",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ]
+      ]
+    }
+  },
+  {
+    "day": 102,
+    "kind": "allocation_answer",
+    "key": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3:curtin_andrew_g:addressee",
+    "value": {
+      "respOrder": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+      "respPerson": "curtin_andrew_g",
+      "respPost": "st_gov_pennsylvania",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 102,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 36,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 36
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.98.mansfield_joseph_k_f.scott_winfield.force-request:8c04e11e0f64694f9c0e21e3"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 102,
+    "kind": "allocation_answer",
+    "key": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a:lee_robert_e:addressee",
+    "value": {
+      "respOrder": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 102,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 321,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "trusts_leader"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "trusts_leader"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.96.johnston_joseph_e.lee_robert_e.force-request:cfd668e4da0bca0317356e5a"
+      },
+      "respReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 102,
+    "kind": "allocation_answer",
+    "key": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e:pickens_francis_w:addressee",
+    "value": {
+      "respOrder": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+      "respPerson": "pickens_francis_w",
+      "respPost": "st_gov_south_carolina",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 102,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.99.beauregard_pierre_g_t.cooper_samuel.force-request:309a25f8f8f3d5951ce2414e"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 102,
+    "kind": "allocation_answer",
+    "key": "m.102.be15f94b2d27f049:lee_robert_e:addressee",
+    "value": {
+      "respOrder": "m.102.be15f94b2d27f049",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 102,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 231,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.102.be15f94b2d27f049",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.102.be15f94b2d27f049"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.102.be15f94b2d27f049",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.102.be15f94b2d27f049"
+      },
+      "respReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 103,
+    "kind": "allocation_answer",
+    "key": "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1:moore_thomas_o:addressee",
+    "value": {
+      "respOrder": "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 103,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 213,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.91.davis_jefferson.davis_jefferson.letter.s150_sending.s150_louisiana_sixth_richmond.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 104,
+    "kind": "allocation_answer",
+    "key": "m.104.davis_jefferson.davis_jefferson.letter.s152_sending.jenkins.1:lee_robert_e:addressee",
+    "value": {
+      "respOrder": "m.104.davis_jefferson.davis_jefferson.letter.s152_sending.jenkins.1",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 104,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 231,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.104.davis_jefferson.davis_jefferson.letter.s152_sending.jenkins.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.104.davis_jefferson.davis_jefferson.letter.s152_sending.jenkins.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.104.davis_jefferson.davis_jefferson.letter.s152_sending.jenkins.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.104.davis_jefferson.davis_jefferson.letter.s152_sending.jenkins.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 106,
+    "kind": "allocation_answer",
+    "key": "m.102.davis_jefferson.davis_jefferson.letter.s152_sending.louisiana_sixth.1:lee_robert_e:addressee",
+    "value": {
+      "respOrder": "m.102.davis_jefferson.davis_jefferson.letter.s152_sending.louisiana_sixth.1",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 106,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 231,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.102.davis_jefferson.davis_jefferson.letter.s152_sending.louisiana_sixth.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.102.davis_jefferson.davis_jefferson.letter.s152_sending.louisiana_sixth.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.102.davis_jefferson.davis_jefferson.letter.s152_sending.louisiana_sixth.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.102.davis_jefferson.davis_jefferson.letter.s152_sending.louisiana_sixth.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 108,
+    "kind": "allocation_answer",
+    "key": "m.102.scott_winfield.scott_winfield.letter.s152_sending.third_michigan_harrisburg.1:patterson_robert:addressee",
+    "value": {
+      "respOrder": "m.102.scott_winfield.scott_winfield.letter.s152_sending.third_michigan_harrisburg.1",
+      "respPerson": "patterson_robert",
+      "respPost": "us_dept_pennsylvania",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 108,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.102.scott_winfield.scott_winfield.letter.s152_sending.third_michigan_harrisburg.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.102.scott_winfield.scott_winfield.letter.s152_sending.third_michigan_harrisburg.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.102.scott_winfield.scott_winfield.letter.s152_sending.third_michigan_harrisburg.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.102.scott_winfield.scott_winfield.letter.s152_sending.third_michigan_harrisburg.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 110,
+    "kind": "allocation_answer",
+    "key": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1:mansfield_joseph_k_f:addressee",
+    "value": {
+      "respOrder": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1",
+      "respPerson": "mansfield_joseph_k_f",
+      "respPost": "us_dept_washington",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 110,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 264,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.110.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_june23.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 113,
+    "kind": "allocation_answer",
+    "key": "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1:blair_austin:addressee",
+    "value": {
+      "respOrder": "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1",
+      "respPerson": "blair_austin",
+      "respPost": "st_gov_michigan",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 113,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 45,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.107.lincoln_abraham.lincoln_abraham.letter.s150_sending.s150_michigan_fourth.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 114,
+    "kind": "answer",
+    "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856:0",
+    "value": {
+      "fansDay": 114,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "patterson_robert",
+      "fansAction": "order_subordinate",
+      "fansTo": "us_dept_washington",
+      "fansEvidence": "m.111.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+      "fansReasons": [
+        "compliance:comply",
+        "scope_unavailable",
+        "subordinate_holdings_reported"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansAssignment": [
+        "force.m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856.us_general_in_chief",
+        "scott_winfield",
+        "us_general_in_chief",
+        "us_dept_washington",
+        "us_dept_pennsylvania",
+        "philadelphia",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "scott_army_command",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        null,
+        "mansfield_joseph_k_f"
+      ]
+    }
+  },
+  {
+    "day": 114,
+    "kind": "allocation_answer",
+    "key": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856:scott_winfield:addressee",
+    "value": {
+      "respOrder": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 114,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 34,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.113.patterson_robert.scott_winfield.force-request:7d140751a45a7fb414d5f856"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 114,
+    "kind": "allocation_answer",
+    "key": "m.114.b70961860618b775:mansfield_joseph_k_f:addressee",
+    "value": {
+      "respOrder": "m.114.b70961860618b775",
+      "respPerson": "mansfield_joseph_k_f",
+      "respPost": "us_dept_washington",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 114,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 264,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.114.b70961860618b775",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.114.b70961860618b775"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.114.b70961860618b775",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.114.b70961860618b775"
+      },
+      "respReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 117,
+    "kind": "allocation_answer",
+    "key": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1:olden_charles_s:addressee",
+    "value": {
+      "respOrder": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1",
+      "respPerson": "olden_charles_s",
+      "respPost": "st_gov_new_jersey",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 117,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 57,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 57
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.112.scott_winfield.scott_winfield.letter.s150_sending.s150_scott_new_jersey_three.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 121,
+    "kind": "allocation_answer",
+    "key": "m.101.lincoln_abraham.lincoln_abraham.letter.s152_sending.minnesota_first.1:ramsey_alexander:addressee",
+    "value": {
+      "respOrder": "m.101.lincoln_abraham.lincoln_abraham.letter.s152_sending.minnesota_first.1",
+      "respPerson": "ramsey_alexander",
+      "respPost": "st_gov_minnesota",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 121,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 12,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 12
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.101.lincoln_abraham.lincoln_abraham.letter.s152_sending.minnesota_first.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.101.lincoln_abraham.lincoln_abraham.letter.s152_sending.minnesota_first.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.101.lincoln_abraham.lincoln_abraham.letter.s152_sending.minnesota_first.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.101.lincoln_abraham.lincoln_abraham.letter.s152_sending.minnesota_first.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 129,
+    "kind": "allocation_answer",
+    "key": "m.123.scott_winfield.scott_winfield.letter.s152_sending.gordon_williamsport.1:andrew_john_a:addressee",
+    "value": {
+      "respOrder": "m.123.scott_winfield.scott_winfield.letter.s152_sending.gordon_williamsport.1",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 129,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 33,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.123.scott_winfield.scott_winfield.letter.s152_sending.gordon_williamsport.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.123.scott_winfield.scott_winfield.letter.s152_sending.gordon_williamsport.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.123.scott_winfield.scott_winfield.letter.s152_sending.gordon_williamsport.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.123.scott_winfield.scott_winfield.letter.s152_sending.gordon_williamsport.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 135,
+    "kind": "allocation_answer",
+    "key": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1:curtin_andrew_g:addressee",
+    "value": {
+      "respOrder": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1",
+      "respPerson": "curtin_andrew_g",
+      "respPost": "st_gov_pennsylvania",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 135,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 33,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.130.lincoln_abraham.lincoln_abraham.letter.government_us_allocation.cameron_july13_five.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 138,
+    "kind": "answer",
+    "key": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770:0",
+    "value": {
+      "fansDay": 138,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "mcdowell_irvin",
+      "fansAction": "refuse",
+      "fansReasons": [
+        "compliance:object",
+        "scope_unavailable"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "day": 138,
+    "kind": "allocation_answer",
+    "key": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770:scott_winfield:addressee",
+    "value": {
+      "respOrder": "m.137.mcdowell_irvin.scott_winfield.force-request:cf635f565727f063b5c34770",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 138,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -11,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": -45
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        },
+        {
+          "kind": "holds_grievance",
+          "grievance": "bypassed",
+          "weight": 150
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        },
+        {
+          "kind": "holds_grievance",
+          "grievance": "bypassed",
+          "weight": 150
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": null,
+      "respDeclaredUndertaking": null,
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 148,
+    "kind": "answer",
+    "key": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da:0",
+    "value": {
+      "fansDay": 148,
+      "fansPerson": "scott_winfield",
+      "fansPost": "us_general_in_chief",
+      "fansIssuer": "patterson_robert",
+      "fansAction": "order_subordinate",
+      "fansTo": "us_dept_washington",
+      "fansEvidence": "m.141.mansfield_joseph_k_f.scott_winfield.return.us_dept_washington",
+      "fansReasons": [
+        "compliance:comply",
+        "scope_unavailable",
+        "subordinate_holdings_reported"
+      ],
+      "fansScore": [
+        null,
+        null,
+        null
+      ],
+      "fansAssignment": [
+        "force.m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da.us_general_in_chief",
+        "scott_winfield",
+        "us_general_in_chief",
+        "us_dept_washington",
+        "us_dept_pennsylvania",
+        "lower_valley",
+        {
+          "kind": "cohort",
+          "arm": "infantry",
+          "minTermDays": 1
+        },
+        1,
+        "scott_army_command",
+        [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        null,
+        "mansfield_joseph_k_f"
+      ]
+    }
+  },
+  {
+    "day": 148,
+    "kind": "allocation_answer",
+    "key": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da:scott_winfield:addressee",
+    "value": {
+      "respOrder": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 148,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 9,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 34
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": -25
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.147.patterson_robert.scott_winfield.force-request:7cc480261ab08b3b339ab7da"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  },
+  {
+    "day": 148,
+    "kind": "allocation_answer",
+    "key": "m.148.54182b6b77783884:mansfield_joseph_k_f:addressee",
+    "value": {
+      "respOrder": "m.148.54182b6b77783884",
+      "respPerson": "mansfield_joseph_k_f",
+      "respPost": "us_dept_washington",
+      "respRole": "addressee",
+      "respKind": "allocation",
+      "respDay": 148,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 264,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.148.54182b6b77783884",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.148.54182b6b77783884"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.148.54182b6b77783884",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.148.54182b6b77783884"
+      },
+      "respReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "detail",
+          "subject": "organisation",
+          "grounds": {
+            "groundKind": "course_judgment",
+            "groundReference": "retention_comparison_undetermined"
+          },
+          "treatment": "protest",
+          "effect": "statement",
+          "reservationProvenance": "planner_evaluation",
+          "knowledge": "unknown"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    }
+  }
+]

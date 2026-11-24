@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "node": "v22.23.2",
+    "python": "Python 3.14.3",
+    "branch": "sprint/allocate",
+    "head": "d2ccca82a5bbc9c82fc1b550cfae4b49aad88306",
+    "hooksPath": ".githooks"
+  },
+  "headless": true,
+  "timingEvidence": "none; hosted Linux remains lead-owned",
+  "otherLanes": "S153 and S154 concurrent per brief; no process stopped; no writes in those worktrees",
+  "workspacePackageTargets": "{\"cli\":\"C:\\\\Pyrrhic\\\\sprint-allocate\\\\packages\\\\cli\",\"kernel\":\"C:\\\\Pyrrhic\\\\sprint-allocate\\\\packages\\\\kernel\",\"pack-format\":\"C:\\\\Pyrrhic\\\\sprint-allocate\\\\packages\\\\pack-format\",\"rule-seats\":\"C:\\\\Pyrrhic\\\\sprint-allocate\\\\packages\\\\rule-seats\"}"
+}

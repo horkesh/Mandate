@@ -1,0 +1,13 @@
+{
+  "source": "packages/kernel/src/seats/force-requests.ts",
+  "beforeHash": "ca7a978cfc5af23774aa5ed7157e45679c0929c16e95dc502267c4426e9699d6",
+  "afterHash": "268f296147b64b963a94937bc38a1acaeca7eb8e19703ac4ee172d68da12cb3f",
+  "beforeLine": 71,
+  "afterLine": 72,
+  "unchangedExpression": "  const modeAuthority=ask!==undefined&&ask.fansModeAuthority!==undefined&&stamped!=null&&",
+  "diagnosis": "The added import shifts the existing read-only stamp comparison by one line; the 0137 branch changes the file hash. Await complete hook categories before correction/retry.",
+  "correction": "Only the reviewed source hash and line71->72; keys/form/reason unchanged",
+  "scannerUnchanged": true,
+  "hookAttempt1": "1 failed,2565 passed,3 expected failures,3 skips; all other292 files passed; post-test boundary/licence/decision stages not reached because npm check short-circuited",
+  "runtimeCodeChangedForCorrection": false
+}

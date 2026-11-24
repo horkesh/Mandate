@@ -1,0 +1,227 @@
+[
+  {
+    "paper": {
+      "id": "s129_so119_bate",
+      "source": "OR I-LI.2 pp.107-108,SO119,25May1861,paragraph2: Second Tennessee,Bate,to Fredericksburg by rail,report Ruggles; by order Lee,Garnett transmitting. 0129 [I]: office address is the Fredericksburg command; no Ruggles holder is fabricated, and Holmes is not the named historical addressee. Model departure starts from the actually received rendezvous, not an invented Richmond arrival.",
+      "fromDate": "1861-05-25",
+      "issuer": "lee_robert_e",
+      "from": "cs_forces_virginia",
+      "to": "cs_cmd_fredericksburg",
+      "destination": "fredericksburg",
+      "mandate": "lee_confederate_virginia",
+      "call": "cs_apr22_absolute_tennessee",
+      "regiment": "tn_2_infantry",
+      "address": "office",
+      "modes": [
+        "rail"
+      ]
+    },
+    "dispatches": [
+      {
+        "day": 87,
+        "kind": "dispatch",
+        "key": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+        "value": {
+          "id": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+          "msgOrigin": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+          "msgOfficeAddress": true,
+          "msgFrom": "lee_robert_e",
+          "msgTo": "lee_robert_e",
+          "msgToPost": "cs_cmd_fredericksburg",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 87,
+          "msgArriveDay": 91,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "assignment",
+            "orderAssignment": {
+              "paper": "s129_so119_bate",
+              "block": "raised.st_gov_tennessee.d55.assignment.s129_so119_bate",
+              "destination": "fredericksburg"
+            },
+            "orderLetter": {
+              "namespace": "assignment.lee_robert_e",
+              "key": "s129_so119_bate",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderAuthority": {
+              "basisPost": "cs_forces_virginia",
+              "basisKey": "lee_confederate_virginia"
+            },
+            "orderIssuer": "lee_robert_e",
+            "orderTarget": "cs_cmd_fredericksburg",
+            "orderBypass": false,
+            "orderIssuedDay": 87
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "paperReceipts": [
+      {
+        "day": 93,
+        "kind": "paper_receipt",
+        "key": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+        "value": {
+          "id": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+          "msgOrigin": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+          "msgOfficeAddress": true,
+          "msgFrom": "lee_robert_e",
+          "msgTo": "holmes_theophilus_h",
+          "msgToPost": "cs_cmd_fredericksburg",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 87,
+          "msgArriveDay": 93,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "assignment",
+            "orderAssignment": {
+              "paper": "s129_so119_bate",
+              "block": "raised.st_gov_tennessee.d55.assignment.s129_so119_bate",
+              "destination": "fredericksburg"
+            },
+            "orderLetter": {
+              "namespace": "assignment.lee_robert_e",
+              "key": "s129_so119_bate",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderAuthority": {
+              "basisPost": "cs_forces_virginia",
+              "basisKey": "lee_confederate_virginia"
+            },
+            "orderIssuer": "lee_robert_e",
+            "orderTarget": "cs_cmd_fredericksburg",
+            "orderBypass": false,
+            "orderIssuedDay": 87
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "firstUnmetPrerequisite": null
+  },
+  {
+    "paper": {
+      "id": "s129_turney_johnston",
+      "source": "OR I-II pp.897-898,Lee1June reinforcement letter to Johnston: First Tennessee,Turney,has been directed to report as soon as practicable. 0129 [I]: this contemporary attestation declares the direction with those terms only. Separate instruction and historical receipt unread; no date, route, extra regiment or headcount is reconstructed.",
+      "fromDate": "1861-06-01",
+      "issuer": "lee_robert_e",
+      "from": "cs_forces_virginia",
+      "to": "cs_cmd_harpers_ferry",
+      "recipient": "johnston_joseph_e",
+      "destination": "harpers_ferry",
+      "mandate": "lee_confederate_virginia",
+      "call": "cs_apr22_absolute_tennessee",
+      "regiment": "tn_1_infantry"
+    },
+    "dispatches": [
+      {
+        "day": 88,
+        "kind": "dispatch",
+        "key": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+        "value": {
+          "id": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+          "msgOrigin": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+          "msgFrom": "lee_robert_e",
+          "msgTo": "johnston_joseph_e",
+          "msgToPost": "cs_cmd_harpers_ferry",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 88,
+          "msgArriveDay": 93,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "assignment",
+            "orderAssignment": {
+              "paper": "s129_turney_johnston",
+              "block": "raised.st_gov_tennessee.d55.assignment.s129_turney_johnston",
+              "destination": "harpers_ferry"
+            },
+            "orderLetter": {
+              "namespace": "assignment.lee_robert_e",
+              "key": "s129_turney_johnston",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderAuthority": {
+              "basisPost": "cs_forces_virginia",
+              "basisKey": "lee_confederate_virginia"
+            },
+            "orderIssuer": "lee_robert_e",
+            "orderTarget": "cs_cmd_harpers_ferry",
+            "orderBypass": false,
+            "orderIssuedDay": 88
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "paperReceipts": [
+      {
+        "day": 93,
+        "kind": "paper_receipt",
+        "key": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+        "value": {
+          "id": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+          "msgOrigin": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+          "msgFrom": "lee_robert_e",
+          "msgTo": "johnston_joseph_e",
+          "msgToPost": "cs_cmd_harpers_ferry",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 88,
+          "msgArriveDay": 93,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "assignment",
+            "orderAssignment": {
+              "paper": "s129_turney_johnston",
+              "block": "raised.st_gov_tennessee.d55.assignment.s129_turney_johnston",
+              "destination": "harpers_ferry"
+            },
+            "orderLetter": {
+              "namespace": "assignment.lee_robert_e",
+              "key": "s129_turney_johnston",
+              "revision": 1
+            },
+            "orderGoal": null,
+            "orderEdit": null,
+            "orderCall": null,
+            "orderAuthority": {
+              "basisPost": "cs_forces_virginia",
+              "basisKey": "lee_confederate_virginia"
+            },
+            "orderIssuer": "lee_robert_e",
+            "orderTarget": "cs_cmd_harpers_ferry",
+            "orderBypass": false,
+            "orderIssuedDay": 88
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      }
+    ],
+    "firstUnmetPrerequisite": null
+  }
+]

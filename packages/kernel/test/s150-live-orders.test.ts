@@ -135,10 +135,10 @@ it.each(['receipt','release','mixed exclusions','legacy authority-only receipt']
   expect(delivered.allocationRecords?.[order.msgOrigin]?.allocStatus).toBe('received');
 });
 
-it.each(['declared','empty','missing','forged','missing with no lot','missing with objection'] as const)('a governor sending paper uses the received principal request with %s modes',kind=>{
+it.each(['declared','conveyed','empty','missing','forged','missing with no lot','missing with objection'] as const)('a governor sending paper uses the received principal request with %s modes',kind=>{
   const missing=kind.startsWith('missing');
   const principalRoot:MandatePaper={id:'principals-declared-grant',source:'Fictional office instrument',fromDate:'1900-06-01',
-    grant:{...grant,mandateHolder:principal,mandateModes:kind==='empty'?[]:['rail','river']}};
+    grant:{...grant,mandateHolder:kind==='conveyed'?superior:principal,mandateModes:kind==='empty'?[]:['rail','river']}};
   const {world,state:initial}=fixture(true,missing?undefined:[principalRoot]);
   let state:State={...initial,postStates:{...initial.postStates,[office]:{...initial.postStates[office]!,postHolder:principal}},
     forceAssignments:{...initial.forceAssignments,[arriving]:POST('a_filter')},
@@ -147,7 +147,7 @@ it.each(['declared','empty','missing','forged','missing with no lot','missing wi
   // The holder's own grant declares a different mode. Only the received asking authority counts.
   state=enactMandate(world.map,state,{...grant,mandateKey:'holder-assignment',mandatePost:sender,mandateHolder:holder,
     mandateModes:['land']},toId('message','holders-own-grant'),0,'comply',['assign']);
-  if(!missing)state=enactMandate(world.map,state,principalRoot.grant,toId('message',principalRoot.id),0,'comply',['assign']);
+  if(!missing&&kind!=='conveyed')state=enactMandate(world.map,state,principalRoot.grant,toId('message',principalRoot.id),0,'comply',['assign']);
   state=deliverReport(state,seatIdFor(principal),{id:requested,knownReceivedDay:1,knownRoute:'courier',knownVia:[],
     knownBody:{reportType:'wire-dispatch',reportSubtype:null,reportAuthor:requester,reportAuthorPost:recipient,reportSubjectKind:'post',
       reportSubjectId:recipient,reportDay:1,reportHour:null,reportAdvice:null,reportAnswers:mission,reportClaims:[],
@@ -159,7 +159,7 @@ it.each(['declared','empty','missing','forged','missing with no lot','missing wi
   const asking=ctxFor(world,state,2,TICK_MECHANICS), ask=localOptions(world,state,principal,2).find(o=>o.kind==='force-answer')!;
   const asked=executeLocal(asking,state,principal,ask).state;
   const sent=asking.outbox.find(m=>m.msgTo===holder&&m.msgReport?.reportForceRequest===requested)!;
-  const authority=[principalRoot.id,['rail','river']];
+  const authority=[`root-modes.${principal}`,['rail','river']];
   expect(sent.msgReport!.reportForceModeAuthority).toEqual(missing||kind==='empty'?null:authority);
   expect(reportProblems(sent.msgReport!)).toEqual([]);
   const received=kind==='forged'?{...sent,msgReport:{...sent.msgReport!,reportForceModeAuthority:[toId('message',principalRoot.id),['sea']] as const}}:sent;
@@ -175,7 +175,7 @@ it.each(['declared','empty','missing','forged','missing with no lot','missing wi
   const ctx=ctxFor(world,state,day,TICK_MECHANICS), option=localOptions(world,state,holder,day).find(o=>o.kind==='force-answer')!;
   const answered=executeLocal(ctx,state,holder,option).state, answer=answered.forceRequests?.[requested]?.freqAnswers.at(-1);
   const order=ctx.outbox.find(m=>m.msgOrder?.orderKind==='allocation');
-  if(kind!=='declared') {
+  if(kind!=='declared'&&kind!=='conveyed') {
     const action=kind==='missing with objection'?'refuse':kind==='missing with no lot'?'no_eligible_force':'defer';
     expect(answer).toMatchObject({fansAction:action,fansReasons:expect.arrayContaining(['modes_unavailable'])});
     expect(answer?.fansAssignment).toBeUndefined();

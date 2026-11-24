@@ -1,0 +1,121 @@
+{
+  "method": "offline rescore of retained capture; no new simulation",
+  "before": {
+    "mechanic": "operations.ended",
+    "band": {
+      "minFires": 2,
+      "maxFires": 10,
+      "why": "S141 /0131 [I]: history state sweeps retire and received instrument scopes preserve actual holdings. Ordinary planning, journeys, contact, supply and correspondence follow that integrated allocation trajectory; no isolated causal credit is claimed for an individual paper. operations.ended firings 9->5. No force quantity, contract, planner/combat parameter or RNG stream is fitted. The 2026-11-24 corrected-capture ruling authorises recentring moved positive bands."
+    },
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 11,
+      "magnitude": 11
+    }
+  },
+  "after": {
+    "mechanic": "operations.ended",
+    "band": {
+      "minFires": 5,
+      "maxFires": 22,
+      "why": "S155 /0137 [I]: root-stamped requests let a governor offer the actual selected lot; receipt112 supplies its receiving command, whose existing hold mission opens operation114 and completes117. The retained S152-to-S155 operation records identify the sole added completed operation in docs/audit/s155-evidence/band-recentre.json; operations.ended fires10->11. Under the lead standing positive-band recentring rule, around(11) is5..22. No force, transport, planner, combat, seed, criterion or zero-floor changes; no isolated credit is claimed for other integrated trajectory changes."
+    },
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 11,
+      "magnitude": 11
+    }
+  },
+  "addedOperation": [
+    "op:cs_cmd_manassas:114",
+    {
+      "opPost": "cs_cmd_manassas",
+      "opCommander": "beauregard_pierre_g_t",
+      "opOrder": "m.93.davis_jefferson.cooper_samuel.order.cs_cmd_manassas",
+      "opPlan": "direct:least_cost:manassas",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "manassas",
+      "opStartDay": 114,
+      "opEndDay": 117,
+      "opOutcome": "objective_reached",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_manassas",
+          "oaxBlocks": [
+            "raised.st_gov_south_carolina.d9.allocation.3df39efd85fe8e56"
+          ],
+          "oaxRoute": {
+            "routeFrom": "manassas",
+            "routeTo": "manassas",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0,
+            "routeUnknownThreat": true
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 1000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "end",
+          "oaxSince": 117,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 116,
+          "oaxLog": [
+            {
+              "axevDay": 114,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 115,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 116,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 117,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "manassas"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    }
+  ],
+  "failuresBefore": 26,
+  "failuresAfter": 25,
+  "other163BandsUnchanged": true,
+  "noNewZero": true,
+  "authority": "CODEX standing rule: a moved positive band is recentred to around the observed value with its named cause"
+}

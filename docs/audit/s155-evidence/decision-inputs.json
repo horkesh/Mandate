@@ -1,0 +1,14 @@
+[
+  {
+    "source": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0124-standing-authority-comes-from-an-assignment.md",
+    "sha256": "f6a68765713cf4cacae0b6d008ff615baa8771a27ed090fee8ce8b5e216aa3c6",
+    "readCopy": "docs/audit/s155-evidence/decisions/0124-standing-authority-comes-from-an-assignment.md",
+    "readCopySha256": "f6a68765713cf4cacae0b6d008ff615baa8771a27ed090fee8ce8b5e216aa3c6"
+  },
+  {
+    "source": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0137-the-root-holds-what-it-grants.md",
+    "sha256": "6c1e03f8f5a88d78e3eaf9ce8c62e2b07d450d0ccdf73d79d26dfdd4d205c563",
+    "readCopy": "docs/audit/s155-evidence/decisions/0137-the-root-holds-what-it-grants.md",
+    "readCopySha256": "6c1e03f8f5a88d78e3eaf9ce8c62e2b07d450d0ccdf73d79d26dfdd4d205c563"
+  }
+]

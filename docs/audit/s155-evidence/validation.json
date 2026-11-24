@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "log": "runs/s155/fictional-red.log",
+      "exit": 1,
+      "result": "expected red: 2 missing-behaviour assertions; 3 controls passed",
+      "sha256": "67d726b9ff8d4b2ae30040f088c01060c02fb08f51a00e0a2afa0fba0d8447ef"
+    },
+    {
+      "log": "runs/s155/focused-green.log",
+      "exit": 0,
+      "result": "79 tests",
+      "sha256": "780b9be5052a17297d45ea412a2f6632da493b79a66cbb287a6fb6bd59abf14e"
+    },
+    {
+      "log": "runs/s155/final-focused.log",
+      "exit": 0,
+      "result": "81 tests including band-ledger regression controls",
+      "sha256": "023f9668683ce60ab222ca5c3fe5d3d29698eaaaddea4db682f54aa75667d74b"
+    },
+    {
+      "log": "runs/s155/typecheck.log",
+      "exit": 0,
+      "result": "pre-capture typecheck",
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    },
+    {
+      "log": "runs/s155/rules-corrected.log",
+      "exit": 0,
+      "result": "pre-capture rules, exact protected readers",
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "log": "runs/s155/boundary.log",
+      "exit": 0,
+      "result": "pre-capture pack boundary",
+      "sha256": "e63ee1ab6a8abe7455b9462db265fe81d8a314578cadca9372356f95b920782f"
+    },
+    {
+      "log": "runs/s155/smoke.log",
+      "exit": 0,
+      "result": "2 days,0 rejections",
+      "sha256": "de0ed012dc00bb6e06dc89eef320dd11dceccc2cc129ed6f230d9a01122b75a0"
+    },
+    {
+      "log": "runs/s155/measurement.log",
+      "exit": 0,
+      "result": "one148-day capture, replay/resume match",
+      "sha256": "4784a2289f0fb488920a6f8580b7b78d3991ea9149ff5474c02c5bdba93f083d"
+    },
+    {
+      "log": "runs/s155/final-typecheck.log",
+      "exit": 0,
+      "result": "final tools and implementation typecheck",
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    },
+    {
+      "log": "runs/s155/final-rules-corrected.log",
+      "exit": 0,
+      "result": "final exact positive-band cause record",
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "log": "runs/s155/decisions-corrected.log",
+      "exit": 0,
+      "result": "original canonical index retained",
+      "sha256": "cafddb308fad22669308535a4f8150cf0a36ea9b99a165f7feba11b1274282b4"
+    },
+    {
+      "log": "runs/s155/final-bands.log",
+      "exit": 0,
+      "result": "offline rescore,25 inherited failures",
+      "sha256": "4764a45e8367a66b21fbc5ad5a962eb06ec0913338d41fc7c4c7a0285a54ee36"
+    },
+    {
+      "log": "runs/s155/final-preservation.log",
+      "exit": 0,
+      "result": "431 prior files preserved",
+      "sha256": "e705093854f4570b07cec9291297718ab33f9c974a9b9a0851a59a0327a93caf"
+    },
+    {
+      "log": "runs/s155/ownership-corrected.log",
+      "exit": 0,
+      "result": "44 ownership tests passed",
+      "sha256": "c1c8e92f766cd10899115562bfdb37a1baeaf648fa13a5d479394ef55e615f72"
+    },
+    {
+      "log": "runs/s155/final-boundary.log",
+      "exit": 0,
+      "result": "pack boundary clean",
+      "sha256": "e63ee1ab6a8abe7455b9462db265fe81d8a314578cadca9372356f95b920782f"
+    },
+    {
+      "log": "runs/s155/final-licences.log",
+      "exit": 0,
+      "result": "licences clean",
+      "sha256": "7d41e5e4301849c17b27df3bd2c2419572a252cda182cce22ec6d0c7f828e1c5"
+    },
+    {
+      "log": "runs/s155/final-decisions.log",
+      "exit": 0,
+      "result": "decisions index clean",
+      "sha256": "cafddb308fad22669308535a4f8150cf0a36ea9b99a165f7feba11b1274282b4"
+    }
+  ],
+  "hook": "required final ordinary git commit hook; actual receipt retained under runs/s155/commit-hook.log and commit-result.json",
+  "formalReview": "separate lead-owned reviewer lane under docs/LANES.md; not replaced by this author validation",
+  "firstHook": {
+    "exit": 1,
+    "failedTests": 1,
+    "passedFiles": 292,
+    "passedTests": 2565,
+    "expectedFailures": 3,
+    "skips": 3,
+    "cause": "exact reviewed-read registration for unchanged received-stamp comparison, hash and line71->72",
+    "log": "runs/s155/commit-hook-attempt1.log",
+    "correction": "ownership-certificate.json",
+    "targetedVerification": "44 ownership tests passed",
+    "unreachedGates": "boundary,licences,decisions checked independently after correction before retry"
+  },
+  "boundaryWordingCorrection": {
+    "initialExit": 1,
+    "initialLog": "runs/s155/boundary-before-wording-correction.log",
+    "cause": "The newly named band-cause string contained two setting names. Both diagnostics were inspected; the names were moved to audit evidence, with a setting-free reference in the CLI. No bound or runtime behavior changed.",
+    "targetedResults": "boundary0,rules0,offline band rescore25 inherited failures"
+  }
+}
