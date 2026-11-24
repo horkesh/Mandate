@@ -1,0 +1,72 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\CLAUDE.md",
+    "sha256": "8444009f244f310ceb2c59a616f97cc2d294bfe5e4e616d6acbd01d672ed4a7d",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\LANES.md",
+    "sha256": "a80e6a8b1ef9e828fd41047972b9308ba95b76fb5becb30b81e41f0e755fae0e",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\2026-11-24-S149-sending-orders.md",
+    "sha256": "d6683514f4ea22a1006903895210750914410ea6780d75ea97134acc519cd8c5",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\2026-11-24-S151-july-army-orders.md",
+    "sha256": "c34ca7288ebf8f7379f769517fa5f7c9ddd68c83b2311e235e05c959cf536094",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\sending-instruments.csv",
+    "sha256": "58ea15c7a8ede7f25676d5b723a5c6cb5c095f47c132de47b491c66b747da8a4",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S149\\catalogue-coverage.csv",
+    "sha256": "575d5b9948608e25eba6db4c1256bd03b9818991d79028517bd9c4ddc8323ce0",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\instruments.csv",
+    "sha256": "125ce0b7c35c3f8ad04f3a4af2f8c40e3b1755c7c56606af2eb6efef276973bd",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S151\\identity-links.csv",
+    "sha256": "8ce7a4545268b207fef6d576094c2a1f5030f1895409298cfdb524981459ae53",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\instruments.csv",
+    "sha256": "cc33a4bfb1db1c20d3a968c875c6a60478bcc03fd545ee709ee2bd0a7030d7f2",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S138\\regiment-instruments.csv",
+    "sha256": "8515305b33c1ff81d9031a6d0936357652826ce2e37e3ef2cd760e8e858583d5",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S154-JULY-ORDER-GRAMMAR.md",
+    "sha256": "d9f746b0bab5bf09658687d66fbdffa9119754151c94dca677cf2da9b57e1aa8",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0131-regiments-go-where-read-orders-send-them.md",
+    "sha256": "4c79c3810c810516cc868c686e04575285b9537763030d42af3992ecbabe1faf",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0136-an-order-is-read-when-its-terms-are-read.md",
+    "sha256": "a7f46a47ef99db2ebaa62b313b93d44d0c6e37789fb2940e405ec39a262957fe",
+    "access": "read-only"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0138-the-grammar-of-the-july-orders.md",
+    "sha256": "60203e274e414923e1f7374f80480fa3eec6b7aab6af96639df5c7bc809e50a4",
+    "access": "read-only"
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "method": "Direct HTTP(S) requests to public Archive.org only; no Firecrawl, credits, browser, Computer Use or desktop control. Existing caches read-only.",
+  "http": [
+    {
+      "url": "https://archive.org/advancedsearch.php?q=title%3A%28private+official+correspondence+butler%29&output=json&rows=15",
+      "final_url": "https://archive.org/advancedsearch.php?q=title%3A%28private+official+correspondence+butler%29&output=json&rows=15",
+      "status": 200,
+      "bytes": 23718,
+      "sha256": "633b825abd6500eb935f172578e4f754b05debb909ff936428e1000d26a43ec5",
+      "path": "runs\\s156\\butler-search.json"
+    },
+    {
+      "url": "https://archive.org/metadata/privateofficialc01butl",
+      "final_url": "https://archive.org/metadata/privateofficialc01butl",
+      "status": 200,
+      "bytes": 126464,
+      "sha256": "0c1a493fbc37efa4d963f688c511bf1bc5cdd76cf12b89e3923d6898824b0ad9",
+      "path": "runs\\s156\\butler-metadata.json"
+    },
+    {
+      "url": "https://archive.org/download/privateofficialc01butl/privateofficialc01butl_djvu.xml",
+      "final_url": "https://ia800405.us.archive.org/16/items/privateofficialc01butl/privateofficialc01butl_djvu.xml",
+      "status": 200,
+      "bytes": 21440765,
+      "sha256": "84c18cc59f43326ccb84d31d7422850aa620ef8589073f41b9fca9f53d770f1d",
+      "path": "runs\\s156\\butler-I.xml"
+    },
+    {
+      "url": "https://archive.org/download/privateofficialc01butl/privateofficialc01butl_scandata.xml",
+      "final_url": "https://ia800405.us.archive.org/16/items/privateofficialc01butl/privateofficialc01butl_scandata.xml",
+      "status": 200,
+      "bytes": 357522,
+      "sha256": "b175632d5af7e9ddea99a279a04040ed7c57063bfbabd49b2276bc5aab2e9a73",
+      "path": "runs\\s156\\butler-I-scandata.xml"
+    },
+    {
+      "url": "https://archive.org/download/privateofficialc01butl/page/n54.jpg",
+      "final_url": "https://ia800405.us.archive.org/BookReader/BookReaderImages.php?id=privateofficialc01butl&itemPath=%2F16%2Fitems%2Fprivateofficialc01butl&server=ia800405.us.archive.org&page=n54.jpg",
+      "status": 200,
+      "bytes": 783736,
+      "sha256": "006a51168e072af6fedfd7d7e1d54c16fe3e7c0a374f787d1dc07a5236b43a84",
+      "path": "runs\\s156\\Butler-I-p42.jpg"
+    },
+    {
+      "url": "https://archive.org/download/privateofficialc01butl/page/n73.jpg",
+      "final_url": "https://ia800405.us.archive.org/BookReader/BookReaderImages.php?id=privateofficialc01butl&itemPath=%2F16%2Fitems%2Fprivateofficialc01butl&server=ia800405.us.archive.org&page=n73.jpg",
+      "status": 200,
+      "bytes": 603110,
+      "sha256": "79182f0645e6ba9786907cf45c6f55bffd2a4026ae5add8ad81a724b38c80d18",
+      "path": "runs\\s156\\Butler-I-p61.jpg"
+    },
+    {
+      "url": "https://archive.org/download/privateofficialc01butl/page/n53.jpg",
+      "final_url": "https://ia800405.us.archive.org/BookReader/BookReaderImages.php?id=privateofficialc01butl&itemPath=%2F16%2Fitems%2Fprivateofficialc01butl&server=ia800405.us.archive.org&page=n53.jpg",
+      "status": 200,
+      "bytes": 689192,
+      "sha256": "1b6155a34d114a4a9b0aae6f3492476a89180e5d10e4abc4309d253a69755677",
+      "path": "runs\\s156\\Butler-I-p42-correct.jpg"
+    },
+    {
+      "url": "https://archive.org/download/privateofficialc01butl/page/n72.jpg",
+      "final_url": "https://ia800405.us.archive.org/BookReader/BookReaderImages.php?id=privateofficialc01butl&itemPath=%2F16%2Fitems%2Fprivateofficialc01butl&server=ia800405.us.archive.org&page=n72.jpg",
+      "status": 200,
+      "bytes": 652295,
+      "sha256": "11ae3fcf70c70907888c21ab0e18c4f8d19c8f48426ec7170c9291e8ffc01021",
+      "path": "runs\\s156\\Butler-I-p61-correct.jpg"
+    }
+  ],
+  "pagination_checks": [
+    "Cheap initial XML enumeration put printed1 at header2; fixed before substantive readings by mapping OBJECT usemap numeric suffix to scandata leafNum.",
+    "Image n54/n73 returned printed43/62 despite XML leaves54/73. Retained failed locators; corrected images n53/n72 visibly show printed42/61.",
+    "Static inspected Butler p42: April25 1861, full spare-troop clause. Static inspected p61: May1 1861 telegram, fifth New York, if possible, another train."
+  ],
+  "limits": "Selected OCR readings and two static scan checks, not full-volume collation. Search hits locate pages; retained full page readings support conclusions. No claim a missing paper does not survive."
+}
