@@ -1,0 +1,47 @@
+[
+  {
+    "work": "OR III-I",
+    "printed_page": "246",
+    "path": "runs/s149/III-p246.jpg",
+    "sha256": "26046b1e72444b17ba4b6f11e041be078c32cedd20b2b3a1fe24eab6dce09bd5",
+    "url": "https://archive.org/download/warofrebellion0301rootrich/page/n261.jpg",
+    "method": "Direct static HTTP JPEG retrieved headlessly, then inspected locally; no browser or desktop",
+    "finding": "Both Buckingham/similar-governor and Andrew sending telegrams are dated June3,1861. Later Morgan letter on same scan also June3 despite OCR June5; unrelated letter not adopted as a sending order."
+  },
+  {
+    "work": "OR III-I",
+    "printed_page": "204",
+    "path": "runs/s149/III-p204.jpg",
+    "sha256": "f509eaad1882fa228283638f80c46c3828c1ed16da60507fdcdfc38d67d5c462",
+    "url": "https://archive.org/download/warofrebellion0301rootrich/page/n219.jpg",
+    "method": "Direct static HTTP JPEG, locally inspected headlessly",
+    "finding": "Cameron five Washington/nine Fort Monroe dispatch is dated May15,1861."
+  },
+  {
+    "work": "OR III-I",
+    "printed_page": "290",
+    "path": "runs/s149/III-p290.jpg",
+    "sha256": "352eb279117eca80f6a9d70ea7128b6e9c52b9684a8313fe72f949732067aedb",
+    "url": "https://archive.org/download/warofrebellion0301rootrich/page/n305.jpg",
+    "method": "Direct static HTTP JPEG, locally inspected headlessly",
+    "finding": "Morgan June22 dispatch prints six enumerated numbers, then in all seven; perhaps Thirty-seventh follows separately. No missing seventh name supplied."
+  },
+  {
+    "work": "OR-I-II",
+    "printed_page": "623",
+    "path": "runs/s149/II-p623.jpg",
+    "sha256": "14717192a46aa0918450608cd56a42e657f68aa461dea27f7d8b96bc595a82ab",
+    "url": "https://archive.org/download/warofrebellion02secrrich/page/n642.jpg",
+    "method": "Direct static HTTP JPEG, locally inspected headlessly",
+    "finding": "Printed page header is 623; retained OCR misreads its first digit. Paragraphs match retained page; pagination check resolved by image, not OCR rewriting."
+  },
+  {
+    "work": "OR-I-II",
+    "printed_page": "696",
+    "path": "runs/s149/II-p696.jpg",
+    "sha256": "a80d7b2b97e59fb082f34ffa4b793c4ebfab93bc690dd9ad9efd3842a1eb4e5f",
+    "url": "https://archive.org/download/warofrebellion02secrrich/page/n715.jpg",
+    "method": "Direct static HTTP JPEG, locally inspected headlessly",
+    "finding": "Printed page header is 696; retained OCR misreads its first digit. Paragraphs match retained page; pagination check resolved by image, not OCR rewriting."
+  }
+]

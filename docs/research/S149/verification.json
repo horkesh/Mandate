@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "checks": 1684,
+  "passed": 1684,
+  "failed": 0,
+  "records": 109,
+  "readings": 138,
+  "coverage_keys": 285,
+  "catalogue_keys": 214,
+  "s138_keys": 260,
+  "mcdowell49": 49,
+  "patterson_s138_keys": 43,
+  "preserved_starting_tracked_files": 1917,
+  "dispositions": {
+    "candidate_or_report_only": 86,
+    "named_read_scope_not_complete_chain": 73,
+    "no_new_link_recovered": 126
+  },
+  "McDowell_dispositions": {
+    "named_read_scope_not_complete_chain": 25,
+    "candidate_or_report_only": 23,
+    "no_new_link_recovered": 1
+  },
+  "failures": [],
+  "limits": "Structural/hash/crosswalk and explicit source-reading controls, not independent historical review, complete archive recovery, or simulation acceptance."
+}
