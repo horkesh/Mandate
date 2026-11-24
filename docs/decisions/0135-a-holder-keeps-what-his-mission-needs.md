@@ -1,6 +1,6 @@
 # 0135: A holder keeps what his own mission needs, and an unknown is not a need
 
-Status: accepted (2026-11-24). From S150's measurement of 0134 (`docs/audit/s150-evidence/0134-capture/` on `sprint/allocate`, staged). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0133 (how a superior decides from what he holds) and 0134 (what a subordinate may keep), by 0130's rule on undetermined comparisons.
+Status: accepted (2026-11-24). From S150's measurement of 0134 (`docs/audit/s150-evidence/0134-capture/` on `sprint/allocate`, staged). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0133 (how a superior decides from what he holds) and 0134 (what a subordinate may keep), by 0130's rule on undetermined comparisons. Clarified by 0139 (an order to send the surplus keeps what its own words name).
 
 ## Context
 
