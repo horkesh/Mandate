@@ -1,6 +1,6 @@
 # 0134: A superior may answer a request by ordering a subordinate who holds the troops
 
-Status: accepted (2026-11-24). From S150's trace (`docs/audit/s150-evidence/trace/` on `sprint/allocate`, staged). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0133 (what a superior may grant).
+Status: accepted (2026-11-24). From S150's trace (`docs/audit/s150-evidence/trace/` on `sprint/allocate`, staged). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0133 (what a superior may grant). Clarified by 0135 (a holder keeps what his own mission needs, and an unknown is not a need).
 
 ## Context
 
