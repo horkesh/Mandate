@@ -1,0 +1,109 @@
+{
+  "method": "Direct HTTP public retrieval only; static local images/PDF rendering; no browser or Firecrawl. Source-cache and other worktrees read-only.",
+  "http": [
+    {
+      "url": "https://dmna.ny.gov/historic/reghist/civil/infantry/69thInfNYSM/69thInfNYSMMain.htm",
+      "error": "<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>"
+    },
+    {
+      "url": "https://museum.dmna.ny.gov/unit-history/infantry/5th-infantry-regiment-new-york-state-militia",
+      "error": "<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>"
+    },
+    {
+      "url": "https://archive.org/download/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_djvu.txt",
+      "final_url": "https://dn790008.ca.archive.org/0/items/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_djvu.txt",
+      "status": 200,
+      "bytes": 3638420,
+      "sha256": "dcb23fb1ec61605be2c47870f9c8b8d1597d37f66e3df281f62efe6e3b4ff3c9",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\phisterer-I.txt"
+    },
+    {
+      "url": "https://archive.org/download/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_page_numbers.json",
+      "final_url": "https://dn790008.ca.archive.org/0/items/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_page_numbers.json",
+      "status": 200,
+      "bytes": 155348,
+      "sha256": "78c7d5e499e088cd9274e4ff76d16c7d3135cad87549f7bdded3df388b020736",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\phisterer-I-pages.json"
+    },
+    {
+      "url": "https://archive.org/download/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_djvu.txt",
+      "final_url": "https://dn790008.ca.archive.org/0/items/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_djvu.txt",
+      "status": 200,
+      "bytes": 3638420,
+      "sha256": "dcb23fb1ec61605be2c47870f9c8b8d1597d37f66e3df281f62efe6e3b4ff3c9",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\phisterer-I.txt"
+    },
+    {
+      "url": "https://archive.org/download/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_page_numbers.json",
+      "final_url": "https://dn790008.ca.archive.org/0/items/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_page_numbers.json",
+      "status": 200,
+      "bytes": 155348,
+      "sha256": "78c7d5e499e088cd9274e4ff76d16c7d3135cad87549f7bdded3df388b020736",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\phisterer-I-pages.json"
+    },
+    {
+      "url": "https://archive.org/download/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_djvu.xml",
+      "final_url": "https://dn790008.ca.archive.org/0/items/newyorkinwarofre01phisrich/newyorkinwarofre01phisrich_djvu.xml",
+      "status": 200,
+      "bytes": 42177304,
+      "sha256": "347bfa5559bb2fc71111c1e4fe0e288db83b1270ff9455ff0712ca02516d5fe9",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\phisterer-I.xml"
+    },
+    {
+      "url": "https://archive.org/download/newyorkinwarofre01phisrich/page/n645.jpg",
+      "final_url": "https://ia601003.us.archive.org/BookReader/BookReaderImages.php?id=newyorkinwarofre01phisrich&itemPath=%2F18%2Fitems%2Fnewyorkinwarofre01phisrich&server=ia601003.us.archive.org&page=n645.jpg",
+      "status": 200,
+      "bytes": 1133631,
+      "sha256": "fc7bd9e0094dc74d32b9f18c76c5d94d62252459e505a969bc90b3c5ec2004ae",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\phisterer-I-p623.jpg"
+    },
+    {
+      "url": "https://archive.org/download/newyorkinwarofre01phisrich/page/n640.jpg",
+      "final_url": "https://ia801003.us.archive.org/BookReader/BookReaderImages.php?id=newyorkinwarofre01phisrich&itemPath=%2F18%2Fitems%2Fnewyorkinwarofre01phisrich&server=ia801003.us.archive.org&page=n640.jpg",
+      "status": 200,
+      "bytes": 1212953,
+      "sha256": "64c69a35637e1ae32c288795f78e32823cc0f7b20ec474a1199ef8f5646d4db0",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\phisterer-I-p623-correct.jpg"
+    },
+    {
+      "url": "https://archive.org/download/warofrebellion0301rootrich/page/n123.jpg",
+      "final_url": "https://ia601606.us.archive.org/BookReader/BookReaderImages.php?id=warofrebellion0301rootrich&itemPath=%2F30%2Fitems%2Fwarofrebellion0301rootrich&server=ia601606.us.archive.org&page=n123.jpg",
+      "status": 200,
+      "bytes": 990506,
+      "sha256": "1e0df05aca09b69f6a01afc99bccaf4d635730e7d6f55ad32cb81ecc83cdf526",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\OR-III-p108.jpg"
+    },
+    {
+      "url": "https://archive.org/download/warofrebellion511unit/page/n393.jpg",
+      "final_url": "https://ia800702.us.archive.org/BookReader/BookReaderImages.php?id=warofrebellion511unit&itemPath=%2F33%2Fitems%2Fwarofrebellion511unit&server=ia800702.us.archive.org&page=n393.jpg",
+      "status": 200,
+      "bytes": 1087891,
+      "sha256": "24fe6d5a08fdba121861154a8b219747d21b20ab3847ae472575e9bbfc053a23",
+      "path": "C:\\Pyrrhic\\sprint-research-authority\\runs\\s151\\OR-LI1-p388.jpg"
+    }
+  ],
+  "accepted_image_checks": [
+    {
+      "path": "runs\\s151\\phisterer-I-p623-correct.jpg",
+      "sha256": "64c69a35637e1ae32c288795f78e32823cc0f7b20ec474a1199ef8f5646d4db0",
+      "inspection": "Printed page623, April9 order for25th; original image confirms9."
+    },
+    {
+      "path": "runs\\s151\\OR-III-p108.jpg",
+      "sha256": "1e0df05aca09b69f6a01afc99bccaf4d635730e7d6f55ad32cb81ecc83cdf526",
+      "inspection": "Printed page108; Morgan letter dateApril24."
+    },
+    {
+      "path": "runs\\s151\\OR-LI1-p388.jpg",
+      "sha256": "24fe6d5a08fdba121861154a8b219747d21b20ab3847ae472575e9bbfc053a23",
+      "inspection": "Printed page388; Scott SpecialOrder89andonehalf, May22."
+    },
+    {
+      "path": "runs\\s151\\NY-AG-p11.png",
+      "sha256": "d1dde8baabbabbb699c1cc0a0f7f3766f4d59ac42c35901e6e8d1f1b49a01d87",
+      "inspection": "Locally rendered PDFindex10; printed page11 departure table, inspected in rows. No blank dates filled."
+    }
+  ],
+  "locator_correction": "First requested Phisterer n645 rendered printed628, not623. Retained raw evidence, no finding from wrong page; XML object usemap does not equal BookReader sequential index. Corrected n640 renders623.",
+  "limits": "Selected page checks only, not complete fresh image collation."
+}

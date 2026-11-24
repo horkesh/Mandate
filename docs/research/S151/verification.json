@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "checks": 726,
+  "passed": 726,
+  "failed": 0,
+  "records": 92,
+  "readings": 104,
+  "identity_keys": 69,
+  "mcdowell_keys": 49,
+  "new_york_mcdowell_keys": 19,
+  "targets": {
+    "1": 38,
+    "2": 8,
+    "3": 18,
+    "4": 13,
+    "5": 15
+  },
+  "preserved_starting_tracked_files": 2063,
+  "failures": [],
+  "limits": "Structural, identity, integrity and explicit evidence controls; not independent historical review or complete archive/receipt recovery. No simulation acceptance claim."
+}

@@ -1,0 +1,386 @@
+ADJUTANT
+GENERAL.
+11
+,1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+~
+29
+30
+31
+32
+33
+34
+35
+36
+.37
+38
+39
+40
+41
+42
+79
+82'
+83
+84
+Name of colonel.
+Date of de-
+parture.
+Row armed.
+No.
+Wm. H. Allen
+..
+Jos. B. Carr
+.
+Fred'k
+Townsend ...•..
+A. W. Taylor ..••..••..
+Ab'm Duryee
+.
+Wm. Wilson ....•..•..
+John E. Bendix
+.
+Louis Blenker .....•...
+Rush.
+C. Ha,wkins .....
+··W. W. McChesney .•...
+E. E. Ellsworth
+.••••.•
+Ezra L. Walrath
+..••..
+L F. Quinby ..•..•.•••
+James McQuade •..•....
+J. McL. Murphy
+.
+Thos. A. Davies
+•..•.•
+H. S. Lansing
+.
+Wm. A. Jackson
+.
+John S. Clark ......•..
+Ma,x Weber
+.
+Wm. F. Rogers .•.....•
+}Valtflr Phelps,
+Jr ..•..
+H. C. Hoffman
+Timothy
+Sullivan ...•••
+James E. Kerrigan .•.••
+Wm. H. Christian
+..•..
+R. W. Slocum
+.
+D. Donnelly .......••••
+A. Von Steinwehr .•..•.
+Edward Frisby
+.•.••••.
+C. E. Pratt
+....•••••••
+R.
+Matheson ..•..•••••
+R. F. Taylor ....••..•.
+"Vm. Ladue •.....••••.
+Wm. C. Brown ..•.••..
+C. H. Innes ...•••••...
+J. H. McCumi
+.
+J. H. H. Ward
+.
+F. D'Utassy
+..
+E. J. Riley
+.
+L. Von Gilsa
+.
+Milton Cogswell ..•..•.
+I. J. Stevens ...•..••.•
+G. W. B. Tompkins ...•
+John W. Stiles
+..
+Alfred M. Wood •..•...
+Total .... ,•••••.
+: ..
+1861.
+Ma,y
+19
+June
+3
+June
+12
+.June
+3
+do
+5
+do
+5
+May
+1
+do
+29
+do
+29
+June
+17
+do
+29
+do
+25
+do
+21
+do
+18
+do
+7
+do
+19
+do
+18
+do
+28
+July
+5
+do
+2
+do
+3
+June
+20
+July
+9
+Jtme
+24
+do
+24
+do
+27
+€I0
+24
+do
+28
+July
+8
+do
+2
+do
+10
+do
+12
+June
+22
+do
+23
+do
+27
+July
+4
+June
+26
+do
+30
+do
+4
+May
+May
+27
+Muskets,
+1842 .••••••••••.••••••.•
+do
+do
+•..••••••.•••.•••••.
+Enfield rifles .....••.••••••.••.•.•
+Muskets,
+1842 ...•••••••••••••••••
+do
+do
+•••..••••.••..••.•••
+do
+1840 .•.•••••••••.•..••••
+do
+1842 .....••.•••••••••..•
+do
+do
+•..•••••.
+~•••.••..•.
+do
+do
+•......••.•.•.••...•
+do
+do
+••.••..•••.•••••••.•
+Muskets,
+1842 .••.•..•••••••••.•••
+do
+1840 .•.••..•••••••.•••..
+do
+1842 •.•••.••••••••••••••
+do
+do
+•..•....•••••.••...
+do
+do
+••••••••.•••••.•.•••
+do
+do
+•.••.•••.••••••••••.
+Enfield rifles ...••...•...••.•.•..•
+Muskets,
+1840 ••••.••••.•••.•••.•.
+do
+1842 •.••.••••......••.
+:.
+do
+do
+..•..••••..•.••••••.
+do
+do
+•..••.....•.•••.•..•
+do
+do
+•••••.•.••••..•••.•.
+do
+do
+••••••••.••••••••...
+do
+do
+•....•.••.••.••..•.•
+do
+do
+•..•.••••..••.•••.••
+do
+do
+...•...••..••••...•.
+Remington
+rifles ..••••.••••..•••.•
+Muskets,
+1842 ....•.
+'..•••••.•••.••
+'
+do
+do
+.......•.••.•...•..•
+do
+do
+•..••••••••.•••••.••
+do
+do
+...•......••••••••.•
+do
+do
+.••.....•.•••.•...••
+do
+do
+..•..
+· .• • .••••••..••
+do
+do
+•••.•••••••••••••••
+do
+do
+•.•••••.•••••••••.•.
+do
+do··
+.•'•.•.•.•.•••.•••.
+do
+do
+••• ···
+.•••••••••••••
+Harper's
+Ferry rifles ...•...•.
+, .•..
+Muskets,
+1842....
+.•. • ••
+. ••......
+Two comp's
+rifles, rest muskets,
+'42.
+Muskets,
+1840, 1842 ..••.•••....
+~.
+•.•••.••.•••.•...•••••.••••••••••
+37,688
+Strength
+846
+791-
+780
+780
+842
+780
+783
+804
+786
+713
+1,079
+778
+780
+780
+777
+776
+803
+781
+739
+800
+777
+780
+784
+780
+771
+772
+861
+782
+778-
+782
+774
+765
+895
+783
+688
+780
+803
+772
+939
+1,039
+1,041
+1,048
+791
+1,040
+SoO
+859
+The power of the State officers, under the act of April
+16th, to raise and organize troops, ceased with the depart ..
+ure of the last of the thirty-eight
+regiments
+for. the field.
+Since that period, the requisitions of the General Govern-
+ment, made either
+directly
+on your Excellency, or in the
+form of authorizations
+to individuals to raise regiments or
+companies, have furnished the only authority.
+These inde-
