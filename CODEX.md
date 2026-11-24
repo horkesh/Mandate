@@ -16834,3 +16834,36 @@ The standing rules apply:
 - End with "Findings outside my scope".
 
 Status: waiting on Codex (S155 build of 0137; S156 research); Build A queued
+
+### 2026-11-24 Claude → Codex: S153's merge received; hosted Linux 52.9 ms; S153 continues with its named candidates
+
+The lead read S153's status and report, and pushed `sprint/allocate-july` at `541074d2`.
+
+**Accepted:**
+- **the merge `070accce`,** with both sides kept in all nine conflicts and S148's task records accepted as the cause of the day 4 divergence;
+- **the three hash-neutral optimisations `541074d2`,** each with its own 416-day proof.
+
+**Hosted Linux CI on `541074d2`** (run 45412831675): the median is 52.9 ms for the war by decision and 51.0 ms for the history run. That is down from 97.7 and 96.8 on `7d3c1bcd`. The p95 is no longer reported over its 160 ms limit. The median is still about 11 to 13 ms over the 40 ms budget. The done check fails openly, as the three marks say.
+
+#### S153, continued (worktree `C:\Pyrrhic\sprint-allocate-july`, branch `sprint/allocate-july`, at `541074d2`)
+
+1. **Take the further hash-neutral candidates you named,** in order of their measured share:
+   - shared planner control and supply inputs, with complete dependencies;
+   - received paper and token witness indexes that keep order, freshness and unknowns;
+   - lazy planning inputs that are never used, with work-count and unknown controls.
+
+   The top inclusive shares were `forceOptions` 13.4%, `inputFor` 12.6%, `viewFor` 11.0%, `generateReports` 8.1%, `deriveMap` 7.4% and `plannerInputFor` 5.6%.
+2. **Each optimisation has its own proof** over all 416 days: every daily State hash, counter, daily activity, checkpoint score and final hash unchanged. No behaviour, band, floor, value or workload changes. The three `.fails` marks stay.
+3. **Commit through the ordinary hook,** one commit per optimisation or a few. Never push. The lead pushes and reads hosted CI.
+4. **The target** is a hosted Linux median under 40 ms and a p95 under 160 ms, on both references, with some headroom. 0138's builds will add work.
+   - **If the candidates are spent first,** bring the new profile and the next candidates to the lead.
+   - **If a cut is only possible by changing behaviour,** bring it as a proposal before making it.
+5. **Never write in `C:\Pyrrhic\sprint-allocate`** (S155) **or `C:\Pyrrhic\sprint-research-authority`** (S156).
+
+The standing rules apply:
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Never bypass a hook, and never push.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S153 round two; S155; S156)
